@@ -14,7 +14,7 @@ class Ability
     user ||= User.new # guest user
 
     if user.role? :admin
-      can :manage, :all  # Admin is god
+      can :manage, :all
     else
       # Not Admin
       unless user.new_record?
@@ -26,8 +26,8 @@ class Ability
 
         # Users with role
         if user.role?(:guest)
-            can :read, [Page, Blog, Posting]
-            can :create, Comment
+          can :read, [Page, Blog, Posting]
+          can :create, Comment
         end
         if user.role?(:confirmed_user)
           can :create, Invitation
@@ -51,13 +51,13 @@ class Ability
       can :read, Comment do |comment|
         comment && !comment.new_record?
       end
-      can :manage, Comment do |comment,session_comments|
+      can :manage, Comment do |comment, session_comments|
         unless comment.new_record?
           # give 15mins to edit new comments
           Rails.logger.info(" COMMENTS #{session_comments.inspect}")
           expire = comment.updated_at+CONSTANTS['max_time_to_edit_new_comments'].to_i.minutes
           begin
-            session_comments.detect { |c| c[0].eql?(comment.id.to_s) } &&  (Time.now < expire)
+            session_comments.detect { |c| c[0].eql?(comment.id.to_s) } && (Time.now < expire)
           rescue
             false
           end
