@@ -29,20 +29,16 @@ Feature: Application
     Then I am logged in as user "test@test.te" with password "verysecret"
     And I should see "Create new posting"
     
-  Scenario: As a guest I should see links to github and pivotal tracker but no create-buttons
+  Scenario: As a guest I should see no create-buttons
     Given I am logged out
     And I am on the home page
-    Then I should see "Github"
-    And I should see "PivotalTracker"
-    And I should not see "Create a new Page"
+    Then I should not see "Create a new Page"
     And I should not see "Create a new Blog"
 
-  Scenario: As an Admin I should see links to github and pivotal tracker and create-buttons
+  Scenario: As an Admin I should see links and create-buttons
     Given I am logged in as user "test@test.te" with password "verysecret"
     And I am on the home page
-    Then I should see "Github"
-    And I should see "PivotalTracker"
-    And I should see "Create a new Page"
+    Then I should see "Create a new Page"
     And I should see "Create a new Blog"
     
   Scenario: Get latest content as RSS-Feed
