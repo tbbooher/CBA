@@ -1,24 +1,50 @@
 - title APPLICATION_CONFIG['name'] + " " + t(:welcome), false
 = javascript 'endless_page'
 
-%div
-    - if (p=Page.top_pages).any?
-        %div.right_column
-            - for page in p
-                = render :partial => 'pages/page_intro', :locals => { :page => page }
-                %p.content_seperator
+%h2 Welcome to the Polco test site
 
-    - unless @blog.nil? 
+%p Working on getting authentication flow right and flush out the user model.
+
+%div
+  %div.left_column{:style=>'float:left; width:30%;'}
+    %div{:style=>':text-align:center; padding-top:20px; padding-left:40px;'}
+      = image_tag 'compass_21750_lg.gif'
+  %div.right_column{:style=>'float:right; width:65%;'}
+    %h2 What is Polco?
+
+    %p The end product is a public policy participation web site which not only can grow participation
+    in public policy, but generate critical new data on transparency of representative behavior. In
+    short, the site 1) displays the current legislation on the congressional floor, 2) provides an eballot
+    for visitors to cast their vote, 3) keeps track of votes by congressional district, and upon bill roll-
+    call 4) compares the representative’s vote with the district vote.
+
+    %p The website will leverage existing technologies and outputs from OpenCongress and GovTrack.
+    The site will generate public participation in politics because of the ease to participate, and also
+    because the ease to compare their representation relative to the district’s desires. The project is
+    called POLCO, The Political Compass.
+
+%div{:style=>'clear:both;'} &nbsp
+
+%hr
+
+%div
+  - if (p=Page.top_pages).any?
+    %div.right_column
+      - for page in p
+        = render :partial => 'pages/page_intro', :locals => { :page => page }
+        %p.content_seperator
+
+  - unless @blog.nil?
+    %p{:style=>'clear: left;'}
+    %div#postings.left_column
+      = link_to( t(:create_new_posting), new_blog_posting_path(@blog), :class => 'green_button') if can? :create, Posting
+      %p= will_paginate @postings
+      - for posting in @postings
+        %div{:style=>'clear: right;'}
+        = render :partial =>  posting, :locals => { :blog => @blog }
         %p{:style=>'clear: left;'}
-        %div#postings.left_column
-            = link_to( t(:create_new_posting), new_blog_posting_path(@blog), :class => 'green_button') if can? :create, Posting
-            %p= will_paginate @postings
-            - for posting in @postings
-                %div{:style=>'clear: right;'}
-                = render :partial =>  posting, :locals => { :blog => @blog }
-                %p{:style=>'clear: left;'}  
-            = render :partial => '/home/load_more', :locals => { :resources => @postings, :path => root_path }
-            %p= will_paginate @postings  
-    %p{:style=>'clear: right;'}
-    
+      = render :partial => '/home/load_more', :locals => { :resources => @postings, :path => root_path }
+      %p= will_paginate @postings
+  %p{:style=>'clear: right;'}
+
 %div{:style=>'clear: both;'}

@@ -13,6 +13,12 @@ gem "devise", "1.1.7"
 gem "cancan"
 gem "omniauth"
 
+# we need some stuff too (tbb)
+gem "formtastic"
+
+# for installation
+gem "heroku"
+
 # Bundle gem needed for paperclip and attachments
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 

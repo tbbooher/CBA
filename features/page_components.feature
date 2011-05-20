@@ -20,8 +20,8 @@ Feature: PageComponents
 
   Scenario: Clicking Add Component should show New Component form
     pending
-    #TODO: This feature works with js only. Add jasmin or any other js-testing-framework
-    #TODO: to test this feature
+    #TODO.txt: This feature works with js only. Add jasmin or any other js-testing-framework
+    #TODO.txt: to test this feature
     #  Given I am on the edit page for "Page 1"
     #  And I click on link 'Add component'
     #  Then I should be on the add component page for page "Page 1"

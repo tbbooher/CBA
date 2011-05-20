@@ -30,7 +30,7 @@ Feature: Comments
     Given I am on the comments page
     Then I should see "My first Comment"
     
-  # TODO: This is no JS behavior! with JS the user will stay on the comments page!
+  # TODO.txt: This is no JS behavior! with JS the user will stay on the comments page!
   Scenario: Admin should be able to delete any comment
     Given I am on the comments page
     And I click on link "Delete"

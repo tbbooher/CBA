@@ -1,4 +1,4 @@
-<li><%= menu_link_to t("menu.home"), root_path %></li>
+<li><%= menu_link_to t("menu.home"), root_path, :class => "current" %></li>
 
 <% if can? :read, Page %>
   <% for page in top_pages %>

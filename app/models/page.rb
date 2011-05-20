@@ -26,8 +26,8 @@ class Page
   references_many            :comments, :inverse_of => :commentable
   validates_associated       :comments
 
-  # TODO: Move this definitions to a library-module
-  # TODO: and replace this lines with just 'has_attchments'
+  # TODO.txt: Move this definitions to a library-module
+  # TODO.txt: and replace this lines with just 'has_attchments'
   embeds_many :attachments
   validates_associated :attachments
   accepts_nested_attributes_for :attachments, :allow_destroy => true
@@ -76,9 +76,9 @@ class Page
     render_for_html((t(I18n.locale,:body)||self.body).paragraphs[0])
   end
 
-  # TODO: Remove duplication!
-  # TODO:   This code occurs in Page and PageComponent. Move it to a single
-  # TODO:   place.
+  # TODO.txt: Remove duplication!
+  # TODO.txt:   This code occurs in Page and PageComponent. Move it to a single
+  # TODO.txt:   place.
   def render_with_template
     self.page_template.render do |template|
       template.gsub(/TITLE/, self.t(I18n.locale,:title))\

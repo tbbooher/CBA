@@ -63,7 +63,7 @@ class Comment
 
   private
 
-  # TODO: Instead of application-name, send the class-name and title of the commentable
+  # TODO.txt: Instead of application-name, send the class-name and title of the commentable
   def send_notification
     # arg[0] = commentable_identifier
     # arg[1] = comment_email

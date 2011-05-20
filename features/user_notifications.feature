@@ -25,14 +25,14 @@ Feature: User System Notifications
   
   Scenario: It should be possible to hide messages
     pending
-    # TODO THIS TEST SHOULD WORK - IT WORK's IN RUNNING APP BUT NOT HERE?!
+    # TODO.txt THIS TEST SHOULD WORK - IT WORK's IN RUNNING APP BUT NOT HERE?!
     # Given I click on link "hide" within "#user_notifications"
     # And I go to the home page
     # Then I should not see "Another message from your cpu"
 
   Scenario: It should be possible to redisplay a hidden message
     pending
-    # TODO THIS TEST SHOULD WORK - IT WORK's IN RUNNING APP BUT NOT HERE?!
+    # TODO.txt THIS TEST SHOULD WORK - IT WORK's IN RUNNING APP BUT NOT HERE?!
     # Given I am on the notifications page
     # And I click on link "display again" within "#user_notifications"
     # And I go to the home page

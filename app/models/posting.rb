@@ -24,8 +24,8 @@ class Posting
   references_many       :comments, :inverse_of => :commentable
   validates_associated  :comments
 
-  # TODO: Move this definitions to a library-module
-  # TODO: and replace this lines with just 'has_attchments'
+  # TODO.txt: Move this definitions to a library-module
+  # TODO.txt: and replace this lines with just 'has_attchments'
   embeds_many           :attachments
   validates_associated  :attachments
   accepts_nested_attributes_for :attachments,

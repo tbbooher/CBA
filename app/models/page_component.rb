@@ -20,9 +20,9 @@ class PageComponent
     self.page_template_id = new_template.id if new_template
   end
 
-  # TODO: Remove duplication!
-  # TODO:   This code occurs in Page and PageComponent. Move it to a single
-  # TODO:   place.
+  # TODO.txt: Remove duplication!
+  # TODO.txt:   This code occurs in Page and PageComponent. Move it to a single
+  # TODO.txt:   place.
   def render_body(view_context=nil)
     @view_context = view_context
     if self.page_template && @view_context
