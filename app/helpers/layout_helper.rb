@@ -33,7 +33,7 @@ module LayoutHelper
   # if the link is a link to the current-page display it with a different
   # css-class to inform the user about 'here you are'.
   def menu_link_to(name,path,options={})
-    style = current_page?(path) ? "hmenu_current" : "hmenu"
+    style = current_page?(path) ? "current" : ""
     options.merge!( { :class => style } )
     link_to( name, path, options )
   end

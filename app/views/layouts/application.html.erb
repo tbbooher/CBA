@@ -28,18 +28,18 @@
 <% end %>
 <div id='overlay' class="ui-widget-content"></div>
 <div id="banner">
-  <%= APPLICATION_CONFIG['name'] %>
+  <%= image_tag "polco.gif" %>
 </div>
 
-<div id="session">
-  <ul class="hmenu">
-    <%= render 'home/menu/application' %>
-  </ul>
-  <ul class="hmenu" style='float: right;'>
-    <%= render 'devise/menu/registration_items' %>
-    <%= render 'devise/menu/login_items' %>
-    <%= render '/home/menu/language_selection' %>
-  </ul>
+<div id="top_bar">
+    <ul id="top_menu">
+      <%= render 'home/menu/application' %>
+      <div style="float:right">
+          <%= render 'devise/menu/registration_items' %>
+          <%= render 'devise/menu/login_items' %>
+          <%= render '/home/menu/language_selection' %>
+      </div>
+    </ul>
 </div>
 
 <div id="container">

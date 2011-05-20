@@ -1,7 +1,7 @@
 #
 # Handle delayed jobs
 #
-# TODO: Add fields and functions for :do_not_run_before/_after
+# TODO.txt: Add fields and functions for :do_not_run_before/_after
 # and Priority
 #
 class DelayedJob

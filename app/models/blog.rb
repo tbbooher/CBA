@@ -37,7 +37,7 @@ class Blog
   private
   # ContentItems need to override the abstract method but a Blog didn't
   def content_for_intro
-    # TODO: Intro should link to a Page if one is referenced.
+    # TODO.txt: Intro should link to a Page if one is referenced.
   end
   
   def remove_from_old_pages

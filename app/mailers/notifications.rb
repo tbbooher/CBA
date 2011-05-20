@@ -45,9 +45,9 @@ class Notifications < ActionMailer::Base
         end
       end
 
-      # TODO: The following code doesn't work. Either there is a bug somewhere
-      # TODO: in CBA or in Rails::Mail. Only the cover-pic arrives.
-      # TODO: Check if it's possible to attach more files with Rails Mail - it should!
+      # TODO.txt: The following code doesn't work. Either there is a bug somewhere
+      # TODO.txt: in CBA or in Rails::Mail. Only the cover-pic arrives.
+      # TODO.txt: Check if it's possible to attach more files with Rails Mail - it should!
       # Attach attachments
       posting.attachments.each do |att|
         path = att.file.path.gsub(/\?.*$/,"")

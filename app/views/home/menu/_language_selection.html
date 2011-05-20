@@ -1,8 +1,8 @@
-<li class='first_language_selector'>&nbsp;</li>
+<li class='first_language_selector' style="margin-top:8px;">&nbsp;</li>
 <% for locale in I18n.available_locales %>
   <li class='language_selector'>
     <% if I18n.locale == locale %>
-      <strong><%= t("locales.#{locale}") -%></strong>
+      <span class="marked_language"><strong><%= t("locales.#{locale}") -%></strong></span>
     <% else %>
       <%= link_to t("locales.#{locale}"), switch_locale_path(locale) %>
     <% end %>
