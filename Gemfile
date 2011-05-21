@@ -28,6 +28,10 @@ gem "will_paginate"
 gem "RedCloth", "4.2.5"
 gem "rdiscount"
 
+#group :production do
+  #gem "system_timer"
+#end
+
 # Bundle gems for development 
 group :development do
   gem "nifty-generators"
