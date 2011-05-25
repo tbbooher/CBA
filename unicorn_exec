@@ -11,14 +11,13 @@
 ### END INIT INFO
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-#DAEMON=/home/tim/.rvm/gems/ruby-1.9.2-p180@polco/bin/unicorn
 DAEMON=/home/passenger/.rvm/gems/ruby-1.9.2-p180/bin/unicorn_rails
-DAEMON_OPTS="-c /home/passenger/polco/current/config/unicorn_tacitus.rb -E production -D"
+DAEMON_OPTS="-c /home/passenger/cba/current/config/unicorn_tacitus.rb -E production -D"
 
 
 NAME=unicorn_rails
 DESC=unicorn_rails
-PID=/home/passenger/polco/shared/pids/unicorn.pid
+PID=/home/passenger/cba/shared/pids/unicorn.pid
 
 case "$1" in
   start)
