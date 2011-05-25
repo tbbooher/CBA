@@ -280,6 +280,7 @@ DEPENDENCIES
   mongoid-paperclip
   nifty-generators
   omniauth
+  rack (< 1.3.0)
   rails
   rails-erd
   rdiscount

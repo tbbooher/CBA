@@ -38,6 +38,8 @@ gem "rdiscount"
   #gem "system_timer"
 #end
 
+gem "rack", "<1.3.0"
+
 # Bundle gems for development 
 group :development do
   gem "nifty-generators"
