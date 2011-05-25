@@ -22,6 +22,9 @@ gem "formtastic"
 # for deployment
 gem "capistrano"
 
+# and server
+gem 'unicorn'
+
 # Bundle gem needed for paperclip and attachments
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 

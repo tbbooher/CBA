@@ -100,6 +100,7 @@ GEM
       thor (~> 0.14)
     json (1.5.1)
     json_pure (1.5.1)
+    kgio (2.4.1)
     launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
@@ -240,6 +241,9 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
+    unicorn (3.6.2)
+      kgio (~> 2.3)
+      rack
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
@@ -286,4 +290,5 @@ DEPENDENCIES
   simplecov (>= 0.4.0)
   spork (= 0.9.0.rc5)
   spork-testunit
+  unicorn
   will_paginate
