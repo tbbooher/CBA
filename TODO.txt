@@ -1,6 +1,7 @@
 application change log:
 
 - took out references to 37 signals
+- getting unicorn set up
 
 
 ===============================================================
