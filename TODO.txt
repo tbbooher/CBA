@@ -1,3 +1,10 @@
+application change log:
+
+- took out references to 37 signals
+
+
+===============================================================
+
 - get user model fully understood and working
 - add fields to user model
 - deploy site with mongodb
