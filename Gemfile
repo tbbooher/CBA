@@ -17,7 +17,10 @@ gem "omniauth"
 gem "formtastic"
 
 # for installation
-gem "heroku"
+#gem "heroku"
+
+# for deployment
+gem "capistrano"
 
 # Bundle gem needed for paperclip and attachments
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
