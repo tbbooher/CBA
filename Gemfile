@@ -17,7 +17,7 @@ gem "omniauth"
 gem "formtastic"
 
 # for installation
-#gem "heroku"
+gem "heroku"
 
 # for deployment
 gem "capistrano"
