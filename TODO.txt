@@ -2,7 +2,8 @@ application change log:
 
 - took out references to 37 signals
 - getting unicorn set up
-
+- jquery_ujs.js is missing, so i reinstalled jquery:rails generators
+-
 
 ===============================================================
 
@@ -12,7 +13,7 @@ application change log:
 
 
 - linked in is not working right
-- jquery_ujs.js is missing
+#
 
 - fix paperclip error
 - add districts
@@ -22,4 +23,11 @@ application change log:
 - blog title isn't displaying
 - change german to spanish (add flag icons)
 - test mail server for functionality
+-
+
+errors:
+=============================
+- <a href="#" onclick="image_popup('/cover_pictures/popup/missing.png'); return false;"><img alt="Missing" src="/cover_pictures/thumb/missing.png"></a>
+doesn't exist
+- linked in has error: https://github.com/intridea/omniauth/pull/297
 -

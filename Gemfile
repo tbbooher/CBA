@@ -11,7 +11,7 @@ gem "bson_ext"  #, "1.1.5"
 # Bundle gem needed for Devise and cancan
 gem "devise", "1.1.7"
 gem "cancan"
-gem "omniauth"
+gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
 
 # we need some stuff too (tbb)
 gem "formtastic"
