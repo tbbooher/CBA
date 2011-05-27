@@ -277,7 +277,7 @@ DEPENDENCIES
   gherkin
   haml
   heroku
-  jquery-rails
+  jquery-rails (>= 1.0.3)
   json_pure
   launchy
   mocha

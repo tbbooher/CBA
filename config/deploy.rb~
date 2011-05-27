@@ -1,0 +1,83 @@
+# RVM bootstrap
+# $:.unshift(File.expand_path("/home/tim/.rvm/lib"))
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require 'rvm/capistrano'
+set :rvm_ruby_string, '1.9.2'
+set :rvm_type, :user
+
+# bundler bootstrap
+require 'bundler/capistrano'
+
+# main details
+set :application, "polco"
+role :web, "66.228.39.94"
+role :app, "66.228.39.94"
+role :db, "66.228.39.94", :primary => true
+set :rails_env, "production"
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+set :deploy_to, "/home/passenger/cba"
+set :deploy_via, :remote_cache
+set :user, "passenger"
+set :use_sudo, false
+
+# repo details
+set :scm, :git
+set :scm_username, "tbbooher"
+set :repository, "git@github.com:tbbooher/CBA.git"
+set :branch, "master"
+set :git_enable_submodules, 1
+set :keep_releases, 5
+
+# # server details
+set :unicorn_pid, "#{shared_path}/pids/unicorn.pid"
+
+after "deploy", "deploy:cleanup"
+
+namespace :unicorn do
+  desc "start unicorn"
+  task :start, :roles => :app, :except => {:no_release => true} do
+    run "cd #{current_path} && unicorn_exec start"
+    #    run "cd #{current_path} && #{try_sudo} bundle exec unicorn_rails -c #{current_path}/config/unicorn_tacitus.rb -E #{rails_env} -D"
+  end
+  desc "stop unicorn"
+  task :stop, :roles => :app, :except => {:no_release => true} do
+    run "#{current_path}/unicorn_exec stop"
+  end
+  desc "unicorn reload"
+  task :reload, :roles => :app, :except => {:no_release => true} do
+    run "#{current_path}/unicorn_exec reload"
+  end
+  desc "graceful stop unicorn"
+  task :graceful_stop, :roles => :app, :except => {:no_release => true} do
+    run "#{try_sudo} kill -s QUIT `cat #{unicorn_pid}`"
+  end
+  desc "restart unicorn"
+  task :restart, :roles => :app, :except => {:no_release => true} do
+    run "#{current_path}/unicorn_exec restart"
+  end
+
+  after "deploy:restart", "unicorn:restart"
+end
+
+after "deploy:update_code", "deploy:config_symlink"
+before "deploy:restart", "deploy:fix_file_permissions"
+
+namespace :deploy do
+
+  task :config_symlink do
+    run "ln -s #{shared_path}/application.yml #{release_path}/config/application.yml"
+    run "ln -s #{shared_path}/mongoid.yml #{release_path}/config/mongoid.yml"
+  end
+
+  desc "Fix file permissions"
+  task :fix_file_permissions do
+    run "chmod a+x #{current_path}/unicorn_exec"
+  end
+end
+
+namespace :deploy do
+  task :restart do
+  end
+end

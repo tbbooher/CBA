@@ -1,7 +1,6 @@
 application change log:
 
 - took out references to 37 signals
-- getting unicorn set up
 
 
 ===============================================================
@@ -9,11 +8,6 @@ application change log:
 - get user model fully understood and working
 - add fields to user model
 - deploy site with mongodb
-
-
-- linked in is not working right
-- jquery_ujs.js is missing
-
 - fix paperclip error
 - add districts
 - add members to database (pull in wholesale from opencongress)
