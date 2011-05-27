@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
 
 gem 'rails' #, '>=3.0.3'
-gem 'jquery-rails'  
+gem 'jquery-rails', '>= 1.0.3'
 
 # Bundle gems needed for Mongoid
 gem "mongoid", "~>2.0.1"   #, "2.0.0.rc.7"
