@@ -1170,6 +1170,7 @@
         padding: 5px 15px 0;
     }
 
+    html input[type=text], html input[type=password], body input[type=text], body input[type=password] { font-size: 12px; padding: 7px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #c9c3e6; }
 }
 
 /* END SCREEN */

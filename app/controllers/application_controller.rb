@@ -27,8 +27,8 @@ class ApplicationController < ActionController::Base
   helper_method :top_pages
 
   # Setup content for buttons on top of page
-  helper_method :pivotal_tracker_project
-  helper_method :github_project
+  #helper_method :pivotal_tracker_project
+  #helper_method :github_project
   helper_method :twitter_name
   helper_method :twitter_link
 
@@ -42,16 +42,6 @@ class ApplicationController < ActionController::Base
   # Top Pages are shown in the top-menu
   def top_pages
     @top_pages ||= Page.where(:show_in_menu => true).asc(:menu_order)
-  end
-
-  # Load link to pivotal tracker from config
-  def pivotal_tracker_project
-    @pivotal_tracker_project ||= APPLICATION_CONFIG['pivotal_tracker_project']
-  end
-
-  # Load link to github project from config
-  def github_project
-    @github_project          ||= APPLICATION_CONFIG['github_project']
   end
 
   # Load twitter nickname (button-label) from config
