@@ -25,6 +25,11 @@ gem "capistrano"
 # and server
 gem 'unicorn'
 
+# time to connect to opencongress
+gem 'json'
+gem 'ym4r'
+gem 'drumbone'
+
 # Bundle gem needed for paperclip and attachments
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
@@ -68,4 +73,5 @@ group :test do
   gem 'autotest-growl'
   gem "mocha"
   gem "gherkin"
+  gem 'test-unit'
 end

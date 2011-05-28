@@ -11,7 +11,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   # Replace this with your real tests.
-  test "A just built new user sould not save" do
+  test "A just built new user should not save" do
     user = User.new
     assert !user.save, "Saved new user without setting the object up for usage"
   end

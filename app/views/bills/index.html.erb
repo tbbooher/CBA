@@ -1,0 +1,25 @@
+<% title "Bills" %>
+
+<p>The following are bills currently in the U.S. House
+	or Senate that relate to the blind and visually impaired.
+	This list is updated daily. Click on a heading to sort
+	the list by that heading. Click on a Bill Number (the
+	first column) to get more information or to read the
+	bill text.</p>
+
+<%= page_entries_info @bills %>
+<% paginated_section @bills do %>
+	<%= render :partial => "bills", :locals => { :bills => @bills, :sorting => true } %>
+<% end %>
+
+<% if app_admin? %>
+	<p><%= link_to "Add Bill", new_bill_path %></p>
+
+	<% unless Bill.hidden.blank? %>
+		<h3>Hidden Bills</h3>
+		<% Bill.hidden.each do |bill| %>
+			<p><%= bill.title + " " + link_to("Unhide", bill_path(bill), :method => :put, :confirm => "Unhide this bill?") %></p>
+		<% end %>
+	<% end %>
+<% end %>
+
