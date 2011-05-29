@@ -1,5 +1,7 @@
 Cba::Application.routes.draw do
 
+  resources :bills
+
   # Switch locales
   match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
 
