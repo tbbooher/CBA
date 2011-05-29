@@ -50,6 +50,7 @@ group :development do
   gem "nifty-generators"
   gem "rails-erd"
   gem 'rdoc'
+  gem "rails3-generators"
 end
 
 # Bundle gems for testing
@@ -64,6 +65,7 @@ group :test do
   gem 'spork', '0.9.0.rc5'
   gem 'spork-testunit'
   gem 'launchy'
+  gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'escape_utils'
   gem 'ZenTest'
@@ -74,4 +76,5 @@ group :test do
   gem "mocha"
   gem "gherkin"
   gem 'test-unit'
+  gem "autotest-fsevent"
 end

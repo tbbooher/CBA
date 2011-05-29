@@ -53,6 +53,9 @@ module Cba
 
     config.generators do |g|
       g.orm             :mongoid
+      #g.test_framework :shoulda
+      #g.fixture_replacement :factory_girl, :dir => 'test/factories'
+      g.test_framework  :test_unit, :fixture_replacement => :factory_girl
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
