@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class BillsControllerTest < ActionController::TestCase
-  include ActionView::Helpers::TextHelper
 
   setup do
     @bill = Factory(:bill)
@@ -10,8 +9,6 @@ class BillsControllerTest < ActionController::TestCase
     @request.env['devise.mapping'] = :user
     @user.confirm!
     sign_in @user
-    #@user = create_valid_user_with_id('4d2ca35a2d19475c51000012')
-    #assert !@user.nil?, "Can't create valid user"
   end
 
 #  before (:each) do
@@ -26,12 +23,14 @@ class BillsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:bills)
   end
-=begin
 
   test "should get new" do
     get :new
+    false
     assert_response :success
   end
+
+=begin
 
   test "should create bill" do
     assert_difference('Bill.count') do

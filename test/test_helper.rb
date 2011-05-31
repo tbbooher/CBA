@@ -11,6 +11,8 @@ Spork.prefork do
   require File.expand_path('../../config/environment', __FILE__)
   require 'rails/test_help'
   include Devise::TestHelpers
+  require "#{Rails.root}" + '/lib/content_items/content_item.rb'
+  # maybe more needed
 end
 
 Spork.each_run do

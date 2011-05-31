@@ -1,5 +1,7 @@
 Cba::Application.routes.draw do
 
+  resources :legislators
+
   resources :bills
 
   # Switch locales

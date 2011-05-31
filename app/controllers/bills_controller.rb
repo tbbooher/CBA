@@ -13,6 +13,8 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.xml
   def show
+
+
     @bill = Bill.find(params[:id])
 
     respond_to do |format|
