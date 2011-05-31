@@ -5,6 +5,8 @@ Feature: Bills
 
 Scenario: New Guest should be able to see a list of bills
   Given I am on the bills page
-  Then I should see a list of all current Bills
+  Then I should see "Drumbone"
+
+
 
 

@@ -12,12 +12,15 @@ gem "bson_ext"  #, "1.1.5"
 gem "devise", "1.1.7"
 gem "cancan"
 gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
+gem "govkit", :git => 'git://github.com/opengovernment/govkit.git'
+gem "nytimes-congress"
+gem 'drumbone'
 
 # we need some stuff too (tbb)
 gem "formtastic"
 
 # for installation
-gem "heroku"
+#gem "heroku"
 
 # for deployment
 gem "capistrano"
@@ -28,7 +31,12 @@ gem 'unicorn'
 # time to connect to opencongress
 gem 'json'
 gem 'ym4r'
-gem 'drumbone'
+
+gem 'nokogiri'
+#group :after_initialize do
+gem "feedzirra", :git => "git://github.com/pauldix/feedzirra.git"
+#end
+gem 'sax-machine'
 
 # Bundle gem needed for paperclip and attachments
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
