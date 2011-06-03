@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @legislator.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @legislator.last_name %>
+</p>
+
+<p>
+  <b>Govtrack:</b>
+  <%= @legislator.govtrack_id %>
+</p>
+
+<p>
+  <b>Bioguide:</b>
+  <%= @legislator.bioguide_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @legislator.title %>
+</p>
+
+<p>
+  <b>Nickname:</b>
+  <%= @legislator.nickname %>
+</p>
+
+<p>
+  <b>Name suffix:</b>
+  <%= @legislator.name_suffix %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @legislator.district %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @legislator.state %>
+</p>
+
+<p>
+  <b>Party:</b>
+  <%= @legislator.party %>
+</p>
+
+<p>
+  <b>Sponsored count:</b>
+  <%= @legislator.sponsored_count %>
+</p>
+
+<p>
+  <b>Cosponsored count:</b>
+  <%= @legislator.cosponsored_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_legislator_path(@legislator) %> |
+<%= link_to 'Back', legislators_path %>
