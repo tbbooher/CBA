@@ -1,0 +1,65 @@
+<%= form_for(@legislator) do |f| %>
+  <% if @legislator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@legislator.errors.count, "error") %> prohibited this legislator from being saved:</h2>
+
+      <ul>
+      <% @legislator.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :govtrack_id %><br />
+    <%= f.text_field :govtrack_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bioguide_id %><br />
+    <%= f.text_field :bioguide_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname %>
+  </div>
+  <div class="field">
+    <%= f.label :name_suffix %><br />
+    <%= f.text_field :name_suffix %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br />
+    <%= f.text_field :party %>
+  </div>
+  <div class="field">
+    <%= f.label :sponsored_count %><br />
+    <%= f.text_field :sponsored_count %>
+  </div>
+  <div class="field">
+    <%= f.label :cosponsored_count %><br />
+    <%= f.text_field :cosponsored_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
