@@ -239,6 +239,21 @@ Given /^the following (.+) records?$/ do |factory, table|
   end
 end
 
+# Make sure not to overwrite your production files!
+# Use Rails.env in your filename eg config/twitter.test.html
+# and config/twitter.#{Rails.env}.html in your production code.
+Given /^the following files?$/ do |table|
+  table.hashes.each do |hash|
+    f=File.new( File::join(Rails.root,hash['filename'].strip), "w+")
+    f.write(hash['content']+"\n")
+    f.close
+  end
+end
+
+Given /^delete file "([^"]*)"$/ do |filename|
+  File.unlink( File::join(Rails.root, filename))
+end
+
 Given /^I am logged out$/ do
   visit path_to('sign_out')
 end
