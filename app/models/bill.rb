@@ -36,7 +36,7 @@ class Bill
           :bill_type => result.bill_type,
           :bill_number => result.bill_number
       )
-      bill.save if bill.valid?
+      bill.save if bill.valid?  # is this the best way to do this?
     end
   end
 
