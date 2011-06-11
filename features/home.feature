@@ -18,10 +18,10 @@ Feature: Home
      Then I should see "A Twitter page"
      And I should see "Lorem Twittum"
 
-  Scenario: If twitter.html exist the home page should show the twitter-box
-     Given the following file
-       | filename                 | content                 |
-       | config/twitter.test.html | This is the twitter box |
-     And I am on the home page
-     Then I should see "This is the twitter box"
-     Then delete file "config/twitter.test.html"
+#  Scenario: If twitter.html exist the home page should show the twitter-box
+#     Given the following file
+#       | filename                 | content                 |
+#       | config/twitter.test.html | This is the twitter box |
+#     And I am on the home page
+#     Then I should see "This is the twitter box"
+#     Then delete file "config/twitter.test.html"
