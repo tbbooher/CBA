@@ -1,5 +1,7 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
+#test/factories/bills.rb
+
 Factory.define :bill do |f|
   f.drumbone_id "MyString"
   f.congress 1

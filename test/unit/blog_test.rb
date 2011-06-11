@@ -12,7 +12,7 @@ class BlogTest < ActiveSupport::TestCase
     Page.delete_all
   end
 
-  test "sould not save without a title" do
+  test "should not save without a title" do
     b = Blog.new
     assert !b.valid?, "A blog without a title should not be valid"
     b.title = 'My Testtitle'

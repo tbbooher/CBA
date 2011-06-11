@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class LegislatorsControllerTest < ActionController::TestCase
+
   setup do
-    @legislator = legislators(:one)
+    @legislator = Factory(:legislator)
+    User.delete_all
+    @user = Factory.create(:user)
+    @request.env['devise.mapping'] = :user
+    @user.confirm!
+    sign_in @user
   end
 
   test "should get index" do
@@ -16,13 +22,13 @@ class LegislatorsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create legislator" do
-    assert_difference('Legislator.count') do
-      post :create, :legislator => @legislator.attributes
-    end
-
-    assert_redirected_to legislator_path(assigns(:legislator))
-  end
+#  test "should create legislator" do
+#    assert_difference('Legislator.count') do
+#      post :create, :legislator => @legislator.attributes
+#    end
+#
+#    assert_redirected_to legislator_path(assigns(:legislator))
+#  end
 
   test "should show legislator" do
     get :show, :id => @legislator.to_param
