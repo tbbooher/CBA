@@ -2,11 +2,11 @@ class Legislator
   include Mongoid::Document
   field :first_name, :type => String
   field :last_name, :type => String
-  field :govtrack_id, :type => Integer
-  field :bioguide_id, :type => String
+  field :bioguide_id, :type => Integer
+  field :youtube_id, :type => String
   field :title, :type => String
   field :nickname, :type => String
-  field :name_suffix, :type => String
+  field :user_approval, :type => String
   field :district, :type => Integer
   field :state, :type => String
   field :party, :type => String

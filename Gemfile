@@ -12,7 +12,7 @@ gem "bson_ext"  #, "1.1.5"
 gem "devise", "1.1.7"
 gem "cancan"
 gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
-gem "govkit", :git => 'git://github.com/opengovernment/govkit.git'
+gem "govkit", :git => 'git://github.com/tbbooher/govkit.git'
 gem "nytimes-congress"
 gem 'drumbone'
 
@@ -73,8 +73,8 @@ group :test do
   gem 'spork', '0.9.0.rc5'
   gem 'spork-testunit'
   gem 'launchy'
-  gem 'factory_girl'
-  gem 'factory_girl_rails'
+#  gem 'factory_girl'
+#  gem 'factory_girl_rails'
   gem 'escape_utils'
   gem 'ZenTest'
   gem 'autotest'
@@ -82,6 +82,7 @@ group :test do
   gem 'ruby-growl'
   gem 'autotest-growl'
   gem "mocha"
+  gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
   gem "autotest-fsevent"
