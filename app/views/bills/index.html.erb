@@ -1,63 +1,16 @@
 <h1>Listing bills</h1>
 
-<table>
-  <tr>
-    <th>Drumbone</th>
-    <th>Congress</th>
-    <th>Bill type</th>
-    <th>Bill number</th>
-    <th>Short title</th>
-    <th>Official title</th>
-    <th>Summary</th>
-    <th>Sponsor</th>
-    <th>Last action on</th>
-    <th>Last action text</th>
-    <th>Enacted on</th>
-    <th>Average rating</th>
-    <th>Cosponsors count</th>
-    <th>Govtrack</th>
-    <th>Bill html</th>
-    <th>Summary word count</th>
-    <th>Text word count</th>
-    <th>State</th>
-    <th>Text updated on</th>
-    <th>Hidden</th>
-    <th>Sponsor name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @bills.each do |bill| %>
-  <tr>
-    <td><%= bill.drumbone_id %></td>
-    <td><%= bill.congress %></td>
-    <td><%= bill.bill_type %></td>
-    <td><%= bill.bill_number %></td>
-    <td><%= bill.short_title %></td>
-    <td><%= bill.official_title %></td>
-    <td><%= bill.summary %></td>
-    <td><%= bill.sponsor_id %></td>
-    <td><%= bill.last_action_on %></td>
-    <td><%= bill.last_action_text %></td>
-    <td><%= bill.enacted_on %></td>
-    <td><%= bill.average_rating %></td>
-    <td><%= bill.cosponsors_count %></td>
-    <td><%= bill.govtrack_id %></td>
-    <td><%= bill.bill_html %></td>
-    <td><%= bill.summary_word_count %></td>
-    <td><%= bill.text_word_count %></td>
-    <td><%= bill.state %></td>
-    <td><%= bill.text_updated_on %></td>
-    <td><%= bill.hidden %></td>
-    <td><%= bill.sponsor_name %></td>
-    <td><%= link_to 'Show', bill %></td>
-    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-    <td><%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% @bills.each_with_index do |bill, index| %>
+    <h3>Bill <%= index+1 %>: <%= bill.short_title || bill.official_title %></h3>
+    <p> by <%= bill.sponsor.first_name %> on <%= bill.enacted_on %></p>
+
+    <p><%= link_to 'Show', bill %> |
+    <%= link_to 'Edit', edit_bill_path(bill) %> |
+    <%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></p>
+    <hr>
 <% end %>
-</table>
 
-<br />
+<br>
 
 <%= link_to 'New Bill', new_bill_path %>

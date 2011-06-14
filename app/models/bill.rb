@@ -194,15 +194,15 @@ class Bill
           end
         end
 
-        if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(drumbone.last_action.acted_at)
+        if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(bill.last_action.acted_at)
           bill_object = HTTParty.get("http://www.govtrack.us/data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
           self.bill_html = bill_object.response.body
           self.text_updated_on = Date.today
           Rails.logger.info "Updated Bill Text for #{self.ident}"
         end
 
-        #self.sponsor_name = self.sponsor.last_name
-        #self.cosponsors_count = self.cosponsors.count
+        self.sponsor_name = self.sponsor.last_name
+        self.cosponsors_count = self.cosponsors.count
         self.text_word_count = self.bill_html.to_s.word_count
         self.summary_word_count = self.summary.to_s.word_count
         true
