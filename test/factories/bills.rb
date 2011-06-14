@@ -1,11 +1,13 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
-Factory.define :bill do |f|
-  f.drumbone_id "MyString"
+#test/factories/bills.rb
+
+Factory.define :bill, :class => OpenStruct do |f|
+  f.ident "MyString"
   f.congress 1
   f.bill_type "MyString"
   f.bill_number 1
-  f.the_short_title "Elba is bleak"
+  f.short_title "Elba is bleak"
   f.official_title "MyString"
   f.summary "MyString"
   f.sponsor_id 1
