@@ -1,15 +1,19 @@
 <h1>Listing bills</h1>
 
+ <%#= will_paginate @bills %>
 
 <% @bills.each_with_index do |bill, index| %>
     <h3>Bill <%= index+1 %>: <%= bill.short_title || bill.official_title %></h3>
-    <p> by <%= bill.sponsor.full_title %>, last action on <%= bill.last_action_on.to_s %> was <%= bill.last_action_text %></p>
+    <p> by <%= bill.sponsor.full_title %><br>
+      On <%= bill.last_action_on.to_s %> it was <%= bill.last_action_text %></p>
 
     <p><%= link_to 'Show', bill %> |
     <%= link_to 'Edit', edit_bill_path(bill) %> |
     <%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></p>
     <hr>
 <% end %>
+
+ <%#= will_paginate @bills %>
 
 <br>
 
