@@ -1,6 +1,8 @@
 <h1>Listing bills</h1>
 <% javascript 'endless_page' %>
 
+  <%= will_paginate @bills %>
+
 <% @bills.each_with_index do |bill, index| %>
     <h3>Bill <%= index+1 %>: <%= bill.short_title || bill.official_title %></h3>
     <p> by <%= bill.sponsor.full_title %><br>
@@ -11,6 +13,8 @@
     <%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></p>
     <hr>
 <% end %>
+
+  <%= will_paginate @bills %>
 
 <br>
 
