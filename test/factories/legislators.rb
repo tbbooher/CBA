@@ -1,8 +1,8 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
 Factory.define :legislator do |f|
-  f.first_name "MyString"
-  f.last_name "MyString"
+  f.first_name "Mark"
+  f.last_name "Weiner"
   f.govtrack_id 1
   f.bioguide_id "MyString"
   f.title "MyString"

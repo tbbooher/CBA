@@ -1,64 +1,106 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First name:</b>
-  <%= @legislator.first_name %>
-</p>
+<% title @bill.full_title %>
 
 <p>
-  <b>Last name:</b>
-  <%= @legislator.last_name %>
+  <strong>Congress:</strong>
+  <%= @bill.congress.ordinalize %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%=h @bill.full_title %>
+</p>
+<p>
+  <strong>Official Title:</strong>
+  <%=h @bill.official_title %>
+</p>
+<p>
+	<%= link_to "Skip to Comments", :anchor => "comments" %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%=h @bill.state %>
+</p>
+<p>
+  <strong>Summary:</strong>
+  <%= truncate h(@bill.summary), :length => 350, :omission => summarize_link(@bill) %>
+</p>
+<p>
+  <strong>Sponsored by:</strong>
+	<%= link_to h(@bill.sponsor.full_title), @bill.sponsor %>
+</p>
+<p>
+  <strong>Co-sponsored by:</strong>
+	<%= pluralize(@bill.cosponsors.count(:conditions => {:party => "D"}), "Democrat") %> and
+	<%= pluralize(@bill.cosponsors.count(:conditions => {:party => "R"}), "Republican") %>
+</p>
+<p>
+  <strong>Last Action On:</strong>
+  <%=h @bill.last_action_on %>
+</p>
+<p>
+  <strong>Last Action:</strong>
+  <%=h @bill.last_action_text %>
+</p>
+<p>
+  <strong>Average Rating:</strong>
+  <%=h @bill.average_rating %>
 </p>
 
-<p>
-  <b>Govtrack:</b>
-  <%= @legislator.govtrack_id %>
-</p>
+<h4><%= pluralize(@find_blind.length, "paragraph") %> containing &lsquo;blind&rsquo;</h4>
+<ol>
+<% @find_blind.each do |p| %>
+	<li><%= p %></li>
+<% end %>
+</ol>
+
+<h4><%= pluralize(@find_deafblind.length, "paragraph") %> containing &lsquo;deaf-blind&rsquo;</h4>
+<ol>
+<% @find_deafblind.each do |p| %>
+	<li><%= p %></li>
+<% end %>
+</ol>
+
+<h4><%= pluralize(@find_visually_impaired.length, "paragraph") %> containing &lsquo;visually impaired&rsquo;</h4>
+<ol>
+<% @find_visually_impaired.each do |p| %>
+	<li><%= p %></li>
+<% end %>
+</ol>
+
+<h4><%= read_link(@bill) %></h4>
+
+<h3><%= pluralize(@bill.cosponsors_count, "Cosponsor") %>
+	from <%= pluralize(@cosponsor_states.count, "State") %></h3>
+
+<% unless @bill.cosponsors.empty? %>
+<table border="1">
+<% @cosponsor_states.sort.each do |state, cosponsors| %>
+	<tr>
+		<th><%= state.to_us_state %></th>
+		<td>
+			<%= links_to_legislators(cosponsors) %>
+		</td>
+	</tr>
+<% end %>
+</table>
+<% end %>
+
+<div id="comments">
+	<h4 id="comments_count">
+	  <%= pluralize @bill.comments.size, 'comment' %>
+	</h4>
+  <%= render @bill.comments %>
+
+	<div>
+	  <%= render :partial => 'comments/form' %>
+	</div>
+</div>
 
 <p>
-  <b>Bioguide:</b>
-  <%= @legislator.bioguide_id %>
+  <%= link_to "View All", bills_path %>
 </p>
 
-<p>
-  <b>Title:</b>
-  <%= @legislator.title %>
-</p>
-
-<p>
-  <b>Nickname:</b>
-  <%= @legislator.nickname %>
-</p>
-
-<p>
-  <b>Name suffix:</b>
-  <%= @legislator.name_suffix %>
-</p>
-
-<p>
-  <b>District:</b>
-  <%= @legislator.district %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @legislator.state %>
-</p>
-
-<p>
-  <b>Party:</b>
-  <%= @legislator.party %>
-</p>
-
-<p>
-  <b>Sponsored count:</b>
-  <%= @legislator.sponsored_count %>
-</p>
-
-<p>
-  <b>Cosponsored count:</b>
-  <%= @legislator.cosponsored_count %>
-</p>
 
 
 <%= link_to 'Edit', edit_legislator_path(@legislator) %> |

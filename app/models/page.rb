@@ -11,7 +11,6 @@ class Page
   include Translator
   translate_fields [:title, :body]
 
-
   field :show_in_menu, :type => Boolean, :default => true
   field :menu_order, :type => Integer, :default => 99999
   field :body, :type => String, :required => true
