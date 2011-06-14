@@ -1,12 +1,12 @@
-<h1>Listing bills</h1>
+<h1>Bills Admin View</h1>
 <% javascript 'endless_page' %>
 
   <%= will_paginate @bills %>
 
-<% @bills.each_with_index do |bill, index| %>
-    <h3>Bill <%= index+1 %>: <%= bill.short_title || bill.official_title %></h3>
+<% @bills.each do |bill| %>
+    <h3><%= bill.short_title || bill.official_title %></h3>
     <p> by <%= bill.sponsor.full_title %><br>
-      On <%= bill.last_action_on.to_s %> it was <%= bill.last_action_text %></p>
+      <b>Last action on <%= bill.last_action_on.to_s %>:</b> <%= bill.last_action_text %></p>
 
     <p><%= link_to 'Show', bill %> |
     <%= link_to 'Edit', edit_bill_path(bill) %> |
