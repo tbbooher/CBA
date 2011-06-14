@@ -3,7 +3,7 @@
 
 <% @bills.each_with_index do |bill, index| %>
     <h3>Bill <%= index+1 %>: <%= bill.short_title || bill.official_title %></h3>
-    <p> by <%= bill.sponsor.first_name %> on <%= bill.enacted_on %></p>
+    <p> by <%= bill.sponsor.full_title %> on <%= bill.enacted_on %></p>
 
     <p><%= link_to 'Show', bill %> |
     <%= link_to 'Edit', edit_bill_path(bill) %> |
