@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Drumbone:</b>
-  <%= @bill.drumbone_id %>
-</p>
-
-<p>
   <b>Congress:</b>
   <%= @bill.congress %>
 </p>
@@ -72,7 +67,7 @@
 
 <p>
   <b>Bill html:</b>
-  <%= @bill.bill_html %>
+  <%= @bill.bill_html.html_safe %>
 </p>
 
 <p>
