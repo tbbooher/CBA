@@ -26,3 +26,4 @@ app/views/layouts/disabled_layouts/*
 app/views/layouts/disabled_layouts/**/*
 .idea/
 data/*.xml
+public/images/bio_photos/*.jpeg

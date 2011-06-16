@@ -5,9 +5,9 @@ class Legislator
   field :middle_name, :type => String
   field :religion, :type => String
   field :pvs_id, :type => Integer
-  field :os_id, :type => Integer
-  field :metavid_id, :type => Integer
-  field :bioguide_id, :type => Integer
+  field :os_id, :type => String
+  field :metavid_id, :type => String
+  field :bioguide_id, :type => String
   field :youtube_id, :type => String
   field :title, :type => String
   field :nickname, :type => String
@@ -18,6 +18,7 @@ class Legislator
   field :sponsored_count, :type => Integer
   field :cosponsored_count, :type => Integer
   field :full_name, :type => String
+  field :govtrack_id, :type => Integer
 
   has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => {:bills => {:hidden => false}}
 
@@ -81,7 +82,8 @@ class Legislator
                                          :district => person.district,
                                          :state => person.state,
                                          :party => person.role_party.first,
-                                         :full_name => person.full_name
+                                         :full_name => person.full_name,
+                                         :govtrack_id => person.govtrack_id
       )
       leg.save
     end

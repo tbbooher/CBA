@@ -2,10 +2,10 @@
 
 <% title @legislator.full_name %>
 
-<%= image_tag "#{Rails.root}/data/photos/#{@legislator.bioguide_id}-200px.jpeg" %>
+<%= image_tag "/images/bio_photos/#{@legislator.govtrack_id}-200px.jpeg" %>
 
 <p>
-<%= @legislator.state %>
+<%= @legislator.state %> &nbsp;
 <%= @legislator.district %>
 </p>
 

@@ -1,4 +1,6 @@
-<h1>Listing legislators</h1>
+<% title "Legislators" %>
+
+<%= will_paginate @legislators %>
 
 <table>
   <tr>
@@ -6,21 +8,15 @@
     <th>Title</th>
     <th>State</th>
     <th>Party</th>
-    <th>Sponsored count</th>
-    <th>Cosponsored count</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @legislators.each do |legislator| %>
   <tr>
-    <td><%= legislator.full_name %></td>
+    <td><%= link_to legislator.full_name, legislator %></td>
     <td><%= legislator.title %></td>
     <td><%= legislator.district %></td>
     <td><%= legislator.state %></td>
     <td><%= legislator.party %></td>
-    <td><%= link_to 'Show', legislator %></td>
     <td><%#= link_to 'Edit', edit_legislator_path(legislator) %></td>
     <td><%#= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
