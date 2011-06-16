@@ -2,14 +2,8 @@
 
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Govtrack</th>
-    <th>Bioguide</th>
+    <th>Name</th>
     <th>Title</th>
-    <th>Nickname</th>
-    <th>Name suffix</th>
-    <th>District</th>
     <th>State</th>
     <th>Party</th>
     <th>Sponsored count</th>
@@ -21,18 +15,11 @@
 
 <% @legislators.each do |legislator| %>
   <tr>
-    <td><%= legislator.first_name %></td>
-    <td><%= legislator.last_name %></td>
-    <td><%= legislator.govtrack_id %></td>
-    <td><%= legislator.bioguide_id %></td>
+    <td><%= legislator.full_name %></td>
     <td><%= legislator.title %></td>
-    <td><%= legislator.nickname %></td>
-    <td><%= legislator.name_suffix %></td>
     <td><%= legislator.district %></td>
     <td><%= legislator.state %></td>
     <td><%= legislator.party %></td>
-    <td><%= legislator.sponsored_count %></td>
-    <td><%= legislator.cosponsored_count %></td>
     <td><%= link_to 'Show', legislator %></td>
     <td><%= link_to 'Edit', edit_legislator_path(legislator) %></td>
     <td><%= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>

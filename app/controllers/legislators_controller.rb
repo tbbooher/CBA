@@ -2,7 +2,9 @@ class LegislatorsController < ApplicationController
   # GET /legislators
   # GET /legislators.xml
   def index
-    @legislators = Legislator.all
+    @legislators = Legislator.all.paginate(:page => params[:page],
+                                           :per_page => APPLICATION_CONFIG[:pages_per_page] || 5
+    )
 
     respond_to do |format|
       format.html # index.html.erb
