@@ -2,9 +2,12 @@
 
 <% title @legislator.full_name %>
 
+<%= image_tag "#{Rails.root}/data/photos/#{@legislator.bioguide_id}-200px.jpeg" %>
 
+<p>
+<%= @legislator.state %>
+<%= @legislator.district %>
+</p>
 
-
-
-<%= link_to 'Edit', edit_legislator_path(@legislator) %> |
+<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 <%= link_to 'Back', legislators_path %>
