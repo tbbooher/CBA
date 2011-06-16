@@ -2,6 +2,11 @@ class Legislator
   include Mongoid::Document
   field :first_name, :type => String
   field :last_name, :type => String
+  field :middle_name, :type => String
+  field :religion, :type => String
+  field :pvs_id, :type => Integer
+  field :os_id, :type => Integer
+  field :metavid_id, :type => Integer
   field :bioguide_id, :type => Integer
   field :youtube_id, :type => String
   field :title, :type => String
@@ -12,8 +17,9 @@ class Legislator
   field :party, :type => String
   field :sponsored_count, :type => Integer
   field :cosponsored_count, :type => Integer
+  field :full_name, :type => String
 
-  has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => { :bills => { :hidden => false } }
+  has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => {:bills => {:hidden => false}}
 
   #embeds_many :bills
 
@@ -23,9 +29,12 @@ class Legislator
 
   def chamber
     case title
-    when "Rep" then "U.S. House of Representatives"
-    when "Sen" then "U.S. Senate"
-    else title
+      when "Rep." then
+        "U.S. House of Representatives"
+      when "Sen." then
+        "U.S. Senate"
+      else
+        title
     end
   end
 
@@ -43,10 +52,38 @@ class Legislator
 
   def party_name
     case party
-    when "D" then "Democrat"
-    when "R" then "Republican"
-    when "I" then "Independent"
-    else party
+      when "D" then
+        "Democrat"
+      when "R" then
+        "Republican"
+      when "I" then
+        "Independent"
+      else
+        party
+    end
+  end
+
+  def self.update_legislators
+    file_data = File.new("#{Rails.root}/data/people.xml", 'r')
+    feed = Feedzirra::Parser::GovTrackPeople.parse(file_data).people
+    feed.each do |person|
+      leg = Legislator.find_or_create_by(:bioguide_id => person.bioguide_id,
+                                         :first_name => person.first_name,
+                                         :last_name => person.last_name,
+                                         :middle_name => person.middle_name,
+                                         :religion => person.religion,
+                                         :pvs_id => person.pvs_id,
+                                         :os_id => person.os_id,
+                                         :metavid_id => person.metavid_id,
+                                         :bioguide_id => person.bioguide_id,
+                                         :youtube_id => person.youtube_id,
+                                         :title => person.title,
+                                         :district => person.district,
+                                         :state => person.state,
+                                         :party => person.role_party.first,
+                                         :full_name => person.full_name
+      )
+      leg.save
     end
   end
 end
