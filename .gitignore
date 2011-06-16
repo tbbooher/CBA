@@ -25,3 +25,4 @@ public/stylesheets/disabled_styles/**/*
 app/views/layouts/disabled_layouts/*
 app/views/layouts/disabled_layouts/**/*
 .idea/
+data/*
