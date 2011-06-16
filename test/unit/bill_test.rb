@@ -3,6 +3,7 @@ require 'test_helper'
 class BillTest < ActiveSupport::TestCase
 
   def setup
+    # replace this
     @the_bill = GovKit::OpenCongress::Bill.find_by_idents("112-s368").first
   end
 

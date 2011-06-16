@@ -73,8 +73,8 @@ group :test do
   gem 'spork', '0.9.0.rc5'
   gem 'spork-testunit'
   gem 'launchy'
-#  gem 'factory_girl'
-#  gem 'factory_girl_rails'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'escape_utils'
   gem 'ZenTest'
   gem 'autotest'
@@ -82,7 +82,7 @@ group :test do
   gem 'ruby-growl'
   gem 'autotest-growl'
   gem "mocha"
-  gem "fabrication"
+#  gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
   gem "autotest-fsevent"
