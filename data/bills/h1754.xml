@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1754" updated="2011-06-03T06:18:12-04:00">
+	<state datetime="2011-05-05">REFERRED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Preserving Equal Access to Mortgage Finance Programs Act</title>
+		<title type="official" as="introduced">To permanently increase the conforming loan limits for the Federal Home Loan Mortgage Corporation and the Federal National Mortgage Association and the FHA maximum mortgage amount limitations.</title>
+	</titles>
+	<sponsor id="400277"/>
+	<cosponsors>
+		<cosponsor id="400144" joined="2011-05-25"/>
+		<cosponsor id="400129" joined="2011-05-31"/>
+		<cosponsor id="400371" joined="2011-05-05"/>
+		<cosponsor id="400124" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Government corporations and government-sponsored enterprises"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Housing finance and home ownership"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

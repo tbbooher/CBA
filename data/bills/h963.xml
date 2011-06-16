@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="963" updated="2011-03-22T06:11:56-04:00">
+	<state datetime="2011-03-08">REFERRED</state>
+	<status><introduced datetime="2011-03-08"/></status>
+
+	<introduced datetime="2011-03-08"/>
+	<titles>
+		<title type="short" as="introduced">See Something, Say Something Act of 2011</title>
+		<title type="official" as="introduced">To amend the Homeland Security Act of 2002 to provide immunity for reports of suspected terrorist activity or suspicious behavior and response.</title>
+	</titles>
+	<sponsor id="400381"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-08"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-03-21"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="495" />
+		<bill relation="identical" session="112" type="s" number="505" />
+	</relatedbills>
+	<subjects>
+		<term name="Law"/>
+		<term name="Civil actions and liability"/>
+		<term name="Law enforcement officers"/>
+		<term name="Legal fees and court costs"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/8/2011--Introduced.
+See Something, Say Something Act of 2011 - Amends the Homeland Security Act of 2002 to grant immunity from civil liability to persons who, in good faith and based on an objectively reasonable suspicion, report suspicious activity indicating that an individual may be engaging, or preparing to engage, in a violation of law relating to an act of terrorism.
+Grants qualified immunity from civil liability to any authorized official who observes, or receives a report of, such activity and takes reasonable action in good faith to respond, consistent with applicable law in the relevant jurisdiction. Provides that an authorized official not entitled to assert the defense of qualified immunity shall nonetheless be immune from civil immunity if that official takes reasonable action, in good faith, to respond to the reported activity.
+
+	</summary>
+</bill>

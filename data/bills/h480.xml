@@ -1,0 +1,64 @@
+<bill session="112" type="h" number="480" updated="2011-02-11T06:13:53-05:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">Gulf of Mexico Economic and Environmental Restoration Act of 2011</title>
+		<title type="official" as="introduced">To establish programs to aid in the economic, environmental, and public health recovery of the Gulf States from the damage and harm caused by the blowout of the mobile offshore drilling unit Deepwater Horizon and the resulting degradation of the Gulf over time, and for other purposes.</title>
+	</titles>
+	<sponsor id="412195"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the Committee on Natural Resources, and in addition to the Committees on Transportation and Infrastructure, Energy and Commerce, and Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Science, Space, and Technology</text></action>
+		<action datetime="2011-02-10"><committee name="House Science, Space, and Technology"/><text>Referred to the Subcommittee on Energy and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Energy and Environment" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Accidents"/>
+		<term name="Air quality"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Aquatic ecology"/>
+		<term name="Climate change"/>
+		<term name="Economic development"/>
+		<term name="Education programs funding"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental health"/>
+		<term name="Government trust funds"/>
+		<term name="Gulf of Mexico"/>
+		<term name="Higher education"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine pollution"/>
+		<term name="Marketing and advertising"/>
+		<term name="Oil and gas"/>
+		<term name="Research administration and funding"/>
+		<term name="Seafood"/>
+		<term name="Travel and tourism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+Gulf of Mexico Economic and Environmental Restoration Act of 2011 - Establishes the Gulf of Mexico Recovery Council, consisting of each member of the Gulf Coast Ecosystem Restoration Task Force. Directs the Council to: (1) establish guidelines for state comprehensive restoration plans; (2) approve or disapprove such plans; (3) distribute funds to states that have such approved plans; (4) annually review such plans; (5) establish a Gulf of Mexico Observation System (to increase observation and monitoring capabilities in the Gulf), sea grant program (to fund Gulf coast restoration projects carried out by sea grant colleges or institutions located in the Gulf states [Alabama, Florida, Louisiana, and Mississippi]), seafood marketing program, clean energy program, and coast-based working group; (6) coordinate the sharing of scientific information and other research associated with Gulf coast economic development, ecosystem restoration, and public health rehabilitation; and (7) submit an annual report to Congress.
+Establishes in the Treasury a Gulf of Mexico Economic and Environmental Recovery Fund. Directs the Secretary of the Treasury to deposit into the Fund specified sums collected by the United States before, on, or after this Act's enactment as penalties, settlements, or fines under the Federal Water Pollution Control Act (commonly known as the Clean Water Act) in relation to the Gulf oil spill of 2010. Requires the Fund to be made available to the Council only for activities related to Gulf coast economic development, ecosystem restoration, and public health rehabilitation.
+Directs the Council to: (1) distribute 80% of the amounts made available for expenditure from the Fund in a fiscal year to the Gulf states to be used to carry out their respective state comprehensive restoration plans approved by the Council; and (2) allocate funds according to specified formulas. 
+	</summary>
+</bill>

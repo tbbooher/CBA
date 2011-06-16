@@ -1,0 +1,50 @@
+<bill session="112" type="h" number="1896" updated="2011-06-04T06:32:25-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">COPS Improvements Act of 2011</title>
+		<title type="official" as="introduced">To amend the Omnibus Crime Control and Safe Streets Act of 1968 to enhance the COPS ON THE BEAT grant program, and for other purposes.</title>
+	</titles>
+	<sponsor id="400426"/>
+	<cosponsors>
+		<cosponsor id="400199" joined="2011-05-13"/>
+		<cosponsor id="400364" joined="2011-05-13"/>
+		<cosponsor id="400080" joined="2011-05-13"/>
+		<cosponsor id="400660" joined="2011-05-13"/>
+		<cosponsor id="400087" joined="2011-05-13"/>
+		<cosponsor id="400111" joined="2011-05-23"/>
+		<cosponsor id="400309" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Crime prevention"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Juvenile crime and gang violence"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Law enforcement officers"/>
+		<term name="Military facilities and property"/>
+		<term name="School administration"/>
+		<term name="Terrorism"/>
+		<term name="Veterans' education, employment, rehabilitation"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

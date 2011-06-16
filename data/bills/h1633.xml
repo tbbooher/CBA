@@ -1,0 +1,105 @@
+<bill session="112" type="h" number="1633" updated="2011-06-04T06:17:21-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Farm Dust Regulation Prevention Act of 2011</title>
+		<title type="official" as="introduced">To establish a temporary prohibition against revising any national ambient air quality standard applicable to coarse particulate matter, to limit Federal regulation of nuisance dust in areas in which such dust is regulated under State, tribal, or local law, and for other purposes.</title>
+	</titles>
+	<sponsor id="412475"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-04-15"/>
+		<cosponsor id="412284" joined="2011-05-13"/>
+		<cosponsor id="412403" joined="2011-05-13"/>
+		<cosponsor id="400206" joined="2011-06-01"/>
+		<cosponsor id="412429" joined="2011-05-13"/>
+		<cosponsor id="412419" joined="2011-06-01"/>
+		<cosponsor id="400659" joined="2011-05-13"/>
+		<cosponsor id="400311" joined="2011-05-13"/>
+		<cosponsor id="400220" joined="2011-05-13"/>
+		<cosponsor id="412487" joined="2011-05-13"/>
+		<cosponsor id="400158" joined="2011-05-13"/>
+		<cosponsor id="400134" joined="2011-06-03"/>
+		<cosponsor id="412216" joined="2011-06-03"/>
+		<cosponsor id="400376" joined="2011-05-13"/>
+		<cosponsor id="412464" joined="2011-06-01"/>
+		<cosponsor id="400655" joined="2011-05-13"/>
+		<cosponsor id="412431" joined="2011-06-01"/>
+		<cosponsor id="400209" joined="2011-05-13"/>
+		<cosponsor id="412481" joined="2011-05-13"/>
+		<cosponsor id="412400" joined="2011-05-13"/>
+		<cosponsor id="412442" joined="2011-06-01"/>
+		<cosponsor id="400137" joined="2011-05-13"/>
+		<cosponsor id="400419" joined="2011-06-01"/>
+		<cosponsor id="400320" joined="2011-05-13"/>
+		<cosponsor id="412270" joined="2011-05-13"/>
+		<cosponsor id="412278" joined="2011-06-03"/>
+		<cosponsor id="412444" joined="2011-06-01"/>
+		<cosponsor id="412302" joined="2011-05-13"/>
+		<cosponsor id="412314" joined="2011-06-01"/>
+		<cosponsor id="400234" joined="2011-06-03"/>
+		<cosponsor id="412294" joined="2011-05-13"/>
+		<cosponsor id="412437" joined="2011-06-01"/>
+		<cosponsor id="400441" joined="2011-05-13"/>
+		<cosponsor id="400313" joined="2011-05-13"/>
+		<cosponsor id="400207" joined="2011-06-01"/>
+		<cosponsor id="400154" joined="2011-05-13"/>
+		<cosponsor id="400247" joined="2011-06-01"/>
+		<cosponsor id="412484" joined="2011-04-15"/>
+		<cosponsor id="412479" joined="2011-05-13"/>
+		<cosponsor id="412256" joined="2011-05-13"/>
+		<cosponsor id="412460" joined="2011-06-01"/>
+		<cosponsor id="412402" joined="2011-06-03"/>
+		<cosponsor id="400077" joined="2011-05-13"/>
+		<cosponsor id="412217" joined="2011-05-13"/>
+		<cosponsor id="400176" joined="2011-05-13"/>
+		<cosponsor id="400018" joined="2011-05-13"/>
+		<cosponsor id="400651" joined="2011-05-13"/>
+		<cosponsor id="400042" joined="2011-04-15"/>
+		<cosponsor id="400046" joined="2011-06-01"/>
+		<cosponsor id="400365" joined="2011-05-13"/>
+		<cosponsor id="400029" joined="2011-05-13"/>
+		<cosponsor id="400652" joined="2011-05-13"/>
+		<cosponsor id="400288" joined="2011-05-13"/>
+		<cosponsor id="400055" joined="2011-05-13"/>
+		<cosponsor id="412463" joined="2011-06-01"/>
+		<cosponsor id="412295" joined="2011-05-13"/>
+		<cosponsor id="400141" joined="2011-06-01"/>
+		<cosponsor id="412423" joined="2011-06-03"/>
+		<cosponsor id="412480" joined="2011-05-13"/>
+		<cosponsor id="412417" joined="2011-05-13"/>
+		<cosponsor id="412489" joined="2011-05-13"/>
+		<cosponsor id="400010" joined="2011-05-13"/>
+		<cosponsor id="412445" joined="2011-05-13"/>
+		<cosponsor id="412191" joined="2011-05-13"/>
+		<cosponsor id="412476" joined="2011-05-13"/>
+		<cosponsor id="412255" joined="2011-06-01"/>
+		<cosponsor id="400252" joined="2011-05-13"/>
+		<cosponsor id="412424" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+		<action datetime="2011-04-25"><committee name="House Committee on Energy and Commerce"/><text>Referred to the Subcommittee on Energy and Power.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Energy and Power" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Air quality"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental regulatory procedures"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

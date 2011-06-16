@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1511" updated="2011-06-01T06:15:00-04:00">
+	<state datetime="2011-04-13">REFERRED</state>
+	<status><introduced datetime="2011-04-13"/></status>
+
+	<introduced datetime="2011-04-13"/>
+	<titles>
+		<title type="short" as="introduced">Voluntary Protection Program Act</title>
+		<title type="official" as="introduced">To authorize the Department of Labor's voluntary protection program and to expand the program to include more small businesses.</title>
+	</titles>
+	<sponsor id="400318"/>
+	<cosponsors>
+		<cosponsor id="400160" joined="2011-04-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-13"><text>Sponsor introductory remarks on measure. (CR E706)</text></action>
+		<action datetime="2011-04-13"><text>Referred to the House Committee on Education and the Workforce.</text></action>
+		<action datetime="2011-05-20"><committee name="House Committee on Education and the Workforce"/><text>Referred to the Subcommittee on Workforce Protections.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Workforce Protections" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="807" />
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Labor"/>
+		<term name="Small business"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

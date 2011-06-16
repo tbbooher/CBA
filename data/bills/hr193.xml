@@ -1,0 +1,43 @@
+<bill session="112" type="hr" number="193" updated="2011-05-14T06:10:38-04:00">
+	<state datetime="2011-03-31">REFERRED</state>
+	<status><introduced datetime="2011-03-31"/></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="official" as="introduced">Calling on the new Government of Egypt to honor the rule of law and immediately return Noor and Ramsay Bower to the United States.</title>
+	</titles>
+	<sponsor id="400140"/>
+	<cosponsors>
+		<cosponsor id="400407" joined="2011-04-14"/>
+		<cosponsor id="400380" joined="2011-03-31"/>
+		<cosponsor id="400435" joined="2011-04-06"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+		<action datetime="2011-05-13"><committee name="House Committee on Foreign Affairs"/><text>Referred to the Subcommittee on Middle East and South Asia .</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Foreign Affairs" subcommittee="Middle East and South Asia" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Crimes against children"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Egypt"/>
+		<term name="International law and treaties"/>
+		<term name="Middle East"/>
+		<term name="Separation, divorce, custody, support"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/31/2011--Introduced.
+Calls on Egypt to: (1) bring about the safe return of U.S. citizens Noor and Ramsay Bower to their father, Colin Bower, in the United States; and (2) stop using its security forces in aiding the continued unlawful retention of Noor and Ramsay Bower. Urges Egypt and all other nations to join and fully participate in the Hague Convention on the Civil Aspects of International Child Abduction and to establish procedures to address the tragedy of child abductions. Expresses the sense of the House of Representatives that the United States should: (1) urge other nations like Egypt to become parties to the Hague Convention on the Civil Aspects of International Child Abduction, (2) take measures to ensure that Hague Convention partners and countries that are not Convention partners return abducted children to the United States, and (3) pursue criminal extradition of abducting parents where resolution of the abduction is not otherwise obtainable.
+
+	</summary>
+</bill>

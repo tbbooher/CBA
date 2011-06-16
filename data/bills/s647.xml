@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="647" updated="2011-04-06T06:20:29-04:00">
+	<state datetime="2011-03-17">INTRODUCED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Montana Mineral Conveyance Act</title>
+		<title type="official" as="introduced">A bill to authorize the conveyance of mineral rights by the Secretary of the Interior in the State of Montana, and for other purposes.</title>
+	</titles>
+	<sponsor id="300005"/>
+	<cosponsors>
+		<cosponsor id="412244" joined="2011-04-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1158" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Coal"/>
+		<term name="Indian claims"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="Land transfers"/>
+		<term name="Mining"/>
+		<term name="Montana"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

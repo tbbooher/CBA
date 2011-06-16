@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="692" updated="2011-05-06T06:23:24-04:00">
+	<state datetime="2011-05-05">REPORTED</state>
+	<status><calendar datetime="2011-05-05" /></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">National Hurricane Research Initiative Act of 2011</title>
+		<title type="official" as="introduced">A bill to improve hurricane preparedness by establishing the National Hurricane Research Initiative, and for other purposes.</title>
+	</titles>
+	<sponsor id="300078"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Sponsor introductory remarks on measure. (CR S1992)</text></action>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text><reference label="text of measure as introduced" ref="CR S1992-1993"/></action>
+		<calendar datetime="2011-05-05"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Floods and storm protection"/>
+		<term name="Government information and archives"/>
+		<term name="Natural disasters"/>
+		<term name="Research administration and funding"/>
+		<term name="Technology assessment"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

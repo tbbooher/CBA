@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="1307" updated="2011-04-07T06:23:11-04:00">
+	<state datetime="2011-04-01">REFERRED</state>
+	<status><introduced datetime="2011-04-01"/></status>
+
+	<introduced datetime="2011-04-01"/>
+	<titles>
+		<title type="official" as="introduced">To provide that Executive Order 13166 shall have no force or effect, and to prohibit the use of funds for certain purposes.</title>
+	</titles>
+	<sponsor id="400219"/>
+	<cosponsors>
+		<cosponsor id="412252" joined="2011-04-01"/>
+		<cosponsor id="412250" joined="2011-04-01"/>
+		<cosponsor id="400288" joined="2011-04-01"/>
+		<cosponsor id="400144" joined="2011-04-01"/>
+		<cosponsor id="400277" joined="2011-04-01"/>
+		<cosponsor id="400311" joined="2011-04-01"/>
+		<cosponsor id="400220" joined="2011-04-01"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-01"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Appropriations"/>
+		<term name="Congressional oversight"/>
+		<term name="Government information and archives"/>
+		<term name="Language and bilingual programs"/>
+		<term name="Poverty and welfare assistance"/>
+		<term name="Presidents and presidential powers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

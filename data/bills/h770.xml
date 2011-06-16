@@ -1,0 +1,51 @@
+<bill session="112" type="h" number="770" updated="2011-03-06T08:04:51-05:00">
+	<state datetime="2011-02-17">REFERRED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Border Enforcement Security Task Force Act of 2011</title>
+		<title type="official" as="introduced">To establish a Border Enforcement Security Task Force program to enhance border security by fostering coordinated efforts among Federal, State, and local border and law enforcement officials to protect United States border cities and communities from trans-national crime, including violence associated with drug trafficking, arms smuggling, illegal alien trafficking and smuggling, violence, and kidnapping along and across the international borders of the United States, and for other purposes.</title>
+	</titles>
+	<sponsor id="400657"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Referred to the House Committee on Homeland Security.</text></action>
+		<action datetime="2011-02-24"><committee name="House Committee on Homeland Security"/><text>Referred to the Subcommittee on Border and Maritime Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Border and Maritime Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Immigration"/>
+		<term name="Arms control and nonproliferation"/>
+		<term name="Border security and unlawful immigration"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Firearms and explosives"/>
+		<term name="Government information and archives"/>
+		<term name="Homeland security"/>
+		<term name="Human trafficking"/>
+		<term name="Intergovernmental relations"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Smuggling and trafficking"/>
+		<term name="State and local government operations"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

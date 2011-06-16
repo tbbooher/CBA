@@ -1,0 +1,46 @@
+<bill session="112" type="h" number="1987" updated="2011-06-14T06:19:02-04:00">
+	<state datetime="2011-05-25">REFERRED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="short" as="introduced">Ponzi Scheme Investor Protection Act of 2011</title>
+		<title type="official" as="introduced">To amend the Securities Investor Protection Act of 1970 to provide insurance coverage for certain indirect investors caught in Ponzi schemes, and for other purposes.</title>
+	</titles>
+	<sponsor id="400003"/>
+	<cosponsors>
+		<cosponsor id="412385" joined="2011-06-01"/>
+		<cosponsor id="412259" joined="2011-06-01"/>
+		<cosponsor id="400008" joined="2011-06-13"/>
+		<cosponsor id="400346" joined="2011-06-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Referred to the House Committee on Financial Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Accounting and auditing"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Administrative remedies"/>
+		<term name="Bankruptcy"/>
+		<term name="Financial services and investments"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government corporations and government-sponsored enterprises"/>
+		<term name="Government trust funds"/>
+		<term name="Securities"/>
+		<term name="User charges and fees"/>
+		<term name="Wages and earnings"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="496" updated="2011-02-15T06:14:10-05:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">Securing Citizens' Protection at Federal Events Act</title>
+		<title type="official" as="introduced">To amend title 18, United States Code, to prohibit the carrying of a firearm near a place where a senior Federal official is holding an official public event or carrying out an official or representational duty, or where any person is campaigning for Federal elective office.</title>
+	</titles>
+	<sponsor id="400219"/>
+	<cosponsors>
+		<cosponsor id="400031" joined="2011-01-26"/>
+		<cosponsor id="400122" joined="2011-01-26"/>
+		<cosponsor id="400333" joined="2011-01-26"/>
+		<cosponsor id="412379" joined="2011-01-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-02-14"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="367" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Congressional elections"/>
+		<term name="Elections, voting, political campaign regulation"/>
+		<term name="Federal officials"/>
+		<term name="Firearms and explosives"/>
+		<term name="Members of Congress"/>
+		<term name="Presidents and presidential powers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

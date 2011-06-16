@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="778" updated="2011-05-12T06:20:32-04:00">
+	<state datetime="2011-04-08">INTRODUCED</state>
+	<status><introduced datetime="2011-04-08"/></status>
+
+	<introduced datetime="2011-04-08"/>
+	<titles>
+		<title type="short" as="introduced">Protecting Access to Rural Therapy Services (PARTS) Act</title>
+		<title type="official" as="introduced">A bill to amend title XVIII of the Social Security Act with respect to physician supervision of therapeutic hospital outpatient services.</title>
+	</titles>
+	<sponsor id="400284"/>
+	<cosponsors>
+		<cosponsor id="412244" joined="2011-05-03"/>
+		<cosponsor id="400546" joined="2011-05-02"/>
+		<cosponsor id="300023" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-08"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Cardiovascular and respiratory health"/>
+		<term name="Department of Health and Human Services"/>
+		<term name="Health care coverage and access"/>
+		<term name="Health personnel"/>
+		<term name="Home and outpatient care"/>
+		<term name="Medicare"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

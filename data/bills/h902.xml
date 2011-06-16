@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="902" updated="2011-04-05T06:14:03-04:00">
+	<state datetime="2011-03-03">REFERRED</state>
+	<status><introduced datetime="2011-03-03"/></status>
+
+	<introduced datetime="2011-03-03"/>
+	<titles>
+		<title type="official" as="introduced">To amend the National Flood Insurance Act of 1968 to require the Administrator of the Federal Emergency Management Agency to consider reconstruction and improvement of flood protection systems when establishing flood insurance rates.</title>
+	</titles>
+	<sponsor id="400663"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-03"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-04-04"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Disaster relief and insurance"/>
+		<term name="Federal Emergency Management Agency (FEMA)"/>
+		<term name="Floods and storm protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

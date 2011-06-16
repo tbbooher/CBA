@@ -1,0 +1,58 @@
+<bill session="112" type="s" number="360" updated="2011-03-06T07:42:11-05:00">
+	<state datetime="2011-02-16">INTRODUCED</state>
+	<status><introduced datetime="2011-02-16"/></status>
+
+	<introduced datetime="2011-02-16"/>
+	<titles>
+		<title type="short" as="introduced">HELP Act</title>
+		<title type="short" as="introduced">Honest Expenditure Limitation Program Act of 2011</title>
+		<title type="official" as="introduced">A bill to reduce the deficit by establishing discretionary spending caps for non-security spending.</title>
+	</titles>
+	<sponsor id="300055"/>
+	<cosponsors>
+		<cosponsor id="400432" joined="2011-02-16"/>
+		<cosponsor id="300041" joined="2011-02-16"/>
+		<cosponsor id="300062" joined="2011-02-16"/>
+		<cosponsor id="300030" joined="2011-02-16"/>
+		<cosponsor id="400576" joined="2011-02-16"/>
+		<cosponsor id="400194" joined="2011-02-16"/>
+		<cosponsor id="412251" joined="2011-02-16"/>
+		<cosponsor id="412491" joined="2011-02-16"/>
+		<cosponsor id="300047" joined="2011-02-16"/>
+		<cosponsor id="400034" joined="2011-02-16"/>
+		<cosponsor id="400546" joined="2011-02-16"/>
+		<cosponsor id="400040" joined="2011-02-16"/>
+		<cosponsor id="300048" joined="2011-02-16"/>
+		<cosponsor id="300021" joined="2011-02-16"/>
+		<cosponsor id="412322" joined="2011-02-16"/>
+		<cosponsor id="300054" joined="2011-02-16"/>
+		<cosponsor id="300027" joined="2011-02-16"/>
+		<cosponsor id="400054" joined="2011-02-16"/>
+		<cosponsor id="412320" joined="2011-02-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-16"><text>Sponsor introductory remarks on measure. (CR S793)</text></action>
+		<action datetime="2011-02-16"><text>Read twice and referred to the Committee on the Budget.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBU" name="Senate Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="sr" number="46" />
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Appropriations"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Budget process"/>
+		<term name="Congressional oversight"/>
+		<term name="Legislative rules and procedure"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

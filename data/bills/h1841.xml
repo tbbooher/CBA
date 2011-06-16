@@ -1,0 +1,47 @@
+<bill session="112" type="h" number="1841" updated="2011-06-02T06:26:11-04:00">
+	<state datetime="2011-05-11">REFERRED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="short" as="introduced">Data Accountability and Trust Act (DATA) of 2011</title>
+		<title type="official" as="introduced">To protect consumers by requiring reasonable security policies and procedures to protect computerized data containing personal information, and to provide for nationwide notice in the event of a security breach.</title>
+	</titles>
+	<sponsor id="400388"/>
+	<cosponsors>
+		<cosponsor id="400255" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Business records"/>
+		<term name="Civil actions and liability"/>
+		<term name="Computer crimes and identity theft"/>
+		<term name="Computers and information technology"/>
+		<term name="Consumer affairs"/>
+		<term name="Consumer credit"/>
+		<term name="Federal Trade Commission (FTC)"/>
+		<term name="Federal preemption"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government investigations"/>
+		<term name="Health information and medical records"/>
+		<term name="Internet and video services"/>
+		<term name="Right of privacy"/>
+		<term name="Telephone and wireless communication"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

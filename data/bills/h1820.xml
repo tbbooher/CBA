@@ -1,0 +1,76 @@
+<bill session="112" type="h" number="1820" updated="2011-06-04T06:18:47-04:00">
+	<state datetime="2011-05-10">REFERRED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="short" as="introduced">Fighting Gangs and Empowering Youth Act of 2011</title>
+		<title type="official" as="introduced">To fight criminal gangs.</title>
+	</titles>
+	<sponsor id="400308"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Referred to the Committee on the Judiciary, and in addition to the Committees on Education and the Workforce, and Financial Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-10"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-05-10"><text>Referred to House Education and the Workforce</text></action>
+		<action datetime="2011-05-10"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-05-20"><committee name="House Education and the Workforce"/><text>Referred to the Subcommittee on Early Childhood, Elementary, and Secondary Education.</text></action>
+		<action datetime="2011-05-20"><committee name="House Education and the Workforce"/><text>Referred to the Subcommittee on Higher Education and Workforce Training.</text></action>
+		<action datetime="2011-06-01"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Early Childhood, Elementary, and Secondary Education" activity="Referral" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Higher Education and Workforce Training" activity="Referral" />
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="867" />
+		<bill relation="unknown" session="112" type="s" number="977" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Adult education and literacy"/>
+		<term name="Assault and harassment offenses"/>
+		<term name="Child safety and welfare"/>
+		<term name="Congressional oversight"/>
+		<term name="Correctional facilities and imprisonment"/>
+		<term name="Crime prevention"/>
+		<term name="Crimes against property"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Financial literacy"/>
+		<term name="Firearms and explosives"/>
+		<term name="Government investigations"/>
+		<term name="Housing and community development funding"/>
+		<term name="Indian social and development programs"/>
+		<term name="Judicial procedure and administration"/>
+		<term name="Juvenile crime and gang violence"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Law enforcement officers"/>
+		<term name="National and community service"/>
+		<term name="Organized crime"/>
+		<term name="Performance measurement"/>
+		<term name="Physical fitness and lifestyle"/>
+		<term name="Public housing"/>
+		<term name="Social work, volunteer service, charitable organizations"/>
+		<term name="U.S. Sentencing Commission"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

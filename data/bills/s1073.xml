@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1073" updated="2011-06-09T06:18:43-04:00">
+	<state datetime="2011-05-25">INTRODUCED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="official" as="introduced">A bill to require the Attorney General to establish minimization and destruction procedures governing the acquisition, retention, and dissemination by the Federal Bureau of Investigation of certain records.</title>
+	</titles>
+	<sponsor id="412492"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Read twice and referred to the Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="1050" />
+		<bill relation="unknown" session="112" type="s" number="1070" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Bank accounts, deposits, capital"/>
+		<term name="Consumer credit"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+		<term name="Right of privacy"/>
+		<term name="Telephone and wireless communication"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

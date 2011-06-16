@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="365" updated="2011-02-20T06:15:59-05:00">
+	<state datetime="2011-02-17">PASS_OVER:SENATE</state>
+	<status><vote datetime="2011-02-17" where="s" result="pass" how="by Unanimous Consent" roll=""/></status>
+
+	<introduced datetime="2011-02-16"/>
+	<titles>
+		<title type="official" as="introduced">An original bill to make a technical amendment to the Education Sciences Reform Act of 2002.</title>
+	</titles>
+	<sponsor id="300051"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-16"><text>Committee on Health, Education, Labor, and Pensions. Original measure reported to Senate by Senator Harkin. Without written report.</text></action>
+		<calendar datetime="2011-02-16"  state="REPORTED"><text>Placed on Senate Legislative Calendar under General Orders. Calendar No. 12.</text></calendar>
+		<vote how="by Unanimous Consent" type="vote" datetime="2011-02-17" where="s" result="pass"  state="PASS_OVER:SENATE"><text>Passed Senate without amendment by Unanimous Consent.</text><reference label="consideration" ref="CR S924"/><reference label="text as passed Senate" ref="CR S924"/></vote>
+		<action datetime="2011-02-18T12:45:00-05:00"><text>Received in the House.</text></action>
+		<action datetime="2011-02-18"><text>Message on Senate action sent to the House.</text></action>
+		<action datetime="2011-02-18"><text>Referred to the House Committee on Education and the Workforce.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Origin, Reporting" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Teaching, teachers, curricula"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

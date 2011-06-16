@@ -1,0 +1,84 @@
+<bill session="112" type="h" number="1675" updated="2011-06-03T06:17:16-04:00">
+	<state datetime="2011-05-02">REFERRED</state>
+	<status><introduced datetime="2011-05-02"/></status>
+
+	<introduced datetime="2011-05-02"/>
+	<titles>
+		<title type="short" as="introduced">Brewers Excise and Economic Relief Act of 2011</title>
+		<title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to reduce the tax on beer to its pre-1991 level, and for other purposes.</title>
+	</titles>
+	<sponsor id="400234"/>
+	<cosponsors>
+		<cosponsor id="400061" joined="2011-05-02"/>
+		<cosponsor id="400206" joined="2011-05-02"/>
+		<cosponsor id="400648" joined="2011-05-02"/>
+		<cosponsor id="400068" joined="2011-05-02"/>
+		<cosponsor id="412271" joined="2011-05-02"/>
+		<cosponsor id="412218" joined="2011-05-02"/>
+		<cosponsor id="400008" joined="2011-05-02"/>
+		<cosponsor id="400356" joined="2011-05-02"/>
+		<cosponsor id="400121" joined="2011-05-02"/>
+		<cosponsor id="400311" joined="2011-05-02"/>
+		<cosponsor id="400335" joined="2011-05-02"/>
+		<cosponsor id="412193" joined="2011-05-02"/>
+		<cosponsor id="400616" joined="2011-05-02"/>
+		<cosponsor id="400087" joined="2011-05-02"/>
+		<cosponsor id="400158" joined="2011-05-02"/>
+		<cosponsor id="400183" joined="2011-05-02"/>
+		<cosponsor id="412302" joined="2011-05-02"/>
+		<cosponsor id="400271" joined="2011-05-02"/>
+		<cosponsor id="400074" joined="2011-05-02"/>
+		<cosponsor id="400638" joined="2011-05-02"/>
+		<cosponsor id="412405" joined="2011-05-02"/>
+		<cosponsor id="400297" joined="2011-05-02"/>
+		<cosponsor id="400344" joined="2011-05-02"/>
+		<cosponsor id="400171" joined="2011-06-02"/>
+		<cosponsor id="400005" joined="2011-05-02"/>
+		<cosponsor id="400276" joined="2011-05-02"/>
+		<cosponsor id="400077" joined="2011-05-02"/>
+		<cosponsor id="400260" joined="2011-05-02"/>
+		<cosponsor id="400406" joined="2011-05-03"/>
+		<cosponsor id="400274" joined="2011-05-02"/>
+		<cosponsor id="400204" joined="2011-05-02"/>
+		<cosponsor id="400042" joined="2011-05-02"/>
+		<cosponsor id="400218" joined="2011-05-02"/>
+		<cosponsor id="400409" joined="2011-05-02"/>
+		<cosponsor id="412406" joined="2011-05-02"/>
+		<cosponsor id="400365" joined="2011-05-02"/>
+		<cosponsor id="412315" joined="2011-05-02"/>
+		<cosponsor id="400636" joined="2011-05-02"/>
+		<cosponsor id="400024" joined="2011-05-02"/>
+		<cosponsor id="400355" joined="2011-05-02"/>
+		<cosponsor id="400345" joined="2011-05-02"/>
+		<cosponsor id="400233" joined="2011-05-02"/>
+		<cosponsor id="412445" joined="2011-05-02"/>
+		<cosponsor id="412255" joined="2011-05-02"/>
+		<cosponsor id="400402" joined="2011-05-02"/>
+		<cosponsor id="412292" joined="2011-05-02"/>
+		<cosponsor id="400235" joined="2011-05-02"/>
+		<cosponsor id="400656" joined="2011-05-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-02"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Food industry and services"/>
+		<term name="Sales and excise taxes"/>
+		<term name="Small business"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/2/2011--Introduced.
+Brewers Excise and Economic Relief Act of 2011 - Amends the Internal Revenue Code to: (1) reduce from $18 to $9 ( the pre-1991 level) the per-barrel tax on beer; and (2) allow a further reduction in such tax for brewers who produce not more than 2 million barrels annually.
+
+	</summary>
+</bill>

@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="995" updated="2011-04-14T06:13:44-04:00">
+	<state datetime="2011-03-10">REFERRED</state>
+	<status><introduced datetime="2011-03-10"/></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="official" as="introduced">To improve transportation safety, efficiency, and system performance through innovative technology deployment and operations.</title>
+	</titles>
+	<sponsor id="400638"/>
+	<cosponsors>
+		<cosponsor id="400342" joined="2011-03-10"/>
+		<cosponsor id="412200" joined="2011-04-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-03-11"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Advanced technology and technological innovations"/>
+		<term name="Air quality"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Public transit"/>
+		<term name="Public-private cooperation"/>
+		<term name="Roads and highways"/>
+		<term name="Sales and excise taxes"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

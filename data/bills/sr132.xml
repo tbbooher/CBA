@@ -1,0 +1,44 @@
+<bill session="112" type="sr" number="132" updated="2011-05-24T06:20:50-04:00">
+	<state datetime="2011-04-06">REFERRED</state>
+	<status><introduced datetime="2011-04-06"/></status>
+
+	<introduced datetime="2011-04-06"/>
+	<titles>
+		<title type="official" as="introduced">A resolution recognizing and honoring the zoos and aquariums of the United States.</title>
+	</titles>
+	<sponsor id="300077"/>
+	<cosponsors>
+		<cosponsor id="400034" joined="2011-05-02"/>
+		<cosponsor id="400272" joined="2011-05-23"/>
+		<cosponsor id="300009" joined="2011-04-12"/>
+		<cosponsor id="400050" joined="2011-05-16"/>
+		<cosponsor id="300018" joined="2011-04-06"/>
+		<cosponsor id="300076" joined="2011-04-06"/>
+		<cosponsor id="400284" joined="2011-04-07"/>
+		<cosponsor id="300038" joined="2011-04-06"/>
+		<cosponsor id="300043" joined="2011-05-23"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-06"><text>Referred to the Committee on Environment and Public Works.</text><reference label="text of measure as introduced" ref="CR S2210"/></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Animals"/>
+		<term name="Animal protection and human-animal relationships"/>
+		<term name="Congressional tributes"/>
+		<term name="Museums, exhibitions, cultural centers"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/6/2011--Introduced.
+Recognizes U.S. zoos and aquariums and commends their employees and volunteers. Calls for continued support for accredited zoos and aquariums and their conservation, education, and recreation programs. 
+	</summary>
+</bill>

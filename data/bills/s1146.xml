@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1146" updated="2011-06-14T06:26:36-04:00">
+	<state datetime="2011-06-06">INTRODUCED</state>
+	<status><introduced datetime="2011-06-06"/></status>
+
+	<introduced datetime="2011-06-06"/>
+	<titles>
+		<title type="short" as="introduced">Alaska Hero's Card Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish a pilot program under which veterans in the State of Alaska may receive health care benefits from the Department of Veterans Affairs at non-Department medical facilities, and for other purposes.</title>
+	</titles>
+	<sponsor id="412326"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-06"><text>Read twice and referred to the Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-06-08"><text>Committee on Veterans' Affairs. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSVA" name="Senate Veterans' Affairs" activity="Referral, Hearings, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

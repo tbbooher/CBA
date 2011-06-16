@@ -1,0 +1,35 @@
+<bill session="112" type="h" number="1769" updated="2011-05-26T06:25:55-04:00">
+	<state datetime="2011-05-05">REFERRED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Drug Free Families Act of 2011</title>
+		<title type="official" as="introduced">To amend title IV of the Social Security Act to require States to implement a drug testing program for applicants for and recipients of assistance under the Temporary Assistance for Needy Families (TANF) program.</title>
+	</titles>
+	<sponsor id="400636"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="83" />
+	</relatedbills>
+	<subjects>
+		<term name="Social welfare"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Poverty and welfare assistance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

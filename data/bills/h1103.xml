@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="1103" updated="2011-03-26T06:10:43-04:00">
+	<state datetime="2011-03-15">REFERRED</state>
+	<status><introduced datetime="2011-03-15"/></status>
+
+	<introduced datetime="2011-03-15"/>
+	<titles>
+		<title type="short" as="introduced">American Memorial Park Tinian Annex Act</title>
+		<title type="official" as="introduced">To direct the Secretary of the Interior to develop, maintain, and administer an annex in Tinian, Commonwealth of the Northern Mariana Islands, as an extension of the American Memorial Park located in Saipan, and for other purposes.</title>
+	</titles>
+	<sponsor id="412312"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Sponsor introductory remarks on measure. (CR E494-495)</text></action>
+		<action datetime="2011-03-15"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-03-17"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Asia"/>
+		<term name="Conflicts and wars"/>
+		<term name="Historic sites and heritage areas"/>
+		<term name="Japan"/>
+		<term name="Military history"/>
+		<term name="Monuments and memorials"/>
+		<term name="Northern Mariana Islands"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="U.S. territories and protectorates"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

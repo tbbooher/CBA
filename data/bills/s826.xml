@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="826" updated="2011-05-07T06:14:17-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Infrastructure Facilitation and Habitat Conservation Act of 2011</title>
+		<title type="official" as="introduced">A bill to require the Secretary of the Treasury to establish a program to provide loans and loan guarantees to enable eligible public entities to acquire interests in real property that are in compliance with habitat conservation plans approved by the Secretary of the Interior under the Endangered Species Act of 1973, and for other purposes.</title>
+	</titles>
+	<sponsor id="300043"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Sponsor introductory remarks on measure. (CR S2516)</text></action>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Environment and Public Works.</text><reference label="text of measure as introduced" ref="CR S2516-2517"/></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Endangered and threatened species"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Infrastructure development"/>
+		<term name="Land transfers"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

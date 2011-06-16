@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1092" updated="2011-06-14T06:29:24-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">AIR Act of 2011</title>
+		<title type="short" as="introduced">Aviation Security Innovation &amp; Reform Act of 2011</title>
+		<title type="official" as="introduced">A bill to address aviation security in the United States by bolstering passenger and air cargo screening procedures, to ensure that purchases of screening technologies are thoroughly evaluated for the best return on investment of the taxpayer's money, and for other purposes.</title>
+	</titles>
+	<sponsor id="300019"/>
+	<cosponsors>
+		<cosponsor id="412384" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

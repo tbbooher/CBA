@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="1926" updated="2011-06-08T06:18:45-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Gold Medal of Remembrance for the Sons and Daughters of Our Fallen Act</title>
+		<title type="official" as="introduced">To provide for the design, production, and presentation of a Gold Medal of Remembrance to the children of members of the Armed Forces who die while serving on active duty in support of Operation Enduring Freedom, Operation Iraqi Freedom, or Operation New Dawn, and for other purposes.</title>
+	</titles>
+	<sponsor id="400343"/>
+	<cosponsors>
+		<cosponsor id="412383" joined="2011-05-13"/>
+		<cosponsor id="412453" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the Committee on Armed Services, and in addition to the Committee on Financial Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-13"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-05-13"><text>Referred to House Financial Services</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Afghanistan"/>
+		<term name="Asia"/>
+		<term name="Congressional tributes"/>
+		<term name="Iraq"/>
+		<term name="Middle East"/>
+		<term name="Military operations and strategy"/>
+		<term name="Military personnel and dependents"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

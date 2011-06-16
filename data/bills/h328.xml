@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="328" updated="2011-06-04T06:11:47-04:00">
+	<state datetime="2011-01-19">REFERRED</state>
+	<status><introduced datetime="2011-01-19"/></status>
+
+	<introduced datetime="2011-01-19"/>
+	<titles>
+		<title type="short" as="introduced">Safety, Efficiency, and Accountability in Transportation Projects Through Public Inspection Act of 2011</title>
+		<title type="official" as="introduced">To require public employees to perform the inspection of State and local surface transportation projects, and related essential public functions, to ensure public safety, the cost-effective use of transportation funding, and timely project delivery.</title>
+	</titles>
+	<sponsor id="400133"/>
+	<cosponsors>
+		<cosponsor id="400290" joined="2011-02-08"/>
+		<cosponsor id="412382" joined="2011-05-10"/>
+		<cosponsor id="400237" joined="2011-05-25"/>
+		<cosponsor id="400361" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-19"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-01-20"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+		<action datetime="2011-01-24"><text>Sponsor introductory remarks on measure. (CR E98)</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Government investigations"/>
+		<term name="Roads and highways"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/19/2011--Introduced.
+Safety, Efficiency, and Accountability in Transportation Projects Through Public Inspection Act of 2011 - Requires public employees to perform construction inspections on all surface transportation projects receiving federal funding. 
+	</summary>
+</bill>

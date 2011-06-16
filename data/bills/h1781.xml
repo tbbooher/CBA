@@ -1,0 +1,87 @@
+<bill session="112" type="h" number="1781" updated="2011-06-04T06:18:33-04:00">
+	<state datetime="2011-05-05">REFERRED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Fix Gun Checks Act of 2011</title>
+		<title type="official" as="introduced">To ensure that all individuals who should be prohibited from buying a firearm are listed in the national instant criminal background check system and require a background check for every firearm sale.</title>
+	</titles>
+	<sponsor id="400257"/>
+	<cosponsors>
+		<cosponsor id="400663" joined="2011-05-05"/>
+		<cosponsor id="400387" joined="2011-05-05"/>
+		<cosponsor id="412385" joined="2011-05-05"/>
+		<cosponsor id="400199" joined="2011-05-11"/>
+		<cosponsor id="400048" joined="2011-05-05"/>
+		<cosponsor id="400364" joined="2011-05-05"/>
+		<cosponsor id="400289" joined="2011-05-05"/>
+		<cosponsor id="412272" joined="2011-05-05"/>
+		<cosponsor id="412199" joined="2011-05-05"/>
+		<cosponsor id="412382" joined="2011-06-03"/>
+		<cosponsor id="400407" joined="2011-05-05"/>
+		<cosponsor id="400259" joined="2011-06-03"/>
+		<cosponsor id="400080" joined="2011-05-05"/>
+		<cosponsor id="400162" joined="2011-05-05"/>
+		<cosponsor id="400346" joined="2011-05-05"/>
+		<cosponsor id="412307" joined="2011-06-03"/>
+		<cosponsor id="400195" joined="2011-06-03"/>
+		<cosponsor id="412470" joined="2011-05-05"/>
+		<cosponsor id="400251" joined="2011-05-05"/>
+		<cosponsor id="400122" joined="2011-05-05"/>
+		<cosponsor id="400333" joined="2011-05-11"/>
+		<cosponsor id="400366" joined="2011-05-05"/>
+		<cosponsor id="400295" joined="2011-05-05"/>
+		<cosponsor id="400623" joined="2011-05-05"/>
+		<cosponsor id="400129" joined="2011-05-05"/>
+		<cosponsor id="412379" joined="2011-05-05"/>
+		<cosponsor id="412215" joined="2011-05-05"/>
+		<cosponsor id="400198" joined="2011-05-11"/>
+		<cosponsor id="400185" joined="2011-05-05"/>
+		<cosponsor id="400003" joined="2011-05-05"/>
+		<cosponsor id="400283" joined="2011-05-05"/>
+		<cosponsor id="400033" joined="2011-05-11"/>
+		<cosponsor id="400409" joined="2011-05-05"/>
+		<cosponsor id="400184" joined="2011-05-05"/>
+		<cosponsor id="400301" joined="2011-05-05"/>
+		<cosponsor id="400262" joined="2011-05-11"/>
+		<cosponsor id="400130" joined="2011-05-05"/>
+		<cosponsor id="400062" joined="2011-05-05"/>
+		<cosponsor id="412331" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Referred to the Committee on the Judiciary, and in addition to the Committee on Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-05"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-05-05"><text>Referred to House Education and the Workforce</text></action>
+		<action datetime="2011-05-20"><committee name="House Education and the Workforce"/><text>Referred to the Subcommittee on Higher Education and Workforce Training.</text></action>
+		<action datetime="2011-06-01"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Higher Education and Workforce Training" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="436" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Congressional oversight"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Firearms and explosives"/>
+		<term name="Government investigations"/>
+		<term name="Higher education"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Licensing and registrations"/>
+		<term name="Mental health"/>
+		<term name="Retail and wholesale trades"/>
+		<term name="User charges and fees"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

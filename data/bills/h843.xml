@@ -1,0 +1,50 @@
+<bill session="112" type="h" number="843" updated="2011-05-13T06:12:55-04:00">
+	<state datetime="2011-02-28">REFERRED</state>
+	<status><introduced datetime="2011-02-28"/></status>
+
+	<introduced datetime="2011-02-28"/>
+	<titles>
+		<title type="official" as="introduced">To direct the Secretary of Transportation to promulgate a rule to improve the daytime and nighttime visibility of agricultural equipment that may be operated on a public road.</title>
+	</titles>
+	<sponsor id="412314"/>
+	<cosponsors>
+		<cosponsor id="400082" joined="2011-03-10"/>
+		<cosponsor id="412209" joined="2011-03-10"/>
+		<cosponsor id="400158" joined="2011-02-28"/>
+		<cosponsor id="412225" joined="2011-03-10"/>
+		<cosponsor id="400266" joined="2011-04-06"/>
+		<cosponsor id="412422" joined="2011-05-12"/>
+		<cosponsor id="400042" joined="2011-02-28"/>
+		<cosponsor id="412214" joined="2011-05-12"/>
+		<cosponsor id="412423" joined="2011-04-06"/>
+		<cosponsor id="400316" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-28"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-03-01"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Transportation"/>
+		<term name="General agriculture matters"/>
+		<term name="Lighting and heating"/>
+		<term name="Motor vehicles"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/28/2011--Introduced.
+Directs the Secretary of Transportation to promulgate a rule: (1) to improve the daytime and nighttime visibility of agricultural equipment operating on public roads, and (2) that establishes minimum lighting and marking standards for such equipment. Requires the Secretary to review and revise such standards at least once every five years to reflect the latest edition of the American National Standards Institute (ANSI)/American Society of Association Executives (ASAE) S279 standard published by the American Society of Agriculture and Biological Engineers entitled &quot;Lighting and Marking of Agricultural Equipment on Highways.&quot;
+
+	</summary>
+</bill>

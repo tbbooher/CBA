@@ -1,0 +1,82 @@
+<bill session="112" type="s" number="358" updated="2011-03-18T06:22:30-04:00">
+	<state datetime="2011-02-15">INTRODUCED</state>
+	<status><introduced datetime="2011-02-15"/></status>
+
+	<introduced datetime="2011-02-15"/>
+	<titles>
+		<title type="short" as="introduced">Regulatory Responsibility for our Economy Act of 2011</title>
+		<title type="official" as="introduced">A bill to codify and modify regulatory requirements of Federal agencies.</title>
+	</titles>
+	<sponsor id="300083"/>
+	<cosponsors>
+		<cosponsor id="400576" joined="2011-02-16"/>
+		<cosponsor id="400222" joined="2011-03-09"/>
+		<cosponsor id="400034" joined="2011-02-16"/>
+		<cosponsor id="400325" joined="2011-02-28"/>
+		<cosponsor id="412320" joined="2011-02-16"/>
+		<cosponsor id="412496" joined="2011-03-17"/>
+		<cosponsor id="400432" joined="2011-02-16"/>
+		<cosponsor id="300002" joined="2011-02-17"/>
+		<cosponsor id="300062" joined="2011-02-17"/>
+		<cosponsor id="402675" joined="2011-02-15"/>
+		<cosponsor id="300025" joined="2011-03-16"/>
+		<cosponsor id="300070" joined="2011-03-14"/>
+		<cosponsor id="300054" joined="2011-02-16"/>
+		<cosponsor id="400418" joined="2011-03-14"/>
+		<cosponsor id="300040" joined="2011-03-16"/>
+		<cosponsor id="412494" joined="2011-02-16"/>
+		<cosponsor id="400408" joined="2011-02-28"/>
+		<cosponsor id="300089" joined="2011-03-14"/>
+		<cosponsor id="412384" joined="2011-03-17"/>
+		<cosponsor id="300055" joined="2011-02-16"/>
+		<cosponsor id="412493" joined="2011-02-17"/>
+		<cosponsor id="300048" joined="2011-02-17"/>
+		<cosponsor id="300027" joined="2011-02-17"/>
+		<cosponsor id="400105" joined="2011-02-16"/>
+		<cosponsor id="300091" joined="2011-03-14"/>
+		<cosponsor id="300030" joined="2011-03-09"/>
+		<cosponsor id="412251" joined="2011-02-15"/>
+		<cosponsor id="412491" joined="2011-03-17"/>
+		<cosponsor id="300047" joined="2011-03-09"/>
+		<cosponsor id="400284" joined="2011-02-16"/>
+		<cosponsor id="300071" joined="2011-02-16"/>
+		<cosponsor id="300052" joined="2011-02-16"/>
+		<cosponsor id="300075" joined="2011-03-14"/>
+		<cosponsor id="300088" joined="2011-02-16"/>
+		<cosponsor id="412495" joined="2011-02-16"/>
+		<cosponsor id="300021" joined="2011-02-16"/>
+		<cosponsor id="412322" joined="2011-02-16"/>
+		<cosponsor id="412248" joined="2011-03-14"/>
+		<cosponsor id="400040" joined="2011-02-16"/>
+		<cosponsor id="400054" joined="2011-02-16"/>
+		<cosponsor id="300041" joined="2011-03-09"/>
+		<cosponsor id="412492" joined="2011-02-16"/>
+		<cosponsor id="400194" joined="2011-02-16"/>
+		<cosponsor id="300072" joined="2011-02-17"/>
+		<cosponsor id="400546" joined="2011-02-17"/>
+		<cosponsor id="300023" joined="2011-03-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-15"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+		<action datetime="2011-02-16"><text>Sponsor introductory remarks on measure. (CR S766-768)</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Congressional oversight"/>
+		<term name="Economic performance and conditions"/>
+		<term name="Public participation and lobbying"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

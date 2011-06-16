@@ -1,0 +1,46 @@
+<bill session="112" type="h" number="882" updated="2011-03-08T06:14:59-05:00">
+	<state datetime="2011-03-02">REFERRED</state>
+	<status><introduced datetime="2011-03-02"/></status>
+
+	<introduced datetime="2011-03-02"/>
+	<titles>
+		<title type="short" as="introduced">Congressional Foreign Travel Reform Act of 2011</title>
+		<title type="official" as="introduced">To require that any local currencies used to provide per diems to Members and employees of Congress for official foreign travel for a fiscal year be obtained by Congress and paid for using funds appropriated for salaries and expenses of Congress for the fiscal year, to enhance the disclosure of information on official foreign travel of Members, officers, and employees of the House of Representatives, and for other purposes.</title>
+	</titles>
+	<sponsor id="400207"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-02"><text>Referred to the Committee on House Administration, and in addition to the Committee on Rules, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-02"><text>Referred to House House Administration</text></action>
+		<action datetime="2011-03-02"><text>Referred to House Rules</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHA" name="House Administration" activity="Referral, In Committee" />
+		<committee code="HSRU" name="House Rules" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Congressional officers and employees"/>
+		<term name="Congressional operations and organization"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Government information and archives"/>
+		<term name="House of Representatives"/>
+		<term name="International monetary system and foreign exchange"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Members of Congress"/>
+		<term name="Senate"/>
+		<term name="Transportation costs"/>
+		<term name="Travel and tourism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

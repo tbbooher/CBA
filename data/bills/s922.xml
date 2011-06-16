@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="922" updated="2011-06-08T06:13:04-04:00">
+	<state datetime="2011-05-09">INTRODUCED</state>
+	<status><introduced datetime="2011-05-09"/></status>
+
+	<introduced datetime="2011-05-09"/>
+	<titles>
+		<title type="short" as="introduced">Urban Jobs Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Workforce Investment Act of 1998 to authorize the Secretary of Labor to provide grants for Urban Jobs Programs, and for other purposes.</title>
+	</titles>
+	<sponsor id="412223"/>
+	<cosponsors>
+		<cosponsor id="400357" joined="2011-06-07"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-09"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="683" />
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Advisory bodies"/>
+		<term name="Employment and training programs"/>
+		<term name="Literacy and language arts"/>
+		<term name="Urban and suburban affairs and development"/>
+		<term name="Youth employment and child labor"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

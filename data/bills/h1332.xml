@@ -1,0 +1,117 @@
+<bill session="112" type="h" number="1332" updated="2011-06-14T06:14:55-04:00">
+	<state datetime="2011-04-01">REFERRED</state>
+	<status><introduced datetime="2011-04-01"/></status>
+
+	<introduced datetime="2011-04-01"/>
+	<titles>
+		<title type="short" as="introduced">Social Security Fairness Act of 2011</title>
+		<title type="official" as="introduced">To amend title II of the Social Security Act to repeal the Government pension offset and windfall elimination provisions.</title>
+	</titles>
+	<sponsor id="400267"/>
+	<cosponsors>
+		<cosponsor id="400290" joined="2011-05-12"/>
+		<cosponsor id="412287" joined="2011-04-01"/>
+		<cosponsor id="400627" joined="2011-05-12"/>
+		<cosponsor id="400387" joined="2011-04-01"/>
+		<cosponsor id="400144" joined="2011-04-01"/>
+		<cosponsor id="400133" joined="2011-04-01"/>
+		<cosponsor id="400082" joined="2011-04-01"/>
+		<cosponsor id="412218" joined="2011-04-01"/>
+		<cosponsor id="400347" joined="2011-05-12"/>
+		<cosponsor id="412383" joined="2011-05-12"/>
+		<cosponsor id="400337" joined="2011-04-01"/>
+		<cosponsor id="400311" joined="2011-04-01"/>
+		<cosponsor id="412193" joined="2011-04-01"/>
+		<cosponsor id="400308" joined="2011-04-15"/>
+		<cosponsor id="400646" joined="2011-04-15"/>
+		<cosponsor id="412272" joined="2011-04-01"/>
+		<cosponsor id="400057" joined="2011-04-15"/>
+		<cosponsor id="400160" joined="2011-04-01"/>
+		<cosponsor id="412211" joined="2011-05-12"/>
+		<cosponsor id="400407" joined="2011-04-01"/>
+		<cosponsor id="400436" joined="2011-04-15"/>
+		<cosponsor id="400162" joined="2011-04-01"/>
+		<cosponsor id="412307" joined="2011-05-12"/>
+		<cosponsor id="400140" joined="2011-04-15"/>
+		<cosponsor id="400183" joined="2011-04-01"/>
+		<cosponsor id="400422" joined="2011-04-15"/>
+		<cosponsor id="400251" joined="2011-04-01"/>
+		<cosponsor id="400411" joined="2011-05-12"/>
+		<cosponsor id="412435" joined="2011-04-01"/>
+		<cosponsor id="400360" joined="2011-04-01"/>
+		<cosponsor id="400295" joined="2011-04-01"/>
+		<cosponsor id="412239" joined="2011-05-12"/>
+		<cosponsor id="400129" joined="2011-04-15"/>
+		<cosponsor id="400638" joined="2011-06-13"/>
+		<cosponsor id="412200" joined="2011-04-01"/>
+		<cosponsor id="412010" joined="2011-04-01"/>
+		<cosponsor id="400232" joined="2011-04-15"/>
+		<cosponsor id="400207" joined="2011-06-13"/>
+		<cosponsor id="400247" joined="2011-05-12"/>
+		<cosponsor id="412379" joined="2011-04-15"/>
+		<cosponsor id="400266" joined="2011-04-01"/>
+		<cosponsor id="400198" joined="2011-04-01"/>
+		<cosponsor id="400063" joined="2011-06-13"/>
+		<cosponsor id="412254" joined="2011-04-01"/>
+		<cosponsor id="400009" joined="2011-05-12"/>
+		<cosponsor id="400361" joined="2011-04-01"/>
+		<cosponsor id="400326" joined="2011-04-01"/>
+		<cosponsor id="400371" joined="2011-04-01"/>
+		<cosponsor id="412228" joined="2011-04-01"/>
+		<cosponsor id="412212" joined="2011-04-01"/>
+		<cosponsor id="400630" joined="2011-04-01"/>
+		<cosponsor id="400003" joined="2011-04-01"/>
+		<cosponsor id="400274" joined="2011-04-01"/>
+		<cosponsor id="400097" joined="2011-04-15"/>
+		<cosponsor id="412189" joined="2011-04-15"/>
+		<cosponsor id="400042" joined="2011-04-01"/>
+		<cosponsor id="412293" joined="2011-04-01"/>
+		<cosponsor id="400052" joined="2011-04-15"/>
+		<cosponsor id="400240" joined="2011-04-01"/>
+		<cosponsor id="400433" joined="2011-04-01"/>
+		<cosponsor id="400024" joined="2011-04-01"/>
+		<cosponsor id="400654" joined="2011-04-01"/>
+		<cosponsor id="400285" joined="2011-06-13"/>
+		<cosponsor id="400055" joined="2011-04-01"/>
+		<cosponsor id="400363" joined="2011-04-01"/>
+		<cosponsor id="400355" joined="2011-04-01"/>
+		<cosponsor id="400025" joined="2011-04-01"/>
+		<cosponsor id="400301" joined="2011-04-01"/>
+		<cosponsor id="400345" joined="2011-04-01"/>
+		<cosponsor id="400249" joined="2011-05-12"/>
+		<cosponsor id="400062" joined="2011-04-01"/>
+		<cosponsor id="400437" joined="2011-04-01"/>
+		<cosponsor id="400233" joined="2011-04-01"/>
+		<cosponsor id="412283" joined="2011-06-13"/>
+		<cosponsor id="400030" joined="2011-05-12"/>
+		<cosponsor id="400321" joined="2011-05-12"/>
+		<cosponsor id="400309" joined="2011-05-12"/>
+		<cosponsor id="400245" joined="2011-04-01"/>
+		<cosponsor id="412255" joined="2011-05-12"/>
+		<cosponsor id="400417" joined="2011-04-01"/>
+		<cosponsor id="400278" joined="2011-04-01"/>
+		<cosponsor id="400235" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-01"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Social welfare"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Social security and elderly assistance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/1/2011--Introduced.
+Social Security Fairness Act of 2011 - Amends title II (Old Age, Survivors and Disability Insurance) (OASDI) of the Social Security Act to repeal: (1) government pension offset requirements applicable to husband's and wife's insurance benefits, widow's and widower's insurance benefits, and mother's and father's insurance benefits with respect to OASDI payments; and (2) windfall elimination requirements with respect to computation of an individual's primary insurance amount.
+
+	</summary>
+</bill>

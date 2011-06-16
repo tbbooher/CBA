@@ -1,0 +1,59 @@
+<bill session="112" type="h" number="1173" updated="2011-06-03T06:14:11-04:00">
+	<state datetime="2011-03-17">REFERRED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Fiscal Responsibility and Retirement Security Act of 2011</title>
+		<title type="official" as="introduced">To repeal the CLASS program.</title>
+	</titles>
+	<sponsor id="400636"/>
+	<cosponsors>
+		<cosponsor id="412309" joined="2011-06-02"/>
+		<cosponsor id="400311" joined="2011-03-17"/>
+		<cosponsor id="412317" joined="2011-03-17"/>
+		<cosponsor id="412442" joined="2011-05-31"/>
+		<cosponsor id="400175" joined="2011-04-14"/>
+		<cosponsor id="400151" joined="2011-03-17"/>
+		<cosponsor id="400348" joined="2011-03-17"/>
+		<cosponsor id="412472" joined="2011-03-29"/>
+		<cosponsor id="400005" joined="2011-03-17"/>
+		<cosponsor id="412256" joined="2011-05-24"/>
+		<cosponsor id="412310" joined="2011-03-17"/>
+		<cosponsor id="400630" joined="2011-03-17"/>
+		<cosponsor id="400032" joined="2011-03-17"/>
+		<cosponsor id="412411" joined="2011-05-25"/>
+		<cosponsor id="400055" joined="2011-05-03"/>
+		<cosponsor id="412295" joined="2011-03-29"/>
+		<cosponsor id="412401" joined="2011-03-29"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-17"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-03-17"><text>Referred to House Ways and Means</text></action>
+		<action datetime="2011-03-28"><committee name="House Energy and Commerce"/><text>Referred to the Subcommittee on Health.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Health" activity="Referral" />
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="720" />
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Employee benefits and pensions"/>
+		<term name="Health care costs and insurance"/>
+		<term name="Health care coverage and access"/>
+		<term name="Long-term, rehabilitative, and terminal care"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/17/2011--Introduced.
+Fiscal Responsibility and Retirement Security Act of 2011 - Repeals provisions of the Public Health Service Act enacted under the Patient Protection and Affordable Care Act (entitled the Community Living Assistance Services and Supports Act or the CLASS Act) which establish a national, voluntary insurance program for purchasing community living assistance services and supports in order to provide individuals with functional limitations with tools that will allow them to maintain their personal and financial independence and live in the community. Amends the Deficit Reduction Act of 2005 to repeal provisions providing appropriations for the National Clearinghouse for Long-Term Care Information through FY2015.
+
+	</summary>
+</bill>

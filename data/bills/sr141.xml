@@ -1,0 +1,38 @@
+<bill session="112" type="sr" number="141" updated="2011-04-28T06:22:23-04:00">
+	<state datetime="2011-04-12">REFERRED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="official" as="introduced">A resolution recognizing the efforts and accomplishments of the GOD'S CHILD Project and congratulating the GOD'S CHILD Project on its 20th anniversary.</title>
+	</titles>
+	<sponsor id="300026"/>
+	<cosponsors>
+		<cosponsor id="412494" joined="2011-04-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Referred to the Committee on the Judiciary.</text><reference label="text of measure as introduced" ref="CR S2399"/></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Child health"/>
+		<term name="Child safety and welfare"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="Congressional tributes"/>
+		<term name="Foreign aid and international relief"/>
+		<term name="Social work, volunteer service, charitable organizations"/>
+		<term name="Women's health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

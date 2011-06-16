@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="144" updated="2011-03-06T07:52:55-05:00">
+	<state datetime="2011-01-25">INTRODUCED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="official" as="introduced">A bill to prohibit the further extension or establishment of national monuments in Nevada except by express authorization of Congress.</title>
+	</titles>
+	<sponsor id="300040"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Monuments and memorials"/>
+		<term name="Nevada"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/25/2011--Introduced.
+Prohibits any further extension or establishment of national parks and monuments in Nevada from being undertaken, except by express authorization of Congress. 
+	</summary>
+</bill>

@@ -1,0 +1,52 @@
+<bill session="112" type="s" number="550" updated="2011-05-19T06:13:28-04:00">
+	<state datetime="2011-05-18">REPORTED</state>
+	<status><calendar datetime="2011-05-18" /></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="short" as="introduced">Fire Grants Reauthorization Act of 2011</title>
+		<title type="official" as="introduced">A bill to improve the provision of assistance to fire departments, and for other purposes.</title>
+	</titles>
+	<sponsor id="300067"/>
+	<cosponsors>
+		<cosponsor id="300071" joined="2011-03-14"/>
+		<cosponsor id="300025" joined="2011-03-10"/>
+		<cosponsor id="400357" joined="2011-03-28"/>
+		<cosponsor id="300019" joined="2011-03-10"/>
+		<cosponsor id="412384" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Sponsor introductory remarks on measure. (CR S1551)</text></action>
+		<action datetime="2011-03-10"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text><reference label="text of measure as introduced" ref="CR S1551-1555"/></action>
+		<calendar datetime="2011-05-18"  state="REPORTED"><text>Committee on Homeland Security and Governmental Affairs. Ordered to be reported with amendments favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Emergency medical services and trauma care"/>
+		<term name="Employment and training programs"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal Emergency Management Agency (FEMA)"/>
+		<term name="Fires"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Housing industry and standards"/>
+		<term name="Licensing and registrations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/10/2011--Introduced.
+Fire Grants Reauthorization Act of 2011 - Amends the Federal Fire Prevention and Control Act of 1974 to reauthorize through FY2016 the Federal Emergency Management Agency's (FEMA's) Assistance to Firefighters Grants (AFG) program and the Staffing for Adequate Fire and Emergency Response (SAFER) program. Authorizes the Administrator of FEMA to award: (1) AFG grants on a competitive basis to fire departments, nonaffiliated emergency medical services (EMS) organizations, and state fire training academies; and (2) fire prevention and safety grants to fire departments for fire prevention programs and research to improve firefighter health and life safety. Establishes grant funding requirements and limitations for emergency medical services, awards to nonaffiliated EMS organizations, fire prevention and safety grants, state fire training academies, and purchasing firefighting vehicles.
+Requires the Administrator to: (1) appoint fire service and EMS personnel to conduct peer reviews of grant applications; and (2) publish guidelines in the Federal Register describing the grant application process and criteria for selecting grant recipients.
+Amends SAFER program provisions to: (1) reduce the period of SAFER grants from four to three years; (2) limit to 75% the portion of the cost of hiring firefighters provided by a grant in any fiscal year; and (3) allow a waiver, based upon economic hardship, of certain firefighter hiring and cost requirements.
+Terminates amendments made by this Act on October 1, 2016.
+
+	</summary>
+</bill>

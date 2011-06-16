@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="1004" updated="2011-06-04T06:24:54-04:00">
+	<state datetime="2011-05-16">INTRODUCED</state>
+	<status><introduced datetime="2011-05-16"/></status>
+
+	<introduced datetime="2011-05-16"/>
+	<titles>
+		<title type="short" as="introduced">Promise Neighborhoods Act of 2011</title>
+		<title type="official" as="introduced">A bill to support Promise Neighborhoods.</title>
+	</titles>
+	<sponsor id="300051"/>
+	<cosponsors>
+		<cosponsor id="412378" joined="2011-05-16"/>
+		<cosponsor id="300093" joined="2011-05-23"/>
+		<cosponsor id="300060" joined="2011-05-16"/>
+		<cosponsor id="300073" joined="2011-05-16"/>
+		<cosponsor id="412223" joined="2011-05-16"/>
+		<cosponsor id="412246" joined="2011-05-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-16"><text>Sponsor introductory remarks on measure. (CR S2997-2998)</text></action>
+		<action datetime="2011-05-16"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Education of the disadvantaged"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Preschool education"/>
+		<term name="Special education"/>
+		<term name="Teaching, teachers, curricula"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

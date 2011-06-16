@@ -1,0 +1,48 @@
+<bill session="112" type="s" number="528" updated="2011-05-05T06:21:30-04:00">
+	<state datetime="2011-03-09">INTRODUCED</state>
+	<status><introduced datetime="2011-03-09"/></status>
+
+	<introduced datetime="2011-03-09"/>
+	<titles>
+		<title type="short" as="introduced">Safe Teen and Novice Driver Uniform Protection Act of 2011</title>
+		<title type="short" as="introduced">STANDUP Act</title>
+		<title type="official" as="introduced">A bill to provide driver safety grants to States with graduated driver licensing laws that meet certain minimum requirements.</title>
+	</titles>
+	<sponsor id="412223"/>
+	<cosponsors>
+		<cosponsor id="412242" joined="2011-03-09"/>
+		<cosponsor id="412490" joined="2011-04-08"/>
+		<cosponsor id="400064" joined="2011-03-09"/>
+		<cosponsor id="300073" joined="2011-03-14"/>
+		<cosponsor id="300019" joined="2011-03-09"/>
+		<cosponsor id="412247" joined="2011-03-09"/>
+		<cosponsor id="300064" joined="2011-05-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-09"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1515" />
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Child safety and welfare"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Licensing and registrations"/>
+		<term name="Motor vehicles"/>
+		<term name="Roads and highways"/>
+		<term name="State and local government operations"/>
+		<term name="Telephone and wireless communication"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

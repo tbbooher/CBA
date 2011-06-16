@@ -1,0 +1,50 @@
+<bill session="112" type="s" number="46" updated="2011-05-10T06:12:08-04:00">
+	<state datetime="2011-05-05">REPORTED</state>
+	<status><calendar datetime="2011-05-05" /></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Coral Reef Conservation Amendments Act of 2011</title>
+		<title type="official" as="introduced">A bill to reauthorize the Coral Reef Conservation Act of 2000, and for other purposes.</title>
+	</titles>
+	<sponsor id="300056"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-01-25"/>
+		<cosponsor id="300060" joined="2011-01-25"/>
+		<cosponsor id="300078" joined="2011-01-25"/>
+		<cosponsor id="300084" joined="2011-01-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Sponsor introductory remarks on measure. (CR S153)</text></action>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text><reference label="text of measure as introduced" ref="CR S153-160"/></action>
+		<calendar datetime="2011-05-05"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported without amendment favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="738" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Civil actions and liability"/>
+		<term name="Department of Commerce"/>
+		<term name="Disaster relief and insurance"/>
+		<term name="Ecology"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Licensing and registrations"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine and inland water transportation"/>
+		<term name="Public-private cooperation"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/25/2011--Introduced.
+Coral Reef Conservation Amendments Act of 2011 - Amends the Coral Reef Conservation Act of 2000 to direct the Secretary of Commerce to submit to Congress a national coral reef ecosystem action strategy. Directs the Secretary to make grants for projects for the conservation of coral reef ecosystems. (Current law refers to conservation of coral reefs.) Authorizes the Secretary to make agreements with nonprofit organizations for public-private partnerships promoting coral reef ecosystem conservation. (Current law refers to a nonprofit organization.) Authorizes the Secretary to: (1) execute contracts, leases, grants, or cooperative agreements to carry out the Act, including agreements with universities and research centers; (2) use the resources of any domestic or foreign governmental entity, tribal government, or international organization; and (3) utilize grants from any federal source operating competitive grant programs. Authorizes the Secretary to provide assistance to any state, local, or territorial government agency for any unforeseen or disaster-related circumstance regarding coral reef ecosystems. (Current law refers to the Administrator of the National Oceanic and Atmospheric Administration [NOAA].) Authorizes the Secretary to conduct activities, including with local, regional, or international programs and partners, to conserve coral reef ecosystems. (Current law does not does not provide for the inclusion of local, regional, or international programs and partners.) Directs the Secretary to: (1) provide for the long-term stewardship of environmental data; (2) establish the Emergency Response, Stabilization, and Restoration Account in the existing Damage Assessment Restoration Revolving Fund; and (3) conduct a study of the trade in corals. Directs the Secretary to carry out international coral reef conservation activities in waters outside the U.S. jurisdiction. Directs the Secretary to: (1) report to Congress regarding an international coral reef ecosystem strategy, and (2) establish an international coral reef ecosystem partnership program. Authorizes the Secretary to: (1) make grants to work with federal, state, and local entities to increase protection of priority coral reef areas; and (2) maintain an inventory of all vessel reef grounding incidents and identify reef ecosystems with a high incidence of vessel impacts. Makes it unlawful to destroy, take, cause the loss of, or injure any coral reef or part except if caused by: (1) permitted fishing gear use, (2) a federally or state permitted use, (3) bona fide marine scientific research, (4) certain federal emergency activity, or (5) a vessel master's actions to ensure vessel safety or to save a life at sea. Makes anyone who engages in an activity that injures a coral reef ecosystem liable for response costs and damages, costs of seizure, forfeiture, storage, disposal, and related interest. Provides for in rem liability. Bars the commencement of a civil action for response costs and damages unless filed within three years after the date on which the Secretary completes a damage assessment and restoration plan for the coral reef. Provides for enforcement, including through civil administrative and judicial penalties and denial, suspension, amendment, or revocation of any permit involved. Provides for in rem jurisdiction, criminal and civil forfeiture, and injunctive relief. Authorizes the Secretary to issue permits for research and activities that would otherwise be prohibited by the Act. Directs the Secretary and other federal members of the Coral Reef Task Force to work in coordination with other federal agencies, states, and U.S. territorial governments to implement the strategies developed under this Act to address multiple threats to coral reefs and coral reef ecosystems.
+
+	</summary>
+</bill>

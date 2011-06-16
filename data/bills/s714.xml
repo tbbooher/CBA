@@ -1,0 +1,40 @@
+<bill session="112" type="s" number="714" updated="2011-05-26T06:20:08-04:00">
+	<state datetime="2011-04-04">INTRODUCED</state>
+	<status><introduced datetime="2011-04-04"/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">Federal Land Transaction Facilitation Act Reauthorization of 2011</title>
+		<title type="official" as="introduced">A bill to reauthorize the Federal Land Transaction Facilitation Act, and for other purposes.</title>
+	</titles>
+	<sponsor id="300009"/>
+	<cosponsors>
+		<cosponsor id="400413" joined="2011-04-04"/>
+		<cosponsor id="400412" joined="2011-04-04"/>
+		<cosponsor id="412244" joined="2011-04-12"/>
+		<cosponsor id="300100" joined="2011-04-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+		<action datetime="2011-05-25"><text>Committee on Energy and Natural Resources Subcommittee on Public Lands and Forests. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="Senate Energy and Natural Resources" subcommittee="Public Lands and Forests" activity="Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Land transfers"/>
+		<term name="Land use and conservation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/4/2011--Introduced.
+Federal Land Transaction Facilitation Act Reauthorization of 2011 - Amends the Federal Land Transaction Facilitation Act (FLTFA) to reauthorize, until July 25, 2021, the program for the completion of appraisals and satisfaction of other legal requirements for the sale or exchange of public land identified for disposal under approved land use plans under the Federal Land Policy and Management Act of 1976. Makes the FLTFA non-applicable to land eligible for sale under specified public land laws. 
+	</summary>
+</bill>

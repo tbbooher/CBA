@@ -1,0 +1,62 @@
+<bill session="112" type="h" number="300" updated="2011-06-03T06:11:34-04:00">
+	<state datetime="2011-01-18">REFERRED</state>
+	<status><introduced datetime="2011-01-18"/></status>
+
+	<introduced datetime="2011-01-18"/>
+	<titles>
+		<title type="short" as="introduced">Young Adults Financial Literacy Act</title>
+		<title type="official" as="introduced">To establish a grant program in the Department of the Treasury to fund the establishment of centers of excellence to support research, development and planning, implementation, and evaluation of effective programs in financial literacy education for young adults and families ages 15-24 years old, and for other purposes.</title>
+	</titles>
+	<sponsor id="412258"/>
+	<cosponsors>
+		<cosponsor id="400387" joined="2011-02-08"/>
+		<cosponsor id="400041" joined="2011-01-26"/>
+		<cosponsor id="412308" joined="2011-05-31"/>
+		<cosponsor id="400080" joined="2011-02-08"/>
+		<cosponsor id="400162" joined="2011-01-26"/>
+		<cosponsor id="412221" joined="2011-05-12"/>
+		<cosponsor id="400360" joined="2011-02-14"/>
+		<cosponsor id="400295" joined="2011-01-26"/>
+		<cosponsor id="400271" joined="2011-01-26"/>
+		<cosponsor id="400074" joined="2011-01-26"/>
+		<cosponsor id="412215" joined="2011-05-13"/>
+		<cosponsor id="400033" joined="2011-02-08"/>
+		<cosponsor id="400409" joined="2011-02-08"/>
+		<cosponsor id="400240" joined="2011-01-26"/>
+		<cosponsor id="400216" joined="2011-02-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-18"><text>Referred to the Committee on Financial Services, and in addition to the Committee on Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-01-18"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-01-18"><text>Referred to House Education and the Workforce</text></action>
+		<action datetime="2011-02-25"><committee name="House Education and the Workforce"/><text>Referred to the Subcommittee on Higher Education and Workforce Training.</text></action>
+		<action datetime="2011-03-23"><committee name="House Financial Services"/><text>Referred to the Subcommittee on Financial Institutions and Consumer Credit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Financial Institutions and Consumer Credit" activity="Referral" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Higher Education and Workforce Training" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Adult education and literacy"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Financial literacy"/>
+		<term name="Higher education"/>
+		<term name="Research administration and funding"/>
+		<term name="Teaching, teachers, curricula"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/18/2011--Introduced.
+Young Adults Financial Literacy Act - Authorizes the Secretary of the Treasury to make competitive grants to, and enter contracts with, eligible institutions to establish centers of excellence to support research, development and planning, implementation, and evaluation of effective programs in financial literacy education for young adults and families ages 15-24 years old. Defines &quot;eligible institution&quot; as any partnership consisting of an institution of higher education and any of the following: (1) one or more local educational agencies; (2) a nonprofit agency, organization, or association; (3) a community-based organization; or (4) a financial institution.
+
+	</summary>
+</bill>

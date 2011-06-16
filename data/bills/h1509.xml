@@ -1,0 +1,53 @@
+<bill session="112" type="h" number="1509" updated="2011-06-04T06:16:45-04:00">
+	<state datetime="2011-04-13">REFERRED</state>
+	<status><introduced datetime="2011-04-13"/></status>
+
+	<introduced datetime="2011-04-13"/>
+	<titles>
+		<title type="short" as="introduced">Medicare Identity Theft Prevention Act of 2011</title>
+		<title type="official" as="introduced">To amend title II of the Social Security Act to prohibit the inclusion of Social Security account numbers on Medicare cards.</title>
+	</titles>
+	<sponsor id="400206"/>
+	<cosponsors>
+		<cosponsor id="412385" joined="2011-06-03"/>
+		<cosponsor id="400347" joined="2011-06-03"/>
+		<cosponsor id="412475" joined="2011-06-03"/>
+		<cosponsor id="400320" joined="2011-06-03"/>
+		<cosponsor id="400411" joined="2011-06-03"/>
+		<cosponsor id="400111" joined="2011-04-13"/>
+		<cosponsor id="400313" joined="2011-06-03"/>
+		<cosponsor id="412213" joined="2011-06-03"/>
+		<cosponsor id="400077" joined="2011-06-03"/>
+		<cosponsor id="400047" joined="2011-06-03"/>
+		<cosponsor id="400032" joined="2011-06-03"/>
+		<cosponsor id="400055" joined="2011-06-03"/>
+		<cosponsor id="412261" joined="2011-06-03"/>
+		<cosponsor id="400341" joined="2011-06-03"/>
+		<cosponsor id="400392" joined="2011-06-03"/>
+		<cosponsor id="412292" joined="2011-06-03"/>
+		<cosponsor id="400656" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-13"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Computer crimes and identity theft"/>
+		<term name="Crime prevention"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government information and archives"/>
+		<term name="Medicare"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="966" updated="2011-05-28T06:23:14-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Bone Health Promotion and Research Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Public Health Service Act to provide for osteoporosis and related bone disease education, research, and surveillance, and for other purposes.</title>
+	</titles>
+	<sponsor id="412223"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Advisory bodies"/>
+		<term name="Health information and medical records"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Health promotion and preventive care"/>
+		<term name="Medical research"/>
+		<term name="Musculoskeletal and skin diseases"/>
+		<term name="Research administration and funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

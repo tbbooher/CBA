@@ -1,0 +1,51 @@
+<bill session="112" type="hc" number="39" updated="2011-06-02T06:10:06-04:00">
+	<state datetime="2011-04-13">REFERRED</state>
+	<status><introduced datetime="2011-04-13"/></status>
+
+	<introduced datetime="2011-04-13"/>
+	<titles>
+		<title type="official" as="introduced">Expressing the sense of Congress regarding the freedom, security, and stability of Taiwan.</title>
+	</titles>
+	<sponsor id="400008"/>
+	<cosponsors>
+		<cosponsor id="400627" joined="2011-05-03"/>
+		<cosponsor id="412271" joined="2011-05-10"/>
+		<cosponsor id="400145" joined="2011-04-13"/>
+		<cosponsor id="400260" joined="2011-05-12"/>
+		<cosponsor id="412411" joined="2011-05-04"/>
+		<cosponsor id="400140" joined="2011-06-01"/>
+		<cosponsor id="400029" joined="2011-05-10"/>
+		<cosponsor id="400654" joined="2011-05-24"/>
+		<cosponsor id="400288" joined="2011-05-04"/>
+		<cosponsor id="400333" joined="2011-05-10"/>
+		<cosponsor id="400656" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-13"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+		<action datetime="2011-05-13"><committee name="House Committee on Foreign Affairs"/><text>Referred to the Subcommittee on Asia and the Pacific.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Foreign Affairs" subcommittee="Asia and the Pacific" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Asia"/>
+		<term name="China"/>
+		<term name="Military assistance and sales, agreements, alliances"/>
+		<term name="Military operations and strategy"/>
+		<term name="Military readiness and strategic materials"/>
+		<term name="Taiwan"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/13/2011--Introduced.
+Expresses the sense of Congress that: (1) grave concerns exist concerning the ballistic missile deployment by the People's Republic of China (PRC) directed toward Taiwan which threatens security and stability in the Taiwan Strait, (2) the President should seek a renunciation from the PRC of any threat or use of force against Taiwan and the region, (3) Taiwan's future should be determined peacefully by its people and free from PRC coercion, and (4) the President should move forward with the sale to Taiwan of new and upgraded F-16s.
+
+	</summary>
+</bill>

@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="869" updated="2011-03-05T06:12:18-05:00">
+	<state datetime="2011-03-02">REFERRED</state>
+	<status><introduced datetime="2011-03-02"/></status>
+
+	<introduced datetime="2011-03-02"/>
+	<titles>
+		<title type="official" as="introduced">To clarify the definition of flood control operations for the purposes of the operation and maintenance of Project No. 2179 on the Lower Merced River.</title>
+	</titles>
+	<sponsor id="412403"/>
+	<cosponsors>
+		<cosponsor id="400618" joined="2011-03-02"/>
+		<cosponsor id="412190" joined="2011-03-02"/>
+		<cosponsor id="400065" joined="2011-03-02"/>
+		<cosponsor id="400297" joined="2011-03-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-02"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-03-03"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Water resources development"/>
+		<term name="California"/>
+		<term name="Floods and storm protection"/>
+		<term name="Lakes and rivers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

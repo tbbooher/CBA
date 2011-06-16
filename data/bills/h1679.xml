@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1679" updated="2011-05-19T06:11:47-04:00">
+	<state datetime="2011-05-02">REFERRED</state>
+	<status><introduced datetime="2011-05-02"/></status>
+
+	<introduced datetime="2011-05-02"/>
+	<titles>
+		<title type="short" as="introduced">WE CARE Act</title>
+		<title type="short" as="introduced">Women's Excellence of Care and Accessibility Review and Evaluation Act</title>
+		<title type="official" as="introduced">To direct the Secretary of Defense to conduct a comprehensive review of the health care services available for female members of the Armed Forces.</title>
+	</titles>
+	<sponsor id="412254"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-02"><text>Referred to the House Committee on Armed Services.</text></action>
+		<action datetime="2011-05-18"><committee name="House Committee on Armed Services"/><text>Referred to the Subcommittee on Military Personnel.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+		<committee code="" name="House Armed Services" subcommittee="Military Personnel" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Government investigations"/>
+		<term name="Military medicine"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Women's health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

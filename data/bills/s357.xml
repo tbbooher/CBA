@@ -1,0 +1,44 @@
+<bill session="112" type="s" number="357" updated="2011-05-06T06:22:19-04:00">
+	<state datetime="2011-02-15">INTRODUCED</state>
+	<status><introduced datetime="2011-02-15"/></status>
+
+	<introduced datetime="2011-02-15"/>
+	<titles>
+		<title type="short" as="introduced">Wildlife Disease Emergency Act of 2011</title>
+		<title type="official" as="introduced">A bill to authorize the Secretary of the Interior to identify and declare wildlife disease emergencies and to coordinate rapid response to those emergencies, and for other purposes.</title>
+	</titles>
+	<sponsor id="300064"/>
+	<cosponsors>
+		<cosponsor id="300065" joined="2011-02-15"/>
+		<cosponsor id="400272" joined="2011-04-12"/>
+		<cosponsor id="300009" joined="2011-02-15"/>
+		<cosponsor id="400064" joined="2011-05-05"/>
+		<cosponsor id="400357" joined="2011-02-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-15"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Animals"/>
+		<term name="Advisory bodies"/>
+		<term name="Animal and plant health"/>
+		<term name="Endangered and threatened species"/>
+		<term name="Government trust funds"/>
+		<term name="Infectious and parasitic diseases"/>
+		<term name="Veterinary medicine and animal diseases"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/15/2011--Introduced.
+Wildlife Disease Emergency Act of 2011 - Authorizes the Secretary of the Interior to declare a wildlife disease emergency in one or more states for a disease that affects wildlife within the United States or, if it has the potential to enter the United States, outside the United States. Directs the Secretary, upon making such a declaration, to lead a coordinated response to the emergency. Authorizes the Secretary to implement a grant program to provide grants to state wildlife agencies and Indian tribes to coordinate the response to and address such declared emergencies. Establishes in the Treasury a Wildlife Disease Emergency Fund, to be administered by the Secretary to carry out this Act. Directs the Secretary to establish a Wildlife Disease Committee to assist the Secretary in increasing the level of preparedness needed to address emerging wildlife diseases. Authorizes the Secretary to convene rapid response teams to address any wildlife disease emergency. 
+	</summary>
+</bill>

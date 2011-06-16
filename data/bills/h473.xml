@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="473" updated="2011-02-15T06:13:54-05:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">HALE Scouts Act</title>
+		<title type="short" as="introduced">Help to Access Land for the Education of Scouts</title>
+		<title type="official" as="introduced">To provide for the conveyance of approximately 140 acres of land in the Ouachita National Forest in Oklahoma to the Indian Nations Council, Inc., of the Boy Scouts of America, and for other purposes.</title>
+	</titles>
+	<sponsor id="400645"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-02-04"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land transfers"/>
+		<term name="Oklahoma"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+Help to Access Land for the Education of Scouts or HALE Scouts Act - Requires the conveyance of specified National Forest System land in the Ouachita National Forest in Oklahoma to the Indian Nations Council, Inc., of the Boy Scouts of America. 
+	</summary>
+</bill>

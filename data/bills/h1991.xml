@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="1991" updated="2011-06-03T06:27:13-04:00">
+	<state datetime="2011-05-25">REFERRED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="short" as="introduced">Cocopah Lands Act</title>
+		<title type="official" as="introduced">To direct the Secretary of the Interior to take lands in Yuma County, Arizona, into trust as part of the reservation of the Cocopah Tribe of Arizona, and for other purposes.</title>
+	</titles>
+	<sponsor id="400162"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Referred to the House Committee on Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Native Americans"/>
+		<term name="Arizona"/>
+		<term name="Federal-Indian relations"/>
+		<term name="Gambling"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="Land transfers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

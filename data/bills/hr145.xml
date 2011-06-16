@@ -1,0 +1,37 @@
+<bill session="112" type="hr" number="145" updated="2011-03-08T06:16:45-05:00">
+	<state datetime="2011-03-03">REFERRED</state>
+	<status><introduced datetime="2011-03-03"/></status>
+
+	<introduced datetime="2011-03-03"/>
+	<titles>
+		<title type="official" as="introduced">Calling on the Government of Pakistan to release Raymond Davis.</title>
+	</titles>
+	<sponsor id="400343"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-03"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Asia"/>
+		<term name="Detention of persons"/>
+		<term name="Diplomacy, foreign officials, Americans abroad"/>
+		<term name="Foreign aid and international relief"/>
+		<term name="Pakistan"/>
+		<term name="Sanctions"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

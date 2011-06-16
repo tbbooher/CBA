@@ -1,0 +1,38 @@
+<bill session="112" type="sr" number="200" updated="2011-06-03T06:22:33-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">A resolution recognizing the significance of the designation of the month of May as Asian/Pacific American Heritage Month.</title>
+	</titles>
+	<sponsor id="300001"/>
+	<cosponsors>
+		<cosponsor id="300056" joined="2011-05-26"/>
+		<cosponsor id="300082" joined="2011-05-26"/>
+		<cosponsor id="300076" joined="2011-05-26"/>
+		<cosponsor id="300043" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the Committee on the Judiciary.</text><reference label="text of measure as introduced" ref="CR S3451"/></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Civil rights and liberties, minority issues"/>
+		<term name="Asia"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="Congressional tributes"/>
+		<term name="Racial and ethnic relations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

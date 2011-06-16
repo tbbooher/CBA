@@ -1,0 +1,42 @@
+<bill session="112" type="s" number="887" updated="2011-05-18T06:19:27-04:00">
+	<state datetime="2011-05-04">INTRODUCED</state>
+	<status><introduced datetime="2011-05-04"/></status>
+
+	<introduced datetime="2011-05-04"/>
+	<titles>
+		<title type="short" as="introduced">CDBG Public Services Flexibility Act of 2011</title>
+		<title type="official" as="introduced">A bill to increase the portion of community block grants that may be used to provide public services, and for other purposes.</title>
+	</titles>
+	<sponsor id="300078"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-04"><text>Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBK" name="Senate Banking, Housing, and Urban Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Child care and development"/>
+		<term name="Crime prevention"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Education programs funding"/>
+		<term name="Employment and training programs"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Housing and community development funding"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Poverty and welfare assistance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

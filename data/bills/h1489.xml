@@ -1,0 +1,59 @@
+<bill session="112" type="h" number="1489" updated="2011-06-04T06:16:32-04:00">
+	<state datetime="2011-04-12">REFERRED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="short" as="introduced">Return to Prudent Banking Act of 2011</title>
+		<title type="official" as="introduced">To repeal certain provisions of the Gramm-Leach-Bliley Act and revive the separation between commercial banking and the securities business, in the manner provided in the Banking Act of 1933, the so-called &quot;Glass-Steagall Act&quot;, and for other purposes.</title>
+	</titles>
+	<sponsor id="400211"/>
+	<cosponsors>
+		<cosponsor id="400017" joined="2011-05-31"/>
+		<cosponsor id="412382" joined="2011-06-03"/>
+		<cosponsor id="400080" joined="2011-05-02"/>
+		<cosponsor id="400436" joined="2011-05-11"/>
+		<cosponsor id="400209" joined="2011-04-12"/>
+		<cosponsor id="400422" joined="2011-05-25"/>
+		<cosponsor id="412327" joined="2011-05-25"/>
+		<cosponsor id="400378" joined="2011-05-23"/>
+		<cosponsor id="400198" joined="2011-05-04"/>
+		<cosponsor id="400093" joined="2011-05-31"/>
+		<cosponsor id="400283" joined="2011-04-12"/>
+		<cosponsor id="400409" joined="2011-05-23"/>
+		<cosponsor id="412315" joined="2011-05-26"/>
+		<cosponsor id="400262" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Financial Institutions and Consumer Credit.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Financial Institutions and Consumer Credit" activity="Referral" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Administrative remedies"/>
+		<term name="Banking and financial institutions regulation"/>
+		<term name="Corporate finance and management"/>
+		<term name="Department of the Treasury"/>
+		<term name="Federal Reserve System"/>
+		<term name="Federal appellate courts"/>
+		<term name="Federal district courts"/>
+		<term name="Financial services and investments"/>
+		<term name="Securities"/>
+		<term name="Supreme Court"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="568" updated="2011-03-23T06:19:13-04:00">
+	<state datetime="2011-03-14">INTRODUCED</state>
+	<status><introduced datetime="2011-03-14"/></status>
+
+	<introduced datetime="2011-03-14"/>
+	<titles>
+		<title type="short" as="introduced">Strengthening Community Safety Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish a pilot grant program for first responder agencies that experience an extraordinary financial burden resulting from the deployment of employees.</title>
+	</titles>
+	<sponsor id="300080"/>
+	<cosponsors>
+		<cosponsor id="300026" joined="2011-03-14"/>
+		<cosponsor id="300065" joined="2011-03-14"/>
+		<cosponsor id="412244" joined="2011-03-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-14"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Appropriations"/>
+		<term name="Emergency medical services and trauma care"/>
+		<term name="Fires"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Law enforcement officers"/>
+		<term name="Motor carriers"/>
+		<term name="National Guard and reserves"/>
+		<term name="State and local finance"/>
+		<term name="Terrorism"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

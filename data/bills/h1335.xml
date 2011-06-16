@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="1335" updated="2011-04-15T06:17:24-04:00">
+	<state datetime="2011-04-01">REFERRED</state>
+	<status><introduced datetime="2011-04-01"/></status>
+
+	<introduced datetime="2011-04-01"/>
+	<titles>
+		<title type="official" as="introduced">To revise the boundaries of the Gettysburg National Military Park to include the Gettysburg Train Station, and for other purposes.</title>
+	</titles>
+	<sponsor id="400321"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-01"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-07"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Conflicts and wars"/>
+		<term name="Historic sites and heritage areas"/>
+		<term name="Land transfers"/>
+		<term name="Military history"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="Pennsylvania"/>
+		<term name="Property rights"/>
+		<term name="Railroads"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

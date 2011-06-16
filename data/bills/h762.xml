@@ -1,0 +1,51 @@
+<bill session="112" type="h" number="762" updated="2011-04-05T06:12:58-04:00">
+	<state datetime="2011-02-17">REFERRED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Public Housing Reinvestment and Tenant Protection Act of 2011</title>
+		<title type="short" as="introduced">Choice Neighborhoods Initiative Act of 2011</title>
+		<title type="short" as="introduced">Public Housing One-for-One Replacement and Tenant Protection Act of 2011</title>
+		<title type="short" as="introduced">Public Housing Preservation and Rehabilitation Act of 2011</title>
+		<title type="short" as="introduced">Together We Care Act of 2011</title>
+		<title type="official" as="introduced">To transform neighborhoods of extreme poverty by revitalizing distressed housing, to reform public housing demolition and disposition rules to require one for one replacement and tenant protections, to provide public housing agencies with additional resources and flexibility to preserve public housing units, and to create a pilot program to train public housing residents to provide home-based health services.</title>
+	</titles>
+	<sponsor id="400422"/>
+	<cosponsors>
+		<cosponsor id="400416" joined="2011-02-17"/>
+		<cosponsor id="400140" joined="2011-02-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-04-04"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Allied health services"/>
+		<term name="Consumer affairs"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Government trust funds"/>
+		<term name="Home and outpatient care"/>
+		<term name="Housing and community development funding"/>
+		<term name="Housing for the elderly and disabled"/>
+		<term name="Income tax credits"/>
+		<term name="Medical education"/>
+		<term name="Property rights"/>
+		<term name="Public housing"/>
+		<term name="Residential rehabilitation and home repair"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

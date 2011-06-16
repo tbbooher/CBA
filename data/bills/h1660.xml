@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1660" updated="2011-05-20T06:16:09-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Faster Access and Shorter Transaction Time for Checks Act of 2011</title>
+		<title type="short" as="introduced">FASTT Checks Act</title>
+		<title type="official" as="introduced">To amend the Expedited Funds Availability Act, to adjust dollar limits on check hold policies, and for other purposes.</title>
+	</titles>
+	<sponsor id="412254"/>
+	<cosponsors>
+		<cosponsor id="412259" joined="2011-04-15"/>
+		<cosponsor id="412412" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Financial Institutions and Consumer Credit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Financial Institutions and Consumer Credit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Bank accounts, deposits, capital"/>
+		<term name="Banking and financial institutions regulation"/>
+		<term name="Consumer affairs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

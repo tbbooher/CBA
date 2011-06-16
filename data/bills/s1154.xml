@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1154" updated="2011-06-14T06:29:55-04:00">
+	<state datetime="2011-06-07">INTRODUCED</state>
+	<status><introduced datetime="2011-06-07"/></status>
+
+	<introduced datetime="2011-06-07"/>
+	<titles>
+		<title type="short" as="introduced">Honoring Promises to Service-Disabled Veterans Act of 2011</title>
+		<title type="short" as="introduced">Honoring Promises to Service-Disabled Veterans Act of 2011</title>
+		<title type="official" as="introduced">A bill to require transparency for Executive departments in meeting the Government-wide goals for contracting with small business concerns owned and controlled by service-disabled veterans, and for other purposes.</title>
+	</titles>
+	<sponsor id="300005"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-07"><text>Read twice and referred to the Committee on Small Business and Entrepreneurship.</text><reference label="text of measure as introduced" ref="CR S3552"/></action>
+	</actions>
+	<committees>
+		<committee code="SSSB" name="Senate Small Business and Entrepreneurship" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

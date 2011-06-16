@@ -1,0 +1,51 @@
+<bill session="112" type="h" number="1892" updated="2011-06-04T06:35:25-04:00">
+	<state datetime="2011-05-26">REPORTED</state>
+	<status><calendar datetime="2011-05-26" /></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Intelligence Authorization Act for Fiscal Year 2012</title>
+		<title type="official" as="introduced">To authorize appropriations for fiscal year 2012 for intelligence and intelligence-related activities of the United States Government, the Community Management Account, and the Central Intelligence Agency Retirement and Disability System, and for other purposes.</title>
+	</titles>
+	<sponsor id="400342"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on Intelligence (Permanent Select).</text></action>
+		<action datetime="2011-05-26"><committee name="House Committee on Intelligence (Permanent Select)"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-05-26"  state="REPORTED"><committee name="House Committee on Intelligence (Permanent Select)"/><text>Ordered to be Reported (Amended) by Voice Vote.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="HLIG" name="House Intelligence (Permanent Select)" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="754" />
+		<bill relation="unknown" session="112" type="s" number="719" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Central Intelligence Agency (CIA)"/>
+		<term name="Coast guard"/>
+		<term name="Congressional oversight"/>
+		<term name="Defense spending"/>
+		<term name="Department of Defense"/>
+		<term name="Department of Energy"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Department of Justice"/>
+		<term name="Department of State"/>
+		<term name="Department of the Treasury"/>
+		<term name="Director of National Intelligence"/>
+		<term name="Drug Enforcement Administration (DEA)"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal Bureau of Investigation (FBI)"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

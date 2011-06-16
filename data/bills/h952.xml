@@ -1,0 +1,45 @@
+<bill session="112" type="h" number="952" updated="2011-03-31T06:17:52-04:00">
+	<state datetime="2011-03-08">REFERRED</state>
+	<status><introduced datetime="2011-03-08"/></status>
+
+	<introduced datetime="2011-03-08"/>
+	<titles>
+		<title type="short" as="introduced">Energy Critical Elements Renewal Act of 2011</title>
+		<title type="official" as="introduced">To develop an energy critical elements program, to amend the National Materials and Minerals Policy, Research and Development Act of 1980, and for other purposes.</title>
+	</titles>
+	<sponsor id="400280"/>
+	<cosponsors>
+		<cosponsor id="400185" joined="2011-03-10"/>
+		<cosponsor id="400184" joined="2011-03-10"/>
+		<cosponsor id="400024" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-08"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+		<action datetime="2011-03-09"><committee name="House Committee on Science, Space, and Technology"/><text>Referred to the Subcommittee on Energy and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Energy and Environment" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Energy research"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Metals"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Solid waste and recycling"/>
+		<term name="Technology transfer and commercialization"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

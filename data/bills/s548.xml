@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="548" updated="2011-03-22T06:17:36-04:00">
+	<state datetime="2011-03-10">INTRODUCED</state>
+	<status><introduced datetime="2011-03-10"/></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="short" as="introduced">Effective Interrogation of Unprivileged Enemy Belligerents Act</title>
+		<title type="official" as="introduced">A bill to provide for the effective interrogation of unprivileged enemy belligerents and for other purposes.</title>
+	</titles>
+	<sponsor id="300021"/>
+	<cosponsors>
+		<cosponsor id="300071" joined="2011-03-10"/>
+		<cosponsor id="400054" joined="2011-03-10"/>
+		<cosponsor id="412493" joined="2011-03-10"/>
+		<cosponsor id="300047" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Read twice and referred to the Select Committee on Intelligence.</text></action>
+	</actions>
+	<committees>
+		<committee code="SLIN" name="Senate Intelligence (Select)" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Congressional oversight"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Detention of persons"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

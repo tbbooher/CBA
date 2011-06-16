@@ -1,0 +1,98 @@
+<bill session="112" type="h" number="1425" updated="2011-06-14T06:15:29-04:00">
+	<state datetime="2011-05-11">REPORTED</state>
+	<status><calendar datetime="2011-05-11" /></status>
+
+	<introduced datetime="2011-04-07"/>
+	<titles>
+		<title type="short" as="introduced">Creating Jobs Through Small Business Innovation Act of 2011</title>
+		<title type="official" as="introduced">To reauthorize and improve the SBIR and STTR programs, and for other purposes.</title>
+	</titles>
+	<sponsor id="412457"/>
+	<cosponsors>
+		<cosponsor id="400017" joined="2011-05-23"/>
+		<cosponsor id="412469" joined="2011-05-23"/>
+		<cosponsor id="400027" joined="2011-04-13"/>
+		<cosponsor id="400158" joined="2011-04-07"/>
+		<cosponsor id="400209" joined="2011-06-13"/>
+		<cosponsor id="400076" joined="2011-04-15"/>
+		<cosponsor id="400246" joined="2011-05-10"/>
+		<cosponsor id="412398" joined="2011-04-07"/>
+		<cosponsor id="412440" joined="2011-05-05"/>
+		<cosponsor id="412405" joined="2011-05-23"/>
+		<cosponsor id="400165" joined="2011-04-07"/>
+		<cosponsor id="412402" joined="2011-05-05"/>
+		<cosponsor id="400630" joined="2011-04-12"/>
+		<cosponsor id="412454" joined="2011-05-10"/>
+		<cosponsor id="400071" joined="2011-05-12"/>
+		<cosponsor id="412231" joined="2011-04-07"/>
+		<cosponsor id="400204" joined="2011-04-07"/>
+		<cosponsor id="412293" joined="2011-05-05"/>
+		<cosponsor id="412290" joined="2011-05-23"/>
+		<cosponsor id="412413" joined="2011-05-02"/>
+		<cosponsor id="412432" joined="2011-04-07"/>
+		<cosponsor id="400437" joined="2011-04-07"/>
+		<cosponsor id="412474" joined="2011-05-23"/>
+		<cosponsor id="412424" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-07"><text>Referred to the Committee on Science, Space, and Technology, and in addition to the Committees on Small Business, and Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-07"><text>Referred to House Science, Space, and Technology</text></action>
+		<action datetime="2011-04-07"><text>Referred to House Small Business</text></action>
+		<action datetime="2011-04-07"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-04-08"><committee name="House Science, Space, and Technology"/><text>Referred to the Subcommittee on Technology and Innovation.</text></action>
+		<action datetime="2011-04-13"><committee name="House Science, Space, and Technology" subcommittee="Technology and Innovation"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-04-13"><committee name="House Science, Space, and Technology" subcommittee="Technology and Innovation"/><text>Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.</text></action>
+		<action datetime="2011-05-03T13:46:00-04:00"><text>RE-REFERRAL OF H.R. 1425 - Mr. Hall(TX) asked unanimous consent the H.R. 1425 be re-referred to the Committee on Small Business, and in addition, to the Committees on Science, Space, and Technology and Armed Services. Agreed to without objection.</text></action>
+		<action datetime="2011-05-03"><text>Rereferred to the Committee on Small Business, and in addition to the Committees on Science, Space, and Technology, and Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Small Business</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Science, Space, and Technology</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-05-04"><committee name="House Science, Space, and Technology"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-05-04"  state="REPORTED"><committee name="House Science, Space, and Technology"/><text>Ordered to be Reported (Amended) by Voice Vote.</text></calendar>
+		<action datetime="2011-05-11"><committee name="House Small Business"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-05-11" ><committee name="House Small Business"/><text>Ordered to be Reported (Amended).</text></calendar>
+		<action datetime="2011-05-24"><committee name="House Armed Services"/><text>Referred to the Subcommittee on Emerging Threats and Capabilities.</text></action>
+		<action datetime="2011-05-26T15:01:00-04:00"><text>Reported (Amended) by the Committee on Science, Space, and Technology. H. Rept. 112-90, Part I.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, Re-referral, Markup, Reporting" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Technology and Innovation" activity="Referral, Markup, Reporting" />
+		<committee code="HSSM" name="House Small Business" activity="Referral, Re-referral, Markup, In Committee" />
+		<committee code="HSAS" name="House Armed Services" activity="Referral, Re-referral, In Committee" />
+		<committee code="" name="House Armed Services" subcommittee="Emerging Threats and Capabilities" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="493" />
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Accounting and auditing"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Advisory bodies"/>
+		<term name="Business investment and capital"/>
+		<term name="Congressional oversight"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government information and archives"/>
+		<term name="Government investigations"/>
+		<term name="Higher education"/>
+		<term name="Military procurement, research, weapons development"/>
+		<term name="Minority and disadvantaged businesses"/>
+		<term name="Product development and innovation"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Small Business Administration"/>
+		<term name="Small business"/>
+		<term name="Teaching, teachers, curricula"/>
+		<term name="Technology transfer and commercialization"/>
+		<term name="Women in business"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/7/2011--Introduced.
+Creating Jobs Through Small Business Innovation Act of 2011 - Amends the Small Business Act with respect to the Small Business Innovation Research (SBIR) and Small Business Technology Transfer (STTR) programs to extend funding and revise provisions, including those concerning award levels, qualifications for program participation, acquisition preferences, collaborations, the Department of Defense (DOD) commercialization readiness program, and participation by small businesses with substantial investment from multiple venture operating companies, hedge funds, or private equity firms. Provides for: (1) an Interagency SBIR/STTR Policy Committee; (2) program oversight and evaluation; (3) SBIR and STTR program data collection and public and government databases; (4) funding for SBIR and STTR administrative, oversight, and contract processing costs; (5) a study concerning venture capital operating company, hedge fund, and private equity firm involvement; (6) measures for reducing vulnerability of SBIR and STTR programs to fraud, waste, and abuse; (7) revised program paperwork requirements; (8) a report on SBIR and STTR program goals; and (9) competitive selection procedures for SBIR and STTR programs.
+
+	</summary>
+</bill>

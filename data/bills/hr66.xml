@@ -1,0 +1,39 @@
+<bill session="112" type="hr" number="66" updated="2011-03-03T06:10:46-05:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="official" as="introduced">Supporting the establishment and full funding of a staff exchange program between the House of Representatives and the Parliament of Ukraine, the Verkhovna Rada, as soon as possible.</title>
+	</titles>
+	<sponsor id="400211"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+		<action datetime="2011-03-01"><committee name="House Committee on Foreign Affairs"/><text>Referred to the Subcommittee on Europe and Eurasia.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Foreign Affairs" subcommittee="Europe and Eurasia" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Europe"/>
+		<term name="House of Representatives"/>
+		<term name="International exchange and broadcasting"/>
+		<term name="Ukraine"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+Supports the establishment and full funding of a staff exchange program between the U.S. House of Representatives and the Parliament of Ukraine, the Verkhovna Rada, as soon as possible.
+
+	</summary>
+</bill>

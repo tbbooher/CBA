@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1205" updated="2011-03-30T06:24:10-04:00">
+	<state datetime="2011-03-17">REFERRED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Federal Real Property Disposal Enhancement Act of 2011</title>
+		<title type="official" as="introduced">To amend title 40, United States Code, to enhance authorities with regard to the disposal of real property, and for other purposes.</title>
+	</titles>
+	<sponsor id="412331"/>
+	<cosponsors>
+		<cosponsor id="400090" joined="2011-03-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Congressional oversight"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Government information and archives"/>
+		<term name="Land transfers"/>
+		<term name="Solid waste and recycling"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

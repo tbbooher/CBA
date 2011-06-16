@@ -1,0 +1,33 @@
+<bill session="112" type="h" number="2114" updated="2011-06-14T06:30:13-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">Reducing the Size of the Federal Government Through Attrition Act of 2011</title>
+		<title type="official" as="introduced">To reduce the size of the Federal workforce through attrition, and for other purposes.</title>
+	</titles>
+	<sponsor id="400196"/>
+	<cosponsors>
+		<cosponsor id="412270" joined="2011-06-03"/>
+		<cosponsor id="412411" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,47 @@
+<bill session="112" type="s" number="987" updated="2011-06-01T06:25:55-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Arbitration Fairness Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend title 9 of the United States Code with respect to arbitration.</title>
+	</titles>
+	<sponsor id="412378"/>
+	<cosponsors>
+		<cosponsor id="412325" joined="2011-05-12"/>
+		<cosponsor id="300065" joined="2011-05-12"/>
+		<cosponsor id="400413" joined="2011-05-12"/>
+		<cosponsor id="400050" joined="2011-05-12"/>
+		<cosponsor id="412490" joined="2011-05-12"/>
+		<cosponsor id="300011" joined="2011-05-12"/>
+		<cosponsor id="412246" joined="2011-05-12"/>
+		<cosponsor id="300060" joined="2011-05-12"/>
+		<cosponsor id="300038" joined="2011-05-12"/>
+		<cosponsor id="412247" joined="2011-05-12"/>
+		<cosponsor id="300051" joined="2011-05-12"/>
+		<cosponsor id="300100" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1873" />
+	</relatedbills>
+	<subjects>
+		<term name="Law"/>
+		<term name="Alternative dispute resolution, mediation, arbitration"/>
+		<term name="Consumer affairs"/>
+		<term name="Contracts and agency"/>
+		<term name="Labor-management relations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

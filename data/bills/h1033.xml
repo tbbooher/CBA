@@ -1,0 +1,35 @@
+<bill session="112" type="h" number="1033" updated="2011-03-30T06:16:56-04:00">
+	<state datetime="2011-03-11">REFERRED</state>
+	<status><introduced datetime="2011-03-11"/></status>
+
+	<introduced datetime="2011-03-11"/>
+	<titles>
+		<title type="short" as="introduced">Indigent Funeral Expense Reimbursement Act of 2011</title>
+		<title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to allow a credit for unreimbursed funeral expenses with respect to a deceased indigent individual.</title>
+	</titles>
+	<sponsor id="412252"/>
+	<cosponsors>
+		<cosponsor id="400260" joined="2011-03-29"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-11"><text>Sponsor introductory remarks on measure. (CR E460)</text></action>
+		<action datetime="2011-03-11"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Income tax credits"/>
+		<term name="Poverty and welfare assistance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

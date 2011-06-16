@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="918" updated="2011-05-24T06:30:33-04:00">
+	<state datetime="2011-05-09">INTRODUCED</state>
+	<status><introduced datetime="2011-05-09"/></status>
+
+	<introduced datetime="2011-05-09"/>
+	<titles>
+		<title type="short" as="introduced">Surface Transportation Safety Act of 2011</title>
+		<title type="official" as="introduced">A bill to direct the Secretary of Transportation to carry out programs and activities to improve highway safety.</title>
+	</titles>
+	<sponsor id="300005"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-09"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="825" />
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Transportation"/>
+		<term name="Fires"/>
+		<term name="Government information and archives"/>
+		<term name="Railroads"/>
+		<term name="Roads and highways"/>
+		<term name="Rural conditions and development"/>
+		<term name="Transportation employees"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

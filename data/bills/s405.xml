@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="405" updated="2011-03-10T06:22:06-05:00">
+	<state datetime="2011-02-17">INTRODUCED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Gulf Stream Protection Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Outer Continental Shelf Lands Act to provide a requirement for certain lessees, and for other purposes.</title>
+	</titles>
+	<sponsor id="300078"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Sponsor introductory remarks on measure. (CR S907)</text></action>
+		<action datetime="2011-02-17"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text><reference label="text of measure as introduced" ref="CR S907-908"/></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Bahamas"/>
+		<term name="Caribbean area"/>
+		<term name="Cuba"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Florida"/>
+		<term name="Gulf of Mexico"/>
+		<term name="Latin America"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine pollution"/>
+		<term name="Mexico"/>
+		<term name="Oil and gas"/>
+		<term name="Pollution liability"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

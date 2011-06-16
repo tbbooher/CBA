@@ -1,0 +1,40 @@
+<bill session="112" type="s" number="589" updated="2011-03-24T06:15:16-04:00">
+	<state datetime="2011-03-15">INTRODUCED</state>
+	<status><introduced datetime="2011-03-15"/></status>
+
+	<introduced datetime="2011-03-15"/>
+	<titles>
+		<title type="short" as="introduced">Faster Action Safety Team Emergency Response Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide for an expedited response to emergencies related to oil or gas production or storage.</title>
+	</titles>
+	<sponsor id="412246"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Accidents"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Labor"/>
+		<term name="Emergency communications systems"/>
+		<term name="Emergency medical services and trauma care"/>
+		<term name="Government information and archives"/>
+		<term name="Oil and gas"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

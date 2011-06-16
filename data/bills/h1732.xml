@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="1732" updated="2011-05-26T06:16:23-04:00">
+	<state datetime="2011-05-04">REFERRED</state>
+	<status><introduced datetime="2011-05-04"/></status>
+
+	<introduced datetime="2011-05-04"/>
+	<titles>
+		<title type="short" as="introduced">Innovative Technologies Investment Incentive Act of 2011</title>
+		<title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to allow a credit for equity investments in high technology and biotechnology small business concerns developing innovative technologies that stimulate private sector job growth.</title>
+	</titles>
+	<sponsor id="400415"/>
+	<cosponsors>
+		<cosponsor id="412382" joined="2011-05-04"/>
+		<cosponsor id="412308" joined="2011-05-04"/>
+		<cosponsor id="400259" joined="2011-05-04"/>
+		<cosponsor id="400647" joined="2011-05-04"/>
+		<cosponsor id="412186" joined="2011-05-25"/>
+		<cosponsor id="400349" joined="2011-05-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-04"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Advanced technology and technological innovations"/>
+		<term name="Financial services and investments"/>
+		<term name="Health technology, devices, supplies"/>
+		<term name="Income tax credits"/>
+		<term name="Securities"/>
+		<term name="Small business"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

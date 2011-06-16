@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="295" updated="2011-05-13T06:11:40-04:00">
+	<state datetime="2011-01-12">REFERRED</state>
+	<status><introduced datetime="2011-01-12"/></status>
+
+	<introduced datetime="2011-01-12"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Hydrographic Services Improvement Act of 1998 to authorize funds to acquire hydrographic data and provide hydrographic services specific to the Arctic for safe navigation, delineating the United States extended continental shelf, and the monitoring and description of coastal changes.</title>
+	</titles>
+	<sponsor id="400440"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-12"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-01-26"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on Fisheries, Wildlife, Oceans, and Insular Affairs.</text></action>
+		<action datetime="2011-05-12"><committee name="House Committee on Natural Resources" subcommittee="Fisheries, Wildlife, Oceans, and Insular Affairs"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Fisheries, Wildlife, Oceans, and Insular Affairs" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Arctic Ocean"/>
+		<term name="Department of Commerce"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Hydrology and hydrography"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Navigation, waterways, harbors"/>
+		<term name="Public contracts and procurement"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/12/2011--Introduced.
+Amends the Hydrographic Services Improvement Act of 1998 to authorize appropriations to the Administrator of the National Oceanic and Atmospheric Administration (NOAA) for FY2012-FY2013 for use to acquire: (1) hydrographic data, provide hydrographic services, and conduct coastal change analyses necessary to ensure safe navigation, and to improve the management of coastal change in the Arctic; and (2) hydrographic data and provide hydrographic services in the Arctic necessary to delineate the U.S. extended continental shelf. 
+	</summary>
+</bill>

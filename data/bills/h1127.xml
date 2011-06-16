@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="1127" updated="2011-05-03T06:14:47-04:00">
+	<state datetime="2011-03-16">REFERRED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">Children's Sports Athletic Equipment Safety Act</title>
+		<title type="official" as="introduced">To encourage and ensure the use of safe football helmets and for other purposes.</title>
+	</titles>
+	<sponsor id="400309"/>
+	<cosponsors>
+		<cosponsor id="400426" joined="2011-03-16"/>
+		<cosponsor id="400321" joined="2011-03-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+		<action datetime="2011-03-28"><committee name="House Committee on Energy and Commerce"/><text>Referred to the Subcommittee on Commerce, Manufacturing, and Trade.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Commerce, Manufacturing, and Trade" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="601" />
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Child health"/>
+		<term name="Child safety and welfare"/>
+		<term name="Consumer Product Safety Commission"/>
+		<term name="Federal Trade Commission (FTC)"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Marketing and advertising"/>
+		<term name="Product safety and quality"/>
+		<term name="School athletics"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

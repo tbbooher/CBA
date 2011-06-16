@@ -1,0 +1,32 @@
+<bill session="112" type="s" number="1150" updated="2011-06-14T06:29:10-04:00">
+	<state datetime="2011-06-07">INTRODUCED</state>
+	<status><introduced datetime="2011-06-07"/></status>
+
+	<introduced datetime="2011-06-07"/>
+	<titles>
+		<title type="short" as="introduced">Susquehanna Gateway National Heritage Area Act</title>
+		<title type="official" as="introduced">A bill to establish the Susquehanna Gateway National Heritage Area in the State of Pennsylvania, and for other purposes.</title>
+	</titles>
+	<sponsor id="412246"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-07"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

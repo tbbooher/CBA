@@ -1,0 +1,76 @@
+<bill session="112" type="h" number="1749" updated="2011-06-04T06:18:19-04:00">
+	<state datetime="2011-05-05">REFERRED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Reciprocal Market Access Act of 2011</title>
+		<title type="official" as="introduced">To enhance reciprocal market access for United States domestic producers in the negotiating process of bilateral, regional, and multilateral trade agreements.</title>
+	</titles>
+	<sponsor id="400378"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-05-05"/>
+		<cosponsor id="400352" joined="2011-05-05"/>
+		<cosponsor id="400661" joined="2011-05-05"/>
+		<cosponsor id="400133" joined="2011-05-05"/>
+		<cosponsor id="412319" joined="2011-05-05"/>
+		<cosponsor id="400227" joined="2011-05-05"/>
+		<cosponsor id="412199" joined="2011-05-05"/>
+		<cosponsor id="400103" joined="2011-05-05"/>
+		<cosponsor id="400110" joined="2011-05-05"/>
+		<cosponsor id="400160" joined="2011-05-05"/>
+		<cosponsor id="412382" joined="2011-05-05"/>
+		<cosponsor id="400436" joined="2011-05-05"/>
+		<cosponsor id="400162" joined="2011-05-05"/>
+		<cosponsor id="412307" joined="2011-05-05"/>
+		<cosponsor id="412221" joined="2011-05-05"/>
+		<cosponsor id="400209" joined="2011-05-05"/>
+		<cosponsor id="400195" joined="2011-05-05"/>
+		<cosponsor id="400178" joined="2011-05-05"/>
+		<cosponsor id="400170" joined="2011-05-05"/>
+		<cosponsor id="400211" joined="2011-05-05"/>
+		<cosponsor id="400074" joined="2011-05-05"/>
+		<cosponsor id="400266" joined="2011-05-05"/>
+		<cosponsor id="400198" joined="2011-05-05"/>
+		<cosponsor id="400063" joined="2011-05-05"/>
+		<cosponsor id="412228" joined="2011-05-05"/>
+		<cosponsor id="400630" joined="2011-05-05"/>
+		<cosponsor id="400641" joined="2011-05-05"/>
+		<cosponsor id="400274" joined="2011-05-05"/>
+		<cosponsor id="412386" joined="2011-05-05"/>
+		<cosponsor id="400240" joined="2011-05-05"/>
+		<cosponsor id="400301" joined="2011-05-05"/>
+		<cosponsor id="412208" joined="2011-05-05"/>
+		<cosponsor id="400216" joined="2011-05-05"/>
+		<cosponsor id="400233" joined="2011-06-03"/>
+		<cosponsor id="400100" joined="2011-05-05"/>
+		<cosponsor id="400278" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Sponsor introductory remarks on measure. (CR E822-823)</text></action>
+		<action datetime="2011-05-05"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Foreign trade and international finance"/>
+		<term name="Administrative remedies"/>
+		<term name="Congressional oversight"/>
+		<term name="Free trade and trade barriers"/>
+		<term name="Government investigations"/>
+		<term name="Office of the U.S. Trade Representative"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="Tariffs"/>
+		<term name="Trade agreements and negotiations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

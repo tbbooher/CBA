@@ -1,0 +1,53 @@
+<bill session="112" type="h" number="1803" updated="2011-06-04T06:18:44-04:00">
+	<state datetime="2011-05-10">REFERRED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="short" as="introduced">Jason's Law</title>
+		<title type="official" as="introduced">To amend the Safe, Accountable, Flexible, Efficient Transportation Equity Act: A Legacy for Users to improve truck parking facilities.</title>
+	</titles>
+	<sponsor id="412319"/>
+	<cosponsors>
+		<cosponsor id="412253" joined="2011-06-01"/>
+		<cosponsor id="400627" joined="2011-05-26"/>
+		<cosponsor id="400006" joined="2011-06-02"/>
+		<cosponsor id="400133" joined="2011-05-31"/>
+		<cosponsor id="412303" joined="2011-05-10"/>
+		<cosponsor id="400048" joined="2011-06-02"/>
+		<cosponsor id="400289" joined="2011-05-24"/>
+		<cosponsor id="400195" joined="2011-05-24"/>
+		<cosponsor id="400251" joined="2011-05-24"/>
+		<cosponsor id="400295" joined="2011-06-03"/>
+		<cosponsor id="400440" joined="2011-06-01"/>
+		<cosponsor id="400274" joined="2011-05-24"/>
+		<cosponsor id="400310" joined="2011-05-31"/>
+		<cosponsor id="412208" joined="2011-06-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-05-11"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Air quality"/>
+		<term name="Motor carriers"/>
+		<term name="Motor vehicles"/>
+		<term name="Roads and highways"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

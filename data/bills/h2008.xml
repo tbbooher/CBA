@@ -1,0 +1,48 @@
+<bill session="112" type="h" number="2008" updated="2011-06-14T06:19:05-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Keeping Politics Out of Federal Contracting Act of 2011</title>
+		<title type="official" as="introduced">To amend title 41, United States Code, to prohibit inserting politics into the Federal acquisition process by prohibiting the submission of political contribution information as a condition of receiving a Federal contract.</title>
+	</titles>
+	<sponsor id="400196"/>
+	<cosponsors>
+		<cosponsor id="412464" joined="2011-05-26"/>
+		<cosponsor id="400077" joined="2011-05-26"/>
+		<cosponsor id="412411" joined="2011-05-26"/>
+		<cosponsor id="412473" joined="2011-05-26"/>
+		<cosponsor id="412419" joined="2011-06-01"/>
+		<cosponsor id="412457" joined="2011-05-31"/>
+		<cosponsor id="412438" joined="2011-05-26"/>
+		<cosponsor id="400158" joined="2011-05-26"/>
+		<cosponsor id="400644" joined="2011-05-26"/>
+		<cosponsor id="412213" joined="2011-05-26"/>
+		<cosponsor id="412454" joined="2011-06-13"/>
+		<cosponsor id="412465" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="1100" />
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Government information and archives"/>
+		<term name="Political advertising"/>
+		<term name="Political parties and affiliation"/>
+		<term name="Public contracts and procurement"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

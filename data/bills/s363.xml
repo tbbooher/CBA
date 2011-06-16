@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="363" updated="2011-05-10T06:12:24-04:00">
+	<state datetime="2011-05-05">REPORTED</state>
+	<status><calendar datetime="2011-05-05" /></status>
+
+	<introduced datetime="2011-02-16"/>
+	<titles>
+		<title type="official" as="introduced">A bill to authorize the Secretary of Commerce to convey property of the National Oceanic and Atmospheric Administration to the City of Pascagoula, Mississippi, and for other purposes.</title>
+	</titles>
+	<sponsor id="400432"/>
+	<cosponsors>
+		<cosponsor id="300023" joined="2011-02-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-16"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+		<calendar datetime="2011-05-05"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported without amendment favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Department of Commerce"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Land transfers"/>
+		<term name="Mississippi"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/16/2011--Introduced.
+Authorizes the Secretary of Commerce to convey specified property under the administrative jurisdiction of the National Oceanic and Atmospheric Administration (NOAA) to the city of Pascagoula, Mississippi, provided that the United States receives consideration of at least the fair market value of the property or rights conveyed. Specifies acceptable forms of property, cash, and in-kind consideration. Allows the Secretary to grant or convey a right of way or easement to the city.
+
+	</summary>
+</bill>

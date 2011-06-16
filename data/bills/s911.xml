@@ -1,0 +1,40 @@
+<bill session="112" type="s" number="911" updated="2011-06-09T06:14:47-04:00">
+	<state datetime="2011-06-08">REPORTED</state>
+	<status><calendar datetime="2011-06-08" /></status>
+
+	<introduced datetime="2011-05-09"/>
+	<titles>
+		<title type="short" as="introduced">SPECTRUM Act</title>
+		<title type="short" as="introduced">Strengthening Public-safety and Enhancing Communications Through Reform, Utilization, and Modernization Act</title>
+		<title type="official" as="introduced">A bill to establish the sense of Congress that Congress should enact, and the President should sign, bipartisan legislation to strengthen public safety and to enhance wireless communications.</title>
+	</titles>
+	<sponsor id="300084"/>
+	<cosponsors>
+		<cosponsor id="300054" joined="2011-05-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-09"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+		<calendar datetime="2011-06-08"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Science, technology, communications"/>
+		<term name="Emergency communications systems"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Telephone and wireless communication"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/9/2011--Introduced.
+Strengthening Public-safety and Enhancing Communications Through Reform, Utilization, and Modernization Act or the SPECTRUM Act - Expresses the sense of Congress that Congress should enact, and the President should sign, bipartisan legislation to strengthen public safety and to enhance wireless communications by: (1) providing sufficient wireless spectrum and resources to build a nationwide interoperable wireless public safety broadband network, (2) encouraging more effective spectrum use, (3) promoting voluntary market mechanisms for optimal spectrum allocation, (4) reforming the federal government's spectrum management practices, and (5) engaging in research and development of emerging wireless technologies.
+
+	</summary>
+</bill>

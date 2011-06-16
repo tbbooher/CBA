@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="799" updated="2011-05-02T06:15:54-04:00">
+	<state datetime="2011-04-12">INTRODUCED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="short" as="introduced">Commercial Privacy Bill of Rights Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish a regulatory framework for the comprehensive protection of personal data for individuals under the aegis of the Federal Trade Commission, and for other purposes.</title>
+	</titles>
+	<sponsor id="300060"/>
+	<cosponsors>
+		<cosponsor id="300071" joined="2011-04-12"/>
+		<cosponsor id="412242" joined="2011-04-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Business records"/>
+		<term name="Civil actions and liability"/>
+		<term name="Consumer affairs"/>
+		<term name="Consumer credit"/>
+		<term name="Federal Trade Commission (FTC)"/>
+		<term name="Right of privacy"/>
+		<term name="Telephone and wireless communication"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

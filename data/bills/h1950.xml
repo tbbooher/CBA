@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="1950" updated="2011-06-09T06:17:59-04:00">
+	<state datetime="2011-05-23">REFERRED</state>
+	<status><introduced datetime="2011-05-23"/></status>
+
+	<introduced datetime="2011-05-23"/>
+	<titles>
+		<title type="official" as="introduced">To enact title 54, United States Code, &quot;National Park System&quot;, as positive law.</title>
+	</titles>
+	<sponsor id="400381"/>
+	<cosponsors>
+		<cosponsor id="400080" joined="2011-05-23"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-23"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Parks, recreation areas, trails"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

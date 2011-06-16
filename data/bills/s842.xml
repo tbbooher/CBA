@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="842" updated="2011-05-10T06:27:12-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Military Spouse Employment Programs Evaluation Act</title>
+		<title type="official" as="introduced">A bill to require reports by the Comptroller General on Department of Defense military spouse employment programs, and for other purposes.</title>
+	</titles>
+	<sponsor id="412246"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Armed Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSAS" name="Senate Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Afghanistan"/>
+		<term name="Asia"/>
+		<term name="Congressional oversight"/>
+		<term name="Employment and training programs"/>
+		<term name="Middle East"/>
+		<term name="Military operations and strategy"/>
+		<term name="Military personnel and dependents"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

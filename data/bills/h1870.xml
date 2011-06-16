@@ -1,0 +1,115 @@
+<bill session="112" type="h" number="1870" updated="2011-06-04T06:33:40-04:00">
+	<state datetime="2011-05-12">REFERRED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Increase American Energy Production Now Act of 2011</title>
+		<title type="short" as="introduced">Gulf Coast Restoration Act</title>
+		<title type="short" as="introduced">Offshore Oil and Gas Worker Whistleblower Protection Act of 2011</title>
+		<title type="short" as="introduced">Oil Pollution Research and Development Program Reauthorization Act of 2011</title>
+		<title type="short" as="introduced">Oil Spill Accountability and Environmental Protection Act of 2011</title>
+		<title type="short" as="introduced">Outer Continental Shelf Lands Act Amendments of 2011</title>
+		<title type="short" as="introduced">Study of Ways To Improve the Accuracy of the Collection of Federal Oil, Condensate, and Natural Gas Royalties Act of 2011</title>
+		<title type="official" as="introduced">To safely increase domestic oil and gas production, and for other purposes.</title>
+	</titles>
+	<sponsor id="412272"/>
+	<cosponsors>
+		<cosponsor id="400253" joined="2011-05-12"/>
+		<cosponsor id="400031" joined="2011-05-12"/>
+		<cosponsor id="400124" joined="2011-05-12"/>
+		<cosponsor id="400425" joined="2011-05-12"/>
+		<cosponsor id="400233" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Referred to the Committee on Natural Resources, and in addition to the Committees on Science, Space, and Technology, Energy and Commerce, Transportation and Infrastructure, and Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Science, Space, and Technology</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Education and the Workforce</text></action>
+		<action datetime="2011-05-13"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Coast Guard and Maritime Transportation.</text></action>
+		<action datetime="2011-05-13"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Railroads, Pipelines, and Hazardous Materials.</text></action>
+		<action datetime="2011-05-13"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Water Resources and Environment.</text></action>
+		<action datetime="2011-05-24"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on Energy and Mineral Resources.</text></action>
+		<action datetime="2011-05-26"><committee name="House Science, Space, and Technology"/><text>Referred to the Subcommittee on Energy and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Energy and Mineral Resources" activity="Referral" />
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Energy and Environment" activity="Referral" />
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Coast Guard and Maritime Transportation" activity="Referral" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Railroads, Pipelines, and Hazardous Materials" activity="Referral" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Water Resources and Environment" activity="Referral" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Accidents"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Administrative remedies"/>
+		<term name="Advanced technology and technological innovations"/>
+		<term name="Advisory bodies"/>
+		<term name="Alaska"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Aquatic ecology"/>
+		<term name="Business records"/>
+		<term name="Buy American requirements"/>
+		<term name="Coast guard"/>
+		<term name="Department of Defense"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Department of Transportation"/>
+		<term name="Department of the Interior"/>
+		<term name="Employment discrimination and employee rights"/>
+		<term name="Energy research"/>
+		<term name="Energy revenues and royalties"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental health"/>
+		<term name="Environmental technology"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Government information and archives"/>
+		<term name="Government investigations"/>
+		<term name="Government trust funds"/>
+		<term name="Great Lakes"/>
+		<term name="Gulf of Mexico"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="Intergovernmental relations"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Judicial review and appeals"/>
+		<term name="Labor-management relations"/>
+		<term name="Licensing and registrations"/>
+		<term name="Mammals"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine and inland water transportation"/>
+		<term name="Marine pollution"/>
+		<term name="Military readiness and strategic materials"/>
+		<term name="Oil and gas"/>
+		<term name="Pipelines"/>
+		<term name="Pollution liability"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="State and local government operations"/>
+		<term name="Technology assessment"/>
+		<term name="User charges and fees"/>
+		<term name="Water quality"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

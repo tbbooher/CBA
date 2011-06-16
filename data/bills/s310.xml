@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="310" updated="2011-03-04T06:18:32-05:00">
+	<state datetime="2011-02-08">INTRODUCED</state>
+	<status><introduced datetime="2011-02-08"/></status>
+
+	<introduced datetime="2011-02-08"/>
+	<titles>
+		<title type="short" as="introduced">Ending Unemployment Payments to Jobless Millionaires Act of 2011</title>
+		<title type="official" as="introduced">A bill to end unemployment payments to jobless millionaires.</title>
+	</titles>
+	<sponsor id="400576"/>
+	<cosponsors>
+		<cosponsor id="400412" joined="2011-02-08"/>
+		<cosponsor id="300080" joined="2011-03-03"/>
+		<cosponsor id="412244" joined="2011-02-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-08"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="569" />
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Unemployment"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

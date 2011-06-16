@@ -1,0 +1,45 @@
+<bill session="112" type="h" number="2020" updated="2011-06-14T06:28:57-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Preservation of Access to Osteoporosis Testing for Medicare Beneficiaries Act of 2011</title>
+		<title type="official" as="introduced">To amend title XVIII of the Social Security Act to improve access to, and utilization of, bone mass measurement benefits under the Medicare part B program by extending the minimum payment amount for bone mass measurement under such program through 2013.</title>
+	</titles>
+	<sponsor id="400052"/>
+	<cosponsors>
+		<cosponsor id="400367" joined="2011-05-26"/>
+		<cosponsor id="400659" joined="2011-05-26"/>
+		<cosponsor id="400160" joined="2011-05-26"/>
+		<cosponsor id="400333" joined="2011-05-26"/>
+		<cosponsor id="400647" joined="2011-05-26"/>
+		<cosponsor id="400288" joined="2011-05-26"/>
+		<cosponsor id="400024" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-26"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-05-26"><text>Referred to House Ways and Means</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="1096" />
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Health care coverage and access"/>
+		<term name="Medical tests and diagnostic methods"/>
+		<term name="Medicare"/>
+		<term name="Musculoskeletal and skin diseases"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

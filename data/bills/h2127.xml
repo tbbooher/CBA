@@ -1,0 +1,36 @@
+<bill session="112" type="h" number="2127" updated="2011-06-14T06:32:52-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">Nationally Enhancing the Wellbeing of Babies through Outreach and Research Now Act</title>
+		<title type="short" as="introduced">NEWBORN Act</title>
+		<title type="official" as="introduced">To authorize funding for the creation and implementation of infant mortality pilot programs in standard metropolitan statistical areas with high rates of infant mortality, and for other purposes.</title>
+	</titles>
+	<sponsor id="412236"/>
+	<cosponsors>
+		<cosponsor id="400080" joined="2011-06-03"/>
+		<cosponsor id="400295" joined="2011-06-03"/>
+		<cosponsor id="400347" joined="2011-06-03"/>
+		<cosponsor id="400259" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,42 @@
+<bill session="112" type="s" number="767" updated="2011-04-15T06:28:50-04:00">
+	<state datetime="2011-04-07">INTRODUCED</state>
+	<status><introduced datetime="2011-04-07"/></status>
+
+	<introduced datetime="2011-04-07"/>
+	<titles>
+		<title type="short" as="introduced">Every Student Counts Act</title>
+		<title type="official" as="introduced">A bill to improve the calculation of, the reporting of, and the accountability for, secondary school graduation rates.</title>
+	</titles>
+	<sponsor id="300051"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-07"><text>Sponsor introductory remarks on measure. (CR S2277-2278)</text></action>
+		<action datetime="2011-04-07"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text><reference label="text of measure as introduced" ref="CR S2278-2281"/></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1419" />
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Education of the disadvantaged"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Government information and archives"/>
+		<term name="Literacy and language arts"/>
+		<term name="Minority education"/>
+		<term name="Special education"/>
+		<term name="Women's education"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

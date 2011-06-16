@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="1088" updated="2011-03-24T06:18:38-04:00">
+	<state datetime="2011-03-15">REFERRED</state>
+	<status><introduced datetime="2011-03-15"/></status>
+
+	<introduced datetime="2011-03-15"/>
+	<titles>
+		<title type="short" as="introduced">Reduction of Irresponsible MRA Growth Act</title>
+		<title type="short" as="introduced">TRIM Growth Act</title>
+		<title type="official" as="introduced">To prohibit any increase in the amount established for the Members' Representational Allowance during a period of high unemployment and public debt.</title>
+	</titles>
+	<sponsor id="412218"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Referred to the House Committee on House Administration.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHA" name="House Administration" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Congressional oversight"/>
+		<term name="House of Representatives"/>
+		<term name="Members of Congress"/>
+		<term name="Unemployment"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

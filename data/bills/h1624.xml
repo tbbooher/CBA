@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="1624" updated="2011-05-19T06:11:17-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Public Utility Regulatory Policies Act of 1978 to establish uniform national standards for the interconnection of certain small power production facilities.</title>
+	</titles>
+	<sponsor id="412293"/>
+	<cosponsors>
+		<cosponsor id="400193" joined="2011-04-15"/>
+		<cosponsor id="412319" joined="2011-04-15"/>
+		<cosponsor id="412281" joined="2011-04-15"/>
+		<cosponsor id="412308" joined="2011-04-15"/>
+		<cosponsor id="400162" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+		<action datetime="2011-04-25"><committee name="House Committee on Energy and Commerce"/><text>Referred to the Subcommittee on Energy and Power.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Energy and Power" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Consumer affairs"/>
+		<term name="Department of Energy"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Federal Energy Regulatory Commission (FERC)"/>
+		<term name="Public utilities and utility rates"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

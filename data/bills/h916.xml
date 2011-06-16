@@ -1,0 +1,50 @@
+<bill session="112" type="h" number="916" updated="2011-04-06T06:13:33-04:00">
+	<state datetime="2011-03-03">REFERRED</state>
+	<status><introduced datetime="2011-03-03"/></status>
+
+	<introduced datetime="2011-03-03"/>
+	<titles>
+		<title type="short" as="introduced">Continuing Chemical Facilities Antiterrorism Security Act of 2011</title>
+		<title type="official" as="introduced">To extend the chemical facility security program of the Department of Homeland Security, and for other purposes.</title>
+	</titles>
+	<sponsor id="400648"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-03"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committee on Homeland Security, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-03"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-03-03"><text>Referred to House Homeland Security</text></action>
+		<action datetime="2011-03-10"><committee name="House Homeland Security"/><text>Referred to the Subcommittee on Cybersecurity, Infrastructure Protection, and Security Technologies.</text></action>
+		<action datetime="2011-03-11"><committee name="House Energy and Commerce"/><text>Referred to the Subcommittee on Environment and the Economy.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Environment and the Economy" activity="Referral" />
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Cybersecurity, Infrastructure Protection, and Security Technologies" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="908" />
+		<bill relation="unknown" session="112" type="s" number="473" />
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Accidents"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Emergency planning and evacuation"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Industrial facilities"/>
+		<term name="Manufacturing"/>
+		<term name="Natural disasters"/>
+		<term name="Performance measurement"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

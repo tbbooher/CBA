@@ -1,0 +1,61 @@
+<bill session="112" type="h" number="1598" updated="2011-05-12T06:33:34-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Solar Opportunity and Local Access Rights Act</title>
+		<title type="official" as="introduced">To amend the Public Utility Regulatory Policies Act of 1978 to promote energy independence and self-sufficiency by providing for the use of net metering by certain small electric energy generation systems, and for other purposes.</title>
+	</titles>
+	<sponsor id="400065"/>
+	<cosponsors>
+		<cosponsor id="412293" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committees on Oversight and Government Reform, Financial Services, and Transportation and Infrastructure, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Oversight and Government Reform</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-04-18"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Economic Development, Public Buildings and Emergency Management.</text></action>
+		<action datetime="2011-05-02"><committee name="House Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Economic Development, Public Buildings and Emergency Management" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Building construction"/>
+		<term name="Department of Energy"/>
+		<term name="Department of Housing and Urban Development"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Energy research"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal Energy Regulatory Commission (FERC)"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Housing and community development funding"/>
+		<term name="Housing industry and standards"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Public utilities and utility rates"/>
+		<term name="Research and development"/>
+		<term name="Residential rehabilitation and home repair"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

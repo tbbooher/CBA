@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2138" updated="2011-06-14T06:28:01-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">Travel Trailer Residents' Health Registry Act</title>
+		<title type="official" as="introduced">To establish a health registry to ensure that certain individuals who may have been exposed to formaldehyde in a travel trailer have an opportunity to register for such registry and receive medical treatment for such exposure, and for other purposes.</title>
+	</titles>
+	<sponsor id="412432"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

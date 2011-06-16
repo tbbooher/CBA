@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="1911" updated="2011-06-08T06:11:06-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Protecting Veterans' Homes Act</title>
+		<title type="official" as="introduced">To amend the Servicemembers Civil Relief Act to permanently extend the period of protections for servicemembers against mortgage foreclosures, and for other purposes.</title>
+	</titles>
+	<sponsor id="412208"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-05-27"><committee name="House Committee on Veterans' Affairs"/><text>Referred to the Subcommittee on Economic Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Veterans' Affairs" subcommittee="Economic Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Housing finance and home ownership"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Veterans' loans, housing, homeless programs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

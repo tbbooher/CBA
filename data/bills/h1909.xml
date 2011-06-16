@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1909" updated="2011-06-08T06:27:51-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">FFSCC Charter Act of 2011</title>
+		<title type="official" as="introduced">To create a charter for Federal Financial Services and Credit Companies.</title>
+	</titles>
+	<sponsor id="400009"/>
+	<cosponsors>
+		<cosponsor id="400271" joined="2011-05-13"/>
+		<cosponsor id="412010" joined="2011-05-13"/>
+		<cosponsor id="412186" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on Financial Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Consumer affairs"/>
+		<term name="Consumer credit"/>
+		<term name="Federally chartered organizations"/>
+		<term name="Financial literacy"/>
+		<term name="Financial services and investments"/>
+		<term name="Government investigations"/>
+		<term name="Small business"/>
+		<term name="User charges and fees"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

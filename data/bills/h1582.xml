@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1582" updated="2011-05-19T06:11:02-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Commonsense Ozone Regulation Act</title>
+		<title type="official" as="introduced">To address the application of the national primary ambient air quality standard for ozone with respect to extreme nonattainment areas, and for other purposes.</title>
+	</titles>
+	<sponsor id="412190"/>
+	<cosponsors>
+		<cosponsor id="400297" joined="2011-04-15"/>
+		<cosponsor id="412403" joined="2011-04-15"/>
+		<cosponsor id="400196" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+		<action datetime="2011-04-25"><committee name="House Committee on Energy and Commerce"/><text>Referred to the Subcommittee on Energy and Power.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Energy and Power" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Advisory bodies"/>
+		<term name="Air quality"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental regulatory procedures"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

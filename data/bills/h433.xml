@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="433" updated="2011-02-26T06:10:55-05:00">
+	<state datetime="2011-01-25">REFERRED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Natomas Basin Flood Protection Improvements Act of 2011</title>
+		<title type="official" as="introduced">To authorize improvements to flood damage reduction facilities adjacent to the American and Sacramento Rivers near Sacramento, California, and for other purposes.</title>
+	</titles>
+	<sponsor id="400663"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-01-26"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Water Resources and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Water Resources and Environment" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Water resources development"/>
+		<term name="California"/>
+		<term name="Floods and storm protection"/>
+		<term name="Lakes and rivers"/>
+		<term name="Water resources funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

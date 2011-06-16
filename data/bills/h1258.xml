@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="1258" updated="2011-04-15T06:16:31-04:00">
+	<state datetime="2011-03-30">REFERRED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">Box Elder Utah Land Conveyance Act</title>
+		<title type="official" as="introduced">To provide for the conveyance of parcels of land to Mantua, Box Elder County, Utah.</title>
+	</titles>
+	<sponsor id="400029"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-04"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="683" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land transfers"/>
+		<term name="Utah"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/30/2011--Introduced.
+Box Elder Utah Land Conveyance Act - Directs the Secretary of Agriculture (USDA) to convey to the town of Mantua, Utah, all interest of the United States in and to parcels of National Forest System land in the Wasatch-Cache National Forest in Box Elder County, Utah, that are labeled as parcels A, B, and C on the map entitled &quot;Box Elder Utah Land Conveyance Act&quot; and dated July 14, 2008. Requires the town to use the land conveyed under this Act for public purposes. 
+	</summary>
+</bill>

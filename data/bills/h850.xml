@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="850" updated="2011-05-06T06:13:54-04:00">
+	<state datetime="2011-03-01">REFERRED</state>
+	<status><introduced datetime="2011-03-01"/></status>
+
+	<introduced datetime="2011-03-01"/>
+	<titles>
+		<title type="official" as="introduced">To facilitate a proposed project in the Lower St. Croix Wild and Scenic River, and for other purposes.</title>
+	</titles>
+	<sponsor id="412216"/>
+	<cosponsors>
+		<cosponsor id="412488" joined="2011-03-01"/>
+		<cosponsor id="400218" joined="2011-03-01"/>
+		<cosponsor id="412441" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-01"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-03-02"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Natural Resources" subcommittee="National Parks, Forests and Public Lands"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Lakes and rivers"/>
+		<term name="Minnesota"/>
+		<term name="Roads and highways"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+		<term name="Wisconsin"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/1/2011--Introduced.
+Deems consistent with the Wild and Scenic Rivers Act the construction of a four-lane highway bridge over the Lower St. Croix River, Minnesota and Wisconsin, in accordance with the Section 7 Evaluation issued by the National Park Service (NPS) in October 2005. 
+	</summary>
+</bill>

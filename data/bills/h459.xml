@@ -1,0 +1,196 @@
+<bill session="112" type="h" number="459" updated="2011-06-14T06:11:58-04:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">Federal Reserve Transparency Act of 2011</title>
+		<title type="official" as="introduced">To require a full audit of the Board of Governors of the Federal Reserve System and the Federal reserve banks by the Comptroller General of the United States before the end of 2012, and for other purposes.</title>
+	</titles>
+	<sponsor id="400311"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-06-02"/>
+		<cosponsor id="400224" joined="2011-04-05"/>
+		<cosponsor id="400086" joined="2011-03-15"/>
+		<cosponsor id="400279" joined="2011-01-26"/>
+		<cosponsor id="412284" joined="2011-03-30"/>
+		<cosponsor id="412388" joined="2011-01-26"/>
+		<cosponsor id="400627" joined="2011-02-08"/>
+		<cosponsor id="400387" joined="2011-05-03"/>
+		<cosponsor id="400640" joined="2011-01-26"/>
+		<cosponsor id="400144" joined="2011-01-26"/>
+		<cosponsor id="400206" joined="2011-03-10"/>
+		<cosponsor id="400006" joined="2011-01-26"/>
+		<cosponsor id="400068" joined="2011-02-08"/>
+		<cosponsor id="400017" joined="2011-01-26"/>
+		<cosponsor id="412271" joined="2011-01-26"/>
+		<cosponsor id="412429" joined="2011-05-03"/>
+		<cosponsor id="400147" joined="2011-01-26"/>
+		<cosponsor id="412218" joined="2011-01-26"/>
+		<cosponsor id="412419" joined="2011-05-05"/>
+		<cosponsor id="412469" joined="2011-02-15"/>
+		<cosponsor id="400277" joined="2011-01-26"/>
+		<cosponsor id="412483" joined="2011-02-08"/>
+		<cosponsor id="412309" joined="2011-01-26"/>
+		<cosponsor id="400659" joined="2011-01-26"/>
+		<cosponsor id="400227" joined="2011-01-26"/>
+		<cosponsor id="400335" joined="2011-01-26"/>
+		<cosponsor id="412453" joined="2011-03-01"/>
+		<cosponsor id="412252" joined="2011-01-26"/>
+		<cosponsor id="412438" joined="2011-02-08"/>
+		<cosponsor id="412487" joined="2011-01-26"/>
+		<cosponsor id="400057" joined="2011-01-26"/>
+		<cosponsor id="400343" joined="2011-01-26"/>
+		<cosponsor id="400381" joined="2011-01-26"/>
+		<cosponsor id="400142" joined="2011-04-14"/>
+		<cosponsor id="400027" joined="2011-03-29"/>
+		<cosponsor id="412211" joined="2011-05-03"/>
+		<cosponsor id="400407" joined="2011-05-03"/>
+		<cosponsor id="412308" joined="2011-03-29"/>
+		<cosponsor id="412317" joined="2011-01-26"/>
+		<cosponsor id="400158" joined="2011-04-05"/>
+		<cosponsor id="400134" joined="2011-03-30"/>
+		<cosponsor id="412216" joined="2011-04-06"/>
+		<cosponsor id="400115" joined="2011-02-08"/>
+		<cosponsor id="400080" joined="2011-03-31"/>
+		<cosponsor id="400436" joined="2011-01-26"/>
+		<cosponsor id="400376" joined="2011-01-26"/>
+		<cosponsor id="412409" joined="2011-02-08"/>
+		<cosponsor id="400346" joined="2011-05-23"/>
+		<cosponsor id="412464" joined="2011-02-08"/>
+		<cosponsor id="400209" joined="2011-01-26"/>
+		<cosponsor id="400089" joined="2011-05-02"/>
+		<cosponsor id="412481" joined="2011-02-08"/>
+		<cosponsor id="400013" joined="2011-02-28"/>
+		<cosponsor id="400400" joined="2011-03-04"/>
+		<cosponsor id="400137" joined="2011-01-26"/>
+		<cosponsor id="412393" joined="2011-01-26"/>
+		<cosponsor id="400439" joined="2011-01-26"/>
+		<cosponsor id="400404" joined="2011-02-15"/>
+		<cosponsor id="412270" joined="2011-01-26"/>
+		<cosponsor id="412446" joined="2011-03-29"/>
+		<cosponsor id="400411" joined="2011-05-23"/>
+		<cosponsor id="412449" joined="2011-05-03"/>
+		<cosponsor id="412314" joined="2011-01-26"/>
+		<cosponsor id="400234" joined="2011-03-02"/>
+		<cosponsor id="400342" joined="2011-03-17"/>
+		<cosponsor id="412294" joined="2011-03-29"/>
+		<cosponsor id="412437" joined="2011-01-26"/>
+		<cosponsor id="412190" joined="2011-05-23"/>
+		<cosponsor id="400441" joined="2011-04-12"/>
+		<cosponsor id="400211" joined="2011-01-26"/>
+		<cosponsor id="400643" joined="2011-03-29"/>
+		<cosponsor id="412416" joined="2011-01-26"/>
+		<cosponsor id="400267" joined="2011-01-26"/>
+		<cosponsor id="412472" joined="2011-04-15"/>
+		<cosponsor id="412405" joined="2011-04-05"/>
+		<cosponsor id="400633" joined="2011-02-08"/>
+		<cosponsor id="400207" joined="2011-02-28"/>
+		<cosponsor id="400154" joined="2011-03-01"/>
+		<cosponsor id="412484" joined="2011-05-23"/>
+		<cosponsor id="400266" joined="2011-03-29"/>
+		<cosponsor id="412265" joined="2011-04-11"/>
+		<cosponsor id="412479" joined="2011-02-08"/>
+		<cosponsor id="412196" joined="2011-02-08"/>
+		<cosponsor id="400244" joined="2011-01-26"/>
+		<cosponsor id="400005" joined="2011-06-13"/>
+		<cosponsor id="400388" joined="2011-03-29"/>
+		<cosponsor id="400221" joined="2011-03-17"/>
+		<cosponsor id="412256" joined="2011-05-04"/>
+		<cosponsor id="400440" joined="2011-01-26"/>
+		<cosponsor id="412213" joined="2011-02-11"/>
+		<cosponsor id="400077" joined="2011-05-10"/>
+		<cosponsor id="412217" joined="2011-01-26"/>
+		<cosponsor id="400176" joined="2011-04-15"/>
+		<cosponsor id="400145" joined="2011-01-26"/>
+		<cosponsor id="400318" joined="2011-01-26"/>
+		<cosponsor id="412422" joined="2011-06-02"/>
+		<cosponsor id="412482" joined="2011-03-30"/>
+		<cosponsor id="412434" joined="2011-03-11"/>
+		<cosponsor id="400018" joined="2011-01-26"/>
+		<cosponsor id="400116" joined="2011-02-08"/>
+		<cosponsor id="400260" joined="2011-02-18"/>
+		<cosponsor id="400032" joined="2011-01-26"/>
+		<cosponsor id="412231" joined="2011-02-16"/>
+		<cosponsor id="400406" joined="2011-05-25"/>
+		<cosponsor id="400274" joined="2011-03-17"/>
+		<cosponsor id="412428" joined="2011-03-29"/>
+		<cosponsor id="409888" joined="2011-05-23"/>
+		<cosponsor id="400651" joined="2011-01-26"/>
+		<cosponsor id="412290" joined="2011-01-26"/>
+		<cosponsor id="400052" joined="2011-01-26"/>
+		<cosponsor id="412411" joined="2011-01-26"/>
+		<cosponsor id="412406" joined="2011-05-02"/>
+		<cosponsor id="400365" joined="2011-02-11"/>
+		<cosponsor id="412315" joined="2011-03-10"/>
+		<cosponsor id="412486" joined="2011-03-29"/>
+		<cosponsor id="400636" joined="2011-05-23"/>
+		<cosponsor id="400433" joined="2011-02-28"/>
+		<cosponsor id="412250" joined="2011-01-26"/>
+		<cosponsor id="400654" joined="2011-01-26"/>
+		<cosponsor id="400288" joined="2011-01-26"/>
+		<cosponsor id="400285" joined="2011-04-01"/>
+		<cosponsor id="400055" joined="2011-01-26"/>
+		<cosponsor id="412426" joined="2011-05-10"/>
+		<cosponsor id="412473" joined="2011-03-29"/>
+		<cosponsor id="412295" joined="2011-01-26"/>
+		<cosponsor id="412392" joined="2011-03-10"/>
+		<cosponsor id="412423" joined="2011-04-05"/>
+		<cosponsor id="400345" joined="2011-02-08"/>
+		<cosponsor id="412480" joined="2011-01-26"/>
+		<cosponsor id="400373" joined="2011-04-12"/>
+		<cosponsor id="412447" joined="2011-04-15"/>
+		<cosponsor id="400437" joined="2011-05-04"/>
+		<cosponsor id="412465" joined="2011-05-12"/>
+		<cosponsor id="400321" joined="2011-04-15"/>
+		<cosponsor id="400157" joined="2011-02-15"/>
+		<cosponsor id="400341" joined="2011-05-10"/>
+		<cosponsor id="412489" joined="2011-03-10"/>
+		<cosponsor id="412011" joined="2011-01-26"/>
+		<cosponsor id="400100" joined="2011-03-15"/>
+		<cosponsor id="400010" joined="2011-01-26"/>
+		<cosponsor id="412474" joined="2011-02-08"/>
+		<cosponsor id="412191" joined="2011-01-26"/>
+		<cosponsor id="400622" joined="2011-02-15"/>
+		<cosponsor id="412414" joined="2011-02-11"/>
+		<cosponsor id="412399" joined="2011-02-08"/>
+		<cosponsor id="400392" joined="2011-06-13"/>
+		<cosponsor id="412401" joined="2011-04-06"/>
+		<cosponsor id="412255" joined="2011-01-26"/>
+		<cosponsor id="412468" joined="2011-03-04"/>
+		<cosponsor id="412485" joined="2011-03-15"/>
+		<cosponsor id="400417" joined="2011-04-01"/>
+		<cosponsor id="400252" joined="2011-03-17"/>
+		<cosponsor id="412292" joined="2011-02-08"/>
+		<cosponsor id="412436" joined="2011-05-11"/>
+		<cosponsor id="412424" joined="2011-02-17"/>
+		<cosponsor id="400235" joined="2011-01-26"/>
+		<cosponsor id="400656" joined="2011-01-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Sponsor introductory remarks on measure. (CR E128)</text></action>
+		<action datetime="2011-01-26"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="202" />
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Accounting and auditing"/>
+		<term name="Bank accounts, deposits, capital"/>
+		<term name="Congressional oversight"/>
+		<term name="Federal Reserve System"/>
+		<term name="Government investigations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+Federal Reserve Transparency Act of 2011 - Directs the Comptroller General to complete, before the end of 2012, an audit of the Board of Governors of the Federal Reserve System and of the federal reserve banks, followed by a detailed report to Congress. Repeals specified limitations on such an audit.
+
+	</summary>
+</bill>

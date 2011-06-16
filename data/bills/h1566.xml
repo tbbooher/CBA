@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1566" updated="2011-05-12T06:31:03-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Protecting Servicemembers from Mortgage Abuses Act of 2011</title>
+		<title type="official" as="introduced">To amend the Servicemembers Civil Relief Act to enhance protections for members of the uniformed services relating to mortgages, mortgage foreclosure, and eviction, and for other purposes.</title>
+	</titles>
+	<sponsor id="412214"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-04-14"/>
+		<cosponsor id="400274" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the Committee on Veterans' Affairs, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-14"><text>Referred to House Veterans' Affairs</text></action>
+		<action datetime="2011-04-14"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-04-29"><committee name="House Veterans' Affairs"/><text>Referred to the Subcommittee on Economic Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Veterans' Affairs" subcommittee="Economic Opportunity" activity="Referral" />
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="486" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Civil actions and liability"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Housing finance and home ownership"/>
+		<term name="Veterans' loans, housing, homeless programs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

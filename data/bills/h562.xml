@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="562" updated="2011-02-26T06:11:19-05:00">
+	<state datetime="2011-02-08">REFERRED</state>
+	<status><introduced datetime="2011-02-08"/></status>
+
+	<introduced datetime="2011-02-08"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Alaska Natural Gas Pipeline Act to improve the Alaska pipeline construction training program, and for other purposes.</title>
+	</titles>
+	<sponsor id="400440"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-08"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-02-09"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Railroads, Pipelines, and Hazardous Materials.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Railroads, Pipelines, and Hazardous Materials" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="104" />
+		<bill relation="identical" session="112" type="s" number="304" />
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Alaska"/>
+		<term name="Employment and training programs"/>
+		<term name="Oil and gas"/>
+		<term name="Pipelines"/>
+		<term name="Transportation programs funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

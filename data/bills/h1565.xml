@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1565" updated="2011-05-27T06:17:02-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="official" as="introduced">To amend title 23, United States Code, to incorporate regional transportation planning organizations into statewide transportation planning, and for other purposes.</title>
+	</titles>
+	<sponsor id="412214"/>
+	<cosponsors>
+		<cosponsor id="412317" joined="2011-05-26"/>
+		<cosponsor id="412454" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-04-15"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="625" />
+		<bill relation="unknown" session="112" type="s" number="625" />
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Land use and conservation"/>
+		<term name="Rural conditions and development"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

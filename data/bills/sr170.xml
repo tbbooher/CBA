@@ -1,0 +1,35 @@
+<bill session="112" type="sr" number="170" updated="2011-05-18T06:16:58-04:00">
+	<state datetime="2011-05-05">REFERRED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="official" as="introduced">A resolution honoring Thad Allen of the United States Coast Guard (Ret.) for his lifetime of selfless commitment and exemplary service to the United States.</title>
+	</titles>
+	<sponsor id="300023"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Sponsor introductory remarks on measure. (CR S2746)</text></action>
+		<action datetime="2011-05-05"><text>Referred to the Committee on Commerce, Science, and Transportation.</text><reference label="text of measure as introduced" ref="CR S2746"/></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Coast guard"/>
+		<term name="Congressional tributes"/>
+		<term name="Military personnel and dependents"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

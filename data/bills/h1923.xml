@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="1923" updated="2011-06-02T06:34:44-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Public Officials Accountability Act</title>
+		<title type="official" as="introduced">To amend title 18, United States Code, to prohibit public officials from engaging in undisclosed self-dealing.</title>
+	</titles>
+	<sponsor id="412331"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1468" />
+		<bill relation="unknown" session="112" type="h" number="1793" />
+		<bill relation="identical" session="112" type="h" number="1973" />
+		<bill relation="identical" session="112" type="s" number="995" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government ethics and transparency, public corruption"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

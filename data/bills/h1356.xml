@@ -1,0 +1,46 @@
+<bill session="112" type="h" number="1356" updated="2011-05-14T06:15:22-04:00">
+	<state datetime="2011-04-04">REFERRED</state>
+	<status><introduced datetime="2011-04-04"/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">Capital Access for Main Street Act of 2011</title>
+		<title type="official" as="introduced">To provide amortization authority in certain situations, for purposes of capital calculation under the Financial Institutions Examination Council's Consolidated Reports of Condition and Income.</title>
+	</titles>
+	<sponsor id="412192"/>
+	<cosponsors>
+		<cosponsor id="400290" joined="2011-05-05"/>
+		<cosponsor id="400279" joined="2011-05-13"/>
+		<cosponsor id="412271" joined="2011-04-04"/>
+		<cosponsor id="412405" joined="2011-04-04"/>
+		<cosponsor id="400116" joined="2011-05-05"/>
+		<cosponsor id="412411" joined="2011-05-03"/>
+		<cosponsor id="412406" joined="2011-04-04"/>
+		<cosponsor id="400184" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Financial Institutions and Consumer Credit.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Financial Institutions and Consumer Credit" activity="Referral" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Accounting and auditing"/>
+		<term name="Bank accounts, deposits, capital"/>
+		<term name="Housing finance and home ownership"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

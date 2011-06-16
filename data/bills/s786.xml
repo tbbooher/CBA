@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="786" updated="2011-04-28T06:17:10-04:00">
+	<state datetime="2011-04-12">INTRODUCED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend title 10, United States Code, to modify the appointment and grade of the Chief of the Army Medical Specialist Corps.</title>
+	</titles>
+	<sponsor id="300058"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Read twice and referred to the Committee on Armed Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSAS" name="Senate Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Military medicine"/>
+		<term name="Military personnel and dependents"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

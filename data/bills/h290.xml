@@ -1,0 +1,61 @@
+<bill session="112" type="h" number="290" updated="2011-05-27T06:11:48-04:00">
+	<state datetime="2011-05-25">REPORTED</state>
+	<status><calendar datetime="2011-05-25" /></status>
+
+	<introduced datetime="2011-01-12"/>
+	<titles>
+		<title type="short" as="introduced">War Memorial Protection Act</title>
+		<title type="official" as="introduced">To amend title 36, United States Code, to ensure that memorials commemorating the service of the United States Armed Forces may contain religious symbols, and for other purposes.</title>
+	</titles>
+	<sponsor id="412283"/>
+	<cosponsors>
+		<cosponsor id="400224" joined="2011-02-08"/>
+		<cosponsor id="400277" joined="2011-04-05"/>
+		<cosponsor id="400057" joined="2011-02-08"/>
+		<cosponsor id="412216" joined="2011-02-08"/>
+		<cosponsor id="400570" joined="2011-01-12"/>
+		<cosponsor id="400655" joined="2011-02-08"/>
+		<cosponsor id="412270" joined="2011-02-08"/>
+		<cosponsor id="400151" joined="2011-02-08"/>
+		<cosponsor id="412314" joined="2011-02-08"/>
+		<cosponsor id="400643" joined="2011-02-10"/>
+		<cosponsor id="412472" joined="2011-02-10"/>
+		<cosponsor id="412265" joined="2011-02-08"/>
+		<cosponsor id="400196" joined="2011-01-12"/>
+		<cosponsor id="412256" joined="2011-02-08"/>
+		<cosponsor id="400260" joined="2011-05-26"/>
+		<cosponsor id="412411" joined="2011-02-08"/>
+		<cosponsor id="400029" joined="2011-02-08"/>
+		<cosponsor id="412191" joined="2011-02-08"/>
+		<cosponsor id="412414" joined="2011-02-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-12"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-01-26"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Natural Resources" subcommittee="National Parks, Forests and Public Lands"/><text>Subcommittee Hearings Held.</text></action>
+		<action datetime="2011-05-25"><committee name="House Committee on Natural Resources"/><text>Subcommittee on National Parks, Forests and Public Lands Discharged.</text></action>
+		<action datetime="2011-05-25"><committee name="House Committee on Natural Resources"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-05-25"  state="REPORTED"><committee name="House Committee on Natural Resources"/><text>Ordered to be Reported by Unanimous Consent.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, Markup, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral, Hearings, Discharged" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Monuments and memorials"/>
+		<term name="Religion"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/12/2011--Introduced.
+War Memorial Protection Act - Permits religious symbols recognizing the religious background of members of the Armed Forces to be included as part of: (1) a military memorial that is established or acquired by the federal government; or (2) a military memorial not established by the government, but for which the American Battle Monuments Commission cooperated in establishing.
+
+	</summary>
+</bill>

@@ -1,0 +1,32 @@
+<bill session="112" type="s" number="682" updated="2011-04-06T06:24:50-04:00">
+	<state datetime="2011-03-30">INTRODUCED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="official" as="introduced">A bill to provide for reliquidation of certain entries of medium density fiberboard.</title>
+	</titles>
+	<sponsor id="412246"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Foreign trade and international finance"/>
+		<term name="Tariffs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

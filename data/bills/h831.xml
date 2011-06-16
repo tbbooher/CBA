@@ -1,0 +1,64 @@
+<bill session="112" type="h" number="831" updated="2011-06-03T06:13:12-04:00">
+	<state datetime="2011-02-28">REFERRED</state>
+	<status><introduced datetime="2011-02-28"/></status>
+
+	<introduced datetime="2011-02-28"/>
+	<titles>
+		<title type="official" as="introduced">To amend title XVIII of the Social Security Act to provide for treatment of clinical psychologists as physicians for purposes of furnishing clinical psychologist services under the Medicare Program.</title>
+	</titles>
+	<sponsor id="400360"/>
+	<cosponsors>
+		<cosponsor id="412253" joined="2011-04-12"/>
+		<cosponsor id="400290" joined="2011-04-15"/>
+		<cosponsor id="400041" joined="2011-05-02"/>
+		<cosponsor id="412319" joined="2011-02-28"/>
+		<cosponsor id="400230" joined="2011-05-02"/>
+		<cosponsor id="400280" joined="2011-04-07"/>
+		<cosponsor id="400048" joined="2011-03-16"/>
+		<cosponsor id="400227" joined="2011-02-28"/>
+		<cosponsor id="400311" joined="2011-02-28"/>
+		<cosponsor id="400257" joined="2011-03-31"/>
+		<cosponsor id="412211" joined="2011-06-02"/>
+		<cosponsor id="400263" joined="2011-02-28"/>
+		<cosponsor id="400436" joined="2011-04-15"/>
+		<cosponsor id="400209" joined="2011-03-16"/>
+		<cosponsor id="400295" joined="2011-03-16"/>
+		<cosponsor id="400647" joined="2011-05-03"/>
+		<cosponsor id="412379" joined="2011-02-28"/>
+		<cosponsor id="412236" joined="2011-04-12"/>
+		<cosponsor id="400093" joined="2011-03-11"/>
+		<cosponsor id="412306" joined="2011-05-10"/>
+		<cosponsor id="400440" joined="2011-05-10"/>
+		<cosponsor id="400042" joined="2011-05-10"/>
+		<cosponsor id="400216" joined="2011-02-28"/>
+		<cosponsor id="400262" joined="2011-03-16"/>
+		<cosponsor id="400321" joined="2011-04-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-28"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-02-28"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-02-28"><text>Referred to House Ways and Means</text></action>
+		<action datetime="2011-03-11"><committee name="House Energy and Commerce"/><text>Referred to the Subcommittee on Health.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Health" activity="Referral" />
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="483" />
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Health personnel"/>
+		<term name="Medicare"/>
+		<term name="Mental health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/28/2011--Introduced.
+Amends title XVIII (Medicare) of the Social Security Act to treat as a physician, for Medicare purposes, a clinical psychologist acting within the scope of a psychologist's license (or other state law authorization), but only with respect to the furnishing of clinical psychologists services which the psychologist is legally authorized to perform by the state. 
+	</summary>
+</bill>

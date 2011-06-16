@@ -1,0 +1,48 @@
+<bill session="112" type="s" number="999" updated="2011-06-03T06:28:38-04:00">
+	<state datetime="2011-05-16">INTRODUCED</state>
+	<status><introduced datetime="2011-05-16"/></status>
+
+	<introduced datetime="2011-05-16"/>
+	<titles>
+		<title type="short" as="introduced">Small System Safe Drinking Water Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Safe Drinking Water Act to prevent the enforcement of certain national primary drinking water regulations unless sufficient funding is available.</title>
+	</titles>
+	<sponsor id="300055"/>
+	<cosponsors>
+		<cosponsor id="400418" joined="2011-05-16"/>
+		<cosponsor id="300030" joined="2011-05-16"/>
+		<cosponsor id="412322" joined="2011-05-16"/>
+		<cosponsor id="400040" joined="2011-05-16"/>
+		<cosponsor id="300023" joined="2011-05-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-16"><text>Sponsor introductory remarks on measure. (CR S2993-2994)</text></action>
+		<action datetime="2011-05-16"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental regulatory procedures"/>
+		<term name="Environmental technology"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="State and local finance"/>
+		<term name="Technology transfer and commercialization"/>
+		<term name="Water quality"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

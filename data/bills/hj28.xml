@@ -1,0 +1,37 @@
+<bill session="112" type="hj" number="28" updated="2011-03-01T06:11:53-05:00">
+	<state datetime="2011-02-14">REFERRED</state>
+	<status><introduced datetime="2011-02-14"/></status>
+
+	<introduced datetime="2011-02-14"/>
+	<titles>
+		<title type="official" as="introduced">Proposing an amendment to the Constitution of the United States regarding the right to vote.</title>
+	</titles>
+	<sponsor id="400198"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-14"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-02-28"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Civil rights and liberties, minority issues"/>
+		<term name="Constitution and constitutional amendments"/>
+		<term name="Elections, voting, political campaign regulation"/>
+		<term name="Voting rights"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/14/2011--Introduced.
+Constitutional Amendment - Grants all U.S. citizens who are 18 years of age or older the right to vote in any public election held in the jurisdiction in which the citizen resides. Prohibits the United States, any state, or any other public or private person or entity from denying or abridging the right to vote, but allows regulations narrowly tailored to produce efficient and honest elections. Requires each state to: (1) administer public elections in the state in accordance with election performance standards established by Congress, and (2) provide any eligible voter the opportunity to register and vote on the day of any public election. 
+	</summary>
+</bill>

@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="1403" updated="2011-04-23T06:10:33-04:00">
+	<state datetime="2011-04-06">REFERRED</state>
+	<status><introduced datetime="2011-04-06"/></status>
+
+	<introduced datetime="2011-04-06"/>
+	<titles>
+		<title type="short" as="introduced">Point Peter Study Act</title>
+		<title type="official" as="introduced">To authorize the Secretary of the Interior to conduct a special resource study of Point Peter in St. Marys, Georgia, and for other purposes.</title>
+	</titles>
+	<sponsor id="400221"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-06"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-12"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Conflicts and wars"/>
+		<term name="Europe"/>
+		<term name="Georgia"/>
+		<term name="Government investigations"/>
+		<term name="Historic sites and heritage areas"/>
+		<term name="Military history"/>
+		<term name="United Kingdom"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1109" updated="2011-06-14T06:27:11-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">A bill to authorize the adjustment of status for immediate family members of individuals who served honorably in the Armed Forces of the United States during the Afghanistan and Iraq conflicts, and for other purposes.</title>
+	</titles>
+	<sponsor id="400272"/>
+	<cosponsors>
+		<cosponsor id="300056" joined="2011-05-26"/>
+		<cosponsor id="300065" joined="2011-05-26"/>
+		<cosponsor id="300082" joined="2011-05-26"/>
+		<cosponsor id="412330" joined="2011-05-26"/>
+		<cosponsor id="300038" joined="2011-05-26"/>
+		<cosponsor id="300087" joined="2011-05-26"/>
+		<cosponsor id="412223" joined="2011-05-26"/>
+		<cosponsor id="300001" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

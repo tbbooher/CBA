@@ -1,0 +1,52 @@
+<bill session="112" type="s" number="936" updated="2011-05-25T06:31:24-04:00">
+	<state datetime="2011-05-10">INTRODUCED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="short" as="introduced">American Infrastructure Investment Fund Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish the American Infrastructure Investment Fund and other activities to facilitate investments in infrastructure projects that significantly enhance the economic competitiveness of the United States by improving economic output, productivity, or competitive commercial advantage, and for other purposes.</title>
+	</titles>
+	<sponsor id="300084"/>
+	<cosponsors>
+		<cosponsor id="300064" joined="2011-05-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Advisory bodies"/>
+		<term name="Air quality"/>
+		<term name="Aviation and airports"/>
+		<term name="Climate change"/>
+		<term name="Competitiveness, trade promotion, trade deficits"/>
+		<term name="Department of Transportation"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Infrastructure development"/>
+		<term name="Marine and inland water transportation"/>
+		<term name="Navigation, waterways, harbors"/>
+		<term name="Pipelines"/>
+		<term name="Public transit"/>
+		<term name="Railroads"/>
+		<term name="Roads and highways"/>
+		<term name="Rural conditions and development"/>
+		<term name="Transportation programs funding"/>
+		<term name="Water quality"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

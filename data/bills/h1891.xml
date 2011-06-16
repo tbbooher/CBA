@@ -1,0 +1,67 @@
+<bill session="112" type="h" number="1891" updated="2011-05-25T06:18:29-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Setting New Priorities in Education Spending Act</title>
+		<title type="official" as="introduced">To repeal ineffective or unnecessary education programs in order to restore the focus of Federal programs on quality elementary and secondary education programs for disadvantaged students.</title>
+	</titles>
+	<sponsor id="412283"/>
+	<cosponsors>
+		<cosponsor id="400224" joined="2011-05-13"/>
+		<cosponsor id="412477" joined="2011-05-24"/>
+		<cosponsor id="412427" joined="2011-05-24"/>
+		<cosponsor id="400267" joined="2011-05-13"/>
+		<cosponsor id="412310" joined="2011-05-24"/>
+		<cosponsor id="412426" joined="2011-05-24"/>
+		<cosponsor id="412465" joined="2011-05-24"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Sponsor introductory remarks on measure. (CR H3284)</text></action>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on Education and the Workforce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Adult education and literacy"/>
+		<term name="Alaska Natives and Hawaiians"/>
+		<term name="Child health"/>
+		<term name="Domestic violence and child abuse"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Economic theory"/>
+		<term name="Education of the disadvantaged"/>
+		<term name="Education programs funding"/>
+		<term name="Educational facilities and institutions"/>
+		<term name="Educational technology and distance education"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Foreign language"/>
+		<term name="General education matters"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Libraries and archives"/>
+		<term name="Literacy and language arts"/>
+		<term name="Massachusetts"/>
+		<term name="Mental health"/>
+		<term name="Minority education"/>
+		<term name="Physical fitness and lifestyle"/>
+		<term name="Policy sciences"/>
+		<term name="Preschool education"/>
+		<term name="School administration"/>
+		<term name="Special education"/>
+		<term name="Teaching, teachers, curricula"/>
+		<term name="U.S. history"/>
+		<term name="Women's education"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

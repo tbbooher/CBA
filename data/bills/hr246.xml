@@ -1,0 +1,44 @@
+<bill session="112" type="hr" number="246" updated="2011-06-04T06:10:30-04:00">
+	<state datetime="2011-05-04">REFERRED</state>
+	<status><introduced datetime="2011-05-04"/></status>
+
+	<introduced datetime="2011-05-04"/>
+	<titles>
+		<title type="official" as="introduced">Supporting the goals and ideals of National Celiac Awareness Month, and for other purposes.</title>
+	</titles>
+	<sponsor id="400246"/>
+	<cosponsors>
+		<cosponsor id="400041" joined="2011-05-04"/>
+		<cosponsor id="400263" joined="2011-05-04"/>
+		<cosponsor id="400259" joined="2011-05-04"/>
+		<cosponsor id="400140" joined="2011-05-04"/>
+		<cosponsor id="400251" joined="2011-05-04"/>
+		<cosponsor id="400198" joined="2011-06-03"/>
+		<cosponsor id="400283" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-04"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="Digestive and metabolic diseases"/>
+		<term name="Immunology"/>
+		<term name="Medical research"/>
+		<term name="Medical tests and diagnostic methods"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/4/2011--Introduced.
+Expresses support for: (1) the goals and ideals of National Celiac Awareness Month, and (2) working toward an eventual cure for celiac disease through increased research and treatment. Recognizes: (1) that awareness of celiac disease will have a significant positive impact on the quality of life of people with that disease, and (2) the importance of improving diagnosis rates through increased education about the disease.
+
+	</summary>
+</bill>

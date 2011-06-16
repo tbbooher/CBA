@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="736" updated="2011-03-06T07:48:42-05:00">
+	<state datetime="2011-02-16">REFERRED</state>
+	<status><introduced datetime="2011-02-16"/></status>
+
+	<introduced datetime="2011-02-16"/>
+	<titles>
+		<title type="short" as="introduced">BABE RUTH Act of 2011</title>
+		<title type="short" as="introduced">Build America Bonds Extension for Rural and Urban Transportation and Highways Act of 2011</title>
+		<title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to extend the Build America Bond program, and for other purposes.</title>
+	</titles>
+	<sponsor id="412253"/>
+	<cosponsors>
+		<cosponsor id="400133" joined="2011-02-16"/>
+		<cosponsor id="400170" joined="2011-02-18"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-16"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="11" />
+		<bill relation="unknown" session="112" type="h" number="747" />
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Income tax credits"/>
+		<term name="Securities"/>
+		<term name="State and local finance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

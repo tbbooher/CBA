@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1028" updated="2011-06-07T06:16:18-04:00">
+	<state datetime="2011-05-19">INTRODUCED</state>
+	<status><introduced datetime="2011-05-19"/></status>
+
+	<introduced datetime="2011-05-19"/>
+	<titles>
+		<title type="short" as="introduced">Foreign-Held Debt Transparency and Threat Assessment Act</title>
+		<title type="official" as="introduced">A bill to increase transparency regarding debt instruments of the United States held by foreign governments, to assess the risks to the United States of such holdings, and for other purposes.</title>
+	</titles>
+	<sponsor id="300027"/>
+	<cosponsors>
+		<cosponsor id="300062" joined="2011-05-19"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-19"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Foreign trade and international finance"/>
+		<term name="Asia"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="China"/>
+		<term name="Congressional oversight"/>
+		<term name="Economic performance and conditions"/>
+		<term name="Foreign loans and debt"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

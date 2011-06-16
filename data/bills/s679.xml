@@ -1,0 +1,85 @@
+<bill session="112" type="s" number="679" updated="2011-06-14T06:22:08-04:00">
+	<state datetime="2011-04-13">REPORTED</state>
+	<status><calendar datetime="2011-04-13" /></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">Presidential Appointment Efficiency and Streamlining Act of 2011</title>
+		<title type="official" as="introduced">A bill to reduce the number of executive positions subject to Senate confirmation.</title>
+	</titles>
+	<sponsor id="300087"/>
+	<cosponsors>
+		<cosponsor id="300002" joined="2011-03-30"/>
+		<cosponsor id="300009" joined="2011-03-30"/>
+		<cosponsor id="300025" joined="2011-03-30"/>
+		<cosponsor id="300070" joined="2011-03-30"/>
+		<cosponsor id="412384" joined="2011-03-30"/>
+		<cosponsor id="300082" joined="2011-03-30"/>
+		<cosponsor id="300038" joined="2011-03-30"/>
+		<cosponsor id="300019" joined="2011-03-30"/>
+		<cosponsor id="412247" joined="2011-03-30"/>
+		<cosponsor id="300081" joined="2011-03-30"/>
+		<cosponsor id="412320" joined="2011-03-30"/>
+		<cosponsor id="300062" joined="2011-03-30"/>
+		<cosponsor id="412490" joined="2011-03-30"/>
+		<cosponsor id="300067" joined="2011-03-30"/>
+		<cosponsor id="300072" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Sponsor introductory remarks on measure. (CR S1987-1988)</text></action>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+		<calendar datetime="2011-04-13"  state="REPORTED"><text>Committee on Homeland Security and Governmental Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.</text></calendar>
+		<action datetime="2011-06-13"><text>Committee on Homeland Security and Governmental Affairs. Reported by Senator Lieberman with an amendment in the nature of a substitute. Without written report.</text></action>
+		<calendar under="General Orders" number="75" datetime="2011-06-13" calendar="Senate Legislative" ><text>Placed on Senate Legislative Calendar under General Orders. Calendar No. 75.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, Markup, Reporting" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Advisory bodies"/>
+		<term name="Africa"/>
+		<term name="Appalachian Regional Commission"/>
+		<term name="Congressional oversight"/>
+		<term name="Corporation for National and Community Service"/>
+		<term name="Department of Agriculture"/>
+		<term name="Department of Commerce"/>
+		<term name="Department of Defense"/>
+		<term name="Department of Education"/>
+		<term name="Department of Energy"/>
+		<term name="Department of Health and Human Services"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Department of Housing and Urban Development"/>
+		<term name="Department of Justice"/>
+		<term name="Department of Labor"/>
+		<term name="Department of State"/>
+		<term name="Department of Transportation"/>
+		<term name="Department of Veterans Affairs"/>
+		<term name="Department of the Treasury"/>
+		<term name="Executive Office of the President"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal officials"/>
+		<term name="Humanities programs funding"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="Literacy and language arts"/>
+		<term name="Mississippi River"/>
+		<term name="Multilateral development programs"/>
+		<term name="National Council on Disability"/>
+		<term name="National Foundation on the Arts and the Humanities"/>
+		<term name="National Science Foundation"/>
+		<term name="Office of Management and Budget (OMB)"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="Saint Lawrence Seaway"/>
+		<term name="U.S. Agency for International Development (USAID)"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/30/2011--Introduced.
+Presidential Appointment Efficiency and Streamlining Act of 2011 - Exempts certain presidential appointments to cabinet-level agencies, independent commissions, and boards in the executive branch from the requirement of Senate confirmation (advice and consent). Establishes the Working Group on Streamlining Paperwork for Executive Nominations to: (1) study the streamlining of paperwork required for executive nominations, and (2) conduct a review of the impact of background investigation requirements on the appointments process. 
+	</summary>
+</bill>

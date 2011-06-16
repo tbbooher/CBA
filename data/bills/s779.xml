@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="779" updated="2011-05-12T06:20:34-04:00">
+	<state datetime="2011-04-08">INTRODUCED</state>
+	<status><introduced datetime="2011-04-08"/></status>
+
+	<introduced datetime="2011-04-08"/>
+	<titles>
+		<title type="short" as="introduced">American Battlefield Protection Program Amendments Act of 2011</title>
+		<title type="official" as="introduced">A bill to authorize the acquisition and protection of nationally significant battlefields and associated sites of the Revolutionary War and the War of 1812 under the American Battlefield Protection Program.</title>
+	</titles>
+	<sponsor id="300087"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-08"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+		<action datetime="2011-05-11"><text>Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="Senate Energy and Natural Resources" subcommittee="National Parks" activity="Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Conflicts and wars"/>
+		<term name="Europe"/>
+		<term name="Historic sites and heritage areas"/>
+		<term name="Land transfers"/>
+		<term name="Land use and conservation"/>
+		<term name="Outdoor recreation"/>
+		<term name="U.S. history"/>
+		<term name="United Kingdom"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/8/2011--Introduced.
+American Battlefield Protection Program Amendments of 2011 - Amends the Omnibus Public Land Management Act of 2009 (the Act), with respect to the Battlefield Acquisition Grant Program, to: (1) expand the current definition of &quot;battlefield report&quot; to include the report entitled &quot;Report to Congress on the Historic Preservation of Revolutionary War and War of 1812 Sites in the United States&quot;; and (2) expand the Program to permit the acquisition not only of an &quot;interest in an eligible site,&quot; but also an &quot;eligible site.&quot; Requires acquisitions of lands or interests under the Act to be from willing sellers only. Requires the Secretary of the Interior to submit to Congress a report on activities carried out under this Act. 
+	</summary>
+</bill>

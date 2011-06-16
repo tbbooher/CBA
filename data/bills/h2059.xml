@@ -1,0 +1,31 @@
+<bill session="112" type="h" number="2059" updated="2011-06-14T06:25:53-04:00">
+	<state datetime="2011-05-31">REFERRED</state>
+	<status><introduced datetime="2011-05-31"/></status>
+
+	<introduced datetime="2011-05-31"/>
+	<titles>
+		<title type="official" as="introduced">To prohibit funding to the United Nations Population Fund.</title>
+	</titles>
+	<sponsor id="412457"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-31"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

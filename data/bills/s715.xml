@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="715" updated="2011-04-08T06:21:56-04:00">
+	<state datetime="2011-04-04">INTRODUCED</state>
+	<status><introduced datetime="2011-04-04"/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">Collinsville Renewable Energy Promotion Act</title>
+		<title type="official" as="introduced">A bill to reinstate and transfer certain hydroelectric licenses and extend the deadline for commencement of construction of certain hydroelectric projects.</title>
+	</titles>
+	<sponsor id="300067"/>
+	<cosponsors>
+		<cosponsor id="412490" joined="2011-04-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1353" />
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Connecticut"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Licensing and registrations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

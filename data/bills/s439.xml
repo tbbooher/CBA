@@ -1,0 +1,62 @@
+<bill session="112" type="s" number="439" updated="2011-03-12T06:21:30-05:00">
+	<state datetime="2011-03-02">INTRODUCED</state>
+	<status><introduced datetime="2011-03-02"/></status>
+
+	<introduced datetime="2011-03-02"/>
+	<titles>
+		<title type="short" as="introduced">Deficit Reduction and Budget Reform Act of 2011</title>
+		<title type="short" as="introduced">Legislative Line-Item Veto Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide for comprehensive budget reform in order to increase transparency and reduce the deficit.</title>
+	</titles>
+	<sponsor id="400546"/>
+	<cosponsors>
+		<cosponsor id="400222" joined="2011-03-02"/>
+		<cosponsor id="400325" joined="2011-03-02"/>
+		<cosponsor id="412320" joined="2011-03-02"/>
+		<cosponsor id="400432" joined="2011-03-07"/>
+		<cosponsor id="300055" joined="2011-03-02"/>
+		<cosponsor id="300030" joined="2011-03-02"/>
+		<cosponsor id="300021" joined="2011-03-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-02"><text>Read twice and referred to the Committee on the Budget.</text></action>
+		<action datetime="2011-03-10"><text>Sponsor introductory remarks on measure. (CR S1525-1527)</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBU" name="Senate Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Appropriations"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Budget process"/>
+		<term name="Congressional committees"/>
+		<term name="Congressional operations and organization"/>
+		<term name="Congressional oversight"/>
+		<term name="Corporate finance and management"/>
+		<term name="Economic performance and conditions"/>
+		<term name="Financial crises and stabilization"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Government trust funds"/>
+		<term name="Health care costs and insurance"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Income tax credits"/>
+		<term name="Income tax deductions"/>
+		<term name="Income tax exclusion"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Long-term, rehabilitative, and terminal care"/>
+		<term name="Medicare"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="Securities"/>
+		<term name="State and local finance"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

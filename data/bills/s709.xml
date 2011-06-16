@@ -1,0 +1,53 @@
+<bill session="112" type="s" number="709" updated="2011-04-08T06:21:26-04:00">
+	<state datetime="2011-03-31">INTRODUCED</state>
+	<status><introduced datetime="2011-03-31"/></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="short" as="introduced">Secure Chemical Facilities Act</title>
+		<title type="official" as="introduced">A bill to enhance the security of chemical facilities and for other purposes.</title>
+	</titles>
+	<sponsor id="300064"/>
+	<cosponsors>
+		<cosponsor id="400272" joined="2011-03-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Administrative remedies"/>
+		<term name="Civil actions and liability"/>
+		<term name="Congressional oversight"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Emergency planning and evacuation"/>
+		<term name="Employment discrimination and employee rights"/>
+		<term name="Evidence and witnesses"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Fires"/>
+		<term name="Government information and archives"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Higher education"/>
+		<term name="Homeland security"/>
+		<term name="Industrial facilities"/>
+		<term name="Performance measurement"/>
+		<term name="Personnel records"/>
+		<term name="Solid waste and recycling"/>
+		<term name="Terrorism"/>
+		<term name="Water quality"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,45 @@
+<bill session="112" type="h" number="1141" updated="2011-05-06T06:15:27-04:00">
+	<state datetime="2011-03-16">REFERRED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">Rota Cultural and Natural Resources Study Act</title>
+		<title type="official" as="introduced">To authorize the Secretary of the Interior to study the suitability and feasibility of designating prehistoric, historic, and limestone forest sites on Rota, Commonwealth of the Northern Mariana Islands, as a unit of the National Park System.</title>
+	</titles>
+	<sponsor id="412312"/>
+	<cosponsors>
+		<cosponsor id="400290" joined="2011-03-16"/>
+		<cosponsor id="400253" joined="2011-03-16"/>
+		<cosponsor id="400041" joined="2011-03-16"/>
+		<cosponsor id="400162" joined="2011-03-16"/>
+		<cosponsor id="412265" joined="2011-03-16"/>
+		<cosponsor id="400440" joined="2011-03-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Sponsor introductory remarks on measure. (CR E502)</text></action>
+		<action datetime="2011-03-16"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-03-18"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Natural Resources" subcommittee="National Parks, Forests and Public Lands"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Government investigations"/>
+		<term name="Northern Mariana Islands"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/16/2011--Introduced.
+Rota Cultural and Natural Resources Study Act - Directs the Secretary of the Interior to study the suitability and feasibility of designating prehistoric, historic, and limestone forest sites on the island of Rota, Commonwealth of the Northern Mariana Islands, as a unit of the National Park System and to consider management alternatives for Rota. 
+	</summary>
+</bill>

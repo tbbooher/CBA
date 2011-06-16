@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="678" updated="2011-04-05T06:23:21-04:00">
+	<state datetime="2011-03-30">INTRODUCED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">Economic Espionage Penalty Enhancement Act</title>
+		<title type="official" as="introduced">A bill to increase the penalties for economic espionage.</title>
+	</titles>
+	<sponsor id="300061"/>
+	<cosponsors>
+		<cosponsor id="412247" joined="2011-03-30"/>
+		<cosponsor id="412390" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Sponsor introductory remarks on measure. (CR S1985)</text></action>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on the Judiciary.</text><reference label="text of measure as introduced" ref="CR S1985"/></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Trade secrets and economic espionage"/>
+		<term name="U.S. Sentencing Commission"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

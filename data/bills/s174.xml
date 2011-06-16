@@ -1,0 +1,68 @@
+<bill session="112" type="s" number="174" updated="2011-03-06T07:56:16-05:00">
+	<state datetime="2011-01-25">INTRODUCED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Healthy Lifestyles and Prevention America Act</title>
+		<title type="short" as="introduced">HeLP America Act</title>
+		<title type="official" as="introduced">A bill to improve the health of Americans and reduce health care costs by reorienting the Nation's health care system toward prevention, wellness, and health promotion.</title>
+	</titles>
+	<sponsor id="300051"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Sponsor introductory remarks on measure. (CR S228-229)</text></action>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Finance.</text><reference label="text of measure as introduced" ref="CR S229-239"/></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Advisory bodies"/>
+		<term name="Child care and development"/>
+		<term name="Child health"/>
+		<term name="Commuting"/>
+		<term name="Department of Health and Human Services"/>
+		<term name="Disability and health-based discrimination"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Employee benefits and pensions"/>
+		<term name="Food assistance and relief"/>
+		<term name="Food industry and services"/>
+		<term name="Food supply, safety, and labeling"/>
+		<term name="Fruit and vegetables"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+		<term name="Government investigations"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Health promotion and preventive care"/>
+		<term name="Horticulture and plants"/>
+		<term name="Income tax credits"/>
+		<term name="Income tax deductions"/>
+		<term name="Marketing and advertising"/>
+		<term name="Medicaid"/>
+		<term name="Medical education"/>
+		<term name="Medical research"/>
+		<term name="Mental health"/>
+		<term name="Nutrition and diet"/>
+		<term name="Physical fitness and lifestyle"/>
+		<term name="Sales and excise taxes"/>
+		<term name="Sports and recreation facilities"/>
+		<term name="Women's employment"/>
+		<term name="Women's health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

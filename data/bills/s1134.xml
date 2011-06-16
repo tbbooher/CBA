@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1134" updated="2011-06-14T06:25:14-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">A bill to authorize the St. Croix River Crossing Project with appropriate mitigation measures to promote river values.</title>
+	</titles>
+	<sponsor id="412242"/>
+	<cosponsors>
+		<cosponsor id="412496" joined="2011-05-26"/>
+		<cosponsor id="412378" joined="2011-05-26"/>
+		<cosponsor id="300061" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

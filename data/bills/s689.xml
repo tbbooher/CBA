@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="689" updated="2011-04-06T06:23:56-04:00">
+	<state datetime="2011-03-30">INTRODUCED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">Energy Security Act of 2011</title>
+		<title type="official" as="introduced">A bill to promote the oil independence of the United States, and for other purposes.</title>
+	</titles>
+	<sponsor id="412325"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Budget process"/>
+		<term name="Climate change"/>
+		<term name="Competitiveness, trade promotion, trade deficits"/>
+		<term name="Congressional oversight"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Environmental technology"/>
+		<term name="Executive Office of the President"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Manufacturing"/>
+		<term name="Oil and gas"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

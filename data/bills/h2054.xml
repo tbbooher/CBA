@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2054" updated="2011-06-14T06:32:05-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Energy and Revenue Enrichment Act of 2011</title>
+		<title type="official" as="introduced">To provide for the reenrichment of certain depleted uranium owned by the Department of Energy, and for the sale or barter of the resulting reenriched uranium, and for other purposes.</title>
+	</titles>
+	<sponsor id="400431"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

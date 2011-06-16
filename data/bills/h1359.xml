@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1359" updated="2011-05-04T06:16:31-04:00">
+	<state datetime="2011-04-04">REFERRED</state>
+	<status><introduced datetime="2011-04-04"/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">Temporary CDBG Public Services Flexibility Act of 2011</title>
+		<title type="official" as="introduced">To amend section 105 of the Housing and Community Development Act of 1974 to temporarily increase the limit on the portion of community development block grants amounts for certain entitlement communities that may be used for public services.</title>
+	</titles>
+	<sponsor id="400344"/>
+	<cosponsors>
+		<cosponsor id="412412" joined="2011-04-04"/>
+		<cosponsor id="400623" joined="2011-04-04"/>
+		<cosponsor id="400108" joined="2011-04-04"/>
+		<cosponsor id="412415" joined="2011-04-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Housing and community development funding"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

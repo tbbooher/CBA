@@ -1,0 +1,36 @@
+<bill session="112" type="h" number="1015" updated="2011-03-24T06:10:34-04:00">
+	<state datetime="2011-03-10">REFERRED</state>
+	<status><introduced datetime="2011-03-10"/></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="official" as="introduced">To provide for the honorary promotion of Charles Young to the grade of brigadier general in the United States Army.</title>
+	</titles>
+	<sponsor id="400237"/>
+	<cosponsors>
+		<cosponsor id="412259" joined="2011-03-10"/>
+		<cosponsor id="412199" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Referred to the House Committee on Armed Services.</text></action>
+		<action datetime="2011-03-18"><committee name="House Committee on Armed Services"/><text>Referred to the Subcommittee on Military Personnel.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+		<committee code="" name="House Armed Services" subcommittee="Military Personnel" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Veterans' organizations and recognition"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

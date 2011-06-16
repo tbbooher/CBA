@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="2086" updated="2011-06-14T06:32:19-04:00">
+	<state datetime="2011-06-02">REFERRED</state>
+	<status><introduced datetime="2011-06-02"/></status>
+
+	<introduced datetime="2011-06-02"/>
+	<titles>
+		<title type="short" as="introduced">Medical Debt Responsibility Act of 2011</title>
+		<title type="official" as="introduced">To exclude from consumer credit reports medical debt that has been in collection and has been fully paid or settled, and for other purposes.</title>
+	</titles>
+	<sponsor id="412225"/>
+	<cosponsors>
+		<cosponsor id="400165" joined="2011-06-02"/>
+		<cosponsor id="400416" joined="2011-06-02"/>
+		<cosponsor id="400252" joined="2011-06-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-02"><text>Referred to the Committee on Financial Services, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-06-02"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-06-02"><text>Referred to House Budget</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="HSBU" name="House Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

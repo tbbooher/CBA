@@ -1,0 +1,32 @@
+<bill session="112" type="s" number="1159" updated="2011-06-14T06:24:24-04:00">
+	<state datetime="2011-06-08">INTRODUCED</state>
+	<status><introduced datetime="2011-06-08"/></status>
+
+	<introduced datetime="2011-06-08"/>
+	<titles>
+		<title type="short" as="introduced">Cyberspace Warriors Act of 2011</title>
+		<title type="official" as="introduced">A bill to require a study on the recruitment, retention, and development of cyberspace experts.</title>
+	</titles>
+	<sponsor id="412223"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-08"><text>Read twice and referred to the Committee on Armed Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSAS" name="Senate Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>
