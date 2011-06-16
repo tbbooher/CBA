@@ -1,0 +1,59 @@
+<bill session="112" type="h" number="1703" updated="2011-05-27T06:17:33-04:00">
+	<state datetime="2011-05-03">REFERRED</state>
+	<status><introduced datetime="2011-05-03"/></status>
+
+	<introduced datetime="2011-05-03"/>
+	<titles>
+		<title type="short" as="introduced">American Steel First Act of 2011</title>
+		<title type="official" as="introduced">To require certain Federal agencies to use iron and steel produced in the United States in carrying out projects for the construction, alteration, or repair of a public building or public work, and for other purposes.</title>
+	</titles>
+	<sponsor id="400417"/>
+	<cosponsors>
+		<cosponsor id="400183" joined="2011-05-26"/>
+		<cosponsor id="400630" joined="2011-05-26"/>
+		<cosponsor id="400285" joined="2011-05-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-03"><text>Referred to the Committee on Transportation and Infrastructure, and in addition to the Committees on Homeland Security, and Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Homeland Security</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-05-10"><committee name="House Homeland Security"/><text>Referred to the Subcommittee on Oversight, Investigations, and Management.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Oversight, Investigations, and Management" activity="Referral" />
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Appropriations"/>
+		<term name="Aviation and airports"/>
+		<term name="Buy American requirements"/>
+		<term name="Department of Transportation"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Government information and archives"/>
+		<term name="Infrastructure development"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Manufacturing"/>
+		<term name="Marketing and advertising"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Public participation and lobbying"/>
+		<term name="Public transit"/>
+		<term name="Roads and highways"/>
+		<term name="State and local government operations"/>
+		<term name="Trade agreements and negotiations"/>
+		<term name="Transportation programs funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

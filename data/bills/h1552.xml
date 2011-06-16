@@ -1,0 +1,35 @@
+<bill session="112" type="h" number="1552" updated="2011-05-07T06:23:43-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Preventing Gun Violence Act</title>
+		<title type="official" as="introduced">To amend chapter 44 of title 18, United States Code, to prohibit the possession of a firearm by a person who is adjudicated to have committed a violent act while a juvenile.</title>
+	</titles>
+	<sponsor id="400195"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Firearms and explosives"/>
+		<term name="Juvenile crime and gang violence"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1264" updated="2011-04-13T06:15:16-04:00">
+	<state datetime="2011-03-30">REFERRED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="official" as="introduced">To designate the property between the United States Federal Courthouse and the Ed Jones Building located at 109 South Highland Avenue in Jackson, Tennessee, as the &quot;M.D. Anderson Plaza&quot; and to authorize the placement of a historical/identification marker on the grounds recognizing the achievements and philanthropy of M.D. Anderson.</title>
+	</titles>
+	<sponsor id="412479"/>
+	<cosponsors>
+		<cosponsor id="400199" joined="2011-03-31"/>
+		<cosponsor id="400653" joined="2011-04-12"/>
+		<cosponsor id="412302" joined="2011-03-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Sponsor introductory remarks on measure. (CR E565-566)</text></action>
+		<action datetime="2011-03-30"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-03-31"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Economic Development, Public Buildings and Emergency Management.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Economic Development, Public Buildings and Emergency Management" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Congressional tributes"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Monuments and memorials"/>
+		<term name="Tennessee"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/30/2011--Introduced.
+Designates the property between the U.S. federal courthouse and the Ed Jones Building located at 109 South Highland Avenue in Jackson, Tennessee, as the &quot;M.D. Anderson Plaza.&quot; Permits the West Tennessee Health Care Foundation to install a historical marker and statue in the Plaza recognizing M.D. Anderson. Prohibits the expenditure of any federal funds in connection with such marker and statue.
+
+	</summary>
+</bill>

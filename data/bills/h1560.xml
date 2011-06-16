@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="1560" updated="2011-05-10T06:10:52-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Ysleta del Sur Pueblo and Alabama and Coushatta Indian Tribes of Texas Restoration Act to allow the Ysleta del Sur Pueblo Tribe to determine blood quantum requirement for membership in that tribe.</title>
+	</titles>
+	<sponsor id="400337"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-22"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee Indian and Alaska Native Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Indian and Alaska Native Affairs" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Native Americans"/>
+		<term name="Federal-Indian relations"/>
+		<term name="Texas"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/14/2011--Introduced.
+Amends the Ysleta del Sur Pueblo and Alabama and Coushatta Indian Tribes of Texas Restoration Act to revise tribal membership requirements to provide tribal membership to any person of Tigua Ysleta del Sur Pueblo Indian blood enrolled by the tribe.
+
+	</summary>
+</bill>

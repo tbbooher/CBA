@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="2081" updated="2011-06-14T06:29:38-04:00">
+	<state datetime="2011-06-01">REFERRED</state>
+	<status><introduced datetime="2011-06-01"/></status>
+
+	<introduced datetime="2011-06-01"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Federal Deposit Insurance Act to replace the Director of the Bureau of Consumer Financial Protection with the Chairman of the Board of Governors of the Federal Reserve System as a member of the Board of Directors of the Federal Deposit Insurance Corporation.</title>
+	</titles>
+	<sponsor id="412462"/>
+	<cosponsors>
+		<cosponsor id="400627" joined="2011-06-01"/>
+		<cosponsor id="400061" joined="2011-06-01"/>
+		<cosponsor id="412451" joined="2011-06-01"/>
+		<cosponsor id="412481" joined="2011-06-01"/>
+		<cosponsor id="400441" joined="2011-06-01"/>
+		<cosponsor id="400313" joined="2011-06-01"/>
+		<cosponsor id="400348" joined="2011-06-01"/>
+		<cosponsor id="412437" joined="2011-06-01"/>
+		<cosponsor id="400145" joined="2011-06-01"/>
+		<cosponsor id="412011" joined="2011-06-01"/>
+		<cosponsor id="412461" joined="2011-06-01"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-01"><text>Referred to the House Committee on Financial Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

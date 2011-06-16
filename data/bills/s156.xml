@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="156" updated="2011-02-15T06:15:52-05:00">
+	<state datetime="2011-01-25">INTRODUCED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Water Heater Rating Improvement Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Energy Policy and Conservation Act to provide a uniform efficiency descriptor for covered water heaters.</title>
+	</titles>
+	<sponsor id="300061"/>
+	<cosponsors>
+		<cosponsor id="300002" joined="2011-01-25"/>
+		<cosponsor id="300093" joined="2011-02-14"/>
+		<cosponsor id="300080" joined="2011-01-25"/>
+		<cosponsor id="412248" joined="2011-01-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Sponsor introductory remarks on measure. (CR S227-228)</text></action>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="482" />
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Consumer affairs"/>
+		<term name="Department of Energy"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Lighting and heating"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

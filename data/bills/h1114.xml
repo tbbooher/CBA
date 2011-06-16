@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="1114" updated="2011-06-04T06:14:15-04:00">
+	<state datetime="2011-03-16">REFERRED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">StartUp Visa Act of 2011</title>
+		<title type="official" as="introduced">To establish an employment-based immigrant visa for alien entrepreneurs who have received significant capital from investors to establish a business in the United States.</title>
+	</titles>
+	<sponsor id="400251"/>
+	<cosponsors>
+		<cosponsor id="412383" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Sponsor introductory remarks on measure. (CR E490)</text></action>
+		<action datetime="2011-03-16"><text>Sponsor introductory remarks on measure. (CR E500)</text></action>
+		<action datetime="2011-03-16"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-06-01"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Immigration Policy and Enforcement.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Immigration Policy and Enforcement" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="565" />
+	</relatedbills>
+	<subjects>
+		<term name="Immigration"/>
+		<term name="Business investment and capital"/>
+		<term name="Congressional oversight"/>
+		<term name="Foreign labor"/>
+		<term name="Immigration status and procedures"/>
+		<term name="U.S. and foreign investments"/>
+		<term name="Visas and passports"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/16/2011--Introduced.
+StartUp Visa Act of 2011 - Amends the Immigration and Nationality Act to establish an employment-based, conditional immigrant visa (StartUp visa) for a sponsored alien entrepreneur: (1) with required amounts of financial backing from a qualifying investor, government entity, or venture capitalist; and (2) whose commercial activities will generate required levels of employment, revenue, or capital investment. Directs the Secretary of Homeland Security (DHS) to terminate the status of a sponsored entrepreneur (and the alien spouse and children of such entrepreneur) if not later than three years after the date on which such permanent resident status was conferred: (1) the sponsoring venture capitalist or investor fails to meet investment requirements; or (2) the entrepreneur fails to meet job creation, capital investment, or revenue requirements.
+
+	</summary>
+</bill>

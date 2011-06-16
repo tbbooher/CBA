@@ -1,0 +1,47 @@
+<bill session="112" type="h" number="1612" updated="2011-06-01T06:15:55-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="official" as="introduced">To direct the Secretary of Defense to establish a commission on urotrauma.</title>
+	</titles>
+	<sponsor id="412278"/>
+	<cosponsors>
+		<cosponsor id="400219" joined="2011-04-15"/>
+		<cosponsor id="400266" joined="2011-05-04"/>
+		<cosponsor id="400431" joined="2011-05-31"/>
+		<cosponsor id="400345" joined="2011-05-04"/>
+		<cosponsor id="412461" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Veterans' Affairs</text></action>
+		<action datetime="2011-05-18"><committee name="House Armed Services"/><text>Referred to the Subcommittee on Military Personnel.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+		<committee code="" name="House Armed Services" subcommittee="Military Personnel" activity="Referral" />
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Advisory bodies"/>
+		<term name="Congressional oversight"/>
+		<term name="Emergency medical services and trauma care"/>
+		<term name="Government investigations"/>
+		<term name="Veterans' medical care"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/15/2011--Introduced.
+Directs the Secretary of Defense (DOD), in order to continue and expand the DOD study conducted in 2011, to establish the Commission on Urotrauma to: (1) conduct a study on urotrauma (injury to the urinary tract from a penetrating, blunt, blast, thermal, chemical, or biological cause) among members of the Armed Forces and veterans; and (2) provide an interim and final report to the congressional defense and veterans committees on such study.
+
+	</summary>
+</bill>

@@ -1,0 +1,31 @@
+<bill session="112" type="s" number="1175" updated="2011-06-14T06:31:36-04:00">
+	<state datetime="2011-06-09">INTRODUCED</state>
+	<status><introduced datetime="2011-06-09"/></status>
+
+	<introduced datetime="2011-06-09"/>
+	<titles>
+		<title type="official" as="introduced">A bill to provide, develop, and support 21st century readiness initiatives that assist students in acquiring the skills necessary to think critically and solve problems, be an effective communicator, collaborate with others, and learn to create and innovate.</title>
+	</titles>
+	<sponsor id="412324"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-06-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-09"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

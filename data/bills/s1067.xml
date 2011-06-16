@@ -1,0 +1,42 @@
+<bill session="112" type="s" number="1067" updated="2011-06-14T06:22:40-04:00">
+	<state datetime="2011-05-25">INTRODUCED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="short" as="introduced">Nuclear Energy Research Initiative Improvement Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Energy Policy Act of 2005 to require the Secretary of Energy to carry out a research and development and demonstration program to reduce manufacturing and construction costs relating to nuclear reactors, and for other purposes.</title>
+	</titles>
+	<sponsor id="400412"/>
+	<cosponsors>
+		<cosponsor id="412242" joined="2011-06-13"/>
+		<cosponsor id="300009" joined="2011-05-25"/>
+		<cosponsor id="300075" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Sponsor introductory remarks on measure. (CR S3344)</text></action>
+		<action datetime="2011-05-25"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text><reference label="text of measure as introduced" ref="CR S3344-3345"/></action>
+		<action datetime="2011-06-07"><text>Committee on Energy and Natural Resources. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, Hearings, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Arms control and nonproliferation"/>
+		<term name="Energy research"/>
+		<term name="Licensing and registrations"/>
+		<term name="Nuclear power"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,62 @@
+<bill session="112" type="s" number="52" updated="2011-05-10T06:12:12-04:00">
+	<state datetime="2011-05-05">REPORTED</state>
+	<status><calendar datetime="2011-05-05" /></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">International Fisheries Stewardship and Enforcement Act</title>
+		<title type="short" as="introduced">Antigua Convention Implementing Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish uniform administrative and enforcement procedures and penalties for the enforcement of the High Seas Driftnet Fishing Moratorium Protection Act and similar statutes, and for other purposes.</title>
+	</titles>
+	<sponsor id="300056"/>
+	<cosponsors>
+		<cosponsor id="300018" joined="2011-01-25"/>
+		<cosponsor id="300091" joined="2011-01-25"/>
+		<cosponsor id="300060" joined="2011-01-25"/>
+		<cosponsor id="300084" joined="2011-01-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Sponsor introductory remarks on measure. (CR S164)</text></action>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text><reference label="text of measure as introduced" ref="CR S165-171"/></action>
+		<calendar datetime="2011-05-05"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported without amendment favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Advisory bodies"/>
+		<term name="Assault and harassment offenses"/>
+		<term name="Canada"/>
+		<term name="Civil actions and liability"/>
+		<term name="Costa Rica"/>
+		<term name="Department of Commerce"/>
+		<term name="Food supply, safety, and labeling"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+		<term name="Government investigations"/>
+		<term name="Government liability"/>
+		<term name="International law and treaties"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Latin America"/>
+		<term name="Licensing and registrations"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Pacific Ocean"/>
+		<term name="Polar regions"/>
+		<term name="Trade restrictions"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/25/2011--Introduced.
+International Fisheries Stewardship and Enforcement Act - Directs the Secretary of Commerce (Secretary) and the Secretary of the department in which the Coast Guard is operating to enforce specified laws concerning fisheries and fish products, as applicable to specified provisions of this Act. Sets forth provisions regarding: (1) civil and criminal penalties; (2) search, inspection, shipment detention, arrest, and subpoena authorities; and (3) prohibited actions. Amends the High Seas Driftnet Fishing Moratorium Protection Act to direct the Secretary to identify nations or certain entities that are engaged or have been engaged during the preceding three years in illegal or unregulated fishing, or that have violated related conservation and management measures. Prohibits certain activities under specified fishing and marine Acts, including: (1) refusing, resisting, or interfering with searches, investigations, inspections, or observers; (2) importing, exporting, transporting, selling, or purchasing fish or fish products in violation of a treaty or any binding conservation measure to which the United States is a party; or (3) falsifying records, accounts, labels, or product identification. Authorizes the Secretary to: (1) identify vessels and vessel owners engaged in illegal or unregulated fishing; and (2) take appropriate action against such vessels and vessel owners in accordance with U.S. and international law. Applies any action restricting port privileges to all U.S. and territorial ports.
+Directs the Secretary to establish an International Fisheries Enforcement Program in the Office of Law Enforcement of the National Marine Fisheries Service to investigate illegal or unregulated fishing activity and enforce the provisions of this Act. Authorizes the Secretary to establish an international cooperation and assistance program to provide assistance for international capacity building efforts. Authorizes information disclosure to the U.N. Food and Agriculture Organization, international fishery management organizations, or arrangements made under an international fishery agreement, if those organizations or arrangements have unauthorized information disclosure safeguards. Amends the High Seas Fishing Compliance Act to revise high seas fishing permit provisions. Antigua Convention Implementing Act of 2011 - Amends the Tuna Conventions Act of 1950 to revise provisions regarding: (1) the Inter-American Tropical Tuna Commission; (2) the General Advisory Committee; (3) the Scientific Advisory Subcommittee; (4) prohibited acts; and (5) enforcement. Repeals the Eastern Pacific Tuna Licensing Act of 1984.
+
+	</summary>
+</bill>

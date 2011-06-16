@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="1461" updated="2011-04-23T06:11:00-04:00">
+	<state datetime="2011-04-08">REFERRED</state>
+	<status><introduced datetime="2011-04-08"/></status>
+
+	<introduced datetime="2011-04-08"/>
+	<titles>
+		<title type="short" as="introduced">Mescalero Apache Tribe Leasing Authorization Act</title>
+		<title type="official" as="introduced">To authorize the Mescalero Apache Tribe to lease adjudicated water rights.</title>
+	</titles>
+	<sponsor id="400313"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-08"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-14"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee Indian and Alaska Native Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Indian and Alaska Native Affairs" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="134" />
+	</relatedbills>
+	<subjects>
+		<term name="Native Americans"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="New Mexico"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/8/2011--Introduced.
+Mescalero Apache Tribe Leasing Authorization Act - Authorizes the Mescalero Apache Tribe to lease or transfer certain of their water rights for a term of up to 99 years, provided the lease or transfer complies with the laws of New Mexico. 
+	</summary>
+</bill>

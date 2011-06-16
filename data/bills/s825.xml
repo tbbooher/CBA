@@ -1,0 +1,42 @@
+<bill session="112" type="s" number="825" updated="2011-05-06T06:26:29-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Job Creation Through Innovation Act</title>
+		<title type="official" as="introduced">A bill to amend the Internal Revenue Code of 1986 to permanently extend and modify the research tax credit, and for other purposes.</title>
+	</titles>
+	<sponsor id="412390"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Sponsor introductory remarks on measure. (CR S2514)</text></action>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Finance.</text><reference label="text of measure as introduced" ref="CR S2514-2516"/></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="591" />
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Higher education"/>
+		<term name="Income tax credits"/>
+		<term name="Income tax deductions"/>
+		<term name="Manufacturing"/>
+		<term name="Research and development"/>
+		<term name="Small business"/>
+		<term name="Social work, volunteer service, charitable organizations"/>
+		<term name="Unemployment"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

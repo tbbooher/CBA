@@ -1,0 +1,60 @@
+<bill session="112" type="h" number="498" updated="2011-04-14T06:12:34-04:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">State and Local Law Enforcement Hatch Act Reform Act of 2011</title>
+		<title type="official" as="introduced">To amend section 1502 of title 5, United States Code, to permit law enforcement officers to be candidates for sheriff, and for other purposes.</title>
+	</titles>
+	<sponsor id="412256"/>
+	<cosponsors>
+		<cosponsor id="400279" joined="2011-02-10"/>
+		<cosponsor id="400627" joined="2011-01-26"/>
+		<cosponsor id="400648" joined="2011-01-26"/>
+		<cosponsor id="412271" joined="2011-02-10"/>
+		<cosponsor id="412272" joined="2011-01-26"/>
+		<cosponsor id="400183" joined="2011-01-26"/>
+		<cosponsor id="412393" joined="2011-02-10"/>
+		<cosponsor id="400342" joined="2011-02-10"/>
+		<cosponsor id="412294" joined="2011-01-26"/>
+		<cosponsor id="412484" joined="2011-04-06"/>
+		<cosponsor id="412265" joined="2011-01-26"/>
+		<cosponsor id="412291" joined="2011-01-26"/>
+		<cosponsor id="412454" joined="2011-03-03"/>
+		<cosponsor id="400406" joined="2011-03-03"/>
+		<cosponsor id="412311" joined="2011-01-26"/>
+		<cosponsor id="412413" joined="2011-02-17"/>
+		<cosponsor id="412463" joined="2011-03-16"/>
+		<cosponsor id="400309" joined="2011-01-26"/>
+		<cosponsor id="412255" joined="2011-04-13"/>
+		<cosponsor id="412436" joined="2011-02-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Elections, voting, political campaign regulation"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Law enforcement officers"/>
+		<term name="Political advertising"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+State and Local Law Enforcement Hatch Act Reform Act of 2011 - Amends the Hatch Act to: (1) allow state and local law enforcement officers to be candidates for the office of sheriff; and (2) allow sheriffs to engage in campaign activities by attending or speaking at political campaign rallies or events, holding or sponsoring political fundraisers, or appearing on political advertisements.
+Establishes a limitation period of six months after the later of the date of the alleged violation or the date of enactment of this Act for presenting charges against a law enforcement officer for Hatch Act violations.
+
+	</summary>
+</bill>

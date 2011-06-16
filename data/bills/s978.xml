@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="978" updated="2011-06-10T06:15:31-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend the criminal penalty provision for criminal infringement of a copyright, and for other purposes.</title>
+	</titles>
+	<sponsor id="412242"/>
+	<cosponsors>
+		<cosponsor id="412390" joined="2011-05-12"/>
+		<cosponsor id="300027" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on the Judiciary.</text></action>
+		<action datetime="2011-06-16"><text> Committee on the Judiciary. Date of scheduled consideration. SD-226. 10:00 a.m.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Intellectual property"/>
+		<term name="Music"/>
+		<term name="Sound recording"/>
+		<term name="Television and film"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

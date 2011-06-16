@@ -1,0 +1,46 @@
+<bill session="112" type="s" number="967" updated="2011-06-08T06:13:20-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Regulation of Mortgage Servicing Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish clear regulatory standards for mortgage servicers, and for other purposes.</title>
+	</titles>
+	<sponsor id="412325"/>
+	<cosponsors>
+		<cosponsor id="300056" joined="2011-05-12"/>
+		<cosponsor id="412490" joined="2011-05-12"/>
+		<cosponsor id="412378" joined="2011-06-07"/>
+		<cosponsor id="300001" joined="2011-05-12"/>
+		<cosponsor id="300091" joined="2011-05-12"/>
+		<cosponsor id="412323" joined="2011-05-12"/>
+		<cosponsor id="412243" joined="2011-06-07"/>
+		<cosponsor id="300038" joined="2011-05-12"/>
+		<cosponsor id="300066" joined="2011-05-16"/>
+		<cosponsor id="400357" joined="2011-05-12"/>
+		<cosponsor id="412247" joined="2011-05-12"/>
+		<cosponsor id="300081" joined="2011-05-12"/>
+		<cosponsor id="300100" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBK" name="Senate Banking, Housing, and Urban Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Civil actions and liability"/>
+		<term name="Housing finance and home ownership"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,54 @@
+<bill session="112" type="h" number="1900" updated="2011-06-08T06:22:28-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Surface Transportation and Mass Transit Security Act of 2011</title>
+		<title type="official" as="introduced">To authorize programs and activities within the Transportation Security Administration to enhance the security of surface transportation, including mass transit, and for other purposes.</title>
+	</titles>
+	<sponsor id="400199"/>
+	<cosponsors>
+		<cosponsor id="412221" joined="2011-05-13"/>
+		<cosponsor id="400093" joined="2011-05-13"/>
+		<cosponsor id="400402" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on Homeland Security.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Homeland Security"/><text>Referred to the Subcommittee on Transportation Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Transportation Security and Infrastructure Protection" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Advisory bodies"/>
+		<term name="Animal protection and human-animal relationships"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Firearms and explosives"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+		<term name="Motor carriers"/>
+		<term name="Performance measurement"/>
+		<term name="Public transit"/>
+		<term name="Railroads"/>
+		<term name="Roads and highways"/>
+		<term name="Technology assessment"/>
+		<term name="Terrorism"/>
+		<term name="Transportation employees"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

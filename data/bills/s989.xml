@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="989" updated="2011-06-02T06:23:42-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Flint Hills Preservation Act</title>
+		<title type="official" as="introduced">A bill to amend the Clean Air Act to require the exclusion of data of an exceedance or violation of a national ambient air quality standard caused by a prescribed fire in the Flint Hills Region, and for other purposes.</title>
+	</titles>
+	<sponsor id="400284"/>
+	<cosponsors>
+		<cosponsor id="300055" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Air quality"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental regulatory procedures"/>
+		<term name="Fires"/>
+		<term name="Kansas"/>
+		<term name="Licensing and registrations"/>
+		<term name="Oklahoma"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

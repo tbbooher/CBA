@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="1878" updated="2011-06-04T06:19:26-04:00">
+	<state datetime="2011-05-12">REFERRED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="official" as="introduced">To require that the same access to transportation and public accommodations that is afforded to individuals with disabilities who use service animals under the Americans with Disabilities Act be afforded to certified trainers of service animals.</title>
+	</titles>
+	<sponsor id="412287"/>
+	<cosponsors>
+		<cosponsor id="400227" joined="2011-06-01"/>
+		<cosponsor id="400162" joined="2011-05-23"/>
+		<cosponsor id="400283" joined="2011-06-03"/>
+		<cosponsor id="400409" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Referred to the Committee on Transportation and Infrastructure, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-05-12"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-05-13"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Animal protection and human-animal relationships"/>
+		<term name="Disability and health-based discrimination"/>
+		<term name="Public transit"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/12/2011--Introduced.
+Requires the same right of access to public transportation, accommodations, and private entity transportation services to be afforded to licensed or certified trainers of service animals (or appropriately credentialed handlers such animals) as is afforded under specified provisions of the Americans with Disabilities Act (ADA) to individuals with disabilities who use such service animals. Declares it discriminatory under the ADA to afford such a trainer, when accompanied by a service animal, with any service, facility, privilege, advantage, or accommodation that is unequal to that afforded to other individuals. Defines &quot;service animal&quot; as a guide dog, signal dog, or other animal individually trained or being trained to assist a disabled individual and distinguished by wearing a collar, leash, harness, or cape identifying the animal as a service animal in training, regardless of whether such animal has been licensed or certified by a state or local government. 
+	</summary>
+</bill>

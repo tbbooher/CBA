@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="684" updated="2011-05-19T06:14:07-04:00">
+	<state datetime="2011-03-30">INTRODUCED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="official" as="introduced">A bill to provide for the conveyance of certain parcels of land to the town of Alta, Utah.</title>
+	</titles>
+	<sponsor id="412495"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+		<action datetime="2011-05-18"><text>Committee on Energy and Natural Resources Subcommittee on Public Lands and Forests. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="Senate Energy and Natural Resources" subcommittee="Public Lands and Forests" activity="Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land transfers"/>
+		<term name="Utah"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/30/2011--Introduced.
+Directs the Secretary of Agriculture (USDA) to convey to the town of Alta, Utah, all interest of the United States in and to parcels of National Forest System land in the Wasatch-Cache National Forest in Salt Lake County, Utah, that are located in and adjacent to parcels of land subject to special use permit SLC102708. Requires the town to use the land conveyed under this Act for public purposes. 
+	</summary>
+</bill>

@@ -1,0 +1,34 @@
+<bill session="112" type="s" number="1091" updated="2011-06-14T06:26:39-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">COASTAL Act of 2011</title>
+		<title type="short" as="introduced">Consumer Option for an Alternative System To Allocate Losses Act of 2011</title>
+		<title type="short" as="introduced">Flood Insurance Reauthorization Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the National Flood Insurance Act of 1968 to include a system for indeterminate loss insurance claims, and for other purposes.</title>
+	</titles>
+	<sponsor id="400432"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBK" name="Senate Banking, Housing, and Urban Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

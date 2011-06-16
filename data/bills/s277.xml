@@ -1,0 +1,50 @@
+<bill session="112" type="s" number="277" updated="2011-06-09T06:12:13-04:00">
+	<state datetime="2011-02-03">INTRODUCED</state>
+	<status><introduced datetime="2011-02-03"/></status>
+
+	<introduced datetime="2011-02-03"/>
+	<titles>
+		<title type="short" as="introduced">Caring for Camp Lejeune Veterans Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend title 38, United States Code, to furnish hospital care, medical services, and nursing home care to veterans who were stationed at Camp Lejeune, North Carolina, while the water was contaminated at Camp Lejeune, and for other purposes.</title>
+	</titles>
+	<sponsor id="400054"/>
+	<cosponsors>
+		<cosponsor id="300078" joined="2011-02-03"/>
+		<cosponsor id="412320" joined="2011-02-07"/>
+		<cosponsor id="412490" joined="2011-05-02"/>
+		<cosponsor id="412324" joined="2011-02-03"/>
+		<cosponsor id="300048" joined="2011-02-03"/>
+		<cosponsor id="300047" joined="2011-05-12"/>
+		<cosponsor id="300051" joined="2011-02-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-03"><text>Read twice and referred to the Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-06-08"><text>Committee on Veterans' Affairs. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSVA" name="Senate Veterans' Affairs" activity="Referral, Hearings, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Cancer"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Hospital care"/>
+		<term name="Long-term, rehabilitative, and terminal care"/>
+		<term name="Military facilities and property"/>
+		<term name="Military personnel and dependents"/>
+		<term name="North Carolina"/>
+		<term name="Veterans' medical care"/>
+		<term name="Water quality"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/3/2011--Introduced.
+Caring for Camp Lejeune Veterans Act of 2011 - Provides hospital care, medical services, and nursing home care for any illness acquired by veterans and family members who were stationed at Camp Lejeune, North Carolina, while the water there was contaminated by volatile organic compounds, including known human carcinogens and probable human carcinogens.
+
+	</summary>
+</bill>

@@ -1,0 +1,64 @@
+<bill session="112" type="h" number="1383" updated="2011-05-25T06:15:35-04:00">
+	<state datetime="2011-05-23T19:01:00-04:00">PASS_OVER:HOUSE</state>
+	<status><vote datetime="2011-05-23T19:01:00-04:00" where="h" result="pass" how="roll" roll="331"/></status>
+
+	<introduced datetime="2011-04-06"/>
+	<titles>
+		<title type="short" as="introduced">Restoring GI Bill Fairness Act of 2011</title>
+		<title type="official" as="introduced">To temporarily preserve higher rates for tuition and fees for programs of education at non-public institutions of higher learning pursued by individuals enrolled in the Post-9/11 Educational Assistance Program of the Department of Veterans Affairs before the enactment of the Post-9/11 Veterans Educational Assistance Improvements Act of 2010, and for other purposes.</title>
+	</titles>
+	<sponsor id="400279"/>
+	<cosponsors>
+		<cosponsor id="400031" joined="2011-04-12"/>
+		<cosponsor id="400335" joined="2011-05-13"/>
+		<cosponsor id="400257" joined="2011-05-13"/>
+		<cosponsor id="400080" joined="2011-05-12"/>
+		<cosponsor id="400195" joined="2011-05-13"/>
+		<cosponsor id="412449" joined="2011-05-02"/>
+		<cosponsor id="400366" joined="2011-05-13"/>
+		<cosponsor id="412460" joined="2011-05-05"/>
+		<cosponsor id="412454" joined="2011-05-05"/>
+		<cosponsor id="412392" joined="2011-04-06"/>
+		<cosponsor id="412414" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-06"><text>Sponsor introductory remarks on measure. (CR E651)</text></action>
+		<action datetime="2011-04-06"><text>Referred to the House Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-04-15"><committee name="House Committee on Veterans' Affairs"/><text>Referred to the Subcommittee on Economic Opportunity.</text></action>
+		<action datetime="2011-05-03"><committee name="House Committee on Veterans' Affairs" subcommittee="Economic Opportunity"/><text>Subcommittee Hearings Held.</text></action>
+		<action datetime="2011-05-05"><committee name="House Committee on Veterans' Affairs" subcommittee="Economic Opportunity"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-05"><committee name="House Committee on Veterans' Affairs" subcommittee="Economic Opportunity"/><text>Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote .</text></action>
+		<action datetime="2011-05-12"><committee name="House Committee on Veterans' Affairs"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-05-12"  state="REPORTED"><committee name="House Committee on Veterans' Affairs"/><text>Ordered to be Reported (Amended) by the Yeas and Nays: 13 - 6.</text></calendar>
+		<action datetime="2011-05-20T11:32:00-04:00"><text>Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 112-81. Filed late, pursuant to previous special order.</text></action>
+		<calendar number="42" datetime="2011-05-20T11:33:00-04:00" calendar="Union" ><text>Placed on the Union Calendar, Calendar No. 42.</text></calendar>
+		<action datetime="2011-05-23T16:29:00-04:00"><text>Mr. Miller (FL) moved to suspend the rules and pass the bill, as amended.</text></action>
+		<action datetime="2011-05-23T16:29:00-04:00"><text>Considered under suspension of the rules.</text><reference label="consideration" ref="CR H3313-3316"/></action>
+		<action datetime="2011-05-23T16:29:00-04:00"><text>DEBATE - The House proceeded with forty minutes of debate on H.R. 1383.</text></action>
+		<action datetime="2011-05-23T16:41:00-04:00"><text>At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed.</text></action>
+		<action datetime="2011-05-23T18:54:00-04:00"><text>Considered as unfinished business.</text><reference label="consideration" ref="CR H3320-3321"/></action>
+		<vote how="roll" type="vote" roll="331" datetime="2011-05-23T19:01:00-04:00" where="h" result="pass" suspension="1"  state="PASS_OVER:HOUSE"><text>On motion to suspend the rules and pass the bill, as amended Agreed to by the Yeas and Nays: (2/3 required): 389 - 0 (Roll no. 331).</text><reference label="text" ref="CR H3313-3314"/></vote>
+		<action datetime="2011-05-23T19:01:00-04:00"><text>Motion to reconsider laid on the table Agreed to without objection.</text></action>
+		<action datetime="2011-05-24"><text>Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, Markup, Reporting" />
+		<committee code="" name="House Veterans' Affairs" subcommittee="Economic Opportunity" activity="Referral, Hearings, Markup, Reporting" />
+		<committee code="SSVA" name="Senate Veterans' Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="745" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Veterans' education, employment, rehabilitation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/6/2011--Introduced.
+Restoring GI Bill Fairness Act of 2011 - Makes the amount payable for programs of education at nonpublic institutions of higher education pursued by individuals enrolled in the Department of Veterans Affairs (VA) post-9/11 educational assistance program (post-9/11 program) during the period beginning on August 1, 2011, and ending on July 31, 2014, the greater of $17,500, or the established charges payable under a VA maximum payments table published on October 27, 2010 (thereby preserving for such period the higher payment rates in effect prior to enactment of the Veterans Educational Assistance Improvements Act of 2010). Provides, during the 24-month period beginning on August 1, 2011, a limitation on the maximum monthly stipend payable under the post-9/11 program.
+
+	</summary>
+</bill>

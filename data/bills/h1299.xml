@@ -1,0 +1,80 @@
+<bill session="112" type="h" number="1299" updated="2011-06-03T06:14:55-04:00">
+	<state datetime="2011-03-31">REFERRED</state>
+	<status><introduced datetime="2011-03-31"/></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="short" as="introduced">Secure Border Act of 2011</title>
+		<title type="official" as="introduced">To achieve operational control of and improve security at the international land borders of the United States, and for other purposes.</title>
+	</titles>
+	<sponsor id="400276"/>
+	<cosponsors>
+		<cosponsor id="400224" joined="2011-05-11"/>
+		<cosponsor id="400627" joined="2011-03-31"/>
+		<cosponsor id="400017" joined="2011-04-14"/>
+		<cosponsor id="412271" joined="2011-03-31"/>
+		<cosponsor id="400219" joined="2011-03-31"/>
+		<cosponsor id="412469" joined="2011-05-04"/>
+		<cosponsor id="400659" joined="2011-03-31"/>
+		<cosponsor id="412481" joined="2011-03-31"/>
+		<cosponsor id="400137" joined="2011-04-15"/>
+		<cosponsor id="412302" joined="2011-04-14"/>
+		<cosponsor id="400151" joined="2011-05-02"/>
+		<cosponsor id="412398" joined="2011-03-31"/>
+		<cosponsor id="412472" joined="2011-03-31"/>
+		<cosponsor id="400617" joined="2011-03-31"/>
+		<cosponsor id="412213" joined="2011-03-31"/>
+		<cosponsor id="412471" joined="2011-04-14"/>
+		<cosponsor id="400032" joined="2011-03-31"/>
+		<cosponsor id="400406" joined="2011-05-26"/>
+		<cosponsor id="412428" joined="2011-05-04"/>
+		<cosponsor id="400651" joined="2011-04-07"/>
+		<cosponsor id="400652" joined="2011-03-31"/>
+		<cosponsor id="412250" joined="2011-03-31"/>
+		<cosponsor id="400654" joined="2011-03-31"/>
+		<cosponsor id="400288" joined="2011-04-07"/>
+		<cosponsor id="400055" joined="2011-03-31"/>
+		<cosponsor id="400141" joined="2011-03-31"/>
+		<cosponsor id="400341" joined="2011-03-31"/>
+		<cosponsor id="412445" joined="2011-03-31"/>
+		<cosponsor id="412424" joined="2011-03-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Referred to the House Committee on Homeland Security.</text></action>
+		<action datetime="2011-04-06"><committee name="House Committee on Homeland Security"/><text>Referred to the Subcommittee on Border and Maritime Security.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Homeland Security" subcommittee="Border and Maritime Security"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Homeland Security" subcommittee="Border and Maritime Security"/><text>Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote .</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Border and Maritime Security" activity="Referral, Markup, Reporting" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Immigration"/>
+		<term name="Arizona"/>
+		<term name="Border security and unlawful immigration"/>
+		<term name="California"/>
+		<term name="Department of Homeland Security"/>
+		<term name="Federal-Indian relations"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Latin America"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Mexico"/>
+		<term name="New Mexico"/>
+		<term name="State and local government operations"/>
+		<term name="Texas"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/31/2011--Introduced.
+Secure Border Act of 2011 - Directs the Secretary of Homeland Security (DHS) to submit to the House Committee on Homeland Security and the Senate Committee on Homeland Security and Governmental Affairs a comprehensive strategy for gaining operational control of the international borders of the United States within five years.
+
+	</summary>
+</bill>

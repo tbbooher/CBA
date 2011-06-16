@@ -1,0 +1,80 @@
+<bill session="112" type="h" number="1448" updated="2011-05-12T06:15:18-04:00">
+	<state datetime="2011-04-08">REFERRED</state>
+	<status><introduced datetime="2011-04-08"/></status>
+
+	<introduced datetime="2011-04-08"/>
+	<titles>
+		<title type="short" as="introduced">Federal Response to Eliminate Eating Disorders Act of 2011</title>
+		<title type="official" as="introduced">To amend the Public Health Service Act with respect to eating disorders, and for other purposes.</title>
+	</titles>
+	<sponsor id="400013"/>
+	<cosponsors>
+		<cosponsor id="412385" joined="2011-04-12"/>
+		<cosponsor id="412209" joined="2011-04-08"/>
+		<cosponsor id="400289" joined="2011-04-08"/>
+		<cosponsor id="412272" joined="2011-04-08"/>
+		<cosponsor id="412199" joined="2011-04-08"/>
+		<cosponsor id="412308" joined="2011-04-13"/>
+		<cosponsor id="400080" joined="2011-05-03"/>
+		<cosponsor id="412307" joined="2011-05-11"/>
+		<cosponsor id="400251" joined="2011-04-08"/>
+		<cosponsor id="400360" joined="2011-04-08"/>
+		<cosponsor id="400170" joined="2011-04-08"/>
+		<cosponsor id="400647" joined="2011-04-13"/>
+		<cosponsor id="412215" joined="2011-04-12"/>
+		<cosponsor id="400415" joined="2011-05-03"/>
+		<cosponsor id="400283" joined="2011-04-08"/>
+		<cosponsor id="400309" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-08"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committees on Ways and Means, Oversight and Government Reform, and Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-08"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-04-08"><text>Referred to House Ways and Means</text></action>
+		<action datetime="2011-04-08"><text>Referred to House Oversight and Government Reform</text></action>
+		<action datetime="2011-04-08"><text>Referred to House Education and the Workforce</text></action>
+		<action datetime="2011-04-15"><committee name="House Education and the Workforce"/><text>Referred to the Subcommittee on Health, Employment, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+		<committee code="" name="House Education and the Workforce" subcommittee="Health, Employment, Labor, and Pensions" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Child health"/>
+		<term name="Department of Health and Human Services"/>
+		<term name="Digestive and metabolic diseases"/>
+		<term name="Disability and health-based discrimination"/>
+		<term name="Drug and radiation therapy"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Employee benefits and pensions"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+		<term name="Health care costs and insurance"/>
+		<term name="Health care coverage and access"/>
+		<term name="Health information and medical records"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Health promotion and preventive care"/>
+		<term name="Higher education"/>
+		<term name="Medicaid"/>
+		<term name="Medical education"/>
+		<term name="Medical research"/>
+		<term name="National Institutes of Health (NIH)"/>
+		<term name="Nutrition and diet"/>
+		<term name="Research administration and funding"/>
+		<term name="Teaching, teachers, curricula"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="578" updated="2011-02-15T06:14:55-05:00">
+	<state datetime="2011-02-09">REFERRED</state>
+	<status><introduced datetime="2011-02-09"/></status>
+
+	<introduced datetime="2011-02-09"/>
+	<titles>
+		<title type="short" as="introduced">No Parole for Sex Offenders Act</title>
+		<title type="official" as="introduced">To ensure that sex offenders and sexually violent predators are not eligible for parole.</title>
+	</titles>
+	<sponsor id="400442"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-09"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-02-14"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Correctional facilities and imprisonment"/>
+		<term name="Crimes against children"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Sex offenses"/>
+		<term name="State and local government operations"/>
+		<term name="Violent crime"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

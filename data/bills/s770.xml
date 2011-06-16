@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="770" updated="2011-05-04T06:21:53-04:00">
+	<state datetime="2011-04-08">INTRODUCED</state>
+	<status><introduced datetime="2011-04-08"/></status>
+
+	<introduced datetime="2011-04-08"/>
+	<titles>
+		<title type="short" as="introduced">Payroll Fraud Prevention Act</title>
+		<title type="official" as="introduced">A bill to amend the Fair Labor Standards Act of 1938 to ensure that employees are not misclassified as non-employees, and for other purposes.</title>
+	</titles>
+	<sponsor id="400050"/>
+	<cosponsors>
+		<cosponsor id="412490" joined="2011-04-08"/>
+		<cosponsor id="412378" joined="2011-05-03"/>
+		<cosponsor id="300051" joined="2011-04-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-08"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Labor"/>
+		<term name="Employment discrimination and employee rights"/>
+		<term name="Government information and archives"/>
+		<term name="Government investigations"/>
+		<term name="Labor standards"/>
+		<term name="Performance measurement"/>
+		<term name="Personnel records"/>
+		<term name="Tax administration and collection, taxpayers"/>
+		<term name="Unemployment"/>
+		<term name="Wages and earnings"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

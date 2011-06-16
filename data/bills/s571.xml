@@ -1,0 +1,46 @@
+<bill session="112" type="s" number="571" updated="2011-03-19T06:20:44-04:00">
+	<state datetime="2011-03-14">INTRODUCED</state>
+	<status><introduced datetime="2011-03-14"/></status>
+
+	<introduced datetime="2011-03-14"/>
+	<titles>
+		<title type="short" as="introduced">Educational Success for Children and Youth Without Homes Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend subtitle B of title VII of the McKinney-Vento Homeless Assistance Act to provide education for homeless children and youths, and for other purposes.</title>
+	</titles>
+	<sponsor id="300076"/>
+	<cosponsors>
+		<cosponsor id="412326" joined="2011-03-14"/>
+		<cosponsor id="412378" joined="2011-03-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-14"><text>Sponsor introductory remarks on measure. (CR S1606-1607)</text></action>
+		<action datetime="2011-03-14"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Child safety and welfare"/>
+		<term name="Department of Education"/>
+		<term name="Education of the disadvantaged"/>
+		<term name="Education programs funding"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Homelessness and emergency shelter"/>
+		<term name="Preschool education"/>
+		<term name="Right of privacy"/>
+		<term name="Special education"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

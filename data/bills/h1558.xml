@@ -1,0 +1,99 @@
+<bill session="112" type="h" number="1558" updated="2011-06-14T06:16:13-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Toxic Substances Control Act to clarify the jurisdiction of the Environmental Protection Agency with respect to certain sporting good articles, and to exempt those articles from a definition under that Act.</title>
+	</titles>
+	<sponsor id="400279"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-05-03"/>
+		<cosponsor id="400352" joined="2011-05-23"/>
+		<cosponsor id="400224" joined="2011-04-14"/>
+		<cosponsor id="412284" joined="2011-04-14"/>
+		<cosponsor id="400627" joined="2011-04-14"/>
+		<cosponsor id="400068" joined="2011-04-14"/>
+		<cosponsor id="412271" joined="2011-04-14"/>
+		<cosponsor id="412383" joined="2011-05-24"/>
+		<cosponsor id="400038" joined="2011-04-14"/>
+		<cosponsor id="412419" joined="2011-06-13"/>
+		<cosponsor id="412469" joined="2011-04-15"/>
+		<cosponsor id="400277" joined="2011-05-10"/>
+		<cosponsor id="412309" joined="2011-04-14"/>
+		<cosponsor id="400659" joined="2011-04-14"/>
+		<cosponsor id="400335" joined="2011-04-14"/>
+		<cosponsor id="412252" joined="2011-04-14"/>
+		<cosponsor id="412487" joined="2011-04-14"/>
+		<cosponsor id="412421" joined="2011-06-13"/>
+		<cosponsor id="400376" joined="2011-04-14"/>
+		<cosponsor id="412409" joined="2011-04-14"/>
+		<cosponsor id="412431" joined="2011-04-15"/>
+		<cosponsor id="400209" joined="2011-05-23"/>
+		<cosponsor id="400089" joined="2011-04-14"/>
+		<cosponsor id="412481" joined="2011-05-03"/>
+		<cosponsor id="400340" joined="2011-05-05"/>
+		<cosponsor id="412475" joined="2011-04-15"/>
+		<cosponsor id="412400" joined="2011-04-14"/>
+		<cosponsor id="400076" joined="2011-05-26"/>
+		<cosponsor id="400419" joined="2011-05-02"/>
+		<cosponsor id="412225" joined="2011-04-14"/>
+		<cosponsor id="412270" joined="2011-04-15"/>
+		<cosponsor id="412314" joined="2011-05-13"/>
+		<cosponsor id="400645" joined="2011-05-05"/>
+		<cosponsor id="400628" joined="2011-05-04"/>
+		<cosponsor id="412472" joined="2011-04-14"/>
+		<cosponsor id="412405" joined="2011-04-14"/>
+		<cosponsor id="400266" joined="2011-05-10"/>
+		<cosponsor id="412196" joined="2011-04-14"/>
+		<cosponsor id="400276" joined="2011-04-14"/>
+		<cosponsor id="400196" joined="2011-05-05"/>
+		<cosponsor id="412256" joined="2011-04-14"/>
+		<cosponsor id="400440" joined="2011-04-14"/>
+		<cosponsor id="400077" joined="2011-04-14"/>
+		<cosponsor id="412217" joined="2011-05-05"/>
+		<cosponsor id="400116" joined="2011-04-14"/>
+		<cosponsor id="412281" joined="2011-05-23"/>
+		<cosponsor id="400260" joined="2011-05-04"/>
+		<cosponsor id="400032" joined="2011-05-10"/>
+		<cosponsor id="412231" joined="2011-05-05"/>
+		<cosponsor id="412411" joined="2011-04-14"/>
+		<cosponsor id="412406" joined="2011-04-14"/>
+		<cosponsor id="412443" joined="2011-04-14"/>
+		<cosponsor id="412295" joined="2011-05-10"/>
+		<cosponsor id="400345" joined="2011-04-14"/>
+		<cosponsor id="412480" joined="2011-06-01"/>
+		<cosponsor id="412417" joined="2011-05-03"/>
+		<cosponsor id="412408" joined="2011-06-13"/>
+		<cosponsor id="412283" joined="2011-04-14"/>
+		<cosponsor id="400341" joined="2011-04-14"/>
+		<cosponsor id="412445" joined="2011-04-14"/>
+		<cosponsor id="412441" joined="2011-04-15"/>
+		<cosponsor id="412401" joined="2011-04-14"/>
+		<cosponsor id="412255" joined="2011-05-23"/>
+		<cosponsor id="412430" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+		<action datetime="2011-04-25"><committee name="House Committee on Energy and Commerce"/><text>Referred to the Subcommittee on Environment and the Economy.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="" name="House Energy and Commerce" subcommittee="Environment and the Economy" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="838" />
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Outdoor recreation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/14/2011--Introduced.
+Hunting, Fishing, and Recreational Shooting Protection Act - Amends the Toxic Substances Control Act (TSCA) to exclude from the definition of &quot;chemical substance&quot; for purposes of such Act: (1) any component of any pistol, revolver, firearm, shell, or cartridge the sale of which is subject to federal excise tax, including shot, bullets and other projectiles, propellants, and primers; and (2) any sport fishing equipment the sale of which is subject to federal excise tax and sport fishing equipment components. 
+	</summary>
+</bill>

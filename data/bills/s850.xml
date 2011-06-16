@@ -1,0 +1,48 @@
+<bill session="112" type="s" number="850" updated="2011-05-11T06:31:18-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Autism Services and Workforce Acceleration Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide for enhanced treatment, support, services, and research for individuals with autism spectrum disorders and their families.</title>
+	</titles>
+	<sponsor id="300038"/>
+	<cosponsors>
+		<cosponsor id="412223" joined="2011-04-14"/>
+		<cosponsor id="400272" joined="2011-04-14"/>
+		<cosponsor id="412246" joined="2011-04-14"/>
+		<cosponsor id="300064" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Sponsor introductory remarks on measure. (CR S2525)</text></action>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text><reference label="text of measure as introduced" ref="CR S2526-2529"/></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Advisory bodies"/>
+		<term name="Child care and development"/>
+		<term name="Child health"/>
+		<term name="Employment and training programs"/>
+		<term name="Health care coverage and access"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Health promotion and preventive care"/>
+		<term name="Hereditary and development disorders"/>
+		<term name="Higher education"/>
+		<term name="Medical education"/>
+		<term name="Medical research"/>
+		<term name="Research administration and funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

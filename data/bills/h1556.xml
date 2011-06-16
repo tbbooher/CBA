@@ -1,0 +1,40 @@
+<bill session="112" type="h" number="1556" updated="2011-05-10T06:10:48-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Omnibus Indian Advancement Act to allow certain land to be used to generate income to provide funding for academic programs, and for other purposes.</title>
+	</titles>
+	<sponsor id="412293"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-22"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee Indian and Alaska Native Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Indian and Alaska Native Affairs" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Native Americans"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Indian lands and resources rights"/>
+		<term name="Indian social and development programs"/>
+		<term name="Land use and conservation"/>
+		<term name="Minority education"/>
+		<term name="Minority health"/>
+		<term name="New Mexico"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

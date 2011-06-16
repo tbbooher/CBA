@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="878" updated="2011-05-18T06:31:19-04:00">
+	<state datetime="2011-05-04">INTRODUCED</state>
+	<status><introduced datetime="2011-05-04"/></status>
+
+	<introduced datetime="2011-05-04"/>
+	<titles>
+		<title type="short" as="introduced">Rural Housing Preservation Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend section 520 of the Housing Act of 1949 to revise the requirements for areas to be considered as rural areas for purposes of such Act.</title>
+	</titles>
+	<sponsor id="300077"/>
+	<cosponsors>
+		<cosponsor id="412320" joined="2011-05-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-04"><text>Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBK" name="Senate Banking, Housing, and Urban Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="273" />
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Census and government statistics"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Housing finance and home ownership"/>
+		<term name="Rural conditions and development"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

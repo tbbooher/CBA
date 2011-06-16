@@ -1,0 +1,47 @@
+<bill session="112" type="h" number="2040" updated="2011-06-14T06:19:10-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">National Right-to-Work Act</title>
+		<title type="official" as="introduced">To preserve and protect the free choice of individual employees to form, join, or assist labor organizations, or to refrain from such activities.</title>
+	</titles>
+	<sponsor id="400220"/>
+	<cosponsors>
+		<cosponsor id="412275" joined="2011-06-13"/>
+		<cosponsor id="412429" joined="2011-06-13"/>
+		<cosponsor id="400277" joined="2011-05-26"/>
+		<cosponsor id="400311" joined="2011-05-26"/>
+		<cosponsor id="412280" joined="2011-06-13"/>
+		<cosponsor id="400076" joined="2011-06-02"/>
+		<cosponsor id="400643" joined="2011-05-26"/>
+		<cosponsor id="412472" joined="2011-05-26"/>
+		<cosponsor id="412196" joined="2011-06-13"/>
+		<cosponsor id="412401" joined="2011-06-13"/>
+		<cosponsor id="400656" joined="2011-06-01"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on Education and the Workforce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSED" name="House Education and the Workforce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="504" />
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Employment discrimination and employee rights"/>
+		<term name="Labor-management relations"/>
+		<term name="Railroads"/>
+		<term name="Transportation employees"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/26/2011--Introduced.
+National Right-to-Work Act - Amends the National Labor Relations Act and the Railway Labor Act to repeal those provisions that permit employers, pursuant to a collective bargaining agreement that is a union security agreement, to require employees to join a union as a condition of employment (including provisions permitting railroad carriers to require, pursuant to such an agreement, payroll deduction of union dues or fees as a condition of employment). 
+	</summary>
+</bill>

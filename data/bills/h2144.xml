@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="2144" updated="2011-06-14T06:34:33-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">21st Century Global Health Technology Act</title>
+		<title type="official" as="introduced">To amend the Foreign Assistance Act of 1961 to codify the cooperative agreement, known as the Health Technologies program, under which the United States Agency for International Development supports the development of technologies for global health, and for other purposes.</title>
+	</titles>
+	<sponsor id="412186"/>
+	<cosponsors>
+		<cosponsor id="400661" joined="2011-06-03"/>
+		<cosponsor id="412221" joined="2011-06-03"/>
+		<cosponsor id="400379" joined="2011-06-03"/>
+		<cosponsor id="400312" joined="2011-06-03"/>
+		<cosponsor id="400350" joined="2011-06-03"/>
+		<cosponsor id="400109" joined="2011-06-03"/>
+		<cosponsor id="400185" joined="2011-06-03"/>
+		<cosponsor id="400108" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

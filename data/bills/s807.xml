@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="807" updated="2011-05-10T06:14:07-04:00">
+	<state datetime="2011-04-13">INTRODUCED</state>
+	<status><introduced datetime="2011-04-13"/></status>
+
+	<introduced datetime="2011-04-13"/>
+	<titles>
+		<title type="short" as="introduced">Voluntary Protection Program Act</title>
+		<title type="official" as="introduced">A bill to authorize the Department of Labor's voluntary protection program and to expand the program to include more small businesses.</title>
+	</titles>
+	<sponsor id="300041"/>
+	<cosponsors>
+		<cosponsor id="400576" joined="2011-04-13"/>
+		<cosponsor id="300063" joined="2011-04-13"/>
+		<cosponsor id="400054" joined="2011-05-09"/>
+		<cosponsor id="412324" joined="2011-05-09"/>
+		<cosponsor id="400194" joined="2011-04-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-13"><text>Sponsor introductory remarks on measure. (CR S2448-2449)</text></action>
+		<action datetime="2011-04-13"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text><reference label="text of measure as introduced" ref="CR S2449"/></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1511" />
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Labor"/>
+		<term name="Small business"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,91 @@
+<bill session="112" type="s" number="892" updated="2011-05-26T06:20:31-04:00">
+	<state datetime="2011-05-05">INTRODUCED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Consolidation of Department of Energy and Environmental Protection Agency Act of 2011</title>
+		<title type="official" as="introduced">A bill to establish the Department of Energy and the Environment, and for other purposes.</title>
+	</titles>
+	<sponsor id="400054"/>
+	<cosponsors>
+		<cosponsor id="400576" joined="2011-05-25"/>
+		<cosponsor id="400034" joined="2011-05-05"/>
+		<cosponsor id="412496" joined="2011-05-05"/>
+		<cosponsor id="402675" joined="2011-05-05"/>
+		<cosponsor id="300054" joined="2011-05-05"/>
+		<cosponsor id="400418" joined="2011-05-05"/>
+		<cosponsor id="400408" joined="2011-05-25"/>
+		<cosponsor id="300089" joined="2011-05-05"/>
+		<cosponsor id="400105" joined="2011-05-05"/>
+		<cosponsor id="412251" joined="2011-05-05"/>
+		<cosponsor id="300071" joined="2011-05-05"/>
+		<cosponsor id="300052" joined="2011-05-05"/>
+		<cosponsor id="412495" joined="2011-05-05"/>
+		<cosponsor id="400040" joined="2011-05-05"/>
+		<cosponsor id="300041" joined="2011-05-05"/>
+		<cosponsor id="400546" joined="2011-05-05"/>
+		<cosponsor id="300023" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Advisory bodies"/>
+		<term name="Air quality"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Climate change"/>
+		<term name="Congressional oversight"/>
+		<term name="Department of Energy"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Energy assistance for the poor and aged"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Energy research"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental regulatory procedures"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal Energy Regulatory Commission (FERC)"/>
+		<term name="Federal officials"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Great Lakes"/>
+		<term name="Indian social and development programs"/>
+		<term name="Infrastructure development"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+		<term name="Latin America"/>
+		<term name="Law enforcement officers"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Mexico"/>
+		<term name="New Mexico"/>
+		<term name="Nuclear power"/>
+		<term name="Nuclear weapons"/>
+		<term name="Oil and gas"/>
+		<term name="Radioactive wastes and releases"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Solid waste and recycling"/>
+		<term name="State and local finance"/>
+		<term name="Strategic materials and reserves"/>
+		<term name="Terrorism"/>
+		<term name="Water quality"/>
+		<term name="Water use and supply"/>
+		<term name="Watersheds"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

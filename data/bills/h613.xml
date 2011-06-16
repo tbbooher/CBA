@@ -1,0 +1,52 @@
+<bill session="112" type="h" number="613" updated="2011-05-11T06:13:35-04:00">
+	<state datetime="2011-02-10">REFERRED</state>
+	<status><introduced datetime="2011-02-10"/></status>
+
+	<introduced datetime="2011-02-10"/>
+	<titles>
+		<title type="short" as="introduced">Airports, Highways, High-Speed Rail, Trains, and Transit: Make it in America Act</title>
+		<title type="official" as="introduced">To strengthen Buy America requirements applicable to airports, highways, high-speed rail, trains, and transit, and for other purposes.</title>
+	</titles>
+	<sponsor id="412382"/>
+	<cosponsors>
+		<cosponsor id="412221" joined="2011-05-10"/>
+		<cosponsor id="400183" joined="2011-02-10"/>
+		<cosponsor id="400211" joined="2011-02-14"/>
+		<cosponsor id="412215" joined="2011-02-10"/>
+		<cosponsor id="412228" joined="2011-05-03"/>
+		<cosponsor id="400116" joined="2011-04-11"/>
+		<cosponsor id="400355" joined="2011-02-18"/>
+		<cosponsor id="400278" joined="2011-02-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-10"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-02-11"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Aviation.</text></action>
+		<action datetime="2011-02-11"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+		<action datetime="2011-02-11"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Railroads, Pipelines, and Hazardous Materials.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Aviation" activity="Referral" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Railroads, Pipelines, and Hazardous Materials" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Aviation and airports"/>
+		<term name="Buy American requirements"/>
+		<term name="Public transit"/>
+		<term name="Railroads"/>
+		<term name="Roads and highways"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/10/2011--Introduced.
+Airports, Highways, High-Speed Rail, Trains, and Transit: Make it in America Act - Eliminates certain grounds for waiving Buy American requirements that the Secretary of Transportation (DOT) obligate federal funding for certain air navigation, highway, and rail activities and projects only if U.S. steel, iron, and manufactured goods are used in such projects. (Retains the current waiver of such Buy American requirements for any case where use of U.S. material will increase overall costs of a highway and roadway or highspeed rail project by more than 25%.) Revises waiver of Buy American requirements. Authorizes the Secretary to waive such requirements if the cost of U.S. components and subcomponents is: (1) more than 60% of the cost of all components of Federal Aviation Administration (FAA) facilities or equipment or rolling stock (buses and light and heavy rail trains), as under current law, in the case of obligations made on or before December 31, 2011; (2) more than 80% of the cost of all components of such items in the case of obligations made during calendar 2012; or (3) 100% of the cost of all components of such items, in the case of obligations made after December 31, 2013. Repeals the Secretary's authority to exempt Amtrak from Buy American requirements in certain circumstances.
+
+	</summary>
+</bill>

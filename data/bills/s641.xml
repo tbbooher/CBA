@@ -1,0 +1,62 @@
+<bill session="112" type="s" number="641" updated="2011-05-24T06:22:11-04:00">
+	<state datetime="2011-03-17">INTRODUCED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Senator Paul Simon Water for the World Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide 100,000,000 people with first-time access to safe drinking water and sanitation on a sustainable basis within six years by improving the capacity of the United States Government to fully implement the Senator Paul Simon Water for the Poor Act of 2005.</title>
+	</titles>
+	<sponsor id="300038"/>
+	<cosponsors>
+		<cosponsor id="300083" joined="2011-03-17"/>
+		<cosponsor id="412242" joined="2011-05-16"/>
+		<cosponsor id="412325" joined="2011-05-23"/>
+		<cosponsor id="300065" joined="2011-03-17"/>
+		<cosponsor id="300009" joined="2011-03-28"/>
+		<cosponsor id="400064" joined="2011-03-17"/>
+		<cosponsor id="300082" joined="2011-03-17"/>
+		<cosponsor id="300001" joined="2011-05-16"/>
+		<cosponsor id="300076" joined="2011-05-11"/>
+		<cosponsor id="412248" joined="2011-03-17"/>
+		<cosponsor id="412247" joined="2011-05-11"/>
+		<cosponsor id="412390" joined="2011-05-09"/>
+		<cosponsor id="400194" joined="2011-03-17"/>
+		<cosponsor id="300058" joined="2011-04-04"/>
+		<cosponsor id="300064" joined="2011-03-28"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Sponsor introductory remarks on measure. (CR S1848)</text></action>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Foreign Relations.</text><reference label="text of measure as introduced" ref="CR S1848-1850"/></action>
+	</actions>
+	<committees>
+		<committee code="SSFR" name="Senate Foreign Relations" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Child health"/>
+		<term name="Congressional oversight"/>
+		<term name="Department of State"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Foreign aid and international relief"/>
+		<term name="HIV-AIDS"/>
+		<term name="Health promotion and preventive care"/>
+		<term name="Infectious and parasitic diseases"/>
+		<term name="Solid waste and recycling"/>
+		<term name="Water resources funding"/>
+		<term name="Water use and supply"/>
+		<term name="Women's health"/>
+		<term name="World health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/17/2011--Introduced.
+Senator Paul Simon Water for the World Act of 2011 - Calls for the United States to help undertake a global effort to bring sustainable access to clean water and sanitation to poor people throughout the world. Amends the Foreign Assistance Act of 1961 to direct the Administrator of the United States Agency for International Development (USAID) to designate a Senior Advisor for Water, who shall: (1) implement the Senator Paul Simon Water for the Poor Act of 2005; (2) develop and oversee implementation, in high priority countries, of country-specific water strategies and expertise to enable the goal of providing 100 million additional people with sustainable access to safe water and sanitation through direct funding, development activities, and partnerships within six years of this Act's enactment; (3) place primary emphasis on providing safe, affordable, and sustainable drinking water, sanitation, and hygiene in a manner that is consistent with sound water resource management principles; and (4) integrate water strategies with country-specific or regional food security strategies. Requires the Secretary of State, in order to increase the capacity of the Department of State to address international issues regarding safe water, sanitation, integrated river basin management, and other international water programs, to establish a Special Coordinator for International Water to: (1) oversee and coordinate U.S. diplomatic policy with respect to global freshwater issues; and (2) ensure that international freshwater issues are represented within the U.S. government and in key diplomatic, development, and scientific efforts with other nations and multilateral organizations. Amends the Senator Paul Simon Water for the Poor Act of 2005 to require such Special Coordinator to ensure that the safe water and sanitation strategy is integrated into any review or development of a federal strategy for global development, health, or food security that sets forth the U.S. mission for global development, guidelines for assistance programs, and how development policy will be coordinated with policies governing trade, immigration, and other relevant international issues. Requires the safe water and sanitation strategy to include: (1) an assessment of U.S. foreign assistance allocated to the drinking water and sanitation sector during the three previous fiscal years, including assessing whether U.S. efforts are supporting the goal of enabling first-time access to safe water and sanitation on a sustainable basis for 100 million people in high priority countries; (2) recommendations on actions needed to achieve such goals and support the United Nation's Millennium Development Goal on access to safe drinking water; and (3) an assessment of best practices for mobilizing and leveraging the capacity of business, governments, organizations, and civil society in forming public-private partnerships that measurably increase access to safe, affordable, drinking water sanitation. Requires the Secretary and the Administrator to establish a program to build the capacity of host country institutions and officials responsible for water and sanitation in countries that receive assistance to provide safe water and sanitation under the Foreign Assistance Act of 1961. Authorizes the Secretary and the Administrator to establish such program in additional countries if the receipt of such capacity building would be beneficial for promoting access to safe drinking water and sanitation, with due consideration given to good governance. Requires the USAID Mission Director for each country receiving a high priority designation and for each region containing a country receiving such designation to report annually to Congress on the status of: (1) designating safe drinking water and sanitation as a strategic objective; and (2) integrating the water strategy into a food security strategy. Expands the list of activities that may be supported by assistance furnished by the President for programs in developing countries to provide affordable and equitable access to safe water and sanitation. Requires the report regarding water for peace and security to include an assessment of political tensions over water sources and a multidisciplinary assessment of the expected impacts of changes to water supplies in 10, 25, and 50 years. Requires the Comptroller General to report on the effectiveness and efficiency of U.S. efforts to provide safe water and sanitation for developing countries.
+
+	</summary>
+</bill>

@@ -1,0 +1,43 @@
+<bill session="112" type="sr" number="129" updated="2011-04-07T06:22:12-04:00">
+	<state datetime="2011-04-05">PASSED:SIMPLERES</state>
+	<status><vote datetime="2011-04-05" where="s" result="pass" how="by Unanimous Consent" roll=""/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="official" as="introduced">A resolution honoring the 29 coal miners who perished in the explosion at the Upper Big Branch Mine in Montcoal, West Virginia, on April 5, 2010, and remembering all those who have lost their lives while mining for the resources on which the United States relies.</title>
+	</titles>
+	<sponsor id="300084"/>
+	<cosponsors>
+		<cosponsor id="300041" joined="2011-04-04"/>
+		<cosponsor id="300051" joined="2011-04-04"/>
+		<cosponsor id="412391" joined="2011-04-04"/>
+		<cosponsor id="300076" joined="2011-04-04"/>
+		<cosponsor id="400194" joined="2011-04-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Referred to the Committee on Health, Education, Labor, and Pensions.</text><reference label="text of measure as introduced" ref="CR S2092"/></action>
+		<action datetime="2011-04-05"><text>Senate Committee on Health, Education, Labor, and Pensions discharged by Unanimous Consent.</text></action>
+		<vote how="by Unanimous Consent" type="vote" datetime="2011-04-05" where="s" result="pass"  state="PASSED:SIMPLERES"><text>Resolution agreed to in Senate without amendment and with a preamble by Unanimous Consent.</text><reference label="consideration" ref="CR S2142-2143"/><reference label="text" ref="CR S2142-2143"/></vote>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, Discharged" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Accidents"/>
+		<term name="Coal"/>
+		<term name="Congressional tributes"/>
+		<term name="Mining"/>
+		<term name="West Virginia"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

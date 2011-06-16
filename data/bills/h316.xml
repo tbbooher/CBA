@@ -1,0 +1,35 @@
+<bill session="112" type="h" number="316" updated="2011-02-12T06:11:59-05:00">
+	<state datetime="2011-01-18">REFERRED</state>
+	<status><introduced datetime="2011-01-18"/></status>
+
+	<introduced datetime="2011-01-18"/>
+	<titles>
+		<title type="official" as="introduced">For the relief of Esther Karinge.</title>
+	</titles>
+	<sponsor id="400253"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-18"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-02-11"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Immigration Policy and Enforcement.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Immigration Policy and Enforcement" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Private legislation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/18/2011--Introduced.
+Provides for the relief of Esther Karinge.
+
+	</summary>
+</bill>

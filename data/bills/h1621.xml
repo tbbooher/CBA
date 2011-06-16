@@ -1,0 +1,62 @@
+<bill session="112" type="h" number="1621" updated="2011-05-24T06:17:53-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Marine Corps Aviation Centennial Commemorative Coin Act</title>
+		<title type="official" as="introduced">To require the Secretary of the Treasury to mint coins in commemoration of the Centennial of Marine Corps Aviation, and to support construction of the Marine Corps Heritage Center.</title>
+	</titles>
+	<sponsor id="400224"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-05-02"/>
+		<cosponsor id="400352" joined="2011-04-15"/>
+		<cosponsor id="400279" joined="2011-05-04"/>
+		<cosponsor id="400041" joined="2011-04-15"/>
+		<cosponsor id="412271" joined="2011-04-15"/>
+		<cosponsor id="412457" joined="2011-05-23"/>
+		<cosponsor id="412483" joined="2011-05-23"/>
+		<cosponsor id="412451" joined="2011-04-15"/>
+		<cosponsor id="412199" joined="2011-05-04"/>
+		<cosponsor id="400209" joined="2011-04-15"/>
+		<cosponsor id="400122" joined="2011-05-04"/>
+		<cosponsor id="400411" joined="2011-05-02"/>
+		<cosponsor id="412449" joined="2011-04-15"/>
+		<cosponsor id="400196" joined="2011-05-10"/>
+		<cosponsor id="412256" joined="2011-05-23"/>
+		<cosponsor id="412386" joined="2011-04-15"/>
+		<cosponsor id="412428" joined="2011-04-15"/>
+		<cosponsor id="400288" joined="2011-05-23"/>
+		<cosponsor id="412443" joined="2011-04-15"/>
+		<cosponsor id="400108" joined="2011-05-10"/>
+		<cosponsor id="400321" joined="2011-05-02"/>
+		<cosponsor id="412445" joined="2011-05-23"/>
+		<cosponsor id="412441" joined="2011-04-15"/>
+		<cosponsor id="412478" joined="2011-05-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Domestic Monetary Policy and Technology.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Domestic Monetary Policy and Technology" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Aviation and airports"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="Currency"/>
+		<term name="Military history"/>
+		<term name="Museums, exhibitions, cultural centers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

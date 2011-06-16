@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2093" updated="2011-06-14T06:30:40-04:00">
+	<state datetime="2011-06-02">REFERRED</state>
+	<status><introduced datetime="2011-06-02"/></status>
+
+	<introduced datetime="2011-06-02"/>
+	<titles>
+		<title type="short" as="introduced">Fannie Mae and Freddie Mac Investigative Commission Act</title>
+		<title type="official" as="introduced">To establish the Fannie Mae and Freddie Mac Investigative Commission to investigate the policies and practices engaged in by officers and directors at Fannie Mae and Freddie Mac responsible for making the decisions that led to the enterprises' financial instability and the subsequent Federal conservatorship of such enterprises.</title>
+	</titles>
+	<sponsor id="400211"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-02"><text>Referred to the House Committee on Financial Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,105 @@
+<bill session="112" type="h" number="1363" updated="2011-04-13T06:23:48-04:00">
+	<state datetime="2011-04-09">ENACTED:SIGNED</state>
+	<status><enacted datetime="2011-04-09" /></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">Department of Defense and Further Additional Continuing Appropriations Act, 2011</title>
+		<title type="short" as="introduced">Department of Defense Appropriations Act, 2011</title>
+		<title type="short" as="introduced">Further Additional Continuing Appropriations Amendments, 2011</title>
+		<title type="short" as="passed house">Department of Defense and Further Additional Continuing Appropriations Act, 2011</title>
+		<title type="short" as="passed house">Department of Defense Appropriations Act, 2011</title>
+		<title type="short" as="passed senate">Further Additional Continuing Appropriations Amendments, 2011</title>
+		<title type="short" as="enacted">Further Additional Continuing Appropriations Amendments, 2011</title>
+		<title type="official" as="introduced">Making appropriations for the Department of Defense for the fiscal year ending September 30, 2011, and for other purposes.</title>
+	</titles>
+	<sponsor id="400340"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Referred to the Committee on Appropriations, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-04"><text>Referred to House Appropriations</text></action>
+		<action datetime="2011-04-04"><text>Referred to House Budget</text></action>
+		<action datetime="2011-04-06T19:53:00-04:00"><text>Rules Committee Resolution H. Res. 206 Reported to House. Rule provides for consideration of H.R. 1363 with 1 hour of general debate. Previous question shall be considered as ordered except motion to recommit. Measure will be considered read. Bill is closed to amendments. All points of order against consideration of the bill and the provisions of the bill are waived.</text></action>
+		<action datetime="2011-04-07T11:51:00-04:00"><text>Rule H. Res. 206 passed House.</text></action>
+		<action datetime="2011-04-07T12:09:00-04:00"><text>Considered under the provisions of rule H. Res. 206.</text><reference label="consideration" ref="CR H2426-2505"/></action>
+		<action datetime="2011-04-07T12:09:00-04:00"><text>Rule provides for consideration of H.R. 1363 with 1 hour of general debate. Previous question shall be considered as ordered except motion to recommit. Measure will be considered read. Bill is closed to amendments. All points of order against consideration of the bill and the provisions of the bill are waived.</text></action>
+		<action datetime="2011-04-07T12:10:00-04:00"><text>DEBATE - The House proceeded with one hour of debate on H.R. 1363.</text></action>
+		<action datetime="2011-04-07T13:29:00-04:00"><text>The previous question was ordered pursuant to the rule.</text><reference label="consideration" ref="CR H2501"/></action>
+		<action datetime="2011-04-07T13:30:00-04:00"><text>Mr. Hoyer moved to recommit with instructions to Appropriations.</text><reference label="consideration" ref="CR H2501-2503"/><reference label="text" ref="CR H2501-2502"/></action>
+		<action datetime="2011-04-07T13:31:00-04:00"><text>DEBATE - The House proceeded with 10 minutes of debate on the motion to recommit with instructions, pending the reservation of a point of order. The instructions contained in the motion seek to require the bill to be reported back to the House with an amendment that strikes all after the enacting clause and inserts the following: &quot;That the Continuing Appropriations Act, 2011 (Public Law 111-242) is further amended by striking the date specified in section 106(3) and inserting April 15, 2011&quot;.</text></action>
+		<action datetime="2011-04-07T13:37:00-04:00"><text>Mr. Rogers (KY) raised a point of order against the motion to recommit with instructions. Mr. Rogers (KY) stated that the provisions of the motion to recommit propose a net increase in budget authority in the bill. Sustained by the Chair.</text></action>
+		<action datetime="2011-04-07T13:39:00-04:00"><text>Mr. Hoyer appealed the ruling of the chair.</text></action>
+		<action datetime="2011-04-07T13:39:00-04:00"><text>Mr. Rogers (KY) moved to table the motion to appeal the ruling of the chair</text></action>
+		<action datetime="2011-04-07T14:02:00-04:00"><text>On motion to table the motion to appeal the ruling of the chair Agreed to by the Yeas and Nays: 236 - 187 (Roll no. 245).</text><reference label="consideration" ref="CR H2503"/></action>
+		<action datetime="2011-04-07T14:03:00-04:00"><text>Mr. Owens moved to recommit with instructions to Appropriations.</text><reference label="consideration" ref="CR H2503-2504"/><reference label="text" ref="CR H2503"/></action>
+		<action datetime="2011-04-07T14:03:00-04:00"><text>DEBATE - The House proceeded with 10 minutes of debate on the Owens motion to recommit with instructions. The instructions contained in the motion seek to require the bill to be reported back to the House with an amendment to add a new section to the end of title VIII of division A which provides that salaries to members of the armed forces would not be interrupted in the event of a federal government shutdown.</text></action>
+		<action datetime="2011-04-07T14:10:00-04:00"><text>The previous question on the motion to recommit with instructions was ordered without objection.</text><reference label="consideration" ref="CR H2504"/></action>
+		<action datetime="2011-04-07T14:26:00-04:00"><text>On motion to recommit with instructions Failed by the Yeas and Nays: 191 - 236 (Roll no. 246).</text></action>
+		<vote how="roll" type="vote" roll="247" datetime="2011-04-07T14:33:00-04:00" where="h" result="pass"  state="PASS_OVER:HOUSE"><text>On passage Passed by the Yeas and Nays: 247 - 181 (Roll no. 247).</text><reference label="text" ref="CR H2426-2451"/></vote>
+		<action datetime="2011-04-07T14:33:00-04:00"><text>Motion to reconsider laid on the table Agreed to without objection.</text></action>
+		<action datetime="2011-04-07"><text>Received in the Senate.</text></action>
+		<calendar under="General Orders" number="28" datetime="2011-04-07" calendar="Senate Legislative" ><text>Ordered placed on Senate Legislative Calendar under General Orders. Calendar No. 28.</text></calendar>
+		<action datetime="2011-04-08"><text>Measure laid before Senate by unanimous consent.</text><reference label="consideration" ref="CR S2340-2342"/></action>
+		<vote how="by Unanimous Consent" type="vote2" datetime="2011-04-08" where="s" result="pass"  state="PASS_BACK:SENATE"><text>Passed Senate with an amendment by Unanimous Consent.</text></vote>
+		<action datetime="2011-04-08"><text>Message on Senate action sent to the House.</text></action>
+		<action datetime="2011-04-09T00:03:00-04:00"><text>Pursuant to a previous order of the House, the Chair recognized Mr. Rogers (KY) for a motion.</text></action>
+		<action datetime="2011-04-09T00:04:00-04:00"><text>Mr. Rogers (KY) moved that the House agree to the Senate amendment. (consideration: CR 4/8/2011 H2565-2567)</text></action>
+		<action datetime="2011-04-09T00:04:00-04:00"><text>DEBATE - Pursuant to a previous order of the House, the House proceeded with 20 minutes of debate on agreeing to the Senate amendment to H.R. 1363.</text></action>
+		<action datetime="2011-04-09T00:12:00-04:00"><text>The previous question was ordered pursuant to a previous special order. (consideration: CR 4/8/2011 H2566)</text></action>
+		<vote how="roll" type="pingpong" roll="253" datetime="2011-04-09T00:40:00-04:00" where="h" result="pass"  state="PASSED:BILL"><text>On motion that the House agree to the Senate amendment Agreed to by the Yeas and Nays: 348 - 70 (Roll no. 253). (text as House agreed to Senate amendment: CR 4/8/2011 H2565-2566)</text></vote>
+		<action datetime="2011-04-09T00:40:00-04:00"><text>Motion to reconsider laid on the table Agreed to without objection.</text></action>
+		<topresident datetime="2011-04-09" ><text>Presented to President.</text></topresident>
+		<signed datetime="2011-04-09" ><text>Signed by President.</text></signed>
+		<enacted number="112-8" type="public" datetime="2011-04-09"  state="ENACTED:SIGNED"><text>Became Public Law No: 112-8.</text></enacted>
+	</actions>
+	<committees>
+		<committee code="HSAP" name="House Appropriations" activity="Referral" />
+		<committee code="HSBU" name="House Budget" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="rule" session="112" type="hr" number="206" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Afghanistan"/>
+		<term name="Appropriations"/>
+		<term name="Arms control and nonproliferation"/>
+		<term name="Asia"/>
+		<term name="Central Intelligence Agency (CIA)"/>
+		<term name="Defense spending"/>
+		<term name="Department of Defense"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal appellate courts"/>
+		<term name="Foreign aid and international relief"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government trust funds"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+		<term name="Iraq"/>
+		<term name="Marine and inland water transportation"/>
+		<term name="Middle East"/>
+		<term name="Military assistance and sales, agreements, alliances"/>
+		<term name="Military civil functions"/>
+		<term name="Military medicine"/>
+		<term name="Military operations and strategy"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Military procurement, research, weapons development"/>
+		<term name="National Guard and reserves"/>
+		<term name="Nuclear weapons"/>
+		<term name="Reconstruction and stabilization"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Specialized courts"/>
+	</subjects>
+	<amendments>
+		<amendment number="s291"/>
+	</amendments>
+	<summary>
+	4/4/2011--Introduced.
+Department of Defense and Further Additional Continuing Appropriations Act, 2011 - Department of Defense Appropriations Act, 2011 - Appropriates funds for FY2011 for the Department of Defense (DOD) for: (1) military personnel; (2) operation and maintenance, including for the United States Court of Appeals for the Armed Forces, environmental restoration, overseas humanitarian, disaster, and civic aid, former Soviet Union cooperative threat reduction, and the Department of Defense Acquisition Workforce Development Fund; (3) procurement, including for aircraft, missile, weapons and tracked combat vehicles, ammunition, shipbuilding and conversion, and purchases under the Defense Production Act of 1950; (4) research, development, test, and evaluation (RDT&amp;E); (5) Defense Working Capital Funds and the National Defense Sealift Fund; (6) the Defense Health Program; (7) chemical agents and munitions destruction; (8) drug interdiction and counter-drug activities; (9) the Office of the Inspector General; (10) the Central Intelligence Agency Retirement and Disability System Fund; and (11) the Intelligence Community Management Account. Specifies authorized, restricted, and prohibited uses of appropriated funds. Rescinds specified funds from various accounts under prior defense appropriations Acts. Appropriates funds for deployments and other activities in support of overseas contingency operations, including for: (1) regular, reserve, and National Guard personnel; (2) operation and maintenance; (3) the Afghanistan Infrastructure Fund; (4) the Afghanistan Security Forces Fund; (5) the Iraq Security Forces Fund; (6) procurement; (7) National Guard and reserve equipment; (8) the Mine Resistant Ambush Protected Vehicle Fund; (9) RDT&amp;E; (10) Defense Working Capital Funds; (11) the Defense Health Program; (12) drug interdiction and counter-drug activities; (13) the Joint Improvised Explosive Device Defeat Fund; and (14) the Office of the Inspector General. Further Additional Continuing Appropriations Amendments, 2011 - Makes further continuing appropriations for various federal programs. Adjusts various program fund amounts. Provides operational rate limits. Rescinds various program funds.
+
+	</summary>
+</bill>

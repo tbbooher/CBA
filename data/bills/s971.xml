@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="971" updated="2011-05-28T06:29:54-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Digital Goods and Services Tax Fairness Act of 2011</title>
+		<title type="official" as="introduced">A bill to promote neutrality, simplicity, and fairness in the taxation of digital goods and digital services.</title>
+	</titles>
+	<sponsor id="300100"/>
+	<cosponsors>
+		<cosponsor id="400546" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Sponsor introductory remarks on measure. (CR S2941)</text></action>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1860" />
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Internet and video services"/>
+		<term name="Retail and wholesale trades"/>
+		<term name="Sales and excise taxes"/>
+		<term name="State and local taxation"/>
+		<term name="Tax administration and collection, taxpayers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

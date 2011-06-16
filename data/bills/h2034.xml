@@ -1,0 +1,36 @@
+<bill session="112" type="h" number="2034" updated="2011-06-14T06:27:35-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Omnibus Crime Control and Safe Streets Act of 1968 to include fire police officers in the list of officers who are eligible for public safety officers' death benefits.</title>
+	</titles>
+	<sponsor id="400147"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1348" />
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Employee benefits and pensions"/>
+		<term name="Fires"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Law enforcement officers"/>
+		<term name="Social work, volunteer service, charitable organizations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

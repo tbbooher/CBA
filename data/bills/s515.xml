@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="515" updated="2011-03-15T06:22:12-04:00">
+	<state datetime="2011-03-08">INTRODUCED</state>
+	<status><introduced datetime="2011-03-08"/></status>
+
+	<introduced datetime="2011-03-08"/>
+	<titles>
+		<title type="official" as="introduced">A bill to rescind amounts made available for water treatment improvements for the Flathead County Water and Sewer District and make the amounts available for Federal deficit reduction.</title>
+	</titles>
+	<sponsor id="412244"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-08"><text>Read twice and referred to the Committee on Appropriations.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSAP" name="Senate Appropriations" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Water resources development"/>
+		<term name="Appropriations"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Montana"/>
+		<term name="Water quality"/>
+		<term name="Water resources funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

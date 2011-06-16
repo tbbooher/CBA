@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="2025" updated="2011-06-14T06:29:46-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Border States Security Improvement Act</title>
+		<title type="official" as="introduced">To amend title 32, United States Code, to require the Secretary of Defense to provide funds to support the use by a State of the National Guard, State defense forces, and law enforcement agencies in securing an international border that forms part of the border of the State, and for other purposes.</title>
+	</titles>
+	<sponsor id="400068"/>
+	<cosponsors>
+		<cosponsor id="400209" joined="2011-05-26"/>
+		<cosponsor id="412397" joined="2011-05-26"/>
+		<cosponsor id="400651" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on Armed Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Arizona"/>
+		<term name="Border security and unlawful immigration"/>
+		<term name="California"/>
+		<term name="Defense spending"/>
+		<term name="Latin America"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Mexico"/>
+		<term name="National Guard and reserves"/>
+		<term name="New Mexico"/>
+		<term name="Texas"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

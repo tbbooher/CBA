@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="1251" updated="2011-04-05T06:22:01-04:00">
+	<state datetime="2011-03-30">REFERRED</state>
+	<status><introduced datetime="2011-03-30"/></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">More Water for Our Valley Act, 2011</title>
+		<title type="official" as="introduced">To provide congressional direction for implementation of the Endangered Species Act as it relates to operation of the Central Valley Project and the California State Water Project and for water relief in the State of California.</title>
+	</titles>
+	<sponsor id="400618"/>
+	<cosponsors>
+		<cosponsor id="400065" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Sponsor introductory remarks on measure. (CR H2050)</text></action>
+		<action datetime="2011-03-30"><text>Referred to the House Committee on Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Water resources development"/>
+		<term name="Aquaculture"/>
+		<term name="Aquatic ecology"/>
+		<term name="California"/>
+		<term name="Endangered and threatened species"/>
+		<term name="Fishes"/>
+		<term name="Water use and supply"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

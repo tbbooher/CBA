@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="1131" updated="2011-04-06T06:15:47-04:00">
+	<state datetime="2011-03-16">REFERRED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">Preventing Homeowners from Foreclosure Act of 2011</title>
+		<title type="official" as="introduced">To authorize the Secretary of Housing and Urban Development to provide grants to State and local governments to carry out programs to provide mediation between mortgagees and mortgagors facing foreclosure.</title>
+	</titles>
+	<sponsor id="412236"/>
+	<cosponsors>
+		<cosponsor id="400170" joined="2011-03-29"/>
+		<cosponsor id="412200" joined="2011-04-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-04-04"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Insurance, Housing and Community Opportunity.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Insurance, Housing and Community Opportunity" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Housing and community development"/>
+		<term name="Housing and community development funding"/>
+		<term name="Housing finance and home ownership"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/16/2011--Introduced.
+Preventing Homeowners from Foreclosure Act of 2011 - Directs the Secretary of Housing and Urban Development (HUD) to implement a competitive grants program for states and local governmental entities to establish mediation programs to assist mortgagors under home mortgages facing foreclosure on such mortgages. Requires the program to provide the mortgagor with a referral and contact information for a paid or pro bono attorney or a HUD-certified housing counselor. Requires grant recipients to establish an outreach program to raise homeowner awareness of the existence of the foreclosure mediation program, including a telephone hotline, a World Wide Web site, or both. 
+	</summary>
+</bill>

@@ -1,0 +1,48 @@
+<bill session="112" type="h" number="1686" updated="2011-06-01T06:16:19-04:00">
+	<state datetime="2011-05-03">REFERRED</state>
+	<status><introduced datetime="2011-05-03"/></status>
+
+	<introduced datetime="2011-05-03"/>
+	<titles>
+		<title type="official" as="introduced">To designate the facility of the United States Postal Service located at 200 South Morgan Street in Shelbyville, Illinois, as the &quot;Jesse M. Donaldson Post Office&quot;.</title>
+	</titles>
+	<sponsor id="400373"/>
+	<cosponsors>
+		<cosponsor id="400082" joined="2011-05-31"/>
+		<cosponsor id="412421" joined="2011-05-03"/>
+		<cosponsor id="400350" joined="2011-05-03"/>
+		<cosponsor id="412314" joined="2011-05-05"/>
+		<cosponsor id="400207" joined="2011-05-05"/>
+		<cosponsor id="400093" joined="2011-05-10"/>
+		<cosponsor id="412422" joined="2011-05-11"/>
+		<cosponsor id="400630" joined="2011-05-11"/>
+		<cosponsor id="400163" joined="2011-05-24"/>
+		<cosponsor id="412331" joined="2011-05-10"/>
+		<cosponsor id="412202" joined="2011-05-24"/>
+		<cosponsor id="400252" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-03"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Congressional tributes"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Illinois"/>
+		<term name="Postal service"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/3/2011--Introduced.
+Designates the facility of the United States Postal Service located at 200 South Morgan Street in Shelbyville, Illinois, as the &quot;Jesse M. Donaldson Post Office.&quot;
+
+	</summary>
+</bill>

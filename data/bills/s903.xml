@@ -1,0 +1,44 @@
+<bill session="112" type="s" number="903" updated="2011-05-19T06:23:46-04:00">
+	<state datetime="2011-05-05">INTRODUCED</state>
+	<status><introduced datetime="2011-05-05"/></status>
+
+	<introduced datetime="2011-05-05"/>
+	<titles>
+		<title type="short" as="introduced">Citrus Disease Research and Development Trust Fund Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Trade Act of 1974 to create a Citrus Disease Research and Development Trust Fund to support research on diseases impacting the citrus industry, and for other purposes.</title>
+	</titles>
+	<sponsor id="300078"/>
+	<cosponsors>
+		<cosponsor id="300043" joined="2011-05-05"/>
+		<cosponsor id="300011" joined="2011-05-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-05"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Foreign trade and international finance"/>
+		<term name="Agricultural pests"/>
+		<term name="Agricultural research"/>
+		<term name="Agricultural trade"/>
+		<term name="Animal and plant health"/>
+		<term name="Congressional oversight"/>
+		<term name="Fruit and vegetables"/>
+		<term name="Government trust funds"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Tariffs"/>
+		<term name="Trade agreements and negotiations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

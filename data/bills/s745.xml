@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="745" updated="2011-06-09T06:13:45-04:00">
+	<state datetime="2011-04-06">INTRODUCED</state>
+	<status><introduced datetime="2011-04-06"/></status>
+
+	<introduced datetime="2011-04-06"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend title 38, United States Code, to protect certain veterans who would otherwise be subject to a reduction in educational assistance benefits, and for other purposes.</title>
+	</titles>
+	<sponsor id="300087"/>
+	<cosponsors>
+		<cosponsor id="412325" joined="2011-05-03"/>
+		<cosponsor id="412490" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-06"><text>Read twice and referred to the Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-06-08"><text>Committee on Veterans' Affairs. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSVA" name="Senate Veterans' Affairs" activity="Referral, Hearings, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="1383" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Higher education"/>
+		<term name="Veterans' education, employment, rehabilitation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/6/2011--Introduced.
+Makes the amount payable for programs of education at nonpublic institutions of higher education pursued by individuals enrolled in the Department of Veterans Affairs (VA) post-9/11 educational assistance program (post-9/11 program) during the period beginning on August 1, 2011, and ending on December 31, 2014, the lesser of: (1) the established charges for that program; (2) the established charges payable under a VA maximum payments table published on October 27, 2010; or (3) the amount for the previous academic year, increased by the authorized annual percentage increase.
+
+	</summary>
+</bill>

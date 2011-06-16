@@ -1,0 +1,53 @@
+<bill session="112" type="h" number="1899" updated="2011-06-04T06:30:42-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="short" as="introduced">Oil Consumer Protection Act of 2011</title>
+		<title type="short" as="introduced">Federal Price Gouging Prevention Act</title>
+		<title type="short" as="introduced">No Oil Producing and Exporting Cartels Act of 2011</title>
+		<title type="short" as="introduced">NOPEC</title>
+		<title type="short" as="introduced">Oil and Gas Industry Antitrust Act of 2011</title>
+		<title type="official" as="introduced">To amend the Sherman Act to make oil-producing and exporting cartels illegal; to improve competition in the oil and gas industry, to strengthen antitrust enforcement with regard to industry mergers; to protect consumers from price-gouging of gasoline and other fuels; and for other purposes.</title>
+	</titles>
+	<sponsor id="400080"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Sponsor introductory remarks on measure. (CR E898-899)</text></action>
+		<action datetime="2011-05-13"><text>Referred to the Committee on the Judiciary, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-13"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-05-13"><text>Referred to House Energy and Commerce</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Civil actions and liability"/>
+		<term name="Competition and antitrust"/>
+		<term name="Congressional oversight"/>
+		<term name="Energy prices"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Free trade and trade barriers"/>
+		<term name="Government investigations"/>
+		<term name="Government liability"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Oil and gas"/>
+		<term name="Retail and wholesale trades"/>
+		<term name="State and local government operations"/>
+		<term name="War and emergency powers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

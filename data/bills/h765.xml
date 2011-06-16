@@ -1,0 +1,54 @@
+<bill session="112" type="h" number="765" updated="2011-06-14T06:12:45-04:00">
+	<state datetime="2011-02-17">REFERRED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Ski Area Recreational Opportunity Enhancement Act of 2011</title>
+		<title type="official" as="introduced">To amend the National Forest Ski Area Permit Act of 1986 to clarify the authority of the Secretary of Agriculture regarding additional recreational uses of National Forest System land that is subject to ski area permits, and for other purposes.</title>
+	</titles>
+	<sponsor id="400029"/>
+	<cosponsors>
+		<cosponsor id="412271" joined="2011-06-13"/>
+		<cosponsor id="412218" joined="2011-04-01"/>
+		<cosponsor id="400659" joined="2011-04-05"/>
+		<cosponsor id="412308" joined="2011-04-01"/>
+		<cosponsor id="412239" joined="2011-04-01"/>
+		<cosponsor id="412405" joined="2011-03-17"/>
+		<cosponsor id="412406" joined="2011-05-05"/>
+		<cosponsor id="400101" joined="2011-02-17"/>
+		<cosponsor id="412295" joined="2011-05-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Referred to the Committee on Agriculture, and in addition to the Committee on Natural Resources, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-02-17"><text>Referred to House Agriculture</text></action>
+		<action datetime="2011-02-17"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-02-23"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-03-09"><committee name="House Agriculture"/><text>Referred to the Subcommittee on Conservation, Energy, and Forestry.</text></action>
+		<action datetime="2011-05-04"><committee name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAG" name="House Agriculture" activity="Referral, In Committee" />
+		<committee code="" name="House Agriculture" subcommittee="Conservation, Energy, and Forestry" activity="Referral" />
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="382" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land use and conservation"/>
+		<term name="Licensing and registrations"/>
+		<term name="Outdoor recreation"/>
+		<term name="Sports and recreation facilities"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/17/2011--Introduced.
+Ski Area Recreational Opportunity Enhancement Act of 2011 - Amends the National Forest Ski Area Permit Act of 1986 to require the term and acreage of permits for the operation of ski areas and associated facilities (under current law, for the operation of nordic and alpine ski areas and facilities) on National Forest System lands to be governed by provisions under the Act relating to such permits and other applicable law. Provides for the issuance of permits for the use and occupancy of suitable lands within the National Forest System for skiing and other snow-sports and recreational uses authorized pursuant to this Act. 
+	</summary>
+</bill>

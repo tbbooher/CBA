@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="270" updated="2011-02-15T06:12:05-05:00">
+	<state datetime="2011-01-12">REFERRED</state>
+	<status><introduced datetime="2011-01-12"/></status>
+
+	<introduced datetime="2011-01-12"/>
+	<titles>
+		<title type="official" as="introduced">To provide for a 10 percent reduction in pay for Members of Congress, to make Federal civilian employees subject to a period of mandatory unpaid leave, to reduce appropriations for salaries and expenses for offices of the legislative branch during fiscal year 2012, and for other purposes.</title>
+	</titles>
+	<sponsor id="412271"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-12"><text>Sponsor introductory remarks on measure. (CR E55)</text></action>
+		<action datetime="2011-01-12"><text>Referred to the Committee on House Administration, and in addition to the Committees on Oversight and Government Reform, and the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-01-12"><text>Referred to House House Administration</text></action>
+		<action datetime="2011-01-12"><text>Referred to House Oversight and Government Reform</text></action>
+		<action datetime="2011-01-12"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-02-14"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Courts, Commercial and Administrative Law.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHA" name="House Administration" activity="Referral, In Committee" />
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Courts, Commercial and Administrative Law" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Appropriations"/>
+		<term name="Congressional agencies"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Members of Congress"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

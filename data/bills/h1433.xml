@@ -1,0 +1,69 @@
+<bill session="112" type="h" number="1433" updated="2011-05-05T06:15:58-04:00">
+	<state datetime="2011-04-07">REFERRED</state>
+	<status><introduced datetime="2011-04-07"/></status>
+
+	<introduced datetime="2011-04-07"/>
+	<titles>
+		<title type="short" as="introduced">Private Property Rights Protection Act of 2011</title>
+		<title type="official" as="introduced">To protect private property rights.</title>
+	</titles>
+	<sponsor id="400365"/>
+	<cosponsors>
+		<cosponsor id="400627" joined="2011-04-07"/>
+		<cosponsor id="412451" joined="2011-04-07"/>
+		<cosponsor id="412309" joined="2011-04-15"/>
+		<cosponsor id="412252" joined="2011-04-07"/>
+		<cosponsor id="400381" joined="2011-04-07"/>
+		<cosponsor id="400160" joined="2011-05-04"/>
+		<cosponsor id="400039" joined="2011-04-07"/>
+		<cosponsor id="412317" joined="2011-04-07"/>
+		<cosponsor id="400376" joined="2011-04-07"/>
+		<cosponsor id="400209" joined="2011-04-07"/>
+		<cosponsor id="400422" joined="2011-04-07"/>
+		<cosponsor id="400076" joined="2011-04-07"/>
+		<cosponsor id="400137" joined="2011-04-13"/>
+		<cosponsor id="400154" joined="2011-04-07"/>
+		<cosponsor id="412236" joined="2011-05-04"/>
+		<cosponsor id="412310" joined="2011-04-13"/>
+		<cosponsor id="400116" joined="2011-04-07"/>
+		<cosponsor id="400315" joined="2011-05-04"/>
+		<cosponsor id="412411" joined="2011-04-07"/>
+		<cosponsor id="400288" joined="2011-04-13"/>
+		<cosponsor id="412473" joined="2011-04-07"/>
+		<cosponsor id="400141" joined="2011-04-07"/>
+		<cosponsor id="412445" joined="2011-04-07"/>
+		<cosponsor id="412401" joined="2011-04-07"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-07"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-04-08"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+		<action datetime="2011-04-12"><committee name="House Committee on the Judiciary" subcommittee="the Constitution"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Civil rights and liberties, minority issues"/>
+		<term name="Civil actions and liability"/>
+		<term name="Economic development"/>
+		<term name="Government information and archives"/>
+		<term name="Government liability"/>
+		<term name="Housing and community development funding"/>
+		<term name="Property rights"/>
+		<term name="Religion"/>
+		<term name="State and local government operations"/>
+		<term name="Tax-exempt organizations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/7/2011--Introduced.
+Private Property Rights Protection Act of 2011 - Prohibits a state or political subdivision from exercising its power of eminent domain, or allowing the exercise of such power by delegation, over property to be used for economic development or over property that is used for economic development within seven years after that exercise, if the state or political subdivision receives federal economic development funds during any fiscal year in which the property is so used or intended to be used. Prohibits the federal government from exercising its power of eminent domain for economic development. Establishes a private cause of action for any private property owner or tenant who suffers injury as a result of a violation of this Act. Prohibits state immunity in federal or state court. Sets the statute of limitations at seven years. Requires the Attorney General (DOJ) to bring an action to enforce this Act in certain circumstances, but prohibits an action brought later than seven years following the conclusion of any condemnation proceedings. Requires the Attorney General to disseminate information on: (1) the rights of property owners and tenants under this Act, and (2) the federal laws under which federal economic development funds are distributed. Prohibits a state or political subdivision from exercising its power of eminent domain over property of a religious or other nonprofit organization because of the organization's nonprofit or tax-exempt status or any related quality if that state or political subdivision receives federal economic development funds during any fiscal year. Prohibits the federal government from exercising its power of eminent domain over property of a religious or other nonprofit organization because of the organization's nonprofit or tax-exempt status or any related quality.
+
+	</summary>
+</bill>

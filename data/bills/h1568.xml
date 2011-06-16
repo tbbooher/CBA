@@ -1,0 +1,48 @@
+<bill session="112" type="h" number="1568" updated="2011-05-12T06:23:28-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Oil Pollution Research and Development Program Reauthorization Act of 2011</title>
+		<title type="official" as="introduced">To amend title VII of the Oil Pollution Act of 1990, and for other purposes.</title>
+	</titles>
+	<sponsor id="400436"/>
+	<cosponsors>
+		<cosponsor id="412293" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+		<action datetime="2011-05-06"><committee name="House Committee on Science, Space, and Technology"/><text>Referred to the Subcommittee on Energy and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Energy and Environment" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Advanced technology and technological innovations"/>
+		<term name="Advisory bodies"/>
+		<term name="Air quality"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental technology"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine pollution"/>
+		<term name="Oil and gas"/>
+		<term name="Research administration and funding"/>
+		<term name="Research and development"/>
+		<term name="Technology assessment"/>
+		<term name="Water quality"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

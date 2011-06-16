@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="386" updated="2011-03-10T06:22:41-05:00">
+	<state datetime="2011-02-17">INTRODUCED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Unemployment Insurance Solvency Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide assistance to certain employers and States in 2011 and 2012, to improve the long-term solvency of the Unemployment Compensation program, and for other purposes.</title>
+	</titles>
+	<sponsor id="300038"/>
+	<cosponsors>
+		<cosponsor id="400050" joined="2011-02-17"/>
+		<cosponsor id="412247" joined="2011-03-07"/>
+		<cosponsor id="300081" joined="2011-02-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Sponsor introductory remarks on measure. (CR S885)</text></action>
+		<action datetime="2011-02-17"><text>Read twice and referred to the Committee on Finance.</text><reference label="text of measure as introduced" ref="CR S885-887"/></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Labor and employment"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Labor"/>
+		<term name="Employment taxes"/>
+		<term name="Government lending and loan guarantees"/>
+		<term name="Government trust funds"/>
+		<term name="State and local finance"/>
+		<term name="Unemployment"/>
+		<term name="Wages and earnings"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

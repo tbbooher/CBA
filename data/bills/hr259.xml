@@ -1,0 +1,35 @@
+<bill session="112" type="hr" number="259" updated="2011-06-02T06:33:49-04:00">
+	<state datetime="2011-05-10">REFERRED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="official" as="introduced">Recognizing Chief Master Sergeant Donald G. Robinson, Jr., for his service in the Air Force.</title>
+	</titles>
+	<sponsor id="400093"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Referred to the House Committee on Armed Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Congressional tributes"/>
+		<term name="Military personnel and dependents"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/10/2011--Introduced.
+Recognizes Chief Master Sergeant Donald G. Robinson, Jr., upon his retirement for his particularly meritorious achievements in the Air Force.
+
+	</summary>
+</bill>

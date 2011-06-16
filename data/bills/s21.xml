@@ -1,0 +1,57 @@
+<bill session="112" type="s" number="21" updated="2011-03-03T06:15:31-05:00">
+	<state datetime="2011-01-25">INTRODUCED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Cyber Security and American Cyber Competitiveness Act of 2011</title>
+		<title type="official" as="introduced">A bill to secure the United States against cyber attack, to enhance American competitiveness and create jobs in the information technology industry, and to protect the identities and sensitive information of American citizens and businesses.</title>
+	</titles>
+	<sponsor id="300082"/>
+	<cosponsors>
+		<cosponsor id="300065" joined="2011-01-25"/>
+		<cosponsor id="300009" joined="2011-01-25"/>
+		<cosponsor id="300060" joined="2011-01-25"/>
+		<cosponsor id="300066" joined="2011-01-25"/>
+		<cosponsor id="300073" joined="2011-01-27"/>
+		<cosponsor id="300019" joined="2011-02-03"/>
+		<cosponsor id="412247" joined="2011-01-27"/>
+		<cosponsor id="412223" joined="2011-01-26"/>
+		<cosponsor id="300067" joined="2011-01-25"/>
+		<cosponsor id="300043" joined="2011-01-25"/>
+		<cosponsor id="300084" joined="2011-01-25"/>
+		<cosponsor id="300058" joined="2011-03-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text><reference label="text of measure as introduced" ref="CR S130"/></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Competitiveness, trade promotion, trade deficits"/>
+		<term name="Computer crimes and identity theft"/>
+		<term name="Computers and information technology"/>
+		<term name="Crime prevention"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Diplomacy, foreign officials, Americans abroad"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Financial services and investments"/>
+		<term name="Infrastructure development"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Internet and video services"/>
+		<term name="Right of privacy"/>
+		<term name="Telephone and wireless communication"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

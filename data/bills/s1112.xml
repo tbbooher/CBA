@@ -1,0 +1,32 @@
+<bill session="112" type="s" number="1112" updated="2011-06-14T06:27:55-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend title 38, United States Code, to grant family of members of the uniformed services temporary annual leave during the deployment of such members, and for other purposes.</title>
+	</titles>
+	<sponsor id="300100"/>
+	<cosponsors>
+		<cosponsor id="412325" joined="2011-05-26"/>
+		<cosponsor id="300076" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

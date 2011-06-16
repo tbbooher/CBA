@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="1041" updated="2011-06-08T06:25:53-04:00">
+	<state datetime="2011-05-23">INTRODUCED</state>
+	<status><introduced datetime="2011-05-23"/></status>
+
+	<introduced datetime="2011-05-23"/>
+	<titles>
+		<title type="official" as="introduced">A bill to ensure the equitable treatment of swimming pool enclosures outside of hurricane season under the National Flood Insurance Program.</title>
+	</titles>
+	<sponsor id="300047"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-23"><text>Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSBK" name="Senate Banking, Housing, and Urban Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Building construction"/>
+		<term name="Disaster relief and insurance"/>
+		<term name="Floods and storm protection"/>
+		<term name="Sports and recreation facilities"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

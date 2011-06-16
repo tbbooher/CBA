@@ -1,0 +1,34 @@
+<bill session="112" type="h" number="2143" updated="2011-06-14T06:20:06-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">Idaho Efficient Vehicle Demonstration Act of 2011</title>
+		<title type="official" as="introduced">To permit commercial vehicles at weights up to 129,000 pounds to use certain highways on the Interstate System in the State of Idaho, and for other purposes.</title>
+	</titles>
+	<sponsor id="400376"/>
+	<cosponsors>
+		<cosponsor id="412419" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-06-06"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

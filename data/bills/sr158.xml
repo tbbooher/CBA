@@ -1,0 +1,45 @@
+<bill session="112" type="sr" number="158" updated="2011-05-10T06:18:33-04:00">
+	<state datetime="2011-05-05">PASSED:SIMPLERES</state>
+	<status><vote datetime="2011-05-05" where="s" result="pass" how="by Unanimous Consent" roll=""/></status>
+
+	<introduced datetime="2011-05-02"/>
+	<titles>
+		<title type="official" as="introduced">A resolution congratulating the students, parents, teachers, and administrators of charter schools across the United States for ongoing contributions to education, and supporting the ideals and goals of the 12th annual National Charter Schools Week.</title>
+	</titles>
+	<sponsor id="300063"/>
+	<cosponsors>
+		<cosponsor id="400222" joined="2011-05-02"/>
+		<cosponsor id="300002" joined="2011-05-02"/>
+		<cosponsor id="400418" joined="2011-05-02"/>
+		<cosponsor id="300067" joined="2011-05-02"/>
+		<cosponsor id="300038" joined="2011-05-02"/>
+		<cosponsor id="300019" joined="2011-05-02"/>
+		<cosponsor id="400054" joined="2011-05-02"/>
+		<cosponsor id="300043" joined="2011-05-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-02"><text>Referred to the Committee on Health, Education, Labor, and Pensions.</text><reference label="text of measure as introduced" ref="CR S2583-2584"/></action>
+		<action datetime="2011-05-05"><text>Senate Committee on Health, Education, Labor, and Pensions discharged by Unanimous Consent.</text></action>
+		<action datetime="2011-05-05"><text>Measure laid before Senate by unanimous consent.</text><reference label="consideration" ref="CR S2749-2752"/></action>
+		<vote how="by Unanimous Consent" type="vote" datetime="2011-05-05" where="s" result="pass"  state="PASSED:SIMPLERES"><text>Resolution agreed to in Senate without amendment and an amended preamble by Unanimous Consent.</text><reference label="text" ref="CR S2752"/></vote>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, Discharged" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="Congressional tributes"/>
+		<term name="Elementary and secondary education"/>
+	</subjects>
+	<amendments>
+		<amendment number="s318"/>
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

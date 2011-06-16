@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="460" updated="2011-02-15T06:13:43-05:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">Bonneville Unit Clean Hydropower Facilitation Act</title>
+		<title type="official" as="introduced">To authorize the Secretary of the Interior to facilitate the development of hydroelectric power on the Diamond Fork System of the Central Utah Project.</title>
+	</titles>
+	<sponsor id="412270"/>
+	<cosponsors>
+		<cosponsor id="400029" joined="2011-01-26"/>
+		<cosponsor id="400255" joined="2011-01-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the Committee on Natural Resources, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Budget</text></action>
+		<action datetime="2011-02-03"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on Water and Power.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Water and Power" activity="Referral" />
+		<committee code="HSBU" name="House Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Public utilities and utility rates"/>
+		<term name="Utah"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="628" updated="2011-03-29T06:15:36-04:00">
+	<state datetime="2011-03-17">INTRODUCED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Alaska Railroad Right of Way Extension Act of 2011</title>
+		<title type="official" as="introduced">A bill to authorize the Secretary of the Interior to convey a railroad right of way between North Pole, Alaska, and Delta Junction, Alaska, to the Alaska Railroad Corporation.</title>
+	</titles>
+	<sponsor id="300075"/>
+	<cosponsors>
+		<cosponsor id="412326" joined="2011-03-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Sponsor introductory remarks on measure. (CR S1840-1841)</text></action>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Alaska"/>
+		<term name="Land transfers"/>
+		<term name="Railroads"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

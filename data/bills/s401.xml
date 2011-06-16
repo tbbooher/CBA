@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="401" updated="2011-03-10T06:18:37-05:00">
+	<state datetime="2011-02-17">INTRODUCED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Public Corruption Prosecution Improvements Act</title>
+		<title type="official" as="introduced">A bill to help Federal prosecutors and investigators combat public corruption by strengthening and clarifying the law.</title>
+	</titles>
+	<sponsor id="300065"/>
+	<cosponsors>
+		<cosponsor id="300027" joined="2011-02-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Sponsor introductory remarks on measure. (CR S904-905)</text></action>
+		<action datetime="2011-02-17"><text>Read twice and referred to the Committee on the Judiciary.</text><reference label="text of measure as introduced" ref="CR S905-906"/></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Crimes against property"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Department of Justice"/>
+		<term name="District of Columbia"/>
+		<term name="Elections, voting, political campaign regulation"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Organized crime"/>
+		<term name="U.S. Sentencing Commission"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

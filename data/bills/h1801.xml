@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="1801" updated="2011-06-01T06:35:06-04:00">
+	<state datetime="2011-05-10">REFERRED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="short" as="introduced">Risk-Based Security Screening for Members of The Armed Forces Act</title>
+		<title type="official" as="introduced">To amend title 49, United States Code, to provide for expedited security screenings for members of the Armed Forces.</title>
+	</titles>
+	<sponsor id="412441"/>
+	<cosponsors>
+		<cosponsor id="400199" joined="2011-05-12"/>
+		<cosponsor id="400341" joined="2011-05-10"/>
+		<cosponsor id="400010" joined="2011-05-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Referred to the House Committee on Homeland Security.</text></action>
+		<action datetime="2011-05-11"><committee name="House Committee on Homeland Security"/><text>Referred to the Subcommittee on Transportation Security.</text></action>
+		<action datetime="2011-05-12"><committee name="House Committee on Homeland Security" subcommittee="Transportation Security"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-12"><committee name="House Committee on Homeland Security" subcommittee="Transportation Security"/><text>Forwarded by Subcommittee to Full Committee by Voice Vote .</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Transportation Security and Infrastructure Protection" activity="Referral, Markup, Reporting" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Aviation and airports"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,79 @@
+<bill session="112" type="h" number="470" updated="2011-05-13T06:11:55-04:00">
+	<state datetime="2011-01-26">REFERRED</state>
+	<status><introduced datetime="2011-01-26"/></status>
+
+	<introduced datetime="2011-01-26"/>
+	<titles>
+		<title type="short" as="introduced">Hoover Power Allocation Act of 2011</title>
+		<title type="official" as="introduced">To further allocate and expand the availability of hydroelectric power generated at Hoover Dam, and for other purposes.</title>
+	</titles>
+	<sponsor id="412446"/>
+	<cosponsors>
+		<cosponsor id="412253" joined="2011-02-09"/>
+		<cosponsor id="400290" joined="2011-01-26"/>
+		<cosponsor id="400144" joined="2011-02-09"/>
+		<cosponsor id="412218" joined="2011-02-09"/>
+		<cosponsor id="400347" joined="2011-02-11"/>
+		<cosponsor id="400356" joined="2011-02-11"/>
+		<cosponsor id="400277" joined="2011-02-11"/>
+		<cosponsor id="412397" joined="2011-03-17"/>
+		<cosponsor id="400057" joined="2011-02-11"/>
+		<cosponsor id="400618" joined="2011-02-09"/>
+		<cosponsor id="400039" joined="2011-03-17"/>
+		<cosponsor id="400134" joined="2011-03-30"/>
+		<cosponsor id="400115" joined="2011-01-26"/>
+		<cosponsor id="400162" joined="2011-03-15"/>
+		<cosponsor id="400570" joined="2011-04-05"/>
+		<cosponsor id="400021" joined="2011-04-05"/>
+		<cosponsor id="412398" joined="2011-03-15"/>
+		<cosponsor id="400348" joined="2011-03-10"/>
+		<cosponsor id="400267" joined="2011-02-09"/>
+		<cosponsor id="412404" joined="2011-03-30"/>
+		<cosponsor id="412379" joined="2011-02-17"/>
+		<cosponsor id="400009" joined="2011-01-26"/>
+		<cosponsor id="400361" joined="2011-02-09"/>
+		<cosponsor id="400371" joined="2011-02-17"/>
+		<cosponsor id="400239" joined="2011-05-11"/>
+		<cosponsor id="400185" joined="2011-02-09"/>
+		<cosponsor id="400024" joined="2011-02-09"/>
+		<cosponsor id="400025" joined="2011-03-30"/>
+		<cosponsor id="400141" joined="2011-02-09"/>
+		<cosponsor id="400062" joined="2011-02-28"/>
+		<cosponsor id="400425" joined="2011-02-28"/>
+		<cosponsor id="412283" joined="2011-04-06"/>
+		<cosponsor id="412011" joined="2011-02-11"/>
+		<cosponsor id="412399" joined="2011-03-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-26"><text>Referred to the Committee on Natural Resources, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-01-26"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-01-26"><committee name="House Natural Resources"/><text>Referred to House Budget</text></action>
+		<action datetime="2011-02-04"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on Water and Power.</text></action>
+		<action datetime="2011-05-12"><committee name="House Natural Resources" subcommittee="Water and Power"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Water and Power" activity="Referral, Hearings" />
+		<committee code="HSBU" name="House Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="519" />
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Arizona"/>
+		<term name="California"/>
+		<term name="Congressional oversight"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Nevada"/>
+		<term name="Public contracts and procurement"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/26/2011--Introduced.
+Hoover Power Allocation Act of 2011 - Amends the Hoover Power Plant Act of 1984 (HPPA) to modify, commencing October 1, 2017, certain statutory schedules governing contracts for delivery to specified localities in Arizona, California, and Nevada of hydroelectric power generated at Hoover Dam. Directs the Secretary of Energy to: (1) create, from certain apportioned allocations of contingent capacity and firm energy, a resource pool equal to 5% of the full rated capacity of 2.074 million kilowatts and associated firm energy; (2) offer Schedule D contingency capacity and firm energy to new allottees not receiving contingent capacity and firm energy for delivery commencing October 1, 2017; and (3) allocate through the Western Area Power Administration (WAPA) for delivery, commencing October 1, 2017, 66.7% of Schedule D contingent capacity and firm energy to specified new allottees located within the marketing area for the Boulder City Area Projects. Requires each contract offered under HPPA to: (1) authorize and require WAPA to collect from new allottees a pro rata share of Hoover Dam repayable advances paid for by contractors before October 1, 2017, and to remit such amounts to the contractors that paid such advances in proportion to the amounts paid by them as specified in a certain Implementation Agreement; (2) permit transactions with an independent system operator; and (3) contain the same material terms included in those long-term contracts for purchases from the Hoover Power Plant that were made in accordance with HPPA and are in existence on the date of enactment of this Act. Subjects the contractual obligation of the Secretary to deliver contingent capacity and firm energy under HPPA to the availability of the water needed to produce such contingent capacity and firm energy. Continues through FY2067 the requirements of HPPA as the exclusive method for (in effect, congressional oversight of) the disposal of capacity and energy from Hoover Dam.
+
+	</summary>
+</bill>

@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="77" updated="2011-02-17T06:13:26-05:00">
+	<state datetime="2011-01-25">INTRODUCED</state>
+	<status><introduced datetime="2011-01-25"/></status>
+
+	<introduced datetime="2011-01-25"/>
+	<titles>
+		<title type="short" as="introduced">Pollution and Costs Reduction Act</title>
+		<title type="official" as="introduced">A bill to amend the Clean Air Act to reduce pollution and lower costs for building owners.</title>
+	</titles>
+	<sponsor id="300011"/>
+	<cosponsors>
+		<cosponsor id="400064" joined="2011-02-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-25"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Air quality"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Building construction"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="2072" updated="2011-06-14T06:30:53-04:00">
+	<state datetime="2011-06-01">REFERRED</state>
+	<status><introduced datetime="2011-06-01"/></status>
+
+	<introduced datetime="2011-06-01"/>
+	<titles>
+		<title type="short" as="introduced">Securing American Jobs Through Exports Act of 2011</title>
+		<title type="official" as="introduced">To reauthorize the Export-Import Bank of the United States, and for other purposes.</title>
+	</titles>
+	<sponsor id="400277"/>
+	<cosponsors>
+		<cosponsor id="400661" joined="2011-06-02"/>
+		<cosponsor id="400257" joined="2011-06-01"/>
+		<cosponsor id="400027" joined="2011-06-02"/>
+		<cosponsor id="412420" joined="2011-06-02"/>
+		<cosponsor id="400010" joined="2011-06-01"/>
+		<cosponsor id="400140" joined="2011-06-01"/>
+		<cosponsor id="400363" joined="2011-06-02"/>
+		<cosponsor id="400252" joined="2011-06-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Hearings Held Prior to Introduction and Referral.</text></action>
+		<action datetime="2011-06-01"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on International Monetary Policy and Trade.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Financial Services" subcommittee="International Monetary Policy and Trade"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-06-02"><committee name="House Committee on Financial Services" subcommittee="International Monetary Policy and Trade"/><text>Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote .</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, Hearings, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="International Monetary Policy and Trade" activity="Referral, Markup, Reporting" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

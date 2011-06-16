@@ -1,0 +1,44 @@
+<bill session="112" type="s" number="969" updated="2011-05-26T06:26:46-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">E 2 for Innovation Act</title>
+		<title type="short" as="introduced">Engineering Education for Innovation Act</title>
+		<title type="official" as="introduced">A bill to award planning grants and implementation grants to State educational agencies to enable the State educational agencies to complete comprehensive planning to carry out activities designed to integrate engineering education into K-12 instruction and curriculum and to provide evaluation grants to measure efficacy of K-12 engineering education.</title>
+	</titles>
+	<sponsor id="412223"/>
+	<cosponsors>
+		<cosponsor id="400050" joined="2011-05-12"/>
+		<cosponsor id="300091" joined="2011-05-12"/>
+		<cosponsor id="300093" joined="2011-05-12"/>
+		<cosponsor id="412326" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Academic performance and assessments"/>
+		<term name="Education of the disadvantaged"/>
+		<term name="Education programs funding"/>
+		<term name="Educational technology and distance education"/>
+		<term name="Elementary and secondary education"/>
+		<term name="Government information and archives"/>
+		<term name="Science and engineering education"/>
+		<term name="Teaching, teachers, curricula"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,50 @@
+<bill session="112" type="h" number="1610" updated="2011-06-03T06:16:54-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Business Risk Mitigation and Price Stabilization Act of 2011</title>
+		<title type="official" as="introduced">To provide end user exemptions from certain provisions of the Commodity Exchange Act and the Securities Exchange Act of 1934, and for other purposes.</title>
+	</titles>
+	<sponsor id="412451"/>
+	<cosponsors>
+		<cosponsor id="412271" joined="2011-05-13"/>
+		<cosponsor id="400441" joined="2011-04-15"/>
+		<cosponsor id="400154" joined="2011-05-24"/>
+		<cosponsor id="400145" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Hearings Held Prior to Introduction.</text></action>
+		<action datetime="2011-04-15"><text>Referred to the Committee on Financial Services, and in addition to the Committee on Agriculture, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-04-15"><committee name="House Financial Services"/><text>Referred to House Agriculture</text></action>
+		<action datetime="2011-05-02"><committee name="House Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+		<action datetime="2011-05-03"><committee name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-04"><committee name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-04"><committee name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Forwarded by Subcommittee to Full Committee (Amended) by the Yeas and Nays: 19 - 13 .</text></action>
+		<action datetime="2011-05-11"><committee name="House Agriculture" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Referred to the Subcommittee on General Farm Commodities and Risk Management.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, Hearings, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral, Markup, Reporting" />
+		<committee code="HSAG" name="House Agriculture" activity="Referral, In Committee" />
+		<committee code="" name="House Agriculture" subcommittee="General Farm Commodities and Risk Management" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Banking and financial institutions regulation"/>
+		<term name="Corporate finance and management"/>
+		<term name="Financial services and investments"/>
+		<term name="Securities"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

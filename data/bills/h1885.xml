@@ -1,0 +1,43 @@
+<bill session="112" type="h" number="1885" updated="2011-06-04T06:23:02-04:00">
+	<state datetime="2011-05-12">REFERRED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Citizens Right to Know Act of 2011</title>
+		<title type="official" as="introduced">To require that State and local pretrial services agencies receiving federal financial assistance report to the Department of Justice on defendants released by such agencies, and for other purposes.</title>
+	</titles>
+	<sponsor id="400652"/>
+	<cosponsors>
+		<cosponsor id="400077" joined="2011-05-12"/>
+		<cosponsor id="412436" joined="2011-05-12"/>
+		<cosponsor id="400144" joined="2011-05-12"/>
+		<cosponsor id="400068" joined="2011-05-12"/>
+		<cosponsor id="400017" joined="2011-05-12"/>
+		<cosponsor id="400645" joined="2011-05-12"/>
+		<cosponsor id="400032" joined="2011-05-12"/>
+		<cosponsor id="400315" joined="2011-05-23"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Referred to the House Committee on the Judiciary.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Government information and archives"/>
+		<term name="Law enforcement administration and funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

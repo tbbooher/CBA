@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="620" updated="2011-03-26T06:12:51-04:00">
+	<state datetime="2011-03-17">INTRODUCED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Campus Fire Safety Education Act of 2011</title>
+		<title type="official" as="introduced">A bill to authorize the Secretary of Education to make grants to support fire safety education programs on college campuses.</title>
+	</titles>
+	<sponsor id="300064"/>
+	<cosponsors>
+		<cosponsor id="400272" joined="2011-03-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1199" />
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Education programs funding"/>
+		<term name="Educational facilities and institutions"/>
+		<term name="Fires"/>
+		<term name="Higher education"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

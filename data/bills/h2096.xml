@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2096" updated="2011-06-14T06:33:48-04:00">
+	<state datetime="2011-06-02">REFERRED</state>
+	<status><introduced datetime="2011-06-02"/></status>
+
+	<introduced datetime="2011-06-02"/>
+	<titles>
+		<title type="short" as="introduced">Cybersecurity Enhancement Act of 2011</title>
+		<title type="official" as="introduced">To advance cybersecurity research, development, and technical standards, and for other purposes.</title>
+	</titles>
+	<sponsor id="400654"/>
+	<cosponsors>
+		<cosponsor id="400630" joined="2011-06-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-02"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

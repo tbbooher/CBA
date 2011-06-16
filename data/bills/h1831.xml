@@ -1,0 +1,67 @@
+<bill session="112" type="h" number="1831" updated="2011-06-04T06:19:02-04:00">
+	<state datetime="2011-05-11">REFERRED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="short" as="introduced">Industrial Hemp Farming Act of 2011</title>
+		<title type="official" as="introduced">To amend the Controlled Substances Act to exclude industrial hemp from the definition of marihuana, and for other purposes.</title>
+	</titles>
+	<sponsor id="400311"/>
+	<cosponsors>
+		<cosponsor id="400387" joined="2011-05-11"/>
+		<cosponsor id="400227" joined="2011-05-11"/>
+		<cosponsor id="400289" joined="2011-05-11"/>
+		<cosponsor id="400343" joined="2011-05-11"/>
+		<cosponsor id="412308" joined="2011-05-11"/>
+		<cosponsor id="400436" joined="2011-05-11"/>
+		<cosponsor id="400162" joined="2011-05-11"/>
+		<cosponsor id="412307" joined="2011-05-11"/>
+		<cosponsor id="400140" joined="2011-05-11"/>
+		<cosponsor id="400013" joined="2011-05-11"/>
+		<cosponsor id="400178" joined="2011-05-11"/>
+		<cosponsor id="400360" joined="2011-05-11"/>
+		<cosponsor id="400129" joined="2011-05-11"/>
+		<cosponsor id="400074" joined="2011-05-11"/>
+		<cosponsor id="412215" joined="2011-05-11"/>
+		<cosponsor id="412236" joined="2011-05-11"/>
+		<cosponsor id="400185" joined="2011-05-12"/>
+		<cosponsor id="400283" joined="2011-05-11"/>
+		<cosponsor id="400033" joined="2011-05-11"/>
+		<cosponsor id="412295" joined="2011-05-11"/>
+		<cosponsor id="400262" joined="2011-05-11"/>
+		<cosponsor id="412011" joined="2011-05-13"/>
+		<cosponsor id="400100" joined="2011-05-11"/>
+		<cosponsor id="400278" joined="2011-05-11"/>
+		<cosponsor id="412436" joined="2011-05-23"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Sponsor introductory remarks on measure. (CR E869)</text></action>
+		<action datetime="2011-05-11"><text>Referred to the Committee on Energy and Commerce, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-11"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-05-11"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-06-01"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Horticulture and plants"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/11/2011--Introduced.
+Industrial Hemp Farming Act of 2011 - Amends the Controlled Substances Act to exclude industrial hemp from the definition of &quot;marihuana.&quot; Defines &quot;industrial hemp&quot; to mean the plant Cannabis sativa L. and any part of such plant, whether growing or not, with a delta-nine tetrahydrocannabinol concentration of not more than 0.3 percent on a dry weight basis. Deems Cannabis sativa L. to meet that concentration limit if a person grows or processes it for purposes of making industrial hemp in accordance with state law.
+
+	</summary>
+</bill>

@@ -1,0 +1,207 @@
+<bill session="112" type="h" number="1815" updated="2011-06-14T06:17:33-04:00">
+	<state datetime="2011-05-10">REFERRED</state>
+	<status><introduced datetime="2011-05-10"/></status>
+
+	<introduced datetime="2011-05-10"/>
+	<titles>
+		<title type="short" as="introduced">Lena Horne Recognition Act</title>
+		<title type="official" as="introduced">To posthumously award a Congressional Gold Medal to Lena Horne in recognition of her achievements and contributions to American culture and the civil rights movement.</title>
+	</titles>
+	<sponsor id="400170"/>
+	<cosponsors>
+		<cosponsor id="412253" joined="2011-05-13"/>
+		<cosponsor id="400290" joined="2011-06-07"/>
+		<cosponsor id="400663" joined="2011-05-13"/>
+		<cosponsor id="412287" joined="2011-05-26"/>
+		<cosponsor id="400661" joined="2011-05-12"/>
+		<cosponsor id="400387" joined="2011-05-12"/>
+		<cosponsor id="412410" joined="2011-06-02"/>
+		<cosponsor id="400041" joined="2011-06-02"/>
+		<cosponsor id="400133" joined="2011-05-13"/>
+		<cosponsor id="400004" joined="2011-06-01"/>
+		<cosponsor id="400031" joined="2011-05-12"/>
+		<cosponsor id="412385" joined="2011-05-13"/>
+		<cosponsor id="412258" joined="2011-05-13"/>
+		<cosponsor id="400082" joined="2011-05-12"/>
+		<cosponsor id="400073" joined="2011-05-10"/>
+		<cosponsor id="412319" joined="2011-05-13"/>
+		<cosponsor id="400347" joined="2011-05-10"/>
+		<cosponsor id="400416" joined="2011-05-26"/>
+		<cosponsor id="400280" joined="2011-05-13"/>
+		<cosponsor id="400199" joined="2011-05-10"/>
+		<cosponsor id="400008" joined="2011-05-13"/>
+		<cosponsor id="400356" joined="2011-05-12"/>
+		<cosponsor id="400048" joined="2011-05-10"/>
+		<cosponsor id="400227" joined="2011-05-13"/>
+		<cosponsor id="400442" joined="2011-06-01"/>
+		<cosponsor id="400364" joined="2011-05-10"/>
+		<cosponsor id="400289" joined="2011-05-12"/>
+		<cosponsor id="412272" joined="2011-05-12"/>
+		<cosponsor id="412205" joined="2011-05-13"/>
+		<cosponsor id="412199" joined="2011-05-13"/>
+		<cosponsor id="400343" joined="2011-05-10"/>
+		<cosponsor id="400616" joined="2011-05-12"/>
+		<cosponsor id="400103" joined="2011-06-13"/>
+		<cosponsor id="400110" joined="2011-05-12"/>
+		<cosponsor id="400087" joined="2011-05-13"/>
+		<cosponsor id="412263" joined="2011-05-13"/>
+		<cosponsor id="412211" joined="2011-05-26"/>
+		<cosponsor id="400263" joined="2011-06-07"/>
+		<cosponsor id="412382" joined="2011-05-13"/>
+		<cosponsor id="400407" joined="2011-05-26"/>
+		<cosponsor id="400115" joined="2011-05-13"/>
+		<cosponsor id="400080" joined="2011-05-10"/>
+		<cosponsor id="400436" joined="2011-05-13"/>
+		<cosponsor id="412409" joined="2011-06-07"/>
+		<cosponsor id="400162" joined="2011-05-10"/>
+		<cosponsor id="400237" joined="2011-05-13"/>
+		<cosponsor id="412412" joined="2011-05-12"/>
+		<cosponsor id="412307" joined="2011-05-26"/>
+		<cosponsor id="400140" joined="2011-05-10"/>
+		<cosponsor id="412221" joined="2011-05-10"/>
+		<cosponsor id="400089" joined="2011-06-07"/>
+		<cosponsor id="400013" joined="2011-05-13"/>
+		<cosponsor id="400183" joined="2011-06-01"/>
+		<cosponsor id="400422" joined="2011-05-13"/>
+		<cosponsor id="400076" joined="2011-05-26"/>
+		<cosponsor id="400426" joined="2011-05-13"/>
+		<cosponsor id="400653" joined="2011-05-13"/>
+		<cosponsor id="400195" joined="2011-05-13"/>
+		<cosponsor id="412470" joined="2011-05-12"/>
+		<cosponsor id="400251" joined="2011-05-26"/>
+		<cosponsor id="400439" joined="2011-06-01"/>
+		<cosponsor id="400178" joined="2011-05-10"/>
+		<cosponsor id="412327" joined="2011-05-10"/>
+		<cosponsor id="412225" joined="2011-05-13"/>
+		<cosponsor id="400378" joined="2011-06-13"/>
+		<cosponsor id="400122" joined="2011-05-26"/>
+		<cosponsor id="400403" joined="2011-05-13"/>
+		<cosponsor id="400350" joined="2011-05-13"/>
+		<cosponsor id="400246" joined="2011-05-10"/>
+		<cosponsor id="412435" joined="2011-06-02"/>
+		<cosponsor id="400360" joined="2011-05-13"/>
+		<cosponsor id="400333" joined="2011-05-10"/>
+		<cosponsor id="400366" joined="2011-05-10"/>
+		<cosponsor id="400295" joined="2011-05-10"/>
+		<cosponsor id="400255" joined="2011-05-13"/>
+		<cosponsor id="400623" joined="2011-05-13"/>
+		<cosponsor id="400271" joined="2011-05-10"/>
+		<cosponsor id="400645" joined="2011-05-13"/>
+		<cosponsor id="400021" joined="2011-05-12"/>
+		<cosponsor id="412239" joined="2011-05-12"/>
+		<cosponsor id="400129" joined="2011-05-13"/>
+		<cosponsor id="412440" joined="2011-05-13"/>
+		<cosponsor id="400211" joined="2011-05-13"/>
+		<cosponsor id="400424" joined="2011-05-12"/>
+		<cosponsor id="412195" joined="2011-05-12"/>
+		<cosponsor id="400074" joined="2011-05-12"/>
+		<cosponsor id="400628" joined="2011-06-07"/>
+		<cosponsor id="400638" joined="2011-05-13"/>
+		<cosponsor id="412200" joined="2011-05-13"/>
+		<cosponsor id="400065" joined="2011-05-12"/>
+		<cosponsor id="412404" joined="2011-05-13"/>
+		<cosponsor id="412259" joined="2011-06-01"/>
+		<cosponsor id="400081" joined="2011-05-25"/>
+		<cosponsor id="400189" joined="2011-05-12"/>
+		<cosponsor id="412215" joined="2011-05-13"/>
+		<cosponsor id="400344" joined="2011-06-07"/>
+		<cosponsor id="400266" joined="2011-05-13"/>
+		<cosponsor id="400198" joined="2011-05-12"/>
+		<cosponsor id="412254" joined="2011-05-13"/>
+		<cosponsor id="400379" joined="2011-05-13"/>
+		<cosponsor id="412236" joined="2011-05-12"/>
+		<cosponsor id="400009" joined="2011-05-10"/>
+		<cosponsor id="412186" joined="2011-05-13"/>
+		<cosponsor id="400093" joined="2011-05-10"/>
+		<cosponsor id="400361" joined="2011-05-12"/>
+		<cosponsor id="412192" joined="2011-05-13"/>
+		<cosponsor id="400440" joined="2011-05-13"/>
+		<cosponsor id="400371" joined="2011-05-13"/>
+		<cosponsor id="400124" joined="2011-05-13"/>
+		<cosponsor id="412407" joined="2011-05-13"/>
+		<cosponsor id="412212" joined="2011-05-26"/>
+		<cosponsor id="400291" joined="2011-05-12"/>
+		<cosponsor id="412471" joined="2011-05-12"/>
+		<cosponsor id="400116" joined="2011-05-13"/>
+		<cosponsor id="400109" joined="2011-06-02"/>
+		<cosponsor id="400185" joined="2011-05-13"/>
+		<cosponsor id="400003" joined="2011-05-12"/>
+		<cosponsor id="400641" joined="2011-05-12"/>
+		<cosponsor id="400047" joined="2011-06-01"/>
+		<cosponsor id="400274" joined="2011-05-13"/>
+		<cosponsor id="400283" joined="2011-05-26"/>
+		<cosponsor id="400204" joined="2011-05-12"/>
+		<cosponsor id="400097" joined="2011-05-12"/>
+		<cosponsor id="400090" joined="2011-05-12"/>
+		<cosponsor id="400315" joined="2011-05-26"/>
+		<cosponsor id="412189" joined="2011-05-31"/>
+		<cosponsor id="400042" joined="2011-05-13"/>
+		<cosponsor id="412293" joined="2011-05-13"/>
+		<cosponsor id="412214" joined="2011-05-13"/>
+		<cosponsor id="400409" joined="2011-05-13"/>
+		<cosponsor id="400240" joined="2011-05-13"/>
+		<cosponsor id="400101" joined="2011-05-12"/>
+		<cosponsor id="412413" joined="2011-05-10"/>
+		<cosponsor id="400433" joined="2011-06-07"/>
+		<cosponsor id="400024" joined="2011-05-13"/>
+		<cosponsor id="400238" joined="2011-05-12"/>
+		<cosponsor id="400152" joined="2011-05-12"/>
+		<cosponsor id="400055" joined="2011-05-13"/>
+		<cosponsor id="400363" joined="2011-05-13"/>
+		<cosponsor id="400355" joined="2011-05-12"/>
+		<cosponsor id="400301" joined="2011-06-13"/>
+		<cosponsor id="400216" joined="2011-05-13"/>
+		<cosponsor id="400373" joined="2011-05-12"/>
+		<cosponsor id="400130" joined="2011-05-13"/>
+		<cosponsor id="400163" joined="2011-05-13"/>
+		<cosponsor id="400114" joined="2011-05-13"/>
+		<cosponsor id="400249" joined="2011-05-13"/>
+		<cosponsor id="412432" joined="2011-05-12"/>
+		<cosponsor id="400437" joined="2011-05-12"/>
+		<cosponsor id="400233" joined="2011-05-13"/>
+		<cosponsor id="400108" joined="2011-06-07"/>
+		<cosponsor id="400030" joined="2011-05-13"/>
+		<cosponsor id="400312" joined="2011-05-13"/>
+		<cosponsor id="412396" joined="2011-05-12"/>
+		<cosponsor id="412331" joined="2011-05-12"/>
+		<cosponsor id="400179" joined="2011-05-26"/>
+		<cosponsor id="400316" joined="2011-05-13"/>
+		<cosponsor id="400100" joined="2011-06-02"/>
+		<cosponsor id="400010" joined="2011-05-10"/>
+		<cosponsor id="400639" joined="2011-05-12"/>
+		<cosponsor id="412415" joined="2011-05-26"/>
+		<cosponsor id="400349" joined="2011-05-10"/>
+		<cosponsor id="400309" joined="2011-05-13"/>
+		<cosponsor id="400402" joined="2011-05-10"/>
+		<cosponsor id="400252" joined="2011-05-12"/>
+		<cosponsor id="400278" joined="2011-05-26"/>
+		<cosponsor id="412418" joined="2011-05-12"/>
+		<cosponsor id="400075" joined="2011-05-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-10"><text>Sponsor introductory remarks on measure. (CR E852)</text></action>
+		<action datetime="2011-05-10"><text>Referred to the House Committee on Financial Services.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Arts, culture, religion"/>
+		<term name="Art, artists, authorship"/>
+		<term name="Congressional tributes"/>
+		<term name="Music"/>
+		<term name="Performing arts"/>
+		<term name="Racial and ethnic relations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/10/2011--Introduced.
+Lena Horne Recognition Act - Directs the Speaker of the House of Representatives and the President pro tempore of the Senate to make appropriate arrangements for the posthumous presentation, on behalf of Congress, of a gold medal of appropriate design in commemoration of Lena Horne in recognition of her achievements and contributions to American culture and the civil rights movement.
+
+	</summary>
+</bill>

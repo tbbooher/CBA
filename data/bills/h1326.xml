@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="1326" updated="2011-04-15T06:17:14-04:00">
+	<state datetime="2011-04-01">REFERRED</state>
+	<status><introduced datetime="2011-04-01"/></status>
+
+	<introduced datetime="2011-04-01"/>
+	<titles>
+		<title type="short" as="introduced">Furthering International Nuclear Safety Act of 2011</title>
+		<title type="official" as="introduced">To underscore the importance of international nuclear safety cooperation for operating power reactors, encouraging the efforts of the Convention on Nuclear Safety, supporting progress in improving nuclear safety, enhancing the public availability of nuclear safety information, and for other purposes.</title>
+	</titles>
+	<sponsor id="400640"/>
+	<cosponsors>
+		<cosponsor id="400253" joined="2011-04-13"/>
+		<cosponsor id="400361" joined="2011-04-01"/>
+		<cosponsor id="400025" joined="2011-04-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-01"><text>Referred to the House Committee on Foreign Affairs.</text></action>
+		<action datetime="2011-04-14"><committee name="House Committee on Foreign Affairs"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="640" />
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Accidents"/>
+		<term name="Congressional oversight"/>
+		<term name="Emergency planning and evacuation"/>
+		<term name="Government information and archives"/>
+		<term name="International law and treaties"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Natural disasters"/>
+		<term name="Nuclear power"/>
+		<term name="Radioactive wastes and releases"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

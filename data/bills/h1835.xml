@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="1835" updated="2011-06-02T06:24:17-04:00">
+	<state datetime="2011-05-11">REFERRED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="short" as="introduced">State Admission Day Recognition Act of 2011</title>
+		<title type="official" as="introduced">To direct the Architect of the Capitol to fly the flag of a State over the Capitol each year on the anniversary of the date of the State's admission to the Union.</title>
+	</titles>
+	<sponsor id="400617"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Referred to the House Committee on House Administration.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHA" name="House Administration" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Commemorative events and holidays"/>
+		<term name="National symbols"/>
+		<term name="State and local government operations"/>
+		<term name="U.S. Capitol"/>
+		<term name="U.S. history"/>
+		<term name="U.S. territories and protectorates"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

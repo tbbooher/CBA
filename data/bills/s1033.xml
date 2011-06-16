@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="1033" updated="2011-06-08T06:18:50-04:00">
+	<state datetime="2011-05-19">INTRODUCED</state>
+	<status><introduced datetime="2011-05-19"/></status>
+
+	<introduced datetime="2011-05-19"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend the Reclamation Wastewater and Groundwater Study and Facilities Act to authorize the Secretary of the Interior to participate in the City of Hermiston, Oregon, water recycling and reuse project, and for other purposes.</title>
+	</titles>
+	<sponsor id="300100"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-19"><text>Sponsor introductory remarks on measure. (CR S3178)</text></action>
+		<action datetime="2011-05-19"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Water resources development"/>
+		<term name="Oregon"/>
+		<term name="Water resources funding"/>
+		<term name="Water use and supply"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1069" updated="2011-06-14T12:00:54-04:00">
+	<state datetime="2011-05-25">INTRODUCED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="short" as="introduced">Affordable Footwear Act of 2011</title>
+		<title type="official" as="introduced">A bill to suspend temporarily the duty on certain footwear, and for other purposes.</title>
+	</titles>
+	<sponsor id="300018"/>
+	<cosponsors>
+		<cosponsor id="400034" joined="2011-05-25"/>
+		<cosponsor id="300076" joined="2011-05-25"/>
+		<cosponsor id="300083" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="108" />
+	</relatedbills>
+	<subjects>
+		<term name="Foreign trade and international finance"/>
+		<term name="Consumer affairs"/>
+		<term name="Inflation and prices"/>
+		<term name="Retail and wholesale trades"/>
+		<term name="Tariffs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

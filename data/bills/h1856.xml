@@ -1,0 +1,56 @@
+<bill session="112" type="h" number="1856" updated="2011-06-03T06:19:11-04:00">
+	<state datetime="2011-05-11">REFERRED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="short" as="introduced">International Religious Freedom Act Amendments of 2011</title>
+		<title type="official" as="introduced">To amend the International Religious Freedom Act of 1998 to strengthen the promotion of religious freedom in United States foreign policy and to reauthorize the United States Commission on International Religious Freedom, and for other purposes.</title>
+	</titles>
+	<sponsor id="400435"/>
+	<cosponsors>
+		<cosponsor id="400640" joined="2011-06-01"/>
+		<cosponsor id="400356" joined="2011-06-01"/>
+		<cosponsor id="400343" joined="2011-05-24"/>
+		<cosponsor id="400137" joined="2011-05-31"/>
+		<cosponsor id="400380" joined="2011-05-11"/>
+		<cosponsor id="400198" joined="2011-06-02"/>
+		<cosponsor id="400260" joined="2011-05-23"/>
+		<cosponsor id="400652" joined="2011-05-25"/>
+		<cosponsor id="412473" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Sponsor introductory remarks on measure. (CR E853-854)</text></action>
+		<action datetime="2011-05-11"><text>Referred to the Committee on Foreign Affairs, and in addition to the Committees on Financial Services, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-11"><text>Referred to House Foreign Affairs</text></action>
+		<action datetime="2011-05-11"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-05-11"><text>Referred to House Oversight and Government Reform</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee" />
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Advisory bodies"/>
+		<term name="Congressional oversight"/>
+		<term name="Foreign aid and international relief"/>
+		<term name="Human rights"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="Religion"/>
+		<term name="Sanctions"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/11/2011--Introduced.
+International Religious Freedom Act Amendments of 2011 - Amends the International Religious Freedom Act of 1998 (IRFA) to require the Ambassador at Large for International Religious Freedom to: (1) integrate U.S. international religious freedom policies and engagement programs into U.S.-funded democracy and civil society programs and counterterrorism policies of U.S. agencies, including the Department of Defense (DOD), Department of State, Department of Homeland Security (DHS), and Department of the Treasury; and (2) coordinate programs including such agencies and the U.S. Agency for International Development (USAID). Recognizes that the absence of religious freedom is related to the persecution of religious minorities, religious conflict, violence, extremism, and terrorism (including terrorism reaching the United States). Extends U.S. policy to assisting nongovernmental organizations (currently, only governments) promoting religious freedom. Authorizes the Ambassador, subject to the direction of the President and the Secretary of State, to represent the United States in contacts with nongovernmental organizations impacting religious freedom in their respective societies, regions, or internationally. Specifies the minimum training requirements for foreign service officers, including chiefs of mission, under the Foreign Service Act of 1980. Modifies: (1) procedures for appointing members to the Commission on International Religious Freedom, and (2) terms of office for such members. Establishes the Executive Committee of the Commission. Extends the Commission's termination date to September 30, 2018. Requires the President, within 120 days after designating a country of particular concern for religious freedom, to transmit to Congress: (1) any identification of the agency or instrumentality and specific officials responsible for religious freedom violations, and (2) an evaluation of the actions taken by the President. Limits, to a 180-day period, the President's authority to waive specified actions with respect to a country in response to religious freedom violations. Terminates any action by the President under the IRFA upon the President's certification that the foreign government has ceased (or taken steps to cease) particularly severe violations of religious freedom. (Currently, without such certification, an action terminates within two years unless reauthorized by law.) 
+	</summary>
+</bill>

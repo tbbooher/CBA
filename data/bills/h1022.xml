@@ -1,0 +1,70 @@
+<bill session="112" type="h" number="1022" updated="2011-05-06T06:14:35-04:00">
+	<state datetime="2011-03-10">REFERRED</state>
+	<status><introduced datetime="2011-03-10"/></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="short" as="introduced">Buffalo Soldiers in the National Parks Study Act</title>
+		<title type="official" as="introduced">To authorize the Secretary of the Interior to conduct a study of alternatives for commemorating and interpreting the role of the Buffalo Soldiers in the early years of the National Parks, and for other purposes.</title>
+	</titles>
+	<sponsor id="412259"/>
+	<cosponsors>
+		<cosponsor id="400290" joined="2011-03-10"/>
+		<cosponsor id="400661" joined="2011-03-10"/>
+		<cosponsor id="400041" joined="2011-03-10"/>
+		<cosponsor id="400199" joined="2011-03-10"/>
+		<cosponsor id="400337" joined="2011-03-10"/>
+		<cosponsor id="400616" joined="2011-03-10"/>
+		<cosponsor id="400080" joined="2011-03-10"/>
+		<cosponsor id="400237" joined="2011-03-10"/>
+		<cosponsor id="412412" joined="2011-03-17"/>
+		<cosponsor id="412221" joined="2011-03-10"/>
+		<cosponsor id="400653" joined="2011-03-10"/>
+		<cosponsor id="400333" joined="2011-03-10"/>
+		<cosponsor id="400295" joined="2011-03-17"/>
+		<cosponsor id="400129" joined="2011-03-10"/>
+		<cosponsor id="412215" joined="2011-03-17"/>
+		<cosponsor id="400198" joined="2011-03-10"/>
+		<cosponsor id="412265" joined="2011-03-10"/>
+		<cosponsor id="400371" joined="2011-03-10"/>
+		<cosponsor id="400124" joined="2011-03-10"/>
+		<cosponsor id="400240" joined="2011-03-10"/>
+		<cosponsor id="400024" joined="2011-03-10"/>
+		<cosponsor id="400262" joined="2011-03-10"/>
+		<cosponsor id="400030" joined="2011-04-07"/>
+		<cosponsor id="400639" joined="2011-04-07"/>
+		<cosponsor id="400245" joined="2011-03-10"/>
+		<cosponsor id="400402" joined="2011-03-10"/>
+		<cosponsor id="400278" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-03-14"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Natural Resources" subcommittee="National Parks, Forests and Public Lands"/><text>Subcommittee Hearings Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral, Hearings" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="544" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="California"/>
+		<term name="Government investigations"/>
+		<term name="Historic sites and heritage areas"/>
+		<term name="Military history"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="Racial and ethnic relations"/>
+		<term name="U.S. history"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/10/2011--Introduced.
+Buffalo Soldiers in the National Parks Study Act - Directs the Secretary of the Interior to study alternatives for the commemoration and interpretation of the role of the Buffalo Soldiers (African-American troops who, in the late 19th century and early 20th century, came to be known as the Buffalo Soldiers) in the early years of the National Parks, which shall include an evaluation of the suitability and feasibility of establishing a national historic trail commemorating the route traveled by the Buffalo Soldiers from their post in the Presidio in San Francisco to the Sequoia and Yosemite National Parks and to any other National Parks where they may have served. 
+	</summary>
+</bill>

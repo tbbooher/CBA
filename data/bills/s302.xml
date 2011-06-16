@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="302" updated="2011-05-12T06:19:06-04:00">
+	<state datetime="2011-02-08">INTRODUCED</state>
+	<status><introduced datetime="2011-02-08"/></status>
+
+	<introduced datetime="2011-02-08"/>
+	<titles>
+		<title type="official" as="introduced">A bill to authorize the Secretary of the Interior to issue right-of-way permits for a natural gas transmission pipeline in nonwilderness areas within the boundary of Denali National Park, and for other purposes.</title>
+	</titles>
+	<sponsor id="300075"/>
+	<cosponsors>
+		<cosponsor id="412326" joined="2011-02-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-08"><text>Sponsor introductory remarks on measure. (CR S630-631)</text></action>
+		<action datetime="2011-02-08"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+		<action datetime="2011-05-11"><text>Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="Senate Energy and Natural Resources" subcommittee="National Parks" activity="Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Alaska"/>
+		<term name="Land use and conservation"/>
+		<term name="Licensing and registrations"/>
+		<term name="Oil and gas"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="Pipelines"/>
+		<term name="Roads and highways"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/8/2011--Introduced.
+Authorizes the Secretary of the Interior to issue right-of-way permits, subject to certain terms and conditions, for: (1) a high-pressure natural gas transmission pipeline (including appurtenances) in nonwilderness areas within the boundary of Denali National Park within, along, or near the approximately seven-mile segment of the George Parks Highway that runs through the Park; and (2) any distribution and transmission pipelines and appurtenances that the Secretary determines to be necessary to provide natural gas supply to the Park.
+
+	</summary>
+</bill>

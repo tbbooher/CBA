@@ -1,0 +1,52 @@
+<bill session="112" type="s" number="973" updated="2011-05-28T06:16:46-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">National Endowment for the Oceans Act</title>
+		<title type="official" as="introduced">A bill to create the National Endowment for the Oceans to promote the protection and conservation of the United States ocean, coastal, and Great Lakes ecosystems, and for other purposes.</title>
+	</titles>
+	<sponsor id="412247"/>
+	<cosponsors>
+		<cosponsor id="300056" joined="2011-05-16"/>
+		<cosponsor id="300078" joined="2011-05-12"/>
+		<cosponsor id="300063" joined="2011-05-12"/>
+		<cosponsor id="300091" joined="2011-05-12"/>
+		<cosponsor id="300093" joined="2011-05-12"/>
+		<cosponsor id="300084" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Sponsor introductory remarks on measure. (CR S2941-2942)</text></action>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Aquatic ecology"/>
+		<term name="Climate change"/>
+		<term name="Energy revenues and royalties"/>
+		<term name="Government trust funds"/>
+		<term name="Great Lakes"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine pollution"/>
+		<term name="Oil and gas"/>
+		<term name="Pollution liability"/>
+		<term name="Water quality"/>
+		<term name="Watersheds"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

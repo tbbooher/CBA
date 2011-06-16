@@ -1,0 +1,54 @@
+<bill session="112" type="s" number="982" updated="2011-05-25T06:21:31-04:00">
+	<state datetime="2011-05-12">INTRODUCED</state>
+	<status><introduced datetime="2011-05-12"/></status>
+
+	<introduced datetime="2011-05-12"/>
+	<titles>
+		<title type="short" as="introduced">Detaining Terrorists to Secure America Act of 2011</title>
+		<title type="official" as="introduced">A bill to reaffirm the authority of the Department of Defense to maintain United States Naval Station, Guantanamo Bay, Cuba, as a location for the detention of unprivileged enemy belligerents held by the Department of Defense, and for other purposes.</title>
+	</titles>
+	<sponsor id="412493"/>
+	<cosponsors>
+		<cosponsor id="300083" joined="2011-05-17"/>
+		<cosponsor id="412320" joined="2011-05-17"/>
+		<cosponsor id="402675" joined="2011-05-24"/>
+		<cosponsor id="300054" joined="2011-05-17"/>
+		<cosponsor id="412384" joined="2011-05-12"/>
+		<cosponsor id="300027" joined="2011-05-16"/>
+		<cosponsor id="300067" joined="2011-05-12"/>
+		<cosponsor id="412491" joined="2011-05-12"/>
+		<cosponsor id="300047" joined="2011-05-12"/>
+		<cosponsor id="300052" joined="2011-05-16"/>
+		<cosponsor id="300021" joined="2011-05-12"/>
+		<cosponsor id="412322" joined="2011-05-19"/>
+		<cosponsor id="400054" joined="2011-05-24"/>
+		<cosponsor id="412249" joined="2011-05-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-12"><text>Read twice and referred to the Committee on Armed Services.</text><reference label="text of measure as introduced in Senate" ref="CR S2948"/></action>
+	</actions>
+	<committees>
+		<committee code="SSAS" name="Senate Armed Services" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="944" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Caribbean area"/>
+		<term name="Correctional facilities and imprisonment"/>
+		<term name="Criminal investigation, prosecution, interrogation"/>
+		<term name="Cuba"/>
+		<term name="Detention of persons"/>
+		<term name="Latin America"/>
+		<term name="Military facilities and property"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

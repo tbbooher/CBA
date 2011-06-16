@@ -1,0 +1,31 @@
+<bill session="112" type="s" number="1168" updated="2011-06-14T06:25:43-04:00">
+	<state datetime="2011-06-09">INTRODUCED</state>
+	<status><introduced datetime="2011-06-09"/></status>
+
+	<introduced datetime="2011-06-09"/>
+	<titles>
+		<title type="official" as="introduced">A bill to authorize a national grant program for on-the-job training.</title>
+	</titles>
+	<sponsor id="412323"/>
+	<cosponsors>
+		<cosponsor id="300023" joined="2011-06-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-09"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

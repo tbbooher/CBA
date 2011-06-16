@@ -1,0 +1,33 @@
+<bill session="112" type="hr" number="290" updated="2011-06-14T06:30:26-04:00">
+	<state datetime="2011-06-01">REFERRED</state>
+	<status><introduced datetime="2011-06-01"/></status>
+
+	<introduced datetime="2011-06-01"/>
+	<titles>
+		<title type="official" as="introduced">Expressing the sense of the House of Representatives that it is imperative that the United States creates a clear vision and goal to be the world leader in innovation, science, technology, engineering, and math to ensure the continued strength, growth, and vitality of this Nation.</title>
+	</titles>
+	<sponsor id="400130"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-01"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	6/1/2011--Introduced.
+Expresses the sense of the House of Representatives that it must: (1) create a clear vision and goal for the United States to be the world leader in innovation and science, technology, engineering, and math (STEM), (2) ensure that at least 3% of U.S. gross domestic product (GDP) is dedicated to research and development, (3) encourage more students to study math and science, and (4) recognize that the resilient U.S. spirit will carry us through the current challenges we face to once again be the clear leader in innovation, research, and development.
+
+	</summary>
+</bill>

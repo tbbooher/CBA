@@ -1,0 +1,36 @@
+<bill session="112" type="h" number="1104" updated="2011-03-23T06:17:32-04:00">
+	<state datetime="2011-03-15">REFERRED</state>
+	<status><introduced datetime="2011-03-15"/></status>
+
+	<introduced datetime="2011-03-15"/>
+	<titles>
+		<title type="short" as="introduced">Representation for Farmers Act</title>
+		<title type="official" as="introduced">To amend the Environmental Research, Development, and Demonstration Authorization Act of 1978 to require the appointment of a member of the Science Advisory Board based on the recommendation of the Secretary of Agriculture.</title>
+	</titles>
+	<sponsor id="412392"/>
+	<cosponsors>
+		<cosponsor id="412208" joined="2011-03-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="580" />
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Advisory bodies"/>
+		<term name="Agricultural conservation and pollution"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental assessment, monitoring, research"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

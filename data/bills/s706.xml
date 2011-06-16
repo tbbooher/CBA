@@ -1,0 +1,95 @@
+<bill session="112" type="s" number="706" updated="2011-04-09T06:22:14-04:00">
+	<state datetime="2011-04-04">REPORTED</state>
+	<status><calendar datetime="2011-04-04" /></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="short" as="introduced">3-D, Domestic Jobs, Domestic Energy, and Deficit Reduction Act of 2011</title>
+		<title type="official" as="introduced">A bill to stimulate the economy, produce domestic energy, and create jobs at no cost to the taxpayers, and without borrowing money from foreign governments for which our children and grandchildren will be responsible, and for other purposes.</title>
+	</titles>
+	<sponsor id="400418"/>
+	<cosponsors>
+		<cosponsor id="400576" joined="2011-03-31"/>
+		<cosponsor id="300083" joined="2011-03-31"/>
+		<cosponsor id="400034" joined="2011-03-31"/>
+		<cosponsor id="412320" joined="2011-03-31"/>
+		<cosponsor id="412496" joined="2011-03-31"/>
+		<cosponsor id="400432" joined="2011-03-31"/>
+		<cosponsor id="300062" joined="2011-03-31"/>
+		<cosponsor id="402675" joined="2011-03-31"/>
+		<cosponsor id="300054" joined="2011-03-31"/>
+		<cosponsor id="300040" joined="2011-03-31"/>
+		<cosponsor id="412494" joined="2011-03-31"/>
+		<cosponsor id="400408" joined="2011-04-08"/>
+		<cosponsor id="300089" joined="2011-03-31"/>
+		<cosponsor id="300055" joined="2011-03-31"/>
+		<cosponsor id="300027" joined="2011-03-31"/>
+		<cosponsor id="400105" joined="2011-03-31"/>
+		<cosponsor id="300030" joined="2011-03-31"/>
+		<cosponsor id="412251" joined="2011-03-31"/>
+		<cosponsor id="412491" joined="2011-03-31"/>
+		<cosponsor id="300047" joined="2011-03-31"/>
+		<cosponsor id="400284" joined="2011-03-31"/>
+		<cosponsor id="300052" joined="2011-03-31"/>
+		<cosponsor id="300088" joined="2011-03-31"/>
+		<cosponsor id="412495" joined="2011-03-31"/>
+		<cosponsor id="412322" joined="2011-03-31"/>
+		<cosponsor id="400040" joined="2011-03-31"/>
+		<cosponsor id="300041" joined="2011-03-31"/>
+		<cosponsor id="400194" joined="2011-03-31"/>
+		<cosponsor id="300023" joined="2011-03-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Introduced in the Senate. Read the first time. Placed on Senate Legislative Calendar under Read the First Time.</text></action>
+		<calendar datetime="2011-04-04"  state="REPORTED"><text>Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 23.</text></calendar>
+	</actions>
+	<committees>
+
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1287" />
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Administrative remedies"/>
+		<term name="Air quality"/>
+		<term name="Alaska"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Arctic Ocean"/>
+		<term name="California"/>
+		<term name="Civil actions and liability"/>
+		<term name="Climate change"/>
+		<term name="Department of the Interior"/>
+		<term name="District of Columbia"/>
+		<term name="Economic performance and conditions"/>
+		<term name="Endangered and threatened species"/>
+		<term name="Environmental Protection Agency (EPA)"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental regulatory procedures"/>
+		<term name="Federal district courts"/>
+		<term name="Government trust funds"/>
+		<term name="Gulf of Mexico"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Judicial review and appeals"/>
+		<term name="Jurisdiction and venue"/>
+		<term name="Legal fees and court costs"/>
+		<term name="Licensing and registrations"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Oil and gas"/>
+		<term name="Pipelines"/>
+		<term name="Polar regions"/>
+		<term name="Unemployment"/>
+		<term name="Virginia"/>
+		<term name="Water quality"/>
+		<term name="Water use and supply"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

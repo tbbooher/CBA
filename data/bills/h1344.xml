@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1344" updated="2011-04-12T06:17:26-04:00">
+	<state datetime="2011-04-04">REFERRED</state>
+	<status><introduced datetime="2011-04-04"/></status>
+
+	<introduced datetime="2011-04-04"/>
+	<titles>
+		<title type="short" as="introduced">All-American Flag Act</title>
+		<title type="official" as="introduced">To require the purchase of domestically made flags of the United States of America for use by the Federal Government.</title>
+	</titles>
+	<sponsor id="412208"/>
+	<cosponsors>
+		<cosponsor id="400103" joined="2011-04-04"/>
+		<cosponsor id="412263" joined="2011-04-04"/>
+		<cosponsor id="412228" joined="2011-04-04"/>
+		<cosponsor id="400630" joined="2011-04-04"/>
+		<cosponsor id="400100" joined="2011-04-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-04"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Buy American requirements"/>
+		<term name="National symbols"/>
+		<term name="Public contracts and procurement"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

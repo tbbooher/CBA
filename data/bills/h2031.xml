@@ -1,0 +1,38 @@
+<bill session="112" type="h" number="2031" updated="2011-06-14T06:34:30-04:00">
+	<state datetime="2011-05-26">REFERRED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">EATS Act</title>
+		<title type="short" as="introduced">Expediting Agriculture Through Science Act</title>
+		<title type="official" as="introduced">To amend the Plant Protection Act to expedite the process for approval of certain biotechnology products, and for other purposes.</title>
+	</titles>
+	<sponsor id="412479"/>
+	<cosponsors>
+		<cosponsor id="412427" joined="2011-05-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Referred to the House Committee on Agriculture.</text></action>
+		<action datetime="2011-05-27"><text>Sponsor introductory remarks on measure. (CR E984)</text></action>
+	</actions>
+	<committees>
+		<committee code="HSAG" name="House Agriculture" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Agriculture and food"/>
+		<term name="Administrative remedies"/>
+		<term name="Agricultural pests"/>
+		<term name="Department of Agriculture"/>
+		<term name="Horticulture and plants"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

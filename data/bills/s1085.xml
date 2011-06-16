@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="1085" updated="2011-06-11T06:12:49-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend the Clean Air Act to define next generation biofuel, and to allow States the option of not participating in the corn ethanol portions of the renewable fuel standard due to conflicts with agricultural, economic, energy, and environmental goals.</title>
+	</titles>
+	<sponsor id="300055"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Sponsor introductory remarks on measure. (CR S3430-3431)</text></action>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Environment and Public Works.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEV" name="Senate Environment and Public Works" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="2009" />
+	</relatedbills>
+	<subjects>
+		<term name="Environmental protection"/>
+		<term name="Air quality"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Motor fuels"/>
+		<term name="State and local government operations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

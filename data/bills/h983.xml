@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="983" updated="2011-03-15T06:17:03-04:00">
+	<state datetime="2011-03-09">REFERRED</state>
+	<status><introduced datetime="2011-03-09"/></status>
+
+	<introduced datetime="2011-03-09"/>
+	<titles>
+		<title type="official" as="introduced">To ensure that American materials are used for Smithsonian construction activities and are sold in Smithsonian gift shops, and for other purposes.</title>
+	</titles>
+	<sponsor id="400331"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-09"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-03-10"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Economic Development, Public Buildings and Emergency Management.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Economic Development, Public Buildings and Emergency Management" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Appropriations"/>
+		<term name="Building construction"/>
+		<term name="Buy American requirements"/>
+		<term name="Government information and archives"/>
+		<term name="Museums, exhibitions, cultural centers"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Retail and wholesale trades"/>
+		<term name="Smithsonian Institution"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,49 @@
+<bill session="112" type="s" number="300" updated="2011-06-03T06:22:42-04:00">
+	<state datetime="2011-04-13">REPORTED</state>
+	<status><calendar datetime="2011-04-13" /></status>
+
+	<introduced datetime="2011-02-08"/>
+	<titles>
+		<title type="short" as="introduced">Government Charge Card Abuse Prevention Act of 2011</title>
+		<title type="official" as="introduced">A bill to prevent abuse of Government charge cards.</title>
+	</titles>
+	<sponsor id="300048"/>
+	<cosponsors>
+		<cosponsor id="300025" joined="2011-02-08"/>
+		<cosponsor id="300067" joined="2011-02-08"/>
+		<cosponsor id="300019" joined="2011-05-11"/>
+		<cosponsor id="412244" joined="2011-03-17"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-08"><text>Sponsor introductory remarks on measure. (CR S629-630)</text></action>
+		<action datetime="2011-02-08"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+		<calendar datetime="2011-04-13"  state="REPORTED"><text>Committee on Homeland Security and Governmental Affairs. Ordered to be reported without amendment favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Accounting and auditing"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Consumer credit"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government ethics and transparency, public corruption"/>
+		<term name="Government investigations"/>
+		<term name="Office of Management and Budget (OMB)"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Travel and tourism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/8/2011--Introduced.
+Government Charge Card Abuse Prevention Act of 2011 - Requires each executive agency, except for the Department of Defense (DOD), to establish and maintain specified safeguards and internal controls for official purchase cards and convenience checks, including measures to ensure that: (1) records are kept of each card holder and applicable transaction limits; (2) rebates and refunds based on prompt payment, sales volume, or other agency actions on card accounts are reviewed for accuracy; (3) periodic reviews are performed to determine whether each cardholder needs a card; (4) effective systems, techniques, and technologies are used to prevent or identify fraudulent purchases; and (5) steps are taken to recover the cost of erroneous, improper, or illegal purchases made with a purchase card or convenience check through salary offsets. Establishes similar requirements for DOD. Requires the Director of the Office of Management and Budget (OMB) to review existing guidance and prescribe additional guidance governing the implementation of the safeguards and internal controls. Requires each agency head to provide for appropriate adverse personnel actions or other punishment, including dismissal, in cases where employees violate agency policies implementing the guidance or make improper, erroneous, or illegal purchases. Requires the guidance to direct each agency head with more than $10 million in purchase card spending annually and each Inspector General to jointly report to the Director on such violations semiannually. Lists actions that each agency Inspector General should take, including to conduct periodic assessments of agency purchase card or convenience check programs to identify and analyze risks of illegal, improper, or erroneous purchases and payments in order to develop a plan for periodic audits of transactions. Amends the Travel and Transportation Reform Act of 1998 to require each agency to establish safeguards and internal controls over federal contractor-issued travel charge cards to ensure the proper, efficient, and effective use of such cards. Requires agencies that have employees who use a travel charge card that is billed directly to the U.S. government to establish and maintain specified internal control activities, including requirements to: (1) compare items submitted on an employee's travel voucher with items paid for using a centrally billed account on any related travel, (2) dispute unallowable and erroneous charges and track disputed transactions to ensure appropriate resolution, and (3) submit requests to servicing airlines for refunds for fully or partially unused tickets and to track unused tickets to ensure appropriate resolution. 
+	</summary>
+</bill>

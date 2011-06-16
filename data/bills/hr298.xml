@@ -1,0 +1,32 @@
+<bill session="112" type="hr" number="298" updated="2011-06-14T06:29:31-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="official" as="introduced">Expressing the sense of the House of Representatives that there is need for specified agencies to coordinate and capitalize on existing programs for epilepsy awareness.</title>
+	</titles>
+	<sponsor id="400121"/>
+	<cosponsors>
+		<cosponsor id="412192" joined="2011-06-03"/>
+		<cosponsor id="412436" joined="2011-06-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

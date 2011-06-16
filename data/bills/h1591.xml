@@ -1,0 +1,64 @@
+<bill session="112" type="h" number="1591" updated="2011-06-04T06:17:14-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Sanctity of Eternal Rest for Veterans Act of 2011</title>
+		<title type="short" as="introduced">SERVE Act of 2011</title>
+		<title type="official" as="introduced">To guarantee that military funerals are conducted with dignity and respect.</title>
+	</titles>
+	<sponsor id="400019"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-06-03"/>
+		<cosponsor id="400073" joined="2011-05-10"/>
+		<cosponsor id="412469" joined="2011-05-23"/>
+		<cosponsor id="412280" joined="2011-05-10"/>
+		<cosponsor id="400089" joined="2011-05-13"/>
+		<cosponsor id="400255" joined="2011-04-15"/>
+		<cosponsor id="400065" joined="2011-05-13"/>
+		<cosponsor id="412256" joined="2011-05-10"/>
+		<cosponsor id="412460" joined="2011-05-23"/>
+		<cosponsor id="400274" joined="2011-05-13"/>
+		<cosponsor id="412411" joined="2011-05-23"/>
+		<cosponsor id="412311" joined="2011-05-10"/>
+		<cosponsor id="400288" joined="2011-05-13"/>
+		<cosponsor id="412447" joined="2011-05-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the Committee on the Judiciary, and in addition to the Committees on Veterans' Affairs, and Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Veterans' Affairs</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Armed Services</text></action>
+		<action datetime="2011-04-29"><committee name="House Veterans' Affairs"/><text>Referred to the Subcommittee on Disability Assistance and Memorial Affairs.</text></action>
+		<action datetime="2011-05-18"><committee name="House Armed Services"/><text>Referred to the Subcommittee on Military Personnel.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Veterans' Affairs" subcommittee="Disability Assistance and Memorial Affairs" activity="Referral" />
+		<committee code="HSAS" name="House Armed Services" activity="Referral, In Committee" />
+		<committee code="" name="House Armed Services" subcommittee="Military Personnel" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="s" number="815" />
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Assault and harassment offenses"/>
+		<term name="Civil actions and liability"/>
+		<term name="Military cemeteries and funerals"/>
+		<term name="Military personnel and dependents"/>
+		<term name="Protest and dissent"/>
+		<term name="Right of privacy"/>
+		<term name="Virginia"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/15/2011--Introduced.
+Sanctity of Eternal Rest for Veterans Act of 2011 or SERVE Act of 2011 - Amends the federal criminal code concerning the prohibition on disruptions of funerals of members or former members of the Armed Forces to increase the period covered under such prohibition from one to two hours before and after a military funeral. Includes within such unlawful conduct any disturbance or disruption occurring within 500 feet of the residence of a surviving member of a deceased's immediate family. Provides civil remedies, including actual and statutory damages. Makes identical changes under federal veterans' provisions concerning the prohibition on certain demonstrations and disruptions at national cemeteries, including Arlington National Cemetery.
+
+	</summary>
+</bill>

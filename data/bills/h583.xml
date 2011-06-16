@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="583" updated="2011-03-06T08:07:07-05:00">
+	<state datetime="2011-02-09">REFERRED</state>
+	<status><introduced datetime="2011-02-09"/></status>
+
+	<introduced datetime="2011-02-09"/>
+	<titles>
+		<title type="short" as="introduced">Jane's Law</title>
+		<title type="official" as="introduced">To amend title 18, United States Code, to strengthen enforcement of spousal court-ordered property distributions, and for other purposes.</title>
+	</titles>
+	<sponsor id="412236"/>
+	<cosponsors>
+		<cosponsor id="400652" joined="2011-02-09"/>
+		<cosponsor id="400055" joined="2011-02-09"/>
+		<cosponsor id="400618" joined="2011-02-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-09"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-02-14"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Crimes against property"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Separation, divorce, custody, support"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

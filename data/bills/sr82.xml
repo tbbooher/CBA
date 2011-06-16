@@ -1,0 +1,33 @@
+<bill session="112" type="sr" number="82" updated="2011-03-06T07:44:01-05:00">
+	<state datetime="2011-03-01">REFERRED</state>
+	<status><introduced datetime="2011-03-01"/></status>
+
+	<introduced datetime="2011-03-01"/>
+	<titles>
+		<title type="official" as="introduced">A resolution to provide sufficient time for legislation to be read.</title>
+	</titles>
+	<sponsor id="412492"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-01"><text>Referred to the Committee on Rules and Administration.</text><reference label="text of measure as introduced" ref="CR S1068"/></action>
+	</actions>
+	<committees>
+		<committee code="SSRA" name="Senate Rules and Administration" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Senate"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="271" updated="2011-05-19T06:12:54-04:00">
+	<state datetime="2011-02-03">INTRODUCED</state>
+	<status><introduced datetime="2011-02-03"/></status>
+
+	<introduced datetime="2011-02-03"/>
+	<titles>
+		<title type="short" as="introduced">Wallowa Forest Service Compound Conveyance Act</title>
+		<title type="official" as="introduced">A bill to require the Secretary of Agriculture to enter into a property conveyance with the city of Wallowa, Oregon, and for other purposes.</title>
+	</titles>
+	<sponsor id="300100"/>
+	<cosponsors>
+		<cosponsor id="412325" joined="2011-02-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-03"><text>Sponsor introductory remarks on measure. (CR S546)</text></action>
+		<action datetime="2011-02-03"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+		<action datetime="2011-05-18"><text>Committee on Energy and Natural Resources Subcommittee on Public Lands and Forests. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="Senate Energy and Natural Resources" subcommittee="Public Lands and Forests" activity="Hearings" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land transfers"/>
+		<term name="Oregon"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/3/2011--Introduced.
+Wallowa Forest Service Compound Conveyance Act - Directs the Secretary of Agriculture (USDA) to convey the Wallowa Forest Service Compound to Wallowa, Oregon, for use as a historical and cultural interpretation and education center. 
+	</summary>
+</bill>

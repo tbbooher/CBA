@@ -1,0 +1,45 @@
+<bill session="112" type="h" number="1539" updated="2011-06-03T06:16:35-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Asset-Backed Market Stabilization Act of 2011</title>
+		<title type="official" as="introduced">To repeal section 939G of the Dodd-Frank Wall Street Reform and Consumer Protection Act and to restore Securities and Exchange Commission Rule 436(g) repealed by such section.</title>
+	</titles>
+	<sponsor id="412461"/>
+	<cosponsors>
+		<cosponsor id="412462" joined="2011-04-14"/>
+		<cosponsor id="412440" joined="2011-04-14"/>
+		<cosponsor id="400145" joined="2011-04-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Hearings Held Prior to Introduction.</text></action>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+		<action datetime="2011-05-03"><committee name="House Committee on Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Subcommittee Consideration and Mark-up Session Held.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises"/><text>Forwarded by Subcommittee to Full Committee by the Yeas and Nays: 18 - 14 .</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, Hearings, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral, Markup, Reporting" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="712" />
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Corporate finance and management"/>
+		<term name="Financial services and investments"/>
+		<term name="Securities"/>
+		<term name="Securities and Exchange Commission (SEC)"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="945" updated="2011-05-25T06:33:19-04:00">
+	<state datetime="2011-05-11">INTRODUCED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="official" as="introduced">A bill to save at least $5,000,000,000 by consolidating some duplicative and overlapping Government programs.</title>
+	</titles>
+	<sponsor id="400576"/>
+	<cosponsors>
+		<cosponsor id="412321" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1782" />
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Appropriations"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Congressional oversight"/>
+		<term name="Executive agency funding and structure"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

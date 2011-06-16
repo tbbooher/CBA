@@ -1,0 +1,38 @@
+<bill session="112" type="hr" number="220" updated="2011-06-02T06:10:45-04:00">
+	<state datetime="2011-04-12">REFERRED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="official" as="introduced">Expressing support for designation of the first Saturday in October as &quot;National Animal Rescue Day&quot; to create awareness, educate humans of the importance of adoption, and create a humane environment for any pet, including the importance of spaying and neutering of animals, and the encouragement of animal adoptions throughout the United States.</title>
+	</titles>
+	<sponsor id="400008"/>
+	<cosponsors>
+		<cosponsor id="400352" joined="2011-06-01"/>
+		<cosponsor id="412269" joined="2011-06-01"/>
+		<cosponsor id="400047" joined="2011-06-01"/>
+		<cosponsor id="400283" joined="2011-06-01"/>
+		<cosponsor id="400184" joined="2011-06-01"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Animals"/>
+		<term name="Animal protection and human-animal relationships"/>
+		<term name="Commemorative events and holidays"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/12/2011--Introduced.
+Supports the designation of a National Animal Rescue Day to create awareness for animal rescue programs throughout the year and address the challenge of overpopulation through continued spaying and neutering. 
+	</summary>
+</bill>

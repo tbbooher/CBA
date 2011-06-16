@@ -1,0 +1,36 @@
+<bill session="112" type="h" number="1512" updated="2011-05-05T06:31:29-04:00">
+	<state datetime="2011-04-13">REFERRED</state>
+	<status><introduced datetime="2011-04-13"/></status>
+
+	<introduced datetime="2011-04-13"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Federal Reserve Act to remove the representatives of the Federal Reserve banks from membership on the Federal Open Market Committee.</title>
+	</titles>
+	<sponsor id="400140"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-13"><text>Referred to the House Committee on Financial Services.</text></action>
+		<action datetime="2011-05-02"><committee name="House Committee on Financial Services"/><text>Referred to the Subcommittee on Domestic Monetary Policy and Technology.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Domestic Monetary Policy and Technology" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal Reserve System"/>
+		<term name="Monetary policy"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

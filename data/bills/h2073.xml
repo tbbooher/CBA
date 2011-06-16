@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2073" updated="2011-06-14T06:26:44-04:00">
+	<state datetime="2011-06-01">REFERRED</state>
+	<status><introduced datetime="2011-06-01"/></status>
+
+	<introduced datetime="2011-06-01"/>
+	<titles>
+		<title type="short" as="introduced">Country-of-Origin Labeling for Fuels Act</title>
+		<title type="official" as="introduced">To require the Secretary of Energy to implement country-of-origin disclosure requirements with respect to motor vehicle fuels, and for other purposes.</title>
+	</titles>
+	<sponsor id="412208"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-01"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

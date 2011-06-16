@@ -1,0 +1,42 @@
+<bill session="112" type="h" number="1555" updated="2011-05-07T06:16:47-04:00">
+	<state datetime="2011-04-14">REFERRED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Homeland Security Act of 2002 to limit the number of Urban Area Security Initiative grants awarded and to clarify the risk assessment formula to be used when making such grants, and for other purposes.</title>
+	</titles>
+	<sponsor id="400246"/>
+	<cosponsors>
+		<cosponsor id="400219" joined="2011-05-02"/>
+		<cosponsor id="400289" joined="2011-05-02"/>
+		<cosponsor id="400195" joined="2011-04-14"/>
+		<cosponsor id="400251" joined="2011-05-04"/>
+		<cosponsor id="400333" joined="2011-05-04"/>
+		<cosponsor id="400003" joined="2011-05-04"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Referred to the House Committee on Homeland Security.</text></action>
+		<action datetime="2011-05-04"><committee name="House Committee on Homeland Security"/><text>Referred to the Subcommittee on Emergency Preparedness, Response and Communications.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSHM" name="House Homeland Security" activity="Referral, In Committee" />
+		<committee code="" name="House Homeland Security" subcommittee="Emergency Preparedness, Response, and Communications" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Homeland security"/>
+		<term name="Law enforcement administration and funding"/>
+		<term name="Terrorism"/>
+		<term name="Urban and suburban affairs and development"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

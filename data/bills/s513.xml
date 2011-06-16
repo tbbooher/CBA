@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="513" updated="2011-03-18T06:31:45-04:00">
+	<state datetime="2011-03-08">INTRODUCED</state>
+	<status><introduced datetime="2011-03-08"/></status>
+
+	<introduced datetime="2011-03-08"/>
+	<titles>
+		<title type="short" as="introduced">Saving Kids From Dangerous Drugs Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Controlled Substances Act to provide enhanced penalties for marketing controlled substances to minors.</title>
+	</titles>
+	<sponsor id="300043"/>
+	<cosponsors>
+		<cosponsor id="300048" joined="2011-03-08"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-08"><text>Sponsor introductory remarks on measure. (CR S1410-1411)</text></action>
+		<action datetime="2011-03-08"><text>Read twice and referred to the Committee on the Judiciary.</text><reference label="text of measure as introduced" ref="CR S1411"/></action>
+	</actions>
+	<committees>
+		<committee code="SSJU" name="Senate Judiciary" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Crime and law enforcement"/>
+		<term name="Child health"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Drug trafficking and controlled substances"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Food supply, safety, and labeling"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

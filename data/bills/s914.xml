@@ -1,0 +1,39 @@
+<bill session="112" type="s" number="914" updated="2011-06-09T06:14:49-04:00">
+	<state datetime="2011-05-09">INTRODUCED</state>
+	<status><introduced datetime="2011-05-09"/></status>
+
+	<introduced datetime="2011-05-09"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend title 38, United States Code, to authorize the waiver of the collection of copayments for telehealth and telemedicine visits of veterans, and for other purposes.</title>
+	</titles>
+	<sponsor id="412326"/>
+	<cosponsors>
+		<cosponsor id="300048" joined="2011-05-09"/>
+		<cosponsor id="412244" joined="2011-05-09"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-09"><text>Sponsor introductory remarks on measure. (CR S2782-2783)</text></action>
+		<action datetime="2011-05-09"><text>Read twice and referred to the Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-06-08"><text>Committee on Veterans' Affairs. Hearings held.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSVA" name="Senate Veterans' Affairs" activity="Referral, Hearings, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Health care costs and insurance"/>
+		<term name="Health technology, devices, supplies"/>
+		<term name="Veterans' medical care"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	5/9/2011--Introduced.
+Authorizes the Secretary of Veterans Affairs (VA) to waive the imposition or collection of copayments for telehealth and telemedicine visits of veterans.
+
+	</summary>
+</bill>

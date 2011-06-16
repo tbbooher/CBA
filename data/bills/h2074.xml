@@ -1,0 +1,32 @@
+<bill session="112" type="h" number="2074" updated="2011-06-14T06:33:40-04:00">
+	<state datetime="2011-06-01">REFERRED</state>
+	<status><introduced datetime="2011-06-01"/></status>
+
+	<introduced datetime="2011-06-01"/>
+	<titles>
+		<title type="short" as="introduced">Veterans Sexual Assault Prevention Act</title>
+		<title type="official" as="introduced">To amend title 38, United States Code, to require a comprehensive policy on reporting and tracking sexual assault incidents and other safety incidents that occur at medical facilities of the Department of Veterans Affairs.</title>
+	</titles>
+	<sponsor id="412456"/>
+	<cosponsors>
+		<cosponsor id="400279" joined="2011-06-01"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-01"><text>Referred to the House Committee on Veterans' Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

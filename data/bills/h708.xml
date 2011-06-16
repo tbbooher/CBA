@@ -1,0 +1,44 @@
+<bill session="112" type="h" number="708" updated="2011-04-13T06:12:56-04:00">
+	<state datetime="2011-02-15">REFERRED</state>
+	<status><introduced datetime="2011-02-15"/></status>
+
+	<introduced datetime="2011-02-15"/>
+	<titles>
+		<title type="short" as="introduced">Safe Highway Markings Act of 2011</title>
+		<title type="official" as="introduced">To amend title 23, United States Code, to establish standards limiting the amounts of arsenic and lead contained in glass beads used in pavement markings.</title>
+	</titles>
+	<sponsor id="409888"/>
+	<cosponsors>
+		<cosponsor id="400031" joined="2011-04-12"/>
+		<cosponsor id="400183" joined="2011-02-15"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-15"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-02-16"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Transportation"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Roads and highways"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/15/2011--Introduced.
+Safe Highway Markings Act of 2011 - Prescribes standards for glass beads used in pavement markings, limiting the arsenic or lead content to 200 parts per million.
+Requires the Secretary of Transportation to withhold up to 5% of the apportionment of federal-aid highway funds for any state that fails to enforce requirements to ensure that glass beads used in pavement markings on or along federal-aid highway roads or highways do not contain more than 200 parts per million arsenic or lead.
+
+	</summary>
+</bill>

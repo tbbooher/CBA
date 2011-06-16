@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="479" updated="2011-03-16T06:20:22-04:00">
+	<state datetime="2011-03-03">INTRODUCED</state>
+	<status><introduced datetime="2011-03-03"/></status>
+
+	<introduced datetime="2011-03-03"/>
+	<titles>
+		<title type="short" as="introduced">Federal Real Property Disposal Enhancement Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend title 40, United States Code, to enhance authorities with regard to real property that has yet to be reported excess, and for other purposes.</title>
+	</titles>
+	<sponsor id="300080"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-03"><text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Congressional oversight"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Land transfers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

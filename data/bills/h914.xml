@@ -1,0 +1,41 @@
+<bill session="112" type="h" number="914" updated="2011-03-10T06:19:47-05:00">
+	<state datetime="2011-03-03">REFERRED</state>
+	<status><introduced datetime="2011-03-03"/></status>
+
+	<introduced datetime="2011-03-03"/>
+	<titles>
+		<title type="short" as="introduced">Federal Internship Improvement Act</title>
+		<title type="official" as="introduced">To improve Federal internships by expanding the conversion rate of Federal interns to full-time employees, establish consistent tracking mechanisms among Executive agencies for internship programs, and accelerate adoption of internship best management practices by Executive agencies.</title>
+	</titles>
+	<sponsor id="412272"/>
+	<cosponsors>
+		<cosponsor id="400570" joined="2011-03-03"/>
+		<cosponsor id="400251" joined="2011-03-03"/>
+		<cosponsor id="400295" joined="2011-03-03"/>
+		<cosponsor id="400271" joined="2011-03-03"/>
+		<cosponsor id="400326" joined="2011-03-03"/>
+		<cosponsor id="412212" joined="2011-03-03"/>
+		<cosponsor id="400283" joined="2011-03-03"/>
+		<cosponsor id="400090" joined="2011-03-03"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-03"><text>Referred to the House Committee on Oversight and Government Reform.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Government operations and politics"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government information and archives"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

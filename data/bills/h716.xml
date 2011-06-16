@@ -1,0 +1,45 @@
+<bill session="112" type="h" number="716" updated="2011-05-06T06:13:20-04:00">
+	<state datetime="2011-02-15">REFERRED</state>
+	<status><introduced datetime="2011-02-15"/></status>
+
+	<introduced datetime="2011-02-15"/>
+	<titles>
+		<title type="short" as="introduced">FIRE Act</title>
+		<title type="short" as="introduced">Firefighting Investment, Renewal, and Employment Act</title>
+		<title type="official" as="introduced">To amend the Federal Fire Prevention and Control Act of 1974 to authorize a fire station construction grant program for 5 years, and for other purposes.</title>
+	</titles>
+	<sponsor id="400133"/>
+	<cosponsors>
+		<cosponsor id="412253" joined="2011-03-16"/>
+		<cosponsor id="400253" joined="2011-03-30"/>
+		<cosponsor id="412312" joined="2011-05-05"/>
+		<cosponsor id="412228" joined="2011-03-30"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-15"><text>Referred to the House Committee on Science, Space, and Technology.</text></action>
+		<action datetime="2011-02-18"><text>Sponsor introductory remarks on measure. (CR E314)</text></action>
+		<action datetime="2011-02-28"><committee name="House Committee on Science, Space, and Technology"/><text>Referred to the Subcommittee on Technology and Innovation.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSSY" name="House Science, Space, and Technology" activity="Referral, In Committee" />
+		<committee code="" name="House Science, Space, and Technology" subcommittee="Technology and Innovation" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Emergency management"/>
+		<term name="Building construction"/>
+		<term name="Fires"/>
+		<term name="Northern Mariana Islands"/>
+		<term name="State and local finance"/>
+		<term name="U.S. territories and protectorates"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/15/2011--Introduced.
+Firefighting Investment, Renewal, and Employment Act or the FIRE Act - Amends the Federal Fire Prevention and Control Act of 1974 to: (1) authorize appropriations for competitive grants for modifying, upgrading, or constructing non-federal fire stations for FY2012-FY2016; and (2) include the Commonwealth of the Northern Mariana Islands within the definition of &quot;state&quot; for purposes of such Act. 
+	</summary>
+</bill>

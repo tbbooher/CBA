@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="858" updated="2011-03-22T06:10:56-04:00">
+	<state datetime="2011-03-01">REFERRED</state>
+	<status><introduced datetime="2011-03-01"/></status>
+
+	<introduced datetime="2011-03-01"/>
+	<titles>
+		<title type="official" as="introduced">To provide for the conversion of a temporary judgeship for the district of Hawaii to a permanent judgeship.</title>
+	</titles>
+	<sponsor id="412200"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-01"><text>Sponsor introductory remarks on measure. (CR E383-384)</text></action>
+		<action datetime="2011-03-01"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-03-21"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on Courts, Commercial and Administrative Law.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Courts, Commercial and Administrative Law" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Law"/>
+		<term name="Federal district courts"/>
+		<term name="Hawaii"/>
+		<term name="Judges"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/1/2011--Introduced.
+Converts a temporary judgeship for the district of Hawaii to a permanent judgeship.
+
+	</summary>
+</bill>

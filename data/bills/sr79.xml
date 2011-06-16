@@ -1,0 +1,35 @@
+<bill session="112" type="sr" number="79" updated="2011-03-02T06:17:17-05:00">
+	<state datetime="2011-02-28">REFERRED</state>
+	<status><introduced datetime="2011-02-28"/></status>
+
+	<introduced datetime="2011-02-28"/>
+	<titles>
+		<title type="official" as="introduced">An original resolution authorizing expenditures by the Committee on Foreign Relations.</title>
+	</titles>
+	<sponsor id="300060"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-28"><text>Committee on Foreign Relations. Original measure reported to Senate by Senator Kerry. Without written report.</text></action>
+		<action datetime="2011-02-28"><text>Referred to the Committee on Rules and Administration.</text><reference label="text of measure as introduced" ref="CR S978"/></action>
+	</actions>
+	<committees>
+		<committee code="SSFR" name="Senate Foreign Relations" activity="Origin, Reporting" />
+		<committee code="SSRA" name="Senate Rules and Administration" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Congressional committees"/>
+		<term name="Senate Committee on Foreign Relations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

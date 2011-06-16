@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1130" updated="2011-06-14T06:34:36-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Strengthening America's Trade Laws Act</title>
+		<title type="official" as="introduced">A bill to strengthen the United States trade laws and for other purposes.</title>
+	</titles>
+	<sponsor id="300084"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Sponsor introductory remarks on measure. (CR S3444)</text></action>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

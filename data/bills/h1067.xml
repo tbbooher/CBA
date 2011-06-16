@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1067" updated="2011-04-06T06:14:55-04:00">
+	<state datetime="2011-03-14">REFERRED</state>
+	<status><introduced datetime="2011-03-14"/></status>
+
+	<introduced datetime="2011-03-14"/>
+	<titles>
+		<title type="short" as="introduced">Surface Transportation Earmark Rescission, Savings, and Accountability Act of 2011</title>
+		<title type="official" as="introduced">To rescind earmarks for certain surface transportation projects, and for other purposes.</title>
+	</titles>
+	<sponsor id="412236"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-09"><text>Sponsor introductory remarks on measure. (CR H1629)</text></action>
+		<action datetime="2011-03-14"><text>Referred to the House Committee on Transportation and Infrastructure.</text></action>
+		<action datetime="2011-03-15"><committee name="House Committee on Transportation and Infrastructure"/><text>Referred to the Subcommittee on Highways and Transit.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Highways and Transit" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Appropriations"/>
+		<term name="Public transit"/>
+		<term name="Roads and highways"/>
+		<term name="Transportation programs funding"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

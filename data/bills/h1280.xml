@@ -1,0 +1,49 @@
+<bill session="112" type="h" number="1280" updated="2011-04-15T06:16:41-04:00">
+	<state datetime="2011-03-31">REFERRED</state>
+	<status><introduced datetime="2011-03-31"/></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="official" as="introduced">To amend the Atomic Energy Act of 1954 to require congressional approval of agreements for peaceful nuclear cooperation with foreign countries, and for other purposes.</title>
+	</titles>
+	<sponsor id="400344"/>
+	<cosponsors>
+		<cosponsor id="400253" joined="2011-03-31"/>
+		<cosponsor id="400640" joined="2011-03-31"/>
+		<cosponsor id="400348" joined="2011-03-31"/>
+		<cosponsor id="400371" joined="2011-03-31"/>
+		<cosponsor id="400025" joined="2011-03-31"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Referred to the Committee on Foreign Affairs, and in addition to the Committee on Rules, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-31"><text>Referred to House Foreign Affairs</text></action>
+		<action datetime="2011-03-31"><text>Referred to House Rules</text></action>
+		<action datetime="2011-04-14"><committee name="House Foreign Affairs"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSFA" name="House Foreign Affairs" activity="Referral, Markup, In Committee" />
+		<committee code="HSRU" name="House Rules" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Arms control and nonproliferation"/>
+		<term name="Civil actions and liability"/>
+		<term name="Congressional oversight"/>
+		<term name="International law and treaties"/>
+		<term name="International organizations and cooperation"/>
+		<term name="Nuclear power"/>
+		<term name="Nuclear weapons"/>
+		<term name="Terrorism"/>
+		<term name="Trade restrictions"/>
+		<term name="United Nations"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

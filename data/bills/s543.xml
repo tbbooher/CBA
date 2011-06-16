@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="543" updated="2011-05-13T06:19:01-04:00">
+	<state datetime="2011-03-10">INTRODUCED</state>
+	<status><introduced datetime="2011-03-10"/></status>
+
+	<introduced datetime="2011-03-10"/>
+	<titles>
+		<title type="short" as="introduced">Wireless Tax Fairness Act of 2011</title>
+		<title type="official" as="introduced">A bill to restrict any State or local jurisdiction from imposing a new discriminatory tax on cell phone services, providers, or property.</title>
+	</titles>
+	<sponsor id="300100"/>
+	<cosponsors>
+		<cosponsor id="412223" joined="2011-03-10"/>
+		<cosponsor id="400272" joined="2011-03-10"/>
+		<cosponsor id="300040" joined="2011-03-10"/>
+		<cosponsor id="412493" joined="2011-05-12"/>
+		<cosponsor id="300091" joined="2011-03-10"/>
+		<cosponsor id="300071" joined="2011-03-10"/>
+		<cosponsor id="300078" joined="2011-03-10"/>
+		<cosponsor id="400054" joined="2011-03-10"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-10"><text>Sponsor introductory remarks on measure. (CR S1550)</text></action>
+		<action datetime="2011-03-10"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1002" />
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Sales and excise taxes"/>
+		<term name="State and local taxation"/>
+		<term name="Telephone and wireless communication"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/10/2011--Introduced.
+Wireless Tax Fairness Act of 2011- Prohibits states or local governments from imposing any new discriminatory tax on mobile services, mobile service providers, or mobile service property (i.e., cell phones) for five years after the enactment of this Act. Defines &quot;new discriminatory tax&quot; as a tax imposed on mobile services, providers, or property that is not generally imposed on other types of services or property, or that is generally imposed at a lower rate, unless such tax was imposed and actually enforced prior to the date of enactment of this Act. .
+
+	</summary>
+</bill>

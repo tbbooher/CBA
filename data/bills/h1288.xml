@@ -1,0 +1,74 @@
+<bill session="112" type="h" number="1288" updated="2011-06-03T06:14:43-04:00">
+	<state datetime="2011-03-31">REFERRED</state>
+	<status><introduced datetime="2011-03-31"/></status>
+
+	<introduced datetime="2011-03-31"/>
+	<titles>
+		<title type="short" as="introduced">World War II Merchant Mariner Service Act</title>
+		<title type="official" as="introduced">To direct the Secretary of Homeland Security to accept additional documentation when considering the application for veterans status of an individual who performed service in the merchant marines during World War II, and for other purposes.</title>
+	</titles>
+	<sponsor id="400616"/>
+	<cosponsors>
+		<cosponsor id="412287" joined="2011-05-25"/>
+		<cosponsor id="400640" joined="2011-03-31"/>
+		<cosponsor id="400041" joined="2011-04-05"/>
+		<cosponsor id="400017" joined="2011-05-25"/>
+		<cosponsor id="400073" joined="2011-05-04"/>
+		<cosponsor id="400347" joined="2011-05-25"/>
+		<cosponsor id="400280" joined="2011-05-02"/>
+		<cosponsor id="400008" joined="2011-05-25"/>
+		<cosponsor id="412457" joined="2011-04-01"/>
+		<cosponsor id="400048" joined="2011-05-02"/>
+		<cosponsor id="412309" joined="2011-05-11"/>
+		<cosponsor id="412193" joined="2011-04-13"/>
+		<cosponsor id="400343" joined="2011-05-25"/>
+		<cosponsor id="400259" joined="2011-04-13"/>
+		<cosponsor id="400209" joined="2011-03-31"/>
+		<cosponsor id="400183" joined="2011-05-04"/>
+		<cosponsor id="400076" joined="2011-04-07"/>
+		<cosponsor id="400178" joined="2011-05-04"/>
+		<cosponsor id="400643" joined="2011-05-26"/>
+		<cosponsor id="412195" joined="2011-05-26"/>
+		<cosponsor id="400644" joined="2011-05-02"/>
+		<cosponsor id="400266" joined="2011-03-31"/>
+		<cosponsor id="400361" joined="2011-05-26"/>
+		<cosponsor id="400196" joined="2011-05-02"/>
+		<cosponsor id="400291" joined="2011-05-25"/>
+		<cosponsor id="400047" joined="2011-04-07"/>
+		<cosponsor id="400204" joined="2011-05-12"/>
+		<cosponsor id="400090" joined="2011-05-11"/>
+		<cosponsor id="400288" joined="2011-04-15"/>
+		<cosponsor id="400130" joined="2011-06-02"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-31"><text>Referred to the House Committee on Veterans' Affairs.</text></action>
+		<action datetime="2011-04-15"><committee name="House Committee on Veterans' Affairs"/><text>Referred to the Subcommittee on Disability Assistance and Memorial Affairs.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSVR" name="House Veterans' Affairs" activity="Referral, In Committee" />
+		<committee code="" name="House Veterans' Affairs" subcommittee="Disability Assistance and Memorial Affairs" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Government information and archives"/>
+		<term name="Marine and inland water transportation"/>
+		<term name="National Guard and reserves"/>
+		<term name="Personnel records"/>
+		<term name="Transportation employees"/>
+		<term name="Veterans' education, employment, rehabilitation"/>
+		<term name="Veterans' loans, housing, homeless programs"/>
+		<term name="Veterans' medical care"/>
+		<term name="Veterans' pensions and compensation"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/31/2011--Introduced.
+World War II Merchant Mariner Service Act - Directs the Secretary of Homeland Security (DHS) to consider certain methods for verifying that an individual performed honorable service as a member of the merchant marine during the period beginning on December 7, 1941, and ending on December 31, 1946, for purposes of eligibility for veterans' benefits under the GI Bill Improvement Act of 1977. Requires such methods to include Social Security Administration (SSA) records and validated testimony in the case of the absence of Coast Guard shipping or discharge forms, ship logbooks, or other official employment records. Requires the Secretary to recognize masters of seagoing vessels or other command officers who were authorized to document an individual for purposes of hiring for the merchant marine or discharge therefrom, when determining whether to recognize service allegedly performed during such period.
+
+	</summary>
+</bill>

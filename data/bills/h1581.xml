@@ -1,0 +1,74 @@
+<bill session="112" type="h" number="1581" updated="2011-06-03T06:16:45-04:00">
+	<state datetime="2011-04-15">REFERRED</state>
+	<status><introduced datetime="2011-04-15"/></status>
+
+	<introduced datetime="2011-04-15"/>
+	<titles>
+		<title type="short" as="introduced">Wilderness and Roadless Area Release Act of 2011</title>
+		<title type="official" as="introduced">To release wilderness study areas administered by the Bureau of Land Management that are not suitable for wilderness designation from continued management as defacto wilderness areas and to release inventoried roadless areas within the National Forest System that are not recommended for wilderness designation from the land use restrictions of the 2001 Roadless Area Conservation Final Rule and the 2005 State Petitions for Inventoried Roadless Area Management Final Rule, and for other purposes.</title>
+	</titles>
+	<sponsor id="412190"/>
+	<cosponsors>
+		<cosponsor id="400144" joined="2011-04-15"/>
+		<cosponsor id="412403" joined="2011-04-15"/>
+		<cosponsor id="412271" joined="2011-04-15"/>
+		<cosponsor id="412218" joined="2011-04-15"/>
+		<cosponsor id="412419" joined="2011-04-15"/>
+		<cosponsor id="400659" joined="2011-04-15"/>
+		<cosponsor id="400335" joined="2011-05-11"/>
+		<cosponsor id="400057" joined="2011-04-15"/>
+		<cosponsor id="412317" joined="2011-04-15"/>
+		<cosponsor id="412475" joined="2011-04-15"/>
+		<cosponsor id="412270" joined="2011-04-15"/>
+		<cosponsor id="412294" joined="2011-04-15"/>
+		<cosponsor id="400313" joined="2011-04-15"/>
+		<cosponsor id="400267" joined="2011-04-15"/>
+		<cosponsor id="412405" joined="2011-04-15"/>
+		<cosponsor id="400297" joined="2011-04-15"/>
+		<cosponsor id="400154" joined="2011-04-15"/>
+		<cosponsor id="412275" joined="2011-06-02"/>
+		<cosponsor id="400617" joined="2011-06-02"/>
+		<cosponsor id="412460" joined="2011-04-15"/>
+		<cosponsor id="400176" joined="2011-04-15"/>
+		<cosponsor id="400239" joined="2011-04-15"/>
+		<cosponsor id="400029" joined="2011-04-15"/>
+		<cosponsor id="412295" joined="2011-04-15"/>
+		<cosponsor id="400345" joined="2011-05-23"/>
+		<cosponsor id="412283" joined="2011-04-15"/>
+		<cosponsor id="412191" joined="2011-05-11"/>
+		<cosponsor id="412485" joined="2011-05-11"/>
+		<cosponsor id="412436" joined="2011-05-11"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-15"><text>Referred to the Committee on Natural Resources, and in addition to the Committee on Agriculture, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-04-15"><text>Referred to House Agriculture</text></action>
+		<action datetime="2011-04-22"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on National Parks, Forests and Public Lands.</text></action>
+		<action datetime="2011-05-11"><committee name="House Agriculture"/><text>Referred to the Subcommittee on Conservation, Energy, and Forestry.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="National Parks, Forests and Public Lands" activity="Referral" />
+		<committee code="HSAG" name="House Agriculture" activity="Referral, In Committee" />
+		<committee code="" name="House Agriculture" subcommittee="Conservation, Energy, and Forestry" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Government investigations"/>
+		<term name="Land use and conservation"/>
+		<term name="Roads and highways"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/15/2011--Introduced.
+Wilderness and Roadless Area Release Act of 2011 - Releases public lands administered by the Bureau of Land Management (BLM) pursuant to the Federal Land Policy and Management Act of 1976 that have not been designated as wilderness and identified by BLM as not suitable for designation as wilderness from further study for wilderness designation. Makes such lands no longer subject to the Act's requirement pertaining to the management of wilderness study areas in a manner that does not impair suitability for preservation as wilderness. Releases inventoried roadless areas within the National Forest System that have not been designated as wilderness and were not recommended for designation as wilderness as a result of the second roadless area review and evaluation program (RARE II) or the subsequent revision of a land resource management plan, from further study for wilderness designation. Makes such System lands no longer subject to management to maintain roadless character and values and to comply with other land-use restrictions of the Roadless Area Conservation Rule, as amended by the Roadless Area Conservation Final Rule (2001) and the State Petitions for Inventoried Roadless Area Management Final Rule (2005).
+
+	</summary>
+</bill>

@@ -1,0 +1,88 @@
+<bill session="112" type="h" number="1852" updated="2011-06-14T06:17:53-04:00">
+	<state datetime="2011-05-11">REFERRED</state>
+	<status><introduced datetime="2011-05-11"/></status>
+
+	<introduced datetime="2011-05-11"/>
+	<titles>
+		<title type="short" as="introduced">Children's Hospital GME Support Reauthorization Act of 2011</title>
+		<title type="official" as="introduced">To amend the Public Health Service Act to reauthorize support for graduate medical education programs in children's hospitals.</title>
+	</titles>
+	<sponsor id="400320"/>
+	<cosponsors>
+		<cosponsor id="400663" joined="2011-06-13"/>
+		<cosponsor id="400352" joined="2011-06-13"/>
+		<cosponsor id="400661" joined="2011-06-01"/>
+		<cosponsor id="400253" joined="2011-06-13"/>
+		<cosponsor id="400086" joined="2011-05-25"/>
+		<cosponsor id="400147" joined="2011-05-23"/>
+		<cosponsor id="400659" joined="2011-05-26"/>
+		<cosponsor id="400308" joined="2011-05-11"/>
+		<cosponsor id="412199" joined="2011-06-13"/>
+		<cosponsor id="400110" joined="2011-05-26"/>
+		<cosponsor id="400160" joined="2011-06-13"/>
+		<cosponsor id="400263" joined="2011-06-01"/>
+		<cosponsor id="400162" joined="2011-06-01"/>
+		<cosponsor id="400140" joined="2011-05-23"/>
+		<cosponsor id="400660" joined="2011-06-13"/>
+		<cosponsor id="400400" joined="2011-06-01"/>
+		<cosponsor id="400426" joined="2011-06-13"/>
+		<cosponsor id="412327" joined="2011-05-23"/>
+		<cosponsor id="412462" joined="2011-06-13"/>
+		<cosponsor id="400122" joined="2011-05-26"/>
+		<cosponsor id="400360" joined="2011-06-01"/>
+		<cosponsor id="400333" joined="2011-05-25"/>
+		<cosponsor id="400295" joined="2011-05-23"/>
+		<cosponsor id="400255" joined="2011-05-26"/>
+		<cosponsor id="400628" joined="2011-06-13"/>
+		<cosponsor id="400647" joined="2011-05-23"/>
+		<cosponsor id="400193" joined="2011-06-13"/>
+		<cosponsor id="412265" joined="2011-06-01"/>
+		<cosponsor id="412256" joined="2011-05-13"/>
+		<cosponsor id="400124" joined="2011-05-25"/>
+		<cosponsor id="400291" joined="2011-06-01"/>
+		<cosponsor id="400047" joined="2011-06-13"/>
+		<cosponsor id="412231" joined="2011-05-24"/>
+		<cosponsor id="400406" joined="2011-05-25"/>
+		<cosponsor id="400283" joined="2011-06-13"/>
+		<cosponsor id="412290" joined="2011-05-23"/>
+		<cosponsor id="400052" joined="2011-05-11"/>
+		<cosponsor id="400409" joined="2011-05-26"/>
+		<cosponsor id="400029" joined="2011-05-26"/>
+		<cosponsor id="400285" joined="2011-05-24"/>
+		<cosponsor id="412208" joined="2011-06-13"/>
+		<cosponsor id="400114" joined="2011-06-13"/>
+		<cosponsor id="400062" joined="2011-05-11"/>
+		<cosponsor id="400425" joined="2011-05-24"/>
+		<cosponsor id="400233" joined="2011-06-01"/>
+		<cosponsor id="400341" joined="2011-06-13"/>
+		<cosponsor id="400010" joined="2011-06-13"/>
+		<cosponsor id="400639" joined="2011-06-13"/>
+		<cosponsor id="412461" joined="2011-05-23"/>
+		<cosponsor id="412255" joined="2011-05-26"/>
+		<cosponsor id="400235" joined="2011-06-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-11"><text>Referred to the House Committee on Energy and Commerce.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="s" number="958" />
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Child health"/>
+		<term name="Congressional oversight"/>
+		<term name="Education programs funding"/>
+		<term name="Health facilities and institutions"/>
+		<term name="Health programs administration and funding"/>
+		<term name="Medical education"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

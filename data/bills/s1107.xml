@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1107" updated="2011-06-14T06:26:15-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Psoriasis and Psoriatic Arthritis Research, Cure, and Care Act of 2011</title>
+		<title type="official" as="introduced">A bill to authorize and support psoriasis and psoriatic arthritis data collection, to express the sense of the Congress to encourage and leverage public and private investment in psoriasis research with a particular focus on interdisciplinary collaborative research on the relationship between psoriasis and its comorbid conditions, and for other purposes.</title>
+	</titles>
+	<sponsor id="400272"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="2033" />
+	</relatedbills>
+	<subjects>
+		<term name="Health"/>
+		<term name="Congressional tributes"/>
+		<term name="Government information and archives"/>
+		<term name="Health information and medical records"/>
+		<term name="Immunology"/>
+		<term name="Medical research"/>
+		<term name="Musculoskeletal and skin diseases"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

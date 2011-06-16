@@ -1,0 +1,46 @@
+<bill session="112" type="h" number="774" updated="2011-04-05T06:13:11-04:00">
+	<state datetime="2011-02-17">REFERRED</state>
+	<status><introduced datetime="2011-02-17"/></status>
+
+	<introduced datetime="2011-02-17"/>
+	<titles>
+		<title type="short" as="introduced">Senior Investor Protections Enhancement Act of 2011</title>
+		<title type="official" as="introduced">To enhance penalties for violations of securities protections that involve targeting seniors.</title>
+	</titles>
+	<sponsor id="412385"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-17"><text>Referred to the Committee on Financial Services, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-02-17"><text>Referred to House Financial Services</text></action>
+		<action datetime="2011-02-17"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-02-28"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text></action>
+		<action datetime="2011-04-04"><committee name="House Financial Services"/><text>Referred to the Subcommittee on Capital Markets and Government Sponsored Enterprises.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSBA" name="House Financial Services" activity="Referral, In Committee" />
+		<committee code="" name="House Financial Services" subcommittee="Capital Markets and Government Sponsored Enterprises" activity="Referral" />
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Crime, Terrorism, and Homeland Security" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Finance and financial sector"/>
+		<term name="Aging"/>
+		<term name="Civil actions and liability"/>
+		<term name="Criminal procedure and sentencing"/>
+		<term name="Financial services and investments"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Securities"/>
+		<term name="U.S. Sentencing Commission"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

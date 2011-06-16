@@ -1,0 +1,39 @@
+<bill session="112" type="h" number="1993" updated="2011-06-03T06:25:56-04:00">
+	<state datetime="2011-05-25">REFERRED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="short" as="introduced">American Job Builders Tax Reform Act of 2011</title>
+		<title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to modify timing rules for determining gross income with respect to certain construction contracts.</title>
+	</titles>
+	<sponsor id="400176"/>
+	<cosponsors>
+		<cosponsor id="412487" joined="2011-05-25"/>
+		<cosponsor id="400024" joined="2011-05-25"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Referred to the House Committee on Ways and Means.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Accounting and auditing"/>
+		<term name="Building construction"/>
+		<term name="Contracts and agency"/>
+		<term name="Income tax rates"/>
+		<term name="Inflation and prices"/>
+		<term name="Small business"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,50 @@
+<bill session="112" type="h" number="1372" updated="2011-04-15T06:17:29-04:00">
+	<state datetime="2011-04-05">REFERRED</state>
+	<status><introduced datetime="2011-04-05"/></status>
+
+	<introduced datetime="2011-04-05"/>
+	<titles>
+		<title type="short" as="introduced">VA Energy Act</title>
+		<title type="short" as="introduced">Virginia Access to Energy Act</title>
+		<title type="official" as="introduced">To authorize the Secretary of the Interior to conduct oil and natural gas exploration, leasing, and drilling activities on the outer Continental Shelf offshore the State of Virginia, and for other purposes.</title>
+	</titles>
+	<sponsor id="400154"/>
+	<cosponsors>
+		<cosponsor id="412483" joined="2011-04-05"/>
+		<cosponsor id="400137" joined="2011-04-05"/>
+		<cosponsor id="412484" joined="2011-04-05"/>
+		<cosponsor id="400435" joined="2011-04-05"/>
+		<cosponsor id="412255" joined="2011-04-05"/>
+		<cosponsor id="412485" joined="2011-04-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-05"><text>Sponsor introductory remarks on measure. (CR E641-642)</text></action>
+		<action datetime="2011-04-05"><text>Referred to the House Committee on Natural Resources.</text></action>
+		<action datetime="2011-04-07"><committee name="House Committee on Natural Resources"/><text>Referred to the Subcommittee on Energy and Mineral Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Energy and Mineral Resources" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Energy revenues and royalties"/>
+		<term name="Government trust funds"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Land use and conservation"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Marine pollution"/>
+		<term name="Oil and gas"/>
+		<term name="State and local finance"/>
+		<term name="Virginia"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,35 @@
+<bill session="112" type="s" number="845" updated="2011-05-10T06:18:45-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Tax Return Due Date Simplification and Modernization Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Internal Revenue Code of 1986 to provide for the logical flow of return information between partnerships, corporations, trusts, estates, and individuals to better enable each party to submit timely, accurate returns and reduce the need for extended and amended returns, to provide for modified due dates by regulation, and to conform the automatic corporate extension period to longstanding regulatory rule.</title>
+	</titles>
+	<sponsor id="300041"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Finance.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFI" name="Senate Finance" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of the Treasury"/>
+		<term name="Tax administration and collection, taxpayers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

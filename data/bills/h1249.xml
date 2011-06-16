@@ -1,0 +1,78 @@
+<bill session="112" type="h" number="1249" updated="2011-06-02T06:14:31-04:00">
+	<state datetime="2011-04-14">REPORTED</state>
+	<status><calendar datetime="2011-04-14" /></status>
+
+	<introduced datetime="2011-03-30"/>
+	<titles>
+		<title type="short" as="introduced">America Invents Act</title>
+		<title type="official" as="introduced">To amend title 35, United States Code, to provide for patent reform.</title>
+	</titles>
+	<sponsor id="400381"/>
+	<cosponsors>
+		<cosponsor id="400144" joined="2011-04-15"/>
+		<cosponsor id="400154" joined="2011-03-30"/>
+		<cosponsor id="400196" joined="2011-03-30"/>
+		<cosponsor id="400116" joined="2011-05-31"/>
+		<cosponsor id="400071" joined="2011-04-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-30"><text>Referred to the Committee on the Judiciary, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-30"><text>Referred to House Judiciary</text></action>
+		<action datetime="2011-03-30"><committee name="House Judiciary"/><text>Referred to the Subcommittee on Intellectual Property, Competition and the Internet.</text></action>
+		<action datetime="2011-03-30"><committee name="House Judiciary" subcommittee="Intellectual Property, Competition and the Internet"/><text>Subcommittee Hearings Held.</text></action>
+		<action datetime="2011-03-30"><text>Referred to House Budget</text></action>
+		<action datetime="2011-04-11"><committee name="House Judiciary"/><text>Subcommittee on Intellectual Property, Competition and the Internet Discharged.</text></action>
+		<action datetime="2011-04-14"><committee name="House Judiciary"/><text>Committee Consideration and Mark-up Session Held.</text></action>
+		<calendar datetime="2011-04-14"  state="REPORTED"><committee name="House Judiciary"/><text>Ordered to be Reported (Amended) by the Yeas and Nays: 32 - 3.</text></calendar>
+		<action datetime="2011-06-01T20:09:00-04:00"><text>Reported (Amended) by the Committee on Judiciary. H. Rept. 112-98, Part I.</text></action>
+		<action datetime="2011-06-01T20:13:00-04:00"><text>Committee on The Budget discharged.</text></action>
+		<calendar number="54" datetime="2011-06-01T20:13:00-04:00" calendar="Union" ><text>Placed on the Union Calendar, Calendar No. 54.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, Markup, Reporting" />
+		<committee code="" name="House Judiciary" subcommittee="Intellectual Property, Competition and the Internet" activity="Referral, Hearings, Discharged" />
+		<committee code="HSBU" name="House Budget" activity="Referral, Discharged" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="243" />
+		<bill relation="unknown" session="112" type="s" number="23" />
+		<bill relation="unknown" session="112" type="s" number="139" />
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Administrative remedies"/>
+		<term name="Advanced technology and technological innovations"/>
+		<term name="Civil actions and liability"/>
+		<term name="Competitiveness, trade promotion, trade deficits"/>
+		<term name="Congressional oversight"/>
+		<term name="Congressional tributes"/>
+		<term name="Department of Commerce"/>
+		<term name="Evidence and witnesses"/>
+		<term name="Executive agency funding and structure"/>
+		<term name="Federal district courts"/>
+		<term name="Government buildings, facilities, and property"/>
+		<term name="Government employee pay, benefits, personnel management"/>
+		<term name="Government investigations"/>
+		<term name="Government trust funds"/>
+		<term name="Intellectual property"/>
+		<term name="Judges"/>
+		<term name="Judicial review and appeals"/>
+		<term name="Jurisdiction and venue"/>
+		<term name="Legal fees and court costs"/>
+		<term name="Michigan"/>
+		<term name="Small business"/>
+		<term name="State and local courts"/>
+		<term name="Tax administration and collection, taxpayers"/>
+		<term name="User charges and fees"/>
+		<term name="Virginia"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/30/2011--Introduced.
+America Invents Act - Amends federal patent law to define the &quot;effective filing date&quot; of a claimed invention as the actual filing date of the patent or the application for patent containing a claim to the invention (thus replacing the current first-to-invent system), except as specified. Establishes a one-year grace period (a prior art exception) for inventors to file an application after certain disclosures of the claimed invention by the inventor or another who obtained the subject matter from the inventor. Revises provisions concerning novelty and nonobvious subject matter. Sets forth derived patent provisions. Replaces: (1) interference proceedings with derivation proceedings, and (2) the Board of Patent Appeals and Interferences with the Patent Trial and Appeal Board (the Board). Modifies the earlier inventor to file defense to infringement. Allows a person who is not the patent owner to request to cancel as unpatentable one or more claims of patent by filing a petition with the U.S. Patent and Trademark Office (USPTO) to institute: (1) post-grant review on any ground that could be raised under specified provisions relating to invalidity of the patent or any claim, and (2) inter partes review (replaces inter partes reexamination procedures) on specified novelty and nonobvious subject matter grounds based on prior art consisting of patents and printed publications. Prohibits the USPTO Director (Director) from authorizing: (1) inter partes review unless information in the petition and any response shows a substantial new question of patentability exists; or (2) post-grant review unless information in the petition, if not rebutted, would demonstrate that it is more likely than not that at least one of the challenged claims is unpatentable, or unless such petition raises a novel or unsettled legal question important to other patents or applications. Allows: (1) preissuance submissions by third parties, and (2) citations of prior art and written statements by any person at any time. Allows appeals to the U.S. Court of Appeals for the Federal Circuit (CAFC) from specified Board decisions, including examinations, reexaminations, post-grant and inter partes reviews, and derivation proceedings. Sets forth: (1) USPTO fee setting authority, (2) reduced fees for qualified small entities and micro entities, and (3) filing fees and other specified fees. Deems any strategy for reducing, avoiding, or deferring tax liability insufficient to differentiate a claimed invention from the prior art when evaluating specified conditions of patentability. Revises and adds provisions addressing: (1) false marking actions, (2) virtual markings, (3) best mode requirements, (4) supplemental examinations, and (5) invention-related royalties given to small businesses when a nonprofit organization has a funding agreement with the federal government. Requires the Director to establish a four-year transitional post-grant review proceeding for reviewing the validity of covered business-method patents. Denies state courts jurisdiction over legal actions relating to patents, plant variety protection, or copyrights. Grants the CAFC exclusive jurisdiction of appeals relating to patents or plant variety protection. Establishes the USPTO Public Enterprise Fund (replaces the Appropriation Account). Requires the Director to establish at least three U.S. satellite offices for the USPTO. Allows the Director to establish a Patent Ombudsman Program. Authorizes the USPTO to establish prioritized examination of applications important to the economy or national competitiveness.
+
+	</summary>
+</bill>

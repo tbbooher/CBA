@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="343" updated="2011-05-05T06:20:04-04:00">
+	<state datetime="2011-02-14">INTRODUCED</state>
+	<status><introduced datetime="2011-02-14"/></status>
+
+	<introduced datetime="2011-02-14"/>
+	<titles>
+		<title type="official" as="introduced">A bill to amend Title I of PL 99-658 regarding the Compact of Free Association between the Government of the United States of America and the Government of Palau, to approve the results of the 15-year review of the Compact, including the Agreement Between the Government of the United States of America and the Government of the Republic of Palau Following the Compact of Free Association Section 432 Review, and to appropriate funds for the purposes of the amended PL 99-658 for fiscal years ending on or before September 30, 2024, to carry out the agreements resulting from that review.</title>
+	</titles>
+	<sponsor id="300009"/>
+	<cosponsors>
+		<cosponsor id="300075" joined="2011-02-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-02-14"><text>Sponsor introductory remarks on measure. (CR S690-691, S695)</text></action>
+		<action datetime="2011-02-14"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text><reference label="text of measure as introduced" ref="CR S691-695"/></action>
+		<action datetime="2011-06-16"><text> Committee on Energy and Natural Resources. Date of scheduled hearing. SD-366. 10:30 a.m.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Appropriations"/>
+		<term name="International law and treaties"/>
+		<term name="Palau"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	2/14/2011--Introduced.
+Approves the Agreement between the Government of the United States of America and the Government of the Republic of Palau Following the Compact of Free Association Section 432 Review.
+
+	</summary>
+</bill>

@@ -1,0 +1,48 @@
+<bill session="112" type="s" number="834" updated="2011-06-10T06:14:56-04:00">
+	<state datetime="2011-04-14">INTRODUCED</state>
+	<status><introduced datetime="2011-04-14"/></status>
+
+	<introduced datetime="2011-04-14"/>
+	<titles>
+		<title type="short" as="introduced">Campus SaVE Act</title>
+		<title type="short" as="introduced">Campus Sexual Violence Elimination Act</title>
+		<title type="official" as="introduced">A bill to amend the Higher Education Act of 1965 to improve education and prevention related to campus sexual violence, domestic violence, dating violence, and stalking.</title>
+	</titles>
+	<sponsor id="412246"/>
+	<cosponsors>
+		<cosponsor id="300091" joined="2011-06-09"/>
+		<cosponsor id="300076" joined="2011-04-14"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-14"><text>Read twice and referred to the Committee on Health, Education, Labor, and Pensions.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSHR" name="Senate Health, Education, Labor, and Pensions" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="2016" />
+	</relatedbills>
+	<subjects>
+		<term name="Education"/>
+		<term name="Assault and harassment offenses"/>
+		<term name="Crime prevention"/>
+		<term name="Crime victims"/>
+		<term name="Crimes against women"/>
+		<term name="Criminal justice information and records"/>
+		<term name="Domestic violence and child abuse"/>
+		<term name="Education programs funding"/>
+		<term name="Educational facilities and institutions"/>
+		<term name="Higher education"/>
+		<term name="School administration"/>
+		<term name="Sex offenses"/>
+		<term name="Student aid and college costs"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	4/14/2011--Introduced.
+Campus Sexual Violence Elimination Act or Campus SaVE Act - Amends title IV (Student Assistance) of the Higher Education Act of 1965 to require the annual security report required of each institution of higher education (IHE) participating in a title IV program (except foreign schools) to include their policy on reporting crimes or other emergencies that occur off-campus (on public property near campus, or in or on school-related noncampus facilities). Requires such reports to include reported incidents of domestic violence, dating violence, and stalking that occurred on or off campus over the preceding two years. Requires schools to protect victim confidentiality when reporting criminal threats to the campus community. Directs IHEs to include in their annual security report a statement of policy regarding its programs to prevent domestic violence, dating violence, sexual assault, and stalking and the procedures it follows when such an offense is reported. Requires such procedures to include: (1) the provision, in writing, to students or employees that report that they have been the victim of such an offense certain information regarding their rights, disciplinary processes, victim services, and safety planning; (2) a description of how the IHE will help enforce any protective order; and (3) information about how the IHE will protect victim confidentiality. Requires an IHE's policy regarding such offenses to include: (1) education that promotes awareness of the offenses; (2) possible sanctions or protective measures imposed following disciplinary action; (3) procedures victims should follow after such an offense occurs; (4) information about to whom the alleged offense should be reported; (5) institutional disciplinary procedures; and (6) the notification of victims regarding their options for, and assistance in, changing academic, living, transportation, and working situations. Directs the Secretary of Education to seek the Attorney General's counsel regarding the development, and dissemination to IHEs, of best practices for preventing and responding to incidents of domestic violence, dating violence, sexual assault, and stalking.
+
+	</summary>
+</bill>

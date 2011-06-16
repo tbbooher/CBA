@@ -1,0 +1,36 @@
+<bill session="112" type="s" number="869" updated="2011-05-12T06:33:40-04:00">
+	<state datetime="2011-05-03">INTRODUCED</state>
+	<status><introduced datetime="2011-05-03"/></status>
+
+	<introduced datetime="2011-05-03"/>
+	<titles>
+		<title type="short" as="introduced">Former Charleston Naval Base Land Exchange Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide for an exchange of land between the Department of Homeland Security and the South Carolina State Ports Authority.</title>
+	</titles>
+	<sponsor id="300047"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-03"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Land transfers"/>
+		<term name="Military facilities and property"/>
+		<term name="Navigation, waterways, harbors"/>
+		<term name="South Carolina"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

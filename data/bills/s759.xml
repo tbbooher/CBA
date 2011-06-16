@@ -1,0 +1,45 @@
+<bill session="112" type="s" number="759" updated="2011-04-26T06:14:34-04:00">
+	<state datetime="2011-04-07">INTRODUCED</state>
+	<status><introduced datetime="2011-04-07"/></status>
+
+	<introduced datetime="2011-04-07"/>
+	<titles>
+		<title type="short" as="introduced">Soledad Canyon High Desert, California Public Lands Conservation and Management Act of 2011</title>
+		<title type="official" as="introduced">A bill to provide to the Secretary of the Interior a mechanism to cancel contracts for the sale of materials CA-20139 and CA-22901, and for other purposes.</title>
+	</titles>
+	<sponsor id="300011"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-07"><text>Sponsor introductory remarks on measure. (CR S2269-2270)</text></action>
+		<action datetime="2011-04-07"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="California"/>
+		<term name="Forests"/>
+		<term name="Government liability"/>
+		<term name="Historical and cultural resources"/>
+		<term name="Land transfers"/>
+		<term name="Land use and conservation"/>
+		<term name="Mining"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="Public contracts and procurement"/>
+		<term name="Watersheds"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+		<term name="Wildlife conservation and habitat protection"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

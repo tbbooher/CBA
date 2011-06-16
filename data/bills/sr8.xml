@@ -1,0 +1,39 @@
+<bill session="112" type="sr" number="8" updated="2011-01-28T06:11:13-05:00">
+	<state datetime="2011-01-05">INTRODUCED</state>
+	<status><introduced datetime="2011-01-05"/></status>
+
+	<introduced datetime="2011-01-05"/>
+	<titles>
+		<title type="official" as="introduced">A resolution amending the Standing Rules of the Senate to provide for cloture to be invoked with less than a three-fifths majority after additional debate.</title>
+	</titles>
+	<sponsor id="300051"/>
+	<cosponsors>
+		<cosponsor id="300038" joined="2011-01-05"/>
+		<cosponsor id="300073" joined="2011-01-05"/>
+		<cosponsor id="412323" joined="2011-01-05"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-05"><text>Sponsor introductory remarks on measure. (CR S19-25, S29, S31, S32-33)</text></action>
+		<action datetime="2011-01-05"><text>Submitted in the Senate. Placed on Senate Legislative Calendar under Over, Under the Rule.</text><reference label="text of measure as introduced" ref="CR S65"/></action>
+		<action datetime="2011-01-27"><text>Measure laid before Senate by unanimous consent.</text></action>
+		<action datetime="2011-01-27"><text>Disagreed to in Senate by Yea-Nay Vote. 12 - 84. Record Vote Number: 4.</text></action>
+		<action datetime="2011-01-27"><text>Returned to the Calendar. Under Over, Under the Rule.</text></action>
+	</actions>
+	<committees>
+
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Senate"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

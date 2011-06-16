@@ -1,0 +1,37 @@
+<bill session="112" type="h" number="1502" updated="2011-05-05T06:27:17-04:00">
+	<state datetime="2011-04-12">REFERRED</state>
+	<status><introduced datetime="2011-04-12"/></status>
+
+	<introduced datetime="2011-04-12"/>
+	<titles>
+		<title type="short" as="introduced">Team B Act</title>
+		<title type="official" as="introduced">To establish the Counterterrorism Competitive Analysis Council.</title>
+	</titles>
+	<sponsor id="400435"/>
+	<cosponsors>
+		<cosponsor id="400219" joined="2011-04-12"/>
+		<cosponsor id="400288" joined="2011-04-12"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-04-12"><text>Sponsor introductory remarks on measure. (CR E695-696)</text></action>
+		<action datetime="2011-04-12"><text>Referred to the House Committee on Intelligence (Permanent Select).</text></action>
+	</actions>
+	<committees>
+		<committee code="HLIG" name="House Intelligence (Permanent Select)" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Armed forces and national security"/>
+		<term name="Advisory bodies"/>
+		<term name="Intelligence activities, surveillance, classified information"/>
+		<term name="Terrorism"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

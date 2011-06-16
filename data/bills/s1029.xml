@@ -1,0 +1,41 @@
+<bill session="112" type="s" number="1029" updated="2011-06-07T06:23:27-04:00">
+	<state datetime="2011-05-19">INTRODUCED</state>
+	<status><introduced datetime="2011-05-19"/></status>
+
+	<introduced datetime="2011-05-19"/>
+	<titles>
+		<title type="short" as="introduced">e-KNOW Act</title>
+		<title type="short" as="introduced">Electric Consumer Right to Know Act</title>
+		<title type="official" as="introduced">A bill to amend the Public Utility Regulatory Policies Act of 1978 to provide electric consumers the right to access certain electric energy information, and for other purposes.</title>
+	</titles>
+	<sponsor id="400412"/>
+	<cosponsors>
+		<cosponsor id="412384" joined="2011-05-19"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-19"><text>Sponsor introductory remarks on measure. (CR S3176-3177)</text></action>
+		<action datetime="2011-05-19"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text><reference label="text of measure as introduced" ref="CR S3177-3178"/></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Civil actions and liability"/>
+		<term name="Consumer affairs"/>
+		<term name="Electric power generation and transmission"/>
+		<term name="Energy efficiency and conservation"/>
+		<term name="Federal Energy Regulatory Commission (FERC)"/>
+		<term name="Public utilities and utility rates"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

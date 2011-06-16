@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="601" updated="2011-03-24T06:14:33-04:00">
+	<state datetime="2011-03-16">INTRODUCED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">Children's Sports Athletic Equipment Safety Act</title>
+		<title type="official" as="introduced">A bill to encourage and ensure the use of safe football helmets and for other purposes.</title>
+	</titles>
+	<sponsor id="400413"/>
+	<cosponsors>
+		<cosponsor id="412490" joined="2011-03-16"/>
+		<cosponsor id="300064" joined="2011-03-16"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Sponsor introductory remarks on measure. (CR S1754-1755)</text></action>
+		<action datetime="2011-03-16"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text><reference label="text of measure as introduced" ref="CR S1755-1757"/></action>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="1127" />
+	</relatedbills>
+	<subjects>
+		<term name="Commerce"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Child health"/>
+		<term name="Child safety and welfare"/>
+		<term name="Consumer Product Safety Commission"/>
+		<term name="Federal Trade Commission (FTC)"/>
+		<term name="Fraud offenses and financial crimes"/>
+		<term name="Marketing and advertising"/>
+		<term name="Product safety and quality"/>
+		<term name="School athletics"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

@@ -1,0 +1,37 @@
+<bill session="112" type="hj" number="16" updated="2011-01-25T06:14:04-05:00">
+	<state datetime="2011-01-07">REFERRED</state>
+	<status><introduced datetime="2011-01-07"/></status>
+
+	<introduced datetime="2011-01-07"/>
+	<titles>
+		<title type="official" as="introduced">Proposing an amendment to the Constitution of the United States to repeal the sixteenth article of amendment.</title>
+	</titles>
+	<sponsor id="400220"/>
+	<cosponsors>
+		<cosponsor id="412416" joined="2011-01-07"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-07"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-01-24"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution, Civil Rights, and Civil Liberties" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Taxation"/>
+		<term name="Constitution and constitutional amendments"/>
+		<term name="General taxation matters"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	1/7/2011--Introduced.
+Constitutional Amendment - Repeals the Sixteenth Amendment to the Constitution (authorizing taxation of income).
+
+	</summary>
+</bill>

@@ -1,0 +1,57 @@
+<bill session="112" type="h" number="1102" updated="2011-03-26T06:10:37-04:00">
+	<state datetime="2011-03-15">REFERRED</state>
+	<status><introduced datetime="2011-03-15"/></status>
+
+	<introduced datetime="2011-03-15"/>
+	<titles>
+		<title type="short" as="introduced">Affordable Gas Price Act</title>
+		<title type="official" as="introduced">To reduce the price of gasoline by allowing for offshore drilling, eliminating Federal obstacles to constructing refineries and providing incentives for investment in refineries, suspending Federal fuel taxes when gasoline prices reach a benchmark amount, and promoting free trade.</title>
+	</titles>
+	<sponsor id="400311"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-15"><text>Sponsor introductory remarks on measure. (CR E487-488)</text></action>
+		<action datetime="2011-03-15"><text>Referred to the Committee on Ways and Means, and in addition to the Committee on Natural Resources, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-15"><text>Referred to House Ways and Means</text></action>
+		<action datetime="2011-03-15"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-03-17"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on Energy and Mineral Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Energy and Mineral Resources" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Alaska"/>
+		<term name="Appropriations"/>
+		<term name="Asia"/>
+		<term name="Business investment and capital"/>
+		<term name="Energy prices"/>
+		<term name="Energy storage, supplies, demand"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Income tax credits"/>
+		<term name="Income tax deductions"/>
+		<term name="Industrial facilities"/>
+		<term name="Judicial review and appeals"/>
+		<term name="Kazakhstan"/>
+		<term name="Marine and coastal resources, fisheries"/>
+		<term name="Motor fuels"/>
+		<term name="Normal trade relations, most-favored-nation treatment"/>
+		<term name="Oil and gas"/>
+		<term name="Russia"/>
+		<term name="Sales and excise taxes"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

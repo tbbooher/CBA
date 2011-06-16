@@ -1,0 +1,56 @@
+<bill session="112" type="h" number="1682" updated="2011-05-20T06:15:18-04:00">
+	<state datetime="2011-05-03">REFERRED</state>
+	<status><introduced datetime="2011-05-03"/></status>
+
+	<introduced datetime="2011-05-03"/>
+	<titles>
+		<title type="short" as="introduced">American-Made Energy Act of 2011</title>
+		<title type="official" as="introduced">To promote alternative and renewable fuels and domestic energy production, and for other purposes.</title>
+	</titles>
+	<sponsor id="400345"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-03"><text>Referred to the Committee on Natural Resources, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Natural Resources</text></action>
+		<action datetime="2011-05-03"><text>Referred to House Energy and Commerce</text></action>
+		<action datetime="2011-05-05"><committee name="House Natural Resources"/><text>Referred to the Subcommittee on Energy and Mineral Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSII" name="House Natural Resources" activity="Referral, In Committee" />
+		<committee code="" name="House Natural Resources" subcommittee="Energy and Mineral Resources" activity="Referral" />
+		<committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="49" />
+		<bill relation="unknown" session="112" type="h" number="1023" />
+		<bill relation="unknown" session="112" type="s" number="352" />
+	</relatedbills>
+	<subjects>
+		<term name="Energy"/>
+		<term name="Alaska"/>
+		<term name="Alternative and renewable resources"/>
+		<term name="Appropriations"/>
+		<term name="Coal"/>
+		<term name="Energy revenues and royalties"/>
+		<term name="Environmental assessment, monitoring, research"/>
+		<term name="Environmental technology"/>
+		<term name="Government trust funds"/>
+		<term name="Intergovernmental relations"/>
+		<term name="Judicial review and appeals"/>
+		<term name="Land transfers"/>
+		<term name="Nuclear power"/>
+		<term name="Oil and gas"/>
+		<term name="Pipelines"/>
+		<term name="Public contracts and procurement"/>
+		<term name="State and local finance"/>
+		<term name="Wilderness and natural areas, wildlife refuges, wild rivers, habitats"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

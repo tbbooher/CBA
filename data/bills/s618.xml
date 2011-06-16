@@ -1,0 +1,43 @@
+<bill session="112" type="s" number="618" updated="2011-05-20T06:11:43-04:00">
+	<state datetime="2011-05-17">REPORTED</state>
+	<status><calendar datetime="2011-05-17" /></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">Egyptian-American Enterprise Fund Act</title>
+		<title type="short" as="introduced">Tunisian-American Enterprise Fund Act</title>
+		<title type="official" as="introduced">A bill to promote the strengthening of the private sector in Egypt and Tunisia.</title>
+	</titles>
+	<sponsor id="300060"/>
+	<cosponsors>
+		<cosponsor id="300071" joined="2011-03-17"/>
+		<cosponsor id="300038" joined="2011-05-16"/>
+		<cosponsor id="300067" joined="2011-03-17"/>
+		<cosponsor id="412491" joined="2011-05-19"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Foreign Relations.</text></action>
+		<calendar datetime="2011-05-17"  state="REPORTED"><text>Committee on Foreign Relations. Ordered to be reported with an amendment in the nature of a substitute favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSFR" name="Senate Foreign Relations" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Egypt"/>
+		<term name="Middle East"/>
+		<term name="Tunisia"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/17/2011--Introduced.
+Egyptian-American Enterprise Fund Act - Authorizes the President to establish or designate a private, nonprofit organization (the Egyptian-American Enterprise Fund) to promote: (1) the Egyptian private sector and joint U.S.-Egyptain ventures, (2) good corporate governance and transparency in Egypt, and (3) security through job creation and the creation of an Egyptian middle class.
+Tunisian-American Enterprise Fund Act - Authorizes the President to establish or designate a private, nonprofit organization (the Tunisian-American Enterprise Fund) to promote: (1) the Tunisian private sector and U.S.-Tunisian joint ventures, (2) good corporate governance and transparency in Tunisia, and (3) security through job creation and the creation of a Tunisian middle class. Authorizes the President to make grants to carry out a Fund's purposes provided that the Fund agrees to: (1) liquidate its assets and dissolve not later than December 31, 2021, unless the Secretary of State determines that the Fund should be extended; (2) ensure that grant funds are not provided to or through any individual, private or government entity, or educational institution that advocates, or engages or has engaged in money laundering or terrorist activity; or (3) return any remaining funds to the the U.S. Treasury to be used to reduce U.S. debt.
+
+	</summary>
+</bill>

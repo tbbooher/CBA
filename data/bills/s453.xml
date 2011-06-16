@@ -1,0 +1,60 @@
+<bill session="112" type="s" number="453" updated="2011-06-10T06:13:03-04:00">
+	<state datetime="2011-05-05">REPORTED</state>
+	<status><calendar datetime="2011-05-05" /></status>
+
+	<introduced datetime="2011-03-02"/>
+	<titles>
+		<title type="short" as="introduced">Motorcoach Enhanced Safety Act of 2011</title>
+		<title type="official" as="introduced">A bill to improve the safety of motorcoaches, and for other purposes.</title>
+	</titles>
+	<sponsor id="400050"/>
+	<cosponsors>
+		<cosponsor id="412249" joined="2011-06-09"/>
+		<cosponsor id="412223" joined="2011-03-16"/>
+		<cosponsor id="300087" joined="2011-03-16"/>
+		<cosponsor id="300084" joined="2011-06-06"/>
+		<cosponsor id="300054" joined="2011-03-02"/>
+		<cosponsor id="412490" joined="2011-04-05"/>
+		<cosponsor id="300064" joined="2011-03-29"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-02"><text>Read twice and referred to the Committee on Commerce, Science, and Transportation.</text></action>
+		<calendar datetime="2011-05-05"  state="REPORTED"><text>Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably.</text></calendar>
+	</actions>
+	<committees>
+		<committee code="SSCM" name="Senate Commerce, Science, and Transportation" activity="Referral, Markup, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="h" number="873" />
+	</relatedbills>
+	<subjects>
+		<term name="Transportation and public works"/>
+		<term name="Accidents"/>
+		<term name="Administrative law and regulatory procedures"/>
+		<term name="Department of Transportation"/>
+		<term name="Drug, alcohol, tobacco use"/>
+		<term name="Employment and training programs"/>
+		<term name="Fires"/>
+		<term name="Government investigations"/>
+		<term name="Hazardous wastes and toxic substances"/>
+		<term name="Licensing and registrations"/>
+		<term name="Medical tests and diagnostic methods"/>
+		<term name="Motor carriers"/>
+		<term name="Motor vehicles"/>
+		<term name="Technology assessment"/>
+		<term name="Telephone and wireless communication"/>
+		<term name="Transportation employees"/>
+		<term name="Transportation programs funding"/>
+		<term name="Transportation safety and security"/>
+		<term name="Worker safety and health"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	3/2/2011--Introduced.
+Motorcoach Enhanced Safety Act of 2011 - Directs the Secretary of Transportation to prescribe regulations requiring motorcoaches to be installed with: (1) safety seat belts at each seating position, (2) advanced glazing in each portal to prevent passenger ejection, (3) stability enhancing technology to reduce the number and frequency of rollover crashes, (4) improved fire extinguishers or other firefighting equipment, and (5) direct tire pressure monitoring systems. Requires the Secretary to prescribe regulations establishing improved strength and crush resistance standards for motorcoach roofs. Requires the Secretary to evaluate and issue performance requirements relating to: (1) the feasibility of establishing flammability standards for motorcoach exterior and interior components, (2) technologies to prevent wheel well fires, and (3) requirements for motorcoaches to be equipped with improved designs for emergency passenger evacuation and fire suppression systems. Requires the Secretary to: (1) conduct compartmentalization safety countermeasures, occupant impact protection, and collision avoidance research; and (2) prescribe a standard or regulation based on research results. Authorizes the Secretary to register a person to provide motorcoach services only after that person: (1) undergoes a pre-authorization safety audit, including verification of drug and alcohol testing, vehicle maintenance, and safety management programs; (2) has been interviewed about the carrier's safety management controls and written safety oversight policies and practices; and (3) has demonstrated proficiency to comply with such requirements. Reduces from 18 months to 9 months after motorcoach operations begin the deadline for mandatory safety reviews of newly registered motorcoach owners or operators. Requires pre-authorization audits of new registrants to be completed onsite no later than 90 days after submission of an application to operate a motorcoach.
+Prohibits two or more motorcoach operators from using common ownership, common management, common control, or common familial relationship to avoid compliance, or conceal noncompliance or a history of noncompliance with commercial motor vehicle safety regulations or an order of the Secretary. Prescribes penalties for violation of this prohibition. Requires the Secretary to: (1) determine the safety fitness and assign a rating, updated triennially, for each registered motorcoach operator; and (2) establish a process for monitoring regularly the safety performance of each operator following the assignment of a rating. Requires the Secretary to: (1) establish minimum curricular requirements for entry-level motorcoach drivers and drivers upgrading from one class of commercial driver's license to another, and (2) require each motorcoach driver seeking a commercial driver's license (CDL) passenger endorsement to undergo training that includes such requirements before taking the CDL test. Requires the Secretary to issue a final rule in Docket No. Federal Motor Carrier Safety Administration (FMCSA) 2007-27659: Commercial Driver's License Testing and Commercial Learner's Permit Standards that improves the stringency of examination for the CDL passenger-carrying endorsement. Requires the Secretary to establish by regulation a requirement that a driver: (1) must have a CDL passenger-carrying endorsement to operate a commercial van transporting 9 to 15 passengers in interstate commerce; and (2) have been tested for drugs and alcohol. Revises examination requirements for the listing of medical examiners in a national registry. Requires the Secretary to establish a national registry of medical examiners. Directs the Secretary to prescribe regulations to require all motorcoaches in interstate commerce to be equipped with electronic onboard recorders. Requires the Secretary to complete a rulemaking proceeding to consider requiring states to conduct annual inspections of commercial passenger motor vehicles. Requires the Secretary to: (1) prescribe regulations on the use of electronic or wireless devices (including cell phones and other distracting devices) by motorcoach operators; and (2) prohibit their use in cases where they interfere with the driver's safe operation of a motorcoach, but not when necessary for driver or public safety in emergency situations. Redefines &quot;employer,&quot; for purposes of the application of federal commercial motor vehicle safety standards, to include a person that offers for rent or lease in interstate commerce motor vehicles used to transport more than 15 passengers (including the driver) from the same location, or as part of the same business provides names or contact information of drivers, or holds itself out to the public as a charter bus company.
+
+	</summary>
+</bill>

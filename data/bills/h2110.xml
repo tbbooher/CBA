@@ -1,0 +1,48 @@
+<bill session="112" type="h" number="2110" updated="2011-06-14T06:19:45-04:00">
+	<state datetime="2011-06-03">REFERRED</state>
+	<status><introduced datetime="2011-06-03"/></status>
+
+	<introduced datetime="2011-06-03"/>
+	<titles>
+		<title type="short" as="introduced">Long Island Sound Improvement Act Amendments of 2011</title>
+		<title type="official" as="introduced">To amend the Federal Water Pollution Control Act to reauthorize and improve activities for the protection of the Long Island Sound watershed, and for other purposes.</title>
+	</titles>
+	<sponsor id="400031"/>
+	<cosponsors>
+		<cosponsor id="400219" joined="2011-06-03"/>
+		<cosponsor id="400257" joined="2011-06-13"/>
+		<cosponsor id="400122" joined="2011-06-13"/>
+		<cosponsor id="400246" joined="2011-06-13"/>
+		<cosponsor id="400003" joined="2011-06-13"/>
+		<cosponsor id="412193" joined="2011-06-13"/>
+		<cosponsor id="400103" joined="2011-06-13"/>
+		<cosponsor id="400087" joined="2011-06-13"/>
+		<cosponsor id="400195" joined="2011-06-13"/>
+		<cosponsor id="412282" joined="2011-06-13"/>
+		<cosponsor id="400366" joined="2011-06-13"/>
+		<cosponsor id="412194" joined="2011-06-13"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-06-03"><text>Referred to the Committee on Transportation and Infrastructure, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-06-03"><text>Referred to House Transportation and Infrastructure</text></action>
+		<action datetime="2011-06-03"><text>Referred to House Budget</text></action>
+		<action datetime="2011-06-06"><committee name="House Transportation and Infrastructure"/><text>Referred to the Subcommittee on Water Resources and Environment.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSPW" name="House Transportation and Infrastructure" activity="Referral, In Committee" />
+		<committee code="" name="House Transportation and Infrastructure" subcommittee="Water Resources and Environment" activity="Referral" />
+		<committee code="HSBU" name="House Budget" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

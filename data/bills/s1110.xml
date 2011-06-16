@@ -1,0 +1,33 @@
+<bill session="112" type="s" number="1110" updated="2011-06-14T06:27:07-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Small Business Fairness Act of 2011</title>
+		<title type="official" as="introduced">A bill to amend the Small Business Act to permit agencies to count certain contracts toward contracting goals.</title>
+	</titles>
+	<sponsor id="300041"/>
+	<cosponsors>
+		<cosponsor id="412246" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Sponsor introductory remarks on measure. (CR S3439)</text></action>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Small Business and Entrepreneurship.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSSB" name="Senate Small Business and Entrepreneurship" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

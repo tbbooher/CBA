@@ -1,0 +1,46 @@
+<bill session="112" type="h" number="1125" updated="2011-03-26T06:14:59-04:00">
+	<state datetime="2011-03-16">REFERRED</state>
+	<status><introduced datetime="2011-03-16"/></status>
+
+	<introduced datetime="2011-03-16"/>
+	<titles>
+		<title type="short" as="introduced">Debt Free America Act</title>
+		<title type="official" as="introduced">To establish a fee on transactions which would eliminate the national debt and replace the income tax on individuals.</title>
+	</titles>
+	<sponsor id="400130"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-16"><text>Referred to the Committee on Ways and Means, and in addition to the Committees on the Budget, Rules, and Appropriations, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.</text></action>
+		<action datetime="2011-03-16"><text>Referred to House Ways and Means</text></action>
+		<action datetime="2011-03-16"><text>Referred to House Budget</text></action>
+		<action datetime="2011-03-16"><text>Referred to House Rules</text></action>
+		<action datetime="2011-03-16"><text>Referred to House Appropriations</text></action>
+	</actions>
+	<committees>
+		<committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee" />
+		<committee code="HSBU" name="House Budget" activity="Referral, In Committee" />
+		<committee code="HSRU" name="House Rules" activity="Referral, In Committee" />
+		<committee code="HSAP" name="House Appropriations" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Congressional operations and organization"/>
+		<term name="Government investigations"/>
+		<term name="Income tax credits"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Sales and excise taxes"/>
+		<term name="Tax administration and collection, taxpayers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

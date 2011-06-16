@@ -1,0 +1,39 @@
+<bill session="112" type="sj" number="16" updated="2011-06-02T06:25:30-04:00">
+	<state datetime="2011-05-25">INTRODUCED</state>
+	<status><introduced datetime="2011-05-25"/></status>
+
+	<introduced datetime="2011-05-25"/>
+	<titles>
+		<title type="official" as="introduced">A joint resolution declaring that the President has exceeded his authority under the War Powers Resolution as it pertains to the ongoing military engagement in Libya.</title>
+	</titles>
+	<sponsor id="412492"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-25"><text>Read twice and referred to the Committee on Foreign Relations.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSFR" name="Senate Foreign Relations" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="hc" number="53" />
+		<bill relation="identical" session="112" type="sj" number="14" />
+	</relatedbills>
+	<subjects>
+		<term name="International affairs"/>
+		<term name="Conflicts and wars"/>
+		<term name="Congressional oversight"/>
+		<term name="Libya"/>
+		<term name="Middle East"/>
+		<term name="Military operations and strategy"/>
+		<term name="Presidents and presidential powers"/>
+		<term name="War and emergency powers"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

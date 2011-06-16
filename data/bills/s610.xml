@@ -1,0 +1,37 @@
+<bill session="112" type="s" number="610" updated="2011-03-25T06:13:37-04:00">
+	<state datetime="2011-03-17">INTRODUCED</state>
+	<status><introduced datetime="2011-03-17"/></status>
+
+	<introduced datetime="2011-03-17"/>
+	<titles>
+		<title type="short" as="introduced">HALE Scouts Act</title>
+		<title type="short" as="introduced">Help to Access Land for the Education of Scouts</title>
+		<title type="official" as="introduced">A bill to provide for the conveyance of approximately 140 acres of land in the Ouachita National Forest in Oklahoma to the Indian Nations Council, Inc., of the Boy Scouts of America, and for other purposes.</title>
+	</titles>
+	<sponsor id="300055"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-03-17"><text>Sponsor introductory remarks on measure. (CR S1832)</text></action>
+		<action datetime="2011-03-17"><text>Read twice and referred to the Committee on Agriculture, Nutrition, and Forestry.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSAF" name="Senate Agriculture, Nutrition, and Forestry" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+		<bill relation="identical" session="112" type="h" number="473" />
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Forests"/>
+		<term name="Land transfers"/>
+		<term name="Oklahoma"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

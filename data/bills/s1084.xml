@@ -1,0 +1,38 @@
+<bill session="112" type="s" number="1084" updated="2011-06-14T06:26:28-04:00">
+	<state datetime="2011-05-26">INTRODUCED</state>
+	<status><introduced datetime="2011-05-26"/></status>
+
+	<introduced datetime="2011-05-26"/>
+	<titles>
+		<title type="short" as="introduced">Shawnee Cattle Trail Study Act</title>
+		<title type="official" as="introduced">A bill to amend the National Trails System Act to designate the routes of the Shawnee Cattle Trail, the oldest of the major Texas Cattle Trails, for study for potential addition to the National Trails System, and for other purposes.</title>
+	</titles>
+	<sponsor id="400284"/>
+	<cosponsors>
+		<cosponsor id="300083" joined="2011-05-26"/>
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-26"><text>Read twice and referred to the Committee on Energy and Natural Resources.</text></action>
+	</actions>
+	<committees>
+		<committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Public lands and natural resources"/>
+		<term name="Government investigations"/>
+		<term name="Kansas"/>
+		<term name="Missouri"/>
+		<term name="Parks, recreation areas, trails"/>
+		<term name="Property rights"/>
+		<term name="Texas"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

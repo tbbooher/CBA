@@ -1,0 +1,38 @@
+<bill session="112" type="hj" number="14" updated="2011-01-25T06:13:45-05:00">
+	<state datetime="2011-01-07">REFERRED</state>
+	<status><introduced datetime="2011-01-07"/></status>
+
+	<introduced datetime="2011-01-07"/>
+	<titles>
+		<title type="official" as="introduced">Proposing an amendment to the Constitution to provide for a balanced budget for the United States Government and for greater accountability in the enactment of tax legislation.</title>
+	</titles>
+	<sponsor id="400121"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-01-07"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-01-24"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution, Civil Rights, and Civil Liberties" activity="Referral" />
+	</committees>
+	<relatedbills>
+		<bill relation="unknown" session="112" type="hj" number="1" />
+	</relatedbills>
+	<subjects>
+		<term name="Economics and public finance"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Budget process"/>
+		<term name="Constitution and constitutional amendments"/>
+		<term name="Income tax rates"/>
+		<term name="Legislative rules and procedure"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>

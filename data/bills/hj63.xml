@@ -1,0 +1,38 @@
+<bill session="112" type="hj" number="63" updated="2011-06-04T06:11:14-04:00">
+	<state datetime="2011-05-13">REFERRED</state>
+	<status><introduced datetime="2011-05-13"/></status>
+
+	<introduced datetime="2011-05-13"/>
+	<titles>
+		<title type="official" as="introduced">Proposing an amendment to the Constitution of the United States to require a two-thirds vote of each House of Congress to increase the statutory limit on the public debt.</title>
+	</titles>
+	<sponsor id="400441"/>
+	<cosponsors>
+
+	</cosponsors>
+	<actions>
+		<action datetime="2011-05-13"><text>Referred to the House Committee on the Judiciary.</text></action>
+		<action datetime="2011-06-01"><committee name="House Committee on the Judiciary"/><text>Referred to the Subcommittee on the Constitution.</text></action>
+	</actions>
+	<committees>
+		<committee code="HSJU" name="House Judiciary" activity="Referral, In Committee" />
+		<committee code="" name="House Judiciary" subcommittee="Constitution" activity="Referral" />
+	</committees>
+	<relatedbills>
+
+	</relatedbills>
+	<subjects>
+		<term name="Congress"/>
+		<term name="Budget deficits and national debt"/>
+		<term name="Constitution and constitutional amendments"/>
+		<term name="House of Representatives"/>
+		<term name="Legislative rules and procedure"/>
+		<term name="Senate"/>
+	</subjects>
+	<amendments>
+
+	</amendments>
+	<summary>
+	
+	</summary>
+</bill>
