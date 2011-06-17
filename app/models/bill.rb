@@ -30,7 +30,7 @@ class Bill
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
 
-  has_many :votes
+  embeds_many :votes
 
   before_validation(:set_ids, :on => :create)
   before_save :update_bill
@@ -53,6 +53,24 @@ class Bill
 
   def title
     short_title.blank? ? official_title : short_title
+  end
+
+  def tally
+    votes = self.votes.map{|v| v.value}
+    ayes = votes.count{|val| val == :aye}
+    nayes = votes.count{|val| val == :nay}
+    abstains = votes.count{|val| val == :abstain}
+    [ayes, nayes, abstains]
+  end
+
+  def descriptive_tally
+    out = "<ul>"
+    names = ["For", "Against", "Abstain"]
+    self.tally.each_with_index do |count, index|
+       out += "<li>#{names[index]}: #{count}</li>"
+    end
+    out += "</ul>"
+    out
   end
 
   def self.create_from_feed(session)

@@ -1,0 +1,371 @@
+--- !ruby/object:GovKit::OpenCongress::Bill
+bill_titles:
+- fti_titles: "'act':11 'amend':4 'assist':27 'bill':2 'borrow':22 'certain':21 'consolid':6 'develop':10 'elig':24 'farm':7 'guarante':26 'limit':15 'period':18 'rural':9 'suspend':13"
+  title: A bill to amend the Consolidated Farm and Rural Development Act to suspend a limitation on the period for which certain borrowers are eligible for guaranteed assistance.
+  is_default: false
+  title_type: official
+  id: 93015
+  as: introduced
+  bill_id: 68340
+bill_type: s
+co_sponsors:
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: B001267
+  birthday:
+  district:
+  email:
+  firstname: Michael
+  gender: M
+  id: 412330
+  lastname: Bennet
+  metavid_id:
+  middlename: F.
+  name: Sen. Michael Bennet [D, CO]
+  nickname:
+  oc_user_comments: 37
+  oc_users_tracking: 901
+  osid: N00030608
+  party: Democrat
+  religion:
+  state: CO
+  title: Sen.
+  unaccented_name: Michael Bennet
+  url:
+  user_approval: 2.65625
+  youtube_id: senatorbennet
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: C000705
+  birthday: "1948-03-12"
+  district:
+  email:
+  firstname: Kent
+  gender: M
+  id: 300026
+  lastname: Conrad
+  metavid_id: Kent_Conrad
+  middlename: Kent
+  name: Sen. Kent Conrad [D, ND]
+  nickname:
+  oc_user_comments: 8
+  oc_users_tracking: 132
+  osid: N00004613
+  party: Democrat
+  religion: Unitarian
+  state: ND
+  title: Sen.
+  unaccented_name: Kent Conrad
+  url:
+  user_approval: 3.39130434782609
+  youtube_id: SenatorConrad
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: D000563
+  birthday: "1944-11-21"
+  district:
+  email:
+  firstname: Richard
+  gender: M
+  id: 300038
+  lastname: Durbin
+  metavid_id: Richard_Durbin
+  middlename: J.
+  name: Sen. Richard Durbin [D, IL]
+  nickname:
+  oc_user_comments: 43
+  oc_users_tracking: 1566
+  osid: N00004981
+  party: Democrat
+  religion: Roman Catholic
+  state: IL
+  title: Sen.
+  unaccented_name: Richard Durbin
+  url:
+  user_approval: 3.70539419087137
+  youtube_id:
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: G000555
+  birthday:
+  district:
+  email:
+  firstname: Kirsten
+  gender: F
+  id: 412223
+  lastname: Gillibrand
+  metavid_id: Kirsten_Gillibrand
+  middlename: E.
+  name: Sen. Kirsten Gillibrand [D, NY]
+  nickname:
+  oc_user_comments: 38
+  oc_users_tracking: 1379
+  osid: N00027658
+  party: Democrat
+  religion:
+  state: NY
+  title: Sen.
+  unaccented_name: Kirsten Gillibrand
+  url:
+  user_approval: 3.71532846715328
+  youtube_id: KirstenEGillibrand
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: G000386
+  birthday: "1933-09-17"
+  district:
+  email:
+  firstname: Charles
+  gender: M
+  id: 300048
+  lastname: Grassley
+  metavid_id: Chuck_Grassley
+  middlename: E.
+  name: Sen. Charles Grassley [R, IA]
+  nickname: Chuck
+  oc_user_comments: 26
+  oc_users_tracking: 411
+  osid: N00001758
+  party: Republican
+  religion: Baptist
+  state: IA
+  title: Sen.
+  unaccented_name: Charles Grassley
+  url:
+  user_approval: 4.1
+  youtube_id: SenChuckGrassley
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: H000206
+  birthday: "1939-11-19"
+  district:
+  email:
+  firstname: Thomas
+  gender: M
+  id: 300051
+  lastname: Harkin
+  metavid_id: Tom_Harkin
+  middlename:
+  name: Sen. Thomas Harkin [D, IA]
+  nickname: Tom
+  oc_user_comments: 19
+  oc_users_tracking: 389
+  osid: N00004207
+  party: Democrat
+  religion: Roman Catholic
+  state: IA
+  title: Sen.
+  unaccented_name: Thomas Harkin
+  url:
+  user_approval: 3.39473684210526
+  youtube_id: SenatorTomHarkin
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: J000177
+  birthday: "1946-12-28"
+  district:
+  email:
+  firstname: Tim
+  gender: M
+  id: 300058
+  lastname: Johnson
+  metavid_id: Tim_Johnson
+  middlename: P.
+  name: Sen. Tim Johnson [D, SD]
+  nickname:
+  oc_user_comments: 8
+  oc_users_tracking: 152
+  osid: N00010084
+  party: Democrat
+  religion: Lutheran
+  state: SD
+  title: Sen.
+  unaccented_name: Tim Johnson
+  url:
+  user_approval: 3.2972972972973
+  youtube_id: senatorjohnson
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: K000367
+  birthday: "1960-05-25"
+  district:
+  email:
+  firstname: Amy
+  gender: F
+  id: 412242
+  lastname: Klobuchar
+  metavid_id: Amy_Klobuchar
+  middlename:
+  name: Sen. Amy Klobuchar [D, MN]
+  nickname:
+  oc_user_comments: 15
+  oc_users_tracking: 815
+  osid: N00027500
+  party: Democrat
+  religion:
+  state: MN
+  title: Sen.
+  unaccented_name: Amy Klobuchar
+  url:
+  user_approval: 3.66942148760331
+  youtube_id: senatorklobuchar
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: L000550
+  birthday: "1955-11-23"
+  district:
+  email:
+  firstname: Mary
+  gender: F
+  id: 300063
+  lastname: Landrieu
+  metavid_id: Mary_Landrieu
+  middlename: L.
+  name: Sen. Mary Landrieu [D, LA]
+  nickname:
+  oc_user_comments: 32
+  oc_users_tracking: 598
+  osid: N00005395
+  party: Democrat
+  religion: Roman Catholic
+  state: LA
+  title: Sen.
+  unaccented_name: Mary Landrieu
+  url:
+  user_approval: 2.24561403508772
+  youtube_id: SenatorLandrieu
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: L000174
+  birthday: "1940-03-31"
+  district:
+  email:
+  firstname: Patrick
+  gender: M
+  id: 300065
+  lastname: Leahy
+  metavid_id: Patrick_Leahy
+  middlename: J.
+  name: Sen. Patrick Leahy [D, VT]
+  nickname:
+  oc_user_comments: 9
+  oc_users_tracking: 190
+  osid: N00009918
+  party: Democrat
+  religion: Roman Catholic
+  state: VT
+  title: Sen.
+  unaccented_name: Patrick Leahy
+  url:
+  user_approval: 3.73333333333333
+  youtube_id: SenatorPatrickLeahy
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: N000180
+  birthday: "1941-05-17"
+  district:
+  email:
+  firstname: Ben
+  gender: M
+  id: 300077
+  lastname: Nelson
+  metavid_id: Ben_Nelson
+  middlename: E.
+  name: Sen. Ben Nelson [D, NE]
+  nickname:
+  oc_user_comments: 39
+  oc_users_tracking: 315
+  osid: N00005329
+  party: Democrat
+  religion: Methodist
+  state: NE
+  title: Sen.
+  unaccented_name: Ben Nelson
+  url:
+  user_approval: 1.53896103896104
+  youtube_id: SenBenNelson
+- !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: U000038
+  birthday: "1950-07-18"
+  district:
+  email:
+  firstname: Mark
+  gender: M
+  id: 400412
+  lastname: Udall
+  metavid_id: Mark_Udall
+  middlename: E.
+  name: Sen. Mark Udall [D, CO]
+  nickname:
+  oc_user_comments: 24
+  oc_users_tracking: 942
+  osid: N00008051
+  party: Democrat
+  religion:
+  state: CO
+  title: Sen.
+  unaccented_name: Mark Udall
+  url:
+  user_approval: 2.71875
+  youtube_id: SenatorMarkUdall
+id: 68340
+introduced: 1297836000
+last_speech:
+last_vote_date:
+last_vote_roll:
+last_vote_where:
+most_recent_actions:
+- result:
+  created_at: "2011-02-17T07:45:50Z"
+  govtrack_order:
+  amendment_id:
+  text: Read twice and referred to the Committee on Agriculture, Nutrition, and Forestry.
+  date: 1297836000
+  how:
+  id: 287979
+  vote_type:
+  type: BillAction
+  roll_call_id:
+  action_type: action
+  datetime: "2011-02-16T00:00:00Z"
+  where:
+  bill_id: 68340
+  roll_call_number:
+- result:
+  created_at: "2011-02-17T07:45:49Z"
+  govtrack_order:
+  amendment_id:
+  text:
+  date: 1297836000
+  how:
+  id: 287978
+  vote_type:
+  type: BillAction
+  roll_call_id:
+  action_type: introduced
+  datetime: "2011-02-16T00:00:00Z"
+  where:
+  bill_id: 68340
+  roll_call_number:
+number: 368
+plain_language_summary:
+recent_blogs: []
+
+recent_news: []
+
+session: 112
+sponsor: !ruby/object:GovKit::OpenCongress::Person
+  bioguideid: K000305
+  birthday: "1935-02-07"
+  district:
+  email:
+  firstname: Herbert
+  gender: M
+  id: 300061
+  lastname: Kohl
+  metavid_id: Herb_Kohl
+  middlename: H.
+  name: Sen. Herbert Kohl [D, WI]
+  nickname: Herb
+  oc_user_comments: 5
+  oc_users_tracking: 741
+  osid: N00004309
+  party: Democrat
+  religion: Jewish
+  state: WI
+  title: Sen.
+  unaccented_name: Herbert Kohl
+  url:
+  user_approval: 2.5
+  youtube_id: SenatorKohl
+status: Introduced
+title_full_common: S.368 A bill to amend the Consolidated Farm and Rural Development Act to suspend a limitation on the period for which certain borrowers are eligible for guaranteed assistance.

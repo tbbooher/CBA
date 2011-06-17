@@ -15,7 +15,7 @@ class User
   field :zip_code, :type => String
 
   has_and_belongs_to_many :groups
-  has_many :votes
+  #has_many :votes
 
 
   def invitation
@@ -145,6 +145,15 @@ class User
     end
   end
 
+  def add_default_group
+    self.groups << Group.where(:name => "unaffiliated").first
+    self.save
+  end
+
+  def vote_on(bill, value)
+    bill.votes.create(:value => value, :user_id => self.id)
+  end
+
   private
   def reprocess_avatar
     avatar.reprocess!
@@ -212,6 +221,7 @@ class User
       self.save!
     end
   end
+
 
 end
 

@@ -68,5 +68,22 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 2, User.with_role(:moderator).all.count
     assert_equal 1, User.with_role(:admin).all.count
   end
+
+  test "User should join a default group" do
+    guest = create_valid_user_with_roles_mask(:guest)
+    Group.find_or_create_by(:name => "unaffiliated", :type => :custom)
+    guest.add_default_group
+    guest.save
+    assert_equal 1, guest.groups.count
+    assert_equal "unaffiliated", guest.groups.first.name
+  end
+
+  test "User should be able to vote" do
+    b = Factory.build(:bill)
+    guest = create_valid_user_with_roles_mask(:guest)
+    #guest = guest.create
+    guest.vote_on(b, :aye)
+    b.votes
+  end
   
 end

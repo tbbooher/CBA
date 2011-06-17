@@ -10,6 +10,11 @@
   <%= @bill.full_number %>
 </p>
 
+<p>
+  <b>Tally:</b>
+  <%= @bill.descriptive_tally.html_safe %>
+</p>
+
 <% if @bill.short_title %>
 <p>
   <b>Short title:</b>
