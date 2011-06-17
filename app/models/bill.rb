@@ -30,7 +30,7 @@ class Bill
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
 
-  embeds_many :votes
+  has_many :votes
 
   before_validation(:set_ids, :on => :create)
   before_save :update_bill
@@ -72,8 +72,8 @@ class Bill
 
   def the_votes
     votes = self.votes
-    ayes = votes.sum_
-
+    ayes = votes.sum #TODO get vote methods working
+    # TODO, define enums
   end
 
   def full_number

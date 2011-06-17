@@ -6,29 +6,28 @@
 </p>
 
 <p>
-  <b>Bill type:</b>
-  <%= @bill.bill_type %>
+  <b>Bill:</b>
+  <%= @bill.full_number %>
 </p>
 
-<p>
-  <b>Bill number:</b>
-  <%= @bill.bill_number %>
-</p>
-
+<% if @bill.short_title %>
 <p>
   <b>Short title:</b>
   <%= @bill.short_title %>
 </p>
+<% end %>
 
 <p>
   <b>Official title:</b>
   <%= @bill.official_title %>
 </p>
 
+<% if @bill.summary %>
 <p>
   <b>Summary:</b>
   <%= @bill.summary %>
 </p>
+<% end %>
 
 <p>
   <b>Sponsor:</b>
