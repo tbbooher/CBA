@@ -1,5 +1,7 @@
 Cba::Application.routes.draw do
 
+  resources :groups
+
   resources :votes
 
   resources :legislators
