@@ -154,7 +154,7 @@ end
 Group.find_or_create_by(:name => "unaffiliated", :type => :custom)
 Group.find_or_create_by(:name => "foreign", :type => :custom)
 
-districts_array = File.new("/Users/Tim/Sites/cba/data/districts.txt", 'r').read.split("\n")
+districts_array = File.new("#{Rails.root}/data/districts.txt", 'r').read.split("\n")
 
 states = districts_array.map { |d| d.slice(0, 2) }.uniq.sort
 
