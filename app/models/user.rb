@@ -12,6 +12,12 @@ class User
   field :roles_mask, :type => Fixnum, :default => 0
   field :use_gravatar, :type => Boolean, :default => true
   field :invitation_id, :type => BSON::ObjectId
+  field :zip_code, :type => String
+
+  has_and_belongs_to_many :groups
+  has_many :votes
+
+
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
   end
