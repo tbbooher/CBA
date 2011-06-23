@@ -55,7 +55,7 @@
         font-family: Verdana, Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #4B7399;
+        background-color:#dcdcdc; /* #0079B2; */
         /*    background: #DADADA -webkit-gradient(
                 linear,
                 left top,
@@ -1120,6 +1120,34 @@
     }
 
     /* tbb: my custom work */
+
+    ul#tally {
+        background-color:#dcdcdc;
+        border:1px solid gray;
+        width:600px;
+        height:100px;
+        margin:20px;
+        padding:10px;
+    }
+
+    ul#tally li.box {
+        float:left;
+        width:150px;
+        height:100px;
+        display:inline;
+    }
+
+    ul#the_votes {
+        background-color:#ffd700;
+        padding:0px;
+    }
+
+    ul#the_votes li {
+        background-color:#adff2f;
+        list-style:none;
+        padding:0px;
+        margin:0px;
+    }
 
     div#top_bar {
         background: url("/images/menu-bg.gif") repeat-x scroll left top #FFFFFF;

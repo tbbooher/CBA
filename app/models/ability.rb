@@ -26,8 +26,9 @@ class Ability
 
         # Users with role
         if user.role?(:guest)
-          can :read, [Page, Blog, Posting]
+          can :read, [Page, Blog, Posting, Bill, Legislator, Vote]
           can :create, Comment
+          can :vote_on_bill, Bill
         end
         if user.role?(:confirmed_user)
           can :create, Invitation
@@ -46,7 +47,7 @@ class Ability
       end
 
       # Anybody
-      can :read, [Page, Blog, Posting]
+      can :read, [Page, Blog, Posting, Bill]
       can :create, Comment
       can :read, Comment do |comment|
         comment && !comment.new_record?

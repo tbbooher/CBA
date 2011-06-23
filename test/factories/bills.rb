@@ -2,7 +2,7 @@
 
 #test/factories/bills.rb
 
-Factory.define :bill, :class => OpenStruct do |f|
+Factory.define :bill do |f|
   f.bill_html "just the <b>facts</b>"
   f.bill_number 1987
   f.bill_type "h"
@@ -15,7 +15,7 @@ Factory.define :bill, :class => OpenStruct do |f|
   f.last_action_text "Referred to the House Committee on Financial Services."
   f.official_title "To amend the Securities Investor Protection Act of 1970 to provide insurance coverage for certain indirect investors caught in Ponzi schemes, and for other purposes."
   f.short_title "Ponzi Scheme Investor Protection Act of 2011"
-  f.sponsor_id
+  f.sponsor_id "4df9ebe1f11aacb384000001"
   f.sponsor_name "Ackerman"
   f.state "Introduced"
   f.summary

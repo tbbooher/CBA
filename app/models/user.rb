@@ -21,6 +21,7 @@ class User
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
   end
+
   def invitation=(inv)
     @invitation = nil
     self.invitation_id = inv.id
@@ -32,8 +33,8 @@ class User
 
   embeds_many :user_notifications
 
-  validates_presence_of   :name
-  validates_presence_of   :email
+  validates_presence_of :name
+  validates_presence_of :email
   validates_uniqueness_of :name, :case_sensitive => false
   validates_uniqueness_of :email, :case_sensitive => false
 
@@ -46,19 +47,19 @@ class User
 
   has_mongoid_attached_file :avatar,
                             :styles => {
-                              :popup  => "800x600=",
-                              :medium => "300x300>",
-                              :thumb  => "100x100>",
-                              :icon   => "64x64"
+                                :popup => "800x600=",
+                                :medium => "300x300>",
+                                :thumb => "100x100>",
+                                :icon => "64x64"
                             },
                             :processors => [:cropper]
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  after_update  :reprocess_avatar, :if => :cropping?
+  after_update :reprocess_avatar, :if => :cropping?
 
   # Notifications
-  after_create   :async_notify_on_creation
+  after_create :async_notify_on_creation
   before_destroy :async_notify_on_cancellation
-  before_update  :notify_if_confirmed
+  before_update :notify_if_confirmed
 
   # Authentications
   after_create :save_new_authentication
@@ -67,9 +68,13 @@ class User
   # Roles - Do not change the order and do not remove roles if you
   # already have productive data! Thou it's safe to append new roles
   # at the end of the string. And it's safe to rename roles in place
-  ROLES = [:guest, :confirmed_user, :author, :moderator, :maintainer, :admin]
+  ROLES = [:guest, :confirmed_user, :author, :moderator, :maintainer, :admin, :registered]
 
-  scope :with_role, lambda { |role| { :where => {:roles_mask.gte => ROLES.index(role) } } }
+  scope :with_role, lambda { |role| {:where => {:roles_mask.gte => ROLES.index(role)}} }
+
+  def registered?
+    (self.role == :registered || !self.zip_code.nil?)
+  end
 
   def cropping?
     !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?
@@ -151,7 +156,13 @@ class User
   end
 
   def vote_on(bill, value)
-    bill.votes.create(:value => value, :user_id => self.id)
+    if my_groups = self.groups
+      my_groups.each do |g|
+        bill.votes.create(:value => value, :user_id => self.id, :group_id => g.id)
+      end
+    else
+      raise "no groups for this user" # #{self.full_name}"
+    end
   end
 
   private
@@ -173,7 +184,7 @@ class User
 
     # try name or nickname
     if self.name.blank?
-      self.name   = user_info['name']   unless user_info['name'].blank?
+      self.name = user_info['name'] unless user_info['name'].blank?
       self.name ||= user_info['nickname'] unless user_info['nickname'].blank?
       self.name ||= (user_info['first_name']+" "+user_info['last_name']) unless \
         user_info['first_name'].blank? || user_info['last_name'].blank?
@@ -188,7 +199,7 @@ class User
     self.confirmed_at, self.confirmation_sent_at = Time.now
 
     # Build a new Authentication and remember until :after_create -> save_new_authentication
-    @new_auth = authentications.build( :uid => omniauth['uid'], :provider => omniauth['provider'])
+    @new_auth = authentications.build(:uid => omniauth['uid'], :provider => omniauth['provider'])
   end
 
   # Called :after_create
@@ -198,12 +209,12 @@ class User
 
   # Inform admin about sign ups and cancellations of accounts
   def async_notify_on_creation
-     DelayedJob.enqueue('NewSignUpNotifier', Time.now, self.id)
+    DelayedJob.enqueue('NewSignUpNotifier', Time.now, self.id)
   end
 
   # Inform admin about cancellations of accounts
   def async_notify_on_cancellation
-     DelayedJob.enqueue('CancelAccountNotifier', Time.now, self.inspect)
+    DelayedJob.enqueue('CancelAccountNotifier', Time.now, self.inspect)
   end
 
   # Inform admin if someone confirms an account

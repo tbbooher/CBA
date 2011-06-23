@@ -4,6 +4,8 @@ class Vote
   #field :group_type, :type => Integer
 
   belongs_to :user
+  belongs_to :group
+
   embedded_in :bill
 
 end

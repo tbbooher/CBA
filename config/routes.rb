@@ -8,8 +8,10 @@ Cba::Application.routes.draw do
 
   resources :bills
 
+  match "/bills/vote_on_bill/:id/:value" => "bills#vote_on_bill", :as => :vote_on_bill
+
   # Switch locales
-  match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
+  match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
 
   # Comments
   resources :comments, :except => :show

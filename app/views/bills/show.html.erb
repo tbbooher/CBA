@@ -10,10 +10,14 @@
   <%= @bill.full_number %>
 </p>
 
+<%= determine_vote(current_user).html_safe %>
+
+<% unless @bill.tally.empty? %>
 <p>
   <b>Tally:</b>
   <%= @bill.descriptive_tally.html_safe %>
 </p>
+<% end %>
 
 <% if @bill.short_title %>
 <p>
@@ -35,11 +39,6 @@
 <% end %>
 
 <p>
-  <b>Sponsor:</b>
-  <%= @bill.sponsor.full_title %>
-</p>
-
-<p>
   <b>Last action on:</b>
   <%= @bill.last_action_on %>
 </p>
@@ -49,10 +48,12 @@
   <%= @bill.last_action_text %>
 </p>
 
+<% unless @bill.enacted_on.nil? %>
 <p>
   <b>Enacted on:</b>
   <%= @bill.enacted_on %>
 </p>
+<% end %>
 
 <p>
   <b>Average rating:</b>
@@ -60,13 +61,13 @@
 </p>
 
 <p>
-  <b>Cosponsors count:</b>
-  <%= @bill.cosponsors_count %>
+  <b>Sponsor:</b>
+  <%= link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor) %>
 </p>
 
 <p>
-  <b>Govtrack:</b>
-  <%= @bill.govtrack_id %>
+  <b>Cosponsors count:</b>
+  <%= @bill.cosponsors_count %>
 </p>
 
 <p>
@@ -94,15 +95,6 @@
   <%= @bill.text_updated_on %>
 </p>
 
-<p>
-  <b>Hidden:</b>
-  <%= @bill.hidden %>
-</p>
-
-<p>
-  <b>Sponsor name:</b>
-  <%= @bill.sponsor_name %>
-</p>
 
 
 <%= link_to 'Edit', edit_bill_path(@bill) %> |

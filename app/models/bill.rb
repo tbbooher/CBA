@@ -33,7 +33,7 @@ class Bill
   embeds_many :votes
 
   before_validation(:set_ids, :on => :create)
-  before_save :update_bill
+  #before_save :update_bill # TODO, we need to figure out when to update bills
   #after_save :update_legislator_counts
 
   def validate
@@ -56,20 +56,37 @@ class Bill
   end
 
   def tally
-    votes = self.votes.map{|v| v.value}
-    ayes = votes.count{|val| val == :aye}
-    nayes = votes.count{|val| val == :nay}
-    abstains = votes.count{|val| val == :abstain}
-    [ayes, nayes, abstains]
+    the_tally = Hash.new
+    self.votes.group_by { |v| v.group.type }.each do |votes_by_group|
+      votes = votes_by_group.last.map { |v| v.value }
+      ayes = votes.count { |val| val == :aye }
+      nays = votes.count { |val| val == :nay }
+      abstains = votes.count { |val| val == :abstain }
+      the_tally[votes_by_group.first] = [votes_by_group.last.last.group.name, [ayes, nays, abstains]]
+    end
+    the_tally
+  end
+
+  def voted_on?(user)
+    self.votes.map { |v| v.user }.include?(user)
   end
 
   def descriptive_tally
-    out = "<ul>"
     names = ["For", "Against", "Abstain"]
-    self.tally.each_with_index do |count, index|
-       out += "<li>#{names[index]}: #{count}</li>"
+    out = "<ul id=\"tally\">"
+    self.tally.each do |votes_for_group|
+      out += "<li class=\"box\">"
+      out += "<b>#{votes_for_group.first.to_s}</b>"
+        out += "<div class=\"group_name\">#{votes_for_group.last.first}</div>"
+        out += "<ul id=\"the_votes\">"
+        votes_for_group.last.last.each_with_index do |count, index|
+          out += "<li>#{names[index]}: #{count}</li>"
+        end
+        out += "</ul>"
+      out += "</li>"
     end
     out += "</ul>"
+    out += "<div class=\"clear_both\"></div>"
     out
   end
 
@@ -84,14 +101,8 @@ class Bill
           :bill_type => result.bill_type,
           :bill_number => result.bill_number
       )
-      bill.save if bill.valid?  # is this the best way to do this?
+      bill.save if bill.valid? # is this the best way to do this?
     end
-  end
-
-  def the_votes
-    votes = self.votes
-    ayes = votes.sum #TODO get vote methods working
-    # TODO, define enums
   end
 
   def full_number
@@ -158,7 +169,7 @@ class Bill
 
   def self.last_action(actions)
     action_out = Struct.new(:text, :acted_at)
-    most_recent = DateTime.new(1976,8,12,0,0,0)
+    most_recent = DateTime.new(1976, 8, 12, 0, 0, 0)
     out = nil
     actions.each do |last_action|
       the_date = last_action["created_at"].to_datetime
@@ -208,15 +219,15 @@ class Bill
           self.cosponsors = []
           bill.co_sponsors.each do |cosponsor|
             self.cosponsors << Legislator.find_or_create_by(:bioguide_id => cosponsor.bioguideid,
-                :title => cosponsor.title,
-                :first_name => cosponsor.firstname,
-                :last_name => cosponsor.lastname,
-                :nickname => cosponsor.nickname,
-                :district => cosponsor.district,
-                :state => cosponsor.state,
-                :party => cosponsor.party,
-                :youtube_id => cosponsor.youtube_id,
-                :user_approval => cosponsor.user_approval
+                                                            :title => cosponsor.title,
+                                                            :first_name => cosponsor.firstname,
+                                                            :last_name => cosponsor.lastname,
+                                                            :nickname => cosponsor.nickname,
+                                                            :district => cosponsor.district,
+                                                            :state => cosponsor.state,
+                                                            :party => cosponsor.party,
+                                                            :youtube_id => cosponsor.youtube_id,
+                                                            :user_approval => cosponsor.user_approval
             )
           end
         end
