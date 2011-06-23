@@ -17,7 +17,7 @@ module BillsHelper
 
   def display_vote_options
     o = "<p>"
-    o += %q{<b>You Vote:</b>"}
+    o += %q{<b>Your vote:</b>}
     o += %q{<ul>}
     o += "<li>#{link_to "Yes", vote_on_bill_path(@bill, "aye")}</li>"
     o += "<li>#{link_to "No", vote_on_bill_path(@bill, "nay")}</li>"

@@ -12,12 +12,12 @@
 
 <%= determine_vote(current_user).html_safe %>
 
-<% unless @bill.tally.empty? %>
+<%# unless @bill.tally.empty? %>
 <p>
   <b>Tally:</b>
   <%= @bill.descriptive_tally.html_safe %>
 </p>
-<% end %>
+<%# end %>
 
 <% if @bill.short_title %>
 <p>

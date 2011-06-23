@@ -14,6 +14,7 @@ gem "cancan"
 gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
 gem "govkit", :git => 'git://github.com/tbbooher/govkit.git'
 gem "nytimes-congress"
+gem "geocoder"
 #gem 'drumbone'
 
 # we need some stuff too (tbb)
