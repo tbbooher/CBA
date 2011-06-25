@@ -1,5 +1,5 @@
 <!-- representative information -->
-<p>Based on this address, your district is: <b><%= @district.state + " " + @district.number %></b></p>
+<p>Based on this address, your district is: <b><%= district %></b></p>
 
 <p>Make this map smaller, overlay their congressional map based on: http://www.govtrack.us/embed/googlemaps.xpd</p>
 
@@ -7,16 +7,22 @@
 
 <p>show their reps here</p>
 
-<h2>Senior Senator</h2>
+<div class="component_float_left_300" style="height:300px;">
+<h3>Senior Senator</h3>
 
-<%= @senior_senator.full_title %>
+<%= senior_senator.full_title %>
+</div>
+<div class="component_float_left_300" style="height:300px;">
+<h3>Junior Senator</h3>
 
-<h2>Junior Senator</h2>
+<%= junior_senator.full_title %>
+</div>
+<div class="component_float_left_300" style="height:300px;">
+<h3>Representative</h3>
 
-<%= @junior_senator.full_title %>
+<%= representative.full_title %>
+</div>
 
-<h2>Representative</h2>
-
-<%= @representative.full_title %>
+<div class="clear_both"></div>
 
 <p>If this isn't correct, you can change that <%= link_to 'here', users_geocode_path %></p>

@@ -188,16 +188,21 @@ class User
     Feedzirra::Parser::GovTrackDistrict.parse(feed)
   end
 
-  def find_members
-     legs = self.legislators
-
+  def get_three_members
+    legs = self.legislators
+    senators = legs.select { |l| l.title == 'Sen.' }.sort_by { |u| u.start_date }
+    members = Hash.new
+    members[:senior_senator] = senators.first
+    members[:junior_senator] = senators.last
+    members[:representative] = (legs - senators).first
+    members
   end
 
   def save_district_and_members(district, result)
     self.district = district
+    self.legislators = []
     result.members.each do |member|
       # need to clear previous members
-      self.legislators = []
       if leg = Legislator.where(:govtrack_id => member.govtrack_id).first
         self.legislators << leg
       else

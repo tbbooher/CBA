@@ -6,10 +6,10 @@
     otherwise, display the reps, update the user and let
     them know that they can vote now  -->
     <% if flash[:multiple_addresses] %>
-        <%= render :partial => 'district_includes/multiple_found',
+        <%= render :partial => 'users/district_includes/multiple_found',
                    :locals => {:addresses => @addresses, :address => @address} %>
     <% else %>
-        <%= render :partial => 'district_includes/show_the_reps',
+        <%= render :partial => 'users/district_includes/show_the_reps',
                    :locals => {
                            :district => @district,
                            :senior_senator => @senior_senator,

@@ -1,0 +1,16 @@
+--- !ruby/object:Feedzirra::Parser::GovTrackDistrict
+congressional_session: "110"
+district: "8"
+lat: "39.9279"
+lon: "-84.179402"
+members:
+- !ruby/object:Feedzirra::Parser::GovTrackMember
+  govtrack_id: "400050"
+  member_type: senator
+- !ruby/object:Feedzirra::Parser::GovTrackMember
+  govtrack_id: "400325"
+  member_type: senator
+- !ruby/object:Feedzirra::Parser::GovTrackMember
+  govtrack_id: "400036"
+  member_type: representative
+us_state: OH

@@ -106,5 +106,20 @@ class UserTest < ActiveSupport::TestCase
     guest.save_district_and_members(district, result)
     assert_equal 3, guest.legislators.count
   end
+
+  test "Members and district should be saved for a user" do
+    result = YAML::load(File.open("#{Rails.root}/test/fixtures/govtrack_result.yml"))
+    guest = create_valid_user_with_roles_mask(:guest)
+    @district = "#{result.us_state}#{result.district}"
+    guest.save_district_and_members(@district, result)
+    assert_equal 3, guest.legislators.to_a.count
+    members = guest.get_three_members
+    senior_senator = members[:senior_senator]
+    junior_senator = members[:junior_senator]
+    representative = members[:representative]
+    assert_equal "Sherrod".to_s, senior_senator.first_name.to_s
+    assert_equal "Robert".to_s, junior_senator.first_name.to_s
+    assert_equal "John".to_s, representative.first_name.to_s
+  end
   
 end

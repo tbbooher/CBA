@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def district
     result = current_user.get_geodata(params)
     flash[:method] = result[:method]
+    user = current_user
     if !(result[:geo_data].all? {|r| r.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)})
       flash[:notice] = "No addresses found, please refine your answer or try a different method."
       redirect_to users_geocode_path
@@ -37,11 +38,11 @@ class UsersController < ApplicationController
       flash[:multiple_addresses] = true
     else # they have one address, find the district
       # save the user
-      current_user.save_coordinates(result[:geo_data].first, result[:geo_data].last)
-      result = current_user.get_districts_and_members
+      user.save_coordinates(result[:geo_data].first, result[:geo_data].last)
+      result = user.get_districts_and_members
       @district = "#{result.us_state}#{result.district}"
-      current_user.save_district_and_members(@district, result)
-      members = current_user.find_members
+      user.save_district_and_members(@district, result)
+      members = user.get_three_members
       @senior_senator = members[:senior_senator]
       @junior_senator = members[:junior_senator]
       @representative = members[:representative]

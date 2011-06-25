@@ -26,7 +26,8 @@ class LegislatorTest < ActiveSupport::TestCase
   test "We should be able to update all legislators" do
     Legislator.destroy_all
     Legislator.update_legislators
-    assert_equal(542, Legislator.all.count)
+    # should be at least the number of reps (435) + the number of senators
+    assert_operator Legislator.all.count, :>=, 535
   end
 
   test "We should be able to get the most recent actions from a legislator" do
@@ -34,4 +35,6 @@ class LegislatorTest < ActiveSupport::TestCase
     role = Legislator.find_most_recent_role(legislator_result)
     assert_equal Date.parse("2009-01-06"), role.startdate
   end
+
+
 end
