@@ -10,3 +10,4 @@ include StringExtensions
 require "special_characters"
 include SpecialCharacters
 
+GOVTRACK_URL = "http://www.govtrack.us/"

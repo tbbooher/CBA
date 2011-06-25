@@ -10,6 +10,10 @@ Cba::Application.routes.draw do
 
   match "/bills/vote_on_bill/:id/:value" => "bills#vote_on_bill", :as => :vote_on_bill
 
+  match "/users/geocode" => "users#geocode"
+
+  match "/users/district" => "users#district"
+
   # Switch locales
   match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
 

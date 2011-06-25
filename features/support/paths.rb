@@ -7,6 +7,8 @@ module NavigationHelpers
     case page_name
     when /the home page/
       '/'
+    when /geocode page/
+      '/users/geocode'
     when /users page/
       '/registrations'
     when /registrations page/

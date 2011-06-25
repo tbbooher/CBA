@@ -92,7 +92,7 @@ class Bill
 
   def self.create_from_feed(session)
     #feed_url = "http://www.govtrack.us/congress/billsearch_api.xpd?q=&session=#{session}&sponsor=&cosponsor=&status=INTRODUCED%2CREFERRED"
-    feed_url = "http://www.govtrack.us/congress/billsearch_api.xpd?q=&session=112&sponsor=400003&cosponsor=&status=INTRODUCED%2CREFERREDa"
+    feed_url = "#{GOVTRACK_URL}congress/billsearch_api.xpd?q=&session=112&sponsor=400003&cosponsor=&status=INTRODUCED%2CREFERREDa"
     feed = Feedzirra::Feed.fetch_raw(feed_url)
     results = Feedzirra::Parser::Govtrack.parse(feed).search_results
     results.each do |result|
@@ -168,6 +168,7 @@ class Bill
   end
 
   def self.last_action(actions)
+    # actions.sort_by{|a| a["created_at"] }.first
     action_out = Struct.new(:text, :acted_at)
     most_recent = DateTime.new(1976, 8, 12, 0, 0, 0)
     out = nil
@@ -233,7 +234,7 @@ class Bill
         end
 
         if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(bill.last_action.acted_at)
-          bill_object = HTTParty.get("http://www.govtrack.us/data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
+          bill_object = HTTParty.get("#{GOVTRACK_URL}data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
           self.bill_html = bill_object.response.body
           self.text_updated_on = Date.today
           Rails.logger.info "Updated Bill Text for #{self.ident}"

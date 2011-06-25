@@ -59,6 +59,34 @@ module Feedzirra
       end
     end
 
+    class GovTrackMember
+      include SAXMachine
+      include FeedEntryUtilities
+      element :member, :value => :type, :as => :member_type
+      element :member, :value => :id, :as => :govtrack_id
+
+      def self.able_to_parse?(xml) #:nodoc:
+        1
+        # xml =~ /<search-results/
+      end
+    end
+
+    class GovTrackDistrict
+      include SAXMachine
+      include FeedUtilities
+      element :session, :as => :congressional_session
+      element :latitude, :as => :lat
+      element :longitude, :as => :lon
+      element :state, :as => :us_state
+      element :district, :as => :district
+      elements :member, :as => :members, :class => GovTrackMember
+
+      def self.able_to_parse?(xml) #:nodoc:
+        1
+        # xml =~ /<search-results/
+      end
+    end
+
     class Govtrack
       include SAXMachine
       include FeedUtilities

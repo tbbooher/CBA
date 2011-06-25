@@ -103,4 +103,40 @@ Feature: User Roles
     Then I should see "first notification"
     And I should see "second notification"
     And I should see "last notification"
-  
+
+  Scenario: A non-authenticated user should be able to see the geocode setup page
+    Given I sign out
+    And I am on geocode page
+    Then I should not see "Input address"
+
+  Scenario: An authenticated user should be able to view the geocode setup page
+    Given I sign out
+    And I am logged in as user "guest@iboard.cc" with password "thisisnotsecret"
+    And I am on geocode page
+    Then I should see "Input address"
+
+  Scenario: An authenticated user should be able to submit their address
+    Given I sign out
+    And I am logged in as user "guest@iboard.cc" with password "thisisnotsecret"
+    And I am on the geocode page
+    And I fill in "Street address" with "1050 Wilderness Bluff"
+    And I fill in "City" with "Tipp City"
+    And I fill in "State" with "OH"
+    And I fill in "Zip" with "45371"
+    And I click on "Submit Address"
+    Then I should see "Confirm district"
+
+  Scenario: An authenticated user should be able to submit their zip-code
+    Given I sign out
+    And I am logged in as user "guest@iboard.cc" with password "thisisnotsecret"
+    And I am on the geocode page
+    And I fill in "Zip code" with "45371"
+    And I click on "Submit Address"
+    Then I should see "Confirm district"
+
+  Scenario: An authenticated user should be able to confirm their district via ip
+    Given I sign out
+    And I am logged in as user "guest@iboard.cc" with password "thisisnotsecret"
+    And I am on the geocode page
+    And I click on "Yes"
+    Then I should see "Confirm district"

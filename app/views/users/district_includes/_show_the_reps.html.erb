@@ -1,0 +1,22 @@
+<!-- representative information -->
+<p>Based on this address, your district is: <b><%= @district.state + " " + @district.number %></b></p>
+
+<p>Make this map smaller, overlay their congressional map based on: http://www.govtrack.us/embed/googlemaps.xpd</p>
+
+<p>Give them options to change all of this</p>
+
+<p>show their reps here</p>
+
+<h2>Senior Senator</h2>
+
+<%= @senior_senator.full_title %>
+
+<h2>Junior Senator</h2>
+
+<%= @junior_senator.full_title %>
+
+<h2>Representative</h2>
+
+<%= @representative.full_title %>
+
+<p>If this isn't correct, you can change that <%= link_to 'here', users_geocode_path %></p>

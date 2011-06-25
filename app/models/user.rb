@@ -3,6 +3,8 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Paperclip
+  include Geocoder::Model::Mongoid
+  geocoded_by :coordinates
   cache
 
   devise :database_authenticatable, :registerable, :confirmable,
@@ -13,9 +15,18 @@ class User
   field :use_gravatar, :type => Boolean, :default => true
   field :invitation_id, :type => BSON::ObjectId
   field :zip_code, :type => String
+  # for geocoding
+  field :coordinates, :type => Array
+  field :us_state
+  field :district
 
   has_and_belongs_to_many :groups
+  has_many :legislators
   #has_many :votes
+
+  #def geocode
+
+  #end
 
 
   def invitation
@@ -165,6 +176,56 @@ class User
     end
   end
 
+  def save_coordinates(lat, lon)
+    self.coordinates = [lat, lon]
+    self.save
+  end
+
+  def get_districts_and_members
+    lat, lon = self.coordinates
+    feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"
+    feed = Feedzirra::Feed.fetch_raw(feed_url)
+    Feedzirra::Parser::GovTrackDistrict.parse(feed)
+  end
+
+  def find_members
+     legs = self.legislators
+
+  end
+
+  def save_district_and_members(district, result)
+    self.district = district
+    result.members.each do |member|
+      # need to clear previous members
+      self.legislators = []
+      if leg = Legislator.where(:govtrack_id => member.govtrack_id).first
+        self.legislators << leg
+      else
+        raise "legislator #{member.govtrack_id} not found"
+      end
+    end
+    self.save!
+  end
+
+  def get_geodata(params)
+    case params[:commit]
+      when "Yes" # the location is coming coming in from an ip lookup
+        result = Geocoder.coordinates(params[:location])
+        method = :ip_lookup
+      when "Submit Address" # then, we have an address to code
+        address = build_address(params)
+        result = Geocoder.coordinates(address)
+        method = :address
+      when "Confirm address"
+        result = params[:address]
+        method = :confirmed_address
+      else # they did a zip code lookup
+        result = Geocoder.coordinates(params[:full_zip])
+        method = :zipcode
+    end
+    {:geo_data => result, :method => method}
+  end
+
   private
   def reprocess_avatar
     avatar.reprocess!
@@ -233,6 +294,13 @@ class User
     end
   end
 
+  def build_address(params)
+    if params[:zip]
+      "#{params[:street_address].strip}, #{params[:city].strip}, #{params[:state].strip}, #{params[:zip].strip}"
+    else
+      "#{params[:street_address].strip}, #{params[:city].strip}, #{params[:state].strip}"
+    end
+  end
 
 end
 

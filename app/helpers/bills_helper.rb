@@ -4,14 +4,15 @@ module BillsHelper
 
     if @bill.voted_on?(user) # they can't vote again
       out = "Thanks for voting."
-    elsif user.nil?
+    elsif user_signed_in?
       out = "If you #{ link_to "log in", user_session_path }, you gain the right to vote"
-    elsif false # !user.registered?
-      out = "You are logged in, but you haven't registered your district. #{ link_to "Change that", "foo"}."
+    elsif !user.registered?
+      out = "You are logged in, but you haven't registered your district. #{ link_to "Change that", geocode_path}."
     else # they are registered, logged in, and haven't voted yet
       out = display_vote_options
     end
     out
+
   end
 
 

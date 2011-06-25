@@ -5,7 +5,7 @@ class LegislatorTest < ActiveSupport::TestCase
   def setup
     @legislator = Factory.build(:legislator)
   end
-  # Replace this with your real tests.
+
   test "The chamber should update correctly" do
     assert_not_nil @legislator
     #assert true
@@ -26,6 +26,12 @@ class LegislatorTest < ActiveSupport::TestCase
   test "We should be able to update all legislators" do
     Legislator.destroy_all
     Legislator.update_legislators
-    assert_equal(Legislator.all.count,542)
+    assert_equal(542, Legislator.all.count)
+  end
+
+  test "We should be able to get the most recent actions from a legislator" do
+    legislator_result = YAML::load(File.open("#{Rails.root}/test/fixtures/govtrack_person.yml"))
+    role = Legislator.find_most_recent_role(legislator_result)
+    assert_equal Date.parse("2009-01-06"), role.startdate
   end
 end

@@ -1088,23 +1088,23 @@
     }
 
     .component_float_left_500 {
-        margin: 5px;
+        margin: 3px;
         border: 1px solid #ddd;
         -moz-border-radius: 5px 5px 5px 5px;
         -webkit-border-radius: 5px 5px 5px 5px;
         float: left;
-        width: 500px;
-        padding: 5px;
+        width: 480px;
+        padding: 8px;
     }
 
     .component_float_right_500 {
-        margin: 5px;
+        margin: 3px;
         border: 1px solid #ddd;
         -moz-border-radius: 5px 5px 5px 5px;
         -webkit-border-radius: 5px 5px 5px 5px;
         float: right;
-        width: 500px;
-        padding: 5px;
+        width: 480px;
+        padding: 8px;
     }
 
     .clear_left {

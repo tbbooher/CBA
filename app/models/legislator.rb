@@ -19,6 +19,7 @@ class Legislator
   field :cosponsored_count, :type => Integer
   field :full_name, :type => String
   field :govtrack_id, :type => Integer
+  field :start_date, :type => Date
 
   has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => {:bills => {:hidden => false}}
 
@@ -68,6 +69,7 @@ class Legislator
     file_data = File.new("#{Rails.root}/data/people.xml", 'r')
     feed = Feedzirra::Parser::GovTrackPeople.parse(file_data).people
     feed.each do |person|
+      role = Legislator.find_most_recent_role(person)
       leg = Legislator.find_or_create_by(:bioguide_id => person.bioguide_id,
                                          :first_name => person.first_name,
                                          :last_name => person.last_name,
@@ -81,11 +83,21 @@ class Legislator
                                          :title => person.title,
                                          :district => person.district,
                                          :state => person.state,
-                                         :party => person.role_party.first,
+                                         :party => role.party,
+                                         :start_date => role.startdate,
                                          :full_name => person.full_name,
                                          :govtrack_id => person.govtrack_id
       )
       leg.save
     end
+  end
+
+  def self.find_most_recent_role(person)
+    #array = [person.role_startdate.map{|d| Date.parse(d)}, person.role_party]
+    array = person.role_startdate.map{|d| Date.parse(d)}.zip(person.role_party).sort_by{|d,p| d}.reverse.first
+    role = OpenStruct.new
+    role.party = array.last
+    role.startdate = array.first
+    role
   end
 end

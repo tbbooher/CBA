@@ -14,7 +14,7 @@ gem "cancan"
 gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
 gem "govkit", :git => 'git://github.com/tbbooher/govkit.git'
 gem "nytimes-congress"
-gem "geocoder"
+#gem "geokit"
 #gem 'drumbone'
 
 # we need some stuff too (tbb)
@@ -31,7 +31,8 @@ gem 'unicorn'
 
 # time to connect to opencongress
 gem 'json'
-gem 'ym4r'
+#gem 'ym4r'
+gem 'geocoder'
 
 gem 'nokogiri'
 #group :after_initialize do
@@ -83,7 +84,7 @@ group :test do
   gem 'ruby-growl'
   gem 'autotest-growl'
   gem "mocha"
-#  gem "fabrication"
+  gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
   gem "autotest-fsevent"

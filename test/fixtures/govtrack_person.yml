@@ -1,0 +1,30 @@
+--- !ruby/object:Feedzirra::Parser::GovTrackPerson
+bioguide_id: A000014
+birthday: "1938-06-26"
+district: "1"
+first_name: Neil
+full_name: Rep. Neil Abercrombie [D, HI-1]
+gender: M
+govtrack_id: "400001"
+icpsrid:
+last_name: Abercrombie
+metavid_id: Neil_Abercrombie
+middle_name:
+os_id: N00007665
+pvs_id: "26827"
+religion:
+role_party:
+- Democrat
+- Republican
+- Democrat
+role_startdate:
+- "2009-01-06"
+- "1976-01-06"
+- "2000-08-12"
+role_type:
+- rep
+- rep
+- rep
+state: HI
+title: Rep.
+youtube_id: hawaiirep1

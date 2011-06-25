@@ -1,0 +1,65 @@
+<% title "Input address" %>
+
+<p>Is this your district?</p>
+<%= @address_attempt %>
+<% form_tag 'district' do %>
+   <%= hidden_field_tag :location, @address_attempt %>
+   <div class='actions'>
+      <%= submit_tag 'Yes' %>
+   </div>
+<% end %>
+<p>If not, you can input your address below:</p>
+<!-- float left -->
+<p>Input your address <%= @user.name.titlecase %></p>
+<div class="component_float_left_500" style="background-color:#adff2f; height:200px;">
+  <% form_tag 'district' do %>
+
+      <%#= errors_for(blog)%>
+
+      <div class="field">
+        <%= label_tag :street_address %>
+        <%= text_field_tag :street_address, nil, :size => 40 %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :city %>
+        <%= text_field_tag :city, nil, :size => 40 %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :state %>
+        <%= text_field_tag :state %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :zip %>
+        <%= text_field_tag :zip %>
+      </div>
+
+      <div class='clear'></div>
+
+      <div class='actions'>
+        <%= submit_tag 'Submit Address' %>
+      </div>
+  <% end %>
+</div>
+<div class="component_float_right_500" style="background-color:#adff2f; height:200px;">
+  <% form_tag 'district' do %>
+
+      <%#= errors_for(blog)%>
+
+      <div class="field">
+        <%= label_tag :zip_code %>
+        <%= text_field_tag :zip_code, nil, :size => 20 %>
+      </div>
+
+      <div class='clear'></div>
+
+      <div class='actions'>
+        <%= submit_tag 'Submit Zip Code' %>
+      </div>
+  <% end %>
+
+
+</div>
+<div class="clear_both"></div>

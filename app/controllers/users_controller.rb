@@ -5,18 +5,47 @@ class UsersController < ApplicationController
 
   def index
     @user_count = User.count
-    @users = User.all.reject {|u|
+    @users = User.all.reject { |u|
       !can? :read, u
-    }.paginate( :page => params[:page],
-                :per_page => CONSTANTS['paginate_users_per_page'])
+    }.paginate(:page => params[:page],
+               :per_page => CONSTANTS['paginate_users_per_page'])
 
     respond_to do |format|
-       format.js 
-       format.html 
+      format.js
+      format.html
     end
   end
 
   def show
+  end
+
+  def geocode
+    @user = current_user
+    @address_attempt = '@user.find_location_by_ip'
+  end
+
+  def district
+    result = current_user.get_geodata(params)
+    flash[:method] = result[:method]
+    if !(result[:geo_data].all? {|r| r.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)})
+      flash[:notice] = "No addresses found, please refine your answer or try a different method."
+      redirect_to users_geocode_path
+    elsif false #result[:geo_data].address_count > 1
+      @addresses = result[:geo_data].multiple_addresses # wrong !!
+      @address = build_address(params)
+      flash[:notice] = "more than one address found, please pick yours"
+      flash[:multiple_addresses] = true
+    else # they have one address, find the district
+      # save the user
+      current_user.save_coordinates(result[:geo_data].first, result[:geo_data].last)
+      result = current_user.get_districts_and_members
+      @district = "#{result.us_state}#{result.district}"
+      current_user.save_district_and_members(@district, result)
+      members = current_user.find_members
+      @senior_senator = members[:senior_senator]
+      @junior_senator = members[:junior_senator]
+      @representative = members[:representative]
+    end
   end
 
   def edit_role
@@ -27,7 +56,7 @@ class UsersController < ApplicationController
 
   def update_role
     @user.update_attributes!(params[:user])
-    redirect_to registrations_path, :notice => t(:role_of_user_updated,:user => @user.name)
+    redirect_to registrations_path, :notice => t(:role_of_user_updated, :user => @user.name)
   end
 
   def crop_avatar
@@ -45,7 +74,7 @@ class UsersController < ApplicationController
   def destroy
     @user.delete
     redirect_to registrations_path,
-      :notice => t(:user_deleted)
+                :notice => t(:user_deleted)
   end
 
   # GET /hide_notification/:created_at_as_id
@@ -90,15 +119,16 @@ class UsersController < ApplicationController
 
   def details
     respond_to do |format|
-       format.js
-       format.html
+      format.js
+      format.html
     end
   end
 
   private
   def is_in_crop_mode?
     params[:user] &&
-    params[:user][:crop_x] && params[:user][:crop_y] &&
-    params[:user][:crop_w] && params[:user][:crop_h]
+        params[:user][:crop_x] && params[:user][:crop_y] &&
+        params[:user][:crop_w] && params[:user][:crop_h]
   end
+
 end

@@ -20,7 +20,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(:email => 'tester@test.te', :name => 'Nockenfell')
     assert !user.save, "User saved without a password"
   end
-  
+
   test "A user with email and password should not save without a name" do
     user = User.new(:email => 'tester@test.te', :password => 'secret', :password_confirmation => 'secret')
     assert !user.save, "User saved without a name"
@@ -84,6 +84,27 @@ class UserTest < ActiveSupport::TestCase
     #guest = guest.create
     guest.vote_on(b, :aye)
     b.votes
+  end
+
+  test "User should be able to get district data" do
+    guest = create_valid_user_with_roles_mask(:guest)
+    guest.coordinates = [39.954663,-75.194467]
+    guest.save!
+    result = guest.get_districts_and_members
+    assert_equal "2", result.district
+    assert_equal "PA", result.us_state
+    assert_equal 3, result.members.count
+  end
+
+  test "A user should be able to add members" do
+    guest = create_valid_user_with_roles_mask(:guest)
+    Fabricate(:junior_senator)
+    guest.coordinates = [39.954663,-75.194467]
+    guest.save!
+    result = guest.get_districts_and_members
+    district = "#{result.us_state}#{result.district}"
+    guest.save_district_and_members(district, result)
+    assert_equal 3, guest.legislators.count
   end
   
 end
