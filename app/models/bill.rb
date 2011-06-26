@@ -1,6 +1,7 @@
 #require 'ny-times-congress'
 #include NYTimes::Congress
 #Base.api_key = 'ecabdba6f1f7d9c9422c717af77d0e23:11:63892295'
+#require 'httparty'
 
 class Bill
   include Mongoid::Document
@@ -44,11 +45,12 @@ class Bill
 
   embeds_many :votes
 
-  before_validation(:set_ids, :on => :create)
+  #before_validation(:set_ids, :on => :create)
   #before_save :update_bill # TODO, we need to figure out when to update bills
   #after_save :update_legislator_counts
 
   # might need to remove
+  # TODO remove . . .
   def validate
     if errors.empty?
       begin
@@ -65,8 +67,25 @@ class Bill
 #  end
 
   # TODO -- need to fix
+  def short_title
+    # we show the first short title
+    txt = nil
+    if the_short_title = self.titles.select{|type,txt| type == 'short'}
+      txt = the_short_title.first.last
+    end
+    txt
+  end
+
+  def long_title
+    txt = nil
+    if official_title = self.titles.select{|type,txt| type == 'official'}
+      txt = official_title.first.last
+    end
+    txt
+  end
+
   def title
-    short_title.blank? ? official_title : short_title
+    short_title || long_title
   end
 
   def tally
@@ -106,26 +125,11 @@ class Bill
   end
 
   def self.update_from_directory
-    Dir.glob("#{Rails.root}/data/bills/*.xml").each do |bill_path|
+    Dir.glob("#{Rails.root}/data/bills/small_set/*.xml").each do |bill_path|
       bill_name = bill_path.match(/.*\/(.*).xml$/)[1]
       b = Bill.find_or_create_by(:govtrack_name => bill_name)
       b.update_bill
-    end
-  end
-
-  def self.create_from_feed(session)
-    #feed_url = "http://www.govtrack.us/congress/billsearch_api.xpd?q=&session=#{session}&sponsor=&cosponsor=&status=INTRODUCED%2CREFERRED"
-    feed_url = "#{GOVTRACK_URL}congress/billsearch_api.xpd?q=&session=112&sponsor=400003&cosponsor=&status=INTRODUCED%2CREFERRED"
-    feed = Feedzirra::Feed.fetch_raw(feed_url)
-    results = Feedzirra::Parser::Govtrack.parse(feed).search_results
-    results.each do |result|
-      bill = self.new(
-          :congress => result.congress,
-          :bill_type => result.bill_type,
-          :bill_number => result.bill_number,
-          :status => result.status
-      )
-      bill.save if bill.valid? # is this the best way to do this?
+      b.save!
     end
   end
 
@@ -150,11 +154,6 @@ class Bill
     end + ' ' + bill_number.to_s
   end
 
-  def set_ids
-    self.ident = "#{self.congress}-#{self.bill_type}#{self.bill_number}"
-    self.govtrack_id = "#{self.bill_type}#{self.congress}-#{self.bill_number}"
-  end
-
   def update_legislator_counts
     unless self.sponsor.nil?
       self.sponsor.update_attribute(:sponsored_count, self.sponsor.sponsored.length)
@@ -175,25 +174,29 @@ class Bill
     # check for changes
     if bill && (self.introduced_date.nil? || (bill.introduced_date.to_date > self.introduced_date))
       # front-matter
+
       self.congress = bill.congress
       self.bill_type = bill.bill_type
       self.bill_number = bill.bill_number
       self.last_updated = bill.last_updated.to_date
       # get titles
+      self.ident = "#{self.congress}-#{self.bill_type}#{self.bill_number}"
+      self.govtrack_id = "#{self.bill_type}#{self.congress}-#{self.bill_number}"
+
       # get actions
       self.bill_state = bill.bill_state
       self.introduced_date = bill.introduced_date.to_date
 
       self.titles = get_titles(bill.titles)
+      self.bill_actions = get_actions(bill.bill_actions)
       self.summary = bill.summary
-      self.bill_actions = bill.bill_actions
 
       # sponsors
       save_sponsor(bill.sponsor_id)
-      save_cosponsors(bill.cosponsor_ids)
+      save_cosponsors(bill.cosponsor_ids) unless bill.cosponsor_ids.empty?
 
       # bill text
-      get_bill_text if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(bill.last_action.acted_at)
+      get_bill_text if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(self.bill_actions.first.first)
       
       self.cosponsors_count = self.cosponsors.count
       self.text_word_count = self.bill_html.to_s.word_count
@@ -235,26 +238,6 @@ class Bill
     self.save
   end
 
-  def get_cosponsors(cosponsors)
-    # only run this if we have cosponsors (unless to enter)
-    self.cosponsors = []
-    co_sponsors.each do |cosponsor_id|
-      url = "http://www.govtrack.us/congress/person_api.xpd?id=#{cosponsor_id}"
-      cosponsor = Feedzirra::Parser::GovTrackPerson.parse(url)    
-      self.cosponsors << Legislator.find_or_create_by(:bioguide_id => cosponsor.bioguide_id,
-                                                      :title => cosponsor.title,
-                                                      :first_name => cosponsor.first_name,
-                                                      :last_name => cosponsor.last_name,
-                                                      :district => cosponsor.district,
-                                                      :state => cosponsor.state, #!!
-                                                      :party => cosponsor.party, #!!
-                                                      :youtube_id => cosponsor.youtube_id,
-                                                      :user_approval => cosponsor.user_approval
-                                                      )
-    end
-
-  end
-
   def get_titles(raw_titles)
     titles = Array.new
     raw_titles.each_slice(2) do |title|
@@ -268,82 +251,9 @@ class Bill
     raw_actions.each_slice(2) do |action|
       actions.push action
     end
-    actions
+    actions.sort_by{|d,a| d}.reverse
   end
 
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)
-
-  def update_bill_old
-    unless self.hidden?
-      #bill = GovKit::OpenCongress::Bill.find_by_idents(self.ident).first
-      file_data = File.new("#{Rails.root}/data/bills/#{self.bill_type}#{self.bill_number}.xml", 'r')
-      bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
-      #feed_url = "#{GOVTRACK_URL}http://www.govtrack.us/congress/person_api.xpd?id=#{300058}"
-      #feed = Feedzirra::Feed.fetch_raw(feed_url)
-      #bill = Feedzirra::Parser::Govtrack.parse(feed).search_results
-      if bill
-        #titles = Bill.get_titles(bill.bill_titles)
-        #self.short_title = titles["short"]
-        #self.official_title = titles["official"]
-        #last_action = Bill.last_action(bill.most_recent_actions)
-        #self.last_action_text = last_action.text
-        #self.last_action_on = last_action.acted_at
-        #self.summary = bill.plain_language_summary
-        #self.state = bill.status
-
-        # sponsor = Legislator.where(:bioguide_id => bioguide_id).first
-
-        # if sponsor
-        #   self.sponsor_id = sponsor.id
-        # else
-        #   self.sponsor = Legislator.new(
-        #       :bioguide_id => bill.sponsor.bioguideid,
-        #       :title => bill.sponsor.title,
-        #       :first_name => bill.sponsor.firstname,
-        #       :last_name => bill.sponsor.lastname,
-        #       :nickname => bill.sponsor.nickname,
-        #       :district => bill.sponsor.district,
-        #       :state => bill.sponsor.state,
-        #       :party => bill.sponsor.party,
-        #       :youtube_id => bill.sponsor.youtube_id,
-        #       :user_approval => bill.sponsor.user_approval
-        #   )
-        #   self.sponsor.save
-        # end
-
-        # if bill.co_sponsors
-        #   self.cosponsors = []
-        #   bill.co_sponsors.each do |cosponsor|
-        #     self.cosponsors << Legislator.find_or_create_by(:bioguide_id => cosponsor.bioguideid,
-        #                                                     :title => cosponsor.title,
-        #                                                     :first_name => cosponsor.firstname,
-        #                                                     :last_name => cosponsor.lastname,
-        #                                                     :nickname => cosponsor.nickname,
-        #                                                     :district => cosponsor.district,
-        #                                                     :state => cosponsor.state,
-        #                                                     :party => cosponsor.party,
-        #                                                     :youtube_id => cosponsor.youtube_id,
-        #                                                     :user_approval => cosponsor.user_approval
-        #     )
-        #   end
-        # end
-
-        if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(bill.last_action.acted_at)
-          bill_object = HTTParty.get("#{GOVTRACK_URL}data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
-          self.bill_html = bill_object.response.body
-          self.text_updated_on = Date.today
-          Rails.logger.info "Updated Bill Text for #{self.ident}"
-        end
-
-        self.sponsor_name = self.sponsor.last_name
-        self.cosponsors_count = self.cosponsors.count
-        self.text_word_count = self.bill_html.to_s.word_count
-        self.summary_word_count = self.summary.to_s.word_count
-        true
-      else
-        false
-      end
-    end
-  end
 
 end

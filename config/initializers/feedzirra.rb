@@ -2,6 +2,27 @@ require 'sax-machine'
 
 module Feedzirra
   module Parser
+
+    class GovTrackBill
+      include SAXMachine
+      include FeedEntryUtilities
+
+      element :bill, :value => :session, :as => :congress
+      element :bill, :value => :type, :as => :bill_type
+      element :bill, :value => :number, :as => :bill_number
+      element :bill, :value => :updated, :as => :last_updated
+      #element :status, :as => :bill_status
+
+      element :state, :as => :bill_state
+      element :introduced, :value => :datetime, :as => :introduced_date
+      elements :title, :value => :type, :as => :titles
+      element :sponsor, :value => :id, :as => :sponsor_id
+      elements :cosponsor, :value => :id, :as => :cosponsor_ids
+      elements :action, :value=> :datetime, :as => :bill_actions
+      elements :term, :value => :name, :as => :term_names
+      element :summary
+    end
+
     class GovtrackResult
       include SAXMachine
       include FeedEntryUtilities

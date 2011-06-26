@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
+gem 'httparty'
 
 gem 'rails','3.0.7'
 gem 'jquery-rails'  
@@ -8,11 +9,13 @@ gem 'jquery-rails'
 gem "mongoid", "~>2.0.1"   #, "2.0.0.rc.7"
 gem "bson_ext"  #, "1.1.5"
 
+gem 'rake', '0.8.7'
+
 # Bundle gem needed for Devise and cancan
 gem "devise", "1.1.7"
 gem "cancan"
 gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
-gem "govkit", :git => 'git://github.com/tbbooher/govkit.git'
+#gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
 gem "nytimes-congress"
 #gem "geokit"
 #gem 'drumbone'

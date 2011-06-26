@@ -36,5 +36,4 @@ class LegislatorTest < ActiveSupport::TestCase
     assert_equal Date.parse("2009-01-06"), role.startdate
   end
 
-
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BillTest < ActiveSupport::TestCase
+class BillsIntegrationTest < ActionDispatch::IntegrationTest
 
   test "The sponsor should be loaded correctly" do
     bill = Bill.new(
@@ -23,7 +23,6 @@ class BillTest < ActiveSupport::TestCase
     assert_not_nil(bill.cosponsors)
   end
 
-  # Replace this with your real tests.
   test "A bill should have a ident after it is created" do
      bill = Bill.new(
                      :congress => 112,
@@ -34,4 +33,11 @@ class BillTest < ActiveSupport::TestCase
      assert_not_nil bill.ident
      assert_equal(bill.ident, "112-s374")
   end
+
+  test "We can create bills" do
+    Bill.destroy_all
+    Bill.create_from_feed(112)
+    assert_operator Bill.all.count, :>=, 0
+  end
+
 end

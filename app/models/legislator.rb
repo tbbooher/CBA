@@ -23,8 +23,6 @@ class Legislator
 
   has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => {:bills => {:hidden => false}}
 
-  #embeds_many :bills
-
   def first_or_nick
     nickname.blank? ? first_name : nickname
   end
@@ -66,38 +64,46 @@ class Legislator
   end
 
   def self.update_legislators
-    file_data = File.new("#{Rails.root}/data/people.xml", 'r')
+    file_data = File.new("#{Rails.root}/data/all_people/people.xml", 'r')
     feed = Feedzirra::Parser::GovTrackPeople.parse(file_data).people
     feed.each do |person|
       role = Legislator.find_most_recent_role(person)
-      leg = Legislator.find_or_create_by(:bioguide_id => person.bioguide_id,
-                                         :first_name => person.first_name,
-                                         :last_name => person.last_name,
-                                         :middle_name => person.middle_name,
-                                         :religion => person.religion,
-                                         :pvs_id => person.pvs_id,
-                                         :os_id => person.os_id,
-                                         :metavid_id => person.metavid_id,
-                                         :bioguide_id => person.bioguide_id,
-                                         :youtube_id => person.youtube_id,
-                                         :title => person.title,
-                                         :district => person.district,
-                                         :state => person.state,
-                                         :party => role.party,
-                                         :start_date => role.startdate,
-                                         :full_name => person.full_name,
-                                         :govtrack_id => person.govtrack_id
-      )
-      leg.save
+      if !role.startdate.nil? && role.startdate >= 10.years.ago.to_date
+        leg = Legislator.find_or_create_by(:bioguide_id => person.bioguide_id,
+                                           :first_name => person.first_name,
+                                           :last_name => person.last_name,
+                                           :middle_name => person.middle_name,
+                                           :religion => person.religion,
+                                           :pvs_id => person.pvs_id,
+                                           :os_id => person.os_id,
+                                           :metavid_id => person.metavid_id,
+                                           :bioguide_id => person.bioguide_id,
+                                           :youtube_id => person.youtube_id,
+                                           :title => person.title,
+                                           :district => person.district,
+                                           :state => person.state,
+                                           :party => role.party,
+                                           :start_date => role.startdate,
+                                           :full_name => person.full_name,
+                                           :govtrack_id => person.govtrack_id
+        )
+        leg.save
+      end
     end
+    file_data.close
   end
 
   def self.find_most_recent_role(person)
     #array = [person.role_startdate.map{|d| Date.parse(d)}, person.role_party]
-    array = person.role_startdate.map{|d| Date.parse(d)}.zip(person.role_party).sort_by{|d,p| d}.reverse.first
     role = OpenStruct.new
-    role.party = array.last
-    role.startdate = array.first
+    if person.role_startdate.empty?
+      role.party = nil
+      role.startdate = nil
+    else
+      array = person.role_startdate.map { |d| Date.parse(d) }.zip(person.role_party).sort_by { |d, p| d }.reverse.first
+      role.party = array.last
+      role.startdate = array.first
+    end
     role
   end
 end

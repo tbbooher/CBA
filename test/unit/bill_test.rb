@@ -57,7 +57,39 @@ class BillTest < ActiveSupport::TestCase
     assert_true b.voted_on?(user)
   end
 
-  test "to see if the right groups are added" do
-    assert true
+  test "to ensure titles are parsed properly" do
+    titles = YAML::load(File.open("#{Rails.root}/test/fixtures/titles.yml"))
+    b = Bill.new
+    t = b.get_titles(titles)
+    assert_equal "short", t.first.first
+    assert_equal "CLEAR Act of 2011", t.first.last
+  end
+
+  test "to ensure we can save a sponsor" do
+    b = Bill.new
+    b.save_sponsor(400032)
+    assert_equal "Marsha Blackburn", b.sponsor.full_name
+  end
+
+  test "save cosponsors for bill" do
+    b = Bill.new(
+        :congress => 112,
+        :bill_type => 's',
+        :bill_number => 368
+    )
+    cosponsor_ids = ["412411", "400626", "400224", "412284", "400570", "400206", "400209", "400068", "400288", "412271", "412218", "400141", "412480", "412469", "400277", "400367", "412397", "412309", "400411", "412283", "412434", "400342", "400010", "400057", "400260", "412487", "412436", "400348", "412478", "400633", "400656", "400115"]
+    b.save_cosponsors(cosponsor_ids)
+    assert_equal 32, b.cosponsors.to_a.count
+  end
+
+  test "update from directory" do
+    Bill.update_from_directory
+    assert_operator Bill.all.to_a.count, :>=, 0
+  end
+
+  test "we can get the title" do
+    Bill.update_from_directory
+    b = Bill.first
+    assert_equal "Common Sense Economic Recovery Act of 2011", b.title
   end
 end

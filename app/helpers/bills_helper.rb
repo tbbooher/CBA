@@ -28,5 +28,4 @@ module BillsHelper
     o
   end
 
-
 end
