@@ -1,0 +1,24 @@
+<% title 'Geocode Saved' %>
+
+<p>Good job, your geocode as been saved. You are now a part of the following groups:</p>
+<ul>
+  <% @user.polco_groups.each do |group| %>
+      <li><%= group.name %></li>
+  <% end %>
+</ul>
+<p>What have your members been up to?</p>
+<h3>Senior Senator: <%= @senior_senator.full_name %></h3>
+<ul>
+  <% @senior_senator.bills.each do |b| %>
+     <li><%= link_to b.title, bill_path(b) %></li>
+  <% end %>
+</ul>
+<h3>Junior Senator: <%= @junior_senator.full_name %></h3>
+<h3>Rep: <%= @representative.full_name %></h3>
+<ul>
+  <% @representative.bills.each do |b| %>
+     <li><%= link_to b.title, bill_path(b) %></li>
+  <% end %>
+</ul>
+<p><%= @user.role %></p>
+

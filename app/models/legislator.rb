@@ -1,5 +1,6 @@
 class Legislator
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :first_name, :type => String
   field :last_name, :type => String
   field :middle_name, :type => String
@@ -21,7 +22,7 @@ class Legislator
   field :govtrack_id, :type => Integer
   field :start_date, :type => Date
 
-  has_many :sponsored, :class_name => "Bill", :foreign_key => "sponsor_id", :conditions => {:bills => {:hidden => false}}
+  has_many :bills, :inverse_of => :sponsor
 
   def first_or_nick
     nickname.blank? ? first_name : nickname
@@ -36,6 +37,10 @@ class Legislator
       else
         title
     end
+  end
+
+  def image_location
+    "/images/bio_photos/#{self.govtrack_id}-200px.jpeg"
   end
 
   def full_name

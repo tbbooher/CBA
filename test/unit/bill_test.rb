@@ -83,11 +83,13 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "update from directory" do
+    Bill.destroy_all
     Bill.update_from_directory
     assert_operator Bill.all.to_a.count, :>=, 0
   end
 
   test "we can get the title" do
+    Bill.destroy_all
     Bill.update_from_directory
     b = Bill.first
     assert_equal "Common Sense Economic Recovery Act of 2011", b.title

@@ -151,20 +151,20 @@ PageTemplate.only(:css_class).map { |template| template.css_class }.uniq.each do
   puts ".#{css_class} {\n}\n\n"
 end
 
-Group.find_or_create_by(:name => "unaffiliated", :type => :custom)
-Group.find_or_create_by(:name => "foreign", :type => :custom)
+PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
+PolcoGroup.find_or_create_by(:name => "foreign", :type => :custom)
 
 districts_array = File.new("#{Rails.root}/data/districts.txt", 'r').read.split("\n")
 
 states = districts_array.map { |d| d.slice(0, 2) }.uniq.sort
 
 states.each do |state|
-  Group.find_or_create_by(:name => state, :type => :state)
+  PolcoGroup.find_or_create_by(:name => state, :type => :state)
 end
 
 districts_array.each do |district|
   # create district for each state
-  Group.find_or_create_by(:name => district, :type => :district)
+  PolcoGroup.find_or_create_by(:name => district, :type => :district)
 end
 
 #TODO -- NEED FIND_OR_CREATE_BY HERE

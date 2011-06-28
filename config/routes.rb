@@ -1,6 +1,6 @@
 Cba::Application.routes.draw do
 
-  resources :groups
+  resources :polco_groups
 
   resources :votes
 
@@ -11,6 +11,8 @@ Cba::Application.routes.draw do
   match "/bills/vote_on_bill/:id/:value" => "bills#vote_on_bill", :as => :vote_on_bill
 
   match "/users/geocode" => "users#geocode"
+
+  match "/users/save_geocode" => "users#save_geocode"
 
   match "/users/district" => "users#district"
 

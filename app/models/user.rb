@@ -20,7 +20,7 @@ class User
   field :us_state
   field :district
 
-  has_and_belongs_to_many :groups
+  has_and_belongs_to_many :polco_groups
   has_many :legislators
   #has_many :votes
 
@@ -162,14 +162,14 @@ class User
   end
 
   def add_default_group
-    self.groups << Group.where(:name => "unaffiliated").first
+    self.polco_groups << PolcoGroup.where(:name => "unaffiliated").first
     self.save
   end
 
   def vote_on(bill, value)
-    if my_groups = self.groups
+    if my_groups = self.polco_groups
       my_groups.each do |g|
-        bill.votes.create(:value => value, :user_id => self.id, :group_id => g.id)
+        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id)
       end
     else
       raise "no groups for this user" # #{self.full_name}"
@@ -229,6 +229,10 @@ class User
         method = :zipcode
     end
     {:geo_data => result, :method => method}
+  end
+
+  def get_ip(ip)
+    Geocoder.coordinates(ip)
   end
 
   private

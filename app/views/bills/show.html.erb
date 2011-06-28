@@ -1,14 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Congress:</b>
-  <%= @bill.congress %>
-</p>
-
-<p>
-  <b>Bill:</b>
-  <%= @bill.full_number %>
-</p>
+<% title @bill.title %>
 
 <%= determine_vote(current_user).html_safe %>
 
@@ -19,19 +11,14 @@
 </p>
 <%# end %>
 
-<% if @bill.short_title %>
+<% if @bill.long_title %>
 <p>
-  <b>Short title:</b>
+  <b>Official title:</b>
   <%= @bill.short_title %>
 </p>
 <% end %>
 
-<p>
-  <b>Official title:</b>
-  <%= @bill.official_title %>
-</p>
-
-<% if @bill.summary %>
+<% if @bill.summary.match(/\w+/) %>
 <p>
   <b>Summary:</b>
   <%= @bill.summary %>
@@ -40,24 +27,8 @@
 
 <p>
   <b>Last action on:</b>
-  <%= @bill.last_action_on %>
-</p>
-
-<p>
-  <b>Last action text:</b>
-  <%= @bill.last_action_text %>
-</p>
-
-<% unless @bill.enacted_on.nil? %>
-<p>
-  <b>Enacted on:</b>
-  <%= @bill.enacted_on %>
-</p>
-<% end %>
-
-<p>
-  <b>Average rating:</b>
-  <%= @bill.average_rating %>
+  <%= @bill.bill_actions.first.first %> |
+  <%= @bill.bill_actions.first.last %>
 </p>
 
 <p>
@@ -87,7 +58,7 @@
 
 <p>
   <b>State:</b>
-  <%= @bill.state %>
+  <%= @bill.bill_state %>
 </p>
 
 <p>

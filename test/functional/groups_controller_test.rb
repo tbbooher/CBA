@@ -17,7 +17,7 @@ class GroupsControllerTest < ActionController::TestCase
   end
 
   test "should create group" do
-    assert_difference('Group.count') do
+    assert_difference('PolcoGroup.count') do
       post :create, :group => @group.attributes
     end
 
@@ -40,7 +40,7 @@ class GroupsControllerTest < ActionController::TestCase
   end
 
   test "should destroy group" do
-    assert_difference('Group.count', -1) do
+    assert_difference('PolcoGroup.count', -1) do
       delete :destroy, :id => @group.to_param
     end
 

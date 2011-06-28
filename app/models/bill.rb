@@ -5,6 +5,7 @@
 
 class Bill
   include Mongoid::Document
+  include Mongoid::Timestamps
   # initial fields
   field :congress, :type => Integer
   field :bill_number, :type => Integer
@@ -45,32 +46,11 @@ class Bill
 
   embeds_many :votes
 
-  #before_validation(:set_ids, :on => :create)
-  #before_save :update_bill # TODO, we need to figure out when to update bills
-  #after_save :update_legislator_counts
-
-  # might need to remove
-  # TODO remove . . .
-  def validate
-    if errors.empty?
-      begin
-        GovKit::OpenCongress::Bill.find_by_idents(self.ident).first
-        #Drumbone::Bill.find :bill_id => self.ident
-      rescue
-        errors.add("The requested bill", "does not exist")
-      end
-    end
-  end
-
-#  def to_param
-#    "#{id}-#{drumbone_id}"
-#  end
-
-  # TODO -- need to fix
   def short_title
     # we show the first short title
     txt = nil
-    if the_short_title = self.titles.select{|type,txt| type == 'short'}
+    the_short_title = self.titles.select{|type,txt| type == 'short'}
+    unless the_short_title.empty?
       txt = the_short_title.first.last
     end
     txt
@@ -78,9 +58,8 @@ class Bill
 
   def long_title
     txt = nil
-    if official_title = self.titles.select{|type,txt| type == 'official'}
-      txt = official_title.first.last
-    end
+    official_title = self.titles.select{|type,txt| type == 'official'}
+    txt = official_title.first.last unless official_title.empty?
     txt
   end
 
@@ -90,12 +69,12 @@ class Bill
 
   def tally
     the_tally = Hash.new
-    self.votes.group_by { |v| v.group.type }.each do |votes_by_group|
+    self.votes.group_by { |v| v.polco_group.type }.each do |votes_by_group|
       votes = votes_by_group.last.map { |v| v.value }
       ayes = votes.count { |val| val == :aye }
       nays = votes.count { |val| val == :nay }
       abstains = votes.count { |val| val == :abstain }
-      the_tally[votes_by_group.first] = [votes_by_group.last.last.group.name, [ayes, nays, abstains]]
+      the_tally[votes_by_group.first] = [votes_by_group.last.last.polco_group.name, [ayes, nays, abstains]]
     end
     the_tally
   end
@@ -104,7 +83,6 @@ class Bill
     self.votes.map { |v| v.user }.include?(user)
   end
 
-  # TODO should be helper, or include?
   def descriptive_tally
     names = ["For", "Against", "Abstain"]
     out = "<ul id=\"tally\">"
@@ -220,10 +198,14 @@ class Bill
 
     if sponsor
       self.sponsor = sponsor
+      # now add this bill to the sponsor
+      self.save
+      sponsor.bills.push(self)
+      sponsor.save!
     else
       raise "sponsor not in database!"
     end
-    self.sponsor.save
+    self.save
   end
 
   def save_cosponsors(cosponsors)

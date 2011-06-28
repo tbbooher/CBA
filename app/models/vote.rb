@@ -4,7 +4,7 @@ class Vote
   #field :group_type, :type => Integer
 
   belongs_to :user
-  belongs_to :group
+  belongs_to :polco_group
 
   embedded_in :bill
 

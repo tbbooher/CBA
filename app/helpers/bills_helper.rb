@@ -7,7 +7,7 @@ module BillsHelper
     elsif !user_signed_in?
       out = "If you #{ link_to "log in", user_session_path }, you gain the right to vote"
     elsif !user.registered?
-      out = "You are logged in, but you haven't registered your district. #{ link_to "Change that", geocode_path}."
+      out = "You are logged in, but you haven't registered your district. #{ link_to "Change that", users_geocode_path}."
     else # they are registered, logged in, and haven't voted yet
       out = display_vote_options
     end

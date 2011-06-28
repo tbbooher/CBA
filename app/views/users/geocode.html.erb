@@ -3,6 +3,7 @@
 <p>Is this your district?</p>
 <%= @address_attempt %>
 <% form_tag 'district' do %>
+   <%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@address_attempt.first},#{@address_attempt.last}&zoom=12&size=400x400&sensor=false" %>
    <%= hidden_field_tag :location, @address_attempt %>
    <div class='actions'>
       <%= submit_tag 'Yes' %>

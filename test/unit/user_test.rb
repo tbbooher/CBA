@@ -71,7 +71,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "User should join a default group" do
     guest = create_valid_user_with_roles_mask(:guest)
-    Group.find_or_create_by(:name => "unaffiliated", :type => :custom)
+    PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
     guest.add_default_group
     guest.save
     assert_equal 1, guest.groups.count

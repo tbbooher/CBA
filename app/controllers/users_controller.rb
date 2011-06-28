@@ -21,14 +21,14 @@ class UsersController < ApplicationController
 
   def geocode
     @user = current_user
-    @address_attempt = '@user.find_location_by_ip'
+    @address_attempt = @user.get_ip(request.remote_ip)
   end
 
   def district
     result = current_user.get_geodata(params)
     flash[:method] = result[:method]
     user = current_user
-    if !(result[:geo_data].all? {|r| r.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)})
+    if result[:geo_data].nil? || !(result[:geo_data].all? {|r| r.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)})
       flash[:notice] = "No addresses found, please refine your answer or try a different method."
       redirect_to users_geocode_path
     elsif false #result[:geo_data].address_count > 1
@@ -40,13 +40,31 @@ class UsersController < ApplicationController
       # save the user
       user.save_coordinates(result[:geo_data].first, result[:geo_data].last)
       result = user.get_districts_and_members
-      @district = "#{result.us_state}#{result.district}"
+      @district = "#{result.us_state}#{"%02d" % result.district.to_i}"
+      @state = result.us_state
       user.save_district_and_members(@district, result)
       members = user.get_three_members
       @senior_senator = members[:senior_senator]
       @junior_senator = members[:junior_senator]
       @representative = members[:representative]
     end
+  end
+
+  def save_geocode
+    @user = current_user
+    # TODO remove old state and district groups
+    #@user.polco_groups.where(type: :state).delete_all
+    #@user.polco_groups.where(type: :district).delete_all
+    # now add exactly two groups
+    @user.polco_groups.push(PolcoGroup.where(:name => params[:us_state], :type => :state).first)
+    @user.polco_groups.push(PolcoGroup.where(:name => params[:district], :type => :district).first)
+    @user.role = :registered # 7 = registered
+    # TODO save the zip code + 4 too!
+    @user.save!
+    # look up bills sponsored by member
+    @senior_senator = Legislator.where(:_id => params[:senior_senator]).first
+    @junior_senator = Legislator.where(:_id => params[:junior_senator]).first
+    @representative = Legislator.where(:_id => params[:representative]).first
   end
 
   def edit_role

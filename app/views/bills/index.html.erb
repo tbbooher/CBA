@@ -4,9 +4,8 @@
   <%= will_paginate @bills %>
 
 <% @bills.each do |bill| %>
-    <h3><%= bill.short_title || bill.official_title %></h3>
+    <h3><%= bill.title %></h3>
     <p> by <%= bill.sponsor.full_title %><br>
-      <b>Last action on <%= bill.last_action_on.to_s %>:</b> <%= bill.last_action_text %></p>
 
     <p><%= link_to 'Show', bill %> |
     <%= link_to 'Edit', edit_bill_path(bill) %> |
