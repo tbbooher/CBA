@@ -4,7 +4,7 @@
     function initialize() {
         if (GBrowserIsCompatible()) {
             var map = new GMap2(document.getElementById("map_canvas"));
-            map.setCenter(new GLatLng(<%= @coords %>), 8);
+            map.setCenter(new GLatLng(<%= @coords %>), 10);
             map.setUIToDefault();
         }
 
@@ -27,10 +27,11 @@
 <p>Is this your district?</p>
 <%= @address_attempt %>
 <% form_tag 'district' do %>
-    <p>Based on this address, your district is: <b><%= @district %></b> in the state of <%= @state.to_us_state %></p>
+    <p>Based on your ip address, your district is: <b><%= @district %></b> in the state of <%= @state.to_us_state %>.</p>
     <%#= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@coords}&zoom=12&size=500x300&markers=#{@coords}&sensor=false" %>
     <div id="map_canvas" style="width:500px; height:300px"></div>
     <%= hidden_field_tag :location, @address_attempt %>
+    <p>Is this correct?</p>
     <div class='actions'>
       <%= submit_tag 'Yes' %>
     </div>

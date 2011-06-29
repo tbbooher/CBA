@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   def geocode
     @user = current_user
     address_attempt = @user.get_ip(request.remote_ip)
+    # TODO REMOVE!
     address_attempt = [38.7909, -77.0947] if address_attempt.all? {|a| a == 0}
     #@line_chart = Gchart.line(:data => [0, 40, 10, 70, 20])
     @coords = "#{address_attempt.first},#{address_attempt.last}"
