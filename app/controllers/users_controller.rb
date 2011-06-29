@@ -21,7 +21,18 @@ class UsersController < ApplicationController
 
   def geocode
     @user = current_user
-    @address_attempt = @user.get_ip(request.remote_ip)
+    address_attempt = @user.get_ip(request.remote_ip)
+    address_attempt = [38.7909, -77.0947] if address_attempt.all? {|a| a == 0}
+    #@line_chart = Gchart.line(:data => [0, 40, 10, 70, 20])
+    @coords = "#{address_attempt.first},#{address_attempt.last}"
+    @user.save_coordinates(address_attempt.first, address_attempt.last)
+    result = @user.get_districts_and_members
+    @district = "#{result.us_state}#{"%02d" % result.district.to_i}"
+    @state = result.us_state
+    # test
+    @lat = params[:lat] || "19.71844"
+    @lon = params[:lon] || "-155.095228"
+    @zoom = params[:zoom] || "10"
   end
 
   def district

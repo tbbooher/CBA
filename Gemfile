@@ -19,6 +19,7 @@ gem "omniauth", :git => 'git://github.com/intridea/omniauth.git'
 gem "nytimes-congress"
 #gem "geokit"
 #gem 'drumbone'
+gem "googlecharts"
 
 # we need some stuff too (tbb)
 gem "formtastic"

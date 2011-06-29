@@ -1,14 +1,41 @@
 <% title "Input address" %>
 
+<script type="text/javascript">
+    function initialize() {
+        if (GBrowserIsCompatible()) {
+            var map = new GMap2(document.getElementById("map_canvas"));
+            map.setCenter(new GLatLng(<%= @coords %>), 8);
+            map.setUIToDefault();
+        }
+
+        var WMS_URL = 'http://www.govtrack.us/perl/wms-cd.cgi?';
+        var G_MAP_LAYER_FILLED = createWMSTileLayer(WMS_URL, "cd-filled,district=<%= @district %>", null, "image/gif", null, null, null, .25);
+        var G_MAP_LAYER_OUTLINES = createWMSTileLayer(WMS_URL, "cd-outline,district=<%= @district %>", null, "image/gif", null, null, null, .66, "Data from GovTrack.us");
+        var G_MAP_OVERLAY = createWMSOverlayMapType([G_NORMAL_MAP.getTileLayers()[0], G_MAP_LAYER_FILLED, G_MAP_LAYER_OUTLINES], "Overlay");
+
+        map.addMapType(G_MAP_OVERLAY);
+//map.addControl(new GMapTypeControl());
+//map.setCenter(new GLatLng(39, -96), 4);
+        map.setMapType(G_MAP_OVERLAY);
+
+        var point = new GLatLng(<%= @coords %>);
+        map.addOverlay(new GMarker(point));
+    }
+
+</script>
+
 <p>Is this your district?</p>
 <%= @address_attempt %>
 <% form_tag 'district' do %>
-   <%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@address_attempt.first},#{@address_attempt.last}&zoom=12&size=400x400&sensor=false" %>
-   <%= hidden_field_tag :location, @address_attempt %>
-   <div class='actions'>
+    <p>Based on this address, your district is: <b><%= @district %></b> in the state of <%= @state.to_us_state %></p>
+    <%#= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@coords}&zoom=12&size=500x300&markers=#{@coords}&sensor=false" %>
+    <div id="map_canvas" style="width:500px; height:300px"></div>
+    <%= hidden_field_tag :location, @address_attempt %>
+    <div class='actions'>
       <%= submit_tag 'Yes' %>
-   </div>
+    </div>
 <% end %>
+
 <p>If not, you can input your address below:</p>
 <!-- float left -->
 <p>Input your address <%= @user.name.titlecase %></p>
