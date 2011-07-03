@@ -1,7 +1,11 @@
 <!-- representative information -->
 <p>Based on this address, your district is: <b><%= district %></b> in the state of <%= state.to_us_state %></p>
 
-<p>Make this map smaller, overlay their congressional map based on: http://www.govtrack.us/embed/googlemaps.xpd</p>
+<script type="text/javascript">
+ <%= render :partial => 'users/district_includes/map.js', :locals => {:district => district, :coords => coords} %>
+</script>
+
+<div id="map_canvas" style="width:500px; height:300px"></div>
 
 <div class="component_float_left_300" style="height:400px;">
 <h3>Senior Senator</h3>

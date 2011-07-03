@@ -1,33 +1,17 @@
 <% title 'Confirm district' %>
 
-<% case flash[:method] %>
-<% when :address, :ip_lookup %>
-    <!-- we need to see if there are multiple addresses,
-    otherwise, display the reps, update the user and let
-    them know that they can vote now  -->
-    <% if flash[:multiple_addresses] %>
-        <%= render :partial => 'users/district_includes/multiple_found',
-                   :locals => {:addresses => @addresses, :address => @address} %>
-    <% else %>
+
         <%= render :partial => 'users/district_includes/show_the_reps',
                    :locals => {
                            :district => @district,
                            :state => @state,
                            :senior_senator => @senior_senator,
                            :junior_senator => @junior_senator,
-                           :representative => @representative
+                           :representative => @representative,
+                           :district => @district,
+                           :coords => @coords
                    }
         %>
-    <% end %>
-<% when :zipcode %>
-    <!-- we need to see if their zip-code is sufficient, or if
-    they need more. if they need more, they will be requested
-    to enter their zip+4. otherwise, they will have the
-    opportunity to enter their address -->
-    <%= render :partial => 'district_includes/zip_code', :locals => {:foo => @bar} %>
-<% else %>
-    <!-- error !! -->
-<% end %>
 
 <% form_tag 'save_geocode' do %>
 

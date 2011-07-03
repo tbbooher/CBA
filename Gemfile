@@ -65,6 +65,7 @@ group :development do
   gem "rails-erd"
   gem 'rdoc'
   gem "rails3-generators"
+  gem "ruby-debug19"
 end
 
 # Bundle gems for testing

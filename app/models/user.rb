@@ -24,11 +24,6 @@ class User
   has_many :legislators
   #has_many :votes
 
-  #def geocode
-
-  #end
-
-
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
   end
@@ -176,20 +171,59 @@ class User
     end
   end
 
-  def save_coordinates(lat, lon)
+  # district fun
+  def get_district(coords)
+    lat, lon = coords # .first, coords.last
     self.coordinates = [lat, lon]
-    self.save
-  end
-
-  def get_districts_and_members
-    lat, lon = self.coordinates
     feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"
     feed = Feedzirra::Feed.fetch_raw(feed_url)
-    Feedzirra::Parser::GovTrackDistrict.parse(feed)
+    govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
+    if govtrack_data.districts.count > 1
+      raise "too many"
+    else
+      result = govtrack_data.districts.first
+      result.district = "#{result.us_state}#{"%02d" % result.district.to_i}"
+    end
+    [result]
   end
 
-  def get_three_members
-    legs = self.legislators
+#  def get_and_save_district(lat,lon,save)
+#    self.coordinates = [lat, lon]
+#    feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"
+#    feed = Feedzirra::Feed.fetch_raw(feed_url)
+#    govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
+#    if govtrack_data.districts.count > 1
+#      raise "too many"
+#    else
+#      result = govtrack_data.districts.first
+#      district = "#{result.us_state}#{"%02d" % result.district.to_i}"
+#      save_district_and_members(district, result) if save
+#      [district, result.us_state]
+#    end
+#  end
+
+  def get_districts_by_zipcode(zipcode)
+    feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?zipcode=#{zipcode}"
+    feed = Feedzirra::Feed.fetch_raw(feed_url)
+    districts = Feedzirra::Parser::GovTrackDistrict.parse(feed).districts
+    districts.each do |d|
+      d.district = "#{d.us_state}#{"%02d" % d.district.to_i}"
+    end
+    districts
+  end
+
+  def get_members(members)
+    # look up legislators
+    #legs = self.legislators
+    legs = []
+    members.each do |member|
+      # need to clear previous members
+      if leg = Legislator.where(:govtrack_id => member.govtrack_id).first
+        legs << leg
+      else
+        raise "legislator #{member.govtrack_id} not found"
+      end
+    end
     senators = legs.select { |l| l.title == 'Sen.' }.sort_by { |u| u.start_date }
     members = Hash.new
     members[:senior_senator] = senators.first
@@ -221,12 +255,15 @@ class User
         address = build_address(params)
         result = Geocoder.coordinates(address)
         method = :address
+      when "Submit Zip Code" # we have a zip code to code
+        result = get_district_by_zipcode(params[:zip_code])
+        method = :zip_code
       when "Confirm address"
         result = params[:address]
         method = :confirmed_address
       else # they did a zip code lookup
-        result = Geocoder.coordinates(params[:full_zip])
-        method = :zipcode
+        result = nil #Geocoder.coordinates(params[:full_zip])
+        method = :none
     end
     {:geo_data => result, :method => method}
   end
@@ -300,14 +337,6 @@ class User
       self.confirmed_at = Time.now
       self.role=:admin
       self.save!
-    end
-  end
-
-  def build_address(params)
-    if params[:zip]
-      "#{params[:street_address].strip}, #{params[:city].strip}, #{params[:state].strip}, #{params[:zip].strip}"
-    else
-      "#{params[:street_address].strip}, #{params[:city].strip}, #{params[:state].strip}"
     end
   end
 
