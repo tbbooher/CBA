@@ -64,7 +64,7 @@ class UsersController < ApplicationController
       @senior_senator = members[:senior_senator]
       @junior_senator = members[:junior_senator]
       @representative = members[:representative]
-      @coords = build_coords(coords, @district)
+      @coords = build_coords2(coords, @district)
     end
   end
 
@@ -202,8 +202,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def build_coords(input, district_name)
+  def build_coords2(input, district_name)
     input = get_district_center(district_name) unless input
+    "#{input.first},#{input.last}"
+  end
+
+  def build_coords(input)
+    #input = get_district_center(district_name) unless input
     "#{input.first},#{input.last}"
   end
 

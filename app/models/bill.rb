@@ -69,7 +69,7 @@ class Bill
 
   def tally
     the_tally = Hash.new
-    self.votes.group_by { |v| v.polco_group.type }.each do |votes_by_group|
+    self.votes.group_by { |v| v.polco_group.name }.each do |votes_by_group|
       votes = votes_by_group.last.map { |v| v.value }
       ayes = votes.count { |val| val == :aye }
       nays = votes.count { |val| val == :nay }
