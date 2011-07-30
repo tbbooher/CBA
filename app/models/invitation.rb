@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 class Invitation
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -7,10 +9,10 @@ class Invitation
 
   # The invitee
   field   :name,          :required => true
-    validates_presence_of   :name
+  validates_presence_of   :name
   field   :email,         :index => true
-    validates             :email, :presence => true, :email => true
-    validates_uniqueness_of :email,  :case_sensitive => false
+  validates             :email, :presence => true, :email => true
+  validates_uniqueness_of :email,  :case_sensitive => false
   field   :roles_mask,    :type => Fixnum, :default => 0
   field   :token,         :index => true
     validates_presence_of   :token

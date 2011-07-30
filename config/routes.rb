@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 Cba::Application.routes.draw do
 
   resources :polco_groups
@@ -17,10 +19,20 @@ Cba::Application.routes.draw do
   match "/users/district" => "users#district"
 
   # Switch locales
-  match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
+  match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
+  
+  # Switch draft mode
+  match 'draft_mode/:mode' => "home#set_draft_mode", :as => 'draft_mode'
 
   # Comments
   resources :comments, :except => :show
+
+  # SiteMenu
+  resources :site_menus do
+    collection do
+      post :sort_menus
+    end
+  end
 
   # BLOGS
   resources :blogs do
@@ -43,6 +55,13 @@ Cba::Application.routes.draw do
   resources :pages do
     member do
       get :delete_cover_picture
+      get :sort_components
+      post :sort_components
+    end
+    collection do
+      get  :new_article
+      post :create_new_article
+      get  :templates
     end
     resources :comments
     resources :components

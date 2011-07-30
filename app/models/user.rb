@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 # This is a Device-User-Class extended with ROLES, Avatar-handling, and more
 class User
   include Mongoid::Document
@@ -39,10 +41,11 @@ class User
 
   embeds_many :user_notifications
 
-  validates_presence_of :name
-  validates_presence_of :email
+  validates_presence_of   :name
   validates_uniqueness_of :name, :case_sensitive => false
+  validates               :email, :presence => true, :email => true
   validates_uniqueness_of :email, :case_sensitive => false
+
 
   attr_accessible :name, :email, :password, :password_confirmation, :roles_mask,
                   :remember_me, :authentication_token, :confirmation_token,
@@ -53,19 +56,19 @@ class User
 
   has_mongoid_attached_file :avatar,
                             :styles => {
-                                :popup => "800x600=",
-                                :medium => "300x300>",
-                                :thumb => "100x100>",
-                                :icon => "64x64"
+                              :popup  => "800x600=",
+                              :medium => "300x300>",
+                              :thumb  => "100x100>",
+                              :icon   => "64x64"
                             },
                             :processors => [:cropper]
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  after_update :reprocess_avatar, :if => :cropping?
+  after_update  :reprocess_avatar, :if => :cropping?
 
   # Notifications
-  after_create :async_notify_on_creation
+  after_create   :async_notify_on_creation
   before_destroy :async_notify_on_cancellation
-  before_update :notify_if_confirmed
+  before_update  :notify_if_confirmed
 
   # Authentications
   after_create :save_new_authentication
@@ -291,7 +294,7 @@ class User
 
     # try name or nickname
     if self.name.blank?
-      self.name = user_info['name'] unless user_info['name'].blank?
+      self.name   = user_info['name']   unless user_info['name'].blank?
       self.name ||= user_info['nickname'] unless user_info['nickname'].blank?
       self.name ||= (user_info['first_name']+" "+user_info['last_name']) unless \
         user_info['first_name'].blank? || user_info['last_name'].blank?

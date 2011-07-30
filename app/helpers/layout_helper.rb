@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 # These helper methods can be called in your template to set variables to be used in the layout
 # This module should be included in all views globally,
 # to do so you may need to add this line to your ApplicationController
@@ -7,9 +9,10 @@
 module LayoutHelper
 
   # Set the title of the html-page.
-  # :param: show_title
-  #   If true the title will also displayed as a h1-title within the
-  #   html-page not only in the browser-window-title
+  # ==parameters: 
+  #   show_title::
+  #     If true the title will also displayed as a h1-title within the
+  #     html-page not only in the browser-window-title
   def title(page_title, show_title = true)
     content_for(:title) { h(page_title.html_safe) }
     @show_title = show_title
@@ -30,16 +33,13 @@ module LayoutHelper
     content_for(:head) { javascript_include_tag(*args) }
   end
 
-  # if the link is a link to the current-page display it with a different
-  # css-class to inform the user about 'here you are'.
-  def menu_link_to(name,path,options={})
-    style = current_page?(path) ? "current" : ""
-    options.merge!( { :class => style } )
-    link_to( name, path, options )
-  end
-
   # Outputs a Javascript to place the title of a page at the URL in cases
   # where the page was addressed by it's ID
+  # ==parameters:
+  #   page:
+  #     The `Page` to set address for
+  #   title:
+  #     HTML-Title to use
   def set_browser_address(page,title)
     unless title.length > CONSTANTS['title_max_length'].to_i
       address = "/p/"+title.txt_to_url

@@ -37,7 +37,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "A user should not save with invalid email-address" do
-    user = User.new(:email => 'tester-at-test.te', :password => 'secret', :password_confirmation => 'secret', :name => 'nockenfell')
+    user = User.new(:email => 'tester-not-valid.te', :password => 'secret', :password_confirmation => 'secret', :name => 'nockenfell')
     assert !user.save, "User saved with invalid email"
   end
   
@@ -121,5 +121,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "Robert".to_s, junior_senator.first_name.to_s
     assert_equal "John".to_s, representative.first_name.to_s
   end
+  
   
 end

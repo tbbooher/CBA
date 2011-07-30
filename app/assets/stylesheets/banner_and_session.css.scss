@@ -1,0 +1,136 @@
+@mixin horizontal-menu-background {
+  background: lighten($background-banner, 30%);
+}
+
+
+#banner {
+  background: $background-banner;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 90px;
+  padding-left: 20px;
+
+
+  h1 {
+    font-family: $font-headline;
+    font-size:  ($font-size-default * 1.5);
+    margin: 0px;
+    padding: 0px;
+    padding-top: 30px;
+    padding-left: 0px;
+    margin-left: 0px;
+    color: #D4D7D9;
+    text-shadow: 2px 2px 2px  #455;
+  }
+
+  address {
+    font-size: ($font-size-default * 0.8);
+    color: #888888;
+    font-weight: 100;
+    overflow: hidden;
+  }
+
+}
+
+#session {
+  position: fixed;
+  z-index: 3;
+  top: 90px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+  padding-top: 5px;
+  margin: 0px;
+  height: 23px;
+  width: 100%;
+  border-bottom: 1px solid $color-shadow;
+  @include bottom-shadow;
+  @include horizontal-menu-background;
+
+  .not_selected {
+    a {
+      &:hover {
+        @include button-shape($radius-small);
+        @include gradient-button-hover;
+      }
+    }
+  }
+
+
+  ul {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
+
+    .selected {
+      li {
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+        a {
+          @include button-shape($radius-small);
+          padding: 5px;
+          @include gradient-button-hover;
+        }
+      }
+    }
+
+    li {
+      display: inline;
+      margin: 0px;
+      padding: 0px;
+      a {
+        @include button-shape($radius-small);
+        padding: 5px;
+        height: 30px;
+        &:hover {
+          @include gradient-button-hover;
+        }
+      }
+    }
+  }
+}
+
+.hmenu_with_children {
+  display: inline;
+}
+
+#copyright {
+  position: fixed;
+  left: 10px;
+  bottom: 0px;
+  clear: both;
+  margin-top: 5px;
+  text-align: center;
+  color: #444;
+  font-size: 0.5em;
+
+  a {
+    color: #444;
+    text-decoration: none;
+  }
+}
+
+#scroll-position {
+  font-size: 2.5em;
+  position: relative;
+  top: -45px;
+  opacity: 0.5;
+}
+
+#scroll-to-top {
+  @extend #copyright;
+  bottom: 20px;
+  left: $sidebar-width/2 - 32;
+  
+  img {
+    @include button-shape($radius-medium);
+  }
+}

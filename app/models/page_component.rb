@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 # This is a Device-User-Class extended with ROLES, Avatar-handling, and more
 class PageComponent
   include Mongoid::Document
@@ -7,7 +9,7 @@ class PageComponent
   translate_fields [:title, :body]
   
   default_scope lambda { asc(:position) }
-  
+    
   field :position, :type => Integer, :default => 9999
   field :title,    :required => true, :default => '(unnamed)'
   field :body
@@ -19,10 +21,10 @@ class PageComponent
   def page_template=(new_template)
     self.page_template_id = new_template.id if new_template
   end
-
-  # TODO.txt: Remove duplication!
-  # TODO.txt:   This code occurs in Page and PageComponent. Move it to a single
-  # TODO.txt:   place.
+    
+  # TODO: Remove duplication!
+  # TODO:   This code occurs in Page and PageComponent. Move it to a single
+  # TODO:   place.
   def render_body(view_context=nil)
     @view_context = view_context
     if self.page_template && @view_context
@@ -52,4 +54,17 @@ class PageComponent
       self.page.render_for_html(self.t(I18n.locale,:body))
     end
   end
+
+
+  # Ask our page if removing of components is allowed 
+  alias_method :__original__delete, :delete
+  def delete
+    if self.page.is_template || self.page.allow_removing_component == true
+      __original__delete
+    else
+      self.errors.add('base', "Removing components is not allowed")
+      false
+    end
+  end
+  
 end

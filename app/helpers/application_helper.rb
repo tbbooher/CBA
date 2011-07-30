@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 # Helpers for the entire application
 # STYLE: Don't place methods here if they are used in one special controller only
 #
@@ -99,4 +101,8 @@ module ApplicationHelper
 
   end
 
+  def current_role
+    current_user ? (current_user.roles_mask||0) : 0
+  end
+  
 end

@@ -11,15 +11,18 @@ Feature: Pages
       | guest@iboard.cc  | guest     | 0          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
       | staff@iboard.cc  | staff     | 2          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
     And the following page records
-      | title  | body                 | show_in_menu |
-      | Page 1 | Lorem ipsum          | true         |
-      | Page 2 | Lirum Opsim          | false        |
+      | title  | body                 | show_in_menu | is_template | is_draft |
+      | Page 1 | Lorem ipsum          | true         | false       | false    |
+      | Page 2 | Lirum Opsim          | false        | false       | false    |
+      | Page T | This is a Template   | false        | true        | false    |
+      | Page D | This is a Draft      | false        | false       | true     |
     And I am logged in as user "admin@iboard.cc" with password "thisisnotsecret"
 
+ 
   Scenario: Pages with 'show_in_menu' should be on the menu-bar
     Given I am on the pages page
-    Then I should see "Page 1" within "#top_menu"
-    And I should not see "Page 2" within "#top_menu"
+    Then I should see "Page 1" within "#session"
+    And I should not see "Page 2" within "#session"
 
   Scenario: A page should be shown when clicking read from the index
     Given I am on the pages page
@@ -39,17 +42,19 @@ Feature: Pages
     And I click on link "Create a new Page"
     And I fill in "Title" with "Page 3"
     And I fill in "Body" with "h1. Page three body"
+    And I uncheck "page_is_draft"
     And I click on "Create Page"
     Then I should be on the page path of "Page 3"
     And I should see "successfully created"
     And I should see "Page 3"
     And I should see "Page three body" within "#container"
-    And I should see "Page 3" within "#top_menu"
+    And I should see "Page 3" within "#session"
 
   Scenario: It should not be able to save a page with no title
     Given I am on the pages page
     And I click on link "Create a new Page"
     And I fill in "Body" with "h1. Page three body"
+    And I uncheck "page_is_draft"
     And I click on "Create Page"
     Then I should see "Create a new Page" within "#container"
     And I should see "can't be blank"
@@ -58,6 +63,7 @@ Feature: Pages
     Given I am on the pages page
     And I click on link "Create a new Page"
     And I fill in "Title" with "Page three body"
+    And I uncheck "page_is_draft"
     And I click on "Create Page"
     Then I should see "Create a new Page" within "#container"
     And I should see "can't be blank"
@@ -72,6 +78,7 @@ Feature: Pages
     Given I am on the edit page for "Page 1"
     And I fill in "Title" with "This is Page 1, modified"
     And I fill in "Body" with "Cucumber tests rock!"
+    And I uncheck "page_is_draft"
     And I click on "Update Page"
     Then I should be on the page path of "This is Page 1, modified"
     And I should see "This is Page 1, modified"
@@ -86,7 +93,6 @@ Feature: Pages
     Then I should be on the page path of "Page 1"
     And I should see "Comment successfully created. You can edit it for the next"
     And I should see "And here my comment for this page"
-
 
   Scenario: Pagination should work on pages::index
     pending
@@ -108,7 +114,57 @@ Feature: Pages
       | title_en  | body_en      | title_de     | body_de    |
       | GB        | Fish n chips | Deutschland  | Sauerkraut |
     And I am on the page path of "GB"
-    And I click on link "Deutsch"
+    And I click on link "locale_de"
     Then I should see "Sauerkraut"
-    Then I click on link "English"
+    Then I click on link "locale_en"
     Then I should see "Fish n chips"
+    Then the default locale
+
+  Scenario: Page index should not include Template-Pages
+    Given I am on the pages page
+    Then I should not see "Page T"
+
+  Scenario: Authors should be able to derive new pages (articles) from pages where is_template is true
+    Given I am on the new_article page
+    Then I should see "Choose a template"
+    And I select "Page T" from "page_template_id" within "form"
+    And I click on "Create"
+    And I fill in "page_title" with "This is a filled Page Template" within "form"
+    And I fill in "page_body" with "This is a filled page body" within "form"
+    And I uncheck "page_is_draft" within "form"
+    And I click on "Create Page"
+    Then I should see "This is a filled Page Template" within ".page_body"
+    And I should see "This is a filled page body" within ".page_body"
+    
+  Scenario: A derived page should save it's template
+    Given I am on the new_article page
+    Then I should see "Choose a template"
+    And I select "Page T" from "page_template_id" within "form"
+    And I click on "Create"
+    And I fill in "page_title" with "Derived Page" within "form"
+    And I fill in "page_body" with "This is derived from Page T" within "form"
+    And I uncheck "page_is_draft" within "form"
+    And I click on "Create Page"
+    And I should be on page path of "Derived Page"
+    And I click on link "Derived from Page T" within "#container"
+    Then I should be on page path of "Page T"
+
+  Scenario: Admins should be able to list template pages
+    Given I am on the edit page template for "Page T"
+    Then I should see "This is a Template"
+
+  Scenario: The page/templates index should provide a link to create a new article for each template
+    Given I am on the templates_pages page
+    And I click on link "Create new article" within ".page_template"
+    Then I should be on the create_new_article_pages page
+    And I should see "Page T"
+
+  Scenario: Draft pages should not be displayed if not in draft-mode
+    Given I am logged out
+    And I am on page path of "Page D"
+    Then I should be on the pages page
+    Then I should see "Document not found"
+    And I should not see "Page D"
+        
+
+

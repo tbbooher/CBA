@@ -1,7 +1,7 @@
 class Deploy < Thor
 
   desc "production [--force]", "git pull on the server and restart"
-  method_options :force => :boolean
+  method_options :force => :boolean  
   def production
     puts "THE APPLICATION IS GOING TO BE UPDATED ON THE SERVER"
     puts "===================================================="
@@ -11,12 +11,12 @@ class Deploy < Thor
       config_file =  File.expand_path('../../../config/application.yml', __FILE__)
       deploy_config=YAML.load_file(config_file)['deploy']
       puts "Here we go...."
-
+      
       # Show what is going to happen
       puts "  Production server   :#{deploy_config['production_server']}"
       puts "  Production user     :#{deploy_config['production_user']}"
       puts "  Production path     :#{deploy_config['production_path']}"
-
+      
       # Ask one more
       system "git status"
       sure = options[:force] ? 'Yes' : ask("Are you sure your repository is clean and code is tested? (Yes,No):")
@@ -39,8 +39,8 @@ class Deploy < Thor
       puts "Aborted. Nothing happend (Yes is case-sensitive here ;-)"
     end
   end
-
-
+  
+  
   desc "restart [--worker_only]", "kill 'rake jobs:work' and 'touch tmp/restart.txt'"
   method_options :worker_only => :boolean
   def restart
@@ -50,8 +50,17 @@ class Deploy < Thor
       puts "OK" if system( "touch tmp/restart.txt" )
     end
   end
-
-
+  
+  desc "doc [--source] [--target] [--ssh]", "generate and deploy YARD documentation"
+  method_options :source => :string, :target => :string, :ssh => :boolean
+  def doc
+    target = options[:target] ? options[:target] : "root@dav.iboard.cc:/var/www/dav/doc/cba/"
+    source = options[:source] ? options[:source] : "doc/*"
+    ssh    = options[:ssh] ? '-e ssh' : ''
+    `rm -rf doc/*; yardoc --protected --title "CBA API Documantation" Gemfile app/**/*rb lib/**/*rb; rsync --delete -avz #{ssh} #{source} #{target}`
+  end
+  
+  
   private
   def kill_pid(cmd)
     p=File::popen(cmd, "r")
@@ -69,5 +78,5 @@ class Deploy < Thor
     else
       puts "CAN'T EXECUTE #{cmd}!"
     end
-  end
+  end  
 end

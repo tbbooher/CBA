@@ -1,7 +1,7 @@
 <!-- TODO: Duplication - Posting Header and Links -->
 <div style='clear: right;'>
-  <%= render :partial => '/postings/cover_picture', :locals => { :posting => posting } %>
   <h2><%= link_to(posting.title, blog_posting_path(blog,posting)) %></h2>
+  <%= render :partial => '/postings/cover_picture', :locals => { :posting => posting } %>
   <p class='comment_links' style='margin-bottom: 5px;'>
     <span class='item_link_buttons'>
       <%= link_to t(:read), blog_posting_path(blog,posting), :class => 'read_blog_posting' %>
@@ -18,7 +18,7 @@
               :at => distance_of_time_in_words_to_now(posting.created_at)).html_safe %>
   </address>
   <%= sanitize(posting.render_intro) %>
-
+  
   <% if posting.blog.allow_public_comments || (posting.blog.allow_comments && user_signed_in?) %>
     <p class='posting_comment_links'>
       { <span class='comments_counter'>

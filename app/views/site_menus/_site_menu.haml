@@ -1,0 +1,12 @@
+%li{:class=>'site_menu_entry', :id => "site_menu_#{site_menu.to_param}"}
+  %span{:class => 'handle'}
+    = image_tag 'sortable_vertical.png', :style => 'border: none; box-shadow: none;'
+  %span.name
+    = site_menu.name+" => "
+    = link_to site_menu.target, site_menu.target
+  %br
+  %span{:class => 'site_menu_manage_buttons'}
+    = site_menu_manage_buttons(site_menu)
+  - if site_menu.children.any?
+    %ul
+      = render site_menu.children

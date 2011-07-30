@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 class HomeController < ApplicationController
 
   respond_to :html, :js
@@ -20,9 +22,12 @@ class HomeController < ApplicationController
     end
   end
 
+  # Respond with an atom rss-feed
+  # GET /feed
   def rss_feed
     @feed_items = []
-    Blog.all.each.each do |blog|
+    
+    Blog.all.each do |blog|
       blog.postings.desc(:updated_at).each do |posting|
         @feed_items << FeedItem.new(posting.title, posting.body, posting.updated_at, posting_url(posting), posting)
         posting.comments.each do |comment|
@@ -30,12 +35,14 @@ class HomeController < ApplicationController
         end
       end
     end
+    
     Page.asc(:updated_at).each do |page|
       @feed_items << FeedItem.new(page.title,page.body,page.updated_at,page_url(page),page)
       page.comments.each do |comment|
         @feed_items << FeedItem.new( ("%s %% %s" % [page.title,comment.name]), comment.comment, comment.updated_at, page_url(page),comment)
       end
     end
+    
     @feed_items.sort! {|a,b| a.updated_at <=> b.updated_at}
     @feed_items
   end
@@ -44,7 +51,15 @@ class HomeController < ApplicationController
   def set_locale
     I18n.locale=params[:locale].to_sym
     cookies.permanent[:lang] = params[:locale]
-    redirect_to request.env['HTTP_REFERER'], :notice => t(:language_switched_to, :lang => t("locales.#{params[:locale]}")).html_safe
+    target = request.env['HTTP_REFERER'] ? request.env['HTTP_REFERER'] : root_path
+    redirect_to target, :notice => t(:language_switched_to, :lang => t("locales.#{params[:locale]}")).html_safe
+  end
+  
+  # GET /draft_mode/:mode
+  def set_draft_mode
+    change_draft_mode(params[:mode])
+    target = request.env['HTTP_REFERER'] ? request.env['HTTP_REFERER'] : root_path
+    redirect_to target, :notice => t(:draft_mode_switched_to, :mode => params[:mode] == "1" ? t(:is_on) : t(:is_off)).html_safe
   end
 
 end

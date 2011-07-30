@@ -1,4 +1,6 @@
 .bundle
+.yardoc
+.yardoc/**/*
 db/*.sqlite3
 log/*.log
 doc/*
@@ -8,6 +10,10 @@ tmp/*
 .DS_Store
 ._*
 *~
+.yardoc/*
+.yardoc/**/*
+.sass-cache/*
+.sass-cache/**/*
 coverage/*
 coverage/**/*
 config/mongoid.yml
@@ -19,6 +25,9 @@ config/google_site_search.html
 config/deploy.rb
 config/twitter.*.html
 public/system/**/*
+public/assets
+public/assets/*
+public/assets/**/*
 public/cover_pictures
 public/sitemap.xml
 public/stylesheets/disabled_styles/*

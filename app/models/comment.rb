@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 # Comment is a polymorphic class. Any 'commentable' can have comments.
 class Comment
   include Mongoid::Document
@@ -59,6 +61,10 @@ class Comment
       path += "#{self.commentable.class.to_s.pluralize.downcase}/#{self.commentable_id}"
     end
     path
+  end
+  
+  def user
+    User.where( :name => self.name, :email => self.email).first
   end
 
   private

@@ -136,8 +136,7 @@ en:
     one: "One error"
     other: "%{count} errors"
   posting: 'Posting'
-  prohibited_this_resource_from_being_saved:
-    %{resource} can not be saved.
+  prohibited_this_resource_from_being_saved: "%{resource} can not be saved."
   blog: 'Blog'
   page: 'Page'
   you_can_not_change_your_own_role: "You can't change your own role"
@@ -192,7 +191,7 @@ en:
   manage_templates: 'Templates'
   commit: 'Commit'
   submit: 'Submit'
-  html_template_label: "HTML-Template<br/><small>Keywords: TITLE, BODY, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT[n], COMPONENT[n]</small>"
+  html_template_label: "HTML-Template<br/><small>Keywords: TITLE, BODY, PLUSONE, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT[n], COMPONENT[n]</small>"
   name_for_page_template: "Name<br/><small>use prefix 'Component:' for page components</small>"
   page_component: "Component"
   page_template_successfully_updated: Template successfully updated
@@ -206,6 +205,44 @@ en:
   allowed: 'allowed'
   forbidden: 'not allowed'
   num_comments:
-    zero: No postings yet
-    one: One posting
-    other: %{count} postings
+    zero: "No postings yet"
+    one: "One posting"
+    other: "%{count} postings"
+  manage_menus: 'Menus'
+  site_menu_successfully_updated: Site menu entry successfully updated.
+  site_menu_could_not_be_updated: Site menu couldn't be saved.
+  site_menu_deleted: 'Site menu successfully deleted.'
+  new_site_menu_item: 'New menu entry'
+  site_menu_successfully_created: 'Menu entry successfully created'
+  add_submenu_item: 'Add submenu'
+  new_submenu_for: 'New submenu for %{parent_name}'
+  is_a_template: 'Check if this should be a page-template'
+  is_template: 'Template?'
+  new_article: 'New article'
+  css_templates: 'CSS-Templates'
+  article_templates: 'Article-Templates'
+  use_new_article: 'A new article will be derived from an existing page'
+  use_css_templates_for: 'A CSS-template can be used in pages and page-components to define the layout of the page or page-component.'
+  write_a_new_article: 'Write a new article'
+  step_one_choose_a_template: 'Step 1 - Choose a template'
+  create: 'Create'
+  please_select_a_template: '-- please select a template --'
+  step_two_fill_the_page: 'Step 2 - Fill the template'
+  template: 'Template'
+  create_new_article: 'Create new article'
+  is_draft_label: 'THIS IS A DRAFT'
+  will_be_shown_to_authors_only: 'If true, this will be displayed for authors and maintainers only'
+  save_as_draft: 'Save as draft'
+  is_draft: 'Draft'
+  show_drafts: 'Show drafts'
+  hide_drafts: 'Hide drafts'
+  is_on: 'on'
+  is_off: 'off'
+  draft_mode_switched_to: 'Draft mode is %{mode}'
+  is_a_template_flag: '(TEMPLATE)'
+  is_a_draft_flag: '(DRAFT)'
+  document_not_found: 'Document not found'
+  derived_from: "Derived from %{title}"
+  use_content_as_placeholder_info: 'Content of this component will be used as placeholders in new articles'
+  done: 'done'
+  did_you_save_changes: 'Are you sure you want to close this page? Did you save all modifications?'
