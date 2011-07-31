@@ -54,7 +54,8 @@ gem 'geocoder'
 
 gem 'nokogiri'
 #group :after_initialize do
-gem "feedzirra", :git => "git://github.com/pauldix/feedzirra.git"
+gem "feedzirra" #ls
+#, :git => "git://github.com/pauldix/feedzirra.git"
 #end
 gem 'sax-machine'
 
@@ -74,7 +75,7 @@ gem "RedCloth", "4.2.5"
 # do "easy_install pygments" on your system
 gem 'redcarpet'
 gem 'albino'
-gem "nokogiri", "1.4.6"
+#gem "nokogiri", "1.4.6"
 
 # maybe we need rack here
 
