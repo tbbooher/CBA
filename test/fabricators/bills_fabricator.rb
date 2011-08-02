@@ -1,8 +1,4 @@
-# Read about factories at http://github.com/thoughtbot/factory_girl
-
-#test/factories/bills.rb
-
-Factory.define :bill do |f|
+Fabricator(:bill)
   f.bill_html "just the <b>facts</b>"
   f.bill_number 1987
   f.bill_type "h"

@@ -1,4 +1,4 @@
-Factory.define :invitation do |p|
+Fabricator(::invitation do |p|
    p.sponsor      User.first
    p.name         "Frank Zappa"
    p.email        "some@where.at"
