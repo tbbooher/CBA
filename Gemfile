@@ -29,7 +29,7 @@ gem "devise", "~>1.4.0" # ,"1.1.7"
 gem "cancan"
 #gem "omniauth", :git => 'git://github.com/intridea/omniauth.git' # maybe we need this latest version instead of the gem -tbb
 #gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
-gem "nytimes-congress"
+#gem "nytimes-congress"
 #gem "geokit"
 #gem 'drumbone'
 gem "googlecharts"

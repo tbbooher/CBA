@@ -250,14 +250,14 @@ Given /^the following default pages?$/ do |table|
   t = PageTemplate.find_or_create_by(name: 'default')
   t.save
   table.hashes.each do |hash|
-    Factory('page', hash.merge( :page_template_id => t.id ))
+    Fabricate(:page, hash.merge( :page_template_id => t.id ))
   end
 end
 
-Given /^the following (.+) records?$/ do |factory, table|
-  eval "#{factory.camelize}.delete_all"
+Given /^the following (.+) records?$/ do |fabrication, table|
+  eval "#{fabrication.camelize}.delete_all"
   table.hashes.each do |hash|
-    Factory(factory, hash)
+    Fabricate(fabrication.to_sym, hash)
   end
 end
 
@@ -331,7 +331,7 @@ Given /the default user set/ do
       :confirmed_at => "2010-01-01 00:00:00"
     }
   ].each do |hash|
-    Factory('user', hash)
+    Fabricate(:user, hash)
   end
 end
 # Make sure not to overwrite your production files!
@@ -443,7 +443,7 @@ Given /^the following comment records for page "([^"]*)"$/ do |commentable, tabl
   page = Page.where(:title => commentable).first
   page.comments.delete_all
   table.hashes.each do |hash|
-    page.comments << Factory('comment', hash)
+    page.comments << Fabricate(:comment, hash)
   end
   page.save
 end

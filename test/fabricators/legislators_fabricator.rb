@@ -1,4 +1,4 @@
-Fabricator(:senior_senator, :class => :legislator) do
+Fabricator(:senior_senator, :class_name => :legislator) do
   bioguide_id 'B000944'
   first_name 'Sherrod'
   last_name 'Brown'
@@ -16,7 +16,7 @@ Fabricator(:senior_senator, :class => :legislator) do
   govtrack_id 400050
 end
 
-Fabricator(:junior_senator, :class => :legislator) do
+Fabricator(:junior_senator, :class_name => :legislator) do
   bioguide_id 'P000449'
   first_name 'Robert'
   last_name 'Portman'
@@ -34,7 +34,7 @@ Fabricator(:junior_senator, :class => :legislator) do
   govtrack_id 400325
 end
 
-Fabricator(:rep, :class => :legislator) do
+Fabricator(:rep, :class_name => :legislator) do
   bioguide_id 'B000589'
   first_name "John"
   last_name 'Boehner'
