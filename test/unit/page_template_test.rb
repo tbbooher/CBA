@@ -8,8 +8,8 @@ class PageTemplateTest < ActiveSupport::TestCase
   def setup
     Page.delete_all
     PageTemplate.delete_all
-    @template = Factory.create(:page_template, :name => 'default')
-    @page = Factory.create(:page_with_default_template, :title => 'With a template', :body => 'Lorem ipsum of main body')
+    @template = Fabricate(:page_template, :name => 'default')
+    @page = Fabricate(:page_with_default_template, :title => 'With a template', :body => 'Lorem ipsum of main body')
     @page.page_template = @template
     @page.save
   end

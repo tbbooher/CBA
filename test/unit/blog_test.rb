@@ -38,7 +38,6 @@ class BlogTest < ActiveSupport::TestCase
 
   test "posting.scoped_postings should filter a blogs posting" do
     user = User.first || create_valid_user_with_id
-    Blog.delete_all
     blog = Blog.create(title: "A Blog with draft postings", is_draft: false)
     p1 = blog.postings.create(title: "This is a published posting", is_draft: false, body: "Lorem upsim postumix",user_id: user.id)
     p2 = blog.postings.create(title: "This is a draft posting", is_draft: true, body: "Lorem upsim postumix",user_id: user.id)

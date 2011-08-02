@@ -14,7 +14,7 @@ class PageComponentTest < ActiveSupport::TestCase
   end
 
   test "Page should store page_components" do
-    page = Factory.create(:page, :title => 'A Page with components',
+    page = Fabricate(:page, :title => 'A Page with components',
                           :body => 'Main Body Loremsum Ipsum')
     page.page_components.build(:title => 'Component One', :position => 1)
     page.save!
@@ -24,7 +24,7 @@ class PageComponentTest < ActiveSupport::TestCase
 
 
   test "Page should render all page_components" do
-    page = Page.first || Factory.create(:page, :title => 'Testpage', :body => 'Main Body of page')
+    page = Page.first || Fabricate(:page, :title => 'Testpage', :body => 'Main Body of page')
     page.page_components.delete_all
     page.page_components.build(:title => 'Component One', :position => 1)
     page.page_components.build(:title => 'Component Two', :position => 2)
@@ -36,7 +36,7 @@ class PageComponentTest < ActiveSupport::TestCase
   end
 
   test "Page component should be translatable" do
-    page = Page.first || Factory.create(:page, :title => 'Testpage', :body => 'Main Body of page')
+    page = Page.first || Fabricate(:page, :title => 'Testpage', :body => 'Main Body of page')
     c = page.page_components.create( title: 'Testcomponent', body: 'Testbody')
     c.translate!
     c.t :de, :title, 'Testkomponente'
@@ -48,7 +48,7 @@ class PageComponentTest < ActiveSupport::TestCase
   end
   
   test "Page should not allow to remove components when allow_removing_component is false" do
-    page = Page.first || Factory.create(:page, :title => 'Testpage', :body => 'Main Body of page')
+    page = Page.first || Fabricate(:page, :title => 'Testpage', :body => 'Main Body of page')
     c = page.page_components.create( title: 'Testcomponent', body: 'Testbody')
     c.save!
     page.allow_removing_component = false

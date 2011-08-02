@@ -3,7 +3,7 @@ require 'test_helper'
 class LegislatorTest < ActiveSupport::TestCase
 
   def setup
-    @legislator = Factory.build(:legislator)
+    @legislator = Fabricate(:legislator)
   end
 
   test "The chamber should update correctly" do

@@ -22,11 +22,11 @@ class BillTest < ActiveSupport::TestCase
 
   test "We should be able to tally votes" do
     # basically i want an array of the [:ayes, :nays, :abstains]
-    user1 = Factory.build(:registered)
-    user2 = Factory.build(:registered, :name => "another")
-    user3 = Factory.build(:user, :name => "and_another")
-    user4 = Factory.build(:user, :name => "and_yet_another")
-    b = Factory.build(:bill)
+    user1 = Fabricate(:registered)
+    user2 = Fabricate(:registered, :name => "another")
+    user3 = Fabricate(:user, :name => "and_another")
+    user4 = Fabricate(:user, :name => "and_yet_another")
+    b = Fabricate(:bill)
     b.votes = []
     user1.vote_on(b, :aye)
     user2.vote_on(b, :nay)
@@ -37,11 +37,11 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "Descriptive tally should work" do
-    user1 = Factory.build(:user)
-    user2 = Factory.build(:user, :name => "another")
-    user3 = Factory.build(:user, :name => "and_another")
-    user4 = Factory.build(:user, :name => "and_yet_another")
-    b = Factory.build(:bill)
+    user1 = Fabricate(:user)
+    user2 = Fabricate(:user, :name => "another")
+    user3 = Fabricate(:user, :name => "and_another")
+    user4 = Fabricate(:user, :name => "and_yet_another")
+    b = Fabricate(:bill)
     user1.vote_on(b, :aye)
     user2.vote_on(b, :nay)
     user3.vote_on(b, :aye)
@@ -51,8 +51,8 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "to see if a user has already voted" do
-    user = Factory.build(:user)
-    b = Factory.build(:bill)
+    user = Fabricate(:user)
+    b = Fabricate(:bill)
     user.vote_on(b,:aye)
     assert_true b.voted_on?(user)
   end

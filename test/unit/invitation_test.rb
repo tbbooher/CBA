@@ -13,13 +13,13 @@ class InvitationTest < ActiveSupport::TestCase
   end
   
   test "Valid invitations should save" do
-    user = User.first || Factory.build(:admin)
+    user = User.first || Fabricate(:admin)
     invitation = user.invitations.build(:email => 'some@one.at', :name => 'Frank Zappa', :role => 'admin')
     assert invitation.save, "Valid invitation should save"
   end
   
   test "Invalid invitations should not save" do
-    user = User.first || Factory.build(:admin)
+    user = User.first || Fabricate(:admin)
     invitation = user.invitations.build(:email => 'some_other1@one.at', :name => 'Dweezil Zappa')
     assert invitation.roles_mask == 0, "Default role should be guest"
     
