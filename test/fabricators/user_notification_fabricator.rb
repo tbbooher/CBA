@@ -1,4 +1,4 @@
-Fabricator(::user_notification do |n|
-   n.message "This is a notification for a user"
-   n.hidden  false
+Fabricator(:user_notification) do
+   message "This is a notification for a user"
+   hidden  false
 end

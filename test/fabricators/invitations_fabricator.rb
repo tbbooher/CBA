@@ -1,7 +1,7 @@
-Fabricator(::invitation do |p|
-   p.sponsor      User.first
-   p.name         "Frank Zappa"
-   p.email        "some@where.at"
-   p.role         'confirmed_user'
-   p.token        'abcdefgh'
+Fabricator(:invitation) do
+   sponsor      User.first
+   name         "Frank Zappa"
+   email        "some@where.at"
+   role         'confirmed_user'
+   token        'abcdefgh'
 end
