@@ -1,11 +1,16 @@
 require 'test_helper'
+require 'vcr'
+
+
 
 class BillTest < ActiveSupport::TestCase
 
   def setup
     # replace this
     #@the_bill = GovKit::OpenCongress::Bill.find_by_idents("112-s368").first
-    @the_bill = YAML::load(File.open("#{Rails.root}/test/unit/helpers/bill.yaml"))
+    #@the_bill = YAML::load(File.open("#{Rails.root}/test/unit/helpers/bill.yaml"))
+    file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
+    @the_bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
   end
 
   test "A GovKit OpenCongress object should have titles" do

@@ -1,8 +1,15 @@
 require 'simplecov'
 
-
 SimpleCov.start do
   add_filter "/test/"
+end
+
+require 'webmock/test_unit'
+require 'vcr'
+
+VCR.config do |c|
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.stub_with :webmock
 end
 
 require 'spork'

@@ -8,7 +8,7 @@ Fabricator(:page) do
    is_draft              false
 end
 
-Fabricator(:page_with_default_template, :class_name => :legislator) do
+Fabricator(:page_with_default_template, :class_name => :page) do
   title                 'Page 1'
   body                  "Lorem ipsum"
   show_in_menu          true

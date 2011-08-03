@@ -12,7 +12,7 @@ class UserNotificationTest < ActiveSupport::TestCase
   
   # Replace this with your real tests.
   test "User should embed user_notifications" do
-    user = Factory.build(:user)
+    user = Fabricate(:user)
     user.user_notifications << UserNotification.new(:message => "Your document was created successfully")
     user.user_notifications << UserNotification.new(:message => "Your second message")
     user.user_notifications << UserNotification.new(:message => "Your last message")

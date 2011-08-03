@@ -92,6 +92,8 @@ end
 
 # Bundle gems for testing
 group :test do
+  gem 'webmock'
+  gem 'vcr'
   gem 'json_pure'
   gem 'capybara'
   gem 'database_cleaner'
