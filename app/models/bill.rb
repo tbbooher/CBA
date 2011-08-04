@@ -49,7 +49,7 @@ class Bill
   def short_title
     # we show the first short title
     txt = nil
-    the_short_title = self.titles.select{|type,txt| type == 'short'}
+    the_short_title = self.titles.select { |type, txt| type == 'short' }
     unless the_short_title.empty?
       txt = the_short_title.first.last
     end
@@ -58,7 +58,7 @@ class Bill
 
   def long_title
     txt = nil
-    official_title = self.titles.select{|type,txt| type == 'official'}
+    official_title = self.titles.select { |type, txt| type == 'official' }
     txt = official_title.first.last unless official_title.empty?
     txt
   end
@@ -146,6 +146,11 @@ class Bill
     end
   end
 
+  def get_latest_action
+    last_action = self.bill_actions.sort_by {|dt, tit| dt}.last
+    {:date => last_action.first, :description => last_action.last}
+  end
+
   def update_bill
     file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
     bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
@@ -173,9 +178,14 @@ class Bill
       save_sponsor(bill.sponsor_id)
       save_cosponsors(bill.cosponsor_ids) unless bill.cosponsor_ids.empty?
 
+      # Yield to a block that can perform arbitrary calls on this bill
+      if block_given?
+        yield(self)
+      end
+
       # bill text
       get_bill_text if self.bill_html.blank? || self.text_updated_on.blank? || self.text_updated_on < Date.parse(self.bill_actions.first.first)
-      
+
       self.cosponsors_count = self.cosponsors.count
       self.text_word_count = self.bill_html.to_s.word_count
       self.summary_word_count = self.summary.to_s.word_count
@@ -187,10 +197,10 @@ class Bill
   end
 
   def get_bill_text
-      bill_object = HTTParty.get("#{GOVTRACK_URL}data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
-      self.bill_html = bill_object.response.body
-      self.text_updated_on = Date.today
-      Rails.logger.info "Updated Bill Text for #{self.ident}"
+    bill_object = HTTParty.get("#{GOVTRACK_URL}data/us/bills.text/#{self.congress.to_s}/#{self.bill_type}/#{self.bill_type + self.bill_number.to_s}.html")
+    self.bill_html = bill_object.response.body
+    self.text_updated_on = Date.today
+    Rails.logger.info "Updated Bill Text for #{self.ident}"
   end
 
   def save_sponsor(id)
@@ -233,7 +243,7 @@ class Bill
     raw_actions.each_slice(2) do |action|
       actions.push action
     end
-    actions.sort_by{|d,a| d}.reverse
+    actions.sort_by { |d, a| d }.reverse
   end
 
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)

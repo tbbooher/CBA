@@ -4,13 +4,13 @@ SimpleCov.start do
   add_filter "/test/"
 end
 
-require 'webmock/test_unit'
-require 'vcr'
+#require 'webmock/test_unit'
+#require 'vcr'
 
-VCR.config do |c|
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
-  c.stub_with :webmock
-end
+#VCR.config do |c|
+#  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+#  c.stub_with :webmock
+#end
 
 require 'spork'
 
@@ -32,6 +32,10 @@ end
 
 
 class ActiveSupport::TestCase
+
+  def load_all_sponsors
+    Legislator.update_legislators
+  end
 
   def create_valid_user_with_id(id=nil)
     begin

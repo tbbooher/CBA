@@ -1,64 +1,58 @@
 require 'test_helper'
-require 'vcr'
-
-
 
 class BillTest < ActiveSupport::TestCase
 
   def setup
-    # replace this
-    #@the_bill = GovKit::OpenCongress::Bill.find_by_idents("112-s368").first
-    #@the_bill = YAML::load(File.open("#{Rails.root}/test/unit/helpers/bill.yaml"))
-    file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
-    @the_bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
+    load_all_sponsors
+    @the_bill = Bill.new(:govtrack_name => "h1")
+    @user1 = Fabricate.build(:user1)
+    @user2 = Fabricate.build(:user2)
+    @user3 = Fabricate.build(:user3)
+    @user4 = Fabricate.build(:user4)
+    @the_bill.update_bill do |bill|
+      bill.text_updated_on = Date.today
+      bill.bill_html = "The mock bill contents"
+    end
+    @the_bill.save!
   end
 
   test "A GovKit OpenCongress object should have titles" do
     #the_bill = Factory.create(:open_congress_bill)
-    titles = Bill.get_titles(@the_bill.bill_titles)
+    titles = @the_bill.titles
     assert_not_nil(titles, "the_bill is nil")
-    assert_equal("A bill to amend the Consolidated Farm and Rural Development Act to suspend a limitation on the period for which certain borrowers are eligible for guaranteed assistance.",titles["official"])
+    assert_equal("Making appropriations for the Department of Defense and the other departments and agencies of the Government for the fiscal year ending September 30, 2011, and for other purposes.", @the_bill.long_title)
   end
 
   test "We should be able to pull out the most recent action " do
-    last_action = Bill.last_action(@the_bill.most_recent_actions)
-    assert_equal("Read twice and referred to the Committee on Agriculture, Nutrition, and Forestry.", last_action.text)
+    last_action = @the_bill.get_latest_action
+    assert_equal("Returned to the Calendar. Calendar No. 14.", last_action[:description])
   end
 
   test "We should be able to tally votes" do
-    # basically i want an array of the [:ayes, :nays, :abstains]
-    user1 = Fabricate(:registered)
-    user2 = Fabricate(:registered, :name => "another")
-    user3 = Fabricate(:user, :name => "and_another")
-    user4 = Fabricate(:user, :name => "and_yet_another")
-    b = Fabricate(:bill)
+    b = @the_bill
     b.votes = []
-    user1.vote_on(b, :aye)
-    user2.vote_on(b, :nay)
-    user3.vote_on(b, :aye)
-    user4.vote_on(b, :abstain)
+    @user1.vote_on(b, :aye)
+    @user2.vote_on(b, :nay)
+    @user3.vote_on(b, :aye)
+    @user4.vote_on(b, :abstain)
     tally = b.tally
-    assert_equal [2,1,1], tally, "Expected 2 aye, 1 nay, and 1 abstain"
+    assert_equal [2, 1, 1], tally, "Expected 2 aye, 1 nay, and 1 abstain"
   end
 
   test "Descriptive tally should work" do
-    user1 = Fabricate(:user)
-    user2 = Fabricate(:user, :name => "another")
-    user3 = Fabricate(:user, :name => "and_another")
-    user4 = Fabricate(:user, :name => "and_yet_another")
-    b = Fabricate(:bill)
-    user1.vote_on(b, :aye)
-    user2.vote_on(b, :nay)
-    user3.vote_on(b, :aye)
-    user4.vote_on(b, :abstain)
+    b = @the_bill
+    @user1.vote_on(b, :aye)
+    @user2.vote_on(b, :nay)
+    @user3.vote_on(b, :aye)
+    @user4.vote_on(b, :abstain)
     tally = b.descriptive_tally
     assert_not_nil tally
   end
 
   test "to see if a user has already voted" do
-    user = Fabricate(:user)
-    b = Fabricate(:bill)
-    user.vote_on(b,:aye)
+    user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
+    b = @the_bill
+    user.vote_on(b, :aye)
     assert_true b.voted_on?(user)
   end
 
@@ -93,10 +87,4 @@ class BillTest < ActiveSupport::TestCase
     assert_operator Bill.all.to_a.count, :>=, 0
   end
 
-  test "we can get the title" do
-    Bill.destroy_all
-    Bill.update_from_directory
-    b = Bill.first
-    assert_equal "Common Sense Economic Recovery Act of 2011", b.title
-  end
 end

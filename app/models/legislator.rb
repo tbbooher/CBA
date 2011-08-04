@@ -69,7 +69,7 @@ class Legislator
   end
 
   def self.update_legislators
-    file_data = File.new("#{Rails.root}/data/all_people/people.xml", 'r')
+    file_data = File.new("#{Rails.root}/data/people.xml", 'r')
     feed = Feedzirra::Parser::GovTrackPeople.parse(file_data).people
     feed.each do |person|
       role = Legislator.find_most_recent_role(person)
