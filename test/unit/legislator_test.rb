@@ -3,7 +3,7 @@ require 'test_helper'
 class LegislatorTest < ActiveSupport::TestCase
 
   def setup
-    @legislator = Fabricate(:legislator)
+    @legislator = Fabricate(:rep)
   end
 
   test "The chamber should update correctly" do
@@ -12,15 +12,15 @@ class LegislatorTest < ActiveSupport::TestCase
   end
 
   test "We should get their party name" do
-    assert_equal("Democrat", @legislator.party_name)
+    assert_equal("Republican", @legislator.party)
   end
 
   test "We should be able to read their full state name" do
-    assert_equal("Colorado", @legislator.state_name)
+    assert_equal("OH", @legislator.state)
   end
 
   test "We should be able to get their chamber" do
-    assert_equal("U.S. Senate", @legislator.chamber)
+    assert_equal("U.S. House of Representatives", @legislator.chamber)
   end
 
   test "We should be able to update all legislators" do

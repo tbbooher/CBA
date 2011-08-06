@@ -16,19 +16,20 @@ class BillTest < ActiveSupport::TestCase
     @the_bill.save!
   end
 
-  test "A GovKit OpenCongress object should have titles" do
+  test "a bill should have a long and short title" do
     #the_bill = Factory.create(:open_congress_bill)
     titles = @the_bill.titles
     assert_not_nil(titles, "the_bill is nil")
     assert_equal("Making appropriations for the Department of Defense and the other departments and agencies of the Government for the fiscal year ending September 30, 2011, and for other purposes.", @the_bill.long_title)
+    assert_equal("Full-Year Continuing Appropriations Act, 2011", @the_bill.short_title)
   end
 
-  test "We should be able to pull out the most recent action " do
+  test "should be able to pull out the most recent action" do
     last_action = @the_bill.get_latest_action
     assert_equal("Returned to the Calendar. Calendar No. 14.", last_action[:description])
   end
 
-  test "We should be able to tally votes" do
+  test "should be able to tally votes" do
     b = @the_bill
     b.votes = []
     @user1.vote_on(b, :aye)
@@ -36,10 +37,11 @@ class BillTest < ActiveSupport::TestCase
     @user3.vote_on(b, :aye)
     @user4.vote_on(b, :abstain)
     tally = b.tally
-    assert_equal [2, 1, 1], tally, "Expected 2 aye, 1 nay, and 1 abstain"
+    tally_test = {:ayes => 2, :nays => 1, :abstains => 1}
+    assert_equal tally_test, tally['VA'], "Expected 2 aye, 1 nay, and 1 abstain"
   end
 
-  test "Descriptive tally should work" do
+  test "should be able to build a descriptive tally that prints the tally as html" do
     b = @the_bill
     @user1.vote_on(b, :aye)
     @user2.vote_on(b, :nay)
@@ -49,22 +51,14 @@ class BillTest < ActiveSupport::TestCase
     assert_not_nil tally
   end
 
-  test "to see if a user has already voted" do
-    user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
+  test "should verify that a user has already voted" do
+    #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
     b = @the_bill
-    user.vote_on(b, :aye)
-    assert_true b.voted_on?(user)
+    @user1.vote_on(b, :aye)
+    assert_true b.voted_on?(@user1)
   end
 
-  test "to ensure titles are parsed properly" do
-    titles = YAML::load(File.open("#{Rails.root}/test/fixtures/titles.yml"))
-    b = Bill.new
-    t = b.get_titles(titles)
-    assert_equal "short", t.first.first
-    assert_equal "CLEAR Act of 2011", t.first.last
-  end
-
-  test "to ensure we can save a sponsor" do
+  test "should be able to add a sponsor to a bill" do
     b = Bill.new
     b.save_sponsor(400032)
     assert_equal "Marsha Blackburn", b.sponsor.full_name
@@ -81,10 +75,45 @@ class BillTest < ActiveSupport::TestCase
     assert_equal 32, b.cosponsors.to_a.count
   end
 
-  test "update from directory" do
+  test "should be able to read all bills from a directory and load them into the database" do
     Bill.destroy_all
     Bill.update_from_directory
     assert_operator Bill.all.to_a.count, :>=, 0
+  end
+
+  test "should show what the current user's vote is on a specific bill" do
+    # why three votes here?
+    b = Bill.new
+    @user1.vote_on(b, :aye)
+    assert_equal b.get_user_vote(@user1), :aye
+  end
+
+  test "should block a user from voting twice on a bill" do
+    assert true
+  end
+
+  test "should keep votes separate by group" do
+    assert true
+  end
+
+  test "should be able to display users comments" do
+    assert true
+  end
+
+  test "should be able to display it's rep votes" do
+    assert true
+  end
+
+  test "should show the latest status for a bill" do
+    assert true
+  end
+
+  test "should be able to show the house representative's vote if the bill is a hr" do
+    assert true
+  end
+
+  test "should be able to show both senators votes if the bill is a sr" do
+    assert true
   end
 
 end

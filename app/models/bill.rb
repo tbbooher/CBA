@@ -1,8 +1,3 @@
-#require 'ny-times-congress'
-#include NYTimes::Congress
-#Base.api_key = 'ecabdba6f1f7d9c9422c717af77d0e23:11:63892295'
-#require 'httparty'
-
 class Bill
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -69,18 +64,23 @@ class Bill
 
   def tally
     the_tally = Hash.new
+    # TODO i want to make this more readable
     self.votes.group_by { |v| v.polco_group.name }.each do |votes_by_group|
       votes = votes_by_group.last.map { |v| v.value }
       ayes = votes.count { |val| val == :aye }
       nays = votes.count { |val| val == :nay }
       abstains = votes.count { |val| val == :abstain }
-      the_tally[votes_by_group.first] = [votes_by_group.last.last.polco_group.name, [ayes, nays, abstains]]
+      the_tally[votes_by_group.last.last.polco_group.name] = {:ayes => ayes, :nays => nays, :abstains => abstains}
     end
     the_tally
   end
 
   def voted_on?(user)
-    self.votes.map { |v| v.user }.include?(user)
+    self.votes.map { |v| v.user_id }.include?(user.id)
+  end
+
+  def get_user_vote(user)
+    self.votes.select { |v| v.user = user}.first.value
   end
 
   def descriptive_tally
@@ -88,10 +88,10 @@ class Bill
     out = "<ul id=\"tally\">"
     self.tally.each do |votes_for_group|
       out += "<li class=\"box\">"
-      out += "<b>#{votes_for_group.first.to_s}</b>"
-      out += "<div class=\"group_name\">#{votes_for_group.last.first}</div>"
+      #out += "<b>#{votes_for_group.first.to_s}</b>"
+      out += "<div class=\"group_name\">#{votes_for_group.first}</div>"
       out += "<ul id=\"the_votes\">"
-      votes_for_group.last.last.each_with_index do |count, index|
+      votes_for_group.last.each_with_index do |count, index|
         out += "<li>#{names[index]}: #{count}</li>"
       end
       out += "</ul>"
