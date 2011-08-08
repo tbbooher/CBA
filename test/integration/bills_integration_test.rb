@@ -34,9 +34,11 @@ class BillsIntegrationTest < ActionDispatch::IntegrationTest
      assert_equal(bill.ident, "112-s374")
   end
 
-  test "We can create bills" do
+  test "We can create (some) bills" do
     Bill.destroy_all
-    Bill.create_from_feed(112)
+    Bill.update_from_directory do
+      shorter_block = true
+    end
     assert_operator Bill.all.count, :>=, 0
   end
 

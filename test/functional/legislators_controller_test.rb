@@ -3,9 +3,9 @@ require 'test_helper'
 class LegislatorsControllerTest < ActionController::TestCase
 
   setup do
-    @legislator = Factory(:legislator)
+    @legislator = Fabricate(:rep)
     User.delete_all
-    @user = Factory.create(:user)
+    @user = Fabricate(:user)
     @request.env['devise.mapping'] = :user
     @user.confirm!
     sign_in @user

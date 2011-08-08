@@ -1,101 +1,21 @@
-<%= form_for(@bill) do |f| %>
-  <% if @bill.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
-
-      <ul>
-      <% @bill.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :ident %><br />
-    <%= f.text_field :ident %>
-  </div>
-  <div class="field">
-    <%= f.label :congress %><br />
-    <%= f.text_field :congress %>
-  </div>
-  <div class="field">
-    <%= f.label :bill_type %><br />
-    <%= f.text_field :bill_type %>
-  </div>
-  <div class="field">
-    <%= f.label :bill_number %><br />
-    <%= f.text_field :bill_number %>
-  </div>
-  <div class="field">
-    <%= f.label :short_title %><br />
-    <%= f.text_field :short_title %>
-  </div>
-  <div class="field">
-    <%= f.label :official_title %><br />
-    <%= f.text_field :official_title %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :sponsor_id %><br />
-    <%= f.text_field :sponsor_id %>
-  </div>
-  <div class="field">
-    <%= f.label :last_action_on %><br />
-    <%= f.date_select :last_action_on %>
-  </div>
-  <div class="field">
-    <%= f.label :last_action_text %><br />
-    <%= f.text_field :last_action_text %>
-  </div>
-  <div class="field">
-    <%= f.label :enacted_on %><br />
-    <%= f.date_select :enacted_on %>
-  </div>
-  <div class="field">
-    <%= f.label :average_rating %><br />
-    <%= f.text_field :average_rating %>
-  </div>
-  <div class="field">
-    <%= f.label :cosponsors_count %><br />
-    <%= f.text_field :cosponsors_count %>
-  </div>
-  <div class="field">
-    <%= f.label :govtrack_id %><br />
-    <%= f.text_field :govtrack_id %>
-  </div>
-  <div class="field">
-    <%= f.label :bill_html %><br />
-    <%= f.text_field :bill_html %>
-  </div>
-  <div class="field">
-    <%= f.label :summary_word_count %><br />
-    <%= f.text_field :summary_word_count %>
-  </div>
-  <div class="field">
-    <%= f.label :text_word_count %><br />
-    <%= f.text_field :text_word_count %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :text_updated_on %><br />
-    <%= f.date_select :text_updated_on %>
-  </div>
-  <div class="field">
-    <%= f.label :hidden %><br />
-    <%= f.check_box :hidden %>
-  </div>
-  <div class="field">
-    <%= f.label :sponsor_name %><br />
-    <%= f.text_field :sponsor_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@bill) do |f| %>
+ <%= f.input :congress %>
+ <%= f.input :bill_number %>
+ <%= f.input :bill_type %>
+ <%= f.input :last_updated %>
+ <%= f.input :bill_state %>
+ <%= f.input :introduced_date %>
+ <%= f.input :titles %>
+ <%= f.input :summary %>
+ <%= f.input :bill_actions %>
+ <%= f.input :bill_html %>
+ <%= f.input :ident %>
+ <%= f.input :cosponsors_count %>
+ <%= f.input :govtrack_id %>
+ <%= f.input :govtrack_name %>
+ <%= f.input :summary_word_count %>
+ <%= f.input :text_word_count %>
+ <%= f.input :text_updated_on %>
+ <%= f.input :hidden %>
+ <%= f.button :submit %>
 <% end %>

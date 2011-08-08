@@ -17,7 +17,6 @@ group :assets do
   gem 'sprockets', '~> 2.0.0.beta.12'
 end
 
-
 # Bundle gems needed for Mongoid
 gem "mongoid", "~>2.0.1"   #, "2.0.0.rc.7"
 gem "bson_ext"  #, "1.1.5"
@@ -27,19 +26,27 @@ gem 'rake', '0.8.7'
 # Bundle gem needed for Devise and cancan
 gem "devise", "~>1.4.0" # ,"1.1.7"
 gem "cancan"
+# !! THE GRAVEYARD
 #gem "omniauth", :git => 'git://github.com/intridea/omniauth.git' # maybe we need this latest version instead of the gem -tbb
 #gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
 #gem "nytimes-congress"
 #gem "geokit"
 #gem 'drumbone'
+#gem "omniauth" "0.2.6"
+#gem 'omniauth', '>= 0.2.6'
+#gem "heroku"
+#gem 'webmock'
+#gem 'vcr'
+#gem 'factory_girl'
+#gem 'factory_girl_rails'
+#gem 'ym4r'
+#gem "formtastic"
+
 gem "googlecharts"
-gem "omniauth", "0.2.6"
+gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 
 # we need some stuff too (tbb)
-gem "formtastic"
-
-# for installation
-#gem "heroku"
+gem 'simple_form'
 
 # for deployment
 gem "capistrano"
@@ -49,14 +56,11 @@ gem 'unicorn'
 
 # time to connect to opencongress
 gem 'json'
-#gem 'ym4r'
 gem 'geocoder'
 
-gem 'nokogiri'
 #group :after_initialize do
-gem "feedzirra" #ls
-#, :git => "git://github.com/pauldix/feedzirra.git"
-#end
+gem 'nokogiri' #,  :git => 'git://github.com/ender672/nokogiri.git'# :git => 'git://github.com/tenderlove/nokogiri.git'
+gem 'feedzirra' #ls
 gem 'sax-machine'
 
 # Bundle gem needed for paperclip and attachments
@@ -75,9 +79,6 @@ gem "RedCloth", "4.2.5"
 # do "easy_install pygments" on your system
 gem 'redcarpet'
 gem 'albino'
-#gem "nokogiri", "1.4.6"
-
-# maybe we need rack here
 
 # Bundle gems for development 
 group :development do
@@ -92,8 +93,6 @@ end
 
 # Bundle gems for testing
 group :test do
-  #gem 'webmock'
-  #gem 'vcr'
   gem 'faker'
   gem 'json_pure'
   gem 'capybara'
@@ -105,8 +104,6 @@ group :test do
   gem 'spork', '0.9.0.rc9'
   gem 'spork-testunit'
   gem 'launchy'
-  gem 'factory_girl'
-  gem 'factory_girl_rails'
   gem 'ZenTest'
   gem 'autotest'
   gem 'autotest-rails'

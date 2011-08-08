@@ -3,12 +3,15 @@ require 'test_helper'
 class BillsControllerTest < ActionController::TestCase
 
   setup do
-    @bill = Factory(:bill)
+    @bill = Fabricate(:bill)
     User.delete_all
-    @user = Factory.create(:user)
+    @user = Fabricate(:user)
     @request.env['devise.mapping'] = :user
     @user.confirm!
     sign_in @user
+    SiteMenu.destroy_all
+    SiteMenu.create(:name => Faker::Lorem.words(4), :target => Faker::Lorem.words(1), :info => Faker::Company.bs)
+    SiteMenu.create(:name => Faker::Lorem.words(4), :target => Faker::Lorem.words(1), :info => Faker::Company.bs)
   end
 
 #  before (:each) do

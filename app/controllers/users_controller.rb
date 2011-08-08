@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     @user = current_user
     address_attempt = @user.get_ip(request.remote_ip)
     # TODO REMOVE!
+    # i don't like this but it is a good way to get a default address
     address_attempt = [38.7909, -77.0947] if address_attempt.all? { |a| a == 0 }
     @coords = build_coords(address_attempt)
     district = @user.get_district(address_attempt).first
@@ -70,46 +71,17 @@ class UsersController < ApplicationController
     end
   end
 
-
-#  def district_old
-#    user = current_user
-#    result = user.get_geodata(params)
-#    flash[:method] = result[:method]
-#    if result[:geo_data].nil? #|| !(result[:geo_data].all? {|r| r.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/)})
-#      flash[:notice] = "No addresses found, please refine your answer or try a different method."
-#      redirect_to users_geocode_path
-#    elsif false #result[:geo_data].address_count > 1
-#      @addresses = result[:geo_data].multiple_addresses # wrong !!
-#      @address = build_address(params)
-#      flash[:notice] = "more than one address found, please pick yours"
-#      flash[:multiple_addresses] = true
-#    else # they have one address, find the district
-#      @district, @state = user.get_and_save_district(result[:geo_data].first, result[:geo_data].last, true)
-#      members = user.get_three_members
-#      @senior_senator = members[:senior_senator]
-#      @junior_senator = members[:junior_senator]
-#      @representative = members[:representative]
-#    end
-#  end
-
   def save_geocode
     @user = current_user
-    # TODO remove old state and district groups
+    # TODO remove old state and district polco_groups
     #@user.polco_groups.where(type: :state).delete_all
     #@user.polco_groups.where(type: :district).delete_all
-    # now add exactly two groups
+    # now add exactly two polco_groups
     @senior_senator = Legislator.where(:_id => params[:senior_senator]).first
     @junior_senator = Legislator.where(:_id => params[:junior_senator]).first
     @representative = Legislator.where(:_id => params[:representative]).first
-    @user.legislators.push(@junior_senator)
-    @user.legislators.push(@senior_senator)
-    @user.legislators.push(@representative)
-    @user.district = params[:district]
-    @user.polco_groups.push(PolcoGroup.where(:name => params[:us_state], :type => :state).first)
-    @user.polco_groups.push(PolcoGroup.where(:name => params[:district], :type => :district).first)
-    @user.role = :registered # 7 = registered
+    @user.add_district_data(@junior_senator, @senior_senator, @representative, params[:district], params[:us_state])
     # TODO save the zip code + 4 too!
-    @user.save!
     # look up bills sponsored by member
   end
 

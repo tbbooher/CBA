@@ -88,6 +88,14 @@ class BillTest < ActiveSupport::TestCase
     assert_equal b.get_user_vote(@user1), :aye
   end
 
+  test "should show the votes for a specific district that a user belongs to" do
+    @user1.vote_on(@the_bill, :aye)
+    # TODO USER 1 needs to be registered and given a district
+    district = "OH08"
+    district_tally = @the_bill.get_votes_for_district(district)
+    assert_equal 1, district_tally  # {:ayes => 10, :nays => 20, :abstains => 2}
+  end
+
   test "should block a user from voting twice on a bill" do
     assert true
   end

@@ -12,21 +12,24 @@ Fabricator(:admin, :from => :user) do
 end
 
 Fabricator(:registered, :from => :user) do
-   roles_mask 2
-   polco_groups {[Fabricate(:polco_group, {:name => 'AL', :type => :state}),
-              Fabricate(:polco_group, {:name => 'AL01', :type => :district}),
+   roles_mask 6
+   coordinates {[38.79109100000001, -77.094729]}
+   district 'CA46'
+   us_state
+   polco_groups {[Fabricate(:polco_group, {:name => 'CL', :type => :state}),
+              Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
               Fabricate(:polco_group, {:name => "Kirk\'s Kids" , :type => :custom})]}
 end
 
 Fabricator(:user1, :from => :registered) do
-   polco_groups {[Fabricate(:polco_group, {:name => 'VA', :type => :state}),
-              Fabricate(:polco_group, {:name => 'VA02', :type => :district}),
+   polco_groups {[Fabricate(:polco_group, {:name => 'CA', :type => :state}),
+              Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
               Fabricate(:polco_group, {:name => "Gang of 12" , :type => :custom})]}
 end
 
 Fabricator(:user2, :from => :registered) do
-   polco_groups {[Fabricate(:polco_group, {:name => 'VA', :type => :state}),
-              Fabricate(:polco_group, {:name => 'VA03', :type => :district}),
+   polco_groups {[Fabricate(:polco_group, {:name => 'CA', :type => :state}),
+              Fabricate(:polco_group, {:name => 'CA47', :type => :district}),
               Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade" , :type => :custom})]}
 end
 

@@ -69,57 +69,51 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, User.with_role(:admin).all.count
   end
 
-  test "User should join a default group" do
+  test "should join a default unaffiliated group" do
     guest = create_valid_user_with_roles_mask(:guest)
+    # use fabrications
     PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
     guest.add_default_group
     guest.save
-    assert_equal 1, guest.groups.count
-    assert_equal "unaffiliated", guest.groups.first.name
+    assert_equal 1, guest.polco_groups.count
+    assert_equal "unaffiliated", guest.polco_groups.first.name
   end
 
-  test "User should be able to vote" do
-    b = Factory.build(:bill)
+  test "should be able to vote" do
+    b = Fabricate(:bill)
     guest = create_valid_user_with_roles_mask(:guest)
     #guest = guest.create
     guest.vote_on(b, :aye)
     b.votes
   end
 
-  test "User should be able to get district data" do
+  test "should be able to add congressional members when a district is identified" do
     guest = create_valid_user_with_roles_mask(:guest)
-    guest.coordinates = [39.954663,-75.194467]
-    guest.save!
-    result = guest.get_districts_and_members
-    assert_equal "2", result.district
-    assert_equal "PA", result.us_state
-    assert_equal 3, result.members.count
-  end
-
-  test "A user should be able to add members" do
-    guest = create_valid_user_with_roles_mask(:guest)
-    Fabricate(:junior_senator)
-    guest.coordinates = [39.954663,-75.194467]
-    guest.save!
-    result = guest.get_districts_and_members
-    district = "#{result.us_state}#{result.district}"
-    guest.save_district_and_members(district, result)
-    assert_equal 3, guest.legislators.count
-  end
-
-  test "Members and district should be saved for a user" do
-    result = YAML::load(File.open("#{Rails.root}/test/fixtures/govtrack_result.yml"))
-    guest = create_valid_user_with_roles_mask(:guest)
-    @district = "#{result.us_state}#{result.district}"
-    guest.save_district_and_members(@district, result)
-    assert_equal 3, guest.legislators.to_a.count
-    members = guest.get_three_members
+    #Fabricate(:junior_senator)
+    coords =Geocoder.coordinates("39.954663,-75.194467")
+    d = guest.get_district(coords).first
+    members = guest.get_members(d.members)
     senior_senator = members[:senior_senator]
     junior_senator = members[:junior_senator]
     representative = members[:representative]
-    assert_equal "Sherrod".to_s, senior_senator.first_name.to_s
-    assert_equal "Robert".to_s, junior_senator.first_name.to_s
-    assert_equal "John".to_s, representative.first_name.to_s
+    guest.add_district_data(junior_senator,
+                            senior_senator,
+                            representative, d.district, d.us_state)
+    assert_equal 3, guest.legislators.size
+    assert_true guest.save!
+  end
+
+  test "should be able to get their district from coordinates" do
+     guest = create_valid_user_with_roles_mask(:guest)
+     coordinates = [39.954663,-75.194467]
+     result = guest.get_district(coordinates)
+     assert_not_nil result, "problem with district result"
+  end
+
+  test "should be able to get location from ip address" do
+    guest = create_valid_user_with_roles_mask(:guest)
+    address = guest.get_ip('74.96.49.135')
+    assert_equal [38.8177, -77.1527], address, "address doesn't match'"
   end
   
   

@@ -1,0 +1,6 @@
+<%= simple_form_for(@polco_group) do |f| %>
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.input :type,  :collection => [:custom, :state, :district] %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Listing polco groups</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @polco_groups.each do |polco_group| %>
+  <tr>
+    <td><%= polco_group.name %></td>
+    <td><%= polco_group.type %></td>
+    <td><%= link_to 'Show', polco_group %></td>
+    <td><%= link_to 'Edit', edit_polco_group_path(polco_group) %></td>
+    <td><%= link_to 'Destroy', polco_group, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New PolcoGroup', new_polco_group_path %>

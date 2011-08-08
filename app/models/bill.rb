@@ -63,9 +63,13 @@ class Bill
   end
 
   def tally
+    build_tally(self.votes)
+  end
+
+  def build_tally(votes_collection)
     the_tally = Hash.new
     # TODO i want to make this more readable
-    self.votes.group_by { |v| v.polco_group.name }.each do |votes_by_group|
+    votes_collection.group_by { |v| v.polco_group.name }.each do |votes_by_group|
       votes = votes_by_group.last.map { |v| v.value }
       ayes = votes.count { |val| val == :aye }
       nays = votes.count { |val| val == :nay }
@@ -80,7 +84,7 @@ class Bill
   end
 
   def get_user_vote(user)
-    self.votes.select { |v| v.user = user}.first.value
+    build_tally(self.votes.select { |v| v.user = user}.first.value)
   end
 
   def descriptive_tally
@@ -103,12 +107,21 @@ class Bill
   end
 
   def self.update_from_directory
-    Dir.glob("#{Rails.root}/data/bills/small_set/*.xml").each do |bill_path|
+    files = Dir.glob("#{Rails.root}/data/bills/*.xml")
+    if block_given?
+      files = files[0..9]
+    end
+
+    files.each do |bill_path|
       bill_name = bill_path.match(/.*\/(.*).xml$/)[1]
       b = Bill.find_or_create_by(:govtrack_name => bill_name)
       b.update_bill
       b.save!
     end
+  end
+
+  def get_votes_for_district(district)
+    build_tally(self.votes.select {|t| t.district == district})
   end
 
   def full_number

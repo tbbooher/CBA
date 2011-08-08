@@ -12,15 +12,15 @@ class User
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  field :name
+  field :name, :type => String
   field :roles_mask, :type => Fixnum, :default => 0
   field :use_gravatar, :type => Boolean, :default => true
   field :invitation_id, :type => BSON::ObjectId
   field :zip_code, :type => String
   # for geocoding
   field :coordinates, :type => Array
-  field :us_state
-  field :district
+  field :us_state  # TODO need type
+  field :district  # TODO need type
 
   has_and_belongs_to_many :polco_groups
   has_many :legislators
@@ -167,10 +167,10 @@ class User
   def vote_on(bill, value)
     if my_groups = self.polco_groups
       my_groups.each do |g|
-        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id)
+        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :district => self.district, :us_state => self.us_state)
       end
     else
-      raise "no groups for this user" # #{self.full_name}"
+      raise "no polco_groups for this user" # #{self.full_name}"
     end
   end
 
@@ -213,6 +213,17 @@ class User
       d.district = "#{d.us_state}#{"%02d" % d.district.to_i}"
     end
     districts
+  end
+
+  def add_district_data(junior_senator, senior_senator, representative, district, us_state)
+    self.legislators.push(junior_senator)
+    self.legislators.push(senior_senator)
+    self.legislators.push(representative)
+    self.district = district
+    self.polco_groups.push(PolcoGroup.where(:name => us_state, :type => :state).first)
+    self.polco_groups.push(PolcoGroup.where(:name => district, :type => :district).first)
+    self.role = :registered # 7 = registered
+    self.save!
   end
 
   def get_members(members)
