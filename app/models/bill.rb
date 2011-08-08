@@ -62,21 +62,12 @@ class Bill
     short_title || long_title
   end
 
-  def tally
+  def tally    # TODO need to change to global set of votes type name
     build_tally(self.votes)
   end
 
-  def build_tally(votes_collection)
-    the_tally = Hash.new
-    # TODO i want to make this more readable
-    votes_collection.group_by { |v| v.polco_group.name }.each do |votes_by_group|
-      votes = votes_by_group.last.map { |v| v.value }
-      ayes = votes.count { |val| val == :aye }
-      nays = votes.count { |val| val == :nay }
-      abstains = votes.count { |val| val == :abstain }
-      the_tally[votes_by_group.last.last.polco_group.name] = {:ayes => ayes, :nays => nays, :abstains => abstains}
-    end
-    the_tally
+  def get_vote_values(votes_collection)
+    votes_collection.map { |v| v.value }
   end
 
   def voted_on?(user)
@@ -84,7 +75,7 @@ class Bill
   end
 
   def get_user_vote(user)
-    build_tally(self.votes.select { |v| v.user = user}.first.value)
+    get_tally(self.votes.select { |v| v.user = user}.first.value)
   end
 
   def descriptive_tally
@@ -120,8 +111,9 @@ class Bill
     end
   end
 
-  def get_votes_for_district(district)
-    build_tally(self.votes.select {|t| t.district == district})
+  def get_votes_by_name_and_type(name, type)
+    # we need to protect against a group named by the state
+    process_votes(self.votes.select {|v| (v.polco_group.name == name && v.polco_group.type == type)})
   end
 
   def full_number
@@ -260,5 +252,32 @@ class Bill
   end
 
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)
+
+  private
+
+  def process_votes(votes)
+    # takes a list of votes (of one type) and will add up all the nays, abstains, ayes
+    v = votes.group_by {|v| v.value}
+    aye_count = (v[:aye] ? v[:aye].count : 0)
+    nay_count = (v[:nay] ? v[:nay].count : 0)
+    abstain_count = (v[:abstain] ? v[:abstain].count : 0)
+    {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count}
+  end
+
+  def get_tally(votes)
+    ayes = votes.count { |val| val == :aye }
+    nays = votes.count { |val| val == :nay }
+    abstains = votes.count { |val| val == :abstain }
+    {:ayes => ayes, :nays => nays, :abstains => abstains}
+  end
+
+  def build_tally(votes_collection)
+    the_tally = Hash.new
+    votes_collection.group_by { |v| v.polco_group.name }.each do |votes_by_group|
+      votes = get_vote_values(votes_by_group.last)
+      the_tally[votes_by_group.last.last.polco_group.name] = get_tally(votes)
+    end
+    the_tally
+  end
 
 end

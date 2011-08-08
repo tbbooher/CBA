@@ -15,7 +15,7 @@ Fabricator(:registered, :from => :user) do
    roles_mask 6
    coordinates {[38.79109100000001, -77.094729]}
    district 'CA46'
-   us_state
+   us_state 'CA'
    polco_groups {[Fabricate(:polco_group, {:name => 'CL', :type => :state}),
               Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
               Fabricate(:polco_group, {:name => "Kirk\'s Kids" , :type => :custom})]}
@@ -29,7 +29,7 @@ end
 
 Fabricator(:user2, :from => :registered) do
    polco_groups {[Fabricate(:polco_group, {:name => 'CA', :type => :state}),
-              Fabricate(:polco_group, {:name => 'CA47', :type => :district}),
+              Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
               Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade" , :type => :custom})]}
 end
 

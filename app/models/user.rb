@@ -17,14 +17,12 @@ class User
   field :use_gravatar, :type => Boolean, :default => true
   field :invitation_id, :type => BSON::ObjectId
   field :zip_code, :type => String
-  # for geocoding
   field :coordinates, :type => Array
-  field :us_state  # TODO need type
-  field :district  # TODO need type
+  field :us_state, :type => String  # TODO enum for this?
+  field :district, :type => String
 
   has_and_belongs_to_many :polco_groups
   has_many :legislators
-  #has_many :votes
 
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
@@ -167,7 +165,7 @@ class User
   def vote_on(bill, value)
     if my_groups = self.polco_groups
       my_groups.each do |g|
-        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :district => self.district, :us_state => self.us_state)
+        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
       end
     else
       raise "no polco_groups for this user" # #{self.full_name}"

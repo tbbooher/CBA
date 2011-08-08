@@ -89,11 +89,26 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should show the votes for a specific district that a user belongs to" do
+   # @the_bill.votes = []
     @user1.vote_on(@the_bill, :aye)
-    # TODO USER 1 needs to be registered and given a district
-    district = "OH08"
-    district_tally = @the_bill.get_votes_for_district(district)
-    assert_equal 1, district_tally  # {:ayes => 10, :nays => 20, :abstains => 2}
+    @user2.vote_on(@the_bill, :nay)
+    @user3.vote_on(@the_bill, :nay)
+    @user3.vote_on(@the_bill, :aye)
+    district = "CA46"
+    district_tally = @the_bill.get_votes_by_name_and_type(district, :district)
+    result =
+    assert_equal({:ayes => 1, :nays => 1, :abstains => 0}, district_tally)  # {:ayes => 10, :nays => 20, :abstains => 2}
+  end
+
+  test "should be able to show votes for a specific state that a user belongs to" do
+    @user1.vote_on(@the_bill, :aye)
+    @user2.vote_on(@the_bill, :nay)
+    @user3.vote_on(@the_bill, :nay)
+    @user3.vote_on(@the_bill, :aye)
+    state = "CA"
+    state_tally = @the_bill.get_votes_by_name_and_type(state, :state)
+    result = {:ayes => 1, :nays => 1, :abstains => 0}
+    assert_equal result, state_tally  # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should block a user from voting twice on a bill" do
