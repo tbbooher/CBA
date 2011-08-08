@@ -220,7 +220,8 @@ class User
     self.district = district
     self.polco_groups.push(PolcoGroup.where(:name => us_state, :type => :state).first)
     self.polco_groups.push(PolcoGroup.where(:name => district, :type => :district).first)
-    self.role = :registered # 7 = registered
+    self.polco_groups.push(PolcoGroup.find_or_create_by(:name => 'Dan Cole', :type => :common))
+    self.role = :registered # 7 = registered (or 6?)
     self.save!
   end
 

@@ -5,29 +5,26 @@ class Bill
   field :congress, :type => Integer
   field :bill_number, :type => Integer
   field :bill_type, :type => String
-  #field :status, :type => String
-  #field :title, :type => String
-  #field :link, :type => String
+
   field :last_updated, :type => Date
   # update fields from GovTrackBill
 
   field :bill_state, :type => String #
   field :introduced_date, :type => Date #
   field :titles, :type => Array #
-  #field :sponsor, :type => Integer #
   field :summary, :type => String #
   field :bill_actions, :type => Array #
 
-  # things  i get  separt
+  # things i get with an extra call
   field :bill_html, :type => String
 
-  #field :average_rating, :type => Float
   # things i calculate
   field :ident, :type => String
   field :cosponsors_count, :type => Integer
   field :govtrack_id, :type => String
   # add index
   field :govtrack_name, :type => String
+  index :govtrack_name
 
   field :summary_word_count, :type => Integer
   field :text_word_count, :type => Integer
@@ -62,11 +59,25 @@ class Bill
     short_title || long_title
   end
 
-  def tally    # TODO need to change to global set of votes type name
+  # ------------------- Public voting aggregation methods -------------------
+
+  def tally    # delete method calls to this
     build_tally(self.votes)
   end
 
-  def get_vote_values(votes_collection)
+  def get_overall_users_vote # RECENT
+    votes = self.votes.select do |v|
+      v.polco_group.type == :common
+    end
+    process_votes(votes)
+  end
+
+  def get_votes_by_name_and_type(name, type) # RECENT
+    # we need to protect against a group named by the state
+    process_votes(self.votes.select {|v| (v.polco_group.name == name && v.polco_group.type == type)})
+  end
+
+  def get_vote_values(votes_collection) # TODO delete?
     votes_collection.map { |v| v.value }
   end
 
@@ -74,8 +85,8 @@ class Bill
     self.votes.map { |v| v.user_id }.include?(user.id)
   end
 
-  def get_user_vote(user)
-    get_tally(self.votes.select { |v| v.user = user}.first.value)
+  def users_vote(user)                         # TODO rename?
+    self.votes.select { |v| v.user_id = user.id}.first.value
   end
 
   def descriptive_tally
@@ -100,7 +111,7 @@ class Bill
   def self.update_from_directory
     files = Dir.glob("#{Rails.root}/data/bills/*.xml")
     if block_given?
-      files = files[0..9]
+      files = files[0..3]
     end
 
     files.each do |bill_path|
@@ -109,11 +120,6 @@ class Bill
       b.update_bill
       b.save!
     end
-  end
-
-  def get_votes_by_name_and_type(name, type)
-    # we need to protect against a group named by the state
-    process_votes(self.votes.select {|v| (v.polco_group.name == name && v.polco_group.type == type)})
   end
 
   def full_number
@@ -263,6 +269,8 @@ class Bill
     abstain_count = (v[:abstain] ? v[:abstain].count : 0)
     {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count}
   end
+
+  # TODO potentially deprecated
 
   def get_tally(votes)
     ayes = votes.count { |val| val == :aye }

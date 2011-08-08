@@ -4,11 +4,29 @@ class BillTest < ActiveSupport::TestCase
 
   def setup
     load_all_sponsors
+    PolcoGroup.destroy_all
     @the_bill = Bill.new(:govtrack_name => "h1")
-    @user1 = Fabricate.build(:user1)
-    @user2 = Fabricate.build(:user2)
-    @user3 = Fabricate.build(:user3)
-    @user4 = Fabricate.build(:user4)
+    common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
+    cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
+    va_group = Fabricate(:polco_group, {:name => 'VA', :type => :state})
+    ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
+    va05 = Fabricate(:polco_group, {:name => 'VA05', :type => :district})
+    va03 = Fabricate(:polco_group, {:name => 'VA03', :type => :district})
+    @user1 = Fabricate.build(:registered, {:polco_groups => [common_group,
+                                                             cali_group,
+                                                             ca46,
+                                                             Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
+    @user2 = Fabricate.build(:registered, {:polco_groups => [common_group,
+                                                             cali_group,
+                                                             ca46,
+                                                             Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade", :type => :custom})]})
+    @user3 = Fabricate.build(:registered, {:polco_groups => [common_group,
+                                                             va_group,
+                                                             va05]})
+    @user4 = Fabricate.build(:registered, {:polco_groups => [common_group,
+                                                             va_group,
+                                                             va03,
+                                                             Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
     @the_bill.update_bill do |bill|
       bill.text_updated_on = Date.today
       bill.bill_html = "The mock bill contents"
@@ -29,16 +47,16 @@ class BillTest < ActiveSupport::TestCase
     assert_equal("Returned to the Calendar. Calendar No. 14.", last_action[:description])
   end
 
-  test "should be able to tally votes" do
+  test "should be able to tally votes for all users" do
+    # TODO members votes need to be included
     b = @the_bill
-    b.votes = []
+    b.votes = [] # TODO not needed?
     @user1.vote_on(b, :aye)
     @user2.vote_on(b, :nay)
     @user3.vote_on(b, :aye)
     @user4.vote_on(b, :abstain)
-    tally = b.tally
-    tally_test = {:ayes => 2, :nays => 1, :abstains => 1}
-    assert_equal tally_test, tally['VA'], "Expected 2 aye, 1 nay, and 1 abstain"
+    tally = b.get_overall_users_vote
+    assert_equal({:ayes => 2, :nays => 1, :abstains => 1}, tally, "Expected 2 aye, 1 nay, and 1 abstain")
   end
 
   test "should be able to build a descriptive tally that prints the tally as html" do
@@ -77,27 +95,28 @@ class BillTest < ActiveSupport::TestCase
 
   test "should be able to read all bills from a directory and load them into the database" do
     Bill.destroy_all
-    Bill.update_from_directory
+    Bill.update_from_directory do
+      puts 'hi'
+    end
     assert_operator Bill.all.to_a.count, :>=, 0
   end
 
-  test "should show what the current user's vote is on a specific bill" do
+  test "should show what the current users vote is on a specific bill" do
     # why three votes here?
     b = Bill.new
     @user1.vote_on(b, :aye)
-    assert_equal b.get_user_vote(@user1), :aye
+    assert_equal b.users_vote(@user1), :aye
   end
 
   test "should show the votes for a specific district that a user belongs to" do
-   # @the_bill.votes = []
+    # @the_bill.votes = []
     @user1.vote_on(@the_bill, :aye)
     @user2.vote_on(@the_bill, :nay)
     @user3.vote_on(@the_bill, :nay)
     @user3.vote_on(@the_bill, :aye)
     district = "CA46"
     district_tally = @the_bill.get_votes_by_name_and_type(district, :district)
-    result =
-    assert_equal({:ayes => 1, :nays => 1, :abstains => 0}, district_tally)  # {:ayes => 10, :nays => 20, :abstains => 2}
+    assert_equal({:ayes => 1, :nays => 1, :abstains => 0}, district_tally) # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should be able to show votes for a specific state that a user belongs to" do
@@ -108,34 +127,43 @@ class BillTest < ActiveSupport::TestCase
     state = "CA"
     state_tally = @the_bill.get_votes_by_name_and_type(state, :state)
     result = {:ayes => 1, :nays => 1, :abstains => 0}
-    assert_equal result, state_tally  # {:ayes => 10, :nays => 20, :abstains => 2}
+    assert_equal result, state_tally # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should block a user from voting twice on a bill" do
-    assert true
+    @the_bill.votes.destroy_all
+    @user1.vote_on(@the_bill, :aye)
+    @user1.vote_on(@the_bill, :aye)
+    assert_equal(1,@the_bill.votes.select{|v| v.user_id == @user1.id}.map{|v| }, "not exactly one vote")
   end
 
-  test "should keep votes separate by group" do
+  test "should be able to get the tallies for all of a user's custom groups" do
+    pending
     assert true
   end
 
   test "should be able to display users comments" do
+    pending
     assert true
   end
 
-  test "should be able to display it's rep votes" do
+  test "should be able to display a users rep votes" do
+    pending
     assert true
   end
 
   test "should show the latest status for a bill" do
+    pending
     assert true
   end
 
   test "should be able to show the house representative's vote if the bill is a hr" do
+    pending
     assert true
   end
 
   test "should be able to show both senators votes if the bill is a sr" do
+    pending
     assert true
   end
 
