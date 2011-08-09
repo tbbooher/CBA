@@ -68,12 +68,13 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 # MongoID Extensions and extras
 gem 'mongoid-tree', :require => 'mongoid/tree'
+gem 'mongoid_fulltext'
 
 # Bundle gems for views
 gem "haml"
 gem "will_paginate"
 gem 'escape_utils'
-gem "RedCloth", "4.2.5"
+gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180  
 
 # Markdown
 # do "easy_install pygments" on your system

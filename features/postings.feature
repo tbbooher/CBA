@@ -14,6 +14,7 @@ Feature: Postings
       | title  | is_draft |
       | Blog 1 | false    |
       | Blog 2 | false    |
+      | News   | false    |
     And I am logged in as user "admin@iboard.cc" with password "thisisnotsecret"
 
   Scenario: Admin should see the blog listing

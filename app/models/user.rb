@@ -163,9 +163,11 @@ class User
   end
 
   def vote_on(bill, value)
+    # test to make sure the user is a member of a group
     if my_groups = self.polco_groups
       my_groups.each do |g|
-        bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
+          # TODO see if already voted
+          bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
       end
     else
       raise "no polco_groups for this user" # #{self.full_name}"

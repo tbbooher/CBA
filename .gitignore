@@ -1,6 +1,7 @@
 .bundle
 .yardoc
 .yardoc/**/*
+Gemfile.lock
 db/*.sqlite3
 log/*.log
 doc/*
@@ -37,3 +38,6 @@ app/views/layouts/disabled_layouts/**/*
 .idea/
 data/*
 public/images/bio_photos/*.jpeg
+app/views/layouts/disabled_layouts/**/*
+redcloth/*
+redcloth/**/*

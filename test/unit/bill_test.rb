@@ -134,7 +134,7 @@ class BillTest < ActiveSupport::TestCase
     @the_bill.votes.destroy_all
     @user1.vote_on(@the_bill, :aye)
     @user1.vote_on(@the_bill, :aye)
-    assert_equal(1,@the_bill.votes.select{|v| v.user_id == @user1.id}.map{|v| }, "not exactly one vote")
+    assert_equal(1,@the_bill.votes.to_a.count{|v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
   end
 
   test "should be able to get the tallies for all of a user's custom groups" do

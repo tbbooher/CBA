@@ -2,6 +2,8 @@
 
 Cba::Application.routes.draw do
 
+  get "search/index"
+
   resources :polco_groups
 
   resources :votes
@@ -23,6 +25,8 @@ Cba::Application.routes.draw do
   
   # Switch draft mode
   match 'draft_mode/:mode' => "home#set_draft_mode", :as => 'draft_mode'
+
+  match 'search' => "search#index", :as => 'searches'
 
   # Comments
   resources :comments, :except => :show
