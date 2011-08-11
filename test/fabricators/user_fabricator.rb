@@ -4,7 +4,7 @@ Fabricator(:user) do
   roles_mask 1
   password "secret"
   password_confirmation "secret"
-  polco_groups { [Fabricate(:polco_group, :name => 'foreign', :type => :custom)] }
+  joined_groups { [Fabricate(:polco_group, :name => 'foreign', :type => :custom)] }
 end
 
 Fabricator(:admin, :from => :user) do
@@ -16,8 +16,8 @@ Fabricator(:registered, :from => :user) do
   coordinates { [38.79109100000001, -77.094729] }
   district 'CA46'
   us_state 'CA'
-  polco_groups { [Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common}),
-                  Fabricate(:polco_group, {:name => 'CA', :type => :state}),
-                  Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
-                  Fabricate(:polco_group, {:name => "Kirk\'s Kids", :type => :custom})] }
+  #joined_groups { [Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common}),
+  #                Fabricate(:polco_group, {:name => 'CA', :type => :state}),
+  #                Fabricate(:polco_group, {:name => 'CA46', :type => :district}),
+  #                Fabricate(:polco_group, {:name => "Kirk\'s Kids", :type => :custom})] }
 end

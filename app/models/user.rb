@@ -18,10 +18,11 @@ class User
   field :invitation_id, :type => BSON::ObjectId
   field :zip_code, :type => String
   field :coordinates, :type => Array
-  field :us_state, :type => String  # TODO enum for this?
+  field :us_state, :type => String # TODO enum for this?
   field :district, :type => String
 
-  has_and_belongs_to_many :polco_groups
+  has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup"
+  has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup"
   has_many :legislators
 
   def invitation
@@ -39,9 +40,9 @@ class User
 
   embeds_many :user_notifications
 
-  validates_presence_of   :name
+  validates_presence_of :name
   validates_uniqueness_of :name, :case_sensitive => false
-  validates               :email, :presence => true, :email => true
+  validates :email, :presence => true, :email => true
   validates_uniqueness_of :email, :case_sensitive => false
 
 
@@ -54,19 +55,19 @@ class User
 
   has_mongoid_attached_file :avatar,
                             :styles => {
-                              :popup  => "800x600=",
-                              :medium => "300x300>",
-                              :thumb  => "100x100>",
-                              :icon   => "64x64"
+                                :popup => "800x600=",
+                                :medium => "300x300>",
+                                :thumb => "100x100>",
+                                :icon => "64x64"
                             },
                             :processors => [:cropper]
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  after_update  :reprocess_avatar, :if => :cropping?
+  after_update :reprocess_avatar, :if => :cropping?
 
   # Notifications
-  after_create   :async_notify_on_creation
+  after_create :async_notify_on_creation
   before_destroy :async_notify_on_cancellation
-  before_update  :notify_if_confirmed
+  before_update :notify_if_confirmed
 
   # Authentications
   after_create :save_new_authentication
@@ -158,19 +159,21 @@ class User
   end
 
   def add_default_group
-    self.polco_groups << PolcoGroup.where(:name => "unaffiliated").first
+    self.joined_groups << PolcoGroup.where(:name => "unaffiliated").first
     self.save
   end
 
   def vote_on(bill, value)
     # test to make sure the user is a member of a group
-    if my_groups = self.polco_groups
-      my_groups.each do |g|
-          # TODO see if already voted
-          bill.votes.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
+    if my_groups = self.joined_groups
+      unless bill.voted_on?(self)
+        my_groups.each do |g|
+          vote = bill.votes.new(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
+          vote.save
+        end
       end
     else
-      raise "no polco_groups for this user" # #{self.full_name}"
+      raise "no joined_groups for this user"
     end
   end
 
@@ -220,9 +223,10 @@ class User
     self.legislators.push(senior_senator)
     self.legislators.push(representative)
     self.district = district
-    self.polco_groups.push(PolcoGroup.where(:name => us_state, :type => :state).first)
-    self.polco_groups.push(PolcoGroup.where(:name => district, :type => :district).first)
-    self.polco_groups.push(PolcoGroup.find_or_create_by(:name => 'Dan Cole', :type => :common))
+    self.joined_groups.push(PolcoGroup.where(:name => us_state, :type => :state).first)
+    self.joined_groups.push(PolcoGroup.where(:name => district, :type => :district).first)
+    self.joined_groups.push(PolcoGroup.where(:name => 'USA', :type => :country).first)
+    self.joined_groups.push(PolcoGroup.find_or_create_by(:name => 'Dan Cole', :type => :common))
     self.role = :registered # 7 = registered (or 6?)
     self.save!
   end
@@ -306,10 +310,10 @@ class User
 
     # try name or nickname
     if self.name.blank?
-      self.name   = user_info['name']   unless user_info['name'].blank?
+      self.name = user_info['name'] unless user_info['name'].blank?
       self.name ||= user_info['nickname'] unless user_info['nickname'].blank?
       self.name ||= (user_info['first_name']+" "+user_info['last_name']) unless \
-        user_info['first_name'].blank? || user_info['last_name'].blank?
+         user_info['first_name'].blank? || user_info['last_name'].blank?
     end
 
     if self.email.blank?

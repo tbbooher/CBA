@@ -3,6 +3,18 @@ require 'sax-machine'
 module Feedzirra
   module Parser
 
+    class RollCall
+      include SAXMachine
+      include FeedEntryUtilities
+
+      element :roll,
+
+    end
+
+    class MemberVote
+      element :voter,
+    end
+
     class GovTrackBill
       include SAXMachine
       include FeedEntryUtilities

@@ -4,6 +4,7 @@ require 'test_helper'
 class NotificationsTest < ActionMailer::TestCase
 
   test "sign_up" do
+    PolcoGroup.destroy_all
     user = User.first || Fabricate(:user)
     mail = Notifications.sign_up(user)
     assert_equal "NEW SIGN UP AT TESTAPPLICATION", mail.subject

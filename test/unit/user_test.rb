@@ -75,8 +75,8 @@ class UserTest < ActiveSupport::TestCase
     PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
     guest.add_default_group
     guest.save
-    assert_equal 1, guest.polco_groups.count
-    assert_equal "unaffiliated", guest.polco_groups.first.name
+    assert_equal 1, guest.joined_groups.count
+    assert_equal "unaffiliated", guest.joined_groups.first.name
   end
 
   test "should be able to vote" do
@@ -115,6 +115,14 @@ class UserTest < ActiveSupport::TestCase
     address = guest.get_ip('74.96.49.135')
     assert_equal [38.8177, -77.1527], address, "address doesn't match'"
   end
-  
+
+  test "should not be able to have their vote counted with a group they follow" do
+    pending
+    # b = a_bill
+    # @user1 follows group a
+    # @user1.vote_on(b, :aye)
+    # check to make sure the count of ayes on b is zero for group "A"
+    assert true
+  end
   
 end

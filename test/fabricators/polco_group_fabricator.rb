@@ -3,5 +3,6 @@
 Fabricator(:polco_group) do
   name Faker::Company.bs
   type :custom
-  user_ids []
+  member_ids []
+  follower_ids []
 end

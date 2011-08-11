@@ -12,18 +12,18 @@ class BillTest < ActiveSupport::TestCase
     ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
     va05 = Fabricate(:polco_group, {:name => 'VA05', :type => :district})
     va03 = Fabricate(:polco_group, {:name => 'VA03', :type => :district})
-    @user1 = Fabricate.build(:registered, {:polco_groups => [common_group,
+    @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              cali_group,
                                                              ca46,
                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
-    @user2 = Fabricate.build(:registered, {:polco_groups => [common_group,
+    @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              cali_group,
                                                              ca46,
                                                              Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade", :type => :custom})]})
-    @user3 = Fabricate.build(:registered, {:polco_groups => [common_group,
+    @user3 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              va_group,
                                                              va05]})
-    @user4 = Fabricate.build(:registered, {:polco_groups => [common_group,
+    @user4 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              va_group,
                                                              va03,
                                                              Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
@@ -123,18 +123,46 @@ class BillTest < ActiveSupport::TestCase
     @user1.vote_on(@the_bill, :aye)
     @user2.vote_on(@the_bill, :nay)
     @user3.vote_on(@the_bill, :nay)
-    @user3.vote_on(@the_bill, :aye)
+    @user4.vote_on(@the_bill, :aye)
     state = "CA"
     state_tally = @the_bill.get_votes_by_name_and_type(state, :state)
     result = {:ayes => 1, :nays => 1, :abstains => 0}
     assert_equal result, state_tally # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
-  test "should block a user from voting twice on a bill" do
+  test "should silently block a user from voting twice on a bill" do
     @the_bill.votes.destroy_all
     @user1.vote_on(@the_bill, :aye)
     @user1.vote_on(@the_bill, :aye)
     assert_equal(1,@the_bill.votes.to_a.count{|v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
+  end
+
+  test "should raise an error on a duplicate vote" do
+    # another test to make sure multiple votes can't happen on the same bill
+    # 20110809.2200
+    @the_bill.votes.destroy_all
+    polco_group = @user2.joined_groups.last
+    v1 = @the_bill.votes.new
+    v1.user = @user2
+    v1.polco_group = polco_group
+    v1.value = :aye
+    assert v1.save
+    v2 = @the_bill.votes.new
+    v2.user = @user2
+    v2.polco_group = polco_group
+    v2.value = :aye
+    assert !v2.valid?
+    assert_equal "is already taken", v2.errors.messages[:user_id].first
+  end
+
+  test "should reject a value for vote other than :aye, :nay or :abstain" do
+    polco_group = @user2.joined_groups.last
+    v1 = @the_bill.votes.new
+    v1.user = @user2
+    v1.polco_group = polco_group
+    v1.value = :happy
+    assert !v1.valid?
+    assert_equal "You can only vote yes, no or abstain", v1.errors.messages[:value].first
   end
 
   test "should be able to get the tallies for all of a user's custom groups" do
@@ -153,6 +181,7 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should show the latest status for a bill" do
+    # TODO already done?
     pending
     assert true
   end
