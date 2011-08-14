@@ -3,16 +3,46 @@ require 'sax-machine'
 module Feedzirra
   module Parser
 
+    class MemberVote
+      include SAXMachine
+      include FeedEntryUtilities
+
+      element :voter, :value => :id, :as => :member_id
+      element :voter, :value => :vote, :as => :member_vote
+
+      def self.able_to_parse?(xml) #:nodoc:
+        1
+        # xml =~ /<search-results/
+      end
+    end
+
     class RollCall
       include SAXMachine
       include FeedEntryUtilities
 
-      element :roll,
+      # top part
+      element :roll, :value => :where, :as => :chamber
+      element :roll, :value => :session, :as => :session
+      element :question, :as => :the_question
+      # <bill session="112" type="hr" number="26"/>
+      element :bill, :value => :session, :as => :congress
+      element :bill, :value => :type, :as => :bill_type
+      element :bill, :value => :number, :as => :bill_number
+      #<option key="+">Yea</option>
+      #<option key="-">Nay</option>
+      #<option key="P">Present</option>
+      #<option key="0">Not Voting</option>
+      element :option, :as => :yea_vote, :with => {:key => "+"}
+      element :option, :as => :nay_vote, :with => {:key => "-"}
+      element :option, :as => :present_vote, :with => {:key => "P"}
+      element :option, :as => :abstain_vote, :with => {:key => "0"}
 
-    end
+      elements :voter, :as => :roll_call, :class => MemberVote
 
-    class MemberVote
-      element :voter,
+      def self.able_to_parse?(xml) #:nodoc:
+        1
+        # xml =~ /<search-results/
+      end
     end
 
     class GovTrackBill

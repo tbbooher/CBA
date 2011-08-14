@@ -14,7 +14,7 @@ class Legislator
   field :nickname, :type => String
   field :user_approval, :type => String
   field :district, :type => Integer
-  field :state, :type => String
+  field :state, :type => String  # TODO -- CHANGE TO US_STATE
   field :party, :type => String
   field :sponsored_count, :type => Integer
   field :cosponsored_count, :type => Integer
@@ -96,6 +96,10 @@ class Legislator
       end
     end
     file_data.close
+  end
+
+  def district_name
+    "#{self.state}#{"%02d" % self.district.to_i}"
   end
 
   def self.find_most_recent_role(person)

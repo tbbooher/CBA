@@ -37,7 +37,7 @@ Feature: PageComponents
        | GB         | Fish n chips | Austria  | Schnitzel |
     And I am on the page path of "Page 1"
     And I click on link "Edit"
-    Then I should see "Body (de)" within "#components"
+    Then I should see "Body (de-ch)" within "#components"
 
   Scenario: Page components should be translated
     Given the following translated components for page "Page 1"

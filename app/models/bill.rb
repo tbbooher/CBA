@@ -32,25 +32,44 @@ class Bill
   field :text_updated_on, :type => Date
   field :hidden, :type => Boolean
 
+  # roll call results
+  field :roll_date, :type => Date
+  field :ayes, :type => Integer
+  field :nays, :type => Integer
+  field :abstain, :type => Integer
+  field :present, :type => Integer
+
   #embedded_in :sponsor, :class_name => "Legislator"
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
 
   embeds_many :votes
+  embeds_many :member_votes
+  embeds_many :bill_comments
+
+  #embeds_many :congressional_votes
 
   def short_title
     # we show the first short title
     txt = nil
-    the_short_title = self.titles.select { |type, txt| type == 'short' }
-    unless the_short_title.empty?
-      txt = the_short_title.first.last
+    if self.titles
+      the_short_title = self.titles.select { |type, txt| type == 'short' }
+      unless the_short_title.empty?
+        txt = the_short_title.first.last
+      end
+    else
+      Rails.logger.warn "no titles for #{self.ident}"
     end
     txt
   end
 
   def long_title
     txt = nil
-    official_title = self.titles.select { |type, txt| type == 'official' }
+    if self.titles
+      official_title = self.titles.select { |type, txt| type == 'official' }
+    else
+      raise "No official title for #{self.ident}"
+    end
     txt = official_title.first.last unless official_title.empty?
     txt
   end
@@ -117,7 +136,7 @@ class Bill
     files.each do |bill_path|
       bill_name = bill_path.match(/.*\/(.*).xml$/)[1]
       b = Bill.find_or_create_by(:govtrack_name => bill_name)
-      b.update_bill
+      b.update_bill unless block_given?
       b.save!
     end
   end
@@ -163,7 +182,12 @@ class Bill
   end
 
   def update_bill
-    file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
+    # assumes self.govtrack_name
+    if self.govtrack_name
+      file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
+    else
+       raise "The bill does not have the property govtrack_name."
+    end
     bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
     # check for changes
     if bill && (self.introduced_date.nil? || (bill.introduced_date.to_date > self.introduced_date))
@@ -255,6 +279,66 @@ class Bill
       actions.push action
     end
     actions.sort_by { |d, a| d }.reverse
+  end
+
+  def Bill.update_rolls
+     files = Dir.glob("#{Rails.root}/data/rolls/*.xml")
+     # Yield to a block that can perform arbitrary calls on this bill
+     # for testing
+     if block_given?
+       files = yield(self)
+     end
+
+     files.each do |bill_path|
+       f = File.new(bill_path, 'r')
+       feed = Feedzirra::Parser::RollCall.parse(f)
+       if feed.bill_type
+         govtrack_id = "#{feed.bill_type}#{feed.congress}-#{feed.bill_number}"
+         if b = Bill.where(govtrack_id: govtrack_id).first
+           feed.roll_call.each do |v|
+             if l = Legislator.where(govtrack_id: v.member_id).first
+               b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
+             else
+               raise "legislator #{v.member_id} not found"
+             end
+           end
+           b.save!
+         else
+           raise "bill listed by #{govtrack_id} not found"
+         end
+         puts feed.bill_number
+       else
+         Rails.logger.warn "#{f.path} is not a bill vote"
+       end
+     end
+   end
+
+  def self.get_value(the_value)
+    case the_value
+      when "+"
+        result = :aye
+      when "-"
+        result = :nay
+      when "0"
+        result = :abstain
+      else
+        raise "unknown value #{the_value} (expected +, - or 0)"
+    end
+    result
+  end
+
+  def find_member_vote(member)
+    self.member_votes.where(legislator_id: member.id).first.value
+  end
+
+  def members_tally
+    process_votes(self.member_votes)
+  end
+
+  def comment(user, text)
+    the_comment = BillComment.new(:comment_text => text, :user => user)
+    self.bill_comments << the_comment
+    self.save
   end
 
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)

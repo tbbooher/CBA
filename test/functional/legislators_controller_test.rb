@@ -9,6 +9,9 @@ class LegislatorsControllerTest < ActionController::TestCase
     @request.env['devise.mapping'] = :user
     @user.confirm!
     sign_in @user
+    SiteMenu.destroy_all
+    SiteMenu.create(:name => Faker::Lorem.words(4), :target => Faker::Lorem.words(1), :info => Faker::Company.bs)
+    SiteMenu.create(:name => Faker::Lorem.words(4), :target => Faker::Lorem.words(1), :info => Faker::Company.bs)
   end
 
   test "should get index" do

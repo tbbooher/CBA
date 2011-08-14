@@ -2,6 +2,10 @@
 
 Cba::Application.routes.draw do
 
+  #resources :bill_comments
+
+  #resources :member_votes
+
   get "search/index"
 
   resources :polco_groups

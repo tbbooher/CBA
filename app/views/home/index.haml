@@ -26,24 +26,24 @@
 %hr
 
 %div
-    - if (p=Page.top_pages.where(is_draft: draft_mode)).any?
-        %div.right_column
-            - for page in p
-                = render :partial => 'pages/page_intro', :locals => { :page => page }
-                %p.content_seperator
-            = insert_twitter_box
-    - unless @blog.nil? 
+  - if (p=Page.top_pages.where(is_draft: draft_mode)).any?
+    %div.right_column
+      - for page in p
+        = render :partial => 'pages/page_intro', :locals => { :page => page }
+        %p.content_seperator
+      = insert_twitter_box
+  - unless @blog.nil?
+    %p{:style=>'clear: left;'}
+
+    %div#postings.left_column
+      = link_to( t(:create_new_posting), new_blog_posting_path(@blog), :class => 'green_button') if can? :create, Posting
+      .pagination_box= will_paginate @postings
+      - for posting in @postings
+        %div{:style=>'clear: right;'}
+        = render :partial =>  posting, :locals => { :blog => @blog }
         %p{:style=>'clear: left;'}
-        
-        %div#postings.left_column
-            = link_to( t(:create_new_posting), new_blog_posting_path(@blog), :class => 'green_button') if can? :create, Posting
-            .pagination_box= will_paginate @postings
-            - for posting in @postings
-                %div{:style=>'clear: right;'}
-                = render :partial =>  posting, :locals => { :blog => @blog }
-                %p{:style=>'clear: left;'}  
-            = render :partial => '/home/load_more', :locals => { :resources => @postings, :path => root_path }
-            .pagination_box= will_paginate @postings  
-        %p{:style=>'clear: right;'}
+      = render :partial => '/home/load_more', :locals => { :resources => @postings, :path => root_path }
+      .pagination_box= will_paginate @postings
+    %p{:style=>'clear: right;'}
     
 %div{:style=>'clear: both;'}

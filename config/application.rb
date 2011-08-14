@@ -61,7 +61,7 @@ module Cba
       g.orm             :mongoid
       #g.test_framework :shoulda
       #g.fixture_replacement :factory_girl, :dir => 'test/factories'
-      g.test_framework  :test_unit, :fixture_replacement => :factory_girl
+      g.test_framework  :test_unit
       g.fixture_replacement :fabrication, :dir => "test/fabricators"
     end
 

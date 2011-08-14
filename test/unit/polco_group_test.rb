@@ -15,7 +15,7 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should not allow an unapproved type" do
     g = PolcoGroup.new
-    g.users << @user1
+    g.members << @user1
     g.name = "The Battle of Vienna (1683)"
     g.type = :starhemberg
     assert !g.valid?
@@ -24,13 +24,13 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should force a unique name" do
     g1 = PolcoGroup.new
-    g1.users << @user1
+    g1.members << @user1
     g1.type = :custom
     g1.name = "Grand Vizier Merzifonlu Kara Mustafa Pasha"
     g1.save
     assert g1.valid?
     g2 = PolcoGroup.new
-    g2.users << @user1
+    g2.members << @user1
     g2.type = :custom
     g2.name = "Grand Vizier Merzifonlu Kara Mustafa Pasha"
     assert !g2.valid?

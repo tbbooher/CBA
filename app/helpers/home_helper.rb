@@ -37,9 +37,7 @@ module HomeHelper # :nodoc:
                               render( 'home/menu/with_children', 
                                  :menu => menu, 
                                  :recursive=>include_children,
-                                 :force => true
-                              )
-                            ) if menu && (menu.role_needed||0) <= current_role
+                                 :force => true)) if menu && (menu.role_needed||0) <= current_role
       end
     else
       # Use default menu

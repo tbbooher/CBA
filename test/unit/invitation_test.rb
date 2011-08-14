@@ -4,6 +4,7 @@ class InvitationTest < ActiveSupport::TestCase
   
   def setup
     User.delete_all
+    PolcoGroup.delete_all
     Invitation.delete_all
   end
   

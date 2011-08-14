@@ -5,7 +5,7 @@ class BillTest < ActiveSupport::TestCase
   def setup
     load_all_sponsors
     PolcoGroup.destroy_all
-    @the_bill = Bill.new(:govtrack_name => "h1")
+    @house_bill = Bill.new(:govtrack_name => "h1")
     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
     va_group = Fabricate(:polco_group, {:name => 'VA', :type => :state})
@@ -15,7 +15,11 @@ class BillTest < ActiveSupport::TestCase
     @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              cali_group,
                                                              ca46,
-                                                             Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
+                                                             Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})],
+                                           :followed_groups => [va05, va_group],
+                                           :district => 'CA46',
+                                           :us_state => 'CA'
+    })
     @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              cali_group,
                                                              ca46,
@@ -27,29 +31,29 @@ class BillTest < ActiveSupport::TestCase
                                                              va_group,
                                                              va03,
                                                              Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
-    @the_bill.update_bill do |bill|
+    @house_bill.update_bill do |bill|
       bill.text_updated_on = Date.today
       bill.bill_html = "The mock bill contents"
     end
-    @the_bill.save!
+    @house_bill.save!
   end
 
   test "a bill should have a long and short title" do
     #the_bill = Factory.create(:open_congress_bill)
-    titles = @the_bill.titles
+    titles = @house_bill.titles
     assert_not_nil(titles, "the_bill is nil")
-    assert_equal("Making appropriations for the Department of Defense and the other departments and agencies of the Government for the fiscal year ending September 30, 2011, and for other purposes.", @the_bill.long_title)
-    assert_equal("Full-Year Continuing Appropriations Act, 2011", @the_bill.short_title)
+    assert_equal("Making appropriations for the Department of Defense and the other departments and agencies of the Government for the fiscal year ending September 30, 2011, and for other purposes.", @house_bill.long_title)
+    assert_equal("Full-Year Continuing Appropriations Act, 2011", @house_bill.short_title)
   end
 
   test "should be able to pull out the most recent action" do
-    last_action = @the_bill.get_latest_action
+    last_action = @house_bill.get_latest_action
     assert_equal("Returned to the Calendar. Calendar No. 14.", last_action[:description])
   end
 
   test "should be able to tally votes for all users" do
     # TODO members votes need to be included
-    b = @the_bill
+    b = @house_bill
     b.votes = [] # TODO not needed?
     @user1.vote_on(b, :aye)
     @user2.vote_on(b, :nay)
@@ -60,7 +64,7 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should be able to build a descriptive tally that prints the tally as html" do
-    b = @the_bill
+    b = @house_bill
     @user1.vote_on(b, :aye)
     @user2.vote_on(b, :nay)
     @user3.vote_on(b, :aye)
@@ -71,7 +75,7 @@ class BillTest < ActiveSupport::TestCase
 
   test "should verify that a user has already voted" do
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
-    b = @the_bill
+    b = @house_bill
     @user1.vote_on(b, :aye)
     assert_true b.voted_on?(@user1)
   end
@@ -83,6 +87,7 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "save cosponsors for bill" do
+    Bill.destroy_all
     b = Bill.new(
         :congress => 112,
         :bill_type => 's',
@@ -96,7 +101,7 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to read all bills from a directory and load them into the database" do
     Bill.destroy_all
     Bill.update_from_directory do
-      puts 'hi'
+      puts 'sending a block to stub out a number of files and call to govtrack'
     end
     assert_operator Bill.all.to_a.count, :>=, 0
   end
@@ -109,45 +114,45 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should show the votes for a specific district that a user belongs to" do
-    # @the_bill.votes = []
-    @user1.vote_on(@the_bill, :aye)
-    @user2.vote_on(@the_bill, :nay)
-    @user3.vote_on(@the_bill, :nay)
-    @user3.vote_on(@the_bill, :aye)
-    district = "CA46"
-    district_tally = @the_bill.get_votes_by_name_and_type(district, :district)
+    # @house_bill.votes = []
+    @user1.vote_on(@house_bill, :aye)
+    @user2.vote_on(@house_bill, :nay)
+    @user3.vote_on(@house_bill, :nay)
+    @user3.vote_on(@house_bill, :aye)
+    district = @user1.district # = "CA46"
+    district_tally = @house_bill.get_votes_by_name_and_type(district, :district)
     assert_equal({:ayes => 1, :nays => 1, :abstains => 0}, district_tally) # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should be able to show votes for a specific state that a user belongs to" do
-    @user1.vote_on(@the_bill, :aye)
-    @user2.vote_on(@the_bill, :nay)
-    @user3.vote_on(@the_bill, :nay)
-    @user4.vote_on(@the_bill, :aye)
+    @user1.vote_on(@house_bill, :aye)
+    @user2.vote_on(@house_bill, :nay)
+    @user3.vote_on(@house_bill, :nay)
+    @user4.vote_on(@house_bill, :aye)
     state = "CA"
-    state_tally = @the_bill.get_votes_by_name_and_type(state, :state)
+    state_tally = @house_bill.get_votes_by_name_and_type(state, :state)
     result = {:ayes => 1, :nays => 1, :abstains => 0}
     assert_equal result, state_tally # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should silently block a user from voting twice on a bill" do
-    @the_bill.votes.destroy_all
-    @user1.vote_on(@the_bill, :aye)
-    @user1.vote_on(@the_bill, :aye)
-    assert_equal(1,@the_bill.votes.to_a.count{|v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
+    @house_bill.votes.destroy_all
+    @user1.vote_on(@house_bill, :aye)
+    @user1.vote_on(@house_bill, :aye)
+    assert_equal(1,@house_bill.votes.to_a.count{|v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
   end
 
   test "should raise an error on a duplicate vote" do
     # another test to make sure multiple votes can't happen on the same bill
     # 20110809.2200
-    @the_bill.votes.destroy_all
+    @house_bill.votes.destroy_all
     polco_group = @user2.joined_groups.last
-    v1 = @the_bill.votes.new
+    v1 = @house_bill.votes.new
     v1.user = @user2
     v1.polco_group = polco_group
     v1.value = :aye
     assert v1.save
-    v2 = @the_bill.votes.new
+    v2 = @house_bill.votes.new
     v2.user = @user2
     v2.polco_group = polco_group
     v2.value = :aye
@@ -157,7 +162,7 @@ class BillTest < ActiveSupport::TestCase
 
   test "should reject a value for vote other than :aye, :nay or :abstain" do
     polco_group = @user2.joined_groups.last
-    v1 = @the_bill.votes.new
+    v1 = @house_bill.votes.new
     v1.user = @user2
     v1.polco_group = polco_group
     v1.value = :happy
@@ -165,33 +170,88 @@ class BillTest < ActiveSupport::TestCase
     assert_equal "You can only vote yes, no or abstain", v1.errors.messages[:value].first
   end
 
-  test "should be able to get the tallies for all of a user's custom groups" do
-    pending
-    assert true
+  test "should be able to get an associated roll call" do
+    # bills are named as data/us/CCC/rolls/[hs]SSSS-NNN.xml.
+    # ccc= congress number
+    f = File.new('/Users/Tim/Sites/cba/data/rolls/h2011-9.xml','r')
+    feed = Feedzirra::Parser::RollCall.parse(f)
+    assert_equal "hr", feed.bill_type
+    assert_equal "house", feed.chamber
+    assert_equal "26", feed.bill_number
+    assert_equal 434, feed.roll_call.count
+  end
+
+  test "should be able to get roll-counts inside all relevant bills " do
+    # need to create a bill to update
+    Bill.destroy_all
+    # we need one bill to update
+    Fabricate(:bill, :govtrack_id => "hr112-26")
+    # let's isolate that bill and update
+    Bill.update_rolls do
+       files = ["#{Rails.root}/data/rolls/h2011-9.xml"]
+    end
+    the_bill = Bill.first
+    assert_equal({:ayes => 236, :nays => 182, :abstains => 16}, the_bill.members_tally)
+    # we should also be able to get a member's result on a specific bill
+    member = the_bill.member_votes.first.legislator
+    puts member.full_name
+    assert_equal(:aye, the_bill.find_member_vote(member))
+    assert_equal(:nay, the_bill.find_member_vote(Legislator.where(govtrack_id: 400436).first))
+    assert_equal(:abstain, the_bill.find_member_vote(Legislator.where(govtrack_id: 412445).first))
+  end
+
+  test "should be able to get the tallies for all of a user's custom groups (followed and joined)" do
+    # so we are logged in as user1 on @house_bill page
+    # we want to see all of our custom groups (joined groups and followed groups), with an associated tally
+    # so we can put something like this in our views
+    #@user1.joined_groups
+    #@user1.followed_groups
+    @user1.vote_on(@house_bill, :aye) # follows va05
+    @user2.vote_on(@house_bill, :nay)
+    @user3.vote_on(@house_bill, :abstain) # joined va05
+    joined_groups = @user1.joined_groups_tallies(@house_bill)
+    followed_groups = @user1.followed_groups_tallies(@house_bill)
+    assert_equal 4, joined_groups.count
+    assert_equal "Dan Cole", joined_groups.first[:name]
+    assert_equal({:ayes => 1, :nays => 1, :abstains => 1}, joined_groups.first[:tally])
+    assert_equal 2, followed_groups.count
+    assert_equal "VA05", followed_groups.first[:name]
+    assert_equal({:ayes => 0, :nays => 0, :abstains => 1}, followed_groups.first[:tally])
   end
 
   test "should be able to display users comments" do
-    pending
-    assert true
-  end
-
-  test "should be able to display a users rep votes" do
-    pending
-    assert true
+    # done! need to create a Comment model -- embedded in :bill, :belongs_to :user
+    # now need to test it
+    # user1 wants to submit a comment on @house_bill
+    @house_bill.comment(@user1,"This is a test")
+    assert_equal 1, @house_bill.bill_comments.count, "there was more or less than one comment"
+    assert_equal "This is a test", @house_bill.bill_comments.first.comment_text
   end
 
   test "should show the latest status for a bill" do
-    # TODO already done?
-    pending
-    assert true
+    @house_bill.bill_actions = [['2011-08-14', 'augustine'],['2011-05-12', 'Cyril'],['2001-09-15','Pelagius']]
+    @house_bill.bill_state = 'REFERRED'
+    last_action = @house_bill.get_latest_action
+    assert_equal "augustine", last_action[:description]
+    assert_equal 'REFERRED', @house_bill.bill_state, "bill state did not return 'REFERRED'"
   end
 
   test "should be able to show the house representative's vote if the bill is a hr" do
+    # given that I am @user1 and I want to view hr26, I should see my specific rep's vote on this bill
+    rep_vote = @user1.reps_vote_on(@house_bill)
+    senator_vote = @user1.senator_vote_on(@senate_bill)
+    assert_equal :aye, rep_vote, "representative's vote does not match"
+    assert_equal :nay, senator_vote, "senator's vote does not match"
+  end
+
+  test "a bill that hasn't been voted on should not show and overall tally" do
+    # you request a tally, but you get . . . "not tallied yet"
     pending
     assert true
   end
 
   test "should be able to show both senators votes if the bill is a sr" do
+    # given that I am @user1 and I want to view 112 s 679, I should see my specific two senators vote on this bill
     pending
     assert true
   end

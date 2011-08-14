@@ -22,12 +22,13 @@ Spork.prefork do
   require 'capybara/cucumber'
   require 'capybara/session'
 
-  Dir.new("#{Rails.root}/test/factories/").reject {|r| !r.match(/\.rb$/) }.each do |factory|
-    require "#{Rails.root}/test/factories/#{factory}"
-  end
+  # do we need to require fabrications?
+  #Dir.new("#{Rails.root}/test/factories/").reject {|r| !r.match(/\.rb$/) }.each do |factory|
+  #  require "#{Rails.root}/test/fabrications/#{factory}"
+  #end
 
-  require 'factory_girl'
-  require 'factory_girl/step_definitions'
+  #require 'factory_girl'
+  #require 'factory_girl/step_definitions'
 
   # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
   # order to ease the transition to Capybara we set the default here. If you'd

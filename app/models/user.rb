@@ -183,7 +183,11 @@ class User
     self.coordinates = [lat, lon]
     feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"
     feed = Feedzirra::Feed.fetch_raw(feed_url)
-    govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
+    if feed == 0
+      raise "Failed to connect to #{feed_url}"
+    else
+      govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
+    end
     if govtrack_data.districts.count > 1
       raise "too many"
     else
@@ -289,6 +293,39 @@ class User
 
   def get_ip(ip)
     Geocoder.coordinates(ip)
+  end
+
+  def joined_groups_tallies(bill)
+    results = Array.new
+    self.joined_groups.each do |g|
+      name = g.name
+      tally=bill.get_votes_by_name_and_type(g.name, g.type)
+      results.push({:name => name, :tally => tally})
+    end
+    results
+  end
+
+  def followed_groups_tallies(bill)
+    results = Array.new
+    self.followed_groups.each do |g|
+      name = g.name
+      tally=bill.get_votes_by_name_and_type(g.name, g.type)
+      results.push({:name => name, :tally => tally})
+    end
+    results
+  end
+
+  def district_number
+    self.district.match(/\d+/)[0]
+  end
+
+  def reps_vote_on(house_bill)
+    leg = Legislator.where(state: self.us_state, district: self.district_number)
+    house_bill.find_member_vote(leg)
+  end
+
+  def senator_vote_on(senate_bill)
+
   end
 
   private

@@ -4,7 +4,7 @@ Fabricator(:user) do
   roles_mask 1
   password "secret"
   password_confirmation "secret"
-  joined_groups { [Fabricate(:polco_group, :name => 'foreign', :type => :custom)] }
+  #joined_groups { [Fabricate(:polco_group, :name => 'foreign', :type => :custom)] }
 end
 
 Fabricator(:admin, :from => :user) do

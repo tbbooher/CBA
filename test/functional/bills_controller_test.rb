@@ -3,6 +3,7 @@ require 'test_helper'
 class BillsControllerTest < ActionController::TestCase
 
   setup do
+    Bill.destroy_all
     @bill = Fabricate(:bill)
     User.delete_all
     @user = Fabricate(:user)
