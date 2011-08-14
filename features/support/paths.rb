@@ -7,6 +7,8 @@ module NavigationHelpers
     case page_name
     when /the home page/
       '/'
+    when /bills/
+      '/bills/'
     when /geocode page/
       '/users/geocode'
     when /users page/
@@ -71,6 +73,9 @@ module NavigationHelpers
       "/pages/templates"
     when /the new_article page/
       "/pages/new_article"
+    when /the bills page for "([^"]+)"/
+      bill = Bill.where(govtrack_id: $1).first
+      "/bills/#{bill.id}"
     else
       begin
         page_name =~ /the (.*) page/

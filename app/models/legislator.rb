@@ -22,7 +22,14 @@ class Legislator
   field :govtrack_id, :type => Integer
   field :start_date, :type => Date
 
+  index :title
+  index :govtrack_id
+
   has_many :bills, :inverse_of => :sponsor
+
+  # scopes
+  scope :representatives, where(title: 'Rep.')
+  scope :senators, where(title: 'Sen.')
 
   def first_or_nick
     nickname.blank? ? first_name : nickname
@@ -100,6 +107,10 @@ class Legislator
 
   def district_name
     "#{self.state}#{"%02d" % self.district.to_i}"
+  end
+
+  def senators_for_state(us_state)
+
   end
 
   def self.find_most_recent_role(person)

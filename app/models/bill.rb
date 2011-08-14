@@ -43,6 +43,8 @@ class Bill
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
 
+  # TODO -- needs validations
+
   embeds_many :votes
   embeds_many :member_votes
   embeds_many :bill_comments
@@ -328,7 +330,12 @@ class Bill
   end
 
   def find_member_vote(member)
-    self.member_votes.where(legislator_id: member.id).first.value
+    if self.member_votes
+      out = self.member_votes.where(legislator_id: member.id).first.value
+    else
+      out = "no member votes to search"
+    end
+    out
   end
 
   def members_tally

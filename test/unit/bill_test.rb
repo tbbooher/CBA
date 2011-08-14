@@ -4,6 +4,7 @@ class BillTest < ActiveSupport::TestCase
 
   def setup
     load_all_sponsors
+    Bill.destroy_all    # clean slate
     PolcoGroup.destroy_all
     @house_bill = Bill.new(:govtrack_name => "h1")
     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
@@ -31,6 +32,17 @@ class BillTest < ActiveSupport::TestCase
                                                              va_group,
                                                              va03,
                                                              Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
+    # we need one bill to update
+    Fabricate(:bill, :govtrack_id => "hr112-26")
+    # build senate bill
+    Fabricate(:bill, :govtrack_id => 's112-782')
+    # let's isolate that bill and update
+    Bill.update_rolls do
+       files = ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+    end
+    @house_bill_with_roll_count = Bill.where(govtrack_id: "hr112-26").first
+    @senate_bill_with_roll_count = Bill.where(:govtrack_id => 's112-782').first
+    # get some properties for the house bill
     @house_bill.update_bill do |bill|
       bill.text_updated_on = Date.today
       bill.bill_html = "The mock bill contents"
@@ -183,21 +195,13 @@ class BillTest < ActiveSupport::TestCase
 
   test "should be able to get roll-counts inside all relevant bills " do
     # need to create a bill to update
-    Bill.destroy_all
-    # we need one bill to update
-    Fabricate(:bill, :govtrack_id => "hr112-26")
-    # let's isolate that bill and update
-    Bill.update_rolls do
-       files = ["#{Rails.root}/data/rolls/h2011-9.xml"]
-    end
-    the_bill = Bill.first
-    assert_equal({:ayes => 236, :nays => 182, :abstains => 16}, the_bill.members_tally)
+    assert_equal({:ayes => 236, :nays => 182, :abstains => 16}, @house_bill_with_roll_count.members_tally)
     # we should also be able to get a member's result on a specific bill
-    member = the_bill.member_votes.first.legislator
+    member = @house_bill_with_roll_count.member_votes.first.legislator
     puts member.full_name
-    assert_equal(:aye, the_bill.find_member_vote(member))
-    assert_equal(:nay, the_bill.find_member_vote(Legislator.where(govtrack_id: 400436).first))
-    assert_equal(:abstain, the_bill.find_member_vote(Legislator.where(govtrack_id: 412445).first))
+    assert_equal(:aye, @house_bill_with_roll_count.find_member_vote(member))
+    assert_equal(:nay, @house_bill_with_roll_count.find_member_vote(Legislator.where(govtrack_id: 400436).first))
+    assert_equal(:abstain, @house_bill_with_roll_count.find_member_vote(Legislator.where(govtrack_id: 412445).first))
   end
 
   test "should be able to get the tallies for all of a user's custom groups (followed and joined)" do
@@ -238,10 +242,8 @@ class BillTest < ActiveSupport::TestCase
 
   test "should be able to show the house representative's vote if the bill is a hr" do
     # given that I am @user1 and I want to view hr26, I should see my specific rep's vote on this bill
-    rep_vote = @user1.reps_vote_on(@house_bill)
-    senator_vote = @user1.senator_vote_on(@senate_bill)
+    rep_vote = @user1.reps_vote_on(@house_bill_with_roll_count)
     assert_equal :aye, rep_vote, "representative's vote does not match"
-    assert_equal :nay, senator_vote, "senator's vote does not match"
   end
 
   test "a bill that hasn't been voted on should not show and overall tally" do
@@ -251,9 +253,8 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should be able to show both senators votes if the bill is a sr" do
-    # given that I am @user1 and I want to view 112 s 679, I should see my specific two senators vote on this bill
-    pending
-    assert true
+    senator_votes = @user1.senators_vote_on(@senate_bill_with_roll_count)
+    assert_equal :nay, senator_votes.first, "senator's vote does not match"
   end
 
 end

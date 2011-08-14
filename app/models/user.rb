@@ -320,12 +320,39 @@ class User
   end
 
   def reps_vote_on(house_bill)
-    leg = Legislator.where(state: self.us_state, district: self.district_number)
-    house_bill.find_member_vote(leg)
+    unless house_bill.member_votes.empty?
+      leg = Legislator.where(state: self.us_state, district: self.district_number).first
+      if leg
+        out = house_bill.find_member_vote(leg)
+      else
+        raise "no legislator found with #{self.us_state} and #{self.district_number}"
+      end
+    else
+      out = "no vote available"
+    end
+    out
   end
 
-  def senator_vote_on(senate_bill)
-
+  def senators_vote_on(senate_bill)
+    out = Array.new
+    unless senate_bill.member_votes.empty?
+      legs = Legislator.senators.where(state: self.us_state)
+      if legs
+        legs.each do |senator|
+          # what if the member_vote is not found?
+          if senate_bill.find_member_vote(senator)
+            out.push(senate_bill.find_member_vote(senator))
+          else
+            raise "#{senator.full_name} does not have a recorded record for #{senate_bill.title}"
+          end
+        end # legislators iteration
+      else
+        raise "no senators found for #{self.us_state}"
+      end
+    else
+      out = "no votes available for #{senate_bill.title}"
+    end
+    out
   end
 
   private
@@ -350,7 +377,7 @@ class User
       self.name = user_info['name'] unless user_info['name'].blank?
       self.name ||= user_info['nickname'] unless user_info['nickname'].blank?
       self.name ||= (user_info['first_name']+" "+user_info['last_name']) unless \
-         user_info['first_name'].blank? || user_info['last_name'].blank?
+             user_info['first_name'].blank? || user_info['last_name'].blank?
     end
 
     if self.email.blank?
@@ -365,29 +392,29 @@ class User
     @new_auth = authentications.build(:uid => omniauth['uid'], :provider => omniauth['provider'])
   end
 
-  # Called :after_create
+# Called :after_create
   def save_new_authentication
     @new_auth.save unless @new_auth.nil?
   end
 
-  # Inform admin about sign ups and cancellations of accounts
+# Inform admin about sign ups and cancellations of accounts
   def async_notify_on_creation
     DelayedJob.enqueue('NewSignUpNotifier', Time.now, self.id)
   end
 
-  # Inform admin about cancellations of accounts
+# Inform admin about cancellations of accounts
   def async_notify_on_cancellation
     DelayedJob.enqueue('CancelAccountNotifier', Time.now, self.inspect)
   end
 
-  # Inform admin if someone confirms an account
+# Inform admin if someone confirms an account
   def notify_if_confirmed
     if attribute_changed?('confirmed_at')
       DelayedJob.enqueue('AccountConfirmedNotifier', Time.now, self.id)
     end
   end
 
-  # If created user is first user, confirm and make admin
+# If created user is first user, confirm and make admin
   def first_user_hook
     if User.count < 2
       self.confirmed_at = Time.now
