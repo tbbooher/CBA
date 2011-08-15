@@ -14,7 +14,9 @@ Cba::Application.routes.draw do
 
   resources :legislators
 
-  resources :bills
+  resources :bills do
+    resources :comments
+  end
 
   match "/bills/vote_on_bill/:id/:value" => "bills#vote_on_bill", :as => :vote_on_bill
 

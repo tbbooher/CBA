@@ -165,11 +165,12 @@ class User
 
   def vote_on(bill, value)
     # test to make sure the user is a member of a group
-    if my_groups = self.joined_groups
+    my_groups = self.joined_groups
+    unless my_groups.empty?
       unless bill.voted_on?(self)
         my_groups.each do |g|
           vote = bill.votes.new(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
-          vote.save
+          vote.save!
         end
       end
     else
@@ -337,11 +338,12 @@ class User
     out = Array.new
     unless senate_bill.member_votes.empty?
       legs = Legislator.senators.where(state: self.us_state)
+      # result is mongoid criteria
       if legs
         legs.each do |senator|
           # what if the member_vote is not found?
           if senate_bill.find_member_vote(senator)
-            out.push(senate_bill.find_member_vote(senator))
+            out.push({:senator=> senator.full_title, :vote => senate_bill.find_member_vote(senator)})
           else
             raise "#{senator.full_name} does not have a recorded record for #{senate_bill.title}"
           end

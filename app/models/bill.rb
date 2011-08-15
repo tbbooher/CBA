@@ -1,6 +1,15 @@
 class Bill
-  include Mongoid::Document
-  include Mongoid::Timestamps
+  include ContentItem
+  acts_as_content_item
+
+  references_many :comments, :inverse_of => :commentable, :as => 'commentable'
+  validates_associated :comments
+
+  # needed for comments
+  field :interpreter,                             :default => :markdown
+  field :allow_comments,        :type => Boolean, :default => true
+  field :allow_public_comments, :type => Boolean, :default => true
+
   # initial fields
   field :congress, :type => Integer
   field :bill_number, :type => Integer
@@ -47,7 +56,7 @@ class Bill
 
   embeds_many :votes
   embeds_many :member_votes
-  embeds_many :bill_comments
+  #embeds_many :bill_comments
 
   #embeds_many :congressional_votes
 
@@ -76,13 +85,13 @@ class Bill
     txt
   end
 
-  def title
-    short_title || long_title
+  def bill_title
+    short_title || long_title || "no title available!"
   end
 
   # ------------------- Public voting aggregation methods -------------------
 
-  def tally    # delete method calls to this
+  def tally # delete method calls to this
     build_tally(self.votes)
   end
 
@@ -94,8 +103,8 @@ class Bill
   end
 
   def get_votes_by_name_and_type(name, type) # RECENT
-    # we need to protect against a group named by the state
-    process_votes(self.votes.select {|v| (v.polco_group.name == name && v.polco_group.type == type)})
+                                             # we need to protect against a group named by the state
+    process_votes(self.votes.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
   end
 
   def get_vote_values(votes_collection) # TODO delete?
@@ -106,8 +115,8 @@ class Bill
     self.votes.map { |v| v.user_id }.include?(user.id)
   end
 
-  def users_vote(user)                         # TODO rename?
-    self.votes.select { |v| v.user_id = user.id}.first.value
+  def users_vote(user) # TODO rename?
+    self.votes.select { |v| v.user_id = user.id }.first.value
   end
 
   def descriptive_tally
@@ -132,13 +141,24 @@ class Bill
   def self.update_from_directory
     files = Dir.glob("#{Rails.root}/data/bills/*.xml")
     if block_given?
-      files = files[0..3]
+      # hr112-26, h112-1, h112-292
+      files = yield(self)
     end
 
     files.each do |bill_path|
       bill_name = bill_path.match(/.*\/(.*).xml$/)[1]
-      b = Bill.find_or_create_by(:govtrack_name => bill_name)
-      b.update_bill unless block_given?
+      puts "processing #{bill_name}"
+      b = Bill.find_or_create_by(:title => bill_name, :govtrack_name => bill_name)
+      if block_given?
+        b.update_bill do
+          "block"
+          #puts "block here"
+          #bill.text_updated_on = Date.today
+          #bill.bill_html = "The mock bill contents"
+        end
+      else
+        b.update_bill
+      end
       b.save!
     end
   end
@@ -179,7 +199,7 @@ class Bill
   end
 
   def get_latest_action
-    last_action = self.bill_actions.sort_by {|dt, tit| dt}.last
+    last_action = self.bill_actions.sort_by { |dt, tit| dt }.last
     {:date => last_action.first, :description => last_action.last}
   end
 
@@ -188,7 +208,7 @@ class Bill
     if self.govtrack_name
       file_data = File.new("#{Rails.root}/data/bills/#{self.govtrack_name}.xml", 'r')
     else
-       raise "The bill does not have the property govtrack_name."
+      raise "The bill does not have the property govtrack_name."
     end
     bill = Feedzirra::Parser::GovTrackBill.parse(file_data)
     # check for changes
@@ -284,36 +304,50 @@ class Bill
   end
 
   def Bill.update_rolls
-     files = Dir.glob("#{Rails.root}/data/rolls/*.xml")
-     # Yield to a block that can perform arbitrary calls on this bill
-     # for testing
-     if block_given?
-       files = yield(self)
-     end
+    files = Dir.glob("#{Rails.root}/data/rolls/*.xml")
+    # Yield to a block that can perform arbitrary calls on this bill
+    # for testing
+    if block_given?
+      files = yield(self)
+    end
+    # let's see if the file contains bill data
+    # TODO - (we need to modify this to only read in the new rolls)
 
-     files.each do |bill_path|
-       f = File.new(bill_path, 'r')
-       feed = Feedzirra::Parser::RollCall.parse(f)
-       if feed.bill_type
-         govtrack_id = "#{feed.bill_type}#{feed.congress}-#{feed.bill_number}"
-         if b = Bill.where(govtrack_id: govtrack_id).first
-           feed.roll_call.each do |v|
-             if l = Legislator.where(govtrack_id: v.member_id).first
-               b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
-             else
-               raise "legislator #{v.member_id} not found"
-             end
-           end
-           b.save!
-         else
-           raise "bill listed by #{govtrack_id} not found"
-         end
-         puts feed.bill_number
-       else
-         Rails.logger.warn "#{f.path} is not a bill vote"
-       end
-     end
-   end
+    files.each do |bill_path|
+      f = File.new(bill_path, 'r')
+      puts "starting with #{f.path} . . ."
+      bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)[1..3]
+      # "h112-26"
+      if bd && Bill.all.to_a.map{|b| b.govtrack_id}.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}")
+        f.rewind
+        feed = Feedzirra::Parser::RollCall.parse(f)
+        if feed.bill_type
+          govtrack_id = "#{feed.bill_type.first}#{feed.congress}-#{feed.bill_number}"
+          if b = Bill.where(govtrack_id: govtrack_id).first
+            feed.roll_call.each do |v|
+              if l = Legislator.where(govtrack_id: v.member_id).first
+                b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
+              else
+                raise "legislator #{v.member_id} not found"
+              end
+            end
+            puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
+            b.save!
+          else
+            puts "bill listed by #{govtrack_id} not found"
+            Rails.logger.warn "bill listed by #{govtrack_id} not found"
+          end
+          puts "updated roll for #{feed.bill_type}#{feed.congress}-#{feed.bill_number}"
+        else
+          puts "#{f.path} is not a bill vote"
+          Rails.logger.warn "#{f.path} is not a bill vote"
+        end
+      else
+        puts "#{f.path} not a bill roll"
+        puts "for this ident: #{bd[0]}-#{bd[1]}#{bd[2]}" if bd
+      end # check if bill roll
+    end
+  end
 
   def self.get_value(the_value)
     case the_value
@@ -342,11 +376,13 @@ class Bill
     process_votes(self.member_votes)
   end
 
+=begin
   def comment(user, text)
     the_comment = BillComment.new(:comment_text => text, :user => user)
     self.bill_comments << the_comment
     self.save
   end
+=end
 
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)
 
@@ -354,7 +390,7 @@ class Bill
 
   def process_votes(votes)
     # takes a list of votes (of one type) and will add up all the nays, abstains, ayes
-    v = votes.group_by {|v| v.value}
+    v = votes.group_by { |v| v.value }
     aye_count = (v[:aye] ? v[:aye].count : 0)
     nay_count = (v[:nay] ? v[:nay].count : 0)
     abstain_count = (v[:abstain] ? v[:abstain].count : 0)

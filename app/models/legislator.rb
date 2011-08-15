@@ -80,7 +80,7 @@ class Legislator
     feed = Feedzirra::Parser::GovTrackPeople.parse(file_data).people
     feed.each do |person|
       role = Legislator.find_most_recent_role(person)
-      if !role.startdate.nil? && role.startdate >= 10.years.ago.to_date
+      if !role[:startdate].nil? && role[:startdate] >= 10.years.ago.to_date
         leg = Legislator.find_or_create_by(:bioguide_id => person.bioguide_id,
                                            :first_name => person.first_name,
                                            :last_name => person.last_name,
@@ -94,8 +94,8 @@ class Legislator
                                            :title => person.title,
                                            :district => person.district,
                                            :state => person.state,
-                                           :party => role.party,
-                                           :start_date => role.startdate,
+                                           :party => role[:party],
+                                           :start_date => role[:startdate],
                                            :full_name => person.full_name,
                                            :govtrack_id => person.govtrack_id
         )
@@ -115,14 +115,14 @@ class Legislator
 
   def self.find_most_recent_role(person)
     #array = [person.role_startdate.map{|d| Date.parse(d)}, person.role_party]
-    role = OpenStruct.new
+    role = Hash.new
     if person.role_startdate.empty?
-      role.party = nil
-      role.startdate = nil
+      role[:party] = nil
+      role[:startdate] = nil
     else
       array = person.role_startdate.map { |d| Date.parse(d) }.zip(person.role_party).sort_by { |d, p| d }.reverse.first
-      role.party = array.last
-      role.startdate = array.first
+      role[:party] = array.last
+      role[:startdate] = array.first
     end
     role
   end

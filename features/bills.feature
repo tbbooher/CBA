@@ -28,9 +28,12 @@ Feature: Bills
 
   Scenario: An unregistered guest should not see a voting button
     Given I sign out
-    When I am on the bills page for h112-1723
+    When I am viewing the bills page for "h112-1723"
     Then I should see "H Bill"
     And I should see " you gain the right to vote" within "#vote_region"
+
+
+    
     
 
 

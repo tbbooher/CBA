@@ -22,6 +22,11 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^(?:|I )am viewing (the bills page for .+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -102,7 +107,7 @@ end
 Then /^(?:|I )should see JSON:$/ do |expected_json|
   require 'json'
   expected = JSON.pretty_generate(JSON.parse(expected_json))
-  actual   = JSON.pretty_generate(JSON.parse(response.body))
+  actual = JSON.pretty_generate(JSON.parse(response.body))
   expected.should == actual
 end
 
@@ -208,7 +213,7 @@ Given /^the following site_menu$/ do |table|
       if item
         search_in = item.children
       else
-        search_in.create(name: name, target:target)
+        search_in.create(name: name, target: target)
       end
     end
   end
@@ -227,7 +232,7 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
   expected_params = {}
-  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
+  expected_pairs.rows_hash.each_pair { |k, v| expected_params[k] = v.split(',') }
 
   if actual_params.respond_to? :should
     actual_params.should == expected_params
@@ -250,7 +255,7 @@ Given /^the following default pages?$/ do |table|
   t = PageTemplate.find_or_create_by(name: 'default')
   t.save!
   table.hashes.each do |hash|
-    Fabricate(:page, hash.merge( :page_template_id => t.id ))
+    Fabricate(:page, hash.merge(:page_template_id => t.id))
   end
 end
 
@@ -270,8 +275,8 @@ end
 Given /^only the following page records$/ do |table|
   Page.unscoped.delete_all
   table.hashes.each do |hash|
-    p = Page.new( :title => hash[:title], :body => hash[:body], :show_in_menu => false,
-       :is_draft => false, :is_template => false, :page_template_id => nil)
+    p = Page.new(:title => hash[:title], :body => hash[:body], :show_in_menu => false,
+                 :is_draft => false, :is_template => false, :page_template_id => nil)
     p.translate!
     p.save!
   end
@@ -290,62 +295,62 @@ end
 Given /the default user set/ do
   User.unscoped.delete_all
   [
-    #ROLES = [:guest, :confirmed_user, :author, :moderator, :maintainer, :admin]
-    #see user.rb model
+      #ROLES = [:guest, :confirmed_user, :author, :moderator, :maintainer, :admin]
+      #see user.rb model
 
-    #
-    #  ATTENTION cba makes the first user an admin!
-    #  -> The first user of the following hash must be the admin!
-    {
-      :email => 'admin@iboard.cc',
-      :name  => 'admin',
-      :roles_mask => 5,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    # Define NON-ADMINS BELOW
-    {
-      :email => 'guest@iboard.cc',
-      :name  => 'guest',
-      :roles_mask => 0,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    {
-      :email => 'user@iboard.cc',
-      :name  => 'testmax',
-      :roles_mask => 1,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    {
-      :email => 'author@iboard.cc',
-      :name  => 'Author',
-      :roles_mask => 2,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    {
-      :email => 'moderator@iboard.cc',
-      :name  => 'Moderator',
-      :roles_mask => 3,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    {
-      :email => 'maintainer@iboard.cc',
-      :name  => 'maintainer',
-      :roles_mask => 4,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    },
-    {
-      :email => 'staff@iboard.cc',
-      :name  => 'staff',
-      :roles_mask => 4,
-      :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
-      :confirmed_at => "2010-01-01 00:00:00"
-    }
+      #
+      #  ATTENTION cba makes the first user an admin!
+      #  -> The first user of the following hash must be the admin!
+      {
+          :email => 'admin@iboard.cc',
+          :name => 'admin',
+          :roles_mask => 5,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      # Define NON-ADMINS BELOW
+      {
+          :email => 'guest@iboard.cc',
+          :name => 'guest',
+          :roles_mask => 0,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      {
+          :email => 'user@iboard.cc',
+          :name => 'testmax',
+          :roles_mask => 1,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      {
+          :email => 'author@iboard.cc',
+          :name => 'Author',
+          :roles_mask => 2,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      {
+          :email => 'moderator@iboard.cc',
+          :name => 'Moderator',
+          :roles_mask => 3,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      {
+          :email => 'maintainer@iboard.cc',
+          :name => 'maintainer',
+          :roles_mask => 4,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      },
+      {
+          :email => 'staff@iboard.cc',
+          :name => 'staff',
+          :roles_mask => 4,
+          :password => 'thisisnotsecret', :password_confirmation => 'thisisnotsecret',
+          :confirmed_at => "2010-01-01 00:00:00"
+      }
   ].each do |hash|
     Fabricate(:user, hash)
   end
@@ -355,14 +360,14 @@ end
 # and config/twitter.#{Rails.env}.html in your production code.
 Given /^the following files?$/ do |table|
   table.hashes.each do |hash|
-    f=File.new( File::join(Rails.root,hash['filename'].strip), "w+")
+    f=File.new(File::join(Rails.root, hash['filename'].strip), "w+")
     f.write(hash['content']+"\n")
     f.close
   end
 end
 
 Given /^delete file "([^"]*)"$/ do |filename|
-  File.unlink( File::join(Rails.root, filename))
+  File.unlink(File::join(Rails.root, filename))
 end
 
 Given /^I am logged out$/ do
@@ -391,7 +396,7 @@ Given /^I click on "([^"]*)"$/ do |button|
 end
 
 Given /^I visit the edit posting page for user "([^"]*)" and posting "([^"]*)"$/ do |user_id, posting_id|
-  visit edit_user_posting_path(user_id,posting_id)
+  visit edit_user_posting_path(user_id, posting_id)
 end
 
 Given /^I click on link "([^"]*)"$/ do |link|
@@ -399,17 +404,17 @@ Given /^I click on link "([^"]*)"$/ do |link|
 end
 
 Given /^I click on link "([^"]*)" within "([^"]*)"$/ do |arg1, arg2|
-  within( :css, "#{arg2}" ) do
+  within(:css, "#{arg2}") do
     click_link(arg1.to_s)
   end
 end
 
 Given /^I visit the edit episode page for user "([^"]*)" and episode "([^"]*)"$/ do |user_id, episode_id|
-  visit edit_user_episode_path(user_id,episode_id)
+  visit edit_user_episode_path(user_id, episode_id)
 end
 
 Given /^I visit the episode page for user "([^"]*)" and episode "([^"]*)"$/ do |user_id, episode_id|
-  visit user_episode_path(user_id,episode_id)
+  visit user_episode_path(user_id, episode_id)
 end
 
 Given /^no (.*) records?$/ do |table_name|
@@ -425,13 +430,13 @@ Then /^I should be redirected to the (.+?) page$/ do |url|
 end
 
 Given /^I uncheck "([^"]*)" whithin "([^"]*)"$/ do |arg1, arg2|
-  within( :css, "div##{arg2}" ) do
+  within(:css, "div##{arg2}") do
     uncheck(arg1)
   end
 end
 
 Given /^I check "([^"]*)" whithin "([^"]*)"$/ do |arg1, arg2|
-  within( :css, "div##{arg2}" ) do
+  within(:css, "div##{arg2}") do
     check(arg1)
   end
 end
@@ -486,10 +491,10 @@ end
 Given /^the following translated pages/ do |table|
   Page.unscoped.delete_all
   table.hashes.each do |hash|
-    p = Page.create( title: hash[:title_en], body: hash[:body_en], is_draft: false )
+    p = Page.create(title: hash[:title_en], body: hash[:body_en], is_draft: false)
     p.translate!
-    p.t(:de,:title,hash[:title_de])
-    p.t(:de,:body, hash[:body_de])
+    p.t(:de, :title, hash[:title_de])
+    p.t(:de, :body, hash[:body_de])
     p.save!
   end
 end
@@ -498,7 +503,7 @@ Given /^the following translated components for page "([^"]*)"$/ do |page_title,
   page = Page.where(title: /#{page_title}/).first
   page.page_components.unscoped.delete_all
   table.hashes.each do |hash|
-    c = page.page_components.create( title: hash[:title_en], body: hash[:body_en] )
+    c = page.page_components.create(title: hash[:title_en], body: hash[:body_en])
     c.translate!
     c.t(:de, :title, hash[:title_de])
     c.t(:de, :body, hash[:body_de])
@@ -507,7 +512,7 @@ Given /^the following translated components for page "([^"]*)"$/ do |page_title,
 end
 
 Then /^I should be reading "([^"]*)"$/ do |arg1|
-  blog = Blog.where( title: arg1).first
+  blog = Blog.where(title: arg1).first
   current_path.should == blog_path(blog)
 end
 
@@ -524,5 +529,3 @@ Given /^I have a clean database$/ do
   Page.destroy_all
   Comment.destroy_all
 end
-
-

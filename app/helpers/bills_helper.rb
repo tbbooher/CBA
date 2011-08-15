@@ -26,4 +26,9 @@ module BillsHelper
     o
   end
 
+  def last_action(bill)
+    action = bill.get_latest_action
+    "on #{action[:date]}, #{action[:description]}"
+  end
+
 end
