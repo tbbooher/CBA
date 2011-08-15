@@ -25,6 +25,7 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #@bill = Bill.find(params[:id])
+    @user = current_user
 
     respond_to do |format|
       format.html # show.html.erb

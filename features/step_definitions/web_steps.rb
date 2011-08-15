@@ -261,6 +261,11 @@ Given /^the following (.+) records?$/ do |fabrication, table|
   end
 end
 
+Given /bills are loaded/ do
+  Fabricate(:bill, {:govtrack_id => 'h112-1723', :titles => [["short", "H Bill"], ["official", "House bill."]]})
+  Fabricate(:bill, {:govtrack_id => 's112-536', :titles => [["short", "S Bill"], ["official", "Senate bill."]]})
+end
+
 Given /^no site_menu exists/ do
   SiteMenu.delete_all
 end
