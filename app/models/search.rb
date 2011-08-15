@@ -11,18 +11,15 @@ class Search
     false
   end
   
+  # Don't start search if we have not 3 chars at least.
   def valid?
     self.search && self.search.length >= 3
   end
   
+  # Note: Since we use :index_name => 'site_search' for each model
+  # this search will find entries of any model, not just Page!
   def result
-    return @result if @result
-    @result ||= Posting.fulltext_search self.search
-    pages = Page.fulltext_search(self.search)
-    @result << pages if pages && !pages.empty?
-    @result.compact!
-    @result.flatten!
-    @result
+    @result ||= Page.fulltext_search(self.search, { :return_scores => true })
   end
 
 end

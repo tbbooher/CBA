@@ -9,7 +9,7 @@ Cba::Application.routes.draw do
   get "search/index"
 
   resources :polco_groups
-
+  # TODO -- might be deprecated since it is embedded
   resources :votes
 
   resources :legislators
