@@ -134,7 +134,6 @@ input {
   border: 1px solid #ddd;
 }
 
-
 #action_buttons {
 
   font-weight: 100;
@@ -162,7 +161,6 @@ input {
   -webkit-border-radius: 0px 0px 5px 5px;
   -webkit-box-shadow: 0px 0px 2px 2px #444;
 }
-
 
 .page_intro {
   clear: both;
@@ -405,7 +403,6 @@ li.load_more {
   height: 64px;
 }
 
-
 /* Load new definitions and overwrite previous ones */
 @import "errors.css.scss";
 @import "banner_and_session.css.scss";
@@ -421,4 +418,5 @@ li.load_more {
 @import "forms.css.scss";
 @import "search.css.scss";
 @import "will_paginate.css.scss";
+@import "polco.css.scss";
 

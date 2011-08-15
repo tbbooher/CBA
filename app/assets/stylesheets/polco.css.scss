@@ -1,0 +1,19 @@
+/* polco mods */
+
+#tally_region {
+background-color:$color-paper;
+padding:10px;
+border:1px solid black;
+border-radius:5px;
+margin:10px 0;
+width:98%;
+}
+
+#all_users_tally, #all_members_votes, #joined_groups_tally, #followed_groups_tally{
+float:left;
+background-color:#ccc;
+margin:10px 10px;
+width:45%;
+padding:10px;
+}
+

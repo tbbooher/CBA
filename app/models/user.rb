@@ -322,9 +322,9 @@ class User
 
   def reps_vote_on(house_bill)
     unless house_bill.member_votes.empty?
-      leg = Legislator.where(state: self.us_state, district: self.district_number).first
+      leg = Legislator.where(state: self.us_state, district: self.district_number.to_i).first
       if leg
-        out = house_bill.find_member_vote(leg)
+        out = {:rep => leg.full_name, :vote => house_bill.find_member_vote(leg)}
       else
         raise "no legislator found with #{self.us_state} and #{self.district_number}"
       end

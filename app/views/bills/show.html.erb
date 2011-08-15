@@ -3,61 +3,54 @@
 <% title @bill.bill_title || "no title yet" %>
 
 <div id="vote_region">
-  <%= determine_vote(@user).html_safe %>
+  <%= determine_vote(@user) %>
 </div>
+<% if @user && @user.registered? %>
+    <div id="member_vote">
+      <% if @bill.bill_type == "h" %>
+          <%= determine_rep_vote(@user.reps_vote_on(@bill), @user.district) %>
+      <% else %>
+          <%= determine_senators_votes(@user.senators_vote_on(@bill)) %>
+      <% end %>
+    </div>
+    <div id="district_tally">
+      In your district (<%= @user.district %>), <%= format_votes_inline(@bill.get_votes_by_name_and_type(@user.district, :district)) %>
+    </div>
+<% end %>
 
-<%# unless @bill.tally.empty? %>
 <div id="tally_region">
   <div id="all_users_tally">
-    <b>All users:</b>
-    <%= @bill.get_overall_users_vote %>
+    <h3>All polco users:</h3>
+    <%= format_votes(@bill.get_overall_users_vote) %>
   </div>
-  <% if @user && @user.registered? %>
-      <div id="district_tally">
-        <b>District tally for <%= @user.district %>:</b>
-        <%= @bill.get_votes_by_name_and_type(@user.district, :district) %>
-      </div>
-      <% if @bill.bill_type == "h" %>
-          <div id="representative_vote">
-            <b>Rep Vote</b>
-            <%= @user.reps_vote_on(@bill).to_s %>
-          </div>
-      <% else %>
-          <div id="senator_vote">
-            <b>Senator votes</b>
-            <% votes = @user.senators_vote_on(@bill) %>
-            <ul>
-              <li><%= "#{votes.first[:senator]}: #{votes.first[:vote].to_s}" %></li>
-              <li><%= "#{votes.last[:senator]}: #{votes.last[:vote].to_s}" %></li>
-            </ul>
-          </div>
-      <% end %>
-  <% end %>
   <div id="all_members_votes">
     <!-- what did all members vote on this bill? -->
     <% mt = @bill.members_tally %>
     <% if mt %>
-        <b>Members tally:</b> <%= mt %>
+        <h3>Congressional members tally:</h3>
+        <%= format_votes(mt) %>
     <% end %>
   </div>
+  <div class="clear"></div>
   <!-- time for groups tally -->
   <% if @user %>
       <div id="joined_groups_tally">
-        <p>Joined Groups:</p>
+        <h3>Joined Groups:</h3>
         <ul>
           <% @user.joined_groups_tallies(@bill).each do |tally| %>
-              <li><%= tally[:name] %>:<%= tally[:tally] %></li>
+              <li><b><%= tally[:name] %></b>:<%= format_votes(tally[:tally]) %></li>
           <% end %>
         </ul>
       </div>
       <div id="followed_groups_tally">
-        <p>Followed groups</p>
+        <h3>Followed groups</h3>
         <ul>
           <% @user.followed_groups_tallies(@bill).each do |tally| %>
-              <li><%= tally[:name] %>:<%= tally[:tally] %></li>
+              <li><b><%= tally[:name] %></b>:<%= format_votes(tally[:tally]) %></li>
           <% end %>
         </ul>
       </div>
+      <div class="clear"></div>
   <% end %>
 </div>
 
@@ -68,14 +61,14 @@
       <%= content_tag :div, :id => 'comments' do %>
           <h5><%= t(:number_of_comments, :count => @bill.comments.count) %></h5>
           <%= render :partial => @bill.comments, :locals => {:commentable => @bill,
-                                                                :path_components => @bill} %>
+                                                             :path_components => @bill} %>
       <% end %>
   <% end %>
-  <% if true # @posting.blog.allow_public_comments || (@posting.blog.allow_comments && user_signed_in?)  %>
+  <% if true # @posting.blog.allow_public_comments || (@posting.blog.allow_comments && user_signed_in?)   %>
 
       <%= content_tag :div, :id => 'new_comment_form' do %>
           <h5><%= t(:post_a_comment) -%></h5>
-          <%= form_for [@bill, comment = @bill.comments.build(:name => current_user_field(:name, ''),:email => current_user_field(:email, ''))] do |f| %>
+          <%= form_for [@bill, comment = @bill.comments.build(:name => current_user_field(:name, ''), :email => current_user_field(:email, ''))] do |f| %>
 
               <%= render :partial => '/comments/comment_fields',
                          :locals => {:f => f, :commentable => @bill, :comment => comment}

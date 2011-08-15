@@ -1,5 +1,7 @@
 class Vote
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :value, :type => Symbol # can be :aye, :nay, :abstain
   field :type, :type => Symbol  # TODO can delete?
 

@@ -112,7 +112,12 @@ class Bill
   end
 
   def voted_on?(user)
-    self.votes.map { |v| v.user_id }.include?(user.id)
+    if votes = self.votes.select{|v| v.user_id == user.id}
+      o = votes.map{|v| v.value}.first
+    else
+      o = nil
+    end
+    o
   end
 
   def users_vote(user) # TODO rename?
