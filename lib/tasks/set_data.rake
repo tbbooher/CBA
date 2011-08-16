@@ -16,7 +16,7 @@ namespace :data do
     # load rolls
     puts "updating rolls"
     Bill.update_rolls do
-       ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+      ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
     end
   end
 end

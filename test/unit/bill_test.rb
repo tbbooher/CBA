@@ -139,6 +139,7 @@ class BillTest < ActiveSupport::TestCase
     Bill.update_rolls do
        ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
     end
+    assert true
   end
 
   test "should show what the current users vote is on a specific bill" do

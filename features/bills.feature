@@ -32,7 +32,10 @@ Feature: Bills
     Then I should see "H Bill"
     And I should see " you gain the right to vote" within "#vote_region"
 
-
+  Scenario: I want to see a map of (displayed only after reps' roll call vote, until then map of district prefs only map)
+    Given I am signed in
+    When I am viewing the bills page for "h112-1723"
+    Then I should see "<h1>the map</h1>"
     
     
 

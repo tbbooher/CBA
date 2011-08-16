@@ -17,9 +17,12 @@ padding:10px;
 }
 
 div#top_bar {
+    /* @include main_page_width; */
+    top:90px;
     @include main_page_width;
     background:url(/assets/menu-bg.gif) repeat-x scroll left top #FFF;
     border-bottom:1px solid #000;
+    height:43px;
     /* padding:0 20px; */
 }
 

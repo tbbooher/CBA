@@ -5,14 +5,12 @@
 
 #banner {
   background: white; /* $background-banner; */
-  position: fixed;
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   height: 90px;
   padding-left: 20px;
-  color:white;
+  top: 0px;
+  @include main_page_width;
+
+  /* color:white; */
 
   h1 {
     font-family: $font-headline;

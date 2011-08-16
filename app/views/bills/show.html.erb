@@ -2,6 +2,7 @@
 
 <% title @bill.bill_title || "no title yet" %>
 
+<span style="color:red;">Please vote - get involved!</span>
 <div id="vote_region">
   <%= determine_vote(@user) %>
 </div>
@@ -100,7 +101,7 @@
       <%= @bill.summary %>
     </p>
 <% end %>
-
+<!-- TODO clean up the old way of presenting actions -->
 <p>
   <b>Last action on:</b>
   <%= @bill.bill_actions.first.first %> |
@@ -142,7 +143,5 @@
   <%= @bill.text_updated_on %>
 </p>
 
-
-
-<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Edit', edit_bill_path(@bill) if can? :edit, Bill %> |
 <%= link_to 'Back', bills_path %>

@@ -54,16 +54,12 @@ $body-width: 900px;
 $content-min-width: 600px;
 $form-width: 600px;
 
+/* TBB ! */
 @mixin main_page_width {
-   -moz-box-shadow: 3px 3px 3px #292929;
-    /* #background: none repeat scroll 0 0 #FFFFFF; */
-    border-color: black;
-    border-style: solid;
-    border-width: 0 1px;
-    margin: auto;
-    margin-left:180px;
-    /* padding: 10px 20px 20px; */
-    width: 1000px;
+  position: fixed;
+  z-index: 2;
+  left: 0px;
+  right: 0px;
 }
 
 @mixin standard_background($color, $percent1, $percent2) {
