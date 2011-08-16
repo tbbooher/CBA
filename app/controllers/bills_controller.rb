@@ -4,6 +4,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.xml
   def index
+    #@bills = Bill.page(1).per(10)
     @bills = Bill.all.paginate(:page => params[:page],
        :per_page => APPLICATION_CONFIG[:pages_per_page] || 5
     )
