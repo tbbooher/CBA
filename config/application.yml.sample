@@ -78,8 +78,8 @@ production:
     stylesheet_print:  application
     layout:            application
     copyright:         Tim Booher
-    copyright_url:     http://altendorfer.at
-    meta_description:  'Author: Tim Booher, iboard.cc, IT-Veteran, Developer, Musik Benzin und Kuchen'
+    copyright_url:     http://www.theboohers.org
+    meta_description:  'Author: Tim Booher, Open Government, IT-Veteran, Developer'
     registration_from: 'noreply@your.site'
     admin_notification_address: 'admin@your.domain'
     registration_from: 'test@application.tt'
