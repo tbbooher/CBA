@@ -23,10 +23,10 @@
     <%= insert_google_analytics_script if  (Rails.env == 'production') %>
     <% if APPLICATION_CONFIG['twitter_profile'] %>
       <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['twitter_profile'] -%>"/>
-    <% end %>    
+    <% end %>
     <% if APPLICATION_CONFIG['google_profile'] %>
       <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['google_profile'] -%>"/>
-    <% end %>    
+    <% end %>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <%= csrf_meta_tag %>
   </head>
@@ -39,15 +39,12 @@
     <% end %>
     <div id='overlay' class="ui-widget-content"></div>
     <div id="banner">
+      <%= image_tag "polco.gif" %>
       <%= render :partial => '/layouts/banner' %>
     </div>
 
-<div id="banner">
-  <%= image_tag "polco.gif" %>
-</div>
-
-    <div id="top_bar">
-        <ul id="top_menu">
+    <div id="session">
+        <ul>
           <%= render 'home/menu/application' %>
         </ul>
         <ul style='float: right;'>
@@ -74,21 +71,21 @@
         </ul>
       </div>
       <div class='clear'></div>
-      
+
       <div id='scroll-to-top'>
         <%= link_to image_tag("arrow_up_small.png"), '#', :title => t(:scroll_to_top) %>
         <span id='scroll-position'></span>
       </div>
       <div id='copyright'>
-        <a href='http://www.pledgie.com/campaigns/15849'><img 
-               alt='Click here to lend your support to: CBA and make a donation at www.pledgie.com !' 
+        <a href='http://www.pledgie.com/campaigns/15849'><img
+               alt='Click here to lend your support to: CBA and make a donation at www.pledgie.com !'
                src='http://www.pledgie.com/campaigns/15849.png?skin_name=chrome' border='0' /></a>
         <br />
            © <%= Time.now.year %> by <%= link_to APPLICATION_CONFIG['copyright'], APPLICATION_CONFIG['copyright_url'] %>
       </div>
-      
+
     <% end %>
-    <div class='main-frame'>      
+    <div class='main-frame'>
       <div id='flashes'>
         <% flash.each do |name, msg| %>
           <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
@@ -110,7 +107,7 @@
           <%= yield %>
         </div>
       </div>
-      <div class='clear'></div> 
+      <div class='clear'></div>
     </div>
     <div class='clear'></div>
 
