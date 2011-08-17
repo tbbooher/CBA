@@ -5,7 +5,7 @@
 
 <p>Is this your district?</p>
 <%= @address_attempt %>
-<% form_tag 'district' do %>
+<%= form_tag 'district' do %>
     <p>Based on your ip address, your district is: <b><%= @district %></b> in the state of <%= @state.to_us_state %>.</p>
     <%#= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@coords}&zoom=12&size=500x300&markers=#{@coords}&sensor=false" %>
     <div id="map_canvas" style="width:500px; height:300px"></div>
@@ -20,7 +20,7 @@
 <!-- float left -->
 <p>Input your address <%= @user.name.titlecase %></p>
 <div class="component_float_left_400" style="background-color:#adff2f; height:200px;">
-  <% form_tag 'district' do %>
+  <%= form_tag 'district' do %>
 
       <%#= errors_for(blog)%>
 
@@ -52,7 +52,7 @@
   <% end %>
 </div>
 <div class="component_float_right_400" style="background-color:#adff2f; height:200px;">
-  <% form_tag 'district' do %>
+  <%= form_tag 'district' do %>
 
       <%#= errors_for(blog)%>
 
