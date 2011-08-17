@@ -12,7 +12,7 @@ class UserIntegrationTest < ActionDispatch::IntegrationTest
     coords =Geocoder.coordinates("39.954663,-75.194467")
     # need to stub this!
     d = @guest.get_district(coords).first
-    members = guest.get_members(d.members)
+    members = @guest.get_members(d.members)
     senior_senator = members[:senior_senator]
     junior_senator = members[:junior_senator]
     representative = members[:representative]
