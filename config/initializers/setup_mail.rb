@@ -9,11 +9,11 @@ require File::dirname(__FILE__) + "/../../lib/development_mail_interceptor.rb"
 ActionMailer::Base.smtp_settings = {
   :address              => MAILSERVER_ADDRESS,
   :port                 => MAILSERVER_PORT,
-  :domain               => MAILSERVER_DOMAIN,
   :user_name            => MAILSERVER_USERNAME,
   :password             => MAILSERVER_PASSWORD,
   :authentication       => "plain",
-  :enable_starttls_auto => true
+  :enable_starttls_auto => true,
+  :domain               => MAILSERVER_DOMAIN
 }
 
 Mail.register_interceptor(DevelopmentMailInterceptor) if Rails.env.development?
