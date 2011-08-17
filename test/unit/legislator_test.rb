@@ -3,6 +3,7 @@ require 'test_helper'
 class LegislatorTest < ActiveSupport::TestCase
 
   def setup
+    @user = Fabricate(:user)
     @legislator = Fabricate(:rep)
   end
 
@@ -33,7 +34,15 @@ class LegislatorTest < ActiveSupport::TestCase
   test "We should be able to get the most recent actions from a legislator" do
     legislator_result = YAML::load(File.open("#{Rails.root}/test/fixtures/govtrack_person.yml"))
     role = Legislator.find_most_recent_role(legislator_result)
-    assert_equal Date.parse("2009-01-06"), role.startdate
+    assert_equal Date.parse("2009-01-06"), role[:startdate]
+  end
+
+  test "we should be able to add constituents for state and district" do
+    @legislator.state_constituents << @user
+    @legislator.district_constituents << @user
+    assert_equal 1, @legislator.state_constituents.count
+    assert_equal 1, @legislator.district_constituents.count
+    assert @legislator.valid?
   end
 
 end

@@ -26,6 +26,8 @@ class Legislator
   index :govtrack_id
 
   has_many :bills, :inverse_of => :sponsor
+  has_many :district_constituents, :class_name => "User", :inverse_of => :representative
+  has_and_belongs_to_many :state_constituents, :class_name => "User", :inverse_of => :senators
 
   # scopes
   scope :representatives, where(title: 'Rep.')

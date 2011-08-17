@@ -7,6 +7,7 @@ class User
   include Mongoid::Paperclip
   include Geocoder::Model::Mongoid
   geocoded_by :coordinates
+  # TODO ^^ is this still needed
   cache
 
   devise :database_authenticatable, :registerable, :confirmable,
@@ -16,14 +17,17 @@ class User
   field :roles_mask, :type => Fixnum, :default => 0
   field :use_gravatar, :type => Boolean, :default => true
   field :invitation_id, :type => BSON::ObjectId
+  # tbb modifications for polco specific code
   field :zip_code, :type => String
   field :coordinates, :type => Array
+
   field :us_state, :type => String # TODO enum for this?
   field :district, :type => String
 
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup"
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup"
-  has_many :legislators
+  has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
+  belongs_to :representative, :class_name => "Legislator", :inverse_of => :district_constituents
 
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
@@ -158,11 +162,6 @@ class User
     end
   end
 
-  def add_default_group
-    self.joined_groups << PolcoGroup.where(:name => "unaffiliated").first
-    self.save
-  end
-
   def vote_on(bill, value)
     # test to make sure the user is a member of a group
     my_groups = self.joined_groups
@@ -190,28 +189,13 @@ class User
       govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
     end
     if govtrack_data.districts.count > 1
-      raise "too many"
+      raise "too many for this coordinate (strange)"
     else
       result = govtrack_data.districts.first
       result.district = "#{result.us_state}#{"%02d" % result.district.to_i}"
     end
     [result]
   end
-
-#  def get_and_save_district(lat,lon,save)
-#    self.coordinates = [lat, lon]
-#    feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"
-#    feed = Feedzirra::Feed.fetch_raw(feed_url)
-#    govtrack_data = Feedzirra::Parser::GovTrackDistrict.parse(feed)
-#    if govtrack_data.districts.count > 1
-#      raise "too many"
-#    else
-#      result = govtrack_data.districts.first
-#      district = "#{result.us_state}#{"%02d" % result.district.to_i}"
-#      save_district_and_members(district, result) if save
-#      [district, result.us_state]
-#    end
-#  end
 
   def get_districts_by_zipcode(zipcode)
     feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?zipcode=#{zipcode}"
@@ -224,21 +208,22 @@ class User
   end
 
   def add_district_data(junior_senator, senior_senator, representative, district, us_state)
-    self.legislators.push(junior_senator)
-    self.legislators.push(senior_senator)
-    self.legislators.push(representative)
+    self.senators.push(junior_senator)
+    self.senators.push(senior_senator)
+    self.representative = representative
     self.district = district
-    self.joined_groups.push(PolcoGroup.where(:name => us_state, :type => :state).first)
-    self.joined_groups.push(PolcoGroup.where(:name => district, :type => :district).first)
-    self.joined_groups.push(PolcoGroup.where(:name => 'USA', :type => :country).first)
-    self.joined_groups.push(PolcoGroup.find_or_create_by(:name => 'Dan Cole', :type => :common))
+    self.add_baseline_groups(us_state, district)
     self.role = :registered # 7 = registered (or 6?)
     self.save!
   end
 
+  def add_baseline_groups(us_state, district)
+    [[us_state, :state],[district, :district],['USA', :country],['Dan Cole',:common]].each do |name, type|
+       self.joined_groups.push(PolcoGroup.find_or_create_by(:name => name, :type => type))
+    end
+  end
+
   def get_members(members)
-    # look up legislators
-    #legs = self.legislators
     legs = []
     members.each do |member|
       # need to clear previous members
@@ -256,7 +241,9 @@ class User
     members
   end
 
+=begin
   def save_district_and_members(district, result)
+    # TODO -- UPDATE
     self.district = district
     self.legislators = []
     result.members.each do |member|
@@ -269,6 +256,7 @@ class User
     end
     self.save!
   end
+=end
 
   def get_geodata(params)
     case params[:commit]
@@ -322,11 +310,11 @@ class User
 
   def reps_vote_on(house_bill)
     unless house_bill.member_votes.empty?
-      leg = Legislator.where(state: self.us_state, district: self.district_number.to_i).first
+      leg = self.representative # Legislator.where(state: self.us_state, district: self.district_number.to_i).first
       if leg
         out = {:rep => leg.full_name, :vote => house_bill.find_member_vote(leg)}
       else
-        raise "no legislator found with #{self.us_state} and #{self.district_number}"
+        raise "no representative found for #{self.name}"
       end
     else
       out = "no vote available"
@@ -337,7 +325,7 @@ class User
   def senators_vote_on(senate_bill)
     out = Array.new
     unless senate_bill.member_votes.empty?
-      legs = Legislator.senators.where(state: self.us_state)
+      legs = self.senators #.senators.where(state: self.us_state)
       # result is mongoid criteria
       if legs
         legs.each do |senator|

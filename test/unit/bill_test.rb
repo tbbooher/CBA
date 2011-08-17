@@ -6,6 +6,9 @@ class BillTest < ActiveSupport::TestCase
     load_all_sponsors
     Bill.destroy_all    # clean slate
     PolcoGroup.destroy_all
+    rep = Legislator.representatives.first
+    senator1 = Legislator.senators.first
+    senator2 = Legislator.senators[1]
     @house_bill = Bill.new(:govtrack_name => "h1", :title => "the first test bill")
     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
@@ -19,7 +22,9 @@ class BillTest < ActiveSupport::TestCase
                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})],
                                            :followed_groups => [va05, va_group],
                                            :district => 'CA46',
-                                           :us_state => 'CA'
+                                           :us_state => 'CA',
+                                           :senators => [senator1, senator2],
+                                           :representative => rep
     })
     @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                              cali_group,
@@ -40,7 +45,7 @@ class BillTest < ActiveSupport::TestCase
     Bill.update_rolls do
        files = ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
     end
-    @house_bill_with_roll_count = Bill.where(govtrack_id: "hr112-26").first
+    @house_bill_with_roll_count = Bill.where(:govtrack_id => "h112-26").first
     @senate_bill_with_roll_count = Bill.where(:govtrack_id => 's112-782').first
     # get some properties for the house bill
     @house_bill.update_bill do |bill|
@@ -89,7 +94,7 @@ class BillTest < ActiveSupport::TestCase
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
     b = @house_bill
     @user1.vote_on(b, :aye)
-    assert_true b.voted_on?(@user1)
+    assert_equal :aye, b.voted_on?(@user1)
   end
 
   test "should be able to add a sponsor to a bill" do
@@ -265,13 +270,14 @@ class BillTest < ActiveSupport::TestCase
     assert_equal 'REFERRED', @house_bill.bill_state, "bill state did not return 'REFERRED'"
   end
 
-  test "should be able to show the house representative's vote if the bill is a hr" do
+  test "should be able to show the house representatives vote if the bill is a hr" do
     # given that I am @user1 and I want to view hr26, I should see my specific rep's vote on this bill
     rep_vote = @user1.reps_vote_on(@house_bill_with_roll_count)
-    assert_equal :aye, rep_vote, "representative's vote does not match"
+    assert_equal({:rep=>"Gary Ackerman", :vote=>:nay}, rep_vote, "representative's vote does not match")
   end
 
-  test "a bill that hasn't been voted on should not show and overall tally" do
+
+  test "a bill that hasnt been voted on should not show and overall tally" do
     # you request a tally, but you get . . . "not tallied yet"
     pending
     assert true

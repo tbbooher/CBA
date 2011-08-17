@@ -75,3 +75,13 @@ font-size:12px;
 background-color:#c9c3e6;
 padding:7px;
 }
+
+div.page_error {
+    text-align: center;
+    margin: 125px 10px 20px;
+    background: #FCD284;
+    border: 1px solid #ddd;
+    padding: 30px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+}
