@@ -69,22 +69,24 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, User.with_role(:admin).all.count
   end
 
-  test "should join a default unaffiliated group" do
-    guest = create_valid_user_with_roles_mask(:guest)
-    # use fabrications
-    PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
-    guest.add_default_group
-    guest.save
-    assert_equal 1, guest.joined_groups.size
-    assert_equal "unaffiliated", guest.joined_groups.first.name
-  end
+  #test "should join a default unaffiliated group" do
+  #  guest = create_valid_user_with_roles_mask(:guest)
+  #  # use fabrications
+  #  PolcoGroup.find_or_create_by(:name => "unaffiliated", :type => :custom)
+  #  guest.add_default_group
+  #  guest.save
+  #  assert_equal 1, guest.joined_groups.size
+  #  assert_equal "unaffiliated", guest.joined_groups.first.name
+  #end
 
   test "should be able to vote" do
     b = Fabricate(:bill)
-    guest = create_valid_user_with_roles_mask(:guest)
+    #guest = create_valid_user_with_roles_mask(:guest)
     #guest = guest.create
-    guest.vote_on(b, :aye)
-    b.votes
+    user = Fabricate(:user)
+    user.add_baseline_groups("OH", "OH08")
+    user.vote_on(b, :aye)
+    assert_equal 4, b.votes.count
   end
 
   test "should not be able to have their vote counted with a group they follow" do

@@ -27,7 +27,8 @@ class BillsIntegrationTest < ActionDispatch::IntegrationTest
      bill = Bill.new(
                      :congress => 112,
                      :bill_type => 's',
-                     :bill_number => 374
+                     :bill_number => 374,
+                     :title => 's374'
                      )
      bill.save
      assert_not_nil bill.ident
