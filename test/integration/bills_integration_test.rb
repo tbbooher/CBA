@@ -2,43 +2,37 @@ require 'test_helper'
 
 class BillsIntegrationTest < ActionDispatch::IntegrationTest
 
-  test "The sponsor should be loaded correctly" do
-    bill = Bill.new(
+  def setup
+    Bill.destroy_all
+    @bill = Bill.find_or_create_by(
         :congress => 112,
         :bill_type => 's',
-        :bill_number => 368
+        :bill_number => 368,
+        :title => 's368',
+        :govtrack_name => 's368'
     )
-    bill.save
-    assert_not_nil(bill.sponsor)
-    assert_equal("K000305", bill.sponsor.bioguide_id)
+    @bill.update_bill
+  end
+
+  test "The sponsor should be loaded correctly" do
+    assert @bill.save
+    assert_not_nil(@bill.sponsor)
+    assert_equal("K000305", @bill.sponsor.bioguide_id)
   end
 
   test "The sponsors should be loaded correctly" do
-    bill = Bill.new(
-        :congress => 112,
-        :bill_type => 's',
-        :bill_number => 368
-    )
-    bill.save
-    assert_not_nil(bill.cosponsors)
+    assert_not_nil(@bill.cosponsors)
   end
 
   test "A bill should have a ident after it is created" do
-     bill = Bill.new(
-                     :congress => 112,
-                     :bill_type => 's',
-                     :bill_number => 374,
-                     :title => 's374'
-                     )
-     bill.save
-     assert_not_nil bill.ident
-     assert_equal(bill.ident, "112-s374")
+     assert_not_nil @bill.ident
+     assert_equal(@bill.ident, "112-s368")
   end
 
-  test "We can create (some) bills" do
+  test "We can create some bills" do
     Bill.destroy_all
     Bill.update_from_directory do
-      shorter_block = true
+      ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
     end
     assert_operator Bill.all.count, :>=, 0
   end

@@ -3,6 +3,7 @@ require 'test_helper'
 class UserIntegrationTest < ActionDispatch::IntegrationTest
 
   def setup
+    User.destroy_all
     @guest = create_valid_user_with_roles_mask(:guest)
   end
 
@@ -10,7 +11,7 @@ class UserIntegrationTest < ActionDispatch::IntegrationTest
     #Fabricate(:junior_senator)
     coords =Geocoder.coordinates("39.954663,-75.194467")
     # need to stub this!
-    d = guest.get_district(coords).first
+    d = @guest.get_district(coords).first
     members = guest.get_members(d.members)
     senior_senator = members[:senior_senator]
     junior_senator = members[:junior_senator]

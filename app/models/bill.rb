@@ -48,7 +48,6 @@ class Bill
   field :abstain, :type => Integer
   field :present, :type => Integer
 
-  #embedded_in :sponsor, :class_name => "Legislator"
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
 
