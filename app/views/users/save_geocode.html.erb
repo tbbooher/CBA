@@ -2,7 +2,7 @@
 
 <p>Good job, your geocode as been saved. You are now a part of the following groups:</p>
 <ul>
-  <% @user.polco_groups.each do |group| %>
+  <% @user.joined_groups.each do |group| %>
       <li><%= group.name %></li>
   <% end %>
 </ul>
