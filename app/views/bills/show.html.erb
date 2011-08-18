@@ -34,7 +34,7 @@
   </div>
   <div class="clear"></div>
   <!-- time for groups tally -->
-  <% if @user %>
+  <% if @user && @user.registered? %>
       <div id="joined_groups_tally">
         <h3>Joined Groups:</h3>
         <ul>
@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div id="followed_groups_tally">
-        <h3>Followed groups</h3>
+        <h3>Followed groups:</h3>
         <ul>
           <% @user.followed_groups_tallies(@bill).each do |tally| %>
               <li><b><%= tally[:name] %></b>:<%= format_votes(tally[:tally]) %></li>

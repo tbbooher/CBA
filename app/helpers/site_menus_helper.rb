@@ -52,7 +52,8 @@ module SiteMenusHelper # :nodoc:
   # css-class to inform the user about 'here you are'.
   def menu_link_to(name,path,options={})
     style = "hmenu"
-    style = "hmenu_current" if (current_page?(path) || false)
+    #puts "!!#{name},#{path},#{options}, #{controller.controller_name}, #{controller.controller_name == name.to_s.strip}"
+    style = "hmenu_current" if (current_page?(path) || controller.controller_name == name.to_s)
     options.merge!( { :class => style } )
     link_to( name, path, options )
   end

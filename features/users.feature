@@ -13,6 +13,7 @@ Feature: User Roles
       | guest@iboard.cc  | guest     | 0          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
       | admin@iboard.cc  | admin     | 5          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
       | staff@iboard.cc  | staff     | 4          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
+      | registered@iboard.cc  | registered     | 6          | thisisnotsecret  | thisisnotsecret       | 2011-01-01 00:00:00  |
     And the default locale
     And I am logged in as user "admin@iboard.cc" with password "thisisnotsecret"
  
@@ -141,3 +142,10 @@ Feature: User Roles
     And I am on the geocode page
     And I click on "Yes"
     Then I should see "Confirm district"
+
+  Scenario: An registered user should be able to vote
+    Given I sign out
+    And I am logged in as user "registered@iboard.cc" with password "thisisnotsecret"
+    And I am viewing the bills page for "h112-1723"
+    When I click on "Yes"
+    Then I should see "Bar"

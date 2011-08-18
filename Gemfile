@@ -89,6 +89,8 @@ group :development do
   gem 'rdoc'
   gem "rails3-generators"
   gem "ruby-debug19"
+  #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
+  gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git"
   gem 'unicorn'
   gem 'yard'
 end
