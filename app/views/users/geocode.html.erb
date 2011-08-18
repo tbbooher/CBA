@@ -93,7 +93,7 @@ if (!GBrowserIsCompatible()) {
 	map.addControl(new GScaleControl());
 	map.setMapType(G_MAP_OVERLAY);
 
-	map.setCenter(new GLatLng(<%= @coords %>), 2);
+	map.setCenter(new GLatLng(<%= @coords %>), 8);
 	createMarker(<%= @coords %>,'<%= @state %>', '12');
 }
 
