@@ -94,7 +94,7 @@ if (!GBrowserIsCompatible()) {
 	map.setMapType(G_MAP_OVERLAY);
 
 	map.setCenter(new GLatLng(<%= @coords %>), 9);
-	createMarker(<%= @coords %>,<%= @state %>, '12');
+	createMarker(<%= @coords %>,'<%= @state %>', '12');
 }
 
 function createMarker(x, y, s, d) {
