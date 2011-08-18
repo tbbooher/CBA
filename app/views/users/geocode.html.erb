@@ -1,42 +1,5 @@
 <% title "Input address" %>
  <%#= render :partial => 'users/district_includes/map.js', :locals => {:district => @district, :coords => @coords} %>
-<script type="text/javascript">
-
-var map;
-
-if (!GBrowserIsCompatible()) {
-	//alert("This page uses Google Maps, which is unfortunately not supported by your browser.");
-} else {
-	var WMS_URL = 'http://www.govtrack.us/perl/wms-cd.cgi?';
-	//var G_MAP_LAYER_FILLED = createWMSTileLayer(WMS_URL, "cd-filled,district=NJ12", null, "image/gif", null, null, null, .25);
-	var G_MAP_LAYER_FILLED = createWMSTileLayer(WMS_URL, "cd-filled,state=NJ", null, "image/gif", null, null, null, .25);
-	var G_MAP_LAYER_OUTLINES = createWMSTileLayer(WMS_URL, "cd-outline,district=NJ12", null, "image/gif", null, null, null, .66, "Data from GovTrack.us");
-	var G_MAP_OVERLAY = createWMSOverlayMapType([G_NORMAL_MAP.getTileLayers()[0], G_MAP_LAYER_FILLED, G_MAP_LAYER_OUTLINES], "Overlay");
-
-	document.getElementById("googlemap").style.height = (screen.height - 485) + "px";
-	map = new GMap2(document.getElementById("googlemap"));
-	map.enableContinuousZoom()
-	map.removeMapType(G_SATELLITE_MAP);
-	map.addMapType(G_MAP_OVERLAY);
-	map.addControl(new GLargeMapControl());
-	//map.addControl(new GMapTypeControl());
-	//map.addControl(new GOverviewMapControl());
-	map.addControl(new GScaleControl());
-	map.setMapType(G_MAP_OVERLAY);
-
-	map.setCenter(new GLatLng(40.377457, -74.4983525), 9);
-	createMarker(-74.4983525, 40.377457, 'NJ', '12');
-}
-
-function createMarker(x, y, s, d) {
-	var marker = new GMarker(new GPoint(x, y));
-	GEvent.addListener(marker, "click", function() {
-		if (d == 0) d = "At Large";
-		marker.openInfoWindowHtml("This is " + s + "'s district " + d + "!");
-	});
-	map.addOverlay(marker);
-}
-</script>
 <p>Is this your district?</p>
 <%= @address_attempt %>
 <%= form_tag 'district' do %>
@@ -106,3 +69,40 @@ function createMarker(x, y, s, d) {
 
 </div>
 <div class="clear_both"></div>
+<script type="text/javascript">
+
+var map;
+
+if (!GBrowserIsCompatible()) {
+	//alert("This page uses Google Maps, which is unfortunately not supported by your browser.");
+} else {
+	var WMS_URL = 'http://www.govtrack.us/perl/wms-cd.cgi?';
+	//var G_MAP_LAYER_FILLED = createWMSTileLayer(WMS_URL, "cd-filled,district=NJ12", null, "image/gif", null, null, null, .25);
+	var G_MAP_LAYER_FILLED = createWMSTileLayer(WMS_URL, "cd-filled,state=NJ", null, "image/gif", null, null, null, .25);
+	var G_MAP_LAYER_OUTLINES = createWMSTileLayer(WMS_URL, "cd-outline,district=NJ12", null, "image/gif", null, null, null, .66, "Data from GovTrack.us");
+	var G_MAP_OVERLAY = createWMSOverlayMapType([G_NORMAL_MAP.getTileLayers()[0], G_MAP_LAYER_FILLED, G_MAP_LAYER_OUTLINES], "Overlay");
+
+	document.getElementById("googlemap").style.height = (screen.height - 485) + "px";
+	map = new GMap2(document.getElementById("googlemap"));
+	map.enableContinuousZoom()
+	map.removeMapType(G_SATELLITE_MAP);
+	map.addMapType(G_MAP_OVERLAY);
+	map.addControl(new GLargeMapControl());
+	//map.addControl(new GMapTypeControl());
+	//map.addControl(new GOverviewMapControl());
+	map.addControl(new GScaleControl());
+	map.setMapType(G_MAP_OVERLAY);
+
+	map.setCenter(new GLatLng(40.377457, -74.4983525), 9);
+	createMarker(-74.4983525, 40.377457, 'NJ', '12');
+}
+
+function createMarker(x, y, s, d) {
+	var marker = new GMarker(new GPoint(x, y));
+	GEvent.addListener(marker, "click", function() {
+		if (d == 0) d = "At Large";
+		marker.openInfoWindowHtml("This is " + s + "'s district " + d + "!");
+	});
+	map.addOverlay(marker);
+}
+</script>
