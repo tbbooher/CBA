@@ -1,3 +1,20 @@
+
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+	<head>
+		<title>GovTrack Google Maps Congressional Districts Overlay Example</title>
+		<style type="text/css">
+			v\:* { behavior:url(#default#VML); }
+		</style>
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAF2jjgfkpOddMIjo3r_vhYxQ2LYO4t9FpMQp-hEZNbo0RPsyanxRej9Rkx83RZrGhbX6LYOLmZpzibA" type="text/javascript"></script>
+        <script type="text/javascript" src="http://www.govtrack.us/scripts/gmap-wms.js"></script>
+	</head>
+	<body>
+
+		<h1>GovTrack Google Maps Congressional Districts Overlay Example</h1>
+
+		<div id="googlemap" style="width: 100%; height: 355px; border: 1px solid blue; margin-top: 1em"></div>
+
+		<script type="text/javascript">
 var map;
 
 if (!GBrowserIsCompatible()) {
@@ -32,3 +49,7 @@ function createMarker(x, y, s, d) {
 	});
 	map.addOverlay(marker);
 }
+
+		</script>
+	</body>
+</html>
