@@ -100,6 +100,7 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to add a sponsor to a bill" do
     b = Bill.new
     b.title = Faker::Company.name
+    b.govtrack_name "s182"  #fake
     b.save_sponsor(400032)
     assert_equal "Marsha Blackburn", b.sponsor.full_name
   end
@@ -109,7 +110,9 @@ class BillTest < ActiveSupport::TestCase
     b = Bill.new(
         :congress => 112,
         :bill_type => 's',
-        :bill_number => 368
+        :bill_number => 368,
+        :title => 's368',
+        :govtrack_name => 's368'
     )
     cosponsor_ids = ["412411", "400626", "400224", "412284", "400570", "400206", "400209", "400068", "400288", "412271", "412218", "400141", "412480", "412469", "400277", "400367", "412397", "412309", "400411", "412283", "412434", "400342", "400010", "400057", "400260", "412487", "412436", "400348", "412478", "400633", "400656", "400115"]
     b.save_cosponsors(cosponsor_ids)
