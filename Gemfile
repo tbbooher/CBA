@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
 gem 'httparty'
 
-gem "rails", "3.1.0.rc5"
+gem "rails", "3.1.0.rc6"
 # Rails 3.1 - Asset Pipeline
 
 group :assets do
@@ -74,8 +74,10 @@ gem "will_paginate", "3.0.pre4"
 gem 'escape_utils'
 gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 
-# Gems by iboard.cc/CBA
+# Gems by iboard.cc <andreas@altendorfer.at>
 gem "jsort", "~> 0.0.1"
+gem 'progress_upload_field', '~> 0.0.1'
+
 
 # Markdown
 # do "easy_install pygments" on your system
