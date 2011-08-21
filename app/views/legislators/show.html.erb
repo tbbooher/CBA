@@ -1,13 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<% title @legislator.full_name %>
-
+<% title "House Legislators" %>
+<br />
+<%= @legislator.govtrack_id %>
+<br />
 <%= image_tag @legislator.image_location %>
-
 <p>
 <%= @legislator.state %> &nbsp;
 <%= @legislator.district %>
 </p>
+<br />
+<% @legislator.full_name %>
+<br />
+<% @legislator.party %>
+
+<p>
+  <%= "Roll Call" %>
+  <%= "Popularity" %>
+  <%= "Search" %>
+</p>
+
+<table>
+  <tr>
+    <th>Bill</th>
+    <th><%= @legislator.state @legislator.district %></th>
+    <th><%= @legislator.last_name %></th>
+    <th>Result</th>
+  </tr>
+
+  <tr>
+    <td><%= link_to @bill.full_name, @bill %></td>
+    <td><%= @bill.for @bill.abstain @bill.against %></td>
+    <td><%= @legislator.pvs_id %></td>
+    <td><%= @bill.result %></td>
+  </tr>
+<% end %>
+</table>
+
+
 
 <%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 <%= link_to 'Back', legislators_path %>
