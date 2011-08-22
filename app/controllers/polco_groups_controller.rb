@@ -7,12 +7,13 @@ class PolcoGroupsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml { render :xml => @polco_groups }
-      format.json { render :json => @polco_groups.map{|g| {:id => g.id, :name => g.name}}}
+      format.json { render :json => @polco_groups.map{|g| {:id => g.id, :name => g.name}} }
     end
   end
 
   def manage_groups
     @user = current_user
+    @joined_groups_json_data = @user.joined_groups.map{|g| {:id => g.id, :name => g.name}}.to_json
   end
 
   def update_groups
@@ -100,4 +101,5 @@ class PolcoGroupsController < ApplicationController
       format.xml { head :ok }
     end
   end
+
 end

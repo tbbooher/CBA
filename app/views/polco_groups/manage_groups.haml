@@ -1,6 +1,6 @@
 - title "manage groups"
 = simple_form_for :user, :url => update_groups_url do |f|
-  = text_area_tag 'joined_groups', @user.joined_groups.all.collect(&:id)
+  = text_area_tag 'joined_groups', @user.joined_groups.all.collect(&:id), "data-pre" => @joined_groups_json_data
   %ul
     %h2 states
     - PolcoGroup.states.each do |pg|
