@@ -29,12 +29,12 @@
   </tr>
 
   <tr>
+    <!--i assume @bill is the variable used to represent each individual bill-->
     <td><%= link_to @bill.full_name, @bill %></td>
     <td><%= @bill.for @bill.abstain @bill.against %></td>
     <td><%= @legislator.pvs_id %></td>
     <td><%= @bill.result %></td>
   </tr>
-<% end %>
 </table>
 
 
