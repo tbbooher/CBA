@@ -1,26 +1,6 @@
 - title "manage groups"
 = simple_form_for :user, :url => update_groups_url do |f|
-  = text_area_tag 'joined_groups', @user.joined_groups.all.collect(&:id), "data-pre" => @joined_groups_json_data
-  %ul
-    %h2 states
-    - PolcoGroup.states.each do |pg|
-      %li
-        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
-        = pg.name
-    %h2 districts
-    - PolcoGroup.districts.each do |pg|
-      %li
-        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
-        = pg.name
-    %h2 customs
-    - PolcoGroup.customs.each do |pg|
-      %li
-        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
-        = pg.name
+  = text_area_tag 'joined_groups', nil, "data-pre" => @joined_groups_json_data
+  = text_area_tag 'followed_groups', nil, "data-pre" => @followed_groups_json_data
 
-  =# f.input :followed_groups
   = f.submit
-
-%h1 all groups
-
-= PolcoGroup.all.map(&:name).to_sentence

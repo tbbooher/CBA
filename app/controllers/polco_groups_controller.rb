@@ -14,14 +14,19 @@ class PolcoGroupsController < ApplicationController
   def manage_groups
     @user = current_user
     @joined_groups_json_data = @user.joined_groups.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_json_data = @user.followed_groups.map{|g| {:id => g.id, :name => g.name}}.to_json
   end
 
   def update_groups
     @user = current_user
     @user.joined_group_ids = []
-    @user.joined_group_ids = params[:user][:joined_group_ids] || []
+    params[:joined_groups].split(",").each do |jg|
+      @user.joined_group_ids << BSON::ObjectId(jg)
+    end
     @user.followed_group_ids = []
-    @user.followed_group_ids = params[:user][:followed_group_ids] || []
+    params[:followed_groups].split(",").each do |jg|
+      @user.followed_group_ids << BSON::ObjectId(jg)
+    end
     respond_to do |format|
       if @user.save
         format.html { redirect_to manage_groups_path, :notice => 'success.' }
