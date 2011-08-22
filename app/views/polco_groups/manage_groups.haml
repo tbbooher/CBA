@@ -20,3 +20,7 @@
 
   =# f.input :followed_groups
   = f.submit
+
+%h1 all groups
+
+= PolcoGroup.all.map(&:name).to_sentence
