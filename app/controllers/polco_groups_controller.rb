@@ -2,11 +2,12 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    @polco_groups = PolcoGroup.all
+    @polco_groups = PolcoGroup.where(name: /#{params[:q]}/)
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml { render :xml => @polco_groups }
+      format.json { render :json => @polco_groups.map{|g| {:id => g.id, :name => g.name}}}
     end
   end
 

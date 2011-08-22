@@ -24,6 +24,10 @@ class User
   field :us_state, :type => String # TODO enum for this?
   field :district, :type => String
 
+  attr_accessible :joined_group_tokens
+  attr_reader :joined_group_tokens
+
+
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup"
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup"
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
@@ -40,6 +44,10 @@ class User
   
   def articles
     []
+  end
+
+  def joined_group_tokens=(ids)
+    self.joined_group_ids = ids.split(",")
   end
 
   references_many :authentications, :dependent => :delete

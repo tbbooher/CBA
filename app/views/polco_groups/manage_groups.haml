@@ -1,5 +1,6 @@
 - title "manage groups"
 = simple_form_for :user, :url => update_groups_url do |f|
+  = text_area_tag 'joined_groups', @user.joined_groups.all.collect(&:id)
   %ul
     %h2 states
     - PolcoGroup.states.each do |pg|
@@ -16,6 +17,6 @@
       %li
         = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
         = pg.name
-  =# f.input :joined_groups, :hint => 'just a hint'
+
   =# f.input :followed_groups
   = f.submit
