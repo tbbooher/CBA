@@ -2,7 +2,7 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    @polco_groups = PolcoGroup.where(name: /#{params[:q]}/)
+    @polco_groups = PolcoGroup.where(name: /#{params[:q]}/i)
 
     respond_to do |format|
       format.html # index.html.erb
