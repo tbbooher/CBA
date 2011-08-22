@@ -2,10 +2,11 @@ class PolcoGroup
   include Mongoid::Document
   field :name, :type => String
   field :type, :type => Symbol, :default => :custom
+  field :description, :type => String
   index :name
   index :type
 
-  # TODO would like to limit groups to :custom, :state, :district, :common, :country
+  belongs_to :owner, :class_name => "User", :inverse_of => :custom_groups
 
   has_and_belongs_to_many :members, :class_name => "User", :inverse_of => :joined_groups
   has_and_belongs_to_many :followers, :class_name => "User", :inverse_of => :followed_groups
