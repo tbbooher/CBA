@@ -1,6 +1,10 @@
 - title "manage groups"
 = simple_form_for :user, :url => update_groups_url do |f|
-  = text_area_tag 'joined_groups', nil, "data-pre" => @joined_groups_json_data
-  = text_area_tag 'followed_groups', nil, "data-pre" => @followed_groups_json_data
+  %div
+    %h2 Joined Groups
+    = text_area_tag 'joined_groups', nil, "data-pre" => @joined_groups_json_data
+  %div
+    %h2 Followed Groups
+    = text_area_tag 'followed_groups', nil, "data-pre" => @followed_groups_json_data
 
   = f.submit
