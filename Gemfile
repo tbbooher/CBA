@@ -121,5 +121,7 @@ group :test do
   gem "gherkin"
   gem 'test-unit'
   gem "autotest-fsevent"
+  gem 'webmock'
+  gem 'vcr'
 end
 

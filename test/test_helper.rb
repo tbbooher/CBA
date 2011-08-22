@@ -4,6 +4,7 @@ SimpleCov.start do
   add_filter "/test/"
 end
 
+require 'vcr_setup.rb'
 #require 'webmock/test_unit'
 #require 'vcr'
 

@@ -51,6 +51,8 @@ module NavigationHelpers
       rescue Object => e
         raise "Can't find user #{user.name} / #{e.inspect}"
       end
+    when /groups management page/
+        '/polco_groups/manage_groups'
     when /blogs page/
       '/blogs'
     when /blog path of "([^"]*)"/

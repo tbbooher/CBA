@@ -6,7 +6,26 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @polco_groups }
+      format.xml { render :xml => @polco_groups }
+    end
+  end
+
+  def manage_groups
+    @user = current_user
+  end
+
+  def update_groups
+    @user = current_user
+    @user.joined_group_ids = []
+    @user.joined_group_ids = params[:user][:joined_group_ids] || []
+    @user.followed_group_ids = []
+    @user.followed_group_ids = params[:user][:followed_group_ids] || []
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to manage_groups_path, :notice => 'success.' }
+      else
+        format.html { redirect_to(manage_groups_url, :notice => 'error.') }
+      end
     end
   end
 
@@ -17,7 +36,7 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @polco_group }
+      format.xml { render :xml => @polco_group }
     end
   end
 
@@ -28,7 +47,7 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @polco_group }
+      format.xml { render :xml => @polco_group }
     end
   end
 
@@ -45,10 +64,10 @@ class PolcoGroupsController < ApplicationController
     respond_to do |format|
       if @polco_group.save
         format.html { redirect_to(@polco_group, :notice => 'PolcoGroup was successfully created.') }
-        format.xml  { render :xml => @polco_group, :status => :created, :location => @polco_group }
+        format.xml { render :xml => @polco_group, :status => :created, :location => @polco_group }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @polco_group.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @polco_group.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -61,10 +80,10 @@ class PolcoGroupsController < ApplicationController
     respond_to do |format|
       if @polco_group.update_attributes(params[:group])
         format.html { redirect_to(@polco_group, :notice => 'PolcoGroup was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @polco_group.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @polco_group.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -77,7 +96,7 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(polco_groups_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 end

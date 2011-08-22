@@ -1,0 +1,21 @@
+- title "manage groups"
+= simple_form_for :user, :url => update_groups_url do |f|
+  %ul
+    %h2 states
+    - PolcoGroup.states.each do |pg|
+      %li
+        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
+        = pg.name
+    %h2 districts
+    - PolcoGroup.districts.each do |pg|
+      %li
+        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
+        = pg.name
+    %h2 customs
+    - PolcoGroup.customs.each do |pg|
+      %li
+        = check_box_tag :joined_groups_ids, pg.id, @user.joined_groups.all.include?(pg), :name => 'user[joined_group_ids][]'
+        = pg.name
+  =# f.input :joined_groups, :hint => 'just a hint'
+  =# f.input :followed_groups
+  = f.submit

@@ -1,0 +1,1 @@
+$ -> $('#polco_groups').tokenInput '/polco_groups.json', crossDomain: false

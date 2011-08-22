@@ -8,6 +8,9 @@ Cba::Application.routes.draw do
 
   get "search/index"
 
+  match "/polco_groups/manage_groups" => "polco_groups#manage_groups", :as => :manage_groups
+  match "/polco_groups/update_groups" => "polco_groups#update_groups", :as => :update_groups
+
   resources :polco_groups
   # TODO -- might be deprecated since it is embedded
   resources :votes
