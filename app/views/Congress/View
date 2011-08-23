@@ -1,0 +1,24 @@
+<div style="text-align: center;">
+    <h1> Welcome to Polco </h1>
+    <br />
+    <h3> 112th Congress </h3>
+    <br />
+    <form action="form_action.asp" method="get">
+        Search Bills
+        <select>
+            <option>Bill_1</option>
+            <option>Bill_2</option>
+            <option>Bill_3</option>
+            <option>Bill_4</option>
+        </select>
+        <input type="search" name="bill_name" placeholder="Search"/>
+        <input type="hidden"/>
+    </form>
+    <!--Maybe add a datalist for bills-->
+
+    <form>
+        <fieldset>
+
+        </fieldset>
+    </form>
+</div>
