@@ -1,2 +1,4 @@
-$ -> $('#joined_groups').tokenInput '/polco_groups.json', crossDomain: false,prePopulate: $('#joined_groups').data('pre'), theme: 'facebook'
-$ -> $('#followed_groups').tokenInput '/polco_groups.json', crossDomain: false,prePopulate: $('#followed_groups').data('pre'), theme: 'facebook'
+$ -> $('#joined_groups').tokenInput '/polco_groups/custom_groups.json', crossDomain: false,prePopulate: $('#joined_groups').data('pre'), theme: 'facebook'
+$ -> $('#followed_groups_states').tokenInput '/polco_groups/state_groups.json', crossDomain: false,prePopulate: $('#followed_groups_states').data('pre'), theme: 'facebook'
+$ -> $('#followed_groups_districts').tokenInput '/polco_groups/district_groups.json', crossDomain: false,prePopulate: $('#followed_groups_districts').data('pre'), theme: 'facebook'
+$ -> $('#followed_groups_custom').tokenInput '/polco_groups/custom_groups.json', crossDomain: false,prePopulate: $('#followed_groups_custom').data('pre'), theme: 'facebook'

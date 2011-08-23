@@ -2,7 +2,7 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    @polco_groups = PolcoGroup.where(name: /#{params[:q]}/i)
+    @polco_groups = PolcoGroup.all # where(name: /#{params[:q]}/i)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,10 +11,39 @@ class PolcoGroupsController < ApplicationController
     end
   end
 
+  def custom_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :custom))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
+  def state_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :state))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
+  def district_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :district))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
   def manage_groups
     @user = current_user
-    @joined_groups_json_data = @user.joined_groups.map{|g| {:id => g.id, :name => g.name}}.to_json
-    @followed_groups_json_data = @user.followed_groups.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @joined_groups_json_data = @user.joined_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_states = @user.followed_groups.select{|s| s.type == :state}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_districts = @user.followed_groups.select{|s| s.type == :district}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_custom = @user.followed_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
   end
 
   def update_groups
@@ -24,7 +53,8 @@ class PolcoGroupsController < ApplicationController
       @user.joined_group_ids << BSON::ObjectId(jg)
     end
     @user.followed_group_ids = []
-    params[:followed_groups].split(",").each do |fg|
+    followed_groups = params[:followed_groups_states] + params[:followed_groups_districts] + params[:followed_groups_custom]
+    followed_groups.split(",").each do |fg|
       @user.followed_group_ids << BSON::ObjectId(fg)
     end
     respond_to do |format|
@@ -105,6 +135,12 @@ class PolcoGroupsController < ApplicationController
       format.html { redirect_to(polco_groups_url) }
       format.xml { head :ok }
     end
+  end
+
+  private
+
+  def prep_format(list)
+    list.map{|g| {:id => g.id, :name => g.name}}
   end
 
 end
