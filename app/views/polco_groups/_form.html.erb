@@ -1,8 +1,16 @@
 <%= simple_form_for(@polco_group) do |f| %>
   <%= f.error_messages %>
   <%= f.input :name %>
-  <%= f.input :type,  :collection => [:custom, :state, :district] %>
+  <% if current_user.admin? %>
+        <%= f.input :type,  :collection => [:custom, :state, :district] %>
+  <% else %>
+        <%= f.input :type, :as => :hidden, :input_html => { :value => :custom }  %>
+  <% end  %>
   <%= f.input :description, :as => :text %>
-  <%= f.input :owner, :input_html => { :value => current_user.id } %>
+  <% if current_user.admin? %>
+     <%= f.input :owner, :collection => User.all.to_a %>
+  <% else %>
+     <%= f.input :owner, :as => :hidden, :input_html => { :value => current_user.id } %>
+  <% end %>
   <%= f.button :submit %>
 <% end %>
