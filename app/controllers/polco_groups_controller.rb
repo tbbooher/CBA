@@ -53,8 +53,8 @@ class PolcoGroupsController < ApplicationController
       @user.joined_group_ids << BSON::ObjectId(jg)
     end
     @user.followed_group_ids = []
-    followed_groups = params[:followed_groups_states] + params[:followed_groups_districts] + params[:followed_groups_custom]
-    followed_groups.split(",").each do |fg|
+    followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
+    followed_groups.each do |fg|
       @user.followed_group_ids << BSON::ObjectId(fg)
     end
     respond_to do |format|
