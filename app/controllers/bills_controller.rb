@@ -93,4 +93,7 @@ class BillsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def silly_nick
+  end
 end

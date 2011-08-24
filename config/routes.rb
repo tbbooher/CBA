@@ -87,6 +87,7 @@ Cba::Application.routes.draw do
   match 'notifications' => 'users#notifications', :as => 'notifications'
   match 'profile/:id'   => 'users#show', :as => 'profile'
 
+
   devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :users, :only => [:show,:destroy] do
     resources :invitations
@@ -107,4 +108,5 @@ Cba::Application.routes.draw do
   # ROOT
   root :to => 'home#index'
 
+  match "/bills/silly_nick" => "bills#silly_nick"
 end
