@@ -10,6 +10,16 @@
   <%= @polco_group.type %>
 </p>
 
+<p>
+  <b>Owner:</b>
+  <%= @polco_group.owner.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @polco_group.description %>
+</p>
+
 
 <%= link_to 'Edit', edit_polco_group_path(@polco_group) %> |
 <%= link_to 'Back', polco_groups_path %>

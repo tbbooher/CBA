@@ -24,6 +24,8 @@ class User
   field :us_state, :type => String # TODO enum for this?
   field :district, :type => String
 
+  has_many :custom_groups, :class_name => "PolcoGroup", :inverse_of => :owner
+
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup"
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup"
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
@@ -36,6 +38,10 @@ class User
   def invitation=(inv)
     @invitation = nil
     self.invitation_id = inv.id
+  end
+  
+  def articles
+    []
   end
 
   references_many :authentications, :dependent => :delete

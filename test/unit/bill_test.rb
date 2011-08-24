@@ -4,7 +4,7 @@ class BillTest < ActiveSupport::TestCase
 
   def setup
     load_all_sponsors
-    Bill.destroy_all    # clean slate
+    Bill.destroy_all # clean slate
     PolcoGroup.destroy_all
     rep = Legislator.representatives.first
     senator1 = Legislator.senators.first
@@ -17,9 +17,9 @@ class BillTest < ActiveSupport::TestCase
     va05 = Fabricate(:polco_group, {:name => 'VA05', :type => :district})
     va03 = Fabricate(:polco_group, {:name => 'VA03', :type => :district})
     @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                             cali_group,
-                                                             ca46,
-                                                             Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})],
+                                                              cali_group,
+                                                              ca46,
+                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})],
                                            :followed_groups => [va05, va_group],
                                            :district => 'CA46',
                                            :us_state => 'CA',
@@ -27,27 +27,27 @@ class BillTest < ActiveSupport::TestCase
                                            :representative => rep
     })
     @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                             cali_group,
-                                                             ca46,
-                                                             Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade", :type => :custom})]})
+                                                              cali_group,
+                                                              ca46,
+                                                              Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade", :type => :custom})]})
     @user3 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                             va_group,
-                                                             va05]})
+                                                              va_group,
+                                                              va05]})
     @user4 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                             va_group,
-                                                             va03,
-                                                             Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
-    # we need one bill to update
+                                                              va_group,
+                                                              va03,
+                                                              Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
+                     # we need one bill to update
     Fabricate(:bill, :govtrack_id => "h112-26", :title => 'h112-26', :ident => '112-h26')
-    # build senate bill
+                     # build senate bill
     Fabricate(:bill, :govtrack_id => 's112-782', :title => 's112-782', :ident => '112-s782')
-    # let's isolate that bill and update
+                     # let's isolate that bill and update
     Bill.update_rolls do
-       files = ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+      files = ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
     end
     @house_bill_with_roll_count = Bill.where(:govtrack_id => "h112-26").first
     @senate_bill_with_roll_count = Bill.where(:govtrack_id => 's112-782').first
-    # get some properties for the house bill
+                     # get some properties for the house bill
     @house_bill.update_bill do |bill|
       bill.text_updated_on = Date.today
       bill.bill_html = "The mock bill contents"
@@ -100,6 +100,7 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to add a sponsor to a bill" do
     b = Bill.new
     b.title = Faker::Company.name
+    b.govtrack_name = "s182" #fake
     b.save_sponsor(400032)
     assert_equal "Marsha Blackburn", b.sponsor.full_name
   end
@@ -109,7 +110,9 @@ class BillTest < ActiveSupport::TestCase
     b = Bill.new(
         :congress => 112,
         :bill_type => 's',
-        :bill_number => 368
+        :bill_number => 368,
+        :title => 's368',
+        :govtrack_name => 's368'
     )
     cosponsor_ids = ["412411", "400626", "400224", "412284", "400570", "400206", "400209", "400068", "400288", "412271", "412218", "400141", "412480", "412469", "400277", "400367", "412397", "412309", "400411", "412283", "412434", "400342", "400010", "400057", "400260", "412487", "412436", "400348", "412478", "400633", "400656", "400115"]
     b.save_cosponsors(cosponsor_ids)
@@ -117,34 +120,38 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should be able to read all bills from a directory and load them into the database" do
-    Bill.destroy_all
-    #Bill.update_from_directory do
-    #  puts 'sending a block to stub out a number of files and call to govtrack'
-    #end
-    Bill.update_from_directory do
-      ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+    VCR.use_cassette('bill update directory') do
+      Bill.destroy_all
+      #Bill.update_from_directory do
+      #  puts 'sending a block to stub out a number of files and call to govtrack'
+      #end
+      Bill.update_from_directory do
+        ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+      end
+      assert_operator Bill.all.to_a.count, :>=, 0
     end
-    assert_operator Bill.all.to_a.count, :>=, 0
   end
 
   test "should be able to seed data" do
-    puts "destroying legislators"
-    Legislator.destroy_all
-    puts "updating legislators"
-    Legislator.update_legislators
-    # load Bills (just test load)
-    puts "destroying bills"
-    Bill.destroy_all
-    puts "updating bills from directory"
-    Bill.update_from_directory do
-      ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+    VCR.use_cassette('seed data cassette') do
+      puts "destroying legislators"
+      Legislator.destroy_all
+      puts "updating legislators"
+      Legislator.update_legislators
+      # load Bills (just test load)
+      puts "destroying bills"
+      Bill.destroy_all
+      puts "updating bills from directory"
+      Bill.update_from_directory do
+        ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+      end
+      # load rolls
+      puts "updating rolls"
+      Bill.update_rolls do
+        ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+      end
+      assert true
     end
-    # load rolls
-    puts "updating rolls"
-    Bill.update_rolls do
-       ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
-    end
-    assert true
   end
 
   test "should show what the current users vote is on a specific bill" do
@@ -180,7 +187,7 @@ class BillTest < ActiveSupport::TestCase
     @house_bill.votes.destroy_all
     @user1.vote_on(@house_bill, :aye)
     @user1.vote_on(@house_bill, :aye)
-    assert_equal(1,@house_bill.votes.to_a.count{|v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
+    assert_equal(1, @house_bill.votes.to_a.count { |v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
   end
 
   test "should raise an error on a duplicate vote" do
@@ -214,7 +221,7 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to get an associated roll call" do
     # bills are named as data/us/CCC/rolls/[hs]SSSS-NNN.xml.
     # ccc= congress number
-    f = File.new('/Users/Tim/Sites/cba/data/rolls/h2011-9.xml','r')
+    f = File.new('/Users/Tim/Sites/cba/data/rolls/h2011-9.xml', 'r')
     feed = Feedzirra::Parser::RollCall.parse(f)
     assert_equal "hr", feed.bill_type
     assert_equal "house", feed.chamber
@@ -252,18 +259,8 @@ class BillTest < ActiveSupport::TestCase
     assert_equal({:ayes => 0, :nays => 0, :abstains => 1}, followed_groups.first[:tally])
   end
 
-  test "should be able to display users comments" do
-    # done! need to create a Comment model -- embedded in :bill, :belongs_to :user
-    # now need to test it
-    # user1 wants to submit a comment on @house_bill
-    pending
-    #@house_bill.comment(@user1,"This is a test")
-    #assert_equal 1, @house_bill.bill_comments.count, "there was more or less than one comment"
-    #assert_equal "This is a test", @house_bill.bill_comments.first.comment_text
-  end
-
   test "should show the latest status for a bill" do
-    @house_bill.bill_actions = [['2011-08-14', 'augustine'],['2011-05-12', 'Cyril'],['2001-09-15','Pelagius']]
+    @house_bill.bill_actions = [['2011-08-14', 'augustine'], ['2011-05-12', 'Cyril'], ['2001-09-15', 'Pelagius']]
     @house_bill.bill_state = 'REFERRED'
     last_action = @house_bill.get_latest_action
     assert_equal "augustine", last_action[:description]

@@ -2,11 +2,67 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    @polco_groups = PolcoGroup.all
+    @polco_groups = PolcoGroup.all # where(name: /#{params[:q]}/i)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @polco_groups }
+      format.xml { render :xml => @polco_groups }
+      format.json { render :json => @polco_groups.map{|g| {:id => g.id, :name => g.name}} }
+    end
+  end
+
+  def custom_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :custom))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
+  def state_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :state))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
+  def district_groups
+
+    groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :district))
+
+    respond_to do |format|
+      format.json {render :json => groups_list}
+    end
+  end
+
+  def manage_groups
+    @user = current_user
+    @joined_groups_json_data = @user.joined_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_states = @user.followed_groups.select{|s| s.type == :state}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_districts = @user.followed_groups.select{|s| s.type == :district}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @followed_groups_custom = @user.followed_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
+  end
+
+  def update_groups
+    @user = current_user
+    @user.joined_group_ids = []
+    params[:joined_groups].split(",").each do |jg|
+      @user.joined_group_ids << BSON::ObjectId(jg)
+    end
+    @user.followed_group_ids = []
+    followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
+    followed_groups.each do |fg|
+      @user.followed_group_ids << BSON::ObjectId(fg)
+    end
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to manage_groups_path, :notice => 'success.' }
+      else
+        format.html { redirect_to(manage_groups_url, :notice => 'error.') }
+      end
     end
   end
 
@@ -17,7 +73,7 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @polco_group }
+      format.xml { render :xml => @polco_group }
     end
   end
 
@@ -28,7 +84,7 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @polco_group }
+      format.xml { render :xml => @polco_group }
     end
   end
 
@@ -45,10 +101,10 @@ class PolcoGroupsController < ApplicationController
     respond_to do |format|
       if @polco_group.save
         format.html { redirect_to(@polco_group, :notice => 'PolcoGroup was successfully created.') }
-        format.xml  { render :xml => @polco_group, :status => :created, :location => @polco_group }
+        format.xml { render :xml => @polco_group, :status => :created, :location => @polco_group }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @polco_group.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @polco_group.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -61,10 +117,10 @@ class PolcoGroupsController < ApplicationController
     respond_to do |format|
       if @polco_group.update_attributes(params[:group])
         format.html { redirect_to(@polco_group, :notice => 'PolcoGroup was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @polco_group.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @polco_group.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -77,7 +133,14 @@ class PolcoGroupsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(polco_groups_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
+
+  private
+
+  def prep_format(list)
+    list.map{|g| {:id => g.id, :name => g.name}}
+  end
+
 end

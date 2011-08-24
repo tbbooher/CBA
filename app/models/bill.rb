@@ -33,6 +33,7 @@ class Bill
   field :govtrack_id, :type => String
   # add index
   field :govtrack_name, :type => String
+
   index :govtrack_name
 
   field :summary_word_count, :type => Integer
@@ -50,14 +51,10 @@ class Bill
 
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
-
-  # TODO -- needs validations
+  validates_presence_of :govtrack_name
 
   embeds_many :votes
   embeds_many :member_votes
-  #embeds_many :bill_comments
-
-  #embeds_many :congressional_votes
 
   def short_title
     # we show the first short title
@@ -106,7 +103,7 @@ class Bill
     process_votes(self.votes.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
   end
 
-  def get_vote_values(votes_collection) # TODO delete?
+  def get_vote_values(votes_collection)
     votes_collection.map { |v| v.value }
   end
 
@@ -119,7 +116,7 @@ class Bill
     o
   end
 
-  def users_vote(user) # TODO rename?
+  def users_vote(user)
     self.votes.select { |v| v.user_id = user.id }.first.value
   end
 
@@ -322,6 +319,8 @@ class Bill
       puts "starting with #{f.path} . . ."
       bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)[1..3]
       # "h112-26"
+      # at this point, we only read in bill roll calls
+      # if 1. it is a bill roll, 2. if we are tracking that bill and 3. if the date of the roll is more recent than the last date of the roll recorded
       if bd && Bill.all.to_a.map{|b| b.govtrack_id}.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}")
         f.rewind
         feed = Feedzirra::Parser::RollCall.parse(f)
@@ -400,8 +399,6 @@ class Bill
     abstain_count = (v[:abstain] ? v[:abstain].count : 0)
     {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count}
   end
-
-  # TODO potentially deprecated
 
   def get_tally(votes)
     ayes = votes.count { |val| val == :aye }

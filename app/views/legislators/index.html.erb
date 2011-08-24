@@ -15,7 +15,7 @@
     <td><%= legislator.district %></td>
     <td><%= link_to legislator.full_name, legislator %></td>
     <td><%= legislator.party %></td>
-    <td><%= image_tag @legislator.image_location %></td>
+    <td><%= image_tag legislator.image_location %></td>
     <td><%#= link_to 'Edit', edit_legislator_path(legislator) %></td>
     <td><%#= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
