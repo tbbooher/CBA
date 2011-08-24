@@ -1,23 +1,21 @@
-<% title "Legislators" %>
+<% title "Federal Legislators" %>
 
 <%= will_paginate @legislators %>
 
 <table>
   <tr>
+    <th>Constituency</th>
     <th>Name</th>
-    <th>Title</th>
-    <th>District</th>
-    <th>State</th>
     <th>Party</th>
+    <th>Picture</th>
   </tr>
 
 <% @legislators.each do |legislator| %>
   <tr>
-    <td><%= link_to legislator.full_name, legislator %></td>
-    <td><%= legislator.title %></td>
     <td><%= legislator.district %></td>
-    <td><%= legislator.state %></td>
+    <td><%= link_to legislator.full_name, legislator %></td>
     <td><%= legislator.party %></td>
+    <td><%= image_tag @legislator.image_location %></td>
     <td><%#= link_to 'Edit', edit_legislator_path(legislator) %></td>
     <td><%#= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
