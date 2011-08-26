@@ -31,13 +31,8 @@ top priority: get user model working with districts displaying
 
 errors:
 =============================
-- <a href="#" onclick="image_popup('/cover_pictures/popup/missing.png'); return false;"><img alt="Missing" src="/cover_pictures/thumb/missing.png"></a>
-doesn't exist
 - linked in has error: https://github.com/intridea/omniauth/pull/297  (i fixed by pulling gem from github)
-- Email can't be blank
-Email can't be blank (when signing up)   (duplicated on his site)
 
-- I can't crop my picture  (this isn't working on his site either)
-- rake db:seed production
+
 
 
