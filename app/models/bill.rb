@@ -49,6 +49,9 @@ class Bill
   field :abstain, :type => Integer
   field :present, :type => Integer
 
+  scope :house_bills, where(bill_type: 'h')
+  scope :senate_bills, where(bill_type: 's')
+
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
   validates_presence_of :govtrack_name
@@ -83,6 +86,10 @@ class Bill
 
   def bill_title
     short_title || long_title || "no title available!"
+  end
+
+  def tiny_title
+    self.title.capitalize
   end
 
   # ------------------- Public voting aggregation methods -------------------

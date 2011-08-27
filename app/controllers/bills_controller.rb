@@ -94,6 +94,14 @@ class BillsController < ApplicationController
     end
   end
 
-  def silly_nick
+  def house_bills
+    @bills = Bill.house_bills
+    @user = current_user
+    @bill = Bill.first  #find(params[:bill_id])
+    @legislator = @current_bill.sponsor
+  end
+
+  def senate_bills
+    @bills = Bill.senate_bills
   end
 end

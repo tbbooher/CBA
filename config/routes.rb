@@ -13,7 +13,7 @@ Cba::Application.routes.draw do
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
-
+  match "/bills/house_bills" => "bills#house_bills", :as => :house_bills_page
 
   resources :polco_groups
   # TODO -- might be deprecated since it is embedded

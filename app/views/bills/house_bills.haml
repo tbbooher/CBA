@@ -1,0 +1,19 @@
+= title "House Bills and voting page for #{@current_bill.tiny_title}"
+
+%div#bill_details
+  %div#bill_title
+    = @current_bill.tiny_title
+  %div#short_description
+    = @current_bill.long_title
+  %div#details
+    = link_to @legislator.full_name, legislators_path(@legislator.id)
+  %div#vote_region
+    = determine_vote(@user)
+  %div#comments
+    = render :partial => 'comments_subpage', :locals => {:bill => @current_bill}
+
+%ul
+  - @bills.each do |bill|
+    %li
+      = link_to "#{bill.tiny_title} #{bill.short_title}", house_bills_page_path(bill.id)
+%p this is the next paragraph
