@@ -1,16 +1,16 @@
-= title "House Bills and voting page for #{@current_bill.tiny_title}"
+- title "House Bills and voting page for #{@bill.tiny_title}"
 
 %div#bill_details
   %div#bill_title
-    = @current_bill.tiny_title
+    = @bill.tiny_title
   %div#short_description
-    = @current_bill.long_title
+    = @bill.long_title
   %div#details
-    = link_to @legislator.full_name, legislators_path(@legislator.id)
+    = link_to @legislator.full_name, legislator_path(@legislator.id)
   %div#vote_region
     = determine_vote(@user)
   %div#comments
-    = render :partial => 'comments_subpage', :locals => {:bill => @current_bill}
+    = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
 %ul
   - @bills.each do |bill|

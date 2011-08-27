@@ -88,10 +88,18 @@ div.page_error {
 
 div#bill_details {
   border: 1px solid black;
-  width:400px;
+  width:650px;
   padding:10px;
   border-radius:10px;
-  background-color:#cccccc;
+  background-color:red;
+  margin-left:auto;
+  margin-right:auto;
+  div#details {
+    margin-left:auto;
+    margin-right:auto;
+    width:200px;
+    background-color:blue;
+  }
 }
 
 div#bill_title {
@@ -100,6 +108,7 @@ div#bill_title {
 }
 
 div#short_description {
-  width: 400px;
-  margin-left: 100px;
+  width: 600px;
+  margin-left:auto;
+  margin-right:auto;
 }
