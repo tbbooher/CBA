@@ -99,7 +99,7 @@ class BillsController < ApplicationController
       @bill_type = params[:bill_type]
     else
       # let's set a default if none is specified
-      @chamber == "house" ? @bill_type = "h" : bill_type = "s"
+      @chamber == "house" ? @bill_type = "h" : @bill_type = "s"
     end
     if @chamber == "house"
       @filter_options = ["h",  "hc", "hj", "hr"]
