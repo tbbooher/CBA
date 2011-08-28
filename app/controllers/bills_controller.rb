@@ -143,6 +143,6 @@ class BillsController < ApplicationController
     bill.comments << comment # need markup stuff . . .
     user.vote_on(bill, vote)
     bill.save! # <-- the key line
-    redirect_to e_ballot_path(bill.id)
+    redirect_to e_ballot_path(params[:chamber], params[:bill_type], bill.id)
   end
 end

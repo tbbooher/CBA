@@ -45,6 +45,8 @@
             = content_tag :div, :id => 'new_comment_form' do
               %h5
                 = hidden_field_tag "#{@bill.class.to_s.downcase.underscore}_id" , @bill.id.to_s
+                = hidden_field_tag "chamber", @chamber
+                = hidden_field_tag "bill_type", @bill_type
                 .field
                   = label_tag :comment
                   = text_area_tag :comment, "", :rows => 5, :cols => 40, :placeholder => t(:be_polite)
