@@ -112,10 +112,10 @@ class BillsController < ApplicationController
     # need to consider chamber!!
     if params[:id]
       @bill = Bill.find(params[:id])
-    else # but still need to consider type explicitly!
-      @bill = (@chamber == "house" ? Bill.house_bills.first : Bill.senate_bills.first)
+    else # we have to take the first bill on the page since the user didn't specify the page
+      @bill = (@chamber == "house" ? Bill.house_bills.where(bill_type: @bill_type).first : Bill.senate_bills.where(bill_type: @bill_type).first)
     end
-    @legislator = @bill.sponsor
+    @legislator = @bill.sponsor unless @bill.nil?
   end
 
   def senate_bills

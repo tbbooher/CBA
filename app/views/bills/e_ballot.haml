@@ -2,14 +2,16 @@
 
 %p
   Currently filtering by
-  = @bill_type.capitalize
+  = Bill.full_type(@bill_type)
 
 %p
   Pick a way to filter bills
-  = @filter_options.map{|fo| link_to(fo, e_ballot_path('house', fo))}.to_sentence.html_safe
-
+  = content_tag :div, {:class => 'vote_container'} do
+    = content_tag :ul, {:id => 'vote_list'} do
+      - @filter_options.each do |fo|
+        = content_tag(:li,link_to(Bill.full_type(fo), e_ballot_path('house', fo)))
 %p
-  Pick senate or house
+  Pick a chamber (on left?)
   = link_to "senate", e_ballot_path('senate')
   or
   = link_to "house", e_ballot_path('house')

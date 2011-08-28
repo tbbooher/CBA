@@ -172,6 +172,27 @@ class Bill
     end
   end
 
+  def self.full_type(bill_type)
+    case bill_type
+      when 'h' then
+        'H.R.'
+      when 'hr' then
+        'H.Res.'
+      when 'hj' then
+        'H.J.Res.'
+      when 'hc' then
+        'H.C.Res.'
+      when 's' then
+        'S.'
+      when 'sr' then
+        'S.Res.'
+      when 'sj' then
+        'S.J.Res.'
+      when 'sc' then
+        'S.C.Res.'
+    end
+  end
+
   def full_number
     case bill_type
       when 'h' then
