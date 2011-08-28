@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<% title "House Legislators" %>
-<br />
-<%= @legislator.govtrack_id %>
-<br />
-<%= image_tag @legislator.image_location %>
-<p>
-<%= @legislator.state %> &nbsp;
-<%= @legislator.district %>
-</p>
+<% title "House District/Legislators" %>
 <br>
-<% @legislator.full_name %>
-<br />
-<% @legislator.party %>
+<%= @legislator.full_name %>
+<br>
+<%= image_tag @legislator.image_location %>
+
+<%= @legislator.party %> &nbsp;
+
 
 <p>
   <%= "Roll Call" %>
@@ -36,11 +31,13 @@
         <td><%= link_to bill.short_title, bill_path(bill) %></td>
         <td><%= "something like bill.display_results ?" %></td>
         <td><%= @legislator.pvs_id %></td>
+        <td><%= "bill.result" %></td>
       </tr>
 <% end %>
 </table>
 
 
-
+<!--Comments section-->
 <%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 <%= link_to 'Back', legislators_path %>
+

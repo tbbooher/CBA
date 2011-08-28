@@ -1,20 +1,26 @@
-<% title "Legislators" %>
+<% title "112th Congress" %>
+
+<p>
+<%= "House District/Legislators" %>
+<%= "Alphabetical" %>
+<%= "Search" %>
+</p>
 
 <%= will_paginate @legislators %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>State</th>
+    <th>District</th>
+    <th>Rep. Name</th>
+    <th>Rep. Picture</th>
     <th>Party</th>
   </tr>
 
 <% @legislators.each do |legislator| %>
   <tr>
+    <td><%= "#{legislator.state} #{legislator.district}" %></td>
     <td><%= link_to legislator.full_name, legislator %></td>
-    <td><%= legislator.title %></td>
-    <td><%= legislator.state %></td>
+    <td><%= image_tag @legislator.image_location %></td>
     <td><%= legislator.party %></td>
     <td><%#= link_to 'Edit', edit_legislator_path(legislator) %></td>
     <td><%#= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -22,4 +28,32 @@
 <% end %>
 </table>
 
+
+<p>
+  <%= "Roll Call" %>
+  <%= "Recent" %>
+  <%= "Search" %>
+</p>
+
+<table>
+  <tr>
+    <th>Bill</th>
+    <th><%= "Congressional Vote (for,abstain,against" %></th>
+    <th>Result</th>
+  </tr>
+  <!--I think this should be @bills.each instead of @legislator.bills.each-->
+<% @legislator.bills.each do |bill| %>
+    <!-- need to check for the condition that they have no
+    bills -->
+      <tr>
+        <!--i assume @bill is the variable used to represent each individual bill-->
+        <!-- yeah, but you need to load their bills and iterate -->
+        <td><%= link_to bill.short_title, bill_path(bill) %></td>
+        <td><%= "something like bill.display_results (for,abstain,against) ?" %></td>
+        <td><%= "bill.result" %></td>
+      </tr>
+<% end %>
+</table>
+
+<!--Need to add Comments section-->
 <%#= link_to 'New Legislator', new_legislator_path %>
