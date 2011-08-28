@@ -49,8 +49,8 @@ class Bill
   field :abstains, :type => Integer
   field :presents, :type => Integer
 
-  scope :house_bills, where(bill_type: 'h')
-  scope :senate_bills, where(bill_type: 's')
+  scope :house_bills, where(title: /^h/)
+  scope :senate_bills, where(title: /^s/)
 
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
@@ -73,6 +73,10 @@ class Bill
       Rails.logger.warn "no titles for #{self.ident}"
     end
     txt || self.title
+  end
+
+  def chamber
+    self.title[0] == "h" ? :house : :senate
   end
 
   def long_title

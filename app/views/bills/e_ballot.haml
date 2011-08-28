@@ -9,7 +9,7 @@
   = content_tag :div, {:class => 'vote_container'} do
     = content_tag :ul, {:id => 'vote_list'} do
       - @filter_options.each do |fo|
-        = content_tag(:li,link_to(Bill.full_type(fo), e_ballot_path('house', fo)))
+        = content_tag(:li,link_to(Bill.full_type(fo), e_ballot_path(@chamber, fo)))
 %p
   Pick a chamber (on left?)
   = link_to "senate", e_ballot_path('senate')
