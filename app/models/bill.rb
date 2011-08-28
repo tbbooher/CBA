@@ -58,7 +58,7 @@ class Bill
 
   validates_presence_of :govtrack_name
 
-  embeds_many :votes
+  has_many :votes
   embeds_many :member_votes
 
   def short_title
@@ -265,7 +265,6 @@ class Bill
       self.summary = bill.summary
 
       # update subjects
-      subjects = Array.new
       self.subjects = []
       bill.subjects.each do |subject|
         self.subjects.push(Subject.find_or_create_by(:name => subject))

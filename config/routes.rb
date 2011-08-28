@@ -2,6 +2,12 @@
 
 Cba::Application.routes.draw do
 
+  get "bills/district_results"
+
+  get "bills/state_results"
+
+  get "bills/chamber_results"
+
   resources :subjects
 
   #resources :bill_comments

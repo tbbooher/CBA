@@ -145,4 +145,17 @@ class BillsController < ApplicationController
     bill.save! # <-- the key line
     redirect_to e_ballot_path(params[:chamber], params[:bill_type], bill.id)
   end
+
+  def district_results
+
+  end
+
+  def state_results
+
+  end
+
+  def chamber_results
+
+  end
+
 end

@@ -291,6 +291,7 @@ class BillTest < ActiveSupport::TestCase
     puts "testing parse capability at this point"
     f = File.new("#{Rails.root}/test/fixtures/h59.xml", 'r')
     feed = Feedzirra::Parser::GovTrackBill.parse(f)
+    @house_bill.subjects = []
     feed.subjects.each do |subject|
       o = Subject.create(:name => subject)
       @house_bill.subjects << o
