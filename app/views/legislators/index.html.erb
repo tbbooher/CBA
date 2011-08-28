@@ -1,87 +1,25 @@
-<!--Plenty of Problems in here-->
-
-<% title "112th Congress" %>
+<% title "Legislators" %>
 
 <%= will_paginate @legislators %>
 
-    <div style="text-align: center;">
-    <form action="form_action.asp" method="get">
-      House Districts/Legislators
-        <select>
-            <option>@legislator.last_name, @legislator.first_name</option>
-        </select>
-        <input
-              type="search"
-              list="@legislator"
-              name="@legislator.full_name"
-              placeholder="Search"/>
-        <input type="hidden"/>
-    </form>
-    <br /><br />
-    <style type="text/css">
-      table, th, tr{border-style:hidden;}
-      table {outline:2px solid orange; outline-offset:20px;}
-    </style>
-  </body>
-  <body style="font: 75% Lucida Grande, Trebuchet MS">
-    <style type="text/css">
-      table, th, tr{border-style:hidden;}
-      table {outline:2px solid black; outline-offset:10px;}
-    </style>
-    <form>
-         <table border="1" align="center">
-            <thead>
-              <tr>
-                <th>District</th>
-                <th>Rep. Name</th>
-                <th>Rep. Picture</th>
-                <th>Party</th>
-              </tr>
-            </thead>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>State</th>
+    <th>Party</th>
+  </tr>
 
-
-            <tbody>
-              <tr>
-                <th><%=@legislator.state @legislator.district%></th>
-                <th><%=@legislator.full_name%></th>
-                <th><%=image_tag @legislator.image_location%></th>
-                <th><%=@legislator.party%></th>
-              </tr>
-            </tbody>
-         </table>
-      <br />
-      <br />
-      <br />
-      <form action="form_action.asp" method="get">
-        Roll Call
-        <select>
-            <option>@bills.bill_number</option>
-        </select>
-        <input
-              type="search"
-              list="@bills"
-              name="@bills.bill_number"
-              placeholder="Search"/>
-        <input type="hidden"/>
-      </form>
-      <br />
-      <br />
-      <table border="1" align="center">
-        <thead>
-          <tr>
-            <th>Bill</th>
-            <th>For</th>
-            <th>Abstain</th>
-            <th>Against</th>
-            <th>Result</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th><%=@bill.bill_number%></th>
-      </table>
-    </div>
-
-<br />
+<% @legislators.each do |legislator| %>
+  <tr>
+    <td><%= link_to legislator.full_name, legislator %></td>
+    <td><%= legislator.title %></td>
+    <td><%= legislator.state %></td>
+    <td><%= legislator.party %></td>
+    <td><%#= link_to 'Edit', edit_legislator_path(legislator) %></td>
+    <td><%#= link_to 'Destroy', legislator, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
 
 <%#= link_to 'New Legislator', new_legislator_path %>

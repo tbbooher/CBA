@@ -70,7 +70,7 @@ class Bill
     else
       Rails.logger.warn "no titles for #{self.ident}"
     end
-    txt
+    txt || self.title
   end
 
   def long_title
