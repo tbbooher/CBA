@@ -43,3 +43,4 @@ public/images/bio_photos/*.jpeg
 app/views/layouts/disabled_layouts/**/*
 redcloth/*
 redcloth/**/*
+app/assets/images/photos/*
