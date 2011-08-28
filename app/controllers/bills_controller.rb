@@ -5,9 +5,7 @@ class BillsController < ApplicationController
   # GET /bills.xml
   def index
     #@bills = Bill.page(1).per(10)
-    @bills = Bill.all.paginate(:page => params[:page],
-       :per_page => APPLICATION_CONFIG[:pages_per_page] || 5
-    )
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -94,10 +92,22 @@ class BillsController < ApplicationController
     end
   end
 
-  def house_bills
-    @bills = Bill.house_bills.paginate(:page => params[:page],
-       :per_page => 20
-    )
+  def e_ballot
+    chamber = params[:chamber]
+    # want to filter down ["h", "s", "sr", "hc", "hj", "hr", "sc", "sj"]
+    if params[:bill_type] # we want to filter down bills by type
+      bill_type = params[:bill_type]
+    else
+      # let's set a default if none is specified
+      chamber == "house" ? bill_type = "h" : bill_type = "s"
+    end
+    if chamber == "house"
+      # filter options = ["h",  "hc", "hj", "hr"]
+      @bills = Bill.house_bills.where(bill_type: bill_type).paginate(:page => params[:page], :per_page => 20)
+    else # it is a senate bill ballot
+      # filter options = ["s", "sr", "sc", "sj"]
+      @bills = Bill.senate_bills..where(bill_type: bill_type).paginate(:page => params[:page], :per_page => 20)
+    end
     @user = current_user
     if params[:id]
       @bill = Bill.find(params[:id])

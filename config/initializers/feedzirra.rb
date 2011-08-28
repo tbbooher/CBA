@@ -23,6 +23,8 @@ module Feedzirra
       # top part
       element :roll, :value => :where, :as => :chamber
       element :roll, :value => :session, :as => :session
+      element :roll, :value => :datetime, :as => :original_time
+      element :roll, :value => :updated, :as => :updated_time
       element :question, :as => :the_question
       element :required, :as => :required
       # <bill session="112" type="hr" number="26"/>
@@ -62,7 +64,8 @@ module Feedzirra
       element :sponsor, :value => :id, :as => :sponsor_id
       elements :cosponsor, :value => :id, :as => :cosponsor_ids
       elements :action, :value=> :datetime, :as => :bill_actions
-      elements :term, :value => :name, :as => :term_names
+      elements :term, :value => :name, :as => :subjects
+      #elements :subjects, :value => :name, :as => :bill_subjects
       element :summary
     end
 

@@ -3,6 +3,7 @@ require 'test_helper'
 class BillTest < ActiveSupport::TestCase
 
   def setup
+    Subject.destroy_all
     load_all_sponsors
     Bill.destroy_all # clean slate
     PolcoGroup.destroy_all
@@ -43,7 +44,7 @@ class BillTest < ActiveSupport::TestCase
     Fabricate(:bill, :govtrack_id => 's112-782', :title => 's112-782', :ident => '112-s782')
                      # let's isolate that bill and update
     Bill.update_rolls do
-      files = ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+      files = ["#{Rails.root}/test/fixtures/h2011-9.xml", "#{Rails.root}/test/fixtures/s2011-91.xml"]
     end
     @house_bill_with_roll_count = Bill.where(:govtrack_id => "h112-26").first
     @senate_bill_with_roll_count = Bill.where(:govtrack_id => 's112-782').first
@@ -126,7 +127,7 @@ class BillTest < ActiveSupport::TestCase
       #  puts 'sending a block to stub out a number of files and call to govtrack'
       #end
       Bill.update_from_directory do
-        ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+        ['h26', 's782'].map { |b| "#{Rails.root}/test/fixtures/#{b}.xml" }
       end
       assert_operator Bill.all.to_a.count, :>=, 0
     end
@@ -143,12 +144,12 @@ class BillTest < ActiveSupport::TestCase
       Bill.destroy_all
       puts "updating bills from directory"
       Bill.update_from_directory do
-        ['h26', 's782'].map { |b| "#{Rails.root}/data/bills/#{b}.xml" }
+        ['h26', 's782'].map { |b| "#{Rails.root}/test/fixtures/#{b}.xml" }
       end
       # load rolls
       puts "updating rolls"
       Bill.update_rolls do
-        ["#{Rails.root}/data/rolls/h2011-9.xml", "#{Rails.root}/data/rolls/s2011-91.xml"]
+        ["#{Rails.root}/test/fixtures/h2011-9.xml", "#{Rails.root}/test/fixtures/s2011-91.xml"]
       end
       assert true
     end
@@ -221,7 +222,7 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to get an associated roll call" do
     # bills are named as data/us/CCC/rolls/[hs]SSSS-NNN.xml.
     # ccc= congress number
-    f = File.new('/Users/Tim/Sites/cba/data/rolls/h2011-9.xml', 'r')
+    f = File.new("#{Rails.root}/test/fixtures/h2011-9.xml", 'r')
     feed = Feedzirra::Parser::RollCall.parse(f)
     assert_equal "hr", feed.bill_type
     assert_equal "house", feed.chamber
@@ -284,6 +285,19 @@ class BillTest < ActiveSupport::TestCase
   test "should be able to show both senators votes if the bill is a sr" do
     senator_votes = @user1.senators_vote_on(@senate_bill_with_roll_count)
     assert_equal :nay, senator_votes.first[:vote], "senator's vote does not match"
+  end
+
+  test "should be able to get a list of subjects for a bill" do
+    puts "testing parse capability at this point"
+    f = File.new("#{Rails.root}/test/fixtures/h59.xml", 'r')
+    feed = Feedzirra::Parser::GovTrackBill.parse(f)
+    feed.subjects.each do |subject|
+      o = Subject.create(:name => subject)
+      @house_bill.subjects << o
+    end
+    assert @house_bill.save
+    assert_equal "Government operations and politics", @house_bill.subjects.first.name
+    assert_equal 8, @house_bill.subjects.all.count
   end
 
 end

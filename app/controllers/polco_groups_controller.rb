@@ -140,6 +140,7 @@ class PolcoGroupsController < ApplicationController
   private
 
   def prep_format(list)
+    # to json
     list.map{|g| {:id => g.id, :name => g.name}}
   end
 

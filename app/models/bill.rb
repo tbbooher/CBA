@@ -43,7 +43,7 @@ class Bill
   field :hidden, :type => Boolean
 
   # roll call results
-  field :roll_date, :type => Date
+  field :roll_time, :type => DateTime
   field :ayes, :type => Integer
   field :nays, :type => Integer
   field :abstains, :type => Integer
@@ -54,6 +54,8 @@ class Bill
 
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
+  has_and_belongs_to_many :subjects
+
   validates_presence_of :govtrack_name
 
   embeds_many :votes
@@ -116,11 +118,10 @@ class Bill
 
   def voted_on?(user)
     if votes = self.votes.select{|v| v.user_id == user.id}
-      o = votes.map{|v| v.value}.first
+      votes.map{|v| v.value}.first
     else
-      o = nil
+      nil
     end
-    o
   end
 
   def users_vote(user)
@@ -222,7 +223,6 @@ class Bill
     # check for changes
     if bill && (self.introduced_date.nil? || (bill.introduced_date.to_date > self.introduced_date))
       # front-matter
-
       self.congress = bill.congress
       self.bill_type = bill.bill_type
       self.bill_number = bill.bill_number
@@ -238,6 +238,14 @@ class Bill
       self.titles = get_titles(bill.titles)
       self.bill_actions = get_actions(bill.bill_actions)
       self.summary = bill.summary
+
+      # update subjects
+      subjects = Array.new
+      self.subjects = []
+      bill.subjects.each do |subject|
+        self.subjects.push(Subject.find_or_create_by(:name => subject))
+      end
+      #puts "the bill is valid? #{self.valid?}"
 
       # sponsors
       save_sponsor(bill.sponsor_id)
@@ -333,20 +341,26 @@ class Bill
         if bill_list.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}") # do we have this bill
           f.rewind
           feed = Feedzirra::Parser::RollCall.parse(f)
-          if feed.bill_type && !(feed.required == "QUORUM")
+          date_for_update = Time.parse(feed.updated_time)
+          if feed.bill_type # && !(feed.required == "QUORUM")
             govtrack_id = "#{feed.bill_type.first}#{feed.congress}-#{feed.bill_number}"
             if b = Bill.where(govtrack_id: govtrack_id).first # should not fail, already checked
-              # clear all previous entries
-              b.member_votes = []
-              feed.roll_call.each do |v|
-                if l = Legislator.where(govtrack_id: v.member_id).first
-                  b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
-                else
-                  raise "legislator #{v.member_id} not found"
+              if b.roll_time.nil? || b.roll_time < date_for_update
+                # clear all previous entries
+                b.roll_time = date_for_update
+                b.member_votes = []
+                feed.roll_call.each do |v|
+                  if l = Legislator.where(govtrack_id: v.member_id).first
+                    b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
+                  else
+                    raise "legislator #{v.member_id} not found"
+                  end
                 end
+                puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
+                b.save!
+              else
+                puts "no need to run #{bd[0]}-#{bd[1].first}#{bd[2]}"
               end
-              puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
-              b.save!
             else
               puts "bill listed by #{govtrack_id} not found"
               Rails.logger.warn "bill listed by #{govtrack_id} not found"
