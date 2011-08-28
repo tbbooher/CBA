@@ -110,4 +110,28 @@ class BillsController < ApplicationController
   def senate_bills
     @bills = Bill.senate_bills
   end
+
+  def process_page
+    user = current_user
+    bill = Bill.find(params[:bill_id])
+    # error checking here
+    case params[:vote]
+      when "For"
+        vote = :aye
+      when "Against"
+        vote = :nay
+      when "Abstain"
+        vote = :abstain
+      when "Present"
+        vote = :present
+    end
+    comment = Comment.new
+    comment.comment = params[:comment]
+    comment.name = user.name
+    comment.email = user.email
+    bill.comments << comment # need markup stuff . . .
+    user.vote_on(bill, vote)
+    bill.save! # <-- the key line
+    redirect_to house_bills_page_path(bill.id)
+  end
 end
