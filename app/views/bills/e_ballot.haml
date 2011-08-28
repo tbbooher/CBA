@@ -1,4 +1,19 @@
-- title "House Bills and voting page for #{@bill.tiny_title}"
+- title "#{@chamber.capitalize} Bills and voting page for #{@bill.tiny_title}"
+
+%p
+  Currently filtering by
+  = @bill_type.capitalize
+
+%p
+  Pick a way to filter bills
+  = @filter_options.map{|fo| link_to(fo, e_ballot_path('house', fo))}.to_sentence.html_safe
+
+%p
+  Pick senate or house
+  = link_to "senate", e_ballot_path('senate')
+  or
+  = link_to "house", e_ballot_path('house')
+
 
 %div#bill_details
   %div#bill_title
@@ -39,4 +54,4 @@
   = will_paginate @bills
   - @bills.each do |bill|
     %li
-      = link_to "#{bill.tiny_title} #{bill.short_title}", house_bills_page_path(bill.id)
+      = link_to "#{bill.tiny_title} #{bill.short_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)

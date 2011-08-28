@@ -93,26 +93,27 @@ class BillsController < ApplicationController
   end
 
   def e_ballot
-    chamber = params[:chamber]
+    @chamber = params[:chamber]
     # want to filter down ["h", "s", "sr", "hc", "hj", "hr", "sc", "sj"]
     if params[:bill_type] # we want to filter down bills by type
-      bill_type = params[:bill_type]
+      @bill_type = params[:bill_type]
     else
       # let's set a default if none is specified
-      chamber == "house" ? bill_type = "h" : bill_type = "s"
+      @chamber == "house" ? @bill_type = "h" : bill_type = "s"
     end
-    if chamber == "house"
-      # filter options = ["h",  "hc", "hj", "hr"]
-      @bills = Bill.house_bills.where(bill_type: bill_type).paginate(:page => params[:page], :per_page => 20)
+    if @chamber == "house"
+      @filter_options = ["h",  "hc", "hj", "hr"]
+      @bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 20)
     else # it is a senate bill ballot
-      # filter options = ["s", "sr", "sc", "sj"]
-      @bills = Bill.senate_bills..where(bill_type: bill_type).paginate(:page => params[:page], :per_page => 20)
+      @filter_options = ["s", "sr", "sc", "sj"]
+      @bills = Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 20)
     end
     @user = current_user
+    # need to consider chamber!!
     if params[:id]
       @bill = Bill.find(params[:id])
-    else
-      @bill = Bill.first
+    else # but still need to consider type explicitly!
+      @bill = (@chamber == "house" ? Bill.house_bills.first : Bill.senate_bills.first)
     end
     @legislator = @bill.sponsor
   end
@@ -142,6 +143,6 @@ class BillsController < ApplicationController
     bill.comments << comment # need markup stuff . . .
     user.vote_on(bill, vote)
     bill.save! # <-- the key line
-    redirect_to house_bills_page_path(bill.id)
+    redirect_to e_ballot_path(bill.id)
   end
 end
