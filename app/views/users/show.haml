@@ -13,6 +13,15 @@
         %li
             - if current_user == @user || current_user.role?(:admin  )
                 = link_to t(:edit_profile), edit_registration_path(@user)
+    %h3 Find your district and get started
+    = link_to "Your geocode page", users_geocode_path
+    %h3 Your Polco Groups
+    %div#polco_groups
+        = link_to "Update your groups", manage_groups_path
+        %h4 Groups you are following
+        = @user.followed_groups.map(&:name).to_sentence
+        %h4 Groups you joined
+        = @user.joined_groups.map(&:name).to_sentence
     %strong= t(:invite_user)
     %ul
         %li

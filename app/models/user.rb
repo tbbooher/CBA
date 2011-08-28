@@ -347,7 +347,7 @@ class User
         raise "no senators found for #{self.us_state}"
       end
     else
-      out = "no votes available for #{senate_bill.title}"
+      out = "Your senator has not yet voted on #{senate_bill.tiny_title}"
     end
     out
   end

@@ -46,11 +46,10 @@ module BillsHelper
 
   def determine_senators_votes(votes)
     if votes =~ /^no votes available/
-      out = votes
+      votes
     else
-      out = "#{votes.first[:senator]} voted #{votes.first[:vote].to_s} and #{votes.last[:senator]} voted #{votes.last[:vote].to_s}."
+      "#{votes.first[:senator]} voted #{votes.first[:vote].to_s} and #{votes.last[:senator]} voted #{votes.last[:vote].to_s}."
     end
-    out
   end
 
   def display_vote_options
