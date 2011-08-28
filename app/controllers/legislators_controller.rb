@@ -21,6 +21,10 @@ class LegislatorsController < ApplicationController
     end
   end
 
+  def house_results
+
+  end
+
   # GET /legislators/new
   # GET /legislators/new.xml
   def new

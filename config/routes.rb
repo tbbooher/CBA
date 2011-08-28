@@ -6,7 +6,7 @@ Cba::Application.routes.draw do
 
   get "bills/state_results"
 
-  get "bills/chamber_results"
+  match "/bills/chamber_results/:chamber" => "bills#chamber_results"
 
   resources :subjects
 

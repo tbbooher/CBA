@@ -155,7 +155,13 @@ class BillsController < ApplicationController
   end
 
   def chamber_results
-
+      # this is where the code gets prepared for the chamber results view
+    if params[:chamber] == "house"
+      @chamber = "house"
+    else
+      @chamber = "senate"
+    end
+    @bills = Bill.house_bills #for now
   end
 
 end
