@@ -4,16 +4,35 @@
   %div#bill_title
     = @bill.tiny_title
   %div#short_description
-    = @bill.long_title
+    %p
+      = @bill.long_title
+    %p
+      = link_to "More details", bill_path(@bill)
   %div#details
+    Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
   %div#vote_region
     = determine_vote(@user)
   %div#comments
-    = render :partial => 'comments_subpage', :locals => {:bill => @bill}
+    %div#user_comment_region
+      = content_tag :div, :id => 'new_comment_form' do
+        %h5= t(:post_a_comment)
+        = form_for [@bill, comment = @bill.comments.build(:name => current_user_field(:name, ''), :email => current_user_field(:email, ''))] do |f|
+          = hidden_field_tag "#{@bill.class.to_s.downcase.underscore}_id" , @bill.id.to_s
+          .field
+            = f.hidden_field :name
+          .field
+            = f.hidden_field :email
+          .field
+            = f.label :comment
+            = f.text_area :comment, :rows => 5, :cols => 40, :placeholder => t(:be_polite)
+          .field
+            = f.label :submit
+            = f.submit t(:post_comment)
+            = f.submit t(:cancel)
 
 %ul
+  = will_paginate @bills
   - @bills.each do |bill|
     %li
       = link_to "#{bill.tiny_title} #{bill.short_title}", house_bills_page_path(bill.id)
-%p this is the next paragraph

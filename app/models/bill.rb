@@ -46,8 +46,8 @@ class Bill
   field :roll_date, :type => Date
   field :ayes, :type => Integer
   field :nays, :type => Integer
-  field :abstain, :type => Integer
-  field :present, :type => Integer
+  field :abstains, :type => Integer
+  field :presents, :type => Integer
 
   scope :house_bills, where(bill_type: 'h')
   scope :senate_bills, where(bill_type: 's')
@@ -312,7 +312,7 @@ class Bill
   end
 
   def Bill.update_rolls
-    files = Dir.glob("#{Rails.root}/data/rolls/*.xml")
+    files = Dir.glob("#{Rails.root}/data/rolls/*.xml").sort_by{|f| f.match(/\/.+\-(\d+)\./)[1].to_i}
     # Yield to a block that can perform arbitrary calls on this bill
     # for testing
     if block_given?
@@ -320,37 +320,44 @@ class Bill
     end
     # let's see if the file contains bill data
     # TODO - (we need to modify this to only read in the new rolls)
+    bill_list = Bill.all.map(&:govtrack_id)
 
     files.each do |bill_path|
       f = File.new(bill_path, 'r')
       puts "starting with #{f.path} . . ."
-      bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)[1..3]
       # "h112-26"
       # at this point, we only read in bill roll calls
       # if 1. it is a bill roll, 2. if we are tracking that bill and 3. if the date of the roll is more recent than the last date of the roll recorded
-      if bd && Bill.all.to_a.map{|b| b.govtrack_id}.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}")
-        f.rewind
-        feed = Feedzirra::Parser::RollCall.parse(f)
-        if feed.bill_type
-          govtrack_id = "#{feed.bill_type.first}#{feed.congress}-#{feed.bill_number}"
-          if b = Bill.where(govtrack_id: govtrack_id).first
-            feed.roll_call.each do |v|
-              if l = Legislator.where(govtrack_id: v.member_id).first
-                b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
-              else
-                raise "legislator #{v.member_id} not found"
+      if bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)
+        bd = bd[1..3]
+        if bill_list.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}") # do we have this bill
+          f.rewind
+          feed = Feedzirra::Parser::RollCall.parse(f)
+          if feed.bill_type && !(feed.required == "QUORUM")
+            govtrack_id = "#{feed.bill_type.first}#{feed.congress}-#{feed.bill_number}"
+            if b = Bill.where(govtrack_id: govtrack_id).first # should not fail, already checked
+              # clear all previous entries
+              b.member_votes = []
+              feed.roll_call.each do |v|
+                if l = Legislator.where(govtrack_id: v.member_id).first
+                  b.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
+                else
+                  raise "legislator #{v.member_id} not found"
+                end
               end
+              puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
+              b.save!
+            else
+              puts "bill listed by #{govtrack_id} not found"
+              Rails.logger.warn "bill listed by #{govtrack_id} not found"
             end
-            puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
-            b.save!
+            puts "updated roll for #{feed.bill_type}#{feed.congress}-#{feed.bill_number}"
           else
-            puts "bill listed by #{govtrack_id} not found"
-            Rails.logger.warn "bill listed by #{govtrack_id} not found"
+            puts "#{f.path} is not a bill vote"
+            Rails.logger.warn "#{f.path} is not a bill vote"
           end
-          puts "updated roll for #{feed.bill_type}#{feed.congress}-#{feed.bill_number}"
         else
-          puts "#{f.path} is not a bill vote"
-          Rails.logger.warn "#{f.path} is not a bill vote"
+          puts "we don't have the bill #{bd[2].first}#{bd[1]}-#{bd[3]}"
         end
       else
         puts "#{f.path} not a bill roll"
@@ -367,8 +374,11 @@ class Bill
         result = :nay
       when "0"
         result = :abstain
+      when "P"
+        result = :present
       else
-        raise "unknown value #{the_value} (expected +, - or 0)"
+        raise "unknown value #{the_value} (expected +, -, P or 0)"
+        # if this is the case, we have to parse from <option key="P">Present</option>
     end
     result
   end
@@ -403,15 +413,17 @@ class Bill
     v = votes.group_by { |v| v.value }
     aye_count = (v[:aye] ? v[:aye].count : 0)
     nay_count = (v[:nay] ? v[:nay].count : 0)
+    present_count = (v[:present] ? v[:present].count : 0)
     abstain_count = (v[:abstain] ? v[:abstain].count : 0)
-    {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count}
+    {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count, :presents => present_count}
   end
 
   def get_tally(votes)
     ayes = votes.count { |val| val == :aye }
     nays = votes.count { |val| val == :nay }
     abstains = votes.count { |val| val == :abstain }
-    {:ayes => ayes, :nays => nays, :abstains => abstains}
+    presents = votes.count { |val| val == :present }
+    {:ayes => ayes, :nays => nays, :abstains => abstains, :presents => presents}
   end
 
   def build_tally(votes_collection)

@@ -77,7 +77,7 @@ class BillTest < ActiveSupport::TestCase
     @user3.vote_on(b, :aye)
     @user4.vote_on(b, :abstain)
     tally = b.get_overall_users_vote
-    assert_equal({:ayes => 2, :nays => 1, :abstains => 1}, tally, "Expected 2 aye, 1 nay, and 1 abstain")
+    assert_equal({:ayes => 2, :nays => 1, :abstains => 1, :presents => 0}, tally, "Expected 2 aye, 1 nay, and 1 abstain")
   end
 
   test "should be able to build a descriptive tally that prints the tally as html" do
@@ -169,7 +169,7 @@ class BillTest < ActiveSupport::TestCase
     @user3.vote_on(@house_bill, :aye)
     district = @user1.district # = "CA46"
     district_tally = @house_bill.get_votes_by_name_and_type(district, :district)
-    assert_equal({:ayes => 1, :nays => 1, :abstains => 0}, district_tally) # {:ayes => 10, :nays => 20, :abstains => 2}
+    assert_equal({:ayes => 1, :nays => 1, :abstains => 0, :presents => 0}, district_tally) # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
   test "should be able to show votes for a specific state that a user belongs to" do
@@ -179,7 +179,7 @@ class BillTest < ActiveSupport::TestCase
     @user4.vote_on(@house_bill, :aye)
     state = "CA"
     state_tally = @house_bill.get_votes_by_name_and_type(state, :state)
-    result = {:ayes => 1, :nays => 1, :abstains => 0}
+    result = {:ayes => 1, :nays => 1, :abstains => 0, :presents => 0}
     assert_equal result, state_tally # {:ayes => 10, :nays => 20, :abstains => 2}
   end
 
@@ -231,7 +231,7 @@ class BillTest < ActiveSupport::TestCase
 
   test "should be able to get roll-counts inside all relevant bills " do
     # need to create a bill to update
-    assert_equal({:ayes => 236, :nays => 182, :abstains => 16}, @house_bill_with_roll_count.members_tally)
+    assert_equal({:ayes => 236, :nays => 182, :abstains => 16, :presents => 0}, @house_bill_with_roll_count.members_tally)
     # we should also be able to get a member's result on a specific bill
     member = @house_bill_with_roll_count.member_votes.first.legislator
     puts member.full_name
@@ -249,14 +249,15 @@ class BillTest < ActiveSupport::TestCase
     @user1.vote_on(@house_bill, :aye) # follows va05
     @user2.vote_on(@house_bill, :nay)
     @user3.vote_on(@house_bill, :abstain) # joined va05
+    @user4.vote_on(@house_bill, :present)
     joined_groups = @user1.joined_groups_tallies(@house_bill)
     followed_groups = @user1.followed_groups_tallies(@house_bill)
     assert_equal 4, joined_groups.count
     assert_equal "Dan Cole", joined_groups.first[:name]
-    assert_equal({:ayes => 1, :nays => 1, :abstains => 1}, joined_groups.first[:tally])
+    assert_equal({:ayes => 1, :nays => 1, :abstains => 1, :presents => 1}, joined_groups.first[:tally])
     assert_equal 2, followed_groups.count
     assert_equal "VA".to_s, followed_groups.first[:name].to_s
-    assert_equal({:ayes => 0, :nays => 0, :abstains => 1}, followed_groups.first[:tally])
+    assert_equal({:ayes => 0, :nays => 0, :abstains => 1, :presents => 1}, followed_groups.first[:tally])
   end
 
   test "should show the latest status for a bill" do

@@ -29,7 +29,7 @@ class BillsController < ApplicationController
     @user = current_user
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.haml
       format.xml  { render :xml => @bill }
     end
   end
@@ -95,7 +95,9 @@ class BillsController < ApplicationController
   end
 
   def house_bills
-    @bills = Bill.house_bills
+    @bills = Bill.house_bills.paginate(:page => params[:page],
+       :per_page => 20
+    )
     @user = current_user
     if params[:id]
       @bill = Bill.find(params[:id])

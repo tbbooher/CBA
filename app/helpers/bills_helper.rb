@@ -9,8 +9,12 @@ module BillsHelper
           out = "You voted for this bill."
         when :nay
           out = "You voted against this bill."
-        else
+        when :abstain
           out = "You abstained from voting on this bill."
+        when :present
+          out = "You voted Present on this bill"
+        else
+          raise "unknown value for vote"
       end
     elsif !user.registered?
       out = "You are logged in, but you haven't registered your district. #{ link_to "Change that", users_geocode_path}."
@@ -22,31 +26,37 @@ module BillsHelper
 
   def determine_rep_vote(rep_vote, district)
     #<%= rep_vote[:rep] + "," + .to_s %>
-    case rep_vote[:vote]
-      when :aye
-        action = "voted for this bill"
-      when :nay
-        action = "voted against this bill"
-      else
-        action = "abstained from voting on this bill"
+    unless rep_vote == "no vote available"
+      case rep_vote[:vote]
+        when :aye
+          action = "voted for this bill"
+        when :nay
+          action = "voted against this bill"
+        when :present
+          action = "voted present"
+        else
+          action = "abstained from voting on this bill"
+      end
+      out = "Your representative for #{district}, #{rep_vote[:rep]}, #{action}.".html_safe
+    else
+      out = "This bill has not yet been voted on."
     end
-    "Your representative for #{district}, #{rep_vote[:rep]}, #{action}.".html_safe
+    return out
   end
 
   def determine_senators_votes(votes)
-     "#{votes.first[:senator]} voted #{votes.first[:vote].to_s} and #{votes.last[:senator]} voted #{votes.last[:vote].to_s}."
+    "#{votes.first[:senator]} voted #{votes.first[:vote].to_s} and #{votes.last[:senator]} voted #{votes.last[:vote].to_s}."
   end
 
   def display_vote_options
-    o = "<p>"
-    o += %q{<b>Your vote:</b>}
-    o += %q{<ul>}
-    o += "<li>#{link_to "Yes", vote_on_bill_path(@bill, "aye")}</li>"
-    o += "<li>#{link_to "No", vote_on_bill_path(@bill, "nay")}</li>"
-    o += "<li>#{link_to "Abstain", vote_on_bill_path(@bill, "abstain")}</li>"
-    o += %q{</ul>}
-    o += "</p>"
-    o
+    content_tag :div, {:class => 'vote_container'} do
+      content_tag :ul, {:id => 'vote_list'} do
+          content_tag(:li, link_to("Yes", vote_on_bill_path(@bill, "aye"))) +
+          content_tag(:li, link_to("No", vote_on_bill_path(@bill, "nay"))) +
+          content_tag(:li, link_to("Abstain", vote_on_bill_path(@bill, "abstain"))) +
+          content_tag(:li, link_to("Present", vote_on_bill_path(@bill, "present")))
+      end
+    end
   end
 
   def last_action(bill)
@@ -59,12 +69,13 @@ module BillsHelper
     o += "<li>For: #{vote_hash[:ayes]}</li>"
     o += "<li>Against: #{vote_hash[:nays]}</li>"
     o += "<li>Abstain:#{vote_hash[:abstains]}</li>"
+    o += "<li>Present:#{vote_hash[:presents]}</li>"
     o += "</ul>"
     o.html_safe
   end
 
   def format_votes_inline(vote_hash)
-    "#{vote_hash[:ayes]} were for, #{vote_hash[:nays]} were against, and #{vote_hash[:abstains]} abstained."
+    "#{vote_hash[:ayes]} were for, #{vote_hash[:nays]} were against, #{vote_hash[:presents]} voted present and #{vote_hash[:abstains]} abstained."
   end
 
 end

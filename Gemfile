@@ -1,8 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
-gem 'httparty'
-
 gem "rails", "3.1.0.rc6"
 # Rails 3.1 - Asset Pipeline
 
@@ -12,7 +9,7 @@ group :assets do
   gem 'uglifier'
   gem 'json'
   gem 'jquery-rails'
-  gem 'therubyracer'
+  gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
   gem 'sprockets', '~> 2.0.0.beta.12'
 end
@@ -24,21 +21,6 @@ gem "bson_ext"  #, "1.1.5"
 # Bundle gem needed for Devise and cancan
 gem "devise", "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-# !! THE GRAVEYARD
-#gem "omniauth", :git => 'git://github.com/intridea/omniauth.git' # maybe we need this latest version instead of the gem -tbb
-#gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
-#gem "nytimes-congress"
-#gem "geokit"
-#gem 'drumbone'
-#gem "omniauth" "0.2.6"
-#gem 'omniauth', '>= 0.2.6'
-#gem "heroku"
-#gem 'webmock'
-#gem 'vcr'
-#gem 'factory_girl'
-#gem 'factory_girl_rails'
-#gem 'ym4r'
-#gem "formtastic"
 
 gem "googlecharts"
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
@@ -46,19 +28,16 @@ gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 # we need some stuff too (tbb)
 gem 'simple_form'
 
-# for deployment
-gem "capistrano"
+group :production do
+  gem 'unicorn'
+end
 
-# and server
-gem 'unicorn'
-
-# time to connect to opencongress
+# connection gems
 gem 'json'
 gem 'geocoder'
-
-#group :after_initialize do
-gem 'nokogiri' #,  :git => 'git://github.com/ender672/nokogiri.git'# :git => 'git://github.com/tenderlove/nokogiri.git'
-gem 'feedzirra' #ls
+gem 'httparty'
+gem 'nokogiri'
+gem 'feedzirra' 
 gem 'sax-machine'
 
 # Bundle gem needed for paperclip and attachments
@@ -78,7 +57,6 @@ gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 gem "jsort", "~> 0.0.1"
 gem 'progress_upload_field', '~> 0.0.1'
 
-
 # Markdown
 # do "easy_install pygments" on your system
 gem 'redcarpet'
@@ -91,7 +69,7 @@ group :development do
   gem 'rdoc'
   gem "rails3-generators"
   gem "ruby-debug19"
-  #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
+  gem "capistrano"
   gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git"
   gem 'unicorn'
   gem 'yard'
@@ -99,6 +77,7 @@ end
 
 # Bundle gems for testing
 group :test do
+  gem 'simplecov', '>= 0.4.0', :require => false
   gem 'faker'
   gem 'json_pure'
   gem 'capybara'
@@ -110,7 +89,6 @@ group :test do
   gem 'spork', '0.9.0.rc9'
   gem 'spork-testunit'
   gem 'launchy'
-  #gem 'factory_girl_rails', "1.1.0"
   gem 'ZenTest', '4.5.0'
   gem 'autotest'
   gem 'autotest-rails'
@@ -120,8 +98,25 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
-  gem "autotest-fsevent"
+  gem "autotest-fsevent", :platforms => :ruby
   gem 'webmock'
   gem 'vcr'
 end
 
+# !! THE GRAVEYARD !!
+#gem "omniauth", :git => 'git://github.com/intridea/omniauth.git' # maybe we need this latest version instead of the gem -tbb
+#gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
+#gem "nytimes-congress"
+#gem "geokit"
+#gem 'drumbone'
+#gem "omniauth" "0.2.6"
+#gem 'omniauth', '>= 0.2.6'
+#gem "heroku"
+#gem 'webmock'
+#gem 'vcr'
+#gem 'factory_girl'
+#gem 'factory_girl_rails'
+#gem 'ym4r'
+#gem "formtastic"
+#gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
+#gem 'factory_girl_rails', "1.1.0"

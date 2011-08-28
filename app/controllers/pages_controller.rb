@@ -40,7 +40,7 @@ class PagesController < ApplicationController
       :comment => ""
     }
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.haml
       format.xml  { render :xml => @page }
     end
   end

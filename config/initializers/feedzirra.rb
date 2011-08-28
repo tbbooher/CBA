@@ -24,6 +24,7 @@ module Feedzirra
       element :roll, :value => :where, :as => :chamber
       element :roll, :value => :session, :as => :session
       element :question, :as => :the_question
+      element :required, :as => :required
       # <bill session="112" type="hr" number="26"/>
       element :bill, :value => :session, :as => :congress
       element :bill, :value => :type, :as => :bill_type

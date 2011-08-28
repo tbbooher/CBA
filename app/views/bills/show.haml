@@ -1,0 +1,87 @@
+%p#notice= notice
+- title @bill.bill_title || "no title yet"
+%span{:style => "color:red;"} Please vote - get involved!
+#vote_region
+  = determine_vote(@user)
+- if @user && @user.registered?
+  #member_vote
+    - if @bill.bill_type == "h"
+      = determine_rep_vote(@user.reps_vote_on(@bill), @user.district)
+    - else
+      = determine_senators_votes(@user.senators_vote_on(@bill))
+  #district_tally
+    In your district (#{@user.district}), #{format_votes_inline(@bill.get_votes_by_name_and_type(@user.district, :district))}
+#tally_region
+  #all_users_tally
+    %h3 All polco users:
+    = format_votes(@bill.get_overall_users_vote)
+  #all_members_votes
+    / what did all members vote on this bill?
+    - mt = @bill.members_tally
+    - if mt
+      %h3 Congressional members tally:
+      = format_votes(mt)
+  .clear
+  / time for groups tally
+  - if @user && @user.registered?
+    #joined_groups_tally
+      %h3 Joined Groups:
+      %ul
+        - @user.joined_groups_tallies(@bill).each do |tally|
+          %li
+            %b>= tally[:name]
+            \:#{format_votes(tally[:tally])}
+    #followed_groups_tally
+      %h3 Followed groups:
+      %ul
+        - @user.followed_groups_tallies(@bill).each do |tally|
+          %li
+            %b>= tally[:name]
+            \:#{format_votes(tally[:tally])}
+    .clear
+/ include comments here
+= render :partial => 'comments_subpage', :locals => {:bill => @bill}
+%p
+  %b Title:
+  = @bill.bill_title
+%p
+  %b Bill state:
+  = @bill.bill_state
+  / error checking?
+%p
+  %b Last action
+  = last_action(@bill)
+- unless @bill.summary.empty?
+  %p
+    %b Summary:
+    = @bill.summary
+/ TODO clean up the old way of presenting actions
+%p
+  %b Last action on:
+  = @bill.bill_actions.first.first
+  |
+  \#{@bill.bill_actions.first.last}
+%p
+  %b Sponsor:
+  = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
+%p
+  %b Cosponsors count:
+  = @bill.cosponsors_count
+%p
+  %b Bill html:
+  = @bill.bill_html.html_safe if @bill.bill_html
+%p
+  %b Summary word count:
+  = @bill.summary_word_count
+%p
+  %b Text word count:
+  = @bill.text_word_count
+%p
+  %b State:
+  = @bill.bill_state
+%p
+  %b Text updated on:
+  = @bill.text_updated_on
+= link_to 'Edit', edit_bill_path(@bill) if can? :edit, Bill
+|
+\#{link_to 'Back', bills_path}
