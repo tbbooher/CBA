@@ -121,7 +121,7 @@ background: #f0e7d7;
 margin: 0 auto;
 padding: 1em 0 0 0;
 font-family: georgia, serif;
-text-transform: lowercase;
+text-transform: uppercase;
   /* to stretch the container div to contain floated list */
   &:after  {
     content: ".";
@@ -183,8 +183,8 @@ font-size: 0.8em;
 /*Nate's stuff*/
 
 /*ul#legislator_index_main_container*/
-/*<h1 id="title" style="text-align: center;">112th Congress</h1>*/
-/*<p style:"text-align: center">*/
+div#title
+{
+text-align: center;
+}
 
-/*CHEATED TO CENTER THE TABLE*/
-/*<table style="  padding: 10px; border: 1px solid black; margin-left: 300px;">*/
