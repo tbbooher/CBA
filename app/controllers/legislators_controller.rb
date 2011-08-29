@@ -5,8 +5,13 @@ class LegislatorsController < ApplicationController
     @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  40)
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @legislators }
+      if format == "legislator"
+        format.html # index.html.erb
+        format.xml  { render :xml => @legislators }
+      else
+        format.html # index.html.erb
+        format.xml  { render :xml => @bills }
+      end
     end
   end
 
