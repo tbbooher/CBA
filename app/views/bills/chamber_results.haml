@@ -1,9 +1,25 @@
-- title "#{@chamber} results"
+- title "#{@chamber} Results"
 
-- @bills.each do |the_freaking_bill|
-  = the_freaking_bill.title
-  = the_freaking_bill.sponsor.full_title
-  <br>
+%p{:style => "text-align: center"}
+  %b= "112th Congress"
+%p{:style => "text-align: center"}
+  = "Roll Call Popularity Search"
 
-%p I love to work on websites.
+%table
+  %tr
+    %th Bill
+    %th Your Vote
+    %th Your District Vote
+    %th Your Rep. Vote
+    %th Result
+  - @bills.each do |bill|
+    %tr
+      %td= bill.title
+      %td= "bill.user.vote"
+      %td= "bill.user.district_vote"
+      %td= "bill.user.rep_vote"
+      %td= "bill.result"
+
+
+
 
