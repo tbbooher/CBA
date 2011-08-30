@@ -5,7 +5,7 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.json { render json: @subjects }
     end
   end

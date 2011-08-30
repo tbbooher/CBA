@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     )
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml  { render :xml => @pages }
     end
   end

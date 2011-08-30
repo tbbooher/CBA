@@ -6,10 +6,10 @@ class LegislatorsController < ApplicationController
 
     respond_to do |format|
       if format == "legislator"
-        format.html # index.html.erb
+        format.html # index.haml
         format.xml  { render :xml => @legislators }
       else
-        format.html # index.html.erb
+        format.html # index.haml
         format.xml  { render :xml => @bills }
       end
     end

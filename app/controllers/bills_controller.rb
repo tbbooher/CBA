@@ -8,7 +8,7 @@ class BillsController < ApplicationController
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml  { render :xml => @bills }
     end
   end
