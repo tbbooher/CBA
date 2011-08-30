@@ -16,7 +16,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.haml
       format.json { render json: @subject }
     end
   end

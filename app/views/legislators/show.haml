@@ -1,0 +1,44 @@
+%p#notice= notice
+
+- title "House District/Legislator"
+
+%p{:style => "text-align: center"}
+  = "112th Congress"
+
+%p{:style => "text-align: center"}
+  %b= @legislator.full_name
+
+%p{:style => "text-align: center"}
+  = image_tag @legislator.image_location
+
+%p{:style => "text-align: center"}
+  = @legislator.party
+
+%p{:style => "text-align: center"}
+  = "Roll Call Popularity Search"
+
+%br/
+%br/
+
+:css
+  table {border: 2px solid black;}
+  table {padding: 10px;}
+%table{:align => "center"}
+  %tr
+    %th Bill
+    %th #{@legislator.state} #{@legislator.district}
+    %th @legislator.last_name
+    %th Result
+  - @legislator.bills.each do |bill|
+    %tr
+      %td= link_to bill.short_title, bill_path(bill)
+      %td= "something like bill.display_results"
+      %td= @legislator.pvs_id
+      %td= "bill.result"
+
+-#    <!-- need to check for the condition that they have no bills -->
+-#
+-#<!--Comments section-->
+-#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
+-#<%= link_to 'Back', legislators_path %>
+-#
