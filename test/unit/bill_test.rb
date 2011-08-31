@@ -93,11 +93,16 @@ class BillTest < ActiveSupport::TestCase
 
   test "should verify that a user has already voted" do
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
+    puts "starting"
     Vote.destroy_all
     b = @house_bill
     @user1.vote_on(b, :aye)
+    b.save!
+    puts "all votes"
     puts Vote.all.count
+    puts "assocition counts\n all:"
     puts b.votes.all.count
+    puts "just votes"
     puts b.votes.count
     assert_equal :aye, b.voted_on?(@user1)
   end

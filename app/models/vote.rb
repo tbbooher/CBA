@@ -11,7 +11,7 @@ class Vote
 
   # what we don't want is a repeated vote, so that would be a bill_id, polco_group and user_id
   # TODO -- ADD THIS VALIDATION LATER -- IT IS MESSING STUFF UP
-  #validates_uniqueness_of :user_id, :scope => [:polco_group_id]
+  validates_uniqueness_of :user_id, :scope => [:polco_group_id, :bill_id]
   validates_presence_of :value, :user_id, :polco_group_id, :bill_id
   validates_inclusion_of :value, :in => [:aye, :nay, :abstain, :present], :message => 'You can only vote yes, no or abstain'
 

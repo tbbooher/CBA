@@ -173,24 +173,19 @@ class User
 
   def vote_on(bill, value)
     # test to make sure the user is a member of a group
-    puts bill.short_title
-    puts bill.votes.to_s
     my_groups = self.joined_groups
     unless my_groups.empty?
-      puts bill.voted_on?(self)
       unless bill.voted_on?(self)
         my_groups.each do |g|
           unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
              raise "vote note valid"
-          else
-            puts "the result!! of the vote"
-            puts bill.votes.count
           end
           #bill.votes.push(v)
         end
       else
         # TODO -- remove, should be silent
-        raise "already voted on"
+        puts "silent failure"
+        #raise "already voted on"
       end
       #bill.save!
     else
