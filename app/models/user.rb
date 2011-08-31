@@ -177,11 +177,13 @@ class User
     unless my_groups.empty?
       unless bill.voted_on?(self)
         my_groups.each do |g|
-          v = Vote.create(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
-          bill.votes.push(v)
+          unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
+             raise "vote note valid"
+          end
+          #bill.votes.push(v)
         end
       end
-      bill.save!
+      #bill.save!
     else
       raise "no joined_groups for this user"
     end

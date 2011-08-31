@@ -167,7 +167,7 @@ class BillTest < ActiveSupport::TestCase
     @user1.vote_on(@house_bill, :aye)
     @user2.vote_on(@house_bill, :nay)
     @user3.vote_on(@house_bill, :nay)
-    @user3.vote_on(@house_bill, :aye)
+    @user4.vote_on(@house_bill, :aye)  # of course -- validation error
     district = @user1.district # = "CA46"
     district_tally = @house_bill.get_votes_by_name_and_type(district, :district)
     assert_equal({:ayes => 1, :nays => 1, :abstains => 0, :presents => 0}, district_tally) # {:ayes => 10, :nays => 20, :abstains => 2}

@@ -101,11 +101,12 @@ class Bill
   # ------------------- Public voting aggregation methods -------------------
 
   def tally # delete method calls to this
-    build_tally(self.votes)
+    build_tally(self.votes.all)
   end
 
   def get_overall_users_vote # RECENT
-    votes = self.votes.select do |v|
+    #
+    votes = self.votes.all.select do |v|
       v.polco_group.type == :common
     end
     process_votes(votes)
@@ -113,7 +114,7 @@ class Bill
 
   def get_votes_by_name_and_type(name, type) # RECENT
                                              # we need to protect against a group named by the state
-    process_votes(self.votes.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
+    process_votes(self.votes.all.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
   end
 
   def get_vote_values(votes_collection)
@@ -121,7 +122,7 @@ class Bill
   end
 
   def voted_on?(user)
-    if votes = self.votes.select{|v| v.user_id == user.id}
+    if votes = self.votes.all.select{|v| v.user == user}
       votes.map{|v| v.value}.first
     else
       nil
@@ -129,7 +130,7 @@ class Bill
   end
 
   def users_vote(user)
-    self.votes.select { |v| v.user_id = user.id }.first.value
+    self.votes.all.select { |v| v.user_id = user.id }.first.value
   end
 
   def descriptive_tally
