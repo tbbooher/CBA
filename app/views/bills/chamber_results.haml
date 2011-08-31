@@ -1,12 +1,11 @@
-%h1{:style => "text-align: center"}
-  ="#{@chamber} Results"
+- title "#{@chamber} Results"
 
 %p{:style => "text-align: center"}
   %b= "112th Congress"
 %p{:style => "text-align: center"}
   = "Roll Call Popularity Search"
 
--#= will_paginate @bills
+= will_paginate @bills
 -# Don't know how to paginate
 
 :css
