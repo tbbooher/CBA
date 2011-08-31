@@ -93,8 +93,12 @@ class BillTest < ActiveSupport::TestCase
 
   test "should verify that a user has already voted" do
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
+    Vote.destroy_all
     b = @house_bill
     @user1.vote_on(b, :aye)
+    puts Vote.all.count
+    puts b.votes.all.count
+    puts b.votes.count
     assert_equal :aye, b.voted_on?(@user1)
   end
 
@@ -156,10 +160,10 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should show what the current users vote is on a specific bill" do
-    # why three votes here?
-    b = Bill.new
+    # we need to have a valid bill here
+    b = @house_bill
     @user1.vote_on(b, :aye)
-    assert_equal b.users_vote(@user1), :aye
+    assert_equal :aye, b.users_vote(@user1)
   end
 
   test "should show the votes for a specific district that a user belongs to" do
@@ -188,10 +192,11 @@ class BillTest < ActiveSupport::TestCase
     @house_bill.votes.destroy_all
     @user1.vote_on(@house_bill, :aye)
     @user1.vote_on(@house_bill, :aye)
-    assert_equal(1, @house_bill.votes.to_a.count { |v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
+    assert_equal(1, @house_bill.votes.all.to_a.count { |v| v.value == :aye && v.polco_group.type == :common }, "not exactly one vote")
   end
 
   test "should raise an error on a duplicate vote" do
+    # this won't happen until we have the validations running
     # another test to make sure multiple votes can't happen on the same bill
     # 20110809.2200
     @house_bill.votes.destroy_all

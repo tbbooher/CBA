@@ -68,12 +68,13 @@ group :development do
   gem "rails-erd"
   gem 'rdoc'
   gem "rails3-generators"
-  gem "ruby-debug19"
   gem "capistrano"
-  gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git"
   gem 'unicorn'
   gem 'yard'
 end
+
+#gem "ruby-debug19", :groups => [:development, :test]
+#gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
 
 # Bundle gems for testing
 group :test do
