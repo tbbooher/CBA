@@ -5,7 +5,7 @@ class PolcoGroupsController < ApplicationController
     @polco_groups = PolcoGroup.all # where(name: /#{params[:q]}/i)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml { render :xml => @polco_groups }
       format.json { render :json => @polco_groups.map{|g| {:id => g.id, :name => g.name}} }
     end

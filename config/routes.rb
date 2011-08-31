@@ -6,8 +6,6 @@ Cba::Application.routes.draw do
 
   get "bills/state_results"
 
-  get "bills/chamber_results"
-
   resources :subjects
 
   #resources :bill_comments
@@ -21,6 +19,7 @@ Cba::Application.routes.draw do
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
+  match "/bills/chamber_results/:chamber" => "bills#chamber_results"
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
   match "/bills/process_page" => "bills#process_page"
 

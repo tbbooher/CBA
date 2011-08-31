@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     @votes = Vote.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml  { render :xml => @votes }
     end
   end

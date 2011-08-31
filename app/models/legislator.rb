@@ -49,7 +49,7 @@ class Legislator
   end
 
   def image_location
-    "/assets/photos/#{self.govtrack_id}-200px.jpeg"
+    "/assets/photos/#{self.govtrack_id}-20px.jpeg"
   end
 
   def full_name

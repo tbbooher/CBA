@@ -8,7 +8,7 @@ class BillsController < ApplicationController
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml  { render :xml => @bills }
     end
   end
@@ -155,7 +155,13 @@ class BillsController < ApplicationController
   end
 
   def chamber_results
-
+      # this is where the code gets prepared for the chamber results view
+    if params[:chamber] == "house"
+      @chamber = "House"
+    else
+      @chamber = "Senate"
+    end
+    @bills = Bill.house_bills #for now
   end
 
 end

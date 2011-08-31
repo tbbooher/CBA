@@ -1,0 +1,43 @@
+-title "House District/Legislators"
+
+%p{:style => "text-align: center"}
+  %b= "112th Congress"
+%p{:style => "text-align: center"}
+  = "Alphabetical Search"
+
+-#<%= will_paginate @legislators %>
+
+:css
+  table {padding: 10px;}
+  table {border: 2px solid black
+%table{:align => "center"}
+  %tr
+    %th District
+    %th Rep. Name
+    %th Rep. Picture
+    %th Rep. Party
+  - @legislators.each do |legislator|
+    %tr
+      %td= "#{legislator.state} #{legislator.district}"
+      -#this needs to be last_name, first_name at some point
+      %td= link_to legislator.full_name, legislator
+      %td= image_tag legislator.image_location
+      %td= legislator.party
+
+%p{:style => "text-align: center"}
+  = "Roll Call Popularity Search"
+
+%table{:align => "center"}
+  %tr
+    %th Bill
+    %th Congressional Vote
+    %th Result
+  -#  Can't get a second array to work
+  -#- @bills.each do |bill|
+  -#  %tr
+  -#    %td= link_to bill.short_title, bill_path(bill)
+  -#    %td= something like bill.display_results
+  -#    %td= bill.result
+
+-#<!--Need to add Comments section-->
+-#<%#= link_to 'New Legislator', new_legislator_path %>

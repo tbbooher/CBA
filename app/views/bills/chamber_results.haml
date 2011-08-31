@@ -1,3 +1,31 @@
-- title "Results for each chamber"
+- title "#{@chamber} Results"
+
+%p{:style => "text-align: center"}
+  %b= "112th Congress"
+%p{:style => "text-align: center"}
+  = "Roll Call Popularity Search"
+
+-#= will_paginate @bills
+-# Don't know how to paginate
+
+:css
+  table {border:2px solid black;}
+  table {padding: 10px;}
+%table{:align => "center"}
+  %tr
+    %th Bill
+    %th Your Vote
+    %th Your District Vote
+    %th Your Rep. Vote
+    %th Result
+  - @bills.each do |bill|
+    %tr
+      %td= bill.title
+      %td= "bill.user.vote"
+      %td= "bill.user.district_vote"
+      %td= "bill.user.rep_vote"
+      %td= "bill.result"
+
+
 
 

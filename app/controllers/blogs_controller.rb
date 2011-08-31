@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
      )
 
      respond_to do |format|
-       format.html # index.html.erb
+       format.html # index.haml
        format.xml  { render :xml => @blogs }
      end
   end
@@ -25,7 +25,7 @@ class BlogsController < ApplicationController
       format.js {
          @path = blog_path(@blog, :page => (params[:page] ? (params[:page].to_i+1) : 2) )
       }
-      format.html # index.html.erb
+      format.html # index.haml
       format.xml  { render :xml => @blog }
     end
   end

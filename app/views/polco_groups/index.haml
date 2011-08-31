@@ -1,0 +1,26 @@
+-title "Polco Groups"
+
+%br/
+-#Paginate?
+
+:css
+  table {border: 2px solid black;}
+  table {padding: 10px;}
+%table{:align => "center"}
+  %tr
+    %th
+      %b= "Name"
+    %th
+      %b= "Type"
+    %th
+    %th
+    %th
+  - @polco_groups.each do |polco_group|
+    %tr
+      %td= polco_group.name
+      %td= polco_group.type
+      %td= link_to 'Show', polco_group
+      %td= link_to 'Edit', edit_polco_group_path(polco_group)
+      %td= link_to 'Destroy', polco_group, :confirm => 'Are you sure?', :method => :delete
+
+= link_to 'New PolcoGroup', new_polco_group_path
