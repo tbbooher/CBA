@@ -2,16 +2,12 @@ class LegislatorsController < ApplicationController
   # GET /legislators
   # GET /legislators.xml
   def index
-    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  40)
+    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
-      if format == "legislator"
-        format.html # index.haml
-        format.xml  { render :xml => @legislators }
-      else
-        format.html # index.haml
-        format.xml  { render :xml => @bills }
-      end
+      format.html # index.haml
+      format.xml  { render :xml => @legislator }
     end
   end
 
@@ -19,6 +15,7 @@ class LegislatorsController < ApplicationController
   # GET /legislators/1.xml
   def show
     @legislator = Legislator.find(params[:id])
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # show.haml

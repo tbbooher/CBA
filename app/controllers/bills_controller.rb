@@ -156,14 +156,13 @@ class BillsController < ApplicationController
 
   def chamber_results
       # this is where the code gets prepared for the chamber results view
-    @bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 20)
 
     if params[:chamber] == "house"
       @chamber = "House"
     else
       @chamber = "Senate"
     end
-    @bills = Bill.house_bills #for now
+    @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 20)
   end
 
 end
