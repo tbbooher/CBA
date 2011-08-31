@@ -178,13 +178,11 @@ class User
       unless bill.voted_on?(self)
         my_groups.each do |g|
           unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
-             raise "vote note valid"
+             raise "vote not valid"
           end
-          #bill.votes.push(v)
         end
       else
-        # TODO -- remove, should be silent
-        puts "silent failure"
+        Rails.logger.warn ""
         #raise "already voted on"
       end
       #bill.save!
