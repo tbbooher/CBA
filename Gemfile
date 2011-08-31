@@ -1,8 +1,10 @@
 source 'http://rubygems.org'
 
-gem "rails", "3.1.0.rc6"
-# Rails 3.1 - Asset Pipeline
+gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
 
+gem "rails", "~> 3.1.0" # prev was rc8
+
+# Rails 3.1 - Asset Pipeline
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-script'
@@ -19,11 +21,11 @@ gem "mongoid", "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6
 gem "bson_ext"  #, "1.1.5"
 
 # Bundle gem needed for Devise and cancan
-gem "devise", "~>1.4.0" # ,"1.1.7"
+gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
+gem "omniauth", "0.2.6"
 
 gem "googlecharts"
-gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 
 # we need some stuff too (tbb)
 gem 'simple_form'
@@ -102,6 +104,7 @@ group :test do
   gem "autotest-fsevent", :platforms => :ruby
   gem 'webmock'
   gem 'vcr'
+  gem 'syntax'
 end
 
 # !! THE GRAVEYARD !!
