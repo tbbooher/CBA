@@ -27,7 +27,7 @@
   %tr
     %th Bill
     %th #{@legislator.state} #{@legislator.district}
-    %th @legislator.last_name
+    %th= @legislator.last_name
     %th Result
   - @legislator.bills.each do |bill|
     %tr
