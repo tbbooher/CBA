@@ -177,10 +177,15 @@ class User
     unless my_groups.empty?
       unless bill.voted_on?(self)
         my_groups.each do |g|
-          vote = bill.votes.new(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
-          vote.save!
+          unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
+             raise "vote not valid"
+          end
         end
+      else
+        Rails.logger.warn ""
+        #raise "already voted on"
       end
+      #bill.save!
     else
       raise "no joined_groups for this user"
     end

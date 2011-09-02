@@ -101,11 +101,12 @@ class Bill
   # ------------------- Public voting aggregation methods -------------------
 
   def tally # delete method calls to this
-    build_tally(self.votes)
+    build_tally(self.votes.all)
   end
 
   def get_overall_users_vote # RECENT
-    votes = self.votes.select do |v|
+    #
+    votes = self.votes.all.select do |v|
       v.polco_group.type == :common
     end
     process_votes(votes)
@@ -113,7 +114,7 @@ class Bill
 
   def get_votes_by_name_and_type(name, type) # RECENT
                                              # we need to protect against a group named by the state
-    process_votes(self.votes.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
+    process_votes(self.votes.all.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
   end
 
   def get_vote_values(votes_collection)
@@ -121,15 +122,34 @@ class Bill
   end
 
   def voted_on?(user)
-    if votes = self.votes.select{|v| v.user_id == user.id}
-      votes.map{|v| v.value}.first
-    else
-      nil
+    if vote = user.votes.where(bill_id: self.id).first
+       vote.value
     end
+    #puts "!!!" + self.votes.count.to_s + " votes count for bill"
+    #puts "all votes" + Vote.all.count.to_s
+    #puts "!!!" + self.votes.all.count.to_s + " with all votes count for bill"
+    #if votes = self.votes.all.select{|v| v.user == user}
+    #  puts "the user is #{user.name} with #{user.id}"
+    #  puts "votes count"
+    #  puts votes.count
+    #  puts "compared with self.votes.count"
+    #  puts self.votes.count
+    #  puts votes.map(&:value).to_s
+    #  puts "voted_on? is going to return"
+    #  puts votes.map{|v| v.value}.first
+    #  votes.map{|v| v.value}.first
+    #else
+    #  puts "no votes exist"
+    #  :aye
+    #end
   end
 
   def users_vote(user)
-    self.votes.select { |v| v.user_id = user.id }.first.value
+    if vote = self.votes.all.select { |v| v.user = user }.first
+      vote.value
+    else
+      "none"
+    end
   end
 
   def descriptive_tally

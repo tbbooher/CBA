@@ -6,8 +6,8 @@ class LegislatorsController < ApplicationController
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
-      format.html # index.haml
-      format.xml  { render :xml => @legislator }
+      format.html # index.html.erb
+      format.xml  { render :xml => @legislators }
     end
   end
 
@@ -21,10 +21,6 @@ class LegislatorsController < ApplicationController
       format.html # show.haml
       format.xml  { render :xml => @legislator }
     end
-  end
-
-  def house_results
-
   end
 
   # GET /legislators/new
