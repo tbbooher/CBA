@@ -36,6 +36,10 @@ Feature: Bills
     Given I am signed in
     When I am viewing the bills page for "h112-1723"
     Then I should see "<h1>the map</h1>"
+
+  Scenario: I want to see a senate bill
+    Given I am signed in
+    When I am viewing the bills page for ""
     
     
 
