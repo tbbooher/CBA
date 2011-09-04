@@ -233,7 +233,9 @@ class User
 
   def add_baseline_groups(us_state, district)
     [[us_state, :state],[district, :district],['USA', :country],['Dan Cole',:common]].each do |name, type|
-       self.joined_groups.push(PolcoGroup.find_or_create_by(:name => name, :type => type))
+       g = PolcoGroup.find_or_create_by(:name => name, :type => type)
+       g.members.push(self)
+       self.joined_groups.push(g)
     end
   end
 

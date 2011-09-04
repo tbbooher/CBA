@@ -32,7 +32,7 @@ class PolcoGroup
   
   def the_rep
     if self.type == :district
-        Legislator.where(district_name: self.name).first
+        Legislator.all.select{|l| l.district_name = self.name}.first
     else
        "Only districts can have a representative"
     end
