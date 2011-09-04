@@ -22,4 +22,11 @@ class PolcoGroup
   # time to create the ability to follow
   #has_many :followers, :class_name => "User", :inverse_of =>
 
+  def followers_count
+    self.follower_ids.count
+  end
+  
+  def members_count
+    self.member_ids.count
+  end
 end
