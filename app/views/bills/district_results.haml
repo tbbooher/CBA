@@ -1,4 +1,13 @@
 - title "results for the districts"
 
-- @districts.each do |d|
-  = "#{d.name} with the rep #{d.}"
+= will_paginate @districts
+
+- @districts.paginate.each do |d|
+  - rep = d.the_rep
+  %ul
+    %li
+      = "#{d.name} with the rep #{rep_title(rep)}"
+      %p Image
+        = image_tag rep.image_location_small unless rep.nil?
+      %p Party
+        = rep.party unless rep.nil?

@@ -52,6 +52,10 @@ module BillsHelper
     end
   end
 
+  def rep_title rep
+    rep.nil? ? "No rep" : rep.full_title
+  end
+
   def display_vote_options
     content_tag :div, {:class => 'vote_container'} do
       content_tag :ul, {:id => 'vote_list'} do
