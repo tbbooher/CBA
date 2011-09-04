@@ -29,4 +29,12 @@ class PolcoGroup
   def members_count
     self.member_ids.count
   end
+  
+  def the_rep
+    if self.type == :district
+        Legislator.where(district_name: self.name).first
+    else
+       "Only districts can have a representative"
+    end
+  end
 end
