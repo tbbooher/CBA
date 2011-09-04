@@ -147,7 +147,7 @@ class BillsController < ApplicationController
   end
 
   def district_results
-    @districts = PolcoGroup.districts
+    @districts = PolcoGroup.districts.sort_by{|d| d.members_count}.reverse
   end
 
   def state_results
