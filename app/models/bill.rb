@@ -51,6 +51,8 @@ class Bill
 
   scope :house_bills, where(title: /^h/)
   scope :senate_bills, where(title: /^s/)
+  # Person.where(:age.exists => true)
+  scope :house_roll_called_bills, where(:roll_time.exists => true).descending(:roll_time)
 
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"

@@ -67,6 +67,13 @@ gem 'progress_upload_field', '~> 0.0.1'
 gem 'redcarpet'
 gem 'albino'
 
+
+# Javascript Testing
+group :development, :test do
+  gem 'jasmine', '1.0.2.1'
+  gem 'headless', '0.1.0'
+end
+
 # Bundle gems for development
 group :development do
   gem "nifty-generators"
