@@ -7,7 +7,9 @@
   %ul
     %li
       = "#{d.name} with the rep #{rep_title(rep)}"
-      %p Image
+      %p
+        %b Image:
         = image_tag rep.image_location_small unless rep.nil?
-      %p Party
+      %p
+        %b Party:
         = rep.party unless rep.nil?
