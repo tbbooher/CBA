@@ -147,7 +147,7 @@ class BillsController < ApplicationController
   end
 
   def district_results
-    @districts = PolcoGroup.
+    @districts = PolcoGroup.districts
   end
 
   def state_results
