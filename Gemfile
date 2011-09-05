@@ -20,6 +20,9 @@ end
 gem "mongoid", "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
 gem "bson_ext"  #, "1.1.5"
 
+# so we can store the session in the database
+gem "mongo_session_store"
+
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
@@ -59,18 +62,15 @@ gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 gem "jsort", "~> 0.0.1"
 gem 'progress_upload_field', '~> 0.0.1'
 
-
 # Markdown
 # do "easy_install pygments" on your system
 gem 'redcarpet'
 gem 'albino'
-#gem "nokogiri", "1.4.6"
 
 
-# Testing
+# Javascript Testing
 group :development, :test do
   gem 'jasmine', '1.0.2.1'
-<<<<<<< HEAD
   gem 'headless', '0.1.0'
 end
 
@@ -93,16 +93,13 @@ gem "ruby-debug19", :require => 'ruby-debug', :groups => [:development, :test]
 group :test do
   gem 'simplecov', '>= 0.4.0', :require => false
   gem 'faker'
-=======
-  gem 'headless', '0.1.0'  
-  gem 'rspec', '2.6.0'
-  gem 'rspec-rails', '2.6.1'
->>>>>>> a53e92e9fce886cfac56ce788319ec3bc90d7665
   gem 'json_pure'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
+  gem 'rspec', '2.6.0'
+  gem 'rspec-rails', '2.6.1'
   gem 'spork', '0.9.0.rc9'
   gem 'spork-testunit'
   gem 'launchy'
@@ -114,15 +111,10 @@ group :test do
   gem "mocha"
   gem "fabrication"
   gem "gherkin"
-  gem 'syntax' 
-  gem "nifty-generators"
-  gem "rails-erd"
-  gem 'rdoc'
-  gem 'unicorn'
-  gem 'yard'
   gem 'test-unit'
   gem 'vcr'
   gem 'webmock' # , '~> 1.7.5'
+  gem 'syntax'
 end
 
 # !! THE GRAVEYARD !!
