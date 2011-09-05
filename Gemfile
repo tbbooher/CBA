@@ -86,7 +86,7 @@ group :development do
   gem 'passenger'
 end
 
-#gem "ruby-debug19", :groups => [:development, :test]
+gem "ruby-debug19", :require => 'ruby-debug', :groups => [:development, :test]
 #gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
 
 # Bundle gems for testing

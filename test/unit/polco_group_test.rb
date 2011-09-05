@@ -47,12 +47,15 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should add a user as a follower when a user follows the group" do
     # remove all followers from the group
-    cali_group.followers = []
+    @cali_group.followers = []
+    puts "hi"
     # add @user to followed groups
-    @user1.followed_groups << cali_group
+    @user1.followed_groups << @cali_group
     # now check that it is there
     assert_equal 1, @user1.followed_groups.count
-    assert_equal 1, @cali_group.followers.first
+    puts "followers count:#{@cali_group.followers.count}"
+    puts "first follower: #{@cali_group.followers.first}"
+    assert_equal 1, @cali_group.followers.count
   end
 
 end
