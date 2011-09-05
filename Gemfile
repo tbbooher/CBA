@@ -112,8 +112,8 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
-  gem 'webmock'
   gem 'vcr'
+  gem 'webmock'
   gem 'syntax'
 end
 
