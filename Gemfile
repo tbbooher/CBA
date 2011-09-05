@@ -76,6 +76,7 @@ group :development do
   gem "capistrano"
   gem 'unicorn'
   gem 'yard'
+  gem 'passenger'
 end
 
 #gem "ruby-debug19", :groups => [:development, :test]
@@ -104,7 +105,7 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
-  gem "autotest-fsevent", :platforms => :ruby
+#  gem "autotest-fsevent", :platforms => :ruby
   gem 'webmock'
   gem 'vcr'
   gem 'syntax'
