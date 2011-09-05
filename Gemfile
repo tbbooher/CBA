@@ -26,7 +26,7 @@ gem "mongo_session_store"
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-gem "omniauth", "0.2.6"
+gem "omniauth", "0.3.0rc3"
 
 gem "googlecharts"
 
@@ -113,7 +113,7 @@ group :test do
   gem "gherkin"
   gem 'test-unit'
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'
 end
 
