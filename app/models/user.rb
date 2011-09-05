@@ -177,10 +177,15 @@ class User
     unless my_groups.empty?
       unless bill.voted_on?(self)
         my_groups.each do |g|
-          vote = bill.votes.new(:value => value, :user_id => self.id, :polco_group_id => g.id, :type => g.type)
-          vote.save!
+          unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
+             raise "vote not valid"
+          end
         end
+      else
+        Rails.logger.warn ""
+        #raise "already voted on"
       end
+      #bill.save!
     else
       raise "no joined_groups for this user"
     end
@@ -228,7 +233,9 @@ class User
 
   def add_baseline_groups(us_state, district)
     [[us_state, :state],[district, :district],['USA', :country],['Dan Cole',:common]].each do |name, type|
-       self.joined_groups.push(PolcoGroup.find_or_create_by(:name => name, :type => type))
+       g = PolcoGroup.find_or_create_by(:name => name, :type => type)
+       g.members.push(self)
+       self.joined_groups.push(g)
     end
   end
 
@@ -349,7 +356,7 @@ class User
         raise "no senators found for #{self.us_state}"
       end
     else
-      out = "Your senator has not yet voted on #{senate_bill.tiny_title}"
+      out = "Your senators have not yet voted on #{senate_bill.tiny_title}"
     end
     out
   end

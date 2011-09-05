@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - title "#{@chamber} Results"
 
 %p{:style => "text-align: center"}
@@ -21,3 +22,20 @@
       %td= "bill.user.district_vote"
       %td= "bill.user.rep_vote"
       %td= "bill.result"
+=======
+- title "results for the districts"
+
+= will_paginate @districts
+
+- @districts.paginate.each do |d|
+  - rep = d.the_rep
+  %ul
+    %li
+      = "#{d.name} with the rep #{rep_title(rep)}"
+      %p
+        %b Image:
+        = image_tag rep.image_location_small unless rep.nil?
+      %p
+        %b Party:
+        = rep.party unless rep.nil?
+>>>>>>> d4e6800b7f4dee4b2f80b2041c99b5bc84a71d22

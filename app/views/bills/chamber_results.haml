@@ -5,9 +5,20 @@
 %p{:style => "text-align: center"}
   = "Roll Call Popularity Search"
 
+<<<<<<< HEAD
 = will_paginate @bills
 
 %table.center{:align => "center"}
+=======
+-#= will_paginate @bills
+-# Don't know how to paginate
+/ NO NO ! must be in stylesheet
+:css
+  table {border:2px solid black;}
+  table {padding: 10px;}
+= will_paginate @bills
+%table{:align => "center"}
+>>>>>>> d4e6800b7f4dee4b2f80b2041c99b5bc84a71d22
   %tr
     %th Bill
     %th Your Vote
