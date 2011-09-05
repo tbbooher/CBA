@@ -64,7 +64,7 @@ gem 'progress_upload_field', '~> 0.0.1'
 # do "easy_install pygments" on your system
 gem 'redcarpet'
 gem 'albino'
-gem "nokogiri", "1.4.6"
+#gem "nokogiri", "1.4.6"
 
 
 # Testing
