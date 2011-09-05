@@ -45,11 +45,15 @@ module BillsHelper
   end
 
   def determine_senators_votes(votes)
-    if votes =~ /^no votes available/
+    if votes =~ /^Your senators have not/
       votes
     else
       "#{votes.first[:senator]} voted #{votes.first[:vote].to_s} and #{votes.last[:senator]} voted #{votes.last[:vote].to_s}."
     end
+  end
+
+  def rep_title rep
+    rep.nil? ? "No rep" : rep.full_title
   end
 
   def display_vote_options

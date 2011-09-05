@@ -1,23 +1,16 @@
-- title "#{@chamber} Results"
+- title "results for the districts"
 
-%p{:style => "text-align: center"}
-  %b= "112th Congress"
-%p{:style => "text-align: center"}
-  = "Roll Call Popularity Search"
+= will_paginate @districts
 
--#paginate
+- @districts.paginate.each do |d|
+  - rep = d.the_rep
+  %ul
+    %li
+      = "#{d.name} with the rep #{rep_title(rep)}"
+      %p
+        %b Image:
+        = image_tag rep.image_location_small unless rep.nil?
+      %p
+        %b Party:
+        = rep.party unless rep.nil?
 
-%table.center{:align => "center"}
-  %tr
-    %th Bill
-    %th Your Vote
-    %th Your District Vote
-    %th Your Rep. Vote
-    %th Result
-  -#- @bills.each do |bill|
-    %tr
-      %td= "bill.title"
-      %td= "bill.user.vote"
-      %td= "bill.user.district_vote"
-      %td= "bill.user.rep_vote"
-      %td= "bill.result"

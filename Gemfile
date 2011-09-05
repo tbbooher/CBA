@@ -20,6 +20,9 @@ end
 gem "mongoid", "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
 gem "bson_ext"  #, "1.1.5"
 
+# so we can store the session in the database
+gem "mongo_session_store"
+
 # Bundle gem needed for Devise and cancan
 gem "devise", "~>1.4.0" # ,"1.1.7"
 gem "cancan"
@@ -66,6 +69,13 @@ gem "jsort", "~> 0.0.1"
 gem 'redcarpet'
 gem 'albino'
 
+
+# Javascript Testing
+group :development, :test do
+  gem 'jasmine', '1.0.2.1'
+  gem 'headless', '0.1.0'
+end
+
 # Bundle gems for development
 group :development do
 #  gem "nifty-generators"
@@ -77,4 +87,57 @@ group :development do
   gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git"
 #  gem 'unicorn'
   gem 'yard'
+
 end
+
+  gem 'passenger'
+
+#gem "ruby-debug19", :groups => [:development, :test]
+#gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
+
+# Bundle gems for testing
+group :test do
+  gem 'simplecov', '>= 0.4.0', :require => false
+  gem 'faker'
+  gem 'json_pure'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'rspec', '2.6.0'
+  gem 'rspec-rails', '2.6.1'
+  gem 'spork', '0.9.0.rc9'
+  gem 'spork-testunit'
+  gem 'launchy'
+  gem 'ZenTest', '4.5.0'
+  gem 'autotest'
+  gem 'autotest-rails'
+  gem 'ruby-growl'
+  gem 'autotest-growl'
+  gem "mocha"
+  gem "fabrication"
+  gem "gherkin"
+  gem 'test-unit'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'syntax'
+end
+
+# !! THE GRAVEYARD !!
+#gem "omniauth", :git => 'git://github.com/intridea/omniauth.git' # maybe we need this latest version instead of the gem -tbb
+#gem "govkit" #, :git => 'git://github.com/tbbooher/govkit.git'
+#gem "nytimes-congress"
+#gem "geokit"
+#gem 'drumbone'
+#gem "omniauth" "0.2.6"
+#gem 'omniauth', '>= 0.2.6'
+#gem "heroku"
+#gem 'webmock'
+#gem 'vcr'
+#gem 'factory_girl'
+#gem 'factory_girl_rails'
+#gem 'ym4r'
+#gem "formtastic"
+#gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
+#gem 'factory_girl_rails', "1.1.0"
+

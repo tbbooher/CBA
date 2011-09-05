@@ -233,7 +233,10 @@ class User
 
   def add_baseline_groups(us_state, district)
     [[us_state, :state],[district, :district],['USA', :country],['Dan Cole',:common]].each do |name, type|
-       self.joined_groups.push(PolcoGroup.find_or_create_by(:name => name, :type => type))
+       g = PolcoGroup.find_or_create_by(:name => name, :type => type)
+       g.members.push(self)
+       g.member_count += 1
+       self.joined_groups.push(g)
     end
   end
 
@@ -354,7 +357,7 @@ class User
         raise "no senators found for #{self.us_state}"
       end
     else
-      out = "Your senator has not yet voted on #{senate_bill.tiny_title}"
+      out = "Your senators have not yet voted on #{senate_bill.tiny_title}"
     end
     out
   end
