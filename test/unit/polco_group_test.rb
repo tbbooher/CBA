@@ -5,11 +5,11 @@ class PolcoGroupTest < ActiveSupport::TestCase
   def setup
      PolcoGroup.destroy_all
      common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
-     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
-     ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
+     @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
+     @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
      @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                                  cali_group,
-                                                                  ca46,
+                                                                  @cali_group,
+                                                                  @ca46,
                                                                   Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
   end
 
@@ -52,7 +52,7 @@ class PolcoGroupTest < ActiveSupport::TestCase
     @user1.followed_groups << cali_group
     # now check that it is there
     assert_equal 1, @user1.followed_groups.count
-    assert_equal 1, cali_group.followers.first
+    assert_equal 1, @cali_group.followers.first
   end
 
 end

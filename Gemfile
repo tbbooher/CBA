@@ -27,6 +27,8 @@ gem "mongo_session_store"
 gem "devise", "~>1.4.0" # ,"1.1.7"
 gem "cancan"
 
+#gem "omniauth", "0.3.0rc3"
+
 gem "googlecharts"
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 
@@ -119,7 +121,7 @@ group :test do
   gem "gherkin"
   gem 'test-unit'
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'
 end
 
