@@ -163,11 +163,8 @@ class BillsController < ApplicationController
     else
       @chamber = "Senate"
     end
-<<<<<<< HEAD
-    @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 20)
-=======
     @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
->>>>>>> d4e6800b7f4dee4b2f80b2041c99b5bc84a71d22
+
   end
 
 end
