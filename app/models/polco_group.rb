@@ -5,6 +5,8 @@ class PolcoGroup
   field :description, :type => String
   index :name
   index :type
+  field :follower_count
+  field :member_count
 
   belongs_to :owner, :class_name => "User", :inverse_of => :custom_groups
 

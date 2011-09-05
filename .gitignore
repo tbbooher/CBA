@@ -44,3 +44,4 @@ app/views/layouts/disabled_layouts/**/*
 redcloth/*
 redcloth/**/*
 app/assets/images/photos/*
+spec/javascripts/generated/*
