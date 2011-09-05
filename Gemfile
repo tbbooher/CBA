@@ -112,7 +112,6 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
-#  gem "autotest-fsevent", :platforms => :ruby
   gem 'webmock'
   gem 'vcr'
   gem 'syntax'
