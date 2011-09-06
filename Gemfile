@@ -1,17 +1,17 @@
 source 'http://rubygems.org'
 
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
-gem 'httparty'
 
-gem "rails", "3.1.0.rc5"
+gem "rails", "~> 3.1.0" # prev was rc8
 
+# Rails 3.1 - Asset Pipeline
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-script'
   gem 'uglifier'
   gem 'json'
   gem 'jquery-rails'
-#  gem 'therubyracer'
+  gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
   gem 'sprockets', '~> 2.0.0.beta.12'
 end
@@ -24,30 +24,25 @@ gem "bson_ext"  #, "1.1.5"
 gem "mongo_session_store"
 
 # Bundle gem needed for Devise and cancan
-gem "devise", "~>1.4.0" # ,"1.1.7"
+gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-
-#gem "omniauth", "0.3.0rc3"
+gem "omniauth", "0.3.0rc3"
 
 gem "googlecharts"
-gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 
 # we need some stuff too (tbb)
 gem 'simple_form'
 
-# for deployment
-gem "capistrano"
+group :production do
+  gem 'unicorn'
+end
 
-# and server
-#gem 'unicorn'
-
-# time to connect to opencongress
+# connection gems
 gem 'json'
 gem 'geocoder'
-
-#group :after_initialize do
-gem 'nokogiri' #,  :git => 'git://github.com/ender672/nokogiri.git'# :git => 'git://github.com/tenderlove/nokogiri.git'
-gem 'feedzirra' #ls
+gem 'httparty'
+gem 'nokogiri'
+gem 'feedzirra' 
 gem 'sax-machine'
 
 # Bundle gem needed for paperclip and attachments
@@ -63,8 +58,9 @@ gem "will_paginate", "3.0.pre4"
 gem 'escape_utils'
 gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 
-# Gems by iboard.cc/CBA
+# Gems by iboard.cc <andreas@altendorfer.at>
 gem "jsort", "~> 0.0.1"
+gem 'progress_upload_field', '~> 0.0.1'
 
 # Markdown
 # do "easy_install pygments" on your system
@@ -80,21 +76,17 @@ end
 
 # Bundle gems for development
 group :development do
-#  gem "nifty-generators"
+  gem "nifty-generators"
   gem "rails-erd"
   gem 'rdoc'
   gem "rails3-generators"
-  gem "ruby-debug19"
-  #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
-  gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git"
-#  gem 'unicorn'
+  gem "capistrano"
+  gem 'unicorn'
   gem 'yard'
-
+  gem 'passenger'
 end
 
-  gem 'passenger'
-
-#gem "ruby-debug19", :groups => [:development, :test]
+gem "ruby-debug19", :require => 'ruby-debug', :groups => [:development, :test]
 #gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
 
 # Bundle gems for testing
@@ -150,4 +142,3 @@ end
 #gem "formtastic"
 #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
 #gem 'factory_girl_rails', "1.1.0"
-
