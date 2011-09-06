@@ -2,7 +2,7 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    @polco_groups = PolcoGroup.all # where(name: /#{params[:q]}/i)
+    @polco_groups = PolcoGroup.all.paginate(:page => params[:page], :per_page =>  20) # where(name: /#{params[:q]}/i)
 
     respond_to do |format|
       format.html # index.haml

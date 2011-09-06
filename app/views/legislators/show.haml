@@ -18,16 +18,14 @@
   = "Roll Call Popularity Search"
 
 %br/
-%br/
 
-:css
-  table {border: 2px solid black;}
-  table {padding: 10px;}
-%table{:align => "center"}
+= will_paginate @bills
+
+%table.center{:align => "center"}
   %tr
     %th Bill
     %th #{@legislator.state} #{@legislator.district}
-    %th @legislator.last_name
+    %th= @legislator.last_name
     %th Result
   - @legislator.bills.each do |bill|
     %tr
