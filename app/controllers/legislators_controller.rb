@@ -2,21 +2,12 @@ class LegislatorsController < ApplicationController
   # GET /legislators
   # GET /legislators.xml
   def index
-<<<<<<< HEAD
     @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
-      format.html # index.haml
-      format.xml  { render :xml => @legislator }
-=======
-    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  40)
-    @bills = Bill.all
-
-    respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @legislators }
->>>>>>> d4e6800b7f4dee4b2f80b2041c99b5bc84a71d22
     end
   end
 

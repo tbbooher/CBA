@@ -26,7 +26,7 @@ gem "mongo_session_store"
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-gem "omniauth", "0.2.6"
+gem "omniauth", "0.3.0rc3"
 
 gem "googlecharts"
 
@@ -67,6 +67,13 @@ gem 'progress_upload_field', '~> 0.0.1'
 gem 'redcarpet'
 gem 'albino'
 
+
+# Javascript Testing
+group :development, :test do
+  gem 'jasmine', '1.0.2.1'
+  gem 'headless', '0.1.0'
+end
+
 # Bundle gems for development
 group :development do
   gem "nifty-generators"
@@ -76,9 +83,10 @@ group :development do
   gem "capistrano"
   gem 'unicorn'
   gem 'yard'
+  gem 'passenger'
 end
 
-#gem "ruby-debug19", :groups => [:development, :test]
+gem "ruby-debug19", :require => 'ruby-debug', :groups => [:development, :test]
 #gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
 
 # Bundle gems for testing
@@ -104,9 +112,16 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
+<<<<<<< HEAD
+<<<<<<< HEAD
 #  gem "autotest-fsevent", :platforms => :ruby
   gem 'webmock'
+=======
+>>>>>>> 8cbdd3109e81415ad3cf22c058ba6b7224ba5862
+=======
+>>>>>>> dfa914dd926792c2d87a13d7415b3fff463db0b2
   gem 'vcr'
+  gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'
 end
 

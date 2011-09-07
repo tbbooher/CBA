@@ -5,11 +5,11 @@ class PolcoGroupTest < ActiveSupport::TestCase
   def setup
      PolcoGroup.destroy_all
      common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
-     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
-     ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
+     @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
+     @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
      @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                                  cali_group,
-                                                                  ca46,
+                                                                  @cali_group,
+                                                                  @ca46,
                                                                   Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
   end
 
@@ -43,6 +43,19 @@ class PolcoGroupTest < ActiveSupport::TestCase
     g.name = 'Polco Founders'
     g.followers << @user1
     assert_equal 1, g.followers.size
+  end
+
+  test "should add a user as a follower when a user follows the group" do
+    # remove all followers from the group
+    @cali_group.followers = []
+    puts "hi"
+    # add @user to followed groups
+    @user1.followed_groups << @cali_group
+    # now check that it is there
+    assert_equal 1, @user1.followed_groups.count
+    puts "followers count:#{@cali_group.followers.count}"
+    puts "first follower: #{@cali_group.followers.first}"
+    assert_equal 1, @cali_group.followers.count
   end
 
 end

@@ -235,6 +235,7 @@ class User
     [[us_state, :state],[district, :district],['USA', :country],['Dan Cole',:common]].each do |name, type|
        g = PolcoGroup.find_or_create_by(:name => name, :type => type)
        g.members.push(self)
+       g.member_count += 1
        self.joined_groups.push(g)
     end
   end

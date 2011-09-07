@@ -48,15 +48,11 @@ class Legislator
     end
   end
 
-<<<<<<< HEAD
-  def image_location
-=======
   def image_location_small
     "/assets/photos/#{self.govtrack_id}-50px.jpeg"
   end
 
   def image_location_medium
->>>>>>> d4e6800b7f4dee4b2f80b2041c99b5bc84a71d22
     "/assets/photos/#{self.govtrack_id}-200px.jpeg"
   end
 

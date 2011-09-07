@@ -1,5 +1,6 @@
 .bundle
 .yardoc
+.rspec
 .yardoc/**/*
 Gemfile.lock
 db/*.sqlite3
@@ -44,3 +45,4 @@ app/views/layouts/disabled_layouts/**/*
 redcloth/*
 redcloth/**/*
 app/assets/images/photos/*
+spec/javascripts/generated/*
