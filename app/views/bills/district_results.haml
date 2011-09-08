@@ -19,3 +19,24 @@
       %td= rep.full_name unless rep.nil?
       %td= image_tag rep.image_location_small unless rep.nil?
       %td= rep.party unless rep.nil?
+
+%p{:style => "text-align:center"}
+  = "Roll Call"
+  = "Drop-Down Box Search Box"
+
+= will_paginate @roll_called_bills
+
+%table.center{:align => "center"}
+  %tr
+    %th Bill
+    %th FOR
+    %th ABSTAIN
+    %th AGAINST
+    %th Result
+  - roll_called_bills.each do |r|
+    %tr
+      %td r.bill_number
+      %td 11
+      %td 11
+      %td 11
+      %td olds
