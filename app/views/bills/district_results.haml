@@ -19,17 +19,3 @@
       %td= rep_title unless rep.nil?
       %td= image_tag rep.image_location_small unless rep.nil?
       %td= rep.party unless rep.nil?
-
-
--#- @districts.paginate.each do |d|
-    - rep = d.the_rep
-  %ul
-    %li
-      = "#{d.name} with the rep #{rep_title(rep)}"
-      %p
-        %b Image:
-        = image_tag rep.image_location_small unless rep.nil?
-      %p
-        %b Party:
-        = rep.party unless rep.nil?
-
