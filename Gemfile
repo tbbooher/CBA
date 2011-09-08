@@ -17,7 +17,7 @@ group :assets do
 end
 
 # Bundle gems needed for Mongoid
-gem "mongoid", "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
+gem "mongoid" # , "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
 gem "bson_ext"  #, "1.1.5"
 
 # so we can store the session in the database
