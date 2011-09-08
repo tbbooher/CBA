@@ -16,6 +16,6 @@
     - rep = d.the_rep
     %tr
       %td= d.name unless rep.nil?
-      %td= rep unless rep.nil?
+      %td= rep.name unless rep.nil?
       %td= image_tag rep.image_location_small unless rep.nil?
       %td= rep.party unless rep.nil?
