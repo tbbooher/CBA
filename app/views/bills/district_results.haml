@@ -24,7 +24,7 @@
   = "Roll Call"
   = "Drop-Down Box Search Box"
 
-= will_paginate @roll_called_bills
+= will_paginate @bills
 
 %table.center{:align => "center"}
   %tr
@@ -33,10 +33,10 @@
     %th ABSTAIN
     %th AGAINST
     %th Result
-  - @roll_called_bills.each do |r|
+  - @bills.each do |r|
     %tr
-      %td r.bill_number
-      %td 11
-      %td 11
-      %td 11
-      %td olds
+      %td= r.bill_number
+      %td= "11"
+      %td= "11"
+      %td= "11"
+      %td= "olds"
