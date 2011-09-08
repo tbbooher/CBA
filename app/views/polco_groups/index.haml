@@ -1,12 +1,10 @@
 -title "Polco Groups"
 
 %br/
--#Paginate?
 
-:css
-  table {border: 2px solid black;}
-  table {padding: 10px;}
-%table{:align => "center"}
+= will_paginate @polco_groups
+
+%table.center{:align => "center"}
   %tr
     %th
       %b= "Name"

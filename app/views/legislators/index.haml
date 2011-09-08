@@ -5,12 +5,9 @@
 %p{:style => "text-align: center"}
   = "Alphabetical Search"
 
--#<%= will_paginate @legislators %>
+= will_paginate @legislators
 
-:css
-  table {padding: 10px;}
-  table {border: 2px solid black
-%table{:align => "center"}
+%table.center{:align => "center"}
   %tr
     %th District
     %th Rep. Name
@@ -27,17 +24,18 @@
 %p{:style => "text-align: center"}
   = "Roll Call Popularity Search"
 
+= will_paginate @bills
+
 %table{:align => "center"}
   %tr
     %th Bill
     %th Congressional Vote
     %th Result
-  -#  Can't get a second array to work
-  -#- @bills.each do |bill|
-  -#  %tr
-  -#    %td= link_to bill.short_title, bill_path(bill)
-  -#    %td= something like bill.display_results
-  -#    %td= bill.result
+  - @bills.each do |bill|
+    %tr
+      %td= link_to bill.short_title, bill_path(bill)
+      %td= "something like bill.display_results"
+      %td= "bill.result"
 
 -#<!--Need to add Comments section-->
 -#<%#= link_to 'New Legislator', new_legislator_path %>

@@ -2,8 +2,8 @@ class LegislatorsController < ApplicationController
   # GET /legislators
   # GET /legislators.xml
   def index
-    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  40)
-    @bills = Bill.all
+    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,6 +15,7 @@ class LegislatorsController < ApplicationController
   # GET /legislators/1.xml
   def show
     @legislator = Legislator.find(params[:id])
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # show.haml
