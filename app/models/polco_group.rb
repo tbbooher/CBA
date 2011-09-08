@@ -13,6 +13,8 @@ class PolcoGroup
   has_and_belongs_to_many :members, :class_name => "User", :inverse_of => :joined_groups
   has_and_belongs_to_many :followers, :class_name => "User", :inverse_of => :followed_groups
 
+  after_save :update_followers_and_members
+
   # some validations
   validates_uniqueness_of :name, :scope => :type
   validates_inclusion_of :type, :in => [:custom, :state, :district, :common, :country], :message => 'Only valid groups are custom, state, district, common, country'
@@ -26,6 +28,11 @@ class PolcoGroup
 
   def followers_count
     self.follower_ids.count
+  end
+  
+  def update_followers_and_members
+    update_attribute(:follower_count, self.followers.size)
+    update_attribute(:member_count, self.members.size)    
   end
   
   def members_count
