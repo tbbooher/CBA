@@ -28,8 +28,9 @@ class User
 
   has_many :votes
 
-  has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup"
-  has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup"
+  has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup", :inverse_of => :members
+  has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup", :inverse_of => :followers
+
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
   belongs_to :representative, :class_name => "Legislator", :inverse_of => :district_constituents
 
