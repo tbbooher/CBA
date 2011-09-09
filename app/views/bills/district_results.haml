@@ -1,16 +1,44 @@
-- title "results for the districts"
+- title "112th Congress"
+
+%p{:style => "text-align:center"}
+  = "House District/Legislators"
+  = "Drop-Down Box Search Box"
 
 = will_paginate @districts
 
-- @districts.paginate.each do |d|
-  - rep = d.the_rep
-  %ul
-    %li
-      = "#{d.name} with the rep #{rep_title(rep)}"
-      %p
-        %b Image:
-        = image_tag rep.image_location_small unless rep.nil?
-      %p
-        %b Party:
-        = rep.party unless rep.nil?
+%table.center{:align => "center"}
+  %tr
+    %th District
+    %th Rep Name
+    %th Rep Pic
+    %th Party
+  - @districts.paginate.each do |d|
+    - rep = d.the_rep
+    %tr
+      %td= link_to d.name, d unless rep.nil?
+      %td= link_to rep.full_name, rep unless rep.nil?
+      %td= image_tag rep.image_location_small unless rep.nil?
+      %td= rep.party unless rep.nil?
 
+%p{:style => "text-align:center"}
+  = "Roll Call"
+  = "Drop-Down Box Search Box"
+
+= will_paginate @bills
+
+%table.center{:align => "center"}
+  %tr
+    %th Bill
+    %th.for FOR
+    %th.ab ABSTAIN
+    %th.ag AGAINST
+    %th Result
+  - @bills.each do |r|
+    %tr
+      %td= link_to r.bill_number, r
+      %td.for= "11"
+      %td.ab= "11"
+      %td.ag= "11"
+      %td= "olds"
+
+-#= render :partial => 'comments_subpage', :locals => {:bill => @bill}

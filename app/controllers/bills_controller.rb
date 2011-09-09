@@ -148,7 +148,13 @@ class BillsController < ApplicationController
 
   def district_results
     @districts = PolcoGroup.districts.sort_by{|d| d.members_count}.reverse.paginate(:page => params[:page], :per_page => 10)
-    @roll_called_bills = Bill.house_roll_called_bills.all
+    @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
+    #@comments = Bill.comments.sort_by{|c| c.}
+
+    respond_to do |format|
+      format.html # district_results.haml
+      format.xml  { render :xml => @bills }
+    end
   end
 
   def state_results
