@@ -36,7 +36,23 @@
 
 -#    <!-- need to check for the condition that they have no bills -->
 -#
--#<!--Comments section-->
+-#= render :partial => 'comments_subpage', :locals => {:bill => @bill}
+
+%p{:align => "center"}
+  %b= "Group Members"
+  = "Drop-Down Box Search"
+
+%table.center{:align => "center"}
+  %tr
+    %th Name
+    %th Pic
+    %th Member Since
+
+%table.center{:align => "center"}
+  %tr
+    %th Name
+    %th Pic
+    %th Member Since
 -#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 -#<%= link_to 'Back', legislators_path %>
 -#
