@@ -48,10 +48,15 @@
     %th Name
     %th Pic
     %th Member Since
+  - @users.each do |u|
+    %tr
+      %td= u.name
+      %td= u.avatar
+      %td= u.created_at
 
 %br/
 %p{:align => "center"}
-  %br= "Group Followers"
+  %b= "Group Followers"
   = "Drop-Down Box Search"
 
 %table.center{:align => "center"}

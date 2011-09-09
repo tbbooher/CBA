@@ -16,6 +16,7 @@ class LegislatorsController < ApplicationController
   def show
     @legislator = Legislator.find(params[:id])
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
+    @users = User.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # show.haml
