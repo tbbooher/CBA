@@ -64,6 +64,11 @@
     %th Name
     %th Pic
     %th Member Since
+  - @users.each do |u|
+    %tr
+      %td= u.name
+      %td= u.avatar
+      %td= u.created_at
 -#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 -#<%= link_to 'Back', legislators_path %>
 -#
