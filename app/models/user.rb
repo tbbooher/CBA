@@ -98,6 +98,11 @@ class User
 
   scope :with_role, lambda { |role| {:where => {:roles_mask.gte => ROLES.index(role)}} }
 
+  def bills_voted_on(chamber)
+    # the bills in the table are ordered by most recent at the top
+    votes = self.votes.select_if{|v| v.bill.chamber == chamber}.sort_by(&:created_at).map(&:bill)
+  end
+
   def registered?
     (self.role == :registered || !self.zip_code.nil?)
   end

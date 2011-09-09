@@ -162,20 +162,29 @@ class BillsController < ApplicationController
   end
 
   def chamber_results
-      # this is where the code gets prepared for the chamber results view
-#    this page is the centerpiece of the site. it's simple and it culminates participation with transparency for a measure of representation.
-#this page presents one table outlining the bills the user has cast an eballot on.
-#for each bill, the table shows the bill's official title, the user's vote, the user's district's tally on that bill, the rep's vote on that bill and the overall bill result.
-#in addition there's a column for the user's comment on that bill. if the user posted a comment on that bill, an expandable arrow appears in that column. when the arrow in that column is selected it opens the user's post's page in new tab (or window) in the browser.
-#the bills in the table are ordered by most recent at the top, but can also be ordered by popularity, number of votes, number of comments, number of votes by district members, or searchable.
+    # this is where the code gets prepared for the chamber results view
+    #this page presents one table outlining the bills the user has cast an eballot on.
+    
+    # the bills in the table are ordered by most recent at the top
+    #for each bill, the table shows the bill's official title, 
+    # the user's vote, the user's district's tally on that bill,
+    # the rep's vote on that bill and the overall bill result.
+    #in addition there's a column for the user's comment on that bill.
+    # if the user posted a comment on that bill, an expandable arrow appears
+    # in that column. when the arrow in that column is selected it opens the user's post's
+    # page in new tab (or window) in the browser.
+    # future case
+    # but can also be ordered by popularity, number of votes, number of comments, number of votes by district members,
+    # or searchable.
 
     if params[:chamber] == "house"
       @chamber = "House"
+      @bills = current_user.bills_voted_on(:house)
     else
       @chamber = "Senate"
+      @bills = current_user.bills_voted_on(:senate)
     end
-    @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
-
+    #@bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
   end
 
 end
