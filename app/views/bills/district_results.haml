@@ -35,7 +35,7 @@
     %th Result
   - @bills.each do |r|
     %tr
-      %td= r.bill_number
+      %td= link_to r.bill_number, r
       %td.for= "11"
       %td.ab= "11"
       %td.ag= "11"
