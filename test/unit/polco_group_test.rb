@@ -69,14 +69,23 @@ class PolcoGroupTest < ActiveSupport::TestCase
   end
 
   test "should have one more follower when I add a follower to a group" do
+    puts "starting test"
     @cali_group.members.delete_all
     @cali_group.save
-    puts "member count: !#{@cali_group.members_count}!"
-    assert_equal 0, @cali_group.members_count
-    @cali_group.members << @user1
+    @cali_group.reload
     @cali_group.save
-    puts "member count 2: !#{@cali_group.members_count}!"
-    assert_equal 1, @cali_group.members_count
+    puts "member count: !#{@cali_group.member_count}!"
+    assert_equal 0, @cali_group.member_count
+    @cali_group.members << @user1
+    puts "before"
+    puts @cali_group.member_count
+    @cali_group.reload
+    puts "member count 2: !#{@cali_group.member_count}!"
+    assert_equal 1, @cali_group.member_count
+  end
+
+  test "should be able to sort by most popular group" do
+    pending
   end
 
 end

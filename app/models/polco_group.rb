@@ -7,6 +7,8 @@ class PolcoGroup
   index :type
   field :follower_count, :type => Integer, :default => 0
   field :member_count, :type => Integer, :default => 0
+  index :follower_count
+  index :member_count
 
   belongs_to :owner, :class_name => "User", :inverse_of => :custom_groups
 
@@ -15,7 +17,6 @@ class PolcoGroup
 
   #we want to increment member_count when a new member is added
   before_save :update_followers_and_members
-
 
   # some validations
   validates_uniqueness_of :name, :scope => :type
@@ -27,18 +28,10 @@ class PolcoGroup
 
   # time to create the ability to follow
 
-
-  def followers_count
-    self.follower_ids.count
-  end
-  
   def update_followers_and_members
+    #self.reload
     self.follower_count = self.followers.size
     self.member_count = self.members.size
-  end
-  
-  def members_count
-    self.member_ids.count
   end
   
   def the_rep
