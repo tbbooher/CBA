@@ -6,6 +6,7 @@ class User
   include Mongoid::Timestamps
   include Mongoid::Paperclip
   include Geocoder::Model::Mongoid
+
   geocoded_by :coordinates
   # TODO ^^ is this still needed
   cache
@@ -29,6 +30,9 @@ class User
   has_many :votes
 
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup", :inverse_of => :members
+
+  #counter_cache :name => :polco_group, :inverse_of => :members
+
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup", :inverse_of => :followers
 
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents

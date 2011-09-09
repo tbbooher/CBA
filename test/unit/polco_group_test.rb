@@ -68,4 +68,15 @@ class PolcoGroupTest < ActiveSupport::TestCase
     assert_equal @cali_group, @user1.followed_groups.first
   end
 
+  test "should have one more follower when I add a follower to a group" do
+    @cali_group.members.delete_all
+    @cali_group.save
+    puts "member count: !#{@cali_group.members_count}!"
+    assert_equal 0, @cali_group.members_count
+    @cali_group.members << @user1
+    @cali_group.save
+    puts "member count 2: !#{@cali_group.members_count}!"
+    assert_equal 1, @cali_group.members_count
+  end
+
 end

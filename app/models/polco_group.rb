@@ -5,15 +5,17 @@ class PolcoGroup
   field :description, :type => String
   index :name
   index :type
-  field :follower_count
-  field :member_count
+  field :follower_count, :type => Integer, :default => 0
+  field :member_count, :type => Integer, :default => 0
 
   belongs_to :owner, :class_name => "User", :inverse_of => :custom_groups
 
   has_and_belongs_to_many :members, :class_name => "User", :inverse_of => :joined_groups
   has_and_belongs_to_many :followers, :class_name => "User", :inverse_of => :followed_groups
 
-  after_save :update_followers_and_members
+  #we want to increment member_count when a new member is added
+  before_save :update_followers_and_members
+
 
   # some validations
   validates_uniqueness_of :name, :scope => :type
@@ -24,15 +26,15 @@ class PolcoGroup
   scope :customs, where(type: :custom)
 
   # time to create the ability to follow
-  #has_many :followers, :class_name => "User", :inverse_of =>
+
 
   def followers_count
     self.follower_ids.count
   end
   
   def update_followers_and_members
-    update_attribute(:follower_count, self.followers.size)
-    update_attribute(:member_count, self.members.size)    
+    self.follower_count = self.followers.size
+    self.member_count = self.members.size
   end
   
   def members_count
