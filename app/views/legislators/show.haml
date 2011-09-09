@@ -38,6 +38,7 @@
 -#
 -#= render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
+%br/
 %p{:align => "center"}
   %b= "Group Members"
   = "Drop-Down Box Search"
@@ -47,6 +48,11 @@
     %th Name
     %th Pic
     %th Member Since
+
+%br/
+%p{:align => "center"}
+  %br= "Group Followers"
+  = "Drop-Down Box Search"
 
 %table.center{:align => "center"}
   %tr
