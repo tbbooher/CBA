@@ -194,9 +194,9 @@ table.center
   padding: 10px;
 }
 
-th.for {color: green}
-th.ab {color: orange}
-th.ag {color: red}
-td.for {color: green}
-td.ab {color: orange}
-td.ag {color: red}
+th.for {color: green; text-align: center}
+th.ab {color: orange; text-align: center}
+th.ag {color: red; text-align: center}
+td.for {color: green; text-align: center}
+td.ab {color: orange; text-align: center}
+td.ag {color: red; text-align: center}
