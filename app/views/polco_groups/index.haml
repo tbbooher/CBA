@@ -2,23 +2,34 @@
 
 %br/
 
-= will_paginate @polco_groups
+=# will_paginate @polco_groups
 
-%table.center{:align => "center"}
-  %tr
-    %th
-      %b= "Name"
-    %th
-      %b= "Type"
-    %th
-    %th
-    %th
-  - @polco_groups.each do |polco_group|
-    %tr
-      %td= polco_group.name
-      %td= polco_group.type
-      %td= link_to 'Show', polco_group
-      %td= link_to 'Edit', edit_polco_group_path(polco_group)
-      %td= link_to 'Destroy', polco_group, :confirm => 'Are you sure?', :method => :delete
+%p
+  things like center should be done in css. i would make multiple columns on this page -- I think using tables is not the
+  best way to show data
 
-= link_to 'New PolcoGroup', new_polco_group_path
+- if can? :edit, PolcoGroup
+  %p
+    = current_user
+    , you can edit groups, what you see below looks different than what everyone else sees.
+
+  - @groups.each do |groups|
+    %h2
+      = groups.first.capitalize
+    =# will_paginate
+    %table.center{:align => "center"}
+      %tr
+        %th
+          %b= "Name"
+        - if can? :edit, groups.last
+          %th
+          %th
+      - groups.last.each do |polco_group|
+        %tr
+          %td= link_to polco_group.name, polco_group
+          - if can? :edit, polco_group
+            %td= link_to 'Edit', edit_polco_group_path(polco_group)
+            %td= link_to 'Destroy', polco_group, :confirm => 'Are you sure?', :method => :delete
+
+- if can? :edit, PolcoGroup
+  = link_to 'New PolcoGroup', new_polco_group_path

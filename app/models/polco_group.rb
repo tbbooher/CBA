@@ -36,10 +36,15 @@ class PolcoGroup
   
   def the_rep
     if self.type == :district
-      if (self.name ~= /-AL/)  >= 0
-        Legislator.all.select{|l| l.district_name == self.name}.first
+      if self.name =~ /([A-Z]{2})-AL/ # then there is only one district
+        puts "The district is named #{self.name}"
+        l =  Legislator.where(state: $1).where(district: 0).first
+      else # we have multiple districts for this state
+        l = Legislator.all.select{|l| l.district_name == self.name}.first
+      end
     else
-       "Only districts can have a representative"
+      l = "Only districts can have a representative"
     end
+    l || "Vacant"
   end
 end
