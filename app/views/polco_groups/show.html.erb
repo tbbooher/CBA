@@ -9,17 +9,18 @@
   <b>Type:</b>
   <%= @polco_group.type %>
 </p>
-
+<% if @polco_group.type == :custom %>
 <p>
   <b>Owner:</b>
-  <%= @polco_group.owner.name %>
+  <%= @polco_group.owner.name if @polco_group.owner  %>
 </p>
 
 <p>
   <b>Description:</b>
   <%= @polco_group.description %>
 </p>
+<% end %>
 
 
-<%= link_to 'Edit', edit_polco_group_path(@polco_group) %> |
+<%= link_to 'Edit', edit_polco_group_path(@polco_group) if can? :edit, @polco_group %> |
 <%= link_to 'Back', polco_groups_path %>

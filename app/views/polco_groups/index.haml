@@ -10,13 +10,13 @@
 
 - if can? :edit, PolcoGroup
   %p
-    = current_user
+    = current_user.name.capitalize
     , you can edit groups, what you see below looks different than what everyone else sees.
 
   - @groups.each do |groups|
     %h2
       = groups.first.capitalize
-    =# will_paginate
+    = will_paginate groups.last
     %table.center{:align => "center"}
       %tr
         %th

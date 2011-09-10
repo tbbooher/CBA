@@ -80,7 +80,7 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups/1
   # GET /polco_groups/1.xml
   def show
-    @polco_group = PolcoGroup.find(params[:id])
+    votes = @polco_group.votes
 
     respond_to do |format|
       format.html # show.haml
