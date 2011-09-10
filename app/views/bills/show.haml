@@ -40,30 +40,26 @@
             \:#{format_votes(tally[:tally])}
     .clear
 / include comments here
-= render :partial => 'comments_subpage', :locals => {:bill => @bill}
-%p
-  %b Title:
+%p.title{:align => "center"}
   = @bill.bill_title
-%p
-  %b Bill state:
-  = @bill.bill_state
-  / error checking?
-%p
-  %b Last action
-  = last_action(@bill)
+
+%br/
+
+%p{:align => "center"}
+  = @bill.long_title
 - unless @bill.summary.empty?
-  %p
-    %b Summary:
+  %p{:align => "center"}
     = @bill.summary
-/ TODO clean up the old way of presenting actions
-%p
-  %b Last action on:
-  = @bill.bill_actions.first.first
-  |
-  \#{@bill.bill_actions.first.last}
-%p
-  %b Sponsor:
+%p{:align => "center"}
   = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
+%p{:align => "center"}
+  = @bill.state
+%p{:align => "center"}
+  = "Official Text"
+
+= render :partial => 'comments_subpage', :locals => {:bill => @bill}
+
+
 %p
   %b Cosponsors count:
   = @bill.cosponsors_count
