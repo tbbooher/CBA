@@ -1,9 +1,5 @@
 %p#notice= notice
 - title @bill.bill_title || "no title yet"
-/ include comments here
-%p.title{:align => "center"}
-  %b
-    = @bill.bill_title
 
 %br/
 
@@ -24,6 +20,22 @@
   = "Official Text"
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
+
+%p{:align => "center"}
+  = "District Tallies"
+  = "Drop-Down Box Search Box"
+
+%table.center{:align => "center"}
+  %tr
+    %th District
+    %th Tally
+    %th Rep Vote
+    %th Rep Name
+    %th Party
+  - @districts.each do |d|
+    %tr
+      %td=
+
 
 %span{:style => "color:red;"} Please vote - get involved!
 #vote_region
