@@ -1,5 +1,30 @@
 %p#notice= notice
 - title @bill.bill_title || "no title yet"
+/ include comments here
+%p.title{:align => "center"}
+  %b
+    = @bill.bill_title
+
+%br/
+
+%p{:align => "center"}
+  %b Title:
+  = @bill.long_title
+- unless @bill.summary.empty?
+  %p{:align => "center"}
+    %b Summary:
+    = @bill.summary
+%p{:align => "center"}
+  %b Sponsor:
+  = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
+%p{:align => "center"}
+  %b Status:
+  = @bill.bill_state
+%p{:align => "center"}
+  = "Official Text"
+
+= render :partial => 'comments_subpage', :locals => {:bill => @bill}
+
 %span{:style => "color:red;"} Please vote - get involved!
 #vote_region
   = determine_vote(@user)
@@ -39,52 +64,7 @@
             %b>= tally[:name]
             \:#{format_votes(tally[:tally])}
     .clear
-/ include comments here
-%p.title{:align => "center"}
-  %b
-    = @bill.bill_title
 
-%br/
-
-%p{:align => "center"}
-  %b Title:
-  = @bill.long_title
-- unless @bill.summary.empty?
-  %p{:align => "center"}
-    %b Summary:
-    = @bill.summary
-%p{:align => "center"}
-  %b Sponsor:
-  = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
-%p{:align => "center"}
-  %b Status:
-  = @bill.bill_state
-%p{:align => "center"}
-  = "Official Text"
-
-= render :partial => 'comments_subpage', :locals => {:bill => @bill}
-
-
-%p
-  %b Cosponsors count:
-  = @bill.cosponsors_count
-%p
-  %b Bill html:
-  = @bill.bill_html.html_safe if @bill.bill_html
-%p
-  %b Summary word count:
-  = @bill.summary_word_count
-%p
-  %b Text word count:
-  = @bill.text_word_count
-%p
-  %b State:
-  = @bill.bill_state
-%p
-  %b Text updated on:
-  = @bill.text_updated_on
-= link_to 'Edit', edit_bill_path(@bill) if can? :edit, Bill
-|
 \#{link_to 'Back', bills_path}
 
 %h2
