@@ -36,6 +36,7 @@ class PolcoGroup
   
   def the_rep
     if self.type == :district
+      if (self.name ~= /-AL/)  >= 0
         Legislator.all.select{|l| l.district_name == self.name}.first
     else
        "Only districts can have a representative"
