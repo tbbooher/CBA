@@ -34,7 +34,7 @@
     %th Rep Vote
     %th Rep Name
     %th Party
-  - @districts.each do |d|
+  - @districts.paginate.each do |d|
     - rep = d.the_rep
     %tr
       %td= link_to d.name, d unless rep.nil?
