@@ -24,6 +24,7 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #@bill = Bill.find(params[:id])
+    @bills = Bill.all.paginate(:page => params[:page], :per_page => 10)
     @user = current_user
 
     respond_to do |format|
