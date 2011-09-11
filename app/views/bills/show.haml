@@ -38,8 +38,8 @@
     - rep = d.the_rep
     %tr
       %td= link_to d.name, d unless rep.nil?
-      %td= ".3 .2 .5"
-      %td= "bill.legislator.vote"
+      %td= ".3 .2 .5" unless rep.nil?
+      %td= "bill.legislator.vote" unless rep.nil?
       %td= rep.full_name unless rep.nil?
       %td= rep.party unless rep.nil?
 
