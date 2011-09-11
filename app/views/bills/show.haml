@@ -43,6 +43,24 @@
       %td= rep.full_name unless rep.nil?
       %td= rep.party unless rep.nil?
 
+%p{:align => "center"}
+  = "Joined & Followed Groups"
+  = "Drop-Down Box Search Box"
+
+= will_paginate @PolcoGroups
+
+%table.center{:align => "center"}
+  %tr
+    %th Group Name
+    %th Description
+    %th Avatar
+    %th Tally
+  - @PolcoGroups.each do |p|
+    %tr
+      %td= p.name
+      %td= p.description
+      %td= "p.avatar"
+      %td= "p.tally_vote"
 
 %span{:style => "color:red;"} Please vote - get involved!
 #vote_region
