@@ -80,7 +80,9 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups/1
   # GET /polco_groups/1.xml
   def show
-    votes = @polco_group.votes
+    @bills = @polco_group.get_bills
+    @members = @polco_group.members
+    @followers = @polco_group.followers
 
     respond_to do |format|
       format.html # show.haml

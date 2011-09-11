@@ -21,6 +21,11 @@
 </p>
 <% end %>
 
+<%= show_people(@members, "Members") %>
+<%= show_people(@followers, "Followers") %>
+
+
+
 
 <%= link_to 'Edit', edit_polco_group_path(@polco_group) if can? :edit, @polco_group %> |
 <%= link_to 'Back', polco_groups_path %>

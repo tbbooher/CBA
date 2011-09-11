@@ -3,7 +3,6 @@ class Vote
   include Mongoid::Timestamps
 
   field :value, :type => Symbol # can be :aye, :nay, :abstain, :present
-  #field :type, :type => Symbol  # TODO can delete?
 
   belongs_to :user
   belongs_to :polco_group    # we might need to think this through -- never need to query PolcoGroup.votes, right?
