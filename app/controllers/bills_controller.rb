@@ -24,6 +24,7 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #@bill = Bill.find(params[:id])
+    @PolcoGroups=PolcoGroup.all.paginate(:page => params[:page], :per_page => 10)
     @districts = PolcoGroup.districts.desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
 
