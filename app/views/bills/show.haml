@@ -32,9 +32,14 @@
     %th Rep Vote
     %th Rep Name
     %th Party
-  - @districts.each do |d|
+  - @districts.paginate.each do |d|
+    - rep = d.the_rep
     %tr
-      %td=
+      %td= link_to d.name, d unless rep.nil?
+      %td= ".3 .2 .5"
+      %td= "bill.legislator.vote"
+      %td= rep.last_name
+      %td= rep.party
 
 
 %span{:style => "color:red;"} Please vote - get involved!
