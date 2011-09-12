@@ -155,7 +155,7 @@ class BillsController < ApplicationController
 
   end
 
-  def chamber_results
+  def house_results
       # this is where the code gets prepared for the chamber results view
 
     if params[:chamber] == "house"
