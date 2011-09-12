@@ -1,3 +1,8 @@
+<% content_for :maps do %>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAF2jjgfkpOddMIjo3r_vhYxQ2LYO4t9FpMQp-hEZNbo0RPsyanxRej9Rkx83RZrGhbX6LYOLmZpzibA" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.govtrack.us/scripts/gmap-wms.js"></script>
+<% end %>
+
 <% title "Input address" %>
  <%#= render :partial => 'users/district_includes/map.js', :locals => {:district => @district, :coords => @coords} %>
 <p>Is this your district?</p>
