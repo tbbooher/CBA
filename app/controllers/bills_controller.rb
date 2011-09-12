@@ -159,7 +159,7 @@ class BillsController < ApplicationController
     end
   end
 
-  def state_results
+  def senate_results
 
   end
 
