@@ -311,4 +311,9 @@ class BillTest < ActiveSupport::TestCase
     assert_equal 8, @house_bill.subjects.all.count
   end
 
+  test "should get most recent roll called bill and exclude bills from this list that have not been roll-called" do
+    #Bill.house_roll_called_bills
+    #Bill.house_roll_called_bills.last.member_votes.count
+  end
+
 end

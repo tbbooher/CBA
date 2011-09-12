@@ -40,12 +40,16 @@
       
     /* id container_main beginning */
     #container_main {
-      
-      
-      a {
+
+      .posting p a,
+      .blog p a,
+      .comment p a,
+      .component_body a,
+      .page_body a {
         border-bottom: 1px dotted $color-link;
         &:hover { border-bottom: 1px solid $color-link; }
       }
+            
     
       #postings.left_column p {
         line-height: 150%;
@@ -61,12 +65,19 @@
         @include container-right-box;
         @include right-bottom-border;
         border-radius: 0px 0px 0px $radius-small;
+        
         .page_intro {
+          font-size: 0.8em;
+          
           h1 {
             font-size: 1.5em;
+            padding: 0px;
+            margin: 0px;
           }
           p {
-            font-size: 1.0em;
+            margin: 0px;
+            margin-bottom: 3px;
+            padding: 0px;
           }
         }
       }
@@ -131,7 +142,7 @@
   	}
   	/* end of class authentication */
   
-  	.auth_provider img, .auth_provider, a {
+  	.auth_provider img, .auth_provider {
   	  padding: 0px;
   	  -moz-box-shadow:     none;
   	  -webkit-box-shadow:  none;
@@ -248,11 +259,7 @@
   	  padding: 0px;
   	}
   	
-  	.item_link_buttons {
-  	  padding: 0px;
-  	  -moz-border-radius: 2px;
-  	  -webkit-border-radius: 2px;
-  	}
+  	.item_link_buttons {}
   
   	.content_seperator {
   	  height: 2px;

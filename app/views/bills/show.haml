@@ -1,5 +1,67 @@
 %p#notice= notice
 - title @bill.bill_title || "no title yet"
+
+%br/
+
+%p{:align => "center"}
+  %b Title:
+  = @bill.long_title
+- unless @bill.summary.empty?
+  %p{:align => "center"}
+    %b Summary:
+    = @bill.summary
+%p{:align => "center"}
+  %b Sponsor:
+  = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
+%p{:align => "center"}
+  %b Status:
+  = @bill.bill_state
+%p{:align => "center"}
+  = "Official Text"
+
+= render :partial => 'comments_subpage', :locals => {:bill => @bill}
+
+%p{:align => "center"}
+  = "District Tallies"
+  = "Drop-Down Box Search Box"
+
+= will_paginate @districts
+
+%table.center{:align => "center"}
+  %tr
+    %th District
+    %th Tally
+    %th Rep Vote
+    %th Rep Name
+    %th Party
+  - @districts.paginate.each do |d|
+    - rep = d.the_rep
+    %tr
+      %td= link_to d.name, d unless rep.nil?
+      %td= ".3 .2 .5" unless rep.nil?
+      %td= "bill.legislator.vote" unless rep.nil?
+      %td= rep.full_name unless rep.nil?
+      %td= rep.party unless rep.nil?
+
+%p{:align => "center"}
+  = "Joined & Followed Groups"
+  = "Drop-Down Box Search Box"
+
+= will_paginate @PolcoGroups
+
+%table.center{:align => "center"}
+  %tr
+    %th Group Name
+    %th Description
+    %th Avatar
+    %th Tally
+  - @PolcoGroups.each do |p|
+    %tr
+      %td= p.name
+      %td= p.description
+      %td= "p.avatar"
+      %td= "p.tally_vote"
+
 %span{:style => "color:red;"} Please vote - get involved!
 #vote_region
   = determine_vote(@user)
@@ -39,51 +101,7 @@
             %b>= tally[:name]
             \:#{format_votes(tally[:tally])}
     .clear
-/ include comments here
-= render :partial => 'comments_subpage', :locals => {:bill => @bill}
-%p
-  %b Title:
-  = @bill.bill_title
-%p
-  %b Bill state:
-  = @bill.bill_state
-  / error checking?
-%p
-  %b Last action
-  = last_action(@bill)
-- unless @bill.summary.empty?
-  %p
-    %b Summary:
-    = @bill.summary
-/ TODO clean up the old way of presenting actions
-%p
-  %b Last action on:
-  = @bill.bill_actions.first.first
-  |
-  \#{@bill.bill_actions.first.last}
-%p
-  %b Sponsor:
-  = link_to @bill.sponsor.full_title, legislator_path(@bill.sponsor)
-%p
-  %b Cosponsors count:
-  = @bill.cosponsors_count
-%p
-  %b Bill html:
-  = @bill.bill_html.html_safe if @bill.bill_html
-%p
-  %b Summary word count:
-  = @bill.summary_word_count
-%p
-  %b Text word count:
-  = @bill.text_word_count
-%p
-  %b State:
-  = @bill.bill_state
-%p
-  %b Text updated on:
-  = @bill.text_updated_on
-= link_to 'Edit', edit_bill_path(@bill) if can? :edit, Bill
-|
+
 \#{link_to 'Back', bills_path}
 
 %h2

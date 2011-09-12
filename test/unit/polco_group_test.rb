@@ -48,14 +48,44 @@ class PolcoGroupTest < ActiveSupport::TestCase
   test "should add a user as a follower when a user follows the group" do
     # remove all followers from the group
     @cali_group.followers = []
-    puts "hi"
     # add @user to followed groups
     @user1.followed_groups << @cali_group
     # now check that it is there
     assert_equal 1, @user1.followed_groups.count
-    puts "followers count:#{@cali_group.followers.count}"
-    puts "first follower: #{@cali_group.followers.first}"
-    assert_equal 1, @cali_group.followers.count
+    id = @cali_group.id
+    @c = PolcoGroup.find(id)
+    puts "%%" + @c.name
+    puts "\n!! followers count:#{@c.followers.count}"
+    puts "\n!! first follower: #{@c.followers.first.name}"
+    @c.reload
+    assert_equal 1, @c.followers.count
+  end
+
+  test "should add a group to a users followed_groups when a user is added as a follower to a group" do
+    @cali_group.followers = []
+    @cali_group.followers << @user1
+    @cali_group.reload
+    assert_equal @cali_group, @user1.followed_groups.first
+  end
+
+  test "should have one more follower when I add a follower to a group" do
+    puts "starting test"
+    @cali_group.members.delete_all
+    @cali_group.save
+    @cali_group.reload
+    @cali_group.save
+    puts "member count: !#{@cali_group.member_count}!"
+    assert_equal 0, @cali_group.member_count
+    @cali_group.members << @user1
+    puts "before"
+    puts @cali_group.member_count
+    @cali_group.reload
+    puts "member count 2: !#{@cali_group.member_count}!"
+    assert_equal 1, @cali_group.member_count
+  end
+
+  test "should be able to sort by most popular group" do
+    pending
   end
 
 end

@@ -44,6 +44,7 @@ class Bill
 
   # roll call results
   field :roll_time, :type => DateTime
+  index :roll_time
   field :ayes, :type => Integer
   field :nays, :type => Integer
   field :abstains, :type => Integer
@@ -52,7 +53,7 @@ class Bill
   scope :house_bills, where(title: /^h/)
   scope :senate_bills, where(title: /^s/)
   # Person.where(:age.exists => true)
-  scope :house_roll_called_bills, where(:roll_time.exists => true).descending(:roll_time)
+  scope :house_roll_called_bills, where(:roll_time.exists => true) # .descending(:roll_time)
 
   belongs_to :sponsor, :class_name => "Legislator"
   has_and_belongs_to_many :cosponsors, :order => :state, :class_name => "Legislator"
@@ -127,23 +128,6 @@ class Bill
     if vote = user.votes.where(bill_id: self.id).first
        vote.value
     end
-    #puts "!!!" + self.votes.count.to_s + " votes count for bill"
-    #puts "all votes" + Vote.all.count.to_s
-    #puts "!!!" + self.votes.all.count.to_s + " with all votes count for bill"
-    #if votes = self.votes.all.select{|v| v.user == user}
-    #  puts "the user is #{user.name} with #{user.id}"
-    #  puts "votes count"
-    #  puts votes.count
-    #  puts "compared with self.votes.count"
-    #  puts self.votes.count
-    #  puts votes.map(&:value).to_s
-    #  puts "voted_on? is going to return"
-    #  puts votes.map{|v| v.value}.first
-    #  votes.map{|v| v.value}.first
-    #else
-    #  puts "no votes exist"
-    #  :aye
-    #end
   end
 
   def users_vote(user)

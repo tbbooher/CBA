@@ -23,11 +23,16 @@ Cba::Application.routes.draw do
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
   match "/bills/process_page" => "bills#process_page"
 
-  resources :polco_groups
+  resources :polco_groups  do
+    resources :comments
+  end
+
   # TODO -- might be deprecated since it is embedded
   resources :votes
 
-  resources :legislators
+  resources :legislators do
+    resources :comments
+  end
 
   resources :bills do
     resources :comments
