@@ -3,6 +3,7 @@ class LegislatorsController < ApplicationController
   # GET /legislators.xml
   def index
     @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
+    @legislators = Legislator.order(params[:sort] + " " + params[:direction])
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
