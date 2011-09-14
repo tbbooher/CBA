@@ -15,6 +15,8 @@ class PolcoGroup
   has_and_belongs_to_many :members, :class_name => "User", :inverse_of => :joined_groups
   has_and_belongs_to_many :followers, :class_name => "User", :inverse_of => :followed_groups
 
+  has_many :votes
+
   #we want to increment member_count when a new member is added
   before_save :update_followers_and_members
 
@@ -33,12 +35,24 @@ class PolcoGroup
     self.follower_count = self.followers.size
     self.member_count = self.members.size
   end
-  
+
   def the_rep
     if self.type == :district
-        Legislator.all.select{|l| l.district_name == self.name}.first
+      if self.name =~ /([A-Z]{2})-AL/ # then there is only one district
+        puts "The district is named #{self.name}"
+        l = Legislator.where(state: $1).where(district: 0).first
+      else # we have multiple districts for this state
+        l = Legislator.all.select { |l| l.district_name == self.name }.first
+      end
     else
-       "Only districts can have a representative"
+      l = "Only districts can have a representative"
     end
+    l || "Vacant"
+  end
+
+  def get_bills
+    # TODO -- set this to the proper relation
+    # produces bills
+    Vote.where(polco_group_id: self.id).desc(:updated_at).all.to_a
   end
 end

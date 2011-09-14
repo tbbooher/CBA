@@ -105,4 +105,19 @@ module ApplicationHelper
     current_user ? (current_user.roles_mask||0) : 0
   end
   
+  def with_format(view, format, &block)
+    old_formats = view.formats
+    view.formats = [:html]
+    yield
+    view.formats = old_formats
+  end
+
+  def sortable(column, title = nil)
+    title ||= column.titleize
+    css_class = column == sort_column ? "current #{sort_direction}" : nil
+    direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
+    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
+
+  end
+  
 end
