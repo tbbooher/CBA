@@ -1,9 +1,11 @@
 class LegislatorsController < ApplicationController
   # GET /legislators
   # GET /legislators.xml
+  helper_method :sort_column, :sort_direction
+
   def index
-    @legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
-    @legislators = Legislator.order(params[:sort] + " " + params[:direction])
+    #@legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
+    @legislators = Legislator.order(sort_column + " " + sort_direction)
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
@@ -83,5 +85,13 @@ class LegislatorsController < ApplicationController
       format.html { redirect_to(legislators_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def sort_column
+    Legislator.column_names.include?(params[:sort]) ? params[:sort] : "district"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end
