@@ -10,10 +10,10 @@
 
 %table.center{:align => "center"}
   %tr
-    %th= link_to "District", :sort => "district"
-    %th= link_to "Rep. Name", :sort => "full_name"
+    %th= sortable "district"
+    %th= sortable "full_name", "Rep. Name"
     %th Rep. Picture
-    %th= link_to "Rep. Party", :sort => "party"
+    %th= sortable "party", "Rep. Party"
   - @legislators.each do |legislator|
     %tr
       %td= "#{legislator.state} #{legislator.district}"
