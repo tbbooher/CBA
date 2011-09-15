@@ -90,7 +90,7 @@ class LegislatorsController < ApplicationController
   private
 
   def sort_column
-    Legislator.district.include?(params[:sort]) ? params[:sort] : "district"
+    Legislator.column_names.include?(params[:sort]) ? params[:sort] : "district"
   end
 
   def sort_direction
