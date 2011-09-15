@@ -1,18 +1,24 @@
 -title "House District/Legislators"
 
+= form_tag legislators_path, :method => 'get' do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+
 %p{:style => "text-align: center"}
   %b= "112th Congress"
 %p{:style => "text-align: center"}
   = "Alphabetical Search"
 
+
 = will_paginate @legislators
 
 %table.center{:align => "center"}
   %tr
-    %th District
-    %th Rep. Name
+    %th= sortable "district"
+    %th= sortable "full_name", "Rep. Name"
     %th Rep. Picture
-    %th Rep. Party
+    %th= sortable "party", "Rep. Party"
   - @legislators.each do |legislator|
     %tr
       %td= "#{legislator.state} #{legislator.district}"
