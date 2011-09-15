@@ -1,6 +1,7 @@
 class Legislator
   include Mongoid::Document
   include Mongoid::Timestamps
+
   field :first_name, :type => String
   field :last_name, :type => String
   field :middle_name, :type => String
@@ -133,10 +134,15 @@ class Legislator
     role
   end
 
+  # added by nate
+  # strange full_name is derivative
   def self.search(search)
+    puts search
     if search
-      where(full_name: /#{search}/i)
+      # you have to have a class to perform where on (i think)
+      self.where(full_name: /#{search}/i)
     else
+      # does scoped work with mongoid
       scoped
     end
   end

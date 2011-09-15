@@ -5,7 +5,8 @@ class LegislatorsController < ApplicationController
 
   def index
     #.order(sort_column + " " + sort_direction)
-    @legislators = Legislator.all.search(params[:search]).paginate(:page => params[:page], :per_page =>  20)
+    # added by nate
+    @legislators = Legislator.search(params[:search][:search]).paginate(:page => params[:page], :per_page =>  20)
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
@@ -89,11 +90,14 @@ class LegislatorsController < ApplicationController
 
   private
 
+  # added by nate
   def sort_column
     params[:sort] || "district"
   end
 
+  # added by nate
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
+
 end
