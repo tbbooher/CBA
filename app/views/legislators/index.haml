@@ -1,8 +1,12 @@
 -title "House District/Legislators"
 
+%p
+  Search field:
+  = params[:legislator_search].inspect
+
 = form_tag legislators_path, :method => 'get' do
   %p
-    = text_field_tag :search, params[:search]
+    = text_field_tag :legislator_search, params[:legislator_search]
     = submit_tag "Search", :name => nil
 
 %p{:style => "text-align: center"}

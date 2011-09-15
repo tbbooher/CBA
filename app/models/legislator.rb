@@ -136,7 +136,7 @@ class Legislator
 
   # added by nate
   # strange full_name is derivative
-  def self.search(search)
+  def self.legislator_search(search)
     puts search
     if search
       # you have to have a class to perform where on (i think)
