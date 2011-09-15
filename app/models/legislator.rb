@@ -135,7 +135,7 @@ class Legislator
 
   def self.search(search)
     if search
-      where('full_name LIKE ?', "%#{search}%")
+      where(full_name: /#{search}/i)
     else
       scoped
     end
