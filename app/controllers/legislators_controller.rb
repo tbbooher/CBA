@@ -87,13 +87,13 @@ class LegislatorsController < ApplicationController
     end
   end
 
-  #private
-  #
-  #def sort_column
-  #  params[:sort] || "district"
-  #end
-  #
-  #def sort_direction
-  #  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  #end
+  private
+
+  def sort_column
+    params[:sort] || "district"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 end
