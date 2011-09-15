@@ -5,7 +5,7 @@ class LegislatorsController < ApplicationController
 
   def index
     #@legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
-    @legislators = Legislator.order(sort_column + " " + sort_direction)
+    @legislators = Legislator.all.order(sort_column + " " + sort_direction)
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
