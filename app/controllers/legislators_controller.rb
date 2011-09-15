@@ -4,8 +4,7 @@ class LegislatorsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    #@legislators = Legislator.all.paginate(:page => params[:page], :per_page =>  20)
-    @legislators = Legislator.all.order(sort_column + " " + sort_direction)
+    @legislators = Legislator.all.order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page =>  20)
     @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
