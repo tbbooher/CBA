@@ -132,4 +132,12 @@ class Legislator
     end
     role
   end
+
+  def self.search(search)
+    if search
+      where('full_name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
 end

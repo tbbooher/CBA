@@ -1,5 +1,10 @@
 -title "House District/Legislators"
 
+= form_tag legislators_path, :method => 'get' do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+
 %p{:style => "text-align: center"}
   %b= "112th Congress"
 %p{:style => "text-align: center"}
