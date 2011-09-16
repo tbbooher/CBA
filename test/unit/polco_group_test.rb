@@ -3,14 +3,14 @@ require 'test_helper'
 class PolcoGroupTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   def setup
-     PolcoGroup.destroy_all
-     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
-     @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
-     @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
-     @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                                  @cali_group,
-                                                                  @ca46,
-                                                                  Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
+    PolcoGroup.destroy_all
+    common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
+    @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
+    @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
+    @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
+                                                              @cali_group,
+                                                              @ca46,
+                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
   end
 
   test "should not allow an unapproved type" do
@@ -86,6 +86,18 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should be able to sort by most popular group" do
     pending
+  end
+
+  test "should be able to get the reps for all legislators" do
+    Legislator.update_legislators
+    districts_array = File.new("#{Rails.root}/data/districts.txt", 'r').read.split("\n")
+    districts_array.each do |district|
+      # create district for each state
+      PolcoGroup.find_or_create_by(:name => district, :type => :district)
+    end
+    PolcoGroup.districts.all.each do |pg|
+      assert_not_nil pg.the_rep
+    end
   end
 
 end
