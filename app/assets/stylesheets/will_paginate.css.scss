@@ -2,6 +2,7 @@
   #container_main {
     .pagination_box {
       clear: both;
+      text-align: center;
       @include clear-borders;  
       @include button-shape($radius-small);
       background: darken(#f1f1f1, 5%);
