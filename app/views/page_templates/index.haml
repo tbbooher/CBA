@@ -1,11 +1,11 @@
 - title t(:css_templates)
 
-%div
-  .right_box{style: 'text-align: left'}
+- content_for :right_column do
+  .sidebar-right
     = render '/home/menu/page_template_menu'
 
 %div{style: "overflow: hidden;"}= render @page_templates
 
 - if @page_templates.count < 2
   %blockqoute
-    If you see no templates consider to run <code>rake db:seed</code> to create default templates
+    If you see no templates consider to run <code>rake db:seed</code> to create default templates.

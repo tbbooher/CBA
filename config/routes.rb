@@ -47,7 +47,7 @@ Cba::Application.routes.draw do
   match "/users/district" => "users#district"
 
   # Switch locales
-  match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
+  match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
   
   # Switch draft mode
   match 'draft_mode/:mode' => "home#set_draft_mode", :as => 'draft_mode'

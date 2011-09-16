@@ -182,6 +182,7 @@ class User
   end
 
   def vote_on(bill, value)
+    # TODO -- NEED TO ADD POLCO_GROUP
     # test to make sure the user is a member of a group
     my_groups = self.joined_groups
     unless my_groups.empty?
