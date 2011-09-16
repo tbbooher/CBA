@@ -12,10 +12,3 @@
 //= require progress_upload_field
 //= require jquery.tokeninput
 //= require_tree .
-
-//$(function() {
-//  $("#legislator_table th a").live("click", function() {
-//    $.getScript(this.href);
-//    return false;
-//  });
-//});
