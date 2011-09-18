@@ -1,11 +1,9 @@
-= will_paginate @legislators
-
 %table.center{:align => "center"}
   %tr
-    %th District
-    %th Rep. Name
+    %th= sortable "district"
+    %th= sortable "full_name", "Rep. Name"
     %th Rep. Picture
-    %th Rep. Party
+    %th= sortable "party", "Rep. Party"
   - @legislators.each do |legislator|
     %tr
       %td= "#{legislator.state} #{legislator.district}"
@@ -13,3 +11,5 @@
       %td= link_to legislator.full_name, legislator
       %td= image_tag legislator.image_location_small
       %td= legislator.party
+
+= will_paginate @legislators
