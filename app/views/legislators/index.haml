@@ -2,25 +2,14 @@
 
 %p{:style => "text-align: center"}
   %b= "112th Congress"
-%p{:style => "text-align: center"}
-  = "Alphabetical Search"
 
+= form_tag legislators_path, :method => 'get' do
+  %p.search{:align => "center"}
+    = text_field_tag :legislator_search, params[:legislator_search]
+    = submit_tag "Search", :name => nil
 
-
-
-%table.center{:align => "center"}
-  %tr
-    %th= sortable "district"
-    %th= sortable "full_name", "Rep. Name"
-    %th Rep. Picture
-    %th= sortable "party", "Rep. Party"
-  - @legislators.each do |legislator|
-    %tr
-      %td= "#{legislator.state} #{legislator.district}"
-      -#this needs to be last_name, first_name at some point
-      %td= link_to legislator.full_name, legislator
-      %td= image_tag legislator.image_location_small
-      %td= legislator.party
+#legislators_table
+  = render :partial => 'legislators_table', :locals => {:legislator => @legislator}
 
 %p{:style => "text-align: center"}
   = "Roll Call Popularity Search"
