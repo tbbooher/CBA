@@ -8,6 +8,7 @@ $font-family: $font-text;
 $font-title: Times new roman, Times, serif;
 $font-headline: $font-text;
 $font-size-default: 0.98em;
+$font-buttons: Arial, Helvetica;
 $line-height-default: 1.2em;
 $sidebar-width: 180px;
 
@@ -158,6 +159,16 @@ $form-width: 600px;
   border-bottom: 1px solid $color-border;
 }
 
+@mixin top-right-bottom-border {
+  @include right-bottom-border;
+  border-top: 1px solid $color-border;
+}
+
+@mixin default-box-border {
+  @include top-right-bottom-border;
+  border-right: 1px solid $color-border;
+}
+
 @mixin input-border {
   border-radius: 10px 10px 10px 10px;
 }
@@ -209,6 +220,22 @@ $form-width: 600px;
   font-size: $font-size-default;
   line-height: $line-height-default;
 }
+
+@mixin standard-link {
+  border: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  text-decoration: underline;
+}
+
+.column-wrapper {
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+}
+
 * {
   @include default-font-settings;
 }
@@ -225,3 +252,4 @@ body {
   color: #333;
   @include page-background;
 }
+

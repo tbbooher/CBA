@@ -23,11 +23,16 @@ Cba::Application.routes.draw do
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
   match "/bills/process_page" => "bills#process_page"
 
-  resources :polco_groups
+  resources :polco_groups  do
+    resources :comments
+  end
+
   # TODO -- might be deprecated since it is embedded
   resources :votes
 
-  resources :legislators
+  resources :legislators do
+    resources :comments
+  end
 
   resources :bills do
     resources :comments
@@ -42,7 +47,7 @@ Cba::Application.routes.draw do
   match "/users/district" => "users#district"
 
   # Switch locales
-  match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
+  match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
   
   # Switch draft mode
   match 'draft_mode/:mode' => "home#set_draft_mode", :as => 'draft_mode'

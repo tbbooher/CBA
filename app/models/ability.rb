@@ -49,7 +49,7 @@ class Ability
       end
 
       # Anybody
-      can :read, [Page, Blog, Posting, Bill]
+      can :read, [Page, Blog, Posting, Bill, PolcoGroup]
       can :create, Comment
       can :read, Comment do |comment|
         comment && !comment.new_record?

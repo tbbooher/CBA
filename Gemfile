@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
+#gem 'simplecov', :require => false, :group => :test #, '>= 0.4.0'
 
 gem "rails", "~> 3.1.0" # prev was rc8
 
@@ -51,6 +51,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # MongoID Extensions and extras
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'mongoid_fulltext'
+#gem 'mongoid_counter_cache'
 
 # Bundle gems for views
 gem "haml"
@@ -112,14 +113,6 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
-<<<<<<< HEAD
-<<<<<<< HEAD
-#  gem "autotest-fsevent", :platforms => :ruby
-  gem 'webmock'
-=======
->>>>>>> 8cbdd3109e81415ad3cf22c058ba6b7224ba5862
-=======
->>>>>>> dfa914dd926792c2d87a13d7415b3fff463db0b2
   gem 'vcr'
   gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'

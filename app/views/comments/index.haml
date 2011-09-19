@@ -6,14 +6,20 @@
     %div{:class=>'comment', :id=>'comment_'+comment.id.to_s}
       - if group == 1
         %h2
-          = link_to comment.commentable.title, commentable_show_path(comment.commentable)
+          = link_button comment.commentable.title, "button link", commentable_show_path(comment.commentable)
           %small
             (
             = comment.commentable.class.to_s.humanize
             )
       - else
         = t(:orphanded_comment)
+
       %p
+        - if user=comment.user
+          = image_tag( user.avatar_url(:thumb), :class => 'without_shadow')
+        - else
+          = image_tag( 'avatars/thumb/missing.png', :class => 'without_shadow')
+
         %strong
           = t(:user_wrote_a_comment_at, :user => comment.name || 'Anonymous',:at => distance_of_time_in_words_to_now(comment.created_at)   ).html_safe
           (
@@ -28,4 +34,4 @@
         - else
           = ContentItem::markdown(comment.comment||'')
       %p
-        = link_to( t(:destroy), comment, :method => :delete, :remote => true, :confirm => t(:are_you_sure) ) if can?( :destroy, comment )
+        = link_to( t(:destroy), comment, :method => :delete, :remote => true, :confirm => t(:are_you_sure), :class => 'button delete small' ) if can?( :destroy, comment )

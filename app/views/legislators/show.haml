@@ -9,7 +9,7 @@
   %b= @legislator.full_name
 
 %p{:style => "text-align: center"}
-  = image_tag @legislator.image_location
+  = image_tag @legislator.image_location_medium
 
 %p{:style => "text-align: center"}
   = @legislator.party
@@ -36,7 +36,39 @@
 
 -#    <!-- need to check for the condition that they have no bills -->
 -#
--#<!--Comments section-->
+-#= render :partial => 'bills/comments_subpage', :locals => {:legislator => @legislator}
+
+%br/
+%p{:align => "center"}
+  %b= "Group Members"
+  = "Drop-Down Box Search"
+
+%table.center{:align => "center"}
+  %tr
+    %th Name
+    %th Pic
+    %th Member Since
+  - @users.each do |u|
+    %tr
+      %td= u.name
+      %td= u.avatar
+      %td= u.created_at
+
+%br/
+%p{:align => "center"}
+  %b= "Group Followers"
+  = "Drop-Down Box Search"
+
+%table.center{:align => "center"}
+  %tr
+    %th Name
+    %th Pic
+    %th Member Since
+  - @users.each do |u|
+    %tr
+      %td= u.name
+      %td= u.avatar
+      %td= u.created_at
 -#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 -#<%= link_to 'Back', legislators_path %>
 -#

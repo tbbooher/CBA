@@ -60,12 +60,12 @@ module ApplicationHelper
     fields  = f.fields_for(association,new_object, :child_index=>"new_#{association}") do |builder|
       render(association.to_s.pluralize+"/"+association.to_s.singularize + "_fields", :f => builder)
     end
-    link_to_function(name,"add_fields(this,\"#{association}\", \"#{escape_javascript(fields)}\")")
+    link_to_function(name,"add_fields(this,\"#{association}\", \"#{escape_javascript(fields)}\")", :class => 'button add small')
   end
 
   # Remove an attached file
   def link_to_remove_fields(name, f)
-    f.hidden_field(:_destroy) + "&nbsp;".html_safe + link_to_function(name,"remove_fields(this)")
+    f.hidden_field(:_destroy) + "&nbsp;".html_safe + link_to_function(name,"remove_fields(this)", :class => "button delete small")
   end
 
   # Check if paginate is on last page
@@ -103,6 +103,22 @@ module ApplicationHelper
 
   def current_role
     current_user ? (current_user.roles_mask||0) : 0
+  end
+  
+  def with_format(view, format, &block)
+    old_formats = view.formats
+    view.formats = [:html]
+    yield
+    view.formats = old_formats
+  end
+
+  # added by nate
+  # cool, easy
+  def sortable(column, title = nil)
+    title ||= column.titleize
+    css_class = (column == sort_column) ? "current #{sort_direction}" : nil
+    direction = (column == sort_column) && sort_direction == "asc" ? "desc" : "asc"
+    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
   end
   
 end

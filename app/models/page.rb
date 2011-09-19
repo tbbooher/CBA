@@ -101,7 +101,7 @@ class Page
     self.page_template_id = new_template.id if new_template
   end
 
-  has_and_belongs_to_many :blogs
+  has_and_belongs_to_many :blogs, dependent: :nullify
 
   # Render the body with RedCloth or Discount
   def render_body(view_context=nil)
@@ -111,7 +111,7 @@ class Page
       self.page_components.each do |component|
         parts << [component.render_body(view_context)]
       end
-      rc=render_for_html( parts.join("\n") )
+      rc=self.render_for_html( parts.join("\n") )
     else
       rc=render_with_template
     end
@@ -127,13 +127,14 @@ class Page
         component = self.page_components.find(_component_id)
         unless block_given?
           if view_context
-            view_context.link_to(
+            view_context.link_button(
               I18n.translate(:edit),
+              "button edit small",
               view_context.edit_page_page_component_path(self,_component_id),
-              :remote => true, :title => 'Edit component'
+              :remote => true, :title => I18n.translate(:edit_component)
             )
           else
-            "<a href='/pages/#{self.page.id.to_s}/page_component/#{self.id.to_s}/edit' data-remote='true'>Edit</a>"
+            "<a href='/pages/#{self.page.id.to_s}/page_component/#{self.id.to_s}/edit' data-remote='true' class='button edit tiny'>#{I18n.translate(:edit)}</a>"
           end
         else
           yield(component)
@@ -161,40 +162,12 @@ class Page
   # TODO.txt:   This code occurs in Page and PageComponent. Move it to a single
   # TODO.txt:   place.
   def render_with_template
-    unless self.page_template && @view_context
-      raise "Can't render template if there is no view-context or template"
-    else
+    if self.page_template
       self.page_template.render do |template|
-        template.gsub(/TITLE/, self.title_and_flags)\
-                .gsub(/BODY/,  self.render_for_html(self.t(I18n.locale,:body)))\
-                .gsub(/COMPONENTS/, render_components )\
-                .gsub(/COVERPICTURE/, render_cover_picture)\
-                .gsub(/COMMENTS/, render_comments)\
-                .gsub(/BUTTONS/, render_buttons)\
-                .gsub(/PLUSONE/, ("<p><g:plusone size=\"small\"></g:plusone></p>".html_safe))\
-                .gsub(/ATTACHMENTS/, render_attachments)\
-                .gsub(/ATTACHMENT\[(\d)+\]/) { |attachment_number|
-                  attachment_number.gsub! /\D/,''
-                  if c= self.attachments[attachment_number.to_i-1] && @view_context
-                    if c.file_content_type =~ /image/ && @view_context
-                      @view_context.image_tag c.file.url(:medium)
-                    elsif @view_context
-                      @view_context.link_to( c.file_file_name, c.file.url )
-                    end
-                  else
-                    "ATTACHMENT #{attachment_number} NOT FOUND"
-                  end
-                }\
-                .gsub(/COMPONENT\[(\d)\]/) { |component_number|
-                  component_number.gsub! /\D/,''
-                   c = self.components.where(:position => component_number.to_i-1).first
-                   if c
-                     rc = c.render_body(@view_context)
-                   else
-                     "COMPONENT #{component_number} NOT FOUND"
-                   end
-                }
+        fill_in_placeholders(template)
       end
+    else
+      fill_in_placeholders("<h1>TITLE</h1><div>BODY</div><div>COMMENTS</div>")
     end
   end
 
@@ -208,7 +181,7 @@ class Page
     if @view_context
       @view_context.render( :partial => 'pages/comments', :locals => {:page => self} )
     else
-      ""
+      "ERROR: NO VIEW TO RENDER COMMENT IN #{__FILE__}:#{__LINE__}"
     end
   end
 
@@ -232,6 +205,51 @@ class Page
     if @view_context
       @view_context.render :partial => "pages/buttons", :locals => { :page => self }
     end
+  end
+
+  private
+  def fill_in_placeholders(template)
+    template.gsub(/TITLE/, self.title_and_flags)\
+            .gsub(/BODY/,  self.render_for_html(self.t(I18n.locale,:body)))\
+            .gsub(/COMPONENTS/, render_components )\
+            .gsub(/COVERPICTURE/, render_cover_picture)\
+            .gsub(/COMMENTS/, render_comments)\
+            .gsub(/BUTTONS/, render_buttons)\
+            .gsub(/PLUSONE/, ("<p><g:plusone size=\"small\"></g:plusone></p>".html_safe))\
+            .gsub(/YOUTUBE(_PLAYLIST)?:([\s|\d|\-|_])+/) { |tag|
+              args = tag.split(":")
+              case args[0]
+              when 'YOUTUBE'
+                args.inspect + embed_youtube_video(args[1])
+              when 'YOUTUBE_PLAYLIST'
+                args.inspect + embed_youtube_playlist(args[1])
+              else
+                "ARGUMENT ERROR: " + args.inspect
+              end
+            }
+            .gsub(/ATTACHMENTS/, render_attachments)\
+            .gsub(/ATTACHMENT\[(\d)+\]/) { |attachment_number|
+              attachment_number.gsub! /\D/,''
+              if c= self.attachments[attachment_number.to_i-1] && @view_context
+                if c.file_content_type =~ /image/ && @view_context
+                  @view_context.image_tag c.file.url(:medium)
+                elsif @view_context
+                  @view_context.link_button( c.file_file_name, "button download small", c.file.url )
+                end
+              else
+                "ATTACHMENT #{attachment_number} NOT FOUND"
+              end
+            }\
+            .gsub(/COMPONENT\[(\d)\]/) { |component_number|
+              component_number.gsub! /\D/,''
+               c = self.components.where(:position => component_number.to_i-1).first
+               if c
+                 rc = c.render_body(@view_context)
+               else
+                 "COMPONENT #{component_number} NOT FOUND"
+               end
+            }
+
   end
 
 

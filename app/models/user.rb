@@ -6,6 +6,7 @@ class User
   include Mongoid::Timestamps
   include Mongoid::Paperclip
   include Geocoder::Model::Mongoid
+
   geocoded_by :coordinates
   # TODO ^^ is this still needed
   cache
@@ -29,6 +30,9 @@ class User
   has_many :votes
 
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup", :inverse_of => :members
+
+  #counter_cache :name => :polco_group, :inverse_of => :members
+
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup", :inverse_of => :followers
 
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
@@ -93,6 +97,11 @@ class User
   ROLES = [:guest, :confirmed_user, :author, :moderator, :maintainer, :admin, :registered]
 
   scope :with_role, lambda { |role| {:where => {:roles_mask.gte => ROLES.index(role)}} }
+
+  def bills_voted_on(chamber)
+    # the bills in the table are ordered by most recent at the top
+    votes = self.votes.select_if{|v| v.bill.chamber == chamber}.sort_by(&:created_at).map(&:bill)
+  end
 
   def registered?
     (self.role == :registered || !self.zip_code.nil?)
@@ -173,6 +182,7 @@ class User
   end
 
   def vote_on(bill, value)
+    # TODO -- NEED TO ADD POLCO_GROUP
     # test to make sure the user is a member of a group
     my_groups = self.joined_groups
     unless my_groups.empty?

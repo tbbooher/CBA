@@ -24,6 +24,8 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #@bill = Bill.find(params[:id])
+    @PolcoGroups=PolcoGroup.all.paginate(:page => params[:page], :per_page => 10)
+    @districts = PolcoGroup.districts.desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
 
     respond_to do |format|
@@ -147,8 +149,14 @@ class BillsController < ApplicationController
   end
 
   def district_results
-    @districts = PolcoGroup.districts.sort_by{|d| d.members_count}.reverse.paginate(:page => params[:page], :per_page => 10)
-    @roll_called_bills = Bill.house_roll_called_bills.all
+    @districts = PolcoGroup.districts.desc(:member_count).paginate(:page => params[:page], :per_page => 10)
+    @bills = Bill.house_roll_called_bills.all.paginate(:page => params[:page], :per_page => 10)
+    #@comments = Bill.comments.sort_by{|c| c.}
+
+    respond_to do |format|
+      format.html # district_results.haml
+      format.xml  { render :xml => @bills }
+    end
   end
 
   def state_results
@@ -156,15 +164,29 @@ class BillsController < ApplicationController
   end
 
   def chamber_results
-      # this is where the code gets prepared for the chamber results view
+    # this is where the code gets prepared for the chamber results view
+    #this page presents one table outlining the bills the user has cast an eballot on.
+    
+    # the bills in the table are ordered by most recent at the top
+    #for each bill, the table shows the bill's official title, 
+    # the user's vote, the user's district's tally on that bill,
+    # the rep's vote on that bill and the overall bill result.
+    #in addition there's a column for the user's comment on that bill.
+    # if the user posted a comment on that bill, an expandable arrow appears
+    # in that column. when the arrow in that column is selected it opens the user's post's
+    # page in new tab (or window) in the browser.
+    # future case
+    # but can also be ordered by popularity, number of votes, number of comments, number of votes by district members,
+    # or searchable.
 
     if params[:chamber] == "house"
       @chamber = "House"
+      @bills = current_user.bills_voted_on(:house)
     else
       @chamber = "Senate"
+      @bills = current_user.bills_voted_on(:senate)
     end
-    @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
-
+    #@bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
   end
 
 end
