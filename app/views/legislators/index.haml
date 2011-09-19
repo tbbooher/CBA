@@ -9,7 +9,7 @@
     = submit_tag "Search", :name => nil
 
 %div#legislators_table
-  = render :partial => '/legislators/legislators_table'
+  = render :partial => 'legislators_table', :locals => {:legislator => @legislator}
 
 %p{:style => "text-align: center"}
   = "Roll Call pp Popularity Search"
