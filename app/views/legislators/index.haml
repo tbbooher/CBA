@@ -27,9 +27,8 @@
 %p{:style => "text-align: center"}
   = "Roll Call"
   = form_tag bills_path, :method => 'get' do
-    %p.search{:align => "center"}
-      = text_field_tag :bill_search, params[:bill_search]
-      = submit_tag "Search", :name => nil
+    = text_field_tag :bill_search, params[:bill_search]
+    = submit_tag "Search", :name => nil
 
 
 %table.center{:align => "center"}
