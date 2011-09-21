@@ -17,7 +17,7 @@
 
 - @bills.each do |bill|
 %p.center{:align => "center"}
-  = "(#{bill.number}) bill.short_title"
+  = "(#(bill.number)) bill.short_title"
 
 %div
 - if can?( :create, Posting ) && @blog
