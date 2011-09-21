@@ -15,9 +15,9 @@
     = submit_tag "Search", :name => nil
 
 %table.center{:align => "center"}
-- @legislators.each do |legislator|
+- @bills.each do |bill|
   %p{:align => "center"}
-    = "(#(@bill.number)) @bill.short_title"
+    = "(#(bill.number)) bill.short_title"
 
 %div
 - if can?( :create, Posting ) && @blog
