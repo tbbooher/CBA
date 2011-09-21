@@ -20,9 +20,6 @@ end
 gem "mongoid" # , "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
 gem "bson_ext"  #, "1.1.5"
 
-# so we can store the session in the database
-gem "mongo_session_store"
-
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
@@ -116,6 +113,13 @@ group :test do
   gem 'vcr'
   gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'
+  gem "nifty-generators"
+  gem "rails-erd"
+  gem 'rdoc'
+  gem 'unicorn'
+  gem 'yard'
+  gem 'rails3-generators'
+  gem "haml-rails"
 end
 
 # !! THE GRAVEYARD !!
