@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
   # Display the top pages on the home-page
   def index
+    @bills = Bill.bill_search(params[:bill_search])
     @blog = Blog.where(:title => t(:news)).first
     if @blog
       @postings = @blog.postings.excludes(is_draft: true).desc(:created_at).paginate(

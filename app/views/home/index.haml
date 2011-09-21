@@ -1,13 +1,23 @@
 - title t(:welcome), false
 = javascript 'endless_page'
 
-%h2 Welcome to the Polco test site
-%p
-  we are working on getting all the views working
-  %ul
-    %li
-      the e_ballot page
+-title "Welcome to Polco"
 
+%p{:align => "center"}
+  = "112th Congress"
+
+%p{:align => "center"}
+  = "House Bills"
+
+= form_tag bills_path, :method => 'get' do
+  %p.search{:align => "center"}
+    = text_field_tag :bill_search, params[:bill_search]
+    = submit_tag "Search", :name => nil
+
+%table.center{:align => "center"}
+  %p{:align => "center"}
+    = "(#(@bill.number)) @bill.short_title"
+s
 %div
 - if can?( :create, Posting ) && @blog
   - content_for :resource_actions do
