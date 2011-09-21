@@ -38,7 +38,7 @@ end
 gem 'json'
 gem 'geocoder'
 gem 'httparty'
-#gem 'nokogiri'
+gem "nokogiri", "1.4.2"
 gem 'feedzirra' 
 gem 'sax-machine'
 
