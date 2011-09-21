@@ -1,7 +1,7 @@
-- title t(:welcome), false
+-title "Welcome to Polco"
 = javascript 'endless_page'
 
--title "Welcome to Polco"
+
 
 %p{:align => "center"}
   = "112th Congress"
@@ -15,9 +15,10 @@
     = submit_tag "Search", :name => nil
 
 %table.center{:align => "center"}
+- @legislators.each do |legislator|
   %p{:align => "center"}
     = "(#(@bill.number)) @bill.short_title"
-s
+
 %div
 - if can?( :create, Posting ) && @blog
   - content_for :resource_actions do
