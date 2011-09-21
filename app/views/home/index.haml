@@ -1,8 +1,6 @@
 -title "Welcome to Polco"
 = javascript 'endless_page'
 
-
-
 %p{:align => "center"}
   = "112th Congress"
 
@@ -14,10 +12,10 @@
     = text_field_tag :bill_search, params[:bill_search]
     = submit_tag "Search", :name => nil
 
-
 - @bills.each do |bill|
 %p.center{:align => "center"}
   = "(#(bill.number)) bill.short_title"
+end
 
 %div
 - if can?( :create, Posting ) && @blog
