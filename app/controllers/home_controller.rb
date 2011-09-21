@@ -16,10 +16,10 @@ class HomeController < ApplicationController
       )
     end
     # added by nate
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @bills }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.xml  { render :xml => @bills }
+    #end
     respond_to do |format|
        format.js {
          @path = blog_path(@blog, :page => (params[:page] ? (params[:page].to_i+1) : 2))
