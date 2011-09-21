@@ -151,7 +151,7 @@ class Legislator
     puts search
     if search
       # you have to have a class to perform where on (i think)
-      self.where(short_title: /#{search}/i)
+      self.where(title: /#{search}/i)
     else
       # does scoped work with mongoid
       scoped
