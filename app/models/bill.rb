@@ -479,4 +479,16 @@ class Bill
     the_tally
   end
 
+    # added by nate
+  def self.bill_search(search)
+    puts search
+    if search
+      # you have to have a class to perform where on (i think)
+      self.where(short_title: /#{search}/i)
+    else
+      # does scoped work with mongoid
+      scoped
+    end
+  end
+  
 end
