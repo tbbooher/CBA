@@ -14,10 +14,10 @@
     = text_field_tag :bill_search, params[:bill_search]
     = submit_tag "Search", :name => nil
 
-%table.center{:align => "center"}
+
 - @bills.each do |bill|
-  %p{:align => "center"}
-    = "(#(bill.number)) bill.short_title"
+%p.center{:align => "center"}
+  = "(#{bill.number}) bill.short_title"
 
 %div
 - if can?( :create, Posting ) && @blog
