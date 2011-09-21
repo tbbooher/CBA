@@ -7,8 +7,9 @@ class LegislatorsController < ApplicationController
   def index
     #.order(sort_column + " " + sort_direction)
     # added by nate
-    @legislators = Legislator.legislator_search(params[:legislator_search]).paginate(:page => params[:page], :per_page =>  20)
-    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
+    @legislators = Legislator.legislator_search(params[:legislator_search]).paginate(:page => params[:page], :per_page =>  10)
+    # added by nate
+    @bills = Bill.bill_search(params[:bill_search]).paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

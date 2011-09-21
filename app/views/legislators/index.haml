@@ -25,9 +25,12 @@
 = will_paginate @legislators
 
 %p{:style => "text-align: center"}
-  = "Roll Call pp Popularity Search"
+  = "Roll Call"
 
-= will_paginate @bills
+= form_tag bills_path, :method => 'get' do
+  %p.search{:align => "center"}
+    = text_field_tag :bill_search, params[:bill_search]
+    = submit_tag "Search", :name => nil
 
 %table.center{:align => "center"}
   %tr
@@ -39,6 +42,8 @@
       %td= link_to bill.short_title, bill_path(bill)
       %td= "something like bill.display_results"
       %td= "bill.result"
+
+= will_paginate @bills
 
 -#<!--Need to add Comments section-->
 -#<%#= link_to 'New Legislator', new_legislator_path %>
