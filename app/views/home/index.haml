@@ -13,8 +13,8 @@
     = submit_tag "Search", :name => nil
 
 %p.center{:align => "center"}
-- @bill.each do |bill|
-  = bill.short_title
+- @bills.each do |bill|
+  = bill.long_title
   = bill.summary
 
 
