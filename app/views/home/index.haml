@@ -12,10 +12,9 @@
     = text_field_tag :bill_search, params[:bill_search]
     = submit_tag "Search", :name => nil
 
-- @bills.first do |bill|
-  %p.center{:align => "center"}
-    = bill.short_title
-    = bill.number
+%p.center{:align => "center"}
+  = bill.short_title
+  = bill.number
 
 
 %div
