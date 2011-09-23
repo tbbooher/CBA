@@ -13,11 +13,12 @@
     = submit_tag "Search", :name => nil
 
 %p.center{:align => "center"}
+  = "Bill Long Title"
+  = "Bill Summary"
 #- @bills.first do |bill|
 #  = bill.long_title
 #  = bill.summary
-  = "Bill Long Title"
-  = "Bill Summary"
+
 
 %div
 - if can?( :create, Posting ) && @blog
