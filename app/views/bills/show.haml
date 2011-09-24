@@ -17,31 +17,39 @@
   %b Status:
   = @bill.bill_state
 %p{:align => "center"}
-  = link_to "Official Text", full_bill_text(@bill)
+  = link_to "Official Text", full_bill_text_path(@bill)
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
-%p{:align => "center"}
-  = "District Tallies"
-  = "Drop-Down Box Search Box"
+/here is the district count region
 
-= will_paginate @districts
+- if @bill.votes.size > 0
 
-%table.center{:align => "center"}
-  %tr
-    %th District
-    %th Tally
-    %th Rep Vote
-    %th Rep Name
-    %th Party
-  - @districts.paginate.each do |d|
-    - rep = d.the_rep
+  %p shouldn't this whole region be centered
+
+  %p{:align => "center"}
+    = "District Tallies"
+    = "Drop-Down Box Search Box"
+
+  = will_paginate @districts
+
+  %table.center{:align => "center"}
     %tr
-      %td= link_to d.name, d unless rep.nil?
-      %td= ".3 .2 .5" unless rep.nil?
-      %td= "bill.legislator.vote" unless rep.nil?
-      %td= rep.full_name unless rep.nil?
-      %td= rep.party unless rep.nil?
+      %th District
+      %th Tally
+      %th Rep Vote
+      %th Rep Name
+      %th Party
+    - @districts.paginate.each do |d|
+      - rep = d.the_rep
+      %tr
+        %td= link_to d.name, d unless rep.nil?
+        %td= ".3 .2 .5" unless rep.nil?
+        %td= "bill.legislator.vote" unless rep.nil?
+        %td= rep.full_name unless rep.nil?
+        %td= rep.party unless rep.nil?
+- else
+  %p No votes yet for this bill
 
 %p{:align => "center"}
   = "Joined & Followed Groups"

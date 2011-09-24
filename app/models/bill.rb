@@ -64,6 +64,10 @@ class Bill
   has_many :votes
   embeds_many :member_votes
 
+  def activity?
+    self.votes.size > 0 || self.member_votes.size > 0
+  end
+
   def short_title
     # we show the first short title
     txt = nil

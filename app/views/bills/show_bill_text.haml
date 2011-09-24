@@ -1,4 +1,7 @@
 - title "Bill text for #{@bill.bill_title}"
 
-%p this is a test
+= link_to "Back to bill page for #{@bill.bill_title}", @bill
 
+= @bill.bill_html.html_safe
+
+= link_to "Back to bill page for #{@bill.bill_title}", @bill
