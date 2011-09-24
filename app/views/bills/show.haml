@@ -1,9 +1,9 @@
 %p#notice= notice
 - title @bill.bill_title || "no title yet"
 
-%br/
+%br
 
-%p{:align => "center"}
+%p
   %b Title:
   = @bill.long_title
 - unless @bill.summary.empty?
@@ -17,7 +17,7 @@
   %b Status:
   = @bill.bill_state
 %p{:align => "center"}
-  = "Official Text"
+  = link_to "Official Text", full_bill_text(@bill)
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 

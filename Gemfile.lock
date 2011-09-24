@@ -7,6 +7,15 @@ GIT
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
 
+GIT
+  remote: git://github.com/mongoid/mongoid.git
+  revision: ccae125ccfd8867fc6bcb542032d2794db846630
+  specs:
+    mongoid (2.3.0)
+      activemodel (~> 3.1)
+      mongo (~> 1.4)
+      tzinfo (~> 0.3.22)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -147,12 +156,8 @@ GEM
     mime-types (1.16)
     mocha (0.10.0)
       metaclass (~> 0.0.1)
-    mongo (1.3.1)
-      bson (>= 1.3.1)
-    mongoid (2.2.1)
-      activemodel (~> 3.0)
-      mongo (>= 1.3, < 1.4)
-      tzinfo (~> 0.3.22)
+    mongo (1.4.0)
+      bson (= 1.4.0)
     mongoid-paperclip (0.0.6)
       paperclip (~> 2.3.6)
     mongoid-tree (0.6.1)
@@ -384,7 +389,7 @@ DEPENDENCIES
   jsort (~> 0.0.1)
   launchy
   mocha
-  mongoid
+  mongoid!
   mongoid-paperclip
   mongoid-tree
   mongoid_fulltext

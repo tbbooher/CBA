@@ -75,7 +75,7 @@ class Bill
     else
       Rails.logger.warn "no titles for #{self.ident}"
     end
-    txt || self.title
+    txt
   end
 
   def chamber
@@ -94,7 +94,7 @@ class Bill
   end
 
   def bill_title
-    short_title || long_title || "no title available!"
+    short_title || long_title.truncate(75) || "no title available!"
   end
 
   def tiny_title
