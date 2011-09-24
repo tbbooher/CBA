@@ -13,6 +13,11 @@ class BillsController < ApplicationController
     end
   end
 
+  def show_bill_text
+    # assuming load_and_authorize_resource doesn't populate this
+    @bill = Bill.find(params[:id]).first
+  end
+
   def vote_on_bill
     #bill = Bill.find(params[:id])
     current_user.vote_on(@bill, params[:value].to_sym)
