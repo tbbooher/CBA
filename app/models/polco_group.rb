@@ -1,14 +1,18 @@
 class PolcoGroup
   include Mongoid::Document
+  include VotingHelpers
+
   field :name, :type => String
   field :type, :type => Symbol, :default => :custom
   field :description, :type => String
   index :name
   index :type
+  field :vote_count, :type => Integer, :default => 0
   field :follower_count, :type => Integer, :default => 0
   field :member_count, :type => Integer, :default => 0
   index :follower_count
   index :member_count
+  index :vote_count
 
   belongs_to :owner, :class_name => "User", :inverse_of => :custom_groups
 
@@ -42,7 +46,10 @@ class PolcoGroup
         puts "The district is named #{self.name}"
         l = Legislator.where(state: $1).where(district: 0).first
       else # we have multiple districts for this state
-        l = Legislator.all.select { |l| l.district_name == self.name }.first
+        data = self.name.match(/([A-Z]+)(\d+)/)
+        state, district_num = data[1], data[2].to_i
+        l = Legislator.representatives.where(state: state).and(district: district_num).first
+        #l = Legislator.all.select { |l| l.district_name == self.name }.first
       end
     else
       l = "Only districts can have a representative"
@@ -55,4 +62,20 @@ class PolcoGroup
     # produces bills
     Vote.where(polco_group_id: self.id).desc(:updated_at).all.to_a
   end
+
+  def get_votes_tally
+    # TODO -- need to test
+    process_votes(self.votes)
+  end
+
+  def senators
+    if self.type == :state
+      Legislator.senators.where(state: self.name).all.to_a
+    else
+      nil
+    end
+  end
+
+
+
 end

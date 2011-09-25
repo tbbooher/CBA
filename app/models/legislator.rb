@@ -146,6 +146,7 @@ class Legislator
       scoped
     end
   end
+
   # added by nate
   def self.bill_search(search)
     puts search

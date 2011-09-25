@@ -81,6 +81,8 @@ class BillTest < ActiveSupport::TestCase
     assert_equal({:ayes => 2, :nays => 1, :abstains => 1, :presents => 0}, tally, "Expected 2 aye, 1 nay, and 1 abstain")
   end
 
+# looks like we don't call this anymore
+=begin
   test "should be able to build a descriptive tally that prints the tally as html" do
     b = @house_bill
     @user1.vote_on(b, :aye)
@@ -90,6 +92,7 @@ class BillTest < ActiveSupport::TestCase
     tally = b.descriptive_tally
     assert_not_nil tally
   end
+=end
 
   test "should verify that a user has already voted" do
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
@@ -314,6 +317,11 @@ class BillTest < ActiveSupport::TestCase
   test "should get most recent roll called bill and exclude bills from this list that have not been roll-called" do
     #Bill.house_roll_called_bills
     #Bill.house_roll_called_bills.last.member_votes.count
+  end
+
+  test "should be able to report its activity appropriately" do
+    assert_true @house_bill_with_roll_count.activity?
+    assert_false @house_bill.activity?
   end
 
 end

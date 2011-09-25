@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 #gem 'simplecov', :require => false, :group => :test #, '>= 0.4.0'
 
 gem "rails", "~> 3.1.0" # prev was rc8
+#gem "addressable", "> 2.2.5"
 
 # Rails 3.1 - Asset Pipeline
 group :assets do
@@ -23,7 +24,7 @@ gem "bson_ext"  #, "1.1.5"
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-gem "omniauth", "0.2.6"
+gem "omniauth", ">= 0.2.6"
 
 gem "googlecharts"
 
@@ -38,7 +39,7 @@ end
 gem 'json'
 gem 'geocoder'
 gem 'httparty'
-gem "nokogiri", "1.4.2"
+gem "nokogiri", "~> 1.5.0"
 gem 'feedzirra' 
 gem 'sax-machine'
 
@@ -48,7 +49,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # MongoID Extensions and extras
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'mongoid_fulltext'
-#gem 'mongoid_counter_cache'
+
 
 # Bundle gems for views
 gem "haml"
@@ -103,7 +104,7 @@ group :test do
   gem "gherkin"
   gem 'test-unit'
 #  gem "autotest-fsevent", :platforms => :ruby
-  gem 'webmock'
+  gem 'webmock', ">= 1.7.0"
   gem 'vcr'
   gem 'syntax'
   gem "nifty-generators"
@@ -132,3 +133,4 @@ end
 #gem "formtastic"
 #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
 #gem 'factory_girl_rails', "1.1.0"
+#gem 'mongoid_counter_cache'

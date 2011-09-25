@@ -112,6 +112,21 @@ module ApplicationHelper
     view.formats = old_formats
   end
 
+  # added by Tim
+  def format_votes(vote_hash)
+    o = "<ul class=\"votes\">"
+    o += "<li>For: #{vote_hash[:ayes]}</li>"
+    o += "<li>Against:#{vote_hash[:nays]}</li>"
+    o += "<li>Abstain:#{vote_hash[:abstains]}</li>"
+    o += "<li>Present:#{vote_hash[:presents]}</li>"
+    o += "</ul>"
+    o.html_safe
+  end
+
+  def short_tally(vote_hash)
+    "#{vote_hash[:ayes]}, #{vote_hash[:nays]}, #{vote_hash[:abstains]}, #{vote_hash[:presents]}"
+  end
+
   # added by nate
   # cool, easy
   def sortable(column, title = nil)

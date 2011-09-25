@@ -100,4 +100,14 @@ class PolcoGroupTest < ActiveSupport::TestCase
     end
   end
 
+  test "should be able to get a tally for the polco group" do
+    u = User.first
+    @cali_group.members << u
+    @cali_group.save
+    b = Bill.first
+    u.vote_on(b, :aye)
+    puts @cali_group.get_votes_tally.inspect
+    assert_equal "", @cali_group.get_votes_tally
+  end
+
 end

@@ -32,6 +32,7 @@ class BillsController < ApplicationController
     @PolcoGroups=PolcoGroup.all.paginate(:page => params[:page], :per_page => 10)
     @districts = PolcoGroup.districts.desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
+    @rolled = (@bill.member_votes.size > 0)
 
     respond_to do |format|
       format.html # show.haml
