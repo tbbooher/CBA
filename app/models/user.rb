@@ -382,7 +382,7 @@ class User
   end
   
   def all_groups_for_bill(bill)
-    (u.followed_groups + u.joined_groups).select{|g| g.votes.map(&:bill).include?(bill)}
+    (self.followed_groups + self.joined_groups).select{|g| g.votes.map(&:bill).include?(bill)}
   end
 
   private
