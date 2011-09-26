@@ -1,12 +1,10 @@
 class PolcoGroup
   include Mongoid::Document
   include ContentItem
+  include VotingHelpers
   
   acts_as_content_item
-  
   has_cover_picture
-  
-  include VotingHelpers
 
   # needed for comments
   field :interpreter,                             :default => :markdown
