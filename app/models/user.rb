@@ -8,7 +8,7 @@ class User
   include Geocoder::Model::Mongoid
 
   geocoded_by :coordinates
-  # TODO ^^ is this still needed
+  # TODO ^^ is this still needed?
   cache
 
   devise :database_authenticatable, :registerable, :confirmable,
@@ -248,7 +248,8 @@ class User
        g = PolcoGroup.find_or_create_by(:name => name, :type => type)
        g.members.push(self)
        g.member_count += 1
-       self.joined_groups.push(g)
+       # but what if the user is already in this group?
+       self.joined_groups.push(g) unless self.joined_groups.include?(g)
     end
   end
 
@@ -262,6 +263,7 @@ class User
         raise "legislator #{member.govtrack_id} not found"
       end
     end
+    # TODO -- mongo this
     senators = legs.select { |l| l.title == 'Sen.' }.sort_by { |u| u.start_date }
     members = Hash.new
     members[:senior_senator] = senators.first
