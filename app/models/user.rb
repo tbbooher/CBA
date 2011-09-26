@@ -182,7 +182,6 @@ class User
   end
 
   def vote_on(bill, value)
-    # TODO -- NEED TO ADD POLCO_GROUP
     # test to make sure the user is a member of a group
     my_groups = self.joined_groups
     unless my_groups.empty?
@@ -193,7 +192,9 @@ class User
           end
         end
       else
-        Rails.logger.warn ""
+        Rails.logger.warn "already voted on"
+        puts "aready voted on"
+        false
         #raise "already voted on"
       end
       #bill.save!

@@ -72,16 +72,6 @@ module BillsHelper
     "on #{action[:date]}, #{action[:description]}"
   end
 
-  def format_votes(vote_hash)
-    o = "<ul class=\"votes\">"
-    o += "<li>For: #{vote_hash[:ayes]}</li>"
-    o += "<li>Against: #{vote_hash[:nays]}</li>"
-    o += "<li>Abstain:#{vote_hash[:abstains]}</li>"
-    o += "<li>Present:#{vote_hash[:presents]}</li>"
-    o += "</ul>"
-    o.html_safe
-  end
-
   def format_votes_inline(vote_hash)
     "#{vote_hash[:ayes]} were for, #{vote_hash[:nays]} were against, #{vote_hash[:presents]} voted present and #{vote_hash[:abstains]} abstained."
   end

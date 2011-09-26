@@ -39,6 +39,8 @@ module Cba
     config.autoload_paths += %W(#{Rails.root}/app/workers 
                                 #{Rails.root}/lib/validators
                                 #{Rails.root}/lib/content_items
+                                #{Rails.root}/lib/mongoid
+                                #{Rails.root}/lib/booher_modules
                               )
 
     # Only load the plugins named here, in the order given (default is alphabetical).
@@ -50,7 +52,7 @@ module Cba
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Eastern Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -63,7 +65,7 @@ module Cba
       g.orm                 :mongoid
       g.template_engine     :haml
       g.test_framework      :rspec
-      g.fixture_replacement :factory_girl 
+      g.fixture_replacement :fabrication
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.

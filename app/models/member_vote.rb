@@ -6,6 +6,8 @@ class MemberVote
   field :value, :type => Symbol
 
   belongs_to :legislator
+  # experiment
+  #belongs_to :polco_group
   embedded_in :bill
 
   # TODO validate that value is required
