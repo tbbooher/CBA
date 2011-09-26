@@ -28,8 +28,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.xml
   def show
-    #@bill = Bill.find(params[:id])
-    @PolcoGroups=User.all_groups.paginate(:page => params[:page], :per_page => 10)
+    @PolcoGroups=User.all_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
     @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
     @rolled = (@bill.member_votes.size > 0)
