@@ -376,6 +376,14 @@ class User
     end
     out
   end
+  
+  def all_groups
+    (u.followed_groups + u.joined_groups).sort_by(&:vote_count)
+  end
+  
+  def all_groups_for_bill(bill)
+    (u.followed_groups + u.joined_groups).select{|g| g.votes.map(&:bill).include?(bill)}
+  end
 
   private
   def reprocess_avatar
@@ -443,14 +451,6 @@ class User
       self.role=:admin
       self.save!
     end
-  end
-  
-  def all_groups
-    (u.followed_groups + u.joined_groups).sort_by(&:vote_count)
-  end
-  
-  def all_groups_for_bill(bill)
-    (u.followed_groups + u.joined_groups).select{|g| g.votes.map(&:bill).include?(bill)}
   end
 
 end
