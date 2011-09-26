@@ -28,9 +28,14 @@ class Ability
 
         # Users with role
         if user.role?(:guest)
-          can :read, [Page, Blog, Posting, Bill, Legislator, Vote]
+          can :read, [Page, Blog, Posting] do |resource|
+            if resource.respond_to? :is_draft
+              resource.is_draft != true
+            else
+              true
+            end
+          end
           can :create, Comment
-          can :vote_on_bill, Bill
         end
         if user.role?(:confirmed_user)
           can :create, Invitation
@@ -49,18 +54,24 @@ class Ability
       end
 
       # Anybody
-      can :read, [Page, Blog, Posting, Bill]
+      can :read, [Page, Blog, Posting] do |resource|
+        if resource.respond_to? :is_draft
+          resource.is_draft != true
+        else
+          true
+        end
+      end
       can :create, Comment
       can :read, Comment do |comment|
         comment && !comment.new_record?
       end
-      can :manage, Comment do |comment, session_comments|
+      can :manage, Comment do |comment,session_comments|
         unless comment.new_record?
           # give 15mins to edit new comments
           Rails.logger.info(" COMMENTS #{session_comments.inspect}")
           expire = comment.updated_at+CONSTANTS['max_time_to_edit_new_comments'].to_i.minutes
           begin
-            session_comments.detect { |c| c[0].eql?(comment.id.to_s) } && (Time.now < expire)
+            session_comments.detect { |c| c[0].eql?(comment.id.to_s) } &&  (Time.now < expire)
           rescue
             false
           end

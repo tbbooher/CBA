@@ -36,8 +36,12 @@ module Cba
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W(#{Rails.root}/app/workers #{Rails.root}/lib/validators
-      #{Rails.root}/lib/content_items)
+    config.autoload_paths += %W(#{Rails.root}/app/workers 
+                                #{Rails.root}/lib/validators
+                                #{Rails.root}/lib/content_items
+                                #{Rails.root}/lib/mongoid
+                                #{Rails.root}/lib/booher_modules
+                              )
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -48,7 +52,7 @@ module Cba
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Eastern Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -58,11 +62,10 @@ module Cba
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     config.generators do |g|
-      g.orm             :mongoid
-      #g.test_framework :shoulda
-      #g.fixture_replacement :factory_girl, :dir => 'test/factories'
-      g.test_framework  :test_unit
-      g.fixture_replacement :fabrication, :dir => "test/fabricators"
+      g.orm                 :mongoid
+      g.template_engine     :haml
+      g.test_framework      :rspec
+      g.fixture_replacement :fabrication
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.

@@ -1,10 +1,13 @@
-- title t('userlist.title')
+- title t('userlist.title'),false 
 = javascript 'endless_page'
-
-%div.top_right_box= t(:registered_users_count, :count => @user_count) 
 
 .pagination_box= will_paginate @users
 
+%h2<
+    =yield(:title)
+    .tiny
+        = t(:registered_users_count, :count => @user_count) 
+  
 %div#userlist
     - for user in @users
         %div{ :style=>'clear: right;'}= render user 

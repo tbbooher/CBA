@@ -19,7 +19,9 @@ Cba::Application.routes.draw do
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
-  match "/bills/chamber_results/:chamber" => "bills#chamber_results"
+  match "/bills/house_results" => "bills#house_results"
+  match "/bills/senate_results" => "bills#senate_results"
+  match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
   match "/bills/process_page" => "bills#process_page"
 
@@ -47,7 +49,7 @@ Cba::Application.routes.draw do
   match "/users/district" => "users#district"
 
   # Switch locales
-  match 'switch_lcoale/:locale' => "home#set_locale", :as => 'switch_locale'
+  match 'switch_locale/:locale' => "home#set_locale", :as => 'switch_locale'
   
   # Switch draft mode
   match 'draft_mode/:mode' => "home#set_draft_mode", :as => 'draft_mode'

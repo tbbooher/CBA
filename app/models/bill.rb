@@ -1,5 +1,7 @@
 class Bill
+  include VotingHelpers
   include ContentItem
+
   acts_as_content_item
 
   references_many :comments, :inverse_of => :commentable, :as => 'commentable'
@@ -64,6 +66,11 @@ class Bill
   has_many :votes
   embeds_many :member_votes
 
+
+  def activity?
+    self.votes.size > 0 || self.member_votes.size > 0
+  end
+
   def short_title
     # we show the first short title
     txt = nil
@@ -75,7 +82,7 @@ class Bill
     else
       Rails.logger.warn "no titles for #{self.ident}"
     end
-    txt || self.title
+    txt
   end
 
   def chamber
@@ -94,18 +101,19 @@ class Bill
   end
 
   def bill_title
-    short_title || long_title || "no title available!"
+    short_title || long_title.truncate(75) || "no title available!"
   end
 
   def tiny_title
     self.title.capitalize
   end
 
-  # ------------------- Public voting aggregation methods -------------------
-
+  # ------------------- Public booher_modules aggregation methods -------------------
+=begin
   def tally # delete method calls to this
     build_tally(self.votes.all)
   end
+=end
 
   def get_overall_users_vote # RECENT
     #
@@ -118,10 +126,6 @@ class Bill
   def get_votes_by_name_and_type(name, type) # RECENT
                                              # we need to protect against a group named by the state
     process_votes(self.votes.all.select { |v| (v.polco_group.name == name && v.polco_group.type == type) })
-  end
-
-  def get_vote_values(votes_collection)
-    votes_collection.map { |v| v.value }
   end
 
   def voted_on?(user)
@@ -138,6 +142,7 @@ class Bill
     end
   end
 
+=begin
   def descriptive_tally
     names = ["For", "Against", "Abstain"]
     out = "<ul id=\"tally\">"
@@ -156,6 +161,7 @@ class Bill
     out += "<div class=\"clear_both\"></div>"
     out
   end
+=end
 
   def self.update_from_directory
     files = Dir.glob("#{Rails.root}/data/bills/*.xml")
@@ -429,11 +435,14 @@ class Bill
 
   def find_member_vote(member)
     if self.member_votes
-      out = self.member_votes.where(legislator_id: member.id).first.value
+      if vote = self.member_votes.where(legislator_id: member.id).first
+        vote.value
+      else
+        ""
+      end
     else
-      out = "no member votes to search"
+      "no member votes to search"
     end
-    out
   end
 
   def members_tally
@@ -451,32 +460,35 @@ class Bill
   # TODO -- need to write ways to get titles and actions for views (but not what we store in the db)
 
   private
-
-  def process_votes(votes)
-    # takes a list of votes (of one type) and will add up all the nays, abstains, ayes
-    v = votes.group_by { |v| v.value }
-    aye_count = (v[:aye] ? v[:aye].count : 0)
-    nay_count = (v[:nay] ? v[:nay].count : 0)
-    present_count = (v[:present] ? v[:present].count : 0)
-    abstain_count = (v[:abstain] ? v[:abstain].count : 0)
-    {:ayes => aye_count, :nays => nay_count, :abstains => abstain_count, :presents => present_count}
+=begin
+  def get_vote_values(votes_collection)
+    # called in build_tally
+    votes_collection.map { |v| v.value }
   end
+=end
 
-  def get_tally(votes)
-    ayes = votes.count { |val| val == :aye }
-    nays = votes.count { |val| val == :nay }
-    abstains = votes.count { |val| val == :abstain }
-    presents = votes.count { |val| val == :present }
-    {:ayes => ayes, :nays => nays, :abstains => abstains, :presents => presents}
-  end
-
+=begin
   def build_tally(votes_collection)
+    # given a collection of votes, get a collection of votes self.votes.all
     the_tally = Hash.new
     votes_collection.group_by { |v| v.polco_group.name }.each do |votes_by_group|
-      votes = get_vote_values(votes_by_group.last)
+      votes = get_vote_values(votes_by_group.last)   # TODO -- why are we calling last here?
       the_tally[votes_by_group.last.last.polco_group.name] = get_tally(votes)
     end
     the_tally
   end
+=end
 
+  # added by nate
+  def self.bill_search(search)
+    puts search
+    if search
+      # you have to have a class to perform where on (i think)
+      self.where(short_title: /#{search}/i)
+    else
+      # does scoped work with mongoid
+      scoped
+    end
+  end
+  
 end

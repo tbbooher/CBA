@@ -13,6 +13,11 @@ class BillsController < ApplicationController
     end
   end
 
+  def show_bill_text
+    # assuming load_and_authorize_resource doesn't populate this
+    @bill = Bill.find(params[:id])
+  end
+
   def vote_on_bill
     #bill = Bill.find(params[:id])
     current_user.vote_on(@bill, params[:value].to_sym)
@@ -24,7 +29,10 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #@bill = Bill.find(params[:id])
+    @PolcoGroups=PolcoGroup.all.paginate(:page => params[:page], :per_page => 10)
+    @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
+    @rolled = (@bill.member_votes.size > 0)
 
     respond_to do |format|
       format.html # show.haml
@@ -157,11 +165,11 @@ class BillsController < ApplicationController
     end
   end
 
-  def state_results
+  def senate_results
 
   end
 
-  def chamber_results
+  def house_results
     # this is where the code gets prepared for the chamber results view
     #this page presents one table outlining the bills the user has cast an eballot on.
     
@@ -176,6 +184,7 @@ class BillsController < ApplicationController
     # future case
     # but can also be ordered by popularity, number of votes, number of comments, number of votes by district members,
     # or searchable.
+
 
     if params[:chamber] == "house"
       @chamber = "House"

@@ -1,9 +1,13 @@
+require 'mongoid/counter_cache'
+
 class Vote
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::CounterCache
 
   field :value, :type => Symbol # can be :aye, :nay, :abstain, :present
-  #field :type, :type => Symbol  # TODO can delete?
+
+  counter_cache :name => 'polco_group', :field => 'vote_count'
 
   belongs_to :user
   belongs_to :polco_group    # we might need to think this through -- never need to query PolcoGroup.votes, right?

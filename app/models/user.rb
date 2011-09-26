@@ -192,7 +192,9 @@ class User
           end
         end
       else
-        Rails.logger.warn ""
+        Rails.logger.warn "already voted on"
+        puts "aready voted on"
+        false
         #raise "already voted on"
       end
       #bill.save!

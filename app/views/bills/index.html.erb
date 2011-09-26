@@ -1,15 +1,18 @@
-<h1>Bills Admin View</h1>
+<% title "All Bills" %>
 <%# javascript 'endless_page' %>
 
   <%= will_paginate @bills %>
 
 <% @bills.each do |bill| %>
-    <h3><%= bill.bill_title %></h3>
-    <p> by <%= bill.sponsor.full_title %><br>
+    <h3><%= link_to bill.bill_title, bill %></h3>
+    <p> by <%= link_to bill.sponsor.full_title, bill.sponsor %><br>
 
-    <p><%= link_to 'Show', bill %> |
-    <%= link_to 'Edit', edit_bill_path(bill) %> |
-    <%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></p>
+    <% if can? :update, Bill %>
+    <p>
+      <%= link_to 'Edit', edit_bill_path(bill) %> |
+      <%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %>
+    </p>
+    <% end %>
     <hr>
 <% end %>
 
@@ -17,4 +20,6 @@
 
 <br>
 
-<%= link_to 'New Bill', new_bill_path %>
+<% if can? :create, Bill %>
+    <%= link_to 'New Bill', new_bill_path %>
+<% end %>

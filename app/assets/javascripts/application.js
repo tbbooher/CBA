@@ -11,4 +11,5 @@
 //= require jsort_sortable
 //= require progress_upload_field
 //= require jquery.tokeninput
+//= require jquery_ajax
 //= require_tree .

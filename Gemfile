@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
+#gem 'simplecov', :require => false, :group => :test #, '>= 0.4.0'
 
 gem "rails", "~> 3.1.0" # prev was rc8
+#gem "addressable", "> 2.2.5"
 
 # Rails 3.1 - Asset Pipeline
 group :assets do
@@ -17,16 +18,13 @@ group :assets do
 end
 
 # Bundle gems needed for Mongoid
-gem "mongoid" # , "2.1.6" #  :path => "/Users/aa/Development/R31/mongoid-1" #"2.1.6"
+gem "mongoid", :git => 'git://github.com/mongoid/mongoid.git'
 gem "bson_ext"  #, "1.1.5"
-
-# so we can store the session in the database
-gem "mongo_session_store"
 
 # Bundle gem needed for Devise and cancan
 gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
-gem "omniauth", "0.3.0rc3"
+gem "omniauth", ">= 0.2.6"
 
 gem "googlecharts"
 
@@ -41,7 +39,7 @@ end
 gem 'json'
 gem 'geocoder'
 gem 'httparty'
-gem 'nokogiri'
+gem "nokogiri", "~> 1.5.0"
 gem 'feedzirra' 
 gem 'sax-machine'
 
@@ -51,7 +49,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # MongoID Extensions and extras
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'mongoid_fulltext'
-#gem 'mongoid_counter_cache'
+
 
 # Bundle gems for views
 gem "haml"
@@ -68,13 +66,6 @@ gem 'progress_upload_field', '~> 0.0.1'
 gem 'redcarpet'
 gem 'albino'
 
-
-# Javascript Testing
-group :development, :test do
-  gem 'jasmine', '1.0.2.1'
-  gem 'headless', '0.1.0'
-end
-
 # Bundle gems for development
 group :development do
   gem "nifty-generators"
@@ -84,10 +75,9 @@ group :development do
   gem "capistrano"
   gem 'unicorn'
   gem 'yard'
-  gem 'passenger'
 end
 
-gem "ruby-debug19", :require => 'ruby-debug', :groups => [:development, :test]
+#gem "ruby-debug19", :groups => [:development, :test]
 #gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
 
 # Bundle gems for testing
@@ -113,9 +103,17 @@ group :test do
   gem "fabrication"
   gem "gherkin"
   gem 'test-unit'
+#  gem "autotest-fsevent", :platforms => :ruby
+  gem 'webmock', ">= 1.7.0"
   gem 'vcr'
-  gem 'webmock' # , '~> 1.7.5'
   gem 'syntax'
+  gem "nifty-generators"
+  gem "rails-erd"
+  gem 'rdoc'
+  gem 'unicorn'
+  gem 'yard'
+  gem 'rails3-generators'
+  gem "haml-rails"
 end
 
 # !! THE GRAVEYARD !!
@@ -135,3 +133,4 @@ end
 #gem "formtastic"
 #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
 #gem 'factory_girl_rails', "1.1.0"
+#gem 'mongoid_counter_cache'

@@ -3,14 +3,14 @@ require 'test_helper'
 class PolcoGroupTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   def setup
-     PolcoGroup.destroy_all
-     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
-     @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
-     @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
-     @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                                  @cali_group,
-                                                                  @ca46,
-                                                                  Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
+    PolcoGroup.destroy_all
+    common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
+    @cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
+    @ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
+    @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
+                                                              @cali_group,
+                                                              @ca46,
+                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})]})
   end
 
   test "should not allow an unapproved type" do
@@ -86,6 +86,41 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should be able to sort by most popular group" do
     pending
+  end
+
+  test "should be able to get the reps for all legislators" do
+    Legislator.update_legislators
+    districts_array = File.new("#{Rails.root}/data/districts.txt", 'r').read.split("\n")
+    districts_array.each do |district|
+      # create district for each state
+      PolcoGroup.find_or_create_by(:name => district, :type => :district)
+    end
+    PolcoGroup.districts.all.each do |pg|
+      assert_not_nil pg.the_rep
+    end
+  end
+
+  test "should be able to get a tally for the polco group" do
+    u = User.first
+    u.votes.destroy_all
+    u.save
+    @cali_group.members << u
+    b = Bill.first
+    puts u.vote_on(b, :aye)
+    puts b.votes.last
+    puts @cali_group.get_votes_tally.inspect
+    assert_equal({:ayes=>1, :nays=>0, :abstains=>0, :presents=>0}, @cali_group.get_votes_tally)
+  end
+
+  test "should increase polco group vote count when a member votes on a bill" do
+    u = User.first
+    u.votes.destroy_all
+    @ca46.votes.destroy_all
+    @ca46.members << u
+    b = Bill.first
+    u.vote_on(b, :abstain)
+    @ca46.reload
+    assert_equal 1, @ca46.vote_count
   end
 
 end

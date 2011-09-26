@@ -153,6 +153,8 @@ Then /^(?:|I )should not see \/([^\/]*)\/(?: within "([^"]*)")?$/ do |regexp, se
   end
 end
 
+
+
 Then /^the "([^"]*)" field(?: within "([^"]*)")? should contain "([^"]*)"$/ do |field, selector, value|
   with_scope(selector) do
     field = find_field(field)
@@ -249,6 +251,7 @@ end
 Then /^I should not see class (.+)$/ do |classname|
   assert !page.has_content?('class="'+classname+"'")
 end
+
 
 Given /^the following default pages?$/ do |table|
   Page.unscoped.delete_all
@@ -438,9 +441,12 @@ end
 
 Given /^the following blogs with pages/ do |table|
   Page.unscoped.delete_all
+  t = PageTemplate.find_or_create_by(name: 'default')
   table.hashes.each do |params|
     blog = Blog.find_or_create_by(title: params[:title], is_draft: false)
-    page = Page.create(:title => params[:page_name], :body => params[:page_body], :show_in_menu => false, :is_draft => false)
+    page = Page.create(:title => params[:page_name], :body => params[:page_body],
+      :show_in_menu => false, :is_draft => params[:is_draft] || false)
+    page.template = t
     blog.pages << page
     blog.save
   end
@@ -532,4 +538,9 @@ Given /^the following components for page "([^"]*)"$/ do |page_title, table|
     )
   end
   page.save!
+end
+
+Then /^I should see a valid rss\-feed containing "([^"]*)"$/ do |arg1|
+  assert_match( /http:\/\/www.w3.org\/2005\/Atom/, page.html)
+  assert_match( /<content type=\"html\">&lt;p&gt;/, page.html)
 end

@@ -6,13 +6,20 @@ class HomeController < ApplicationController
 
   # Display the top pages on the home-page
   def index
+    # added by nate
+    @bills = Bill.bill_search(params[:bill_search])
     @blog = Blog.where(:title => t(:news)).first
     if @blog
-      @postings = @blog.postings.desc(:created_at).paginate(
+      @postings = @blog.postings.excludes(is_draft: true).desc(:created_at).paginate(
         :page => params[:page],
         :per_page => CONSTANTS['paginate_postings_per_page'].to_i
       )
     end
+    # added by nate
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.xml  { render :xml => @bills }
+    #end
     respond_to do |format|
        format.js {
          @path = blog_path(@blog, :page => (params[:page] ? (params[:page].to_i+1) : 2))
@@ -26,23 +33,23 @@ class HomeController < ApplicationController
   # GET /feed
   def rss_feed
     @feed_items = []
-    
+
     Blog.all.each do |blog|
-      blog.postings.desc(:updated_at).each do |posting|
+      blog.postings.rss_items.desc(:updated_at).each do |posting|
         @feed_items << FeedItem.new(posting.title, posting.body, posting.updated_at, posting_url(posting), posting)
         posting.comments.each do |comment|
           @feed_items << FeedItem.new( ("%s %% %s" % [posting.title,comment.name]), comment.comment, comment.updated_at, posting_url(posting),comment)
         end
       end
     end
-    
-    Page.asc(:updated_at).each do |page|
+
+    Page.rss_items.asc(:updated_at).each do |page|
       @feed_items << FeedItem.new(page.title,page.body,page.updated_at,page_url(page),page)
       page.comments.each do |comment|
         @feed_items << FeedItem.new( ("%s %% %s" % [page.title,comment.name]), comment.comment, comment.updated_at, page_url(page),comment)
       end
     end
-    
+
     @feed_items.sort! {|a,b| a.updated_at <=> b.updated_at}
     @feed_items
   end
@@ -54,7 +61,7 @@ class HomeController < ApplicationController
     target = request.env['HTTP_REFERER'] ? request.env['HTTP_REFERER'] : root_path
     redirect_to target, :notice => t(:language_switched_to, :lang => t("locales.#{params[:locale]}")).html_safe
   end
-  
+
   # GET /draft_mode/:mode
   def set_draft_mode
     change_draft_mode(params[:mode])

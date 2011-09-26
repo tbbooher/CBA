@@ -7,13 +7,8 @@ Feature: Comments
 #             0         1               2        3            4           5
 
   Background:
-    Given the following user records
-      | email            | name      | roles_mask | password         | password_confirmation | confirmed_at         |
-      | admin@iboard.cc  | admin     | 5          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
-      | user@iboard.cc   | testmax   | 1          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
-      | guest@iboard.cc  | guest     | 0          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
-      | staff@iboard.cc  | staff     | 4          | thisisnotsecret  | thisisnotsecret       | 2010-01-01 00:00:00  |
-    And the following page records
+    Given the default user set
+    And the following default pages
       | title  | body                 | show_in_menu | allow_public_comments | allow_comments | is_draft |
       | Page 1 | Lorem ipsum          | true         | true                  | ture           | false    |
       | Page 2 | Lirum Opsim          | false        | true                  | true           | false    |
@@ -66,7 +61,7 @@ Feature: Comments
     Then I should not see "Post a comment"
 
   Scenario: Allow comments if page.allow_comments is true
-    Given the following page records
+    Given the following default pages
       | title         | body                 | allow_public_comments | allow_comments | is_draft |
       | Commentable   | Lorum Upsim          | true                  | true           | false    |
     And I am on the page path of "Commentable"
