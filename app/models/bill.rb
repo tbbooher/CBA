@@ -22,6 +22,7 @@ class Bill
 
   field :bill_state, :type => String #
   field :introduced_date, :type => Date #
+  field :title, :type => String
   field :titles, :type => Array #
   field :summary, :type => String #
   field :bill_actions, :type => Array #
@@ -47,6 +48,7 @@ class Bill
   # roll call results
   field :roll_time, :type => DateTime
   index :roll_time
+  # TODO -- this is recorded in votes -- can't we delete?
   field :ayes, :type => Integer
   field :nays, :type => Integer
   field :abstains, :type => Integer
@@ -66,11 +68,11 @@ class Bill
   has_many :votes
   embeds_many :member_votes
 
-
   def activity?
     self.votes.size > 0 || self.member_votes.size > 0
   end
 
+  # Mongoid::Errors::Validations: Validation failed - Title can't be blank.
   def short_title
     # we show the first short title
     txt = nil
