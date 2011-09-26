@@ -1,9 +1,17 @@
 class PolcoGroup
   include Mongoid::Document
-  #include ContentItem
-  #acts_as_content_item
-  #has_cover_picture
+  include ContentItem
+  
+  acts_as_content_item
+  
+  has_cover_picture
+  
   include VotingHelpers
+
+  # needed for comments
+  field :interpreter,                             :default => :markdown
+  field :allow_comments,        :type => Boolean, :default => true
+  field :allow_public_comments, :type => Boolean, :default => true
 
   field :name, :type => String
   field :type, :type => Symbol, :default => :custom
