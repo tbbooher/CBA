@@ -1,8 +1,8 @@
 class PolcoGroup
   include Mongoid::Document
-  include ContentItem
-  acts_as_content_item
-  has_cover_picture
+  #include ContentItem
+  #acts_as_content_item
+  #has_cover_picture
   include VotingHelpers
 
   field :name, :type => String
