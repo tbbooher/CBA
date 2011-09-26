@@ -3,4 +3,5 @@ Fabricator(:polco_group) do
   type :custom
   member_ids []
   follower_ids []
+  comments []
 end
