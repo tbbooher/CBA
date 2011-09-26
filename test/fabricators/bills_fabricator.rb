@@ -6,6 +6,7 @@ Fabricator(:bill) do
   bill_state "PASSED:CONCURRENTRES"
   bill_type "hc"
   congress 112
+  comments {[]}
   cosponsors {[Fabricate(:rep), Fabricate(:rep, :first_name => Faker::Name.first_name)]}
   cosponsors_count 2
   created_at Date.parse('2011-06-27 11:08:31.000000000Z')

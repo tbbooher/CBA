@@ -10,7 +10,7 @@ class BillTest < ActiveSupport::TestCase
     rep = Legislator.representatives.first
     senator1 = Legislator.senators.first
     senator2 = Legislator.senators[1]
-    @house_bill = Bill.new(:govtrack_name => "h1", :title => "the first test bill")
+    @house_bill = Bill.new(:govtrack_name => "h1", :title => Faker::Name.name)
     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
     va_group = Fabricate(:polco_group, {:name => 'VA', :type => :state})
