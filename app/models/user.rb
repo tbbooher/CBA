@@ -249,6 +249,7 @@ class User
        g.members.push(self)
        g.member_count += 1
        # but what if the user is already in this group?
+       puts self.joined_groups.inspect
        self.joined_groups.push(g) unless self.joined_groups.include?(g)
     end
   end
