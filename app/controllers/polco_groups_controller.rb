@@ -109,7 +109,9 @@ class PolcoGroupsController < ApplicationController
   # POST /polco_groups
   # POST /polco_groups.xml
   def create
+    # TODO -- might not be needed -- load or authorize
     @polco_group = PolcoGroup.new(params[:polco_group])
+    @polco_group.title = "#{params[:polco_group][:name]}_custom"
 
     respond_to do |format|
       if @polco_group.save

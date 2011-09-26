@@ -1,5 +1,4 @@
 class PolcoGroup
-  include Mongoid::Document
   include ContentItem
   include VotingHelpers
   

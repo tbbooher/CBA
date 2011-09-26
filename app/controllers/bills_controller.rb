@@ -59,6 +59,8 @@ class BillsController < ApplicationController
   # POST /bills.xml
   def create
     #@bill = Bill.new(params[:bill])
+    # BILL is a content item, so we need to take
+    # care of the title property which must be unique
 
     respond_to do |format|
       if @bill.save

@@ -1,6 +1,6 @@
 class Bill
-  include VotingHelpers
   include ContentItem
+  include VotingHelpers
 
   acts_as_content_item
 
