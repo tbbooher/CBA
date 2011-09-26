@@ -14,7 +14,7 @@
   <% end %>
 </ul>
 <!-- we should DRY this up -->
-<h3>Junior Senator: <%= @junior_senator.full_name %></h3>
+<h3>1 Junior Senator: <%= @junior_senator.full_name %></h3>
 <ul>
   <% @junior_senator.bills.each do |b| %>
      <li><%= link_to b.bill_title, bill_path(b) %></li>
