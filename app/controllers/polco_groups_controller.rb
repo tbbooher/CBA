@@ -112,7 +112,7 @@ class PolcoGroupsController < ApplicationController
   def create
     # TODO -- might not be needed -- load or authorize
     @polco_group = PolcoGroup.new(params[:polco_group])
-    @polco_group.title = "#{params[:polco_group][:name]_custom"
+    @polco_group.title = "#{params[:polco_group][:name]}_custom"
 
     respond_to do |format|
       if @polco_group.save
