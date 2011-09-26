@@ -41,7 +41,7 @@ module ContentItem
         # ContentItems should have an unique title
         field :title
         index :title
-        #validates_presence_of :title
+        validates_presence_of :title
         validates_uniqueness_of :title
 
         # ContentItems marked as 'draft' should not be in the default-scope
