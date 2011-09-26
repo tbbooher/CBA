@@ -10,14 +10,20 @@
 <h3>Senior Senator: <%= @senior_senator.full_name %></h3>
 <ul>
   <% @senior_senator.bills.each do |b| %>
-     <li><%= link_to b.title, bill_path(b) %></li>
+     <li><%= link_to b.bill_title, bill_path(b) %></li>
   <% end %>
 </ul>
+<!-- we should DRY this up -->
 <h3>Junior Senator: <%= @junior_senator.full_name %></h3>
+<ul>
+  <% @junior_senator.bills.each do |b| %>
+     <li><%= link_to b.bill_title, bill_path(b) %></li>
+  <% end %>
+</ul>
 <h3>Rep: <%= @representative.full_name %></h3>
 <ul>
   <% @representative.bills.each do |b| %>
-     <li><%= link_to b.title, bill_path(b) %></li>
+     <li><%= link_to b.bill_title, bill_path(b) %></li>
   <% end %>
 </ul>
 

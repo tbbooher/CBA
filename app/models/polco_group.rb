@@ -1,5 +1,9 @@
 class PolcoGroup
   include Mongoid::Document
+  include ContentItem
+  acts_as_content_item
+  has_cover_picture
+  
   field :name, :type => String
   field :type, :type => Symbol, :default => :custom
   field :description, :type => String
