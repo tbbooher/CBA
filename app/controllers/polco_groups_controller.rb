@@ -63,7 +63,8 @@ class PolcoGroupsController < ApplicationController
     @user.followed_group_ids = []
     followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
     followed_groups.each do |fg|
-      g = BSON::ObjectId(fg)
+      g = PolcoGroup.find(fg)
+      # TODO -- really need a counter_cache for this
       g.follower_count += 1
       g.followers.push(@user)
       @user.followed_group_ids << g
@@ -111,7 +112,7 @@ class PolcoGroupsController < ApplicationController
   def create
     # TODO -- might not be needed -- load or authorize
     @polco_group = PolcoGroup.new(params[:polco_group])
-    @polco_group.title = "#{params[:polco_group][:name]}_custom"
+    @polco_group.title = "#{params[:polco_group][:name]_custom"
 
     respond_to do |format|
       if @polco_group.save
