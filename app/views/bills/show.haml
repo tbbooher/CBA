@@ -59,15 +59,12 @@
   %table.center{:align => "center"}
     %tr
       %th Group Name
-      %th Description
-      %th Avatar
       %th Tally
     - @PolcoGroups.each do |p|
       %tr
         %td= p.name
         %td= p.description
-        %td= "p.avatar"
-        %td= "p.tally_vote"
+        %td= short_tally(p.get_votes_tally)
 - else
   %p No activity yet on this bill
 
