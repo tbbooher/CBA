@@ -1,7 +1,14 @@
 class PolcoGroup
   include Mongoid::Document
+<<<<<<< HEAD
+  include ContentItem
+  acts_as_content_item
+  has_cover_picture
+  
+=======
   include VotingHelpers
 
+>>>>>>> 8ea578b3e88b9487e8ca1969353d921964cc6c5f
   field :name, :type => String
   field :type, :type => Symbol, :default => :custom
   field :description, :type => String
