@@ -64,7 +64,7 @@ class PolcoGroup
   end
 
   def get_votes_tally
-    # TODO -- need to test
+    # TODO -- need to make this specific to a bill, not all votes of the polco group
     process_votes(self.votes)
   end
 
@@ -75,7 +75,5 @@ class PolcoGroup
       nil
     end
   end
-
-
 
 end

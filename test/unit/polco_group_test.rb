@@ -102,12 +102,25 @@ class PolcoGroupTest < ActiveSupport::TestCase
 
   test "should be able to get a tally for the polco group" do
     u = User.first
+    u.votes.destroy_all
+    u.save
     @cali_group.members << u
-    @cali_group.save
     b = Bill.first
-    u.vote_on(b, :aye)
+    puts u.vote_on(b, :aye)
+    puts b.votes.last
     puts @cali_group.get_votes_tally.inspect
-    assert_equal "", @cali_group.get_votes_tally
+    assert_equal({:ayes=>1, :nays=>0, :abstains=>0, :presents=>0}, @cali_group.get_votes_tally)
+  end
+
+  test "should increase polco group vote count when a member votes on a bill" do
+    u = User.first
+    u.votes.destroy_all
+    @ca46.votes.destroy_all
+    @ca46.members << u
+    b = Bill.first
+    u.vote_on(b, :abstain)
+    @ca46.reload
+    assert_equal 1, @ca46.vote_count
   end
 
 end
