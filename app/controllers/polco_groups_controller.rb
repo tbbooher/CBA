@@ -53,32 +53,15 @@ class PolcoGroupsController < ApplicationController
 
   def update_groups
     @user = current_user
-=begin
-    @user.joined_group_ids = []
-    params[:joined_groups].split(",").each do |jg|
-      g = BSON::ObjectId(jg)
-      g.member_count += 1
-      g.members.push(@user)
-      @user.joined_group_ids << g
-    end
-    @user.followed_group_ids = []
-    followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
-    followed_groups.each do |fg|
-      g = BSON::ObjectId(fg)   
-      # TODO -- really need a counter_cache for this
-      g.follower_count += 1
-      g.followers.push(@user)
-      @user.followed_group_ids << g
-    end
-=end
     # TODO -- need some logic here to ensure they don't leave the default groups
     joined_groups = {:joined_groups => params[:joined_groups].split(",")}
     followed_groups =  {:followed_groups => (params[:followed_groups_states].split(",") +
         params[:followed_groups_districts].split(",") +
         params[:followed_groups_custom].split(",")).uniq}
+    all_groups = joined_groups.merge(followed_groups)
     respond_to do |format|
-      if @user.update_attributes!(joined_groups.merge(followed_groups))
-        format.html { redirect_to manage_groups_path, :notice => 'success.' }
+      if @user.update_attributes!(all_groups)
+        format.html { redirect_to manage_groups_path, :notice => all_groups.inspect }
       else
         format.html { redirect_to(manage_groups_url, :notice => "Error!") }
       end
