@@ -38,6 +38,14 @@ class User
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
   belongs_to :representative, :class_name => "Legislator", :inverse_of => :district_constituents
 
+  def joined_group_tokens=(ids)  
+     self.joined_group_ids = ids.split(",")  
+  end  
+
+  def followed_group_tokens=(ids)  
+     self.followed_group_ids = ids.split(",")  
+  end  
+
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
   end
