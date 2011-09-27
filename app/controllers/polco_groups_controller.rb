@@ -53,30 +53,16 @@ class PolcoGroupsController < ApplicationController
 
   def update_groups
     @user = current_user
-    # now we want to
-    #params[:joined_group].split(",").each do |jg|
-    #  @user.joined_groups <<
-    #end
-    @user.joined_group_ids = []
-    params[:joined_groups].split(",").each do |jg|
-      g = PolcoGroup.find(jg)
-      #g.member_count += 1
-      #g.members.push(@user)
-      @user.joined_groups.create(g)
-    end
-    @user.followed_group_ids = []
-    followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
-    followed_groups.each do |fg|
-      g = PolcoGroup.find(fg)
-      #g.follower_count += 1
-      #g.followers.push(@user)
-      @user.followed_groups.create(g)
-    end
+    # TODO -- need some logic here to ensure they don't leave the default groups
+    joined_groups = {:joined_groups => params[:joined_groups].split(",")}
+    followed_groups =  {:followed_groups => (params[:followed_groups_states].split(",") +
+        params[:followed_groups_districts].split(",") +
+        params[:followed_groups_custom].split(",")).uniq}
     respond_to do |format|
-      if @user.save
+      if @user.update_attributes!(joined_groups.merge(followed_groups))
         format.html { redirect_to manage_groups_path, :notice => 'success.' }
       else
-        format.html { redirect_to(manage_groups_url, :notice => @user.errors.inspect) }
+        format.html { redirect_to(manage_groups_url, :notice => "Error!") }
       end
     end
   end
