@@ -63,7 +63,7 @@ class PolcoGroupsController < ApplicationController
     @user.followed_group_ids = []
     followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
     followed_groups.each do |fg|
-      g = fg
+      g = BSON::ObjectId(fg)   
       # TODO -- really need a counter_cache for this
       g.follower_count += 1
       g.followers.push(@user)
@@ -129,6 +129,7 @@ class PolcoGroupsController < ApplicationController
   # PUT /polco_groups/1.xml
   def update
     @polco_group = PolcoGroup.find(params[:id])
+    @polco_group.title = "#{params[:polco_group][:name]}_custom"   
 
     respond_to do |format|
       if @polco_group.update_attributes(params[:group])

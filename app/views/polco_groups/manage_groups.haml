@@ -1,4 +1,12 @@
 - title "#{@user.name }, manage your groups"
+
+%p Joined = follow results + your votes contribute to the group
+%p Follow = only see group vote results
+%p You can only be a joined member of one congressional district and one state
+%p And the state should be the state containing the district
+%p Same for country.
+%p But you can create, join and follow as many custom groups as you like.
+
 = simple_form_for :user, :url => update_groups_url do |f|
   %div
     %h2 Joined Groups
