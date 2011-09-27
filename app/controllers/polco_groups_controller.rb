@@ -53,27 +53,30 @@ class PolcoGroupsController < ApplicationController
 
   def update_groups
     @user = current_user
+    # now we want to
+    #params[:joined_group].split(",").each do |jg|
+    #  @user.joined_groups <<
+    #end
     @user.joined_group_ids = []
     params[:joined_groups].split(",").each do |jg|
-      g = BSON::ObjectId(jg)
-      g.member_count += 1
-      g.members.push(@user)
-      @user.joined_group_ids << g
+      g = PolcoGroup.find(jg)
+      #g.member_count += 1
+      #g.members.push(@user)
+      @user.joined_groups.create(g)
     end
     @user.followed_group_ids = []
     followed_groups = (params[:followed_groups_states].split(",") + params[:followed_groups_districts].split(",") + params[:followed_groups_custom].split(",")).uniq
     followed_groups.each do |fg|
-      g = fg
-      # TODO -- really need a counter_cache for this
-      g.follower_count += 1
-      g.followers.push(@user)
-      @user.followed_group_ids << g
+      g = PolcoGroup.find(fg)
+      #g.follower_count += 1
+      #g.followers.push(@user)
+      @user.followed_groups.create(g)
     end
     respond_to do |format|
       if @user.save
         format.html { redirect_to manage_groups_path, :notice => 'success.' }
       else
-        format.html { redirect_to(manage_groups_url, :notice => 'error.') }
+        format.html { redirect_to(manage_groups_url, :notice => @user.errors.inspect) }
       end
     end
   end
@@ -112,7 +115,7 @@ class PolcoGroupsController < ApplicationController
   def create
     # TODO -- might not be needed -- load or authorize
     @polco_group = PolcoGroup.new(params[:polco_group])
-    @polco_group.title = "#{params[:polco_group][:name]_custom"
+    @polco_group.title = "#{params[:polco_group][:name]}_custom"
 
     respond_to do |format|
       if @polco_group.save
