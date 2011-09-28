@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills.xml
   def index
     #@bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
-    @bills = Bill.all.select{|b| b.activity?}
+    @bills = Bill.all.select{|b| b.activity?}.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # index.haml
