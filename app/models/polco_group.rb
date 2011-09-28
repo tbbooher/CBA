@@ -29,8 +29,15 @@ class PolcoGroup
 
   has_many :votes
 
+  before_validation :make_title
+
+  def make_title
+    puts "making title"
+    self.title = "#{self.name}_#{self.type}"
+  end
+
   #we want to increment member_count when a new member is added
-  before_save :update_followers_and_members
+  #before_save :update_followers_and_members
 
   # some validations
   validates_uniqueness_of :name, :scope => :type
@@ -44,8 +51,12 @@ class PolcoGroup
 
   def update_followers_and_members
     #self.reload
-    self.follower_count = self.followers.size
-    self.member_count = self.members.size
+    #puts "follower size #{self.follower_ids.size}"
+    self.follower_count = self.follower_ids.size
+    #puts "member size #{self.member_ids.size}"
+    self.member_count = self.member_ids.size
+    puts "now followers #{self.follower_count} and members #{self.member_count} for #{self.name}"
+    puts "is the model valid #{self.valid?}"
   end
 
   def the_rep

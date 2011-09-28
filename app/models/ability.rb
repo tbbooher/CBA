@@ -39,6 +39,7 @@ class Ability
         end
         if user.role?(:confirmed_user)
           can :create, Invitation
+          can :manage, PolcoGroup
         end
         if user.role?(:author)
           can :create, [Page, Blog, Posting]
@@ -54,7 +55,7 @@ class Ability
       end
 
       # Anybody
-      can :read, [Page, Blog, Posting] do |resource|
+      can :read, [Page, Blog, Posting, Bill, PolcoGroup] do |resource|
         if resource.respond_to? :is_draft
           resource.is_draft != true
         else

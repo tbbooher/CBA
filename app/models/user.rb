@@ -31,20 +31,12 @@ class User
 
   has_and_belongs_to_many :joined_groups, :class_name => "PolcoGroup", :inverse_of => :members
 
-  #counter_cache :name => :polco_group, :inverse_of => :members
-
   has_and_belongs_to_many :followed_groups, :class_name => "PolcoGroup", :inverse_of => :followers
 
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
   belongs_to :representative, :class_name => "Legislator", :inverse_of => :district_constituents
 
-  def joined_group_tokens=(ids)  
-     self.joined_group_ids = ids.split(",")  
-  end  
-
-  def followed_group_tokens=(ids)  
-     self.followed_group_ids = ids.split(",")  
-  end  
+  after_save :update_member_count
 
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
@@ -325,6 +317,10 @@ class User
   end
 
   def joined_groups_tallies(bill)
+    # the purpose of this is to show the tallies of all the groups
+    # a member has joined. so we go through each joined group and add them up
+    # for this bill -- this could be refactored significantly
+    # TODO -- refactoring
     results = Array.new
     self.joined_groups.each do |g|
       name = g.name
@@ -391,6 +387,19 @@ class User
   
   def all_groups_for_bill(bill)
     (self.followed_groups + self.joined_groups).select{|g| g.type == :custom && g.votes.map(&:bill).include?(bill)}
+  end
+
+  def update_member_count
+    self.joined_groups.each do |jg|
+      puts "calling for #{jg.name}"
+      jg.update_followers_and_members
+      jg.save
+    end
+    self.followed_groups.each do |fg|
+      puts "calling for #{fg.name}"
+      fg.update_followers_and_members
+      fg.save
+    end
   end
 
   private
@@ -460,6 +469,8 @@ class User
       self.save!
     end
   end
+
+
 
 end
 

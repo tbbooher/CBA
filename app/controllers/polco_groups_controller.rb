@@ -45,23 +45,28 @@ class PolcoGroupsController < ApplicationController
 
   def manage_groups
     @user = current_user
+    # TODO - this should be optimized for Mongoid
     @joined_groups_json_data = @user.joined_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
     @followed_groups_states = @user.followed_groups.select{|s| s.type == :state}.map{|g| {:id => g.id, :name => g.name}}.to_json
     @followed_groups_districts = @user.followed_groups.select{|s| s.type == :district}.map{|g| {:id => g.id, :name => g.name}}.to_json
     @followed_groups_custom = @user.followed_groups.select{|s| s.type == :custom}.map{|g| {:id => g.id, :name => g.name}}.to_json
+    @custom_groups = PolcoGroup.customs
   end
 
   def update_groups
     @user = current_user
     # TODO -- need some logic here to ensure they don't leave the default groups
-    joined_groups = {:joined_groups => params[:joined_groups].split(",")}
-    followed_groups =  {:followed_groups => (params[:followed_groups_states].split(",") +
+    joined_groups = params[:joined_groups].split(",")
+    followed_groups =  (params[:followed_groups_states].split(",") +
         params[:followed_groups_districts].split(",") +
-        params[:followed_groups_custom].split(",")).uniq}
-    all_groups = joined_groups.merge(followed_groups)
+        params[:followed_groups_custom].split(",")).uniq
+    #all_groups = joined_groups.merge(followed_groups)
+    @user.joined_group_ids = joined_groups
+    @user.followed_group_ids = followed_groups
+    #@user.update_member_count
     respond_to do |format|
-      if @user.update_attributes!(all_groups)
-        format.html { redirect_to manage_groups_path, :notice => all_groups.inspect }
+      if @user.save
+        format.html { redirect_to manage_groups_path, :notice => "Success" }
       else
         format.html { redirect_to(manage_groups_url, :notice => "Error!") }
       end

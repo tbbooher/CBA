@@ -10,6 +10,7 @@ class BillTest < ActiveSupport::TestCase
     rep = Legislator.representatives.first
     senator1 = Legislator.senators.first
     senator2 = Legislator.senators[1]
+    puts "!!!!!!!!!!!!!!!! all polco groups: #{PolcoGroup.all.size}"
     @house_bill = Bill.new(:govtrack_name => "h1", :title => Faker::Name.name)
     common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
     cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
@@ -27,6 +28,8 @@ class BillTest < ActiveSupport::TestCase
                                            :senators => [senator1, senator2],
                                            :representative => rep
     })
+    puts "just created user with these groups:"
+    puts @user1.joined_groups.map(&:name)
     @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                               cali_group,
                                                               ca46,
@@ -260,11 +263,17 @@ class BillTest < ActiveSupport::TestCase
     # so we can put something like this in our views
     #@user1.joined_groups
     #@user1.followed_groups
+    puts "user groups at start:"
+    puts @user1.joined_groups.size
     @user1.vote_on(@house_bill, :aye) # follows va05
+    puts "new size #{@user1.joined_groups.size}"
     @user2.vote_on(@house_bill, :nay)
     @user3.vote_on(@house_bill, :abstain) # joined va05
     @user4.vote_on(@house_bill, :present)
+    puts @user1.joined_groups.map(&:name)
+    puts "before !! #{@user1.joined_groups.size}"
     joined_groups = @user1.joined_groups_tallies(@house_bill)
+    puts joined_groups.inspect
     followed_groups = @user1.followed_groups_tallies(@house_bill)
     assert_equal 4, joined_groups.count
     assert_equal "Dan Cole", joined_groups.first[:name]
@@ -301,15 +310,14 @@ class BillTest < ActiveSupport::TestCase
   end
 
   test "should be able to get a list of subjects for a bill" do
-    puts "testing parse capability at this point"
     f = File.new("#{Rails.root}/test/fixtures/h59.xml", 'r')
     feed = Feedzirra::Parser::GovTrackBill.parse(f)
     @house_bill.subjects = []
     feed.subjects.each do |subject|
-      o = Subject.create(:name => subject)
+      o = Subject.find_or_create_by(:name => subject)
       @house_bill.subjects << o
     end
-    assert @house_bill.save
+    assert @house_bill.save, @house_bill.errors.messages.inspect
     assert_equal "Government operations and politics", @house_bill.subjects.first.name
     assert_equal 8, @house_bill.subjects.all.count
   end
