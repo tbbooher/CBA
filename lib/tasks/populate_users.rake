@@ -3,6 +3,11 @@ require 'faker'
 users_to_add = 10
 groups_to_add = 10
 
+# we are duplicating numbers, we should use
+# garner.hixson@pentagon.af.mi
+#(0..50).to_a.sort{ rand() - 0.5 }[0..x]
+# (0..50).to_a can be replaced with any array. 0 is "minvalue", 50 is "max value" x is "how many values i want out"
+
 namespace :data do
   desc "Get us lots of users and votes"
   task :load_users => :environment do
