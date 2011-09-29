@@ -19,12 +19,11 @@
     %div#polco_groups
         = link_to "Update your groups", manage_groups_path
         %h4 Groups you are following
-        = @user.followed_groups.map(&:name).to_sentence
+        = links_to_groups(@user.followed_groups)
         %h4 Groups you joined
-        = @user.joined_groups.map(&:name).to_sentence
-    %strong= t(:invite_user)
-    %ul
-        %li
-            = link_to t(:send_invitaiton), new_user_invitation_path(current_user),
-                :id => 'invitation_link'
-
+        = links_to_groups(@user.joined_groups)
+    %div
+        %strong= t(:invite_user)
+        %ul
+            %li
+                = link_to t(:send_invitaiton), new_user_invitation_path(current_user), :id => 'invitation_link'
