@@ -7,6 +7,6 @@ module UsersHelper # :nodoc:
     user_groups.each do |g|
       groups << link_to(g.name, g)
     end
-    groups.to_sentence
+    groups.to_sentence.html_safe
   end
 end
