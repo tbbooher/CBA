@@ -15,6 +15,8 @@
   <%= @polco_group.owner.name if @polco_group.owner  %>
 </p>
 
+<%= render :partial => 'comments_subpage', :locals => {:polco_group => @polco_group} %>
+
 <p>
   <b>Description:</b>
   <%= @polco_group.description %>
