@@ -10,7 +10,7 @@ class Vote
   counter_cache :name => 'polco_group', :field => 'vote_count'
 
   belongs_to :user, index: true
-  belongs_to :polco_group, index:true    # we might need to think this through -- never need to query PolcoGroup.votes, right?
+  belongs_to :polco_group, index: true    # we might need to think this through -- never need to query PolcoGroup.votes, right?
   belongs_to :bill, index: true
 
   # what we don't want is a repeated vote, so that would be a bill_id, polco_group and user_id
