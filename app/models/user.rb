@@ -390,7 +390,8 @@ class User
     # here we want to know if this user has any custom groups that have related votes on this bill
     # clearly this has to be based on the transactional database and not off of ruby code
     # we get this from the Vote object, which is heavily indexed
-    Vote.where(bill_id: b.id).also_in(polco_group_id: id).to_a.map{|v| v.polco_group}.uniq
+    group_ids = (self.followed_groups + self.joined_groups).map(&:id)
+    Vote.where(bill_id: bill.id).also_in(polco_group_id: group_ids).to_a.map{|v| v.polco_group}.uniq
     #(self.followed_groups + self.joined_groups).select{|g| g.type == :custom && g.votes.map(&:bill).include?(bill)}
     # wow -- this is really tricky!!!! (and back-handed, but i think this is better than)
     # no, it cant' be done without a good bit of de-normalization (!!)
