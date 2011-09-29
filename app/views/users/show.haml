@@ -7,6 +7,21 @@
 
 %div User: #{@user.name}
 
+%div
+    Registration Date
+    = @user.created_at.to_s(:rough_month)
+
+%div
+    Votes Cast:
+    = @user.votes.size
+    %br
+    %p Is there a results table? I can make a new page.
+
+%div Posts authored? We need to distinguish between posts and comments.
+
+%div
+
+
 - if user_signed_in?
     %h3= t(:your_account)
     %ul
@@ -20,8 +35,8 @@
         = link_to "Update your groups", manage_groups_path
         %h4 Groups you are following:
         = links_to_groups(@user.followed_groups)
-        %h4 Groups you joined:!
-        = links_to_groups(@user.joined_groups).html_safe
+        %h4 Groups you joined:
+        = links_to_groups(@user.joined_groups)
     %div
         %strong= t(:invite_user)
         %ul

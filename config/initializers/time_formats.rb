@@ -1,0 +1,1 @@
+Date::DATE_FORMATS[:rough_month]    = Stamp.strftime_format("August 2009")
