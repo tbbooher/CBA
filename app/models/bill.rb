@@ -117,12 +117,9 @@ class Bill
   end
 =end
 
-  def get_overall_users_vote # RECENT
-    #
-    votes = self.votes.all.select do |v|
-      v.polco_group.type == :common
-    end
-    process_votes(votes)
+  def get_overall_users_vote
+    common_id = PolcoGroup.where(type: :common).first.id
+    process_votes(self.votes.where(polco_group_id: common_id).all.to_a)
   end
 
   def get_votes_by_name_and_type(name, type) # RECENT

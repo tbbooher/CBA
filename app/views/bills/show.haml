@@ -64,7 +64,7 @@
       %tr
         %td= p.name
         %td= p.description
-        %td= short_tally(p.get_votes_tally)
+        %td= short_tally(p.get_votes_tally(@bill))
 - else
   %p No activity yet on this bill
 

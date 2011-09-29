@@ -82,9 +82,9 @@ class PolcoGroup
     Vote.where(polco_group_id: self.id).desc(:updated_at).all.to_a
   end
 
-  def get_votes_tally
+  def get_votes_tally(bill)
     # TODO -- need to make this specific to a bill, not all votes of the polco group
-    process_votes(self.votes)
+    process_votes(self.votes.where(bill_id: bill.id).all.to_a)
   end
 
   def senators

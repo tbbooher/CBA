@@ -324,6 +324,7 @@ class User
     results = Array.new
     self.joined_groups.each do |g|
       name = g.name
+      # we should use the Vote table here!
       tally=bill.get_votes_by_name_and_type(g.name, g.type)
       results.push({:name => name, :tally => tally})
     end
