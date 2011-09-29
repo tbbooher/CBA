@@ -5,6 +5,9 @@ class PolcoGroup
   acts_as_content_item
   has_cover_picture
 
+  references_many :comments, :inverse_of => :commentable, :as => 'commentable'
+  validates_associated :comments
+
   # needed for comments
   field :interpreter,                             :default => :markdown
   field :allow_comments,        :type => Boolean, :default => true
