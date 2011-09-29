@@ -21,12 +21,18 @@
       %tr
         %th
           %b= "Name"
+        %th "Members"
+        %th "Followers"
+        %th "Votes Cast"
         - if can? :edit, groups.last
           %th
           %th
       - groups.last.each do |polco_group|
         %tr
           %td= link_to polco_group.name, polco_group
+          %td= polco_group.member_count
+          %td= polco_group.follower_count
+          %td= polco_group.votes.size
           - if can? :edit, polco_group
             %td= link_to 'Edit', edit_polco_group_path(polco_group)
             %td= link_to 'Destroy', polco_group, :confirm => 'Are you sure?', :method => :delete
