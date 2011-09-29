@@ -386,6 +386,9 @@ class User
   end
   
   def all_groups_for_bill(bill)
+    # TODO --- optimize for mongoid
+    # here we want to know if this user has any custom groups that have related votes on this bill
+    # clearly this has to be based on the transactional database and not off of ruby code
     (self.followed_groups + self.joined_groups).select{|g| g.type == :custom && g.votes.map(&:bill).include?(bill)}
   end
 
