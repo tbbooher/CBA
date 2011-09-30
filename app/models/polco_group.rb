@@ -35,8 +35,10 @@ class PolcoGroup
   before_validation :make_title
 
   def make_title
-    puts "making title"
+    puts "making title and setting draft to false"
     self.title = "#{self.name}_#{self.type}"
+    self.is_draft = false
+    true
   end
 
   #we want to increment member_count when a new member is added

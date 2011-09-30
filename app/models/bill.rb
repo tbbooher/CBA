@@ -45,6 +45,12 @@ class Bill
   field :text_updated_on, :type => Date
   field :hidden, :type => Boolean
 
+  before_save :set_not_draft
+
+  def set_not_draft
+    self.is_draft = false
+  end
+
   # roll call results
   field :roll_time, :type => DateTime
   index :roll_time

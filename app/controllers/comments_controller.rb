@@ -88,7 +88,11 @@ class CommentsController < ApplicationController
     return @commentable if @commentable
     param = params.detect { |name, value| name.to_s =~ /(.+)_id$/ }
     if param
-      @commentable = param[0].to_s.gsub(/_id$/,'').classify.constantize.find(param[1])
+      #if param[0] = "polcogroup_id"
+      #  @commentable = PolcoGroup.find(param[1])
+      #else
+        @commentable = param[0].to_s.gsub(/_id$/,'').classify.constantize.find(param[1])
+      #end
     else
       nil
     end

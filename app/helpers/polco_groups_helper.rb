@@ -6,7 +6,7 @@ module PolcoGroupsHelper
       o << (content_tag :div, {:class => 'people_container'} do
         content_tag :ul, {:id => 'people'} do
           people.each do |person|
-            concat(content_tag(:li, link_to(person.name, "foo")))
+            concat(content_tag(:li, link_to(person.name, person)))
           end # people
         end #ul
       end )

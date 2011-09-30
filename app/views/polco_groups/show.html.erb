@@ -10,18 +10,21 @@
   <%= @polco_group.type %>
 </p>
 <% if @polco_group.type == :custom %>
-<p>
-  <b>Owner:</b>
-  <%= @polco_group.owner.name if @polco_group.owner  %>
-</p>
+    <% if @polco_group.owner %>
+    <p>
+      <b>Owner:</b>
+      <%= @polco_group.owner.name %>
+    </p>
+    <% end %>
 
-<%= render :partial => 'comments_subpage', :locals => {:polco_group => @polco_group} %>
+    <%= render :partial => 'comments_subpage', :locals => {:polco_group => @polco_group} %>
 
-<p>
-  <b>Description:</b>
-  <%= @polco_group.description %>
-</p>
+    <p>
+      <b>Description:</b>
+      <%= @polco_group.description %>
+    </p>
 <% end %>
+<%# end custom check %>
 
 <%= show_people(@members, "Members") %>
 <%= show_people(@followers, "Followers") %>
