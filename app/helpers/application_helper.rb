@@ -123,6 +123,10 @@ module ApplicationHelper
     o.html_safe
   end
 
+  def format_pie_chart(vote_hash)
+
+  end
+
   def short_tally(vote_hash)
     "#{vote_hash[:ayes]}, #{vote_hash[:nays]}, #{vote_hash[:abstains]}, #{vote_hash[:presents]}"
   end

@@ -31,6 +31,8 @@ namespace :data do
       u.password_confirmation = "eieio_1282"
       u.confirmed_at = Time.now()
       u.role = :confirmed_user
+      # TODO -- geocode
+      # geocode the user!!!
       # we need three random numbers
       ids = []
       6.times.map {rand(groups_to_add)}.each do |i|

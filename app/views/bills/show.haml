@@ -20,10 +20,12 @@
   = link_to "Official Text", full_bill_text_path(@bill)
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
-
+%h1 The Chart!
+%div{:style=>'background-color:red; width:400px; height:100px;'}
+  = render :partial => "vote_result"
 /here is the district count region
 
-- if @bill.activity?
+- if @bill.activity? || !current_user.voted_on(@bill)
 
   %p shouldn't this whole region be centered?
 
@@ -33,10 +35,12 @@
 
   = will_paginate @districts
 
+
   %table.center{:align => "center"}
     %tr
       %th District
       %th Tally
+      %th Pie chart
       = "%th Rep Vote" if @rolled
       %th Rep Name
       %th Party
@@ -45,6 +49,7 @@
       %tr
         %td= link_to d.name, d unless rep.nil?
         %td= short_tally(d.get_votes_tally(@bill)) unless rep.nil?
+        %td chart here
         - if @rolled
           %td= @bill.find_member_vote(rep) unless rep.nil?
         %td= rep.full_name unless rep.nil?
@@ -78,36 +83,3 @@
       = determine_senators_votes(@user.senators_vote_on(@bill))
   #district_tally
     In your district (#{@user.district}), #{format_votes_inline(@bill.get_votes_by_name_and_type(@user.district, :district))}
-#tally_region
-  #all_users_tally
-    %h3 All polco users:
-    = format_votes(@bill.get_overall_users_vote)
-  #all_members_votes
-    / what did all members vote on this bill?
-    - mt = @bill.members_tally
-    - if mt
-      %h3 Congressional members tally:
-      = format_votes(mt)
-  .clear
-  / time for groups tally
-  - if @user && @user.registered?
-    #joined_groups_tally
-      %h3 Joined Groups:
-      %ul
-        - @user.joined_groups_tallies(@bill).each do |tally|
-          %li
-            %b>= tally[:name]
-            \:#{format_votes(tally[:tally])}
-    #followed_groups_tally
-      %h3 Followed groups:
-      %ul
-        - @user.followed_groups_tallies(@bill).each do |tally|
-          %li
-            %b>= tally[:name]
-            \:#{format_votes(tally[:tally])}
-    .clear
-
-%h2
-  Stuff to add
-%p
-  @district_tallys

@@ -88,6 +88,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.2)
+    coffeebeans (1.0.1)
+      actionpack (>= 3.0.0)
+      coffee-script
     crack (0.3.1)
     cucumber (1.0.6)
       builder (>= 2.1.2)
@@ -380,6 +383,7 @@ DEPENDENCIES
   capistrano
   capybara
   coffee-script
+  coffeebeans
   cucumber
   cucumber-rails
   database_cleaner

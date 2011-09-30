@@ -62,6 +62,7 @@ gem 'stamp'
 gem "jsort", "~> 0.0.1"
 gem 'progress_upload_field', '~> 0.0.1'
 gem "capistrano"
+gem "coffeebeans"
 
 # Markdown
 # do "easy_install pygments" on your system
