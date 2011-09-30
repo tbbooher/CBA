@@ -44,7 +44,7 @@
       - rep = d.the_rep
       %tr
         %td= link_to d.name, d unless rep.nil?
-        %td= short_tally(d.get_votes_tally) unless rep.nil?
+        %td= short_tally(d.get_votes_tally(@bill)) unless rep.nil?
         - if @rolled
           %td= @bill.find_member_vote(rep) unless rep.nil?
         %td= rep.full_name unless rep.nil?

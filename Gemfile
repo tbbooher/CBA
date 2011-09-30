@@ -61,6 +61,7 @@ gem 'stamp'
 # Gems by iboard.cc <andreas@altendorfer.at>
 gem "jsort", "~> 0.0.1"
 gem 'progress_upload_field', '~> 0.0.1'
+gem "capistrano"
 
 # Markdown
 # do "easy_install pygments" on your system
@@ -73,7 +74,6 @@ group :development do
   gem "rails-erd"
   gem 'rdoc'
   gem "rails3-generators"
-  gem "capistrano"
   gem 'unicorn'
   gem 'yard'
 end
