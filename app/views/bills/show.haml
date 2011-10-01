@@ -53,7 +53,7 @@
           %td= pie_chart(d.get_votes_tally(@bill))
           - if @rolled
             %td= @bill.find_member_vote(rep)
-          %td= rep.full_name
+          %td= link_to rep.full_name, rep
           %td= rep.party
 
   %p{:align => "center"}
