@@ -76,4 +76,19 @@ module BillsHelper
     "#{vote_hash[:ayes]} were for, #{vote_hash[:nays]} were against, #{vote_hash[:presents]} voted present and #{vote_hash[:abstains]} abstained."
   end
 
+  def pie_chart
+http://chart.apis.google.com/chart
+   # what is the size of the chart?
+   chs=70x63
+   # what chart type?
+   &cht=p
+   # what are the chart colors?
+   &chco=009900|E20000|76A4FB|990066
+
+   &chds=-3.333,100
+   &chd=t:32.787,50.82,100,42.623
+   &chp=0.067
+   &chma=|2
+    %q{<img src="http://chart.apis.google.com/chart?chs=70x63&cht=p&chco=009900|E20000|76A4FB|990066&chds=-3.333,100&chd=t:32.787,50.82,100,42.623&chp=0.067&chma=|2" width="70" height="63" alt="" />}
+  end
 end

@@ -49,7 +49,7 @@
       %tr
         %td= link_to d.name, d unless rep.nil?
         %td= short_tally(d.get_votes_tally(@bill)) unless rep.nil?
-        %td chart here
+        %td= pie_chart
         - if @rolled
           %td= @bill.find_member_vote(rep) unless rep.nil?
         %td= rep.full_name unless rep.nil?
