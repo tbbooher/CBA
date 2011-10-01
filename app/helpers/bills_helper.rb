@@ -77,18 +77,25 @@ module BillsHelper
   end
 
   def pie_chart
-http://chart.apis.google.com/chart
+   chart_root = "http://chart.apis.google.com/chart"
+   vals = {
    # what is the size of the chart?
-   chs=70x63
+   chs: '70x63',
    # what chart type?
-   &cht=p
+   cht: 'p',
    # what are the chart colors?
-   &chco=009900|E20000|76A4FB|990066
-
-   &chds=-3.333,100
-   &chd=t:32.787,50.82,100,42.623
-   &chp=0.067
-   &chma=|2
-    %q{<img src="http://chart.apis.google.com/chart?chs=70x63&cht=p&chco=009900|E20000|76A4FB|990066&chds=-3.333,100&chd=t:32.787,50.82,100,42.623&chp=0.067&chma=|2" width="70" height="63" alt="" />}
+   chco: '009900|E20000|76A4FB|990066',
+   # Text Format with Custom Scaling
+   chds: '-3.333,100',
+   # the actual data
+   chd: 't:32.787,50.82,100,42.623',
+   # Pie Chart Rotation | chp=<radians>
+   chp: '0.067',
+   #chma=<left_margin>,<right_margin>,<top_margin>,<bottom_margin>|<opt_legend_width>,<opt_legend_height>
+   chma: '|2'
+   }
+   query = vals.map{|k,v| "#{k}=#{v}"}.join("&")
+   image_tag("#{chart_root}?#{query}", size: "70x63", alt: "10, 20, 30,40", style: "box-shadow:none;").html_safe
+   #%q{<img src="http://chart.apis.google.com/chart?chs=70x63&cht=p&chco=009900|E20000|76A4FB|990066&chds=-3.333,100&chd=t:32.787,50.82,100,42.623&chp=0.067&chma=|2" width="70" height="63" alt="" />}.html_safe
   end
 end
