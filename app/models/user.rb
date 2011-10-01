@@ -385,6 +385,11 @@ class User
   def all_groups
     (u.followed_groups + u.joined_groups).sort_by(&:vote_count)
   end
+
+  def non_district_groups_for_bill(bill)
+    group_ids = (self.followed_groups + self.joined_groups).delete_if{|g| g.type == :district}.map(&:id)
+    Vote.where(bill_id: bill.id).also_in(polco_group_id: group_ids).to_a.map{|v| v.polco_group}.uniq
+  end
   
   def all_groups_for_bill(bill)
     # TODO --- optimize for mongoid

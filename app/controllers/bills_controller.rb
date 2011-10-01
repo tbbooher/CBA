@@ -30,7 +30,9 @@ class BillsController < ApplicationController
   def show
     @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
-    @PolcoGroups=@user.all_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
+    # need to remove extra data
+    @PolcoGroups=@user.non_district_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
+    #@PolcoGroups=@user.all_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
     @rolled = (@bill.member_votes.size > 0)
 
     respond_to do |format|

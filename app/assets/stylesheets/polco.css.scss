@@ -188,10 +188,14 @@ h1#title
   text-align: center;
 }
 
-table.center
+table.polco_table
 {
-  border: 2px solid black;
+  border: 1px solid #ddd;
   padding: 10px;
+  border-radius:10px;
+  background-color:#ddd;
+  width:80%;
+  /* figure out align center */
 }
 
 th.for {color: green; text-align: center}
