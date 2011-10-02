@@ -28,10 +28,11 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.xml
   def show
-    @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
+  #modified by nate
+    @districts = PolcoGroup.district_search(params[:district_search]).districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
     # need to remove extra data
-    @PolcoGroups=@user.non_district_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
+    @PolcoGroups=@user.polcogroup_search(params[:polcogroup_search]).non_district_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
     #@PolcoGroups=@user.all_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
     @rolled = (@bill.member_votes.size > 0)
 
