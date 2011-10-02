@@ -18,7 +18,7 @@ group :assets do
 end
 
 # Bundle gems needed for Mongoid
-gem "mongoid", :git => 'git://github.com/mongoid/mongoid.git'
+gem "mongoid"
 gem "bson_ext"  #, "1.1.5"
 
 # Bundle gem needed for Devise and cancan
