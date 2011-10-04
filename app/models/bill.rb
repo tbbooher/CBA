@@ -496,4 +496,29 @@ class Bill
     end
   end
   
+  #added by nate
+  def self.district_search(search)
+    puts search
+    if search
+      # you have to have a class to perform where on (i think)
+      self.where(district: /#{search}/i)
+    else
+      # does scoped work with mongoid
+      scoped
+    end
+  end
+    
+    
+    #added by nate
+  def self.polcogroup_search(search)
+    puts search
+    if search
+      # you have to have a class to perform where on (i think)
+      self.where(polcogroup: /#{search}/i)
+    else
+      # does scoped work with mongoid
+      scoped
+    end 
+  end
+  
 end
