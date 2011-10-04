@@ -24,8 +24,6 @@
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
-/here is the district count region
-
 - if @bill.activity? || !current_user.voted_on(@bill)
 
   %p
@@ -35,12 +33,6 @@
 
   %p{:align => "center"}
     = "District Tallies"
-
-    #added by nate
-  = form_tag PolcoGroups_path, :method => 'get' do
-    %p.search{:align => "center"}
-      = text_field_tag :district_search, params[:district_search]
-      = submit_tag "Search", :name => nil
 
   = will_paginate @districts
 
@@ -64,12 +56,6 @@
   %p{:align => "center"}
     = "Joined & Followed Groups"
     %p Drop-Down Box Search Box
-
-     #added by nate
-  = form_tag PolcoGroups_path, :method => 'get' do
-    %p.search{:align => "center"}
-      = text_field_tag :polcogroup_search, params[:district_search]
-      = submit_tag "Search", :name => nil
 
   = will_paginate @PolcoGroups
 
