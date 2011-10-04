@@ -37,10 +37,10 @@
     = "District Tallies"
 
     #added by nate
-  = form_tag PolcoGroups_path, :method => 'get' do
-    %p.search{:align => "center"}
-      = text_field_tag :district_search, params[:district_search]
-      = submit_tag "Search", :name => nil
+  #= form_tag PolcoGroups_path, :method => 'get' do
+   # %p.search{:align => "center"}
+    #  = text_field_tag :district_search, params[:district_search]
+     # = submit_tag "Search", :name => nil
 
   = will_paginate @districts
 
