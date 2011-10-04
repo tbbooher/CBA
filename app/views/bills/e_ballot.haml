@@ -58,7 +58,7 @@
   = will_paginate @bills
   - @bills.each do |bill|
     %li
-      = link_to "#{bill.tiny_title} #{bill.short_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
+      = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
 
 %h2
   need to show a user's recent votes here: @user.recent_votes.paginate.each do |vote| vote.bill, vote.bill.title, vote.value
