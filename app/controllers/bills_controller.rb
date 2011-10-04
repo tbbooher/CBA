@@ -1,5 +1,5 @@
 class BillsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:e_ballot, :show_bill_text, :vote_on_bill, :senate_bills, :process_page, :district_results, :house_results, :senate_results]
   # public can access?
 
   # GET /bills
@@ -119,13 +119,13 @@ class BillsController < ApplicationController
       # TODO -- sorted by the number of votes provided to that bill -- lower priority
       # you haven't voted on these bills
       @unvoted_bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
-      @voted_bills = # also shown which result you like there
+      @voted_bills = 1# also shown which result you like there
     else # it is a senate bill ballot
       @filter_options = ["s", "sr", "sc", "sj"]
       # sorted by the number of votes provided to that bill -- lower priority
       @unvoted_bills = Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
       # ^^ can expand to eballot
-      @voted_bills = # also sorted by your most recent vote with vote result displayed
+      @voted_bills = 1# also sorted by your most recent vote with vote result displayed
     end
     @user = current_user
     # need to consider chamber!!
