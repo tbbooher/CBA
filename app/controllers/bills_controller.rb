@@ -106,6 +106,7 @@ class BillsController < ApplicationController
   end
 
   def e_ballot
+    # need to update for non-logged in users
     @chamber = params[:chamber] || "house"
     # want to filter down ["h", "s", "sr", "hc", "hj", "hr", "sc", "sj"]
     if params[:bill_type] # we want to filter down bills by type
@@ -114,20 +115,31 @@ class BillsController < ApplicationController
       # let's set a default if none is specified
       @chamber == "house" ? @bill_type = "h" : @bill_type = "s"
     end
+    if @user = current_user
+
+
+
+    all_bills = Vote.where(user_id: current_user.id).desc(:created_at).map{|v| v.bill}
     if @chamber == "house"
       @filter_options = ["h",  "hc", "hj", "hr"]
       # TODO -- sorted by the number of votes provided to that bill -- lower priority
       # you haven't voted on these bills
-      @unvoted_bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
-      @voted_bills = 1# also shown which result you like there
+      #Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+      @voted_bills = all_bills.select{|b| b.bill_type == @bill_type}# also shown which result you like there
+      @unvoted_bills = Bill.house_bills.desc(:created_at).limit(40).all.to_a - @voted_bills
     else # it is a senate bill ballot
       @filter_options = ["s", "sr", "sc", "sj"]
       # sorted by the number of votes provided to that bill -- lower priority
-      @unvoted_bills = Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+      # Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
       # ^^ can expand to eballot
-      @voted_bills = 1# also sorted by your most recent vote with vote result displayed
+      @voted_bills = all_bills.select{|b| b.bill_type == @bill_type} # also sorted by your most recent vote with vote result displayed
+      @unvoted_bills = Bill.senate_bills.desc(:created_at).limit(40).all.to_a - @voted_bills
     end
-    @user = current_user
+    else
+      @voted_bills = nil
+      @unvoted_bills = Bill.all.to_a
+    end
+
     # need to consider chamber!!
     if params[:id]
       @bill = Bill.find(params[:id])
