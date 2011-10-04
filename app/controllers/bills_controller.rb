@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
   load_and_authorize_resource
+  # public can access?
 
   # GET /bills
   # GET /bills.xml
@@ -105,7 +106,7 @@ class BillsController < ApplicationController
   end
 
   def e_ballot
-    @chamber = params[:chamber]
+    @chamber = params[:chamber] || "house"
     # want to filter down ["h", "s", "sr", "hc", "hj", "hr", "sc", "sj"]
     if params[:bill_type] # we want to filter down bills by type
       @bill_type = params[:bill_type]
@@ -115,10 +116,16 @@ class BillsController < ApplicationController
     end
     if @chamber == "house"
       @filter_options = ["h",  "hc", "hj", "hr"]
-      @bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 20)
+      # TODO -- sorted by the number of votes provided to that bill -- lower priority
+      # you haven't voted on these bills
+      @unvoted_bills = Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+      @voted_bills = # also shown which result you like there
     else # it is a senate bill ballot
       @filter_options = ["s", "sr", "sc", "sj"]
-      @bills = Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 20)
+      # sorted by the number of votes provided to that bill -- lower priority
+      @unvoted_bills = Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+      # ^^ can expand to eballot
+      @voted_bills = # also sorted by your most recent vote with vote result displayed
     end
     @user = current_user
     # need to consider chamber!!

@@ -62,6 +62,7 @@ class Ability
           true
         end
       end
+      can [:e_ballot, :show_bill_text, :vote_on_bill, :senate_bills, :process_page, :district_results, :house_results, :senate_results], Bill
       can :create, Comment
       can :read, Comment do |comment|
         comment && !comment.new_record?
