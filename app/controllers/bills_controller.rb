@@ -10,7 +10,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       format.html # index.haml
-      format.xml  { render :xml => @bills }
+      format.xml { render :xml => @bills }
     end
   end
 
@@ -29,7 +29,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.xml
   def show
-  #modified by nate
+    #modified by nate
     @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
     @user = current_user
     # need to remove extra data
@@ -39,7 +39,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       format.html # show.haml
-      format.xml  { render :xml => @bill }
+      format.xml { render :xml => @bill }
     end
   end
 
@@ -50,7 +50,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @bill }
+      format.xml { render :xml => @bill }
     end
   end
 
@@ -69,10 +69,10 @@ class BillsController < ApplicationController
     respond_to do |format|
       if @bill.save
         format.html { redirect_to(@bill, :notice => 'Bill was successfully created.') }
-        format.xml  { render :xml => @bill, :status => :created, :location => @bill }
+        format.xml { render :xml => @bill, :status => :created, :location => @bill }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @bill.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @bill.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -85,10 +85,10 @@ class BillsController < ApplicationController
     respond_to do |format|
       if @bill.update_attributes(params[:bill])
         format.html { redirect_to(@bill, :notice => 'Bill was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @bill.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @bill.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -101,7 +101,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(bills_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 
@@ -116,25 +116,22 @@ class BillsController < ApplicationController
       @chamber == "house" ? @bill_type = "h" : @bill_type = "s"
     end
     if @user = current_user
-
-
-
-    all_bills = Vote.where(user_id: current_user.id).desc(:created_at).map{|v| v.bill}
-    if @chamber == "house"
-      @filter_options = ["h",  "hc", "hj", "hr"]
-      # TODO -- sorted by the number of votes provided to that bill -- lower priority
-      # you haven't voted on these bills
-      #Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
-      @voted_bills = all_bills.select{|b| b.bill_type == @bill_type}# also shown which result you like there
-      @unvoted_bills = Bill.house_bills.desc(:created_at).limit(40).all.to_a - @voted_bills
-    else # it is a senate bill ballot
-      @filter_options = ["s", "sr", "sc", "sj"]
-      # sorted by the number of votes provided to that bill -- lower priority
-      # Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
-      # ^^ can expand to eballot
-      @voted_bills = all_bills.select{|b| b.bill_type == @bill_type} # also sorted by your most recent vote with vote result displayed
-      @unvoted_bills = Bill.senate_bills.desc(:created_at).limit(40).all.to_a - @voted_bills
-    end
+      all_bills = Vote.where(user_id: current_user.id).desc(:created_at).map { |v| v.bill }.uniq
+      if @chamber == "house"
+        @filter_options = ["h", "hc", "hj", "hr"]
+        # TODO -- sorted by the number of votes provided to that bill -- lower priority
+        # you haven't voted on these bills
+        #Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+        @voted_bills = all_bills.select { |b| b.bill_type == @bill_type } # also shown which result you like there
+        @unvoted_bills = Bill.house_bills.desc(:created_at).limit(10).all.to_a - @voted_bills
+      else # it is a senate bill ballot
+        @filter_options = ["s", "sr", "sc", "sj"]
+        # sorted by the number of votes provided to that bill -- lower priority
+        # Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+        # ^^ can expand to eballot
+        @voted_bills = all_bills.select { |b| b.bill_type == @bill_type } # also sorted by your most recent vote with vote result displayed
+        @unvoted_bills = Bill.senate_bills.desc(:created_at).limit(10).all.to_a - @voted_bills
+      end
     else
       @voted_bills = nil
       @unvoted_bills = Bill.all.to_a
@@ -184,7 +181,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       format.html # district_results.haml
-      format.xml  { render :xml => @bills }
+      format.xml { render :xml => @bills }
     end
   end
 
@@ -195,7 +192,7 @@ class BillsController < ApplicationController
   def house_results
     # this is where the code gets prepared for the chamber results view
     #this page presents one table outlining the bills the user has cast an eballot on.
-    
+
     # the bills in the table are ordered by most recent at the top
     #for each bill, the table shows the bill's official title, 
     # the user's vote, the user's district's tally on that bill,
