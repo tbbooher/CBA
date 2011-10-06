@@ -133,8 +133,18 @@ class BillsController < ApplicationController
         @unvoted_bills = Bill.senate_bills.desc(:created_at).limit(10).all.to_a - @voted_bills
       end
     else
-      @voted_bills = nil
-      @unvoted_bills = Bill.all.to_a
+      if @chamber == "house"
+        @filter_options = ["h", "hc", "hj", "hr"]
+        @voted_bills = nil
+        @unvoted_bills = nil
+      else # it is a senate bill ballot
+        @filter_options = ["s", "sr", "sc", "sj"]
+        # sorted by the number of votes provided to that bill -- lower priority
+        # Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
+        # ^^ can expand to eballot
+        @voted_bills = nil
+        @unvoted_bills = nil
+      end
     end
 
     # need to consider chamber!!

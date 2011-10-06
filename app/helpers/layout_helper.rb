@@ -58,6 +58,7 @@ module LayoutHelper
   end
 
   # Replace blanks by %20 to satisfy w3c-validators
+  # Attantion: This is implemented in BasePresenter too!
   def w3c_url(url)
     url.gsub(' ', '%20')
   end
