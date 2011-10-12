@@ -1,0 +1,37 @@
+- title "#{@chamber.titleize} Results"
+
+%p{:style => "text-align: center"}
+  %b 112th Congress
+%p{:style => "text-align: center"}
+  = "Roll Call Popularity Search"
+
+= will_paginate @bills
+
+%table.center{:align => "center"}
+  %tr
+    %th Bill
+    %th Your Vote
+    - if @chamber == 'house'
+      %th Your District Vote
+      %th Your Rep. Vote
+    - else
+      %th Your State Vote
+      %th Senator
+      %th
+    %th Result
+  - @bills.each do |bill|
+    %tr
+      %td= link_to bill.bill_title, bill
+      %td= bill.users_vote(@user)
+      - if @chamber == 'house'
+        %td= "what did the district_vote"
+        %td= "what did the rep vote"
+      - else
+        %td= @pg_state.name
+        - @pg_state.senators.each do |senator|
+          %td= senator.full_name
+      %td= bill.bill_state
+
+
+
+

@@ -19,8 +19,8 @@ Cba::Application.routes.draw do
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
-  match "/bills/results/:chamber" => "bills#results"
-  match "/bills/senate_results" => "bills#senate_results"
+  match "/results/:chamber" => "bills#results"
+  #match "/bills/senate_results" => "bills#senate_results"
   match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
   # just a form process page

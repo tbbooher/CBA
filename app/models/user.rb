@@ -100,7 +100,7 @@ class User
 
   def bills_voted_on(chamber)
     # the bills in the table are ordered by most recent at the top
-    votes = self.votes.select_if{|v| v.bill.chamber == chamber}.sort_by(&:created_at).map(&:bill)
+    votes = self.votes.all.to_a.select{|v| v.bill.chamber == chamber}.sort_by(&:created_at).map(&:bill).uniq
   end
 
   def registered?

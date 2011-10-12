@@ -1,5 +1,5 @@
 class BillsController < ApplicationController
-  load_and_authorize_resource :except => [:e_ballot, :show_bill_text, :vote_on_bill, :senate_bills, :process_page, :district_results, :house_results, :senate_results]
+  load_and_authorize_resource :except => [:results, :e_ballot, :show_bill_text, :vote_on_bill, :senate_bills, :process_page, :district_results]
   # public can access?
 
   # GET /bills
@@ -195,10 +195,6 @@ class BillsController < ApplicationController
     end
   end
 
-  def senate_results
-
-  end
-
   def results
     # this is where the code gets prepared for the chamber results view
     #this page presents one table outlining the bills the user has cast an eballot on.
@@ -214,14 +210,15 @@ class BillsController < ApplicationController
     # future case
     # but can also be ordered by popularity, number of votes, number of comments, number of votes by district members,
     # or searchable.
-
+    @user = current_user
 
     if params[:chamber] == "house"
-      @chamber = "House"
-      @bills = current_user.bills_voted_on(:house)
+      @chamber = "house"
+      @bills = @user.bills_voted_on(:house).paginate(:page => params[:page], :per_page => 10)
     else
-      @chamber = "Senate"
-      @bills = current_user.bills_voted_on(:senate)
+      @chamber = "senate"
+      @pg_state = PolcoGroup.where(name: @user.us_state, type: :state).first
+      @bills = @user.bills_voted_on(:senate).paginate(:page => params[:page], :per_page => 10)
     end
     #@bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
   end
