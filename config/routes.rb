@@ -19,7 +19,7 @@ Cba::Application.routes.draw do
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
-  match "/bills/house_results" => "bills#house_results"
+  match "/bills/results/:chamber" => "bills#results"
   match "/bills/senate_results" => "bills#senate_results"
   match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
@@ -59,6 +59,9 @@ Cba::Application.routes.draw do
 
   # Comments
   resources :comments, :except => :show
+  
+  # Tags
+  match '/tag/:tag' => "home#tags", :as => 'tags'
 
   # SiteMenu
   resources :site_menus do
@@ -79,7 +82,11 @@ Cba::Application.routes.draw do
       resources :comments
     end
   end
-  resources :postings, :only => [:show]
+  resources :postings, only: [:show] do
+    collection do
+      get :tags
+    end
+  end
 
   match 'feed' => "home#rss_feed", :as => 'feed'
 
@@ -126,6 +133,12 @@ Cba::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
   resources :authentications, :only => [:index,:create,:destroy]
   match '/auth/failure' => 'authentications#auth_failure'
+
+  resources :user_notifications do
+    collection do
+      get :emails
+    end
+  end
 
   # ROOT
   root :to => "bills#e_ballot"

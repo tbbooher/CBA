@@ -1,9 +1,8 @@
 source 'http://rubygems.org'
 
-#gem 'simplecov', :require => false, :group => :test #, '>= 0.4.0'
+gem 'simplecov', :require => false, :group => :test #, '>= 0.4.0'
 
-gem "rails", "~> 3.1.0" # prev was rc8
-#gem "addressable", "> 2.2.5"
+gem "rails" #, "~> 3.1.0" # prev was rc8
 
 # Rails 3.1 - Asset Pipeline
 group :assets do
@@ -22,7 +21,7 @@ gem "mongoid", :git => 'git://github.com/mongoid/mongoid.git'
 gem "bson_ext"  #, "1.1.5"
 
 # Bundle gem needed for Devise and cancan
-gem "devise", :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
+gem "devise" #, :git => 'git://github.com/iboard/devise.git' #:path => "/Users/aa/Development/R31/devise" #'1.2.rc2' #, "~>1.4.0" # ,"1.1.7"
 gem "cancan"
 gem "omniauth", ">= 0.2.6"
 
@@ -49,6 +48,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # MongoID Extensions and extras
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'mongoid_fulltext'
+gem 'mongoid_taggable'
 
 
 # Bundle gems for views
@@ -79,12 +79,12 @@ group :development do
   gem 'yard'
 end
 
-#gem "ruby-debug19", :groups => [:development, :test]
-#gem "ruby-debug-ide", :git => "git://github.com/JetBrains/ruby-debug-ide.git", :groups => [:development, :test]
-
-# Bundle gems for testing
-group :test do
-  gem 'simplecov', '>= 0.4.0', :require => false
+# Testing
+group :development, :test do
+  gem 'jasmine' #, '1.0.2.1'
+  gem 'headless', '0.1.0'  
+  gem 'rspec', '2.6.0'
+  gem 'rspec-rails', '2.6.1'
   gem 'faker'
   gem 'json_pure'
   gem 'capybara'

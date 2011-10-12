@@ -77,5 +77,16 @@ module LayoutHelper
       end
     end
   end
+  
+  # render a tag-cloud
+  def tag_cloud
+    ContentItem::normalized_tags_with_weight(Posting).map { |tag,weight|
+      unless tag.blank?
+        content_tag :span, :class => "tag-weight-#{weight.to_s.gsub('.','-')}" do
+          link_to( "#{tag}", tags_path(tag))
+        end
+      end
+    }.compact.join(" ").html_safe
+  end
 
 end

@@ -48,7 +48,7 @@ class Ability
           can :manage, [Posting, Comment]
         end
         if user.role?(:maintainer)
-          can :manage, [Page, Blog, Posting, Comment]
+          can :manage, [Page, Blog, Posting, Comment, UserNotification]
           can :details, User
         end
 

@@ -199,7 +199,7 @@ class BillsController < ApplicationController
 
   end
 
-  def house_results
+  def results
     # this is where the code gets prepared for the chamber results view
     #this page presents one table outlining the bills the user has cast an eballot on.
 

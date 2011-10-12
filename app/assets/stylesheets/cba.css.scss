@@ -323,13 +323,6 @@ li.load_more {
 
 #user_notifications {
   margin-top: 10px;
-  border: 1px solid #ddd;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  background: #F5EC4B;
-  color: black;
-  font-size: 0.8em;
-  margin-top: 5px;
   padding: 0px;
 
   ul {
@@ -337,8 +330,16 @@ li.load_more {
     margin-left: 0px;
     padding-left: 0px;
     li {
+      border: 1px solid #ddd;
+      -moz-border-radius: 5px 5px 5px 5px;
+      -webkit-border-radius: 5px 5px 5px 5px;
+      background: #F5EC4B;
+      color: black;
+      font-size: 0.8em;
+      margin-top: 5px;
       margin-top: 10px;
       margin-left: 5px;
+      padding: 10px;
     }
   }
 }
@@ -372,6 +373,7 @@ li.load_more {
 @import "will_paginate.css.scss";
 @import "forms.css.scss";
 @import "css3buttons.css.scss";
+@import "tags.css.scss";
 @import "polco.css.scss";
 @import "token-input-facebook.css.scss";
 
