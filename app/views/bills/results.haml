@@ -24,12 +24,11 @@
       %td= link_to bill.bill_title, bill
       %td= bill.users_vote(@user)
       - if @chamber == 'house'
-        %td= "what did the district_vote"
-        %td= "what did the rep vote"
+        %td= @user.get_district.get_votes_tally(@bill)
+        %td= @user.reps_vote_on(@bill)
       - else
-        %td= @pg_state.name
-        - @pg_state.senators.each do |senator|
-          %td= senator.full_name
+        %td= @pg_state.get_votes_tally(bill)
+        %td= @user.senators_vote_on(bill)
       %td= bill.bill_state
 
 

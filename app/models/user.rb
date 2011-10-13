@@ -359,6 +359,10 @@ class User
     out
   end
 
+  def get_district
+    PolcoGroup.where(name: self.district, type: :district).first
+  end
+
   def senators_vote_on(senate_bill)
     out = Array.new
     unless senate_bill.member_votes.empty?
@@ -483,8 +487,6 @@ class User
       self.save!
     end
   end
-
-
 
 end
 

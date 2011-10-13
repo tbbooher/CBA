@@ -87,6 +87,10 @@ class PolcoGroup
     Vote.where(polco_group_id: self.id).desc(:updated_at).all.to_a
   end
 
+  def build_group_tally
+    self.votes.map(&:bill).uniq
+  end
+
   def get_votes_tally(bill)
     # TODO -- need to make this specific to a bill, not all votes of the polco group
     process_votes(self.votes.where(bill_id: bill.id).all.to_a)

@@ -1,28 +1,49 @@
+<% title @polco_group.name %>
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @polco_group.name %>
-</p>
 
 <p>
   <b>Type:</b>
   <%= @polco_group.type %>
 </p>
+
+<p>
+  <table>
+      <% @polco_group.build_group_tally.each do |bill| %>
+        <tr>
+          <td><%= bill.bill_title %></td>
+          <td><%= @polco_group.get_votes_tally(bill)%></td>
+        </tr>
+      <% end %>
+  </table>
+</p>
+
+add rss link to track group . . .
+
+<%= render :partial => 'comments_subpage', :locals => {:polco_group => @polco_group} %>
+
 <% if @polco_group.type == :custom %>
     <% if @polco_group.owner %>
     <p>
       <b>Owner:</b>
-      <%= @polco_group.owner.name %>
+      <%= link_to @polco_group.owner.name, @polco_group.owner %>
     </p>
     <% end %>
-
-    <%= render :partial => 'comments_subpage', :locals => {:polco_group => @polco_group} %>
 
     <p>
       <b>Description:</b>
       <%= @polco_group.description %>
     </p>
+
+    <p>
+      <b>Created at:</b>
+      <%= @polco_group.created_at %>
+    </p>
+
+    <% if current_user == @polco_group.owner %>
+    <p>
+      <%= link_to "Manage Group", edit_polco_group_path %>
+    </p>
+    <% end %>
 <% end %>
 <%# end custom check %>
 
@@ -30,9 +51,6 @@
 
 <%= show_people(@members, "Members") %>
 <%= show_people(@followers, "Followers") %>
-
-
-
 
 <%= link_to 'Edit', edit_polco_group_path(@polco_group) if can? :edit, @polco_group %> |
 <%= link_to 'Back', polco_groups_path %>
