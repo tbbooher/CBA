@@ -21,6 +21,9 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <!-- prototype-lib will be loaded only when needed -->
+    <%= javascript_tag do %>
+      <%= "var google_api_key = '#{GOOGLE_PLACE_API_KEY}';" -%>
+    <% end %>
     <%= yield :prototype %>
     <%= yield :head %>
     <!-- we only want maps to load if the page requires them -->

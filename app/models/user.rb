@@ -3,6 +3,7 @@
 # This is a Device-User-Class extended with ROLES, Avatar-handling, and more
 class User
   include Mongoid::Document
+  include Mongoid::Spacial::Document # GeoIndex
   include Mongoid::Timestamps
   include Mongoid::Paperclip
   include Geocoder::Model::Mongoid
@@ -46,7 +47,9 @@ class User
     @invitation = nil
     self.invitation_id = inv.id
   end
-  
+
+  field :location, type: Array, spacial: true
+
   def articles
     []
   end
@@ -67,7 +70,8 @@ class User
   attr_accessible :name, :email, :password, :password_confirmation, :roles_mask,
                   :remember_me, :authentication_token, :confirmation_token,
                   :avatar, :clear_avatar, :crop_x, :crop_y, :crop_w, :crop_h,
-                  :time_zone, :language, :use_gravatar, :invitation_id
+                  :time_zone, :language, :use_gravatar, :invitation_id,
+                  :location_token
 
   attr_accessor :clear_avatar
 
@@ -80,12 +84,12 @@ class User
                             },
                             :processors => [:cropper]
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  after_update :reprocess_avatar, :if => :cropping?
+  after_update  :reprocess_avatar, :if => :cropping?
 
   # Notifications
-  after_create :async_notify_on_creation
+  after_create   :async_notify_on_creation
   before_destroy :async_notify_on_cancellation
-  before_update :notify_if_confirmed
+  before_update  :notify_if_confirmed
 
   # Authentications
   after_create :save_new_authentication
@@ -420,7 +424,21 @@ class User
     end
   end
 
-  private
+  def location_token
+    if self.location[:lat].present? && self.location[:lng].present?
+      "%3.4f,%3.4f" % [self.location[:lat], self.location[:lng]]
+    end
+  end
+
+  def location_token=(str)
+    coordinates = str.split(",").map! { |a| a.strip }
+    self.location = {
+      lat: coordinates[0].to_f,
+      lng: coordinates[1].to_f
+    }
+  end
+
+private
   def reprocess_avatar
     avatar.reprocess!
   end
