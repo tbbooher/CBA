@@ -2,7 +2,7 @@
 
 Cba::Application.routes.draw do
 
-  get "bills/district_results"
+
 
   get "bills/state_results"
 
@@ -16,15 +16,19 @@ Cba::Application.routes.draw do
 
   match "/polco_groups/manage_groups" => "polco_groups#manage_groups", :as => :manage_groups
   match "/polco_groups/update_groups" => "polco_groups#update_groups", :as => :update_groups
+
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
+
   match "/results/:chamber" => "bills#results"
   #match "/bills/senate_results" => "bills#senate_results"
   match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
+  match ""
   # just a form process page
   match "/bills/process_page" => "bills#process_page"
+  match "/users/blog/:username(/:comment_id)" => "users#blog"
 
   resources :polco_groups  do
     resources :comments
@@ -141,6 +145,6 @@ Cba::Application.routes.draw do
   end
 
   # ROOT
-  root :to => "bills#e_ballot"
+  root :to => "home#index"
 
 end

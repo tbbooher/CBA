@@ -28,6 +28,7 @@
   %div#details
     Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
+- if @user
   %div#vote_region
     - if @bill.voted_on?(@user)
       %p
@@ -55,20 +56,20 @@
                   = label_tag :submit
                   = submit_tag t(:post_comment)
                   = submit_tag t(:cancel)
-%h2 Bills you haven't voted on
-%ul
-  - @unvoted_bills.each do |bill|
-    %li
-      = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
-
-- unless @voted_bills.empty?
-  %h2 Bills you have voted on
+  %h2 Bills you haven't voted on
   %ul
-    - @voted_bills.each do |bill|
+    - @unvoted_bills.each do |bill|
       %li
         = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
-- else
-  %p
-    You haven't voted on any
-    = Bill.full_type(@bill_type)
-    's yet.
+
+  - unless @voted_bills.empty?
+    %h2 Bills you have voted on
+    %ul
+      - @voted_bills.each do |bill|
+        %li
+          = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
+  - else
+    %p
+      You haven't voted on any
+      = Bill.full_type(@bill_type)
+      's yet.

@@ -1,0 +1,5 @@
+/ Display latest comment
+
+/ List Comments made elsewhere in site
+- @user.comments.each do |comment|
+  = link_to comment.title, user_blog_path(@user, comment)
