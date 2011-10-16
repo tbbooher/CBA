@@ -2,8 +2,6 @@
 
 Cba::Application.routes.draw do
 
-
-
   get "bills/state_results"
 
   resources :subjects
@@ -21,14 +19,17 @@ Cba::Application.routes.draw do
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
 
+  # house results -- how represented are you in the house?
   match "/results/:chamber" => "bills#results"
   #match "/bills/senate_results" => "bills#senate_results"
-  match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
+
   match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
-  match ""
+
   # just a form process page
   match "/bills/process_page" => "bills#process_page"
   match "/users/blog/:username(/:comment_id)" => "users#blog"
+
+  match "/bills/text/:id" => "bills#show_bill_text", :as => :full_bill_text
 
   resources :polco_groups  do
     resources :comments
