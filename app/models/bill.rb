@@ -62,6 +62,11 @@ class Bill
 
   scope :house_bills, where(title: /^h/)
   scope :senate_bills, where(title: /^s/)
+  scope :introduced_house_bills, where(title: /^h/).and(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+  scope :introduced_senate_bills, where(title: /^s/).and(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+  scope :rolled_house_bills, where(title: /^h/).without(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+  scope :rolled_senate_bills, where(title: /^s/).without(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+
   # Person.where(:age.exists => true)
   scope :house_roll_called_bills, where(:roll_time.exists => true) # .descending(:roll_time)
 

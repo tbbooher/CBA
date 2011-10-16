@@ -2,6 +2,7 @@
 
 Cba::Application.routes.draw do
 
+  # S2
   get "bills/state_results"
 
   resources :subjects
@@ -15,15 +16,14 @@ Cba::Application.routes.draw do
   match "/polco_groups/manage_groups" => "polco_groups#manage_groups", :as => :manage_groups
   match "/polco_groups/update_groups" => "polco_groups#update_groups", :as => :update_groups
 
+  # these are for json output only to manage groups
   match "/polco_groups/state_groups" => "polco_groups#state_groups"
   match "/polco_groups/district_groups" => "polco_groups#district_groups"
   match "/polco_groups/custom_groups" => "polco_groups#custom_groups"
 
-  # house results -- how represented are you in the house?
-  match "/results/:chamber" => "bills#results"
   #match "/bills/senate_results" => "bills#senate_results"
-
-  match "/e_ballot/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
+  # H1. HB and S1. SB
+  match "/introduced_bills/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
 
   # just a form process page
   match "/bills/process_page" => "bills#process_page"
@@ -38,10 +38,15 @@ Cba::Application.routes.draw do
   # TODO -- might be deprecated since it is embedded
   resources :votes
 
+  # index is H2, show is H2b
   resources :legislators do
     resources :comments
   end
 
+  # H3. house results -- how represented are you in the house?
+  match "/representation/:chamber" => "bills#results"
+
+  # show is H1b and S1b
   resources :bills do
     resources :comments
   end

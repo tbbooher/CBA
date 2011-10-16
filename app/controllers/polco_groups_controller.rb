@@ -149,6 +149,16 @@ class PolcoGroupsController < ApplicationController
     end
   end
 
+  def districts_and_reps
+    @legislators = Legislator.legislator_search(params[:legislator_search]).paginate(:page => params[:page], :per_page =>  10)
+    @bills = Bill.bill_search(params[:bill_search]).paginate(:page => params[:page], :per_page => 10)
+  end
+
+  def states_and_senators
+    @states = Legislator.senators.paginate(:page => params[:page], :per_page =>  10)
+    @bills = Bill.senate_bills.paginate(:page => params[:page], :per_page => 10)
+  end
+
   private
 
   def prep_format(list)
