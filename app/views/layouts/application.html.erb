@@ -26,8 +26,6 @@
     <% end %>
     <%= yield :prototype %>
     <%= yield :head %>
-    <!-- we only want maps to load if the page requires them -->
-    <%= yield :maps %>
     <%= auto_discovery_link_tag(:atom, "/feed") %>
     <%= insert_google_analytics_script if  (Rails.env == 'production') %>
     <% if APPLICATION_CONFIG['twitter_profile'] %>
@@ -58,12 +56,11 @@
     <div id="session">
         <ul>
           <%= render 'home/menu/application' %>
-          <%= render 'home/menu/navigation_items' %>
         </ul>
         <ul style='float: right;'>
           <%= render 'devise/menu/registration_items' %>
           <%= render 'devise/menu/login_items' %>
-          <%#= render '/home/menu/language_selection' %>
+          <%= render '/home/menu/language_selection' %>
         </ul>
     </div>
 
@@ -89,12 +86,10 @@
       <div class='clear'></div>
       
       <div id='copyright'>
-        <!--
         <a href='http://www.pledgie.com/campaigns/15849'><img 
                alt='Click here to lend your support to: CBA and make a donation at www.pledgie.com !' 
                src='http://www.pledgie.com/campaigns/15849.png?skin_name=chrome' border='0' /></a>
-        -->
-        <br>
+        <br />
            © <%= Time.now.year %> by <%= link_to APPLICATION_CONFIG['copyright'], APPLICATION_CONFIG['copyright_url'] %>
       </div>
       
