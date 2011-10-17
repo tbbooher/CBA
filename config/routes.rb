@@ -46,7 +46,7 @@ Cba::Application.routes.draw do
     resources :comments
   end
 
-  # H3. house results -- how represented are you in the house?
+  # H3. and S3 house results -- how represented are you in the house?
   match "/representation/:chamber" => "bills#results"
 
   # show is H1b and S1b
