@@ -1,12 +1,6 @@
 %p#notice= notice
 
-- title "House District/Legislator"
-
-%p{:style => "text-align: center"}
-  = "112th Congress"
-
-%p{:style => "text-align: center"}
-  %b= @legislator.full_name
+- title "112th Congress: #{@district.name} -- #{@legislator.full_name}"
 
 %p{:style => "text-align: center"}
   = image_tag @legislator.image_location_medium
@@ -21,18 +15,18 @@
 
 = will_paginate @bills
 
-%table.center{:align => "center"}
+%table.center{align: "center", width: "100%"}
   %tr
-    %th Bill
+    %th.first_column Bill
     %th #{@legislator.state} #{@legislator.district}
     %th= @legislator.last_name
     %th Result
   - @legislator.bills.each do |bill|
     %tr
-      %td= link_to bill.short_title, bill_path(bill)
-      %td= "something like bill.display_results"
-      %td= @legislator.pvs_id
-      %td= "bill.result"
+      %td= link_to bill.bill_title, bill_path(bill)
+      %td= short_tally(@district.get_votes_tally(bill))
+      %td= bill.find_member_vote(@legislator) == :aye ? "For" : "Against"
+      %td= bill.passed? ? "Passed" : "Failed"
 
 -#    <!-- need to check for the condition that they have no bills -->
 -#
@@ -48,27 +42,30 @@
     %th Name
     %th Pic
     %th Member Since
-  - @users.each do |u|
+  - @members.each do |u|
     %tr
       %td= u.name
-      %td= u.avatar
-      %td= u.created_at
+      %td= image_tag u.avatar
+      %td= u.created_at.stamp("Oct, 1999")
 
 %br/
 %p{:align => "center"}
   %b= "Group Followers"
   = "Drop-Down Box Search"
-
-%table.center{:align => "center"}
-  %tr
-    %th Name
-    %th Pic
-    %th Member Since
-  - @users.each do |u|
+= unless @followers.blank?
+  %table.center{:align => "center"}
     %tr
-      %td= u.name
-      %td= u.avatar
-      %td= u.created_at
+      %th Name
+      %th Pic
+      %th Member Since
+    - @followers.each do |u|
+      %tr
+        %td= u.name
+        %td= image_tag u.avatar_url(:thumb)
+        %td= u.created_at.stamp("Oct, 1999")
+- else
+  = @district.name
+  has no followers.
 -#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
 -#<%= link_to 'Back', legislators_path %>
 -#

@@ -116,6 +116,10 @@ class Legislator
     "#{self.state}#{"%02d" % self.district.to_i}"
   end
 
+  def members_district
+    PolcoGroup.where(type: :district).and(name: self.district_name).first
+  end
+
   def senators_for_state(us_state)
 
   end
@@ -132,6 +136,10 @@ class Legislator
       role[:startdate] = array.first
     end
     role
+  end
+
+  def is_senator?
+    self.district.nil?
   end
 
   # added by nate

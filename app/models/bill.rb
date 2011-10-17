@@ -64,8 +64,8 @@ class Bill
   scope :senate_bills, where(title: /^s/)
   scope :introduced_house_bills, where(title: /^h/).and(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
   scope :introduced_senate_bills, where(title: /^s/).and(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
-  scope :rolled_house_bills, where(title: /^h/).without(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
-  scope :rolled_senate_bills, where(title: /^s/).without(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+  #scope :rolled_house_bills, where(title: /^h/).excludes(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
+  #scope :rolled_senate_bills, where(title: /^s/).excludes(bill_state: /^INTRODUCED|REPORTED|REFERRED$/)
 
   # Person.where(:age.exists => true)
   scope :house_roll_called_bills, where(:roll_time.exists => true) # .descending(:roll_time)
@@ -238,6 +238,10 @@ class Bill
       when 'sc' then
         'S.C.Res.'
     end + ' ' + bill_number.to_s
+  end
+
+  def passed?
+    !(self.bill_state =~ /^PASS_OVER|PASSED|PASS_BACK|ENACTED/).nil?
   end
 
   def update_legislator_counts

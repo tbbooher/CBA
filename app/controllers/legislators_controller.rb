@@ -21,8 +21,11 @@ class LegislatorsController < ApplicationController
   # GET /legislators/1.xml
   def show
     @legislator = Legislator.find(params[:id])
-    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
-    @users = User.all.paginate(:page => params[:page], :per_page => 10)
+    @district = @legislator.members_district unless @legislator.is_senator?
+
+    @bills = (Bill.all.to_a - Bill.introduced_house_bills).paginate(:page => params[:page], :per_page => 20)
+    @members   = @district.members.paginate(:page => params[:page], :per_page => 10)
+    @followers = @district.followers.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # show.haml

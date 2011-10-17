@@ -25,6 +25,9 @@ Cba::Application.routes.draw do
   # H1. HB and S1. SB
   match "/introduced_bills/:chamber(/:bill_type(/:id))" => "bills#e_ballot", :as => :e_ballot
 
+  # the new H2
+  match "house/districts_and_reps" => "polco_groups#districts_and_reps"
+
   # just a form process page
   match "/bills/process_page" => "bills#process_page"
   match "/users/blog/:username(/:comment_id)" => "users#blog"

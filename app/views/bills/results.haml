@@ -15,8 +15,8 @@
       %th Your District Vote
       %th Your Rep. Vote
     - else
-      %th Your State Vote
-      %th Senator
+      %th= @user.us_state
+      %th= "Senators #{@user.senators.map(&:last_name).to_sentence}"
       %th
     %th Result
   - @bills.each do |bill|
@@ -27,9 +27,9 @@
         %td= @user.get_district.get_votes_tally(@bill)
         %td= @user.reps_vote_on(@bill)
       - else
-        %td= @pg_state.get_votes_tally(bill)
+        %td= short_tally(@pg_state.get_votes_tally(bill))
         %td= @user.senators_vote_on(bill)
-      %td= bill.bill_state
+      %td= bill.passed? ? "Passed" : "Failed"
 
 
 

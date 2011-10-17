@@ -1,19 +1,19 @@
 #tally_region {
-background-color:$color-paper;
-border:1px solid #000;
-border-radius:5px;
-width:98%;
-margin:10px 0;
-padding:10px;
+    background-color:$color-paper;
+    border:1px solid #000;
+    border-radius:5px;
+    width:98%;
+    margin:10px 0;
+    padding:10px;
 }
 
 #all_users_tally,#all_members_votes,#joined_groups_tally,#followed_groups_tally {
-float:left;
-background-color:#ccc;
-width:45%;
-border-radius:10px;
-margin:10px;
-padding:10px;
+    float:left;
+    background-color:#ccc;
+    width:45%;
+    border-radius:10px;
+    margin:10px;
+    padding:10px;
 }
 
 div#top_bar {
@@ -38,17 +38,17 @@ ul#top_menu {
 }
 
 ul#top_menu li {
-display:block;
-float:left;
-margin:0 0 0 5px;
+    display:block;
+    float:left;
+    margin:0 0 0 5px;
 }
 
 ul#top_menu li a,.marked_language {
-height:38px;
-display:block;
-float:left;
-line-height:200%;
-padding:8px 15px 0;
+    height:38px;
+    display:block;
+    float:left;
+    line-height:200%;
+    padding:8px 15px 0;
 }
 
 ul#top_menu li a {
@@ -214,4 +214,8 @@ td.ag {color: red; text-align: center}
 
 a {
   color: blue;
+}
+
+div.pagination {
+  text-align:center;
 }

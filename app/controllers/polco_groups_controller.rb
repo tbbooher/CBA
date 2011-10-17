@@ -1,5 +1,7 @@
 class PolcoGroupsController < ApplicationController
   load_and_authorize_resource
+  helper_method :sort_column, :sort_direction
+
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
@@ -164,6 +166,18 @@ class PolcoGroupsController < ApplicationController
   def prep_format(list)
     # to json
     list.map{|g| {:id => g.id, :name => g.name}}
+  end
+
+  private
+
+  # added by nate
+  def sort_column
+    params[:sort] || "district"
+  end
+
+  # added by nate
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
 end
