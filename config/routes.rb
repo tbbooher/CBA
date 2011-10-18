@@ -3,7 +3,7 @@
 Cba::Application.routes.draw do
 
   # S2
-  get "bills/state_results"
+  #get "bills/state_results"
 
   resources :subjects
 
@@ -27,6 +27,8 @@ Cba::Application.routes.draw do
 
   # the new H2
   match "house/districts_and_reps" => "polco_groups#districts_and_reps"
+  # now S2
+  match "senate/states_and_senators" => "polco_groups#states_and_senators"
 
   # just a form process page
   match "/bills/process_page" => "bills#process_page"

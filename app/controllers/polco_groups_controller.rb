@@ -18,6 +18,7 @@ class PolcoGroupsController < ApplicationController
     end
   end
 
+  # for the auto-group work
   def custom_groups
 
     groups_list = prep_format(PolcoGroup.where(name: /#{params[:q]}/i, type: :custom))
@@ -157,7 +158,8 @@ class PolcoGroupsController < ApplicationController
   end
 
   def states_and_senators
-    @states = Legislator.senators.paginate(:page => params[:page], :per_page =>  10)
+    @states = PolcoGroup.states.paginate(:page => params[:page], :per_page =>  10)
+    #Legislator.senators.paginate(:page => params[:page], :per_page =>  10)
     @bills = Bill.senate_bills.paginate(:page => params[:page], :per_page => 10)
   end
 

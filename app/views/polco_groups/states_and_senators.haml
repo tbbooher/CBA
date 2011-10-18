@@ -1,0 +1,52 @@
+-title "States and Senators"
+
+%p{:style => "text-align: center"}
+  %b 112th Congress
+
+= form_tag legislators_path, :method => 'get' do
+  %p.search{:align => "center"}
+    = text_field_tag :state_search, params[:state_search]
+    = submit_tag "Search", :name => nil
+
+%table.center{:align => "center"}
+  %tr
+    %th= sortable "State"
+    %th= sortable "senior_senator", "Senior Senator"
+    %th= sortable "junior_senator", "Junior Senator"
+  - @states.each do |state|
+    %tr
+      %td= state.name
+      -#this needs to be last_name, first_name at some point
+      %td= "senior senator"
+      %td= "junior senator" #image_tag state.image_location_small
+
+
+= will_paginate @states
+
+%p{:style => "text-align: center"}
+  = "Roll Call"
+
+= form_tag bills_path, :method => 'get' do
+  %p.search{:align => "center"}
+    = text_field_tag :bill_search, params[:bill_search]
+    = submit_tag "Search", :name => nil
+
+/ EVERYTHING BELOW SHOULD BE DRY'D UP
+
+%table.center{:align => "center"}
+  %tr
+    %th Bill
+    %th For
+    %th Against
+    %th Abstain
+    %th Result
+  - @bills.each do |bill|
+    %tr
+      %td= link_to bill.bill_title, bill_path(bill)
+      - bill_result = bill.members_tally
+      %td= bill_result[:ayes]
+      %td= bill_result[:nays]
+      %td= bill_result[:abstains]
+      %td= bill.passed? ? "Yes" : "No"
+
+= will_paginate @bills
