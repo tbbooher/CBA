@@ -27,7 +27,7 @@
           %td= @user.get_district.get_votes_tally(bill)
           %td= @user.reps_vote_on(bill)
         - else
-          %td= short_tally(@pg_state.get_votes_tally(bill))
+          %td= short_tally(@pg_state.get_votes_tally(bill)) unless @pg_state.nil?
           %td= @user.senators_vote_on(bill)
         %td= bill.passed? ? "Passed" : "Failed"
 - else
