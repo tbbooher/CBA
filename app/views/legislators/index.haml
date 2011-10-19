@@ -1,6 +1,6 @@
 -title "House District/Legislators"
 
-%p{:style => "text-align: center"}
+%p.center
   %b= "112th Congress"
 
 = form_tag legislators_path, :method => 'get' do
@@ -24,7 +24,7 @@
 
 = will_paginate @legislators
 
-%p{:style => "text-align: center"}
+%p.center
   = "Roll Call"
 
 = form_tag bills_path, :method => 'get' do

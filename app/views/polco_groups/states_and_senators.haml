@@ -8,7 +8,7 @@
     = text_field_tag :state_search, params[:state_search]
     = submit_tag "Search", :name => nil
 
-%table.center{:align => "center"}
+%table.center
   %tr
     %th= sortable "State"
     %th= sortable "senior_senator", "Senior Senator"
@@ -16,9 +16,9 @@
   - @states.each do |state|
     %tr
       %td= state.name
-      -#this needs to be last_name, first_name at some point
-      %td= "senior senator"
-      %td= "junior senator" #image_tag state.image_location_small
+      - senators = state.senators_hash
+      %td= senators(:senior_senator).last_name
+      %td= senators(:junior_senator).last_name
 
 
 = will_paginate @states
@@ -33,7 +33,7 @@
 
 / EVERYTHING BELOW SHOULD BE DRY'D UP
 
-%table.center{:align => "center"}
+%table.center
   %tr
     %th Bill
     %th For
@@ -47,6 +47,6 @@
       %td= bill_result[:ayes]
       %td= bill_result[:nays]
       %td= bill_result[:abstains]
-      %td= bill.passed? ? "Yes" : "No"
+      %td= bill.passed? ? "Passed" : "Failed"
 
 = will_paginate @bills

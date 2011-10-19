@@ -104,4 +104,13 @@ class PolcoGroup
     end
   end
 
+  def senators_hash
+    if self.type == :state
+      legs=Legislator.senators.where(state: self.name).all.to_a.sort_by { |u| u.start_date }
+      {junior_senator: legs.last, senior_senator: legs.first}
+    else
+      nil
+    end
+  end
+
 end

@@ -2,13 +2,13 @@
 
 - title "112th Congress: #{@district.name} -- #{@legislator.full_name}"
 
-%p{:style => "text-align: center"}
+%p.center
   = image_tag @legislator.image_location_medium
 
-%p{:style => "text-align: center"}
+%p.center
   = @legislator.party
 
-%p{:style => "text-align: center"}
+%p.center
   = "Roll Call Popularity Search"
 
 %br/
