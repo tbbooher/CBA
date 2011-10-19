@@ -120,6 +120,10 @@ class Legislator
     PolcoGroup.where(type: :district).and(name: self.district_name).first
   end
 
+  def members_state_group
+    PolcoGroup.states.where(name: self.state).first
+  end
+
   def senators_for_state(us_state)
 
   end

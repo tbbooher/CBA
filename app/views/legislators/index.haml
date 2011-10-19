@@ -1,14 +1,8 @@
 -title "House District/Legislators"
 
-%p.center
-  %b= "112th Congress"
+%p should display senators too -- recommend split page
 
-= form_tag legislators_path, :method => 'get' do
-  %p.search{:align => "center"}
-    = text_field_tag :legislator_search, params[:legislator_search]
-    = submit_tag "Search", :name => nil
-
-%table.center{:align => "center"}
+%table.center
   %tr
     %th= sortable "district"
     %th= sortable "full_name", "Rep. Name"
@@ -23,27 +17,3 @@
       %td= legislator.party
 
 = will_paginate @legislators
-
-%p.center
-  = "Roll Call"
-
-= form_tag bills_path, :method => 'get' do
-  %p.search{:align => "center"}
-    = text_field_tag :bill_search, params[:bill_search]
-    = submit_tag "Search", :name => nil
-
-%table.center{:align => "center"}
-  %tr
-    %th Bill
-    %th Congressional Vote
-    %th Result
-  - @bills.each do |bill|
-    %tr
-      %td= link_to bill.short_title, bill_path(bill)
-      %td= "something like bill.display_results"
-      %td= "bill.result"
-
-= will_paginate @bills
-
--#<!--Need to add Comments section-->
--#<%#= link_to 'New Legislator', new_legislator_path %>

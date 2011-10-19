@@ -1,6 +1,5 @@
 %p#notice= notice
-
-- title "112th Congress: #{@district.name} -- #{@legislator.full_name}"
+  - title @title
 
 %p.center
   = image_tag @legislator.image_location_medium
@@ -15,10 +14,10 @@
 
 = will_paginate @bills
 
-%table.center{align: "center", width: "100%"}
+%table.center
   %tr
     %th.first_column Bill
-    %th #{@legislator.state} #{@legislator.district}
+    %th= @district ? "#{@legislator.state} #{@legislator.district}" : @legislator.state
     %th= @legislator.last_name
     %th Result
   - @legislator.bills.each do |bill|
