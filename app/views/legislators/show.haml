@@ -7,8 +7,7 @@
 %p.center
   = @legislator.party
 
-%p.center
-  = "Roll Call Popularity Search"
+%p.center Roll Call Popularity Search
 
 %br/
 
@@ -44,9 +43,9 @@
       %td= u.created_at.stamp("Oct, 1999")
 
 %br/
-%p{:align => "center"}
-  %b= "Group Followers"
-  = "Drop-Down Box Search"
+%p.center
+  %b Group Followers
+%p Drop-Down Box Search
 - unless @followers.blank?
   %table.center{:align => "center"}
     %tr
@@ -60,5 +59,3 @@
         %td= u.created_at.stamp("Oct, 1999")
 - else
   This Group has no followers.
-
-%p the end
