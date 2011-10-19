@@ -51,14 +51,15 @@ gem 'mongoid_fulltext'
 gem 'mongoid_taggable'
 gem 'mongoid_spacial' # For GeoIndex
 
-
-
 # Bundle gems for views
 gem "haml"
 gem "will_paginate", "3.0.pre4"
 gem 'escape_utils'
 gem "RedCloth", "4.2.5" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 gem 'stamp'
+
+# a scheduling gem
+gem 'whenever', :require => false
 
 # Gems by iboard.cc <andreas@altendorfer.at>
 gem "jsort", "~> 0.0.1"
