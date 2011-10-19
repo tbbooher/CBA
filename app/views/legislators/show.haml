@@ -27,10 +27,6 @@
       %td= bill.find_member_vote(@legislator) == :aye ? "For" : "Against"
       %td= bill.passed? ? "Passed" : "Failed"
 
--#    <!-- need to check for the condition that they have no bills -->
--#
--#= render :partial => 'bills/comments_subpage', :locals => {:legislator => @legislator}
-
 %br/
 %p{:align => "center"}
   %b= "Group Members"
@@ -66,3 +62,5 @@
   Group
   = @polco_group.name
   has no followers.
+
+%p the end
