@@ -15,15 +15,15 @@
     margin:10px;
     padding:10px;
 }
-
+/*
 div#top_bar {
-    /* @include main_page_width; */
+
     top:90px;
     @include main_page_width;
     background:url(/assets/menu-bg.gif) repeat-x scroll left top #FFF;
     border-bottom:1px solid #000;
     height:43px;
-    /* padding:0 20px; */
+
 }
 
 ul#top_menu {
@@ -67,6 +67,8 @@ color:#FFF;
 background:#FFF url(/assets/current-bg.gif) top left repeat-x;
 padding:5px 15px 0;
 }
+
+*/
 
 html input[type=text],html input[type=password],body input[type=text],body input[type=password] {
 font-size:12px;
