@@ -1,5 +1,5 @@
 %p#notice= notice
-  - title @title
+- title @title
 
 %p.center
   = image_tag @legislator.image_location_medium
@@ -23,7 +23,7 @@
   - @legislator.bills.each do |bill|
     %tr
       %td= link_to bill.bill_title, bill_path(bill)
-      %td= short_tally(@district.get_votes_tally(bill))
+      %td= short_tally(@polco_group.get_votes_tally(bill))
       %td= bill.find_member_vote(@legislator) == :aye ? "For" : "Against"
       %td= bill.passed? ? "Passed" : "Failed"
 
@@ -63,8 +63,6 @@
         %td= image_tag u.avatar_url(:thumb)
         %td= u.created_at.stamp("Oct, 1999")
 - else
-  = @district.name
+  Group
+  = @polco_group.name
   has no followers.
--#<%#= link_to 'Edit', edit_legislator_path(@legislator) %> |
--#<%= link_to 'Back', legislators_path %>
--#
