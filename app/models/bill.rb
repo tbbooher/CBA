@@ -122,11 +122,6 @@ class Bill
   end
 
   # ------------------- Public booher_modules aggregation methods -------------------
-=begin
-  def tally # delete method calls to this
-    build_tally(self.votes.all)
-  end
-=end
 
   def get_overall_users_vote
     common_id = PolcoGroup.where(type: :common).first.id
@@ -151,27 +146,6 @@ class Bill
       "none"
     end
   end
-
-=begin
-  def descriptive_tally
-    names = ["For", "Against", "Abstain"]
-    out = "<ul id=\"tally\">"
-    self.tally.each do |votes_for_group|
-      out += "<li class=\"box\">"
-      #out += "<b>#{votes_for_group.first.to_s}</b>"
-      out += "<div class=\"group_name\">#{votes_for_group.first}</div>"
-      out += "<ul id=\"the_votes\">"
-      votes_for_group.last.each_with_index do |count, index|
-        out += "<li>#{names[index]}: #{count}</li>"
-      end
-      out += "</ul>"
-      out += "</li>"
-    end
-    out += "</ul>"
-    out += "<div class=\"clear_both\"></div>"
-    out
-  end
-=end
 
   def self.update_from_directory
     files = Dir.glob("#{Rails.root}/data/bills/*.xml")

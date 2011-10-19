@@ -1,13 +1,11 @@
-- title t("userlist.user_profile", :name => @user.name )
+- title t("userlist.user_profile", name: @user.name )
 
 %div{:style => 'clear: right'}
 
     %div{:id => 'users-location-map'}
 
     - if @user.avatar
-        %div=  link_to_function(     |
-           image_tag( w3c_url(@user.avatar_url(:thumb)), :class => "img-with-shadow" ),        |
-           "image_popup('#{w3c_url(@user.avatar_url(:popup))}')") |
+        %div=  link_to_function(image_tag( w3c_url(@user.avatar_url(:thumb)), :class => "img-with-shadow" ), "image_popup('#{w3c_url(@user.avatar_url(:popup))}')") |
 
     %p 
         User: 

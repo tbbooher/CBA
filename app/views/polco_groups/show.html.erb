@@ -6,16 +6,15 @@
   <%= @polco_group.type %>
 </p>
 
-<p>
-  <table>
-      <% @polco_group.build_group_tally.each do |bill| %>
-        <tr>
-          <td><%= bill.bill_title %></td>
-          <td><%= @polco_group.get_votes_tally(bill)%></td>
-        </tr>
-      <% end %>
-  </table>
-</p>
+
+<table>
+  <% @polco_group.build_group_tally.each do |bill| %>
+    <tr>
+      <td><%= bill.bill_title %></td>
+      <td><%= @polco_group.get_votes_tally(bill)%></td>
+    </tr>
+  <% end %>
+</table>
 
 add rss link to track group . . .
 
