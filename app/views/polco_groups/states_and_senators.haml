@@ -15,10 +15,10 @@
     %th= sortable "junior_senator", "Junior Senator"
   - @states.each do |state|
     %tr
-      %td= state.name
+      %td= link_to state.name, state
       - senators = state.senators_hash
-      %td= senators(:senior_senator).last_name
-      %td= senators(:junior_senator).last_name
+      %td= link_to senators[:senior_senator].last_name, senators[:senior_senator]
+      %td= link_to senators[:junior_senator].last_name, senators[:junior_senator]
 
 
 = will_paginate @states
