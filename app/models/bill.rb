@@ -49,6 +49,7 @@ class Bill
 
   def set_not_draft
     self.is_draft = false
+    true
   end
 
   # roll call results
