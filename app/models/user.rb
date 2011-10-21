@@ -59,6 +59,7 @@ class User
   references_many :invitations, :dependent => :delete
 
   embeds_many :user_notifications
+  embeds_many :user_groups
   has_many    :articles
 
   validates_presence_of :name
@@ -438,6 +439,7 @@ class User
     }
   end
 
+  
 private
   def reprocess_avatar
     avatar.reprocess!
