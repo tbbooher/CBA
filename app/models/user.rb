@@ -187,13 +187,18 @@ class User
   end
 
   def vote_on(bill, value)
+    puts "test"
     # test to make sure the user is a member of a group
     my_groups = self.joined_groups
+    puts "joined group size is #{my_groups.size}"
     unless my_groups.empty?
       unless bill.voted_on?(self)
-        my_groups.each do |g|
+        my_groups.each_with_index do |g, i|
+          puts "processing #{value} for #{self} name: #{g.name} bill: #{bill.title} index #{i}"
           unless Vote.create(:value => value, :user => self, :polco_group => g, :bill => bill)
              raise "vote not valid"
+          else
+            puts "created vote #{value} for group #{g.name}"
           end
         end
       else

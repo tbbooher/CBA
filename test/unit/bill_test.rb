@@ -21,7 +21,7 @@ class BillTest < ActiveSupport::TestCase
     @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                               cali_group,
                                                               ca46,
-                                                              Fabricate(:polco_group, {:name => "Gang of 12", :type => :custom})],
+                                                              Fabricate(:polco_group, {:name => "Gang of 13", :type => :custom})],
                                            :followed_groups => [va05, va_group],
                                            :district => 'CA46',
                                            :us_state => 'CA',
@@ -84,25 +84,14 @@ class BillTest < ActiveSupport::TestCase
     assert_equal({:ayes => 2, :nays => 1, :abstains => 1, :presents => 0}, tally, "Expected 2 aye, 1 nay, and 1 abstain")
   end
 
-# looks like we don't call this anymore
-=begin
-  test "should be able to build a descriptive tally that prints the tally as html" do
-    b = @house_bill
-    @user1.vote_on(b, :aye)
-    @user2.vote_on(b, :nay)
-    @user3.vote_on(b, :aye)
-    @user4.vote_on(b, :abstain)
-    tally = b.descriptive_tally
-    assert_not_nil tally
-  end
-=end
-
   test "should verify that a user has already voted" do
     #user = Fabricate(:user, :name => "George Whitfield", :email => "awaken@gloucester.com")
     puts "starting"
     Vote.destroy_all
     b = @house_bill
     @user1.vote_on(b, :aye)
+    puts "## #{b.valid?}"
+    puts b.errors.inspect
     b.save!
     puts "all votes"
     puts Vote.all.count
