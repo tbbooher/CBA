@@ -6,3 +6,11 @@ Fabricator(:polco_group) do
   follower_ids []
   comments []
 end
+
+Fabricator(:oh, :class_name => :polco_group) do
+  name 'OH'
+  type :state
+  member_ids []
+  follower_ids []
+  comments []
+end
