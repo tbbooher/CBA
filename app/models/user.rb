@@ -37,7 +37,7 @@ class User
   has_and_belongs_to_many :senators, :class_name => "Legislator", :inverse_of => :state_constituents
   belongs_to :representative, :class_name => "Legislator", :inverse_of => :district_constituents
 
-  after_save :update_member_count
+  #after_save :update_member_count
 
   def invitation
     @invitation ||= Invitation.criteria.for_ids(self.invitation_id).first
