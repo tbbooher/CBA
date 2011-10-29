@@ -19,8 +19,8 @@
 
 %div
 - if can?( :create, Posting ) && @blog
-    - content_for :resource_actions do
-        %p= ui_button('add', t(:create_new_posting), new_blog_posting_path(@blog), :add_class => 'green')
+  - content_for :resource_actions do
+    %p= ui_button('add', t(:create_new_posting), new_blog_posting_path(@blog), :add_class => 'green')
 
 .column-wrapper
 
