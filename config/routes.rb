@@ -12,6 +12,7 @@ Cba::Application.routes.draw do
   #resources :member_votes
 
   get "search/index"
+  get "home/polco_info"
 
   match "/polco_groups/manage_groups" => "polco_groups#manage_groups", :as => :manage_groups
   match "/polco_groups/update_groups" => "polco_groups#update_groups", :as => :update_groups
