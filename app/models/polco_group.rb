@@ -32,7 +32,7 @@ class PolcoGroup
 
   has_many :votes
 
-  after_initialize :make_title
+  before_validation :make_title
 
   def make_title
     puts "making title and setting draft to false for #{self.name}"

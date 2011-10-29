@@ -7,6 +7,7 @@ class BillTest < ActiveSupport::TestCase
     load_all_sponsors
     Bill.destroy_all # clean slate
     PolcoGroup.destroy_all
+    User.destroy_all
     rep = Legislator.representatives.first
     senator1 = Legislator.senators.first
     senator2 = Legislator.senators[1]
@@ -18,22 +19,29 @@ class BillTest < ActiveSupport::TestCase
     ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
     va05 = Fabricate(:polco_group, {:name => 'VA05', :type => :district})
     va03 = Fabricate(:polco_group, {:name => 'VA03', :type => :district})
-    @user1 = Fabricate.build(:registered, {:joined_groups => [common_group,
-                                                              cali_group,
-                                                              ca46,
-                                                              Fabricate(:polco_group, {:name => "Gang of 13", :type => :custom})],
-                                           :followed_groups => [va05, va_group],
-                                           :district => 'CA46',
+    @user1 = Fabricate.build(:registered, {:district => 'CA46',
                                            :us_state => 'CA',
                                            :senators => [senator1, senator2],
-                                           :representative => rep
-    })
+                                           :representative => rep})
+    @user1.joined_groups << [common_group,
+                             cali_group,
+                             ca46,
+                             Fabricate(:polco_group, {:name => "Gang of 13", :type => :custom})]
+    @user1.followed_groups << [va05, va_group]
+    #@user1.save
+
+    #@user1.reload
     puts "just created user with these groups:"
+    puts @user1.joined_groups.map(&:name)
+    puts "then secondly"
     puts @user1.joined_groups.map(&:name)
     @user2 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                               cali_group,
                                                               ca46,
                                                               Fabricate(:polco_group, {:name => "Ft. Sam Washington 1st Grade", :type => :custom})]})
+    puts " !!!!!!!!! after second user"
+    puts @user1.joined_groups.map(&:name)
+
     @user3 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                               va_group,
                                                               va05]})
@@ -57,6 +65,7 @@ class BillTest < ActiveSupport::TestCase
       bill.bill_html = "The mock bill contents"
     end
     @house_bill.save!
+
   end
 
   test "a bill should have a long and short title" do
@@ -252,7 +261,11 @@ class BillTest < ActiveSupport::TestCase
     # so we can put something like this in our views
     #@user1.joined_groups
     #@user1.followed_groups
+    puts "********************"
+    puts " starting this test "
+    puts "********************"
     puts "user groups at start:"
+    puts @user1.joined_groups.map(&:name)
     puts @user1.joined_groups.size
     @user1.vote_on(@house_bill, :aye) # follows va05
     puts "new size #{@user1.joined_groups.size}"
@@ -260,7 +273,7 @@ class BillTest < ActiveSupport::TestCase
     @user3.vote_on(@house_bill, :abstain) # joined va05
     @user4.vote_on(@house_bill, :present)
     puts @user1.joined_groups.map(&:name)
-    puts "before !! #{@user1.joined_groups.size}"
+    puts "before !! #{@user1.joined_groups.count}"
     joined_groups = @user1.joined_groups_tallies(@house_bill)
     puts joined_groups.inspect
     followed_groups = @user1.followed_groups_tallies(@house_bill)
