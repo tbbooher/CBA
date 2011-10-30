@@ -175,6 +175,9 @@ GEM
       mongoid (~> 2.0)
     mongoid_fulltext (0.4.4)
       unicode_utils (~> 1.0.0)
+    mongoid_session_store (2.0.1)
+      mongoid (~> 2.0)
+      rails (~> 3.0)
     mongoid_spacial (0.2.16)
       activesupport (~> 3.0)
       mongoid (>= 2.3.0)
@@ -421,6 +424,7 @@ DEPENDENCIES
   mongoid-paperclip
   mongoid-tree
   mongoid_fulltext
+  mongoid_session_store
   mongoid_spacial
   mongoid_taggable
   nifty-generators
