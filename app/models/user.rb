@@ -220,7 +220,7 @@ class User
   end
 
   # district fun
-  def get_district(coords)
+  def get_district_from_coords(coords)
     lat, lon = coords # .first, coords.last
     self.coordinates = [lat, lon]
     feed_url = "#{GOVTRACK_URL}perl/district-lookup.cgi?lat=#{lat}&long=#{lon}"

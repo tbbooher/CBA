@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     # i don't like this but it is a good way to get a default address
     address_attempt = [38.7909, -77.0947] if address_attempt.all? { |a| a == 0 }
     @coords = build_coords(address_attempt)
-    district = @user.get_district(address_attempt).first
+    district = @user.get_district_from_coords(address_attempt).first
     @district, @state = district.district, district.us_state
     @lat = params[:lat] || "19.71844"
     @lon = params[:lon] || "-155.095228"
