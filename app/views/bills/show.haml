@@ -24,7 +24,9 @@
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
-- if @bill.activity? || !current_user.voted_on(@bill)
+/ @bill.voted_on?(current_user) can be used here
+
+- if @bill.activity?
 
   %p
     How are other districts voting on
