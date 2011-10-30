@@ -40,11 +40,11 @@ class UsersController < ApplicationController
     case params[:commit]
       when "Yes"
         coords= Geocoder.coordinates(params[:location])
-        districts = user.get_district(coords)
+        districts = user.get_district_from_coords(coords)
         flash[:method] = :ip_lookup
       when "Submit Address"
         coords = Geocoder.coordinates(build_address(params))
-        districts = user.get_district(coords)
+        districts = user.get_district_from_coords(coords)
         flash[:method] = :address
       when "Submit Zip Code"
         districts = user.get_districts_by_zipcode(params[:zip_code])
