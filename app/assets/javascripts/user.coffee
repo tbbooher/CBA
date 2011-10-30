@@ -1,6 +1,6 @@
 $(document).ready ->
   if $("#users-location-map")
-    $("#users-location-map").html('<img src="/images/spinner.gif" alt="Loading ..." style="box-shadow: none">')
+    $("#users-location-map").html('<img src="/assets/spinner.gif" alt="Loading ..." style="box-shadow: none">')
     lnglat = $('#user-location-token').html()
     if lnglat
       lng = lnglat.split(",")[0]
