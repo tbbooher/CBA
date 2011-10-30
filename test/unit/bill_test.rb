@@ -13,12 +13,12 @@ class BillTest < ActiveSupport::TestCase
     senator2 = Legislator.senators[1]
     puts "!!!!!!!!!!!!!!!! all polco groups: #{PolcoGroup.all.size}"
     @house_bill = Bill.new(:govtrack_name => "h1", :title => Faker::Name.name)
-    common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common})
-    cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state})
-    va_group = Fabricate(:polco_group, {:name => 'VA', :type => :state})
-    ca46 = Fabricate(:polco_group, {:name => 'CA46', :type => :district})
-    va05 = Fabricate(:polco_group, {:name => 'VA05', :type => :district})
-    va03 = Fabricate(:polco_group, {:name => 'VA03', :type => :district})
+    common_group = Fabricate(:polco_group, {:name => 'Dan Cole', :type => :common, title: 'dc_common'})
+    cali_group = Fabricate(:polco_group, {:name => 'CA', :type => :state, title: 'CA_state'})
+    va_group = Fabricate(:polco_group, {:name => 'VA', :type => :state, title: "VA_state"})
+    ca46 = Fabricate(:polco_group, {name: 'CA46', type: :district, title: "CA46_district"})
+    va05 = Fabricate(:polco_group, {name: 'VA05', type: :district, title: "VA05_district"})
+    va03 = Fabricate(:polco_group, {name: 'VA03', type: :district, title: "VA03_district"})
     @user1 = Fabricate.build(:registered, {:district => 'CA46',
                                            :us_state => 'CA',
                                            :senators => [senator1, senator2],
@@ -26,7 +26,7 @@ class BillTest < ActiveSupport::TestCase
     @user1.joined_groups << [common_group,
                              cali_group,
                              ca46,
-                             Fabricate(:polco_group, {:name => "Gang of 13", :type => :custom})]
+                             Fabricate(:polco_group, {:name => "Gang of 13", :type => :custom, title: 'gang_13_custom'})]
     @user1.followed_groups << [va05, va_group]
     #@user1.save
 
@@ -48,7 +48,7 @@ class BillTest < ActiveSupport::TestCase
     @user4 = Fabricate.build(:registered, {:joined_groups => [common_group,
                                                               va_group,
                                                               va03,
-                                                              Fabricate(:polco_group, {:name => Faker::Company.name, :type => :custom})]})
+                                                              Fabricate(:polco_group, {name: Faker::Company.name, type: :custom, title: Faker::Company.name})]})
                      # we need one bill to update
     Fabricate(:bill, :govtrack_id => "h112-26", :title => 'h112-26', :ident => '112-h26')
                      # build senate bill
