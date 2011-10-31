@@ -6,7 +6,7 @@ $(document).ready ->
       lng = lnglat.split(",")[0]
       lat = lnglat.split(",")[1]
       loadUserMap(parseFloat(lng),parseFloat(lat))
-           
+
 loadUserMap = (lng,lat) ->
   latlng = new google.maps.LatLng(lng,lat)
   myOptions = {
