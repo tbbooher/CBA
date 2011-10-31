@@ -249,6 +249,7 @@ class Bill
     # check for changes
     if bill && (self.introduced_date.nil? || (bill.introduced_date.to_date > self.introduced_date))
       # front-matter
+      puts "updating #{self.govtrack_name}"
       self.congress = bill.congress
       self.bill_type = bill.bill_type
       self.bill_number = bill.bill_number
@@ -289,6 +290,7 @@ class Bill
       self.summary_word_count = self.summary.to_s.word_count
       true
     else
+      puts "no need to update #{self.govtrack_name}"
       false
     end
 
@@ -345,6 +347,7 @@ class Bill
   end
 
   def Bill.update_rolls
+    # we use regex match to pull the date out
     files = Dir.glob("#{Rails.root}/data/rolls/*.xml").sort_by{|f| f.match(/\/.+\-(\d+)\./)[1].to_i}
     # Yield to a block that can perform arbitrary calls on this bill
     # for testing
@@ -353,6 +356,7 @@ class Bill
     end
     # let's see if the file contains bill data
     # TODO - (we need to modify this to only read in the new rolls)
+    # for right now, we can accept inefficiency
     bill_list = Bill.all.map(&:govtrack_id)
 
     files.each do |bill_path|
@@ -360,7 +364,9 @@ class Bill
       puts "starting with #{f.path} . . ."
       # "h112-26"
       # at this point, we only read in bill roll calls
-      # if 1. it is a bill roll, 2. if we are tracking that bill and 3. if the date of the roll is more recent than the last date of the roll recorded
+      # if 1. it is a bill roll
+      #    2. if we are tracking that bill and
+      #    3. if the date of the roll is more recent than the last date of the roll recorded
       if bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)
         bd = bd[1..3]
         if bill_list.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}") # do we have this bill
