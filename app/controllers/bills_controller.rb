@@ -20,7 +20,7 @@ class BillsController < ApplicationController
   end
 
   def vote_on_bill
-    #bill = Bill.find(params[:id])
+    @bill = Bill.find(params[:id])
     current_user.vote_on(@bill, params[:value].to_sym)
     # need redirect
     redirect_to(@bill)
