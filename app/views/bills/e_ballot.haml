@@ -28,55 +28,58 @@
   %div#details
     Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
-- unless @user.registered?
-  %p
-    You haven't registered.
-    = link_to "Change that", users_geocode_path
+- unless @user.nil?
+  %p If you log-in you can do lots of fun things
 - else
-  - if @user
-    %div#vote_region
-      - if @bill.voted_on?(@user)
-        %p
-          you already voted
-          = @bill.users_vote(@bill)
-          on this bill. And, like congress, you can't change your vote.
-      - else
-        / restriction needed here
-        = form_tag "/bills/process_page" do
-          .form_row
-            %label{:for => "vote"} Vote:
-            - [ 'For', 'Against', 'Abstain', 'Present' ].each do |vote|
-              %br
-                = radio_button_tag 'vote', vote
-                = vote.humanize
-          %div#comments
-            %div#user_comment_region
-              = content_tag :div, :id => 'new_comment_form' do
-                %h5
-                  = hidden_field_tag "#{@bill.class.to_s.downcase.underscore}_id" , @bill.id.to_s
-                  = hidden_field_tag "chamber", @chamber
-                  = hidden_field_tag "bill_type", @bill_type
-                  .field
-                    = label_tag :comment
-                    = text_area_tag :comment, "", :rows => 5, :cols => 40, :placeholder => t(:be_polite)
-                  .field
-                    = label_tag :submit
-                    = submit_tag 'vote!'
-                    = submit_tag t(:cancel)
-    %h2 Bills you haven't voted on
-    %ul
-      - @unvoted_bills.each do |bill|
-        %li
-          = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
-
-    - unless @voted_bills.empty?
-      %h2 Bills you have voted on
+  - unless @user.registered?
+    %p
+      You haven't registered.
+      = link_to "Change that", users_geocode_path
+  - else
+    - if @user
+      %div#vote_region
+        - if @bill.voted_on?(@user)
+          %p
+            you already voted
+            = @bill.users_vote(@bill)
+            on this bill. And, like congress, you can't change your vote.
+        - else
+          / restriction needed here
+          = form_tag "/bills/process_page" do
+            .form_row
+              %label{:for => "vote"} Vote:
+              - [ 'For', 'Against', 'Abstain', 'Present' ].each do |vote|
+                %br
+                  = radio_button_tag 'vote', vote
+                  = vote.humanize
+            %div#comments
+              %div#user_comment_region
+                = content_tag :div, :id => 'new_comment_form' do
+                  %h5
+                    = hidden_field_tag "#{@bill.class.to_s.downcase.underscore}_id" , @bill.id.to_s
+                    = hidden_field_tag "chamber", @chamber
+                    = hidden_field_tag "bill_type", @bill_type
+                    .field
+                      = label_tag :comment
+                      = text_area_tag :comment, "", :rows => 5, :cols => 40, :placeholder => t(:be_polite)
+                    .field
+                      = label_tag :submit
+                      = submit_tag 'vote!'
+                      = submit_tag t(:cancel)
+      %h2 Bills you haven't voted on
       %ul
-        - @voted_bills.each do |bill|
+        - @unvoted_bills.each do |bill|
           %li
             = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
-    - else
-      %p
-        You haven't voted on any
-        = Bill.full_type(@bill_type)
-        's yet.
+
+      - unless @voted_bills.empty?
+        %h2 Bills you have voted on
+        %ul
+          - @voted_bills.each do |bill|
+            %li
+              = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
+      - else
+        %p
+          You haven't voted on any
+          = Bill.full_type(@bill_type)
+          's yet.
