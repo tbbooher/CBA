@@ -28,7 +28,7 @@
   %div#details
     Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
-- unless @user.nil?
+- if @user.nil?
   %p If you log-in you can do lots of fun things
 - else
   - unless @user.registered?
