@@ -357,6 +357,7 @@ class Bill
     # let's see if the file contains bill data
     # TODO - (we need to modify this to only read in the new rolls)
     # for right now, we can accept inefficiency
+    # somehow -- this might be calling faker (!)
     bill_list = Bill.all.map(&:govtrack_id)
 
     files.each do |bill_path|
@@ -367,9 +368,9 @@ class Bill
       # if 1. it is a bill roll
       #    2. if we are tracking that bill and
       #    3. if the date of the roll is more recent than the last date of the roll recorded
-      if bd = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)
-        bd = bd[1..3]
-        if bill_list.include?("#{bd[1].first}#{bd[0]}-#{bd[2]}") # do we have this bill
+      if bill_data = f.read.match(/\<bill session="(\d+)" type="(\w+)" number="(\d+)"/)
+        bill_data = bill_data[1..3]
+        if bill_list.include?("#{bill_data[1].first}#{bill_data[0]}-#{bill_data[2]}") # do we have this bill
           f.rewind
           feed = Feedzirra::Parser::RollCall.parse(f)
           date_for_update = Time.parse(feed.updated_time)
@@ -387,10 +388,10 @@ class Bill
                     raise "legislator #{v.member_id} not found"
                   end
                 end
-                puts "success with #{bd[0]}-#{bd[1].first}#{bd[2]}"
+                puts "success with #{bill_data[0]}-#{bill_data[1].first}#{bill_data[2]}"
                 b.save!
               else
-                puts "no need to run #{bd[0]}-#{bd[1].first}#{bd[2]}"
+                puts "no need to run #{bill_data[0]}-#{bill_data[1].first}#{bill_data[2]}"
               end
             else
               puts "bill listed by #{govtrack_id} not found"
@@ -402,11 +403,11 @@ class Bill
             Rails.logger.warn "#{f.path} is not a bill vote"
           end
         else
-          puts "we don't have the bill #{bd[2].first}#{bd[1]}-#{bd[3]}"
+          puts "we don't have the bill #{bill_data[2].first}#{bill_data[1]}-#{bill_data[3]}"
         end
       else
         puts "#{f.path} not a bill roll"
-        puts "for this ident: #{bd[0]}-#{bd[1]}#{bd[2]}" if bd
+        puts "for this ident: #{bill_data[0]}-#{bill_data[1]}#{bill_data[2]}" if bill_data
       end # check if bill roll
     end
   end
