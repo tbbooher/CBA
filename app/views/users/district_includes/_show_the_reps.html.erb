@@ -1,11 +1,13 @@
 <% content_for :maps do %>
-<script type="text/javascript">
-    var d_data = <%= render file: "#{Rails.root}/data/district_data/#{@district}.json" %>;
-</script>
+
 <% end %>
 
 <!-- representative information -->
 <p>Based on this address, your district is: <b><%= district %></b> in the state of <%= state.to_us_state %></p>
+
+<script type="text/javascript">
+    var d_data = <%= render file: "#{Rails.root}/data/district_data/#{@district}.json" %>;
+</script>
 
 <div id="users-district-display" style="width:500px; height:300px"></div>
 
