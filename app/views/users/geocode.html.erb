@@ -3,14 +3,13 @@
  <%#= render :partial => 'users/district_includes/map.js', :locals => {:district => @district, :coords => @coords} %>
 <p>Is this your district?</p>
 <%= @address_attempt %>
-
 <script type="text/javascript">
-    var d_data = <%= render file: "#{Rails.root}/data/district_data/#{@district}.json" %>;
+  <%= render partial: 'map_code.js', locals: {district: @district} %>
 </script>
 
 <%= form_tag 'district' do %>
     <p>Based on your ip address, your district is: <b><%= @district %></b> in the state of <%= @state.to_us_state %>.</p>
-    <%#= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@coords}&zoom=12&size=500x300&markers=#{@coords}&sensor=false" %>
+
     <div id="users-district-display" style="width:500px; height:300px"></div>
 
     <%= hidden_field_tag :location, @coords %>
