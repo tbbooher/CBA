@@ -40,16 +40,21 @@
       %div#vote_region
         - if @bill.voted_on?(@user)
           %p
-            you already voted
-            = @bill.users_vote(@bill)
-            on this bill. And, like congress, you can't change your vote.
+            You already voted
+            %b
+              = @bill.users_vote(@bill)
+            on this bill.
         - else
           / restriction needed here
+          :javascript
+            $(function()) {
+                $("#radio").buttonset();
+            }
           = form_tag "/bills/process_page" do
             .form_row
               %label{:for => "vote"} Vote:
-              - [ 'For', 'Against', 'Abstain', 'Present' ].each do |vote|
-                %br
+              %div#radio
+                - [ 'For', 'Against', 'Abstain', 'Present' ].each do |vote|
                   = radio_button_tag 'vote', vote
                   = vote.humanize
             %div#comments

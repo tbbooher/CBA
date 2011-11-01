@@ -37,6 +37,7 @@ class UpdateRolls < Thor
         else
           raise "legislator #{v.member_id} not found"
         end # legislator check
+        the_bill.save
       end # feed check
     else
       puts "we don't need to look at #{File.basename(f)} with category #{feed.bill_category}"
