@@ -20,7 +20,7 @@ class BillsController < ApplicationController
   end
 
   def vote_on_bill
-    #bill = Bill.find(params[:id])
+    @bill = Bill.find(params[:id])
     current_user.vote_on(@bill, params[:value].to_sym)
     # need redirect
     redirect_to(@bill)
@@ -164,24 +164,29 @@ class BillsController < ApplicationController
     user = current_user
     bill = Bill.find(params[:bill_id])
     # error checking here
-    case params[:vote]
-      when "For"
-        vote = :aye
-      when "Against"
-        vote = :nay
-      when "Abstain"
-        vote = :abstain
-      when "Present"
-        vote = :present
+    if params[:vote]
+      case params[:vote]
+        when "For"
+          vote = :aye
+        when "Against"
+          vote = :nay
+        when "Abstain"
+          vote = :abstain
+        when "Present"
+          vote = :present
+      end
+      comment = Comment.new
+      comment.comment = params[:comment].empty? ? "no comment" : params[:comment]
+      comment.name = user.name
+      comment.email = user.email
+      bill.comments << comment # need markup stuff . . .
+      user.vote_on(bill, vote)
+      bill.save! # <-- the key line
+      redirect_to e_ballot_path(params[:chamber], params[:bill_type], bill.id)
+    else
+      flash[:notice] = "Oops, you forgot to vote"
+      redirect_to :back
     end
-    comment = Comment.new
-    comment.comment = params[:comment]
-    comment.name = user.name
-    comment.email = user.email
-    bill.comments << comment # need markup stuff . . .
-    user.vote_on(bill, vote)
-    bill.save! # <-- the key line
-    redirect_to e_ballot_path(params[:chamber], params[:bill_type], bill.id)
   end
 
   def district_results
