@@ -3,6 +3,14 @@ class UpdateRolls < Thor
   ENV['RAILS_ENV'] ||= 'production'
   require File.expand_path('config/environment.rb')
 
+  desc "delete_all_member_votes", "deletes all member votes from all bills (DANGER!)"
+  def delete_all_member_votes
+    Bill.all.to_a.each do |b|
+      b.member_votes = []
+      b.save
+    end
+  end
+
   desc "update_rolls", "update the rolls of all bills"
   def update_rolls
     Dir.glob("#{Rails.root}/data/rolls/*.xml").sort_by { |f| f.match(/\/.+\-(\d+)\./)[1].to_i }.each do |bill_path|
@@ -21,8 +29,8 @@ class UpdateRolls < Thor
       the_bill.member_votes = []
       feed.roll_call.each do |v|
         if l = Legislator.where(govtrack_id: v.member_id).first
-          #puts "adding vote of #{Bill.get_value(v.member_vote)} for #{l.full_name}"
-          the_bill.member_votes << MemberVote.new(:value => Bill.get_value(v.member_vote), :legislator => l)
+          #puts "adding vote of #{get_value(v.member_vote)} for #{l.full_name}"
+          the_bill.member_votes << MemberVote.new(:value => get_value(v.member_vote), :legislator => l)
         else
           raise "legislator #{v.member_id} not found"
         end # legislator check
