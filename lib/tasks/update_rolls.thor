@@ -8,6 +8,7 @@ class UpdateRolls < Thor
     # use with caution
     Bill.all.to_a.each do |b|
       b.member_votes = []
+      b.roll_time = nil
       b.save
     end
   end
@@ -27,6 +28,7 @@ class UpdateRolls < Thor
     if the_bill = we_need_to_look_at_it(feed, govtrack_id)
       puts "Processing #{File.basename(f)} for #{govtrack_id}"
       # then go through each roll call and add the member vote
+      the_bill.roll_time = Time.now
       the_bill.member_votes = []
       feed.roll_call.each do |v|
         if l = Legislator.where(govtrack_id: v.member_id).first
