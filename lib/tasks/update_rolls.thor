@@ -5,6 +5,7 @@ class UpdateRolls < Thor
 
   desc "delete_all_member_votes", "deletes all member votes from all bills (DANGER!)"
   def delete_all_member_votes
+    # use with caution
     Bill.all.to_a.each do |b|
       b.member_votes = []
       b.save
