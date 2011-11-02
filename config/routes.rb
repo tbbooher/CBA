@@ -162,6 +162,6 @@ Cba::Application.routes.draw do
   end
 
   # ROOT
-  root :to => "home#index"
+  root :to => "bills#e_ballot"
 
 end
