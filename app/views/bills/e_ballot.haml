@@ -4,13 +4,6 @@
   Currently filtering by
   = Bill.full_type(@bill_type)
 
-%p
-  Pick a way to filter bills
-  = content_tag :div, {:class => 'vote_container'} do
-    = content_tag :ul, {:id => 'vote_list'} do
-      - @filter_options.each do |fo|
-        = content_tag(:li,link_to(Bill.full_type(fo), e_ballot_path(@chamber, fo)))
-s
 %div#bill_details
   %div#bill_title
     = @bill.bill_title

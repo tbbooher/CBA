@@ -122,14 +122,15 @@ class BillsController < ApplicationController
         # TODO -- sorted by the number of votes provided to that bill -- lower priority
         # you haven't voted on these bills
         #Bill.house_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
-        @voted_bills = all_bills.select { |b| b.bill_type == @bill_type } # also shown which result you like there
+        @voted_bills = all_bills.select { |b| b.bill_type != "hr" } # also shown which result you like there
         @unvoted_bills = Bill.house_bills.desc(:created_at).limit(10).all.to_a - @voted_bills
       else # it is a senate bill ballot
         @filter_options = ["s", "sr", "sc", "sj"]
         # sorted by the number of votes provided to that bill -- lower priority
         # Bill.senate_bills.where(bill_type: @bill_type).paginate(:page => params[:page], :per_page => 10)
         # ^^ can expand to eballot
-        @voted_bills = all_bills.select { |b| b.bill_type == @bill_type } # also sorted by your most recent vote with vote result displayed
+        @voted_bills = all_bills.select { |b| b.bill_type != "sr" }
+        # also sorted by your most recent vote with vote result displayed@bill_type
         @unvoted_bills = Bill.senate_bills.desc(:created_at).limit(10).all.to_a - @voted_bills
       end
     else
