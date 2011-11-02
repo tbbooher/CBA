@@ -47,16 +47,15 @@
         - else
           / restriction needed here
           :javascript
-            $(function()) {
-                $("#radio").buttonset();
-            }
+            $(function() {
+              $( "#radio" ).buttonset();
+            });
           = form_tag "/bills/process_page" do
             .form_row
-              %label{:for => "vote"} Vote:
-              %div#radio
+              #radio
                 - [ 'For', 'Against', 'Abstain', 'Present' ].each do |vote|
                   = radio_button_tag 'vote', vote
-                  = vote.humanize
+                  = label_tag "vote_#{vote}", vote.humanize
             %div#comments
               %div#user_comment_region
                 = content_tag :div, :id => 'new_comment_form' do
