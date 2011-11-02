@@ -1,9 +1,5 @@
 - title "#{@chamber.capitalize} Bills and voting page for #{@bill.bill_title}"
 
-%p
-  Currently filtering by
-  = Bill.full_type(@bill_type)
-
 %div#bill_details
   %div#bill_title
     = @bill.bill_title
