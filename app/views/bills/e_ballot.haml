@@ -16,7 +16,11 @@
     Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
 - if @user.nil?
-  %p If you log-in you can do lots of fun things
+  %p
+    = link_to "Sign up", new_user_registration_path
+    or
+    = link_to "Log in", new_user_session_path
+    be represented.
 - else
   - unless @user.registered?
     %p
