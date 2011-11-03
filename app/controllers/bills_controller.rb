@@ -116,15 +116,15 @@ class BillsController < ApplicationController
       @chamber == "house" ? @bill_type = "h" : @bill_type = "s"
     end
     if @user = current_user
-      all_bills = Vote.where(user_id: current_user.id).desc(:created_at).map { |v| v.bill }.uniq
+      user_voted_bills = Vote.where(user_id: current_user.id).desc(:created_at).map { |v| v.bill }.uniq
       if @chamber == "house"
-        @filter_options = ["h", "hc", "hj", "hr"]
+        #@filter_options = ["h", "hc", "hj", "hr"]
         # TODO -- sorted by the number of votes provided to that bill -- lower priority
-        @voted_bills = all_bills.select { |b| b.bill_type != "hr" } # also shown which result you like there
+        @voted_bills = user_voted_bills.select { |b| b.bill_type != "hr" && b.bill_ } # also shown which result you like there
         @unvoted_bills = Bill.house_bills.desc(:created_at).all.to_a - @voted_bills
       else # it is a senate bill ballot
-        @filter_options = ["s", "sr", "sc", "sj"]
-        @voted_bills = all_bills.select { |b| b.bill_type != "sr" }
+        #@filter_options = ["s", "sr", "sc", "sj"]
+        @voted_bills = user_voted_bills.select { |b| b.bill_type != "sr" &&  }
         @unvoted_bills = Bill.senate_bills.desc(:created_at).all.to_a - @voted_bills
       end
     else
