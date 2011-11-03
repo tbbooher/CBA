@@ -59,12 +59,14 @@
                       = submit_tag t(:cancel)
       %h2 Bills you haven't voted on
       %ul
+        = will_paginate @unvoted_bills
         - @unvoted_bills.each do |bill|
           %li
             = link_to "#{bill.bill_title}", e_ballot_path(@chamber, bill.bill_type, bill.id)
 
       - unless @voted_bills.empty?
         %h2 Bills you have voted on
+
         %ul
           - @voted_bills.each do |bill|
             %li
