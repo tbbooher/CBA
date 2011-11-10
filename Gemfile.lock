@@ -10,8 +10,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.5)
-    RedCloth (4.2.5-x86-mingw32)
+    RedCloth (4.2.3)
     XMLCanonicalizer (1.0.1)
       log4r (>= 1.0.4)
     ZenTest (4.5.0)
@@ -385,7 +384,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  RedCloth (= 4.2.5)
+  RedCloth (= 4.2.3)
   ZenTest (= 4.5.0)
   albino
   autotest
