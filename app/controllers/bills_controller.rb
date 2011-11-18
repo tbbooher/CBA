@@ -227,17 +227,20 @@ class BillsController < ApplicationController
     # future case
     # but can also be ordered by popularity, number of votes, number of comments, number of votes by district members,
     # or searchable.
-    @user = current_user
-
-    if params[:chamber] == "house"
-      @chamber = "house"
-      @bills = @user.bills_voted_on(:house).paginate(:page => params[:page], :per_page => 10)
+    if @user = current_user
+      if params[:chamber] == "house"
+        @chamber = "house"
+        @bills = @user.bills_voted_on(:house).paginate(:page => params[:page], :per_page => 10)
+      else
+        @chamber = "senate"
+        @pg_state = PolcoGroup.where(name: @user.us_state, type: :state).first
+        @bills = @user.bills_voted_on(:senate).paginate(:page => params[:page], :per_page => 10)
+      end
     else
-      @chamber = "senate"
-      @pg_state = PolcoGroup.where(name: @user.us_state, type: :state).first
-      @bills = @user.bills_voted_on(:senate).paginate(:page => params[:page], :per_page => 10)
+      flash[:notice] = 'You need to be logged in'
+      redirect_to :back
+      # @bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
     end
-    #@bills = Bill.house_bills.paginate(:page => params[:page], :per_page => 10)
   end
 
 end
