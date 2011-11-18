@@ -24,10 +24,10 @@
         %td= link_to bill.bill_title, bill
         %td= bill.users_vote(@user)
         - if @chamber == 'house'
-          %td= @user.get_district.get_votes_tally(bill)
+          %td= @user.get_district.format_votes_tally(bill)
           %td= @user.reps_vote_on(bill)
         - else
-          %td= short_tally(@pg_state.get_votes_tally(bill)) unless @pg_state.nil?
+          %td= short_tally(@pg_state.format_votes_tally(bill)) unless @pg_state.nil?
           %td= @user.senators_vote_on(bill)
         %td
           - if bill.member_votes.empty?
