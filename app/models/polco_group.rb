@@ -102,6 +102,11 @@ class PolcoGroup
     process_votes(self.votes.where(bill_id: bill.id).all.to_a)
   end
 
+  def format_votes_tally(bill)
+    v = process_votes(self.votes.where(bill_id: bill.id).all.to_a)
+    "#{v[:ayes]}, #{v[:nays]}, #{v[:abstains]}"
+  end
+
   def senators
     if self.type == :state
       Legislator.senators.where(state: self.name).all.to_a
