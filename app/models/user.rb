@@ -105,6 +105,7 @@ class User
 
   def bills_voted_on(chamber)
     # the bills in the table are ordered by most recent at the top
+    # this should be a proper query
     votes = self.votes.all.to_a.select{|v| v.bill.chamber == chamber}.sort_by(&:created_at).map(&:bill).uniq
   end
 
@@ -382,7 +383,7 @@ class User
         raise "no representative found for #{self.name}"
       end
     else
-      out = "no vote available"
+      out = "Vote has not yet occured"
     end
     out
   end

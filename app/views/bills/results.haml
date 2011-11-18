@@ -29,10 +29,10 @@
         - else
           %td= short_tally(@pg_state.get_votes_tally(bill)) unless @pg_state.nil?
           %td= @user.senators_vote_on(bill)
-        %td= bill.passed? ? "Passed" : "Failed"
+        %td
+          - if bill.member_votes.empty?
+            "Not voted on yet"
+          - else
+            - bill.passed? ? "Passed" : "Failed"
 - else
   There are no bills that have been voted on (sounds like I need to pull rolls)
-
-
-
-
