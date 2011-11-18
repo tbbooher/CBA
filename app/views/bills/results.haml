@@ -31,7 +31,7 @@
           %td= @user.senators_vote_on(bill)
         %td
           - if bill.member_votes.empty?
-            "Not voted on yet"
+            Not voted on yet
           - else
             - bill.passed? ? "Passed" : "Failed"
 - else
