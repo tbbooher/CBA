@@ -72,7 +72,6 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
-    chronic (0.6.4)
     cocaine (0.2.0)
     coffee-script (2.2.0)
       coffee-script-source
@@ -379,9 +378,6 @@ GEM
     webmock (1.7.6)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
-    whenever (0.7.0)
-      activesupport (>= 2.3.4)
-      chronic (~> 0.6.3)
     will_paginate (3.0.pre4)
     win32-api (1.4.8-x86-mingw32)
     win32-process (0.6.5)
@@ -473,6 +469,5 @@ DEPENDENCIES
   unicorn
   vcr
   webmock (>= 1.7.0)
-  whenever
   will_paginate (= 3.0.pre4)
   yard
