@@ -31,6 +31,7 @@ class BillsController < ApplicationController
   def show
     #modified by nate
     @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
+    # this will fail if a user is not logged in
     @user = current_user
     # need to remove extra data
     @PolcoGroups=@user.non_district_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)

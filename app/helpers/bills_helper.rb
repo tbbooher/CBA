@@ -26,7 +26,7 @@ module BillsHelper
 
   def determine_rep_vote(rep_vote, district)
     #<%= rep_vote[:rep] + "," + .to_s %>
-    unless rep_vote == "no vote available"
+    unless rep_vote == "Vote has not yet occured"
       case rep_vote[:vote]
         when :aye
           action = "voted for this bill"
