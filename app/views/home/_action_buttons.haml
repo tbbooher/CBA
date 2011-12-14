@@ -1,17 +1,15 @@
--# Tools for the app
-=# link_to( 'PivotalTracker', pivotal_tracker_project, :target => 'ext_tools') if pivotal_tracker_project
-=# link_to( 'Github', github_project, :target => 'ext_tools' ) if github_project
+%h4 Admin Actions
 
--# Actions
-= link_to( t(:new_page), new_page_path ) if can? :manage, Page
-= link_to( t(:new_blog), new_blog_path ) if can? :manage, Blog
-= link_to( t(:manage_templates), templates_pages_path) if can? :manage, PageTemplate
-= link_to( t(:manage_menus), site_menus_path) if can? :manage, SiteMenu
+%span{class: 'label notice'} Notice
 
--# Communications
-= link_to( (twitter_name||'Twitter'), twitter_link, :target => 'ext_tools') if twitter_link
+%ul
+  %li= link_to( t(:new_page), new_page_path ) if can? :manage, Page
+  %li= link_to( t(:new_blog), new_blog_path ) if can? :manage, Blog
+  %li= link_to( t(:manage_templates), templates_pages_path) if can? :manage, PageTemplate
+  %li= link_to( t(:manage_menus), site_menus_path) if can? :manage, SiteMenu
 
--# Draft Mode
+  %li= link_to( (twitter_name||'Twitter'), twitter_link, :target => 'ext_tools') if twitter_link
+
 - if current_role?(:author)
   - if session[:draft_mode]
     = link_to t(:hide_drafts), draft_mode_path(0)

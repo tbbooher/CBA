@@ -1,145 +1,134 @@
 <!DOCTYPE html>
 
 <% if content_for? :resource_actions %>
-   <% content_for :right_column_top do %>
-     <div id='resource-actions'>
-       <%= yield( :resource_actions) %>
-     </div>
-   <% end %>
+    <% content_for :right_column_top do %>
+        <div id='resource-actions'>
+          <%= yield(:resource_actions) %>
+        </div>
+    <% end %>
 <% end %>
 
 <html lang='<%= I18n.locale.to_s -%>'>
-  <head>
-    <title><%=
-         raw(strip_tags((APPLICATION_CONFIG['title_prefix']+
-         " "+
-         yield(:title))))
-    -%></title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="/favicon.png" />
-    <%= insert_extra_headers %>
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" -%>
-    
-    <%= javascript_include_tag "application" %>
-    <!-- prototype-lib will be loaded only when needed -->
-    <%= javascript_tag do %>
-      <%= "var google_api_key = '#{GOOGLE_PLACE_API_KEY}';" -%>
-    <% end %>
-    <%= yield :prototype %>
-    <%= yield :head %>
-    <%= auto_discovery_link_tag(:atom, "/feed") %>
-    <%= insert_google_analytics_script if  (Rails.env == 'production') %>
-    <% if APPLICATION_CONFIG['twitter_profile'] %>
-      <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['twitter_profile'] -%>"/>
-    <% end %>    
-    <% if APPLICATION_CONFIG['google_profile'] %>
-      <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['google_profile'] -%>"/>
-    <% end %>    
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <%= csrf_meta_tag %>
-  </head>
-  <body>
-    <% setup_action_buttons %>
-    <% if content_for? :action_buttons %>
-      <div id='action_buttons'>
-          <%= yield(:action_buttons) %>
-      </div>
-    <% end %>
-    <div id='overlay' class="ui-widget-content"></div>
-    <div id='scroll-to-top'>
-      <%= link_to image_tag("arrow_up_small.png"), '#', :title => t(:scroll_to_top) %>
-      <span id='scroll-position'></span>
-    </div>
-    <div id="banner">
-      <%= render :partial => '/layouts/banner' %>
-    </div>
+<head>
+  <title><%=
+      raw(strip_tags((APPLICATION_CONFIG['title_prefix']+
+              " "+
+              yield(:title))))
+  -%></title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" href="/favicon.png"/>
+  <%= insert_extra_headers %>
+  <%= stylesheet_link_tag "application" %>
+  <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+  </style>
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" -%>
 
-    <div id="session">
+  <%= javascript_include_tag "application" %>
+  <!-- prototype-lib will be loaded only when needed -->
+  <%= javascript_tag do %>
+      <%= "var google_api_key = '#{GOOGLE_PLACE_API_KEY}';" -%>
+  <% end %>
+  <%= yield :prototype %>
+  <%= yield :head %>
+  <%= auto_discovery_link_tag(:atom, "/feed") %>
+  <%= insert_google_analytics_script if  (Rails.env == 'production') %>
+  <% if APPLICATION_CONFIG['twitter_profile'] %>
+      <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['twitter_profile'] -%>"/>
+  <% end %>
+  <% if APPLICATION_CONFIG['google_profile'] %>
+      <link rel="me" type="text/html" href="<%= APPLICATION_CONFIG['google_profile'] -%>"/>
+  <% end %>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#">Polco</a>
+      <ul class="nav">
+        <%= render 'home/menu/application' %>
+      </ul>
+      <div class="pull-right">
         <ul>
-          <%= render 'home/menu/application' %>
-        </ul>
-        <ul style='float: right;'>
           <%= render 'devise/menu/registration_items' %>
           <%= render 'devise/menu/login_items' %>
-          <%#= render '/home/menu/language_selection' %>
         </ul>
+      </div>
     </div>
+  </div>
 
+  <div id='overlay' class="ui-widget-content"></div>
 
-    <% if current_root(self) %>
-      <div class='submenu_box'>
-        <div id='searchbox'>
-          <%= render 'search/form' %>
-        </div>
-        <ul>
-        <%=
-            raw(
-              build_submenu_box(current_root(self)) do |entry|
-                "<li>"+ entry +"</li>"
-              end
-            )
-        %>
-        </ul>
-        <div id='tagcloud'>
-          <%= tag_cloud -%>
-        </div>
-      </div>
-      <div class='clear'></div>
-      
-      <div id='copyright'>
-        <a href='http://www.pledgie.com/campaigns/15849'><img 
-               alt='Click here to lend your support to: CBA and make a donation at www.pledgie.com !' 
-               src='http://www.pledgie.com/campaigns/15849.png?skin_name=chrome' border='0' /></a>
-        <br />
-           © <%= Time.now.year %> by <%= link_to APPLICATION_CONFIG['copyright'], APPLICATION_CONFIG['copyright_url'] %>
-      </div>
-      
-    <% end %>
-    <div class='main-frame'>      
-      <div id='flashes'>
-        <% flash.each do |name, msg| %>
+  <div class='main-frame'>
+    <div id='flashes'>
+      <% flash.each do |name, msg| %>
           <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
-        <% end %>
+      <% end %>
 
-        <% if user_signed_in? && current_user.user_notifications.displayed.any? %>
+      <% if user_signed_in? && current_user.user_notifications.displayed.any? %>
           <% unless params[:controller] == 'user_notifications' || session[:hide_notifications] == true -%>
-            <%= content_tag :div, :id => 'user_notifications' do %>
-              <%= render :partial => 'users/notifications',:locals => {:user_notifications => current_user.user_notifications.displayed } %>
-            <% end %>
+              <%= content_tag :div, :id => 'user_notifications' do %>
+                  <%= render :partial => 'users/notifications', :locals => {:user_notifications => current_user.user_notifications.displayed} %>
+              <% end %>
           <% end %>
-        <% end %>
-      </div>
-      <div id="container">
-              
-        <% if content_for?( :right_column) || content_for?(:right_column_top) %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="sidebar">
+    <div class="well">
+      <% if content_for?(:right_column) || content_for?(:right_column_top) %>
           <div id='right-column'>
             <% if content_for?(:right_column_top) %>
-              <div id='right-column-top'>
-                <%= yield(:right_column_top)    %>
-              </div>
+                <div id='right-column-top'>
+                  <%= yield(:right_column_top) %>
+                </div>
             <% end %>
             <div id='right-column-bottom'>
               <%= yield(:right_column) if content_for?(:right_column) %>
             </div>
           </div>
-        <% end %>
-        
-        <!--
-        <div class='google-search'>
-           %= insert_google_site_search %
-        </div>
-        -->
-        <div id='container_main'>
-          <!-- google_search div id="cse" style="display: hidden; background: #fee;"></div -->
-          <%= content_tag(:h1,:id => 'title') do yield(:title) end if show_title? %>
-          <%= yield %>
-          <div style='clear: both;'></div>
-        </div>
+      <% end %>
+      <div id='searchbox'>
+        <%= render 'search/form' %>
       </div>
-      <div class='clear'></div> 
+      <ul>
+        <%=
+            raw(
+                    build_submenu_box(current_root(self)) do |entry|
+                        "<li>"+ entry +"</li>"
+                    end
+            )
+        %>
+      </ul>
+      <div id='tagcloud'>
+        <%= tag_cloud -%>
+      </div>
+      <% setup_action_buttons %>
+      <% if content_for? :action_buttons %>
+        <div id='action_buttons'>
+          <%= yield(:action_buttons) %>
+        </div>
+      <% end %>
     </div>
-    <div class='clear'></div>
+  </div>
 
-  </body>
+  <div class="content">
+    <%= content_tag(:h1, :id => 'title') do
+        yield(:title)
+    end if show_title? %>
+    <%= yield %>
+    <footer><p>© Polco 2011</p></footer>
+  </div>
+</div>
+
+</body>
 </html>

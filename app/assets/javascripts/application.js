@@ -12,4 +12,8 @@
 //= require jsort_sortable
 //= require progress_upload_field
 //= require autocomplete
+// FOR TWITTER BOOTSTRAP
+//= require bootstrap-scrollspy
+//= require bootstrap-modal
+//= require bootstrap-dropdown
 //= require_tree .

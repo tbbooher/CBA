@@ -11,7 +11,7 @@ Cba::Application.configure do
 
   # debug js
   config.assets.debug = true
-  config.assets.compress = false
+  config.assets.compress = true
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true

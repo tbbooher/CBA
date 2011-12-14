@@ -57,13 +57,11 @@ module BillsHelper
   end
 
   def display_vote_options
-    content_tag :div, {:class => 'vote_container'} do
-      content_tag :ul, {:id => 'vote_list'} do
-        content_tag(:li, link_to("Yes", vote_on_bill_path(@bill, "aye"))) +
-            content_tag(:li, link_to("No", vote_on_bill_path(@bill, "nay"))) +
-            content_tag(:li, link_to("Abstain", vote_on_bill_path(@bill, "abstain"))) +
-            content_tag(:li, link_to("Present", vote_on_bill_path(@bill, "present")))
-      end
+    content_tag :div, {:class => 'well', :style => "padding: 16px 19px;"} do
+        content_tag(:span, link_to("Yes", vote_on_bill_path(@bill, "aye"), class: "btn small")) +
+            content_tag(:span, link_to("No", vote_on_bill_path(@bill, "nay"), class: "btn small")) +
+            content_tag(:span, link_to("Abstain", vote_on_bill_path(@bill, "abstain"), class: "btn small")) +
+            content_tag(:span, link_to("Present", vote_on_bill_path(@bill, "present"), class: "btn small"))
     end
   end
 

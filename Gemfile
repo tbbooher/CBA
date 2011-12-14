@@ -56,7 +56,7 @@ gem 'mongoid_session_store'
 
 # Bundle gems for views
 gem "haml"
-gem "will_paginate", "3.0.pre4"
+gem "kaminari"
 gem 'escape_utils'
 gem "RedCloth", "4.2.3" #"4.2.4.pre3 doesn't work with ruby 1.9.2-p180
 gem 'stamp'
@@ -146,3 +146,5 @@ end
 #gem "ruby-debug-base19", :git => "git://github.com/JetBrains/ruby-debug-base19.git"
 #gem 'factory_girl_rails', "1.1.0"
 #gem 'mongoid_counter_cache'
+
+gem 'bootstrap-sass', '~> 1.4.2'

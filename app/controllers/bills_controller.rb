@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.xml
   def index
-    @bills = Bill.all.paginate(:page => params[:page], :per_page => 20)
+    @bills = Bill.page(params[:page]).per_page(20)
     #@bills = Bill.all.select{|b| b.activity?}.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
@@ -135,13 +135,13 @@ class BillsController < ApplicationController
         # .desc(:created_at)
         #@unvoted_bills = (Bill.house_bills.desc(:created_at).all.to_a - @voted_bills).paginate(:page => params[:page], :per_page => 10)
         @unvoted_bills = Bill.house_bills.
-            where(:_id.nin => voted_bill_ids).paginate :page => params[:page], :per_page => 10
+            where(:_id.nin => voted_bill_ids).page(params[:page]).per_page(10)
       else # it is a senate bill ballot
         #@filter_options = ["s", "sr", "sc", "sj"]
         @voted_bills = Bill.
             where(:bill_type.ne => "sr", :title => /^s/).for_ids voted_bill_ids
         @unvoted_bills = Bill.senate_bills.
-            where(:_id.nin => voted_bill_ids).paginate :page => params[:page], :per_page => 10
+            where(:_id.nin => voted_bill_ids).page(params[:page]).per_page(10)
         #@voted_bills = user_voted_bills.select { |b| b.bill_type != "sr" && b.title[0] = 's' }
         #@unvoted_bills = (Bill.senate_bills.desc(:created_at).all.to_a - @voted_bills).paginate(:page => params[:page], :per_page => 10)
       end

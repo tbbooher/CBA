@@ -53,6 +53,8 @@ GEM
       ZenTest (= 4.5)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    bootstrap-sass (1.4.2)
+      sass-rails (~> 3.1.0)
     bson (1.4.0)
     bson_ext (1.4.0)
     builder (3.0.0)
@@ -163,6 +165,8 @@ GEM
     json_pure (1.6.1)
     jsort (0.0.2)
       jquery-rails
+    kaminari (0.12.4)
+      rails (>= 3.0.0)
     kgio (2.6.0)
     launchy (2.0.3)
     libv8 (3.3.10.2)
@@ -378,7 +382,6 @@ GEM
     webmock (1.7.6)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
-    will_paginate (3.0.pre4)
     win32-api (1.4.8-x86-mingw32)
     win32-process (0.6.5)
       windows-pr (>= 1.1.2)
@@ -402,6 +405,7 @@ DEPENDENCIES
   autotest
   autotest-growl
   autotest-rails
+  bootstrap-sass (~> 1.4.2)
   bson_ext
   cancan
   capistrano
@@ -432,6 +436,7 @@ DEPENDENCIES
   json
   json_pure
   jsort (~> 0.0.1)
+  kaminari
   launchy
   mocha
   mongoid!
@@ -469,5 +474,4 @@ DEPENDENCIES
   unicorn
   vcr
   webmock (>= 1.7.0)
-  will_paginate (= 3.0.pre4)
   yard
