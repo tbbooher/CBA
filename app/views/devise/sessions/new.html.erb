@@ -1,28 +1,41 @@
 <% title t(:sign_in) %>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div class='field'><%= f.label :email %>
-  <%= f.text_field :email %></div>
+  <fieldset>
+      <div class='clearfix'>
+        <%= f.label :email %>
+        <div class="input">
+          <%= f.text_field :email %>
+        </div>
+      </div>
 
-  <div class='field'><%= f.label :password %>
-  <%= f.password_field :password %></div>
+      <div class='clearfix'>
+        <%= f.label :password %>
+        <div class="input">
+          <%= f.password_field :password %>
+        </div>
+      </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class='field'><%= f.label :remember_me %>
-     <%= f.check_box :remember_me %> <%= t(:stay_logged_in)%></div>
-  <% end -%>
+      <% if devise_mapping.rememberable? -%>
+        <div class='clearfix'>
+          <%= f.label :remember_me %>
+          <div class="input">
+            <%= f.check_box :remember_me %> <%= t(:stay_logged_in)%>
+          </div>
+        </div>
+      <% end -%>
 
-  <div class='field'>
-    <%= f.label :sign_in, sc(:nbsp).html_safe %>
-    <%= f.submit t(:sign_in), :class => "button save" %>
-  </div>
+      <div class='actions'>
+        <%= f.label :sign_in, sc(:nbsp).html_safe %>
+        <div class="input">
+          <%= f.submit t(:sign_in), :class => "btn primary" %>
+        </div>
+      </div>
+  </fieldset>
 <% end %>
 
 <h2><%= t(:or_user_omni_auth) -%></h2>
 
 <%= render '/authentications/authentications' %>
-
-
-
 
 <%= render :partial => "devise/shared/links" %>

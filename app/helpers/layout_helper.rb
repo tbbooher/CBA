@@ -73,7 +73,7 @@ module LayoutHelper
   def render_pagination_box paginations
     if paginations.total_pages > 1
       haml_tag(".pagination_box") do
-        concat(will_paginate(paginations))
+        concat(paginate(paginations))
       end
     end
   end

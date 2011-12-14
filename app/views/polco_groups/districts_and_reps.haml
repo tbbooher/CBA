@@ -22,7 +22,7 @@
       %td= image_tag legislator.image_location_small
       %td= legislator.party
 
-= will_paginate @legislators
+= paginate @legislators
 
 %p.center
   = "Roll Call"
@@ -48,7 +48,7 @@
       %td= bill_result[:abstains]
       %td= bill.passed? ? "Yes" : "No"
 
-= will_paginate @bills
+= paginate @bills
 
 -#<!--Need to add Comments section-->
 -#<%#= link_to 'New Legislator', new_legislator_path %>

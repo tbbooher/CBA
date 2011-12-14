@@ -1,21 +1,19 @@
-- title "#{@chamber.capitalize} Bills and voting page for #{@bill.bill_title}"
+- title @bill.bill_title
 
-%p
-  Pick a chamber (on left?)
-  = link_to "senate", e_ballot_path('senate')
-  or
-  = link_to "house", e_ballot_path('house')
+- content_for :right_column do
+  %h5 Chamber:
+  #filter_by_chamber
+    %p
+      = link_to "senate", e_ballot_path('senate'), class: 'btn'
+      = link_to "house", e_ballot_path('house'), class: 'btn primary'
 
-
-%div#bill_details
-  %div#bill_title
-    = @bill.bill_title
-  %div#short_description
+#bill_details.hero-unit
+  #short_description
     %p
       = @bill.long_title
     %p
       = link_to "More details", bill_path(@bill)
-  %div#details
+  #details
     Sponsored by
     = link_to @legislator.full_name, legislator_path(@legislator.id)
 - if @user.nil?
@@ -57,15 +55,18 @@
                     = hidden_field_tag "#{@bill.class.to_s.downcase.underscore}_id" , @bill.id.to_s
                     = hidden_field_tag "chamber", @chamber
                     = hidden_field_tag "bill_type", @bill_type
-                    .field
+                    .clearfix
                       = label_tag :comment
-                      = text_area_tag :comment, "", :rows => 5, :cols => 40, :placeholder => t(:be_polite)
+                      .input
+                        = text_area_tag :comment, "", class: 'span8'
+                        %span.help-block= t(:be_polite)
               .actions
                 = label_tag :submit
-                = submit_tag 'vote!'
-                = submit_tag t(:cancel)
+                .input
+                  = submit_tag 'vote!', class: 'btn primary'
+                  = submit_tag t(:cancel), class: 'btn'
       %h2 Bills you haven't voted on
-      = will_paginate @unvoted_bills
+      = paginate @unvoted_bills
       %ul
         - @unvoted_bills.each do |bill|
           %li

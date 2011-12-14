@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.xml
   def index
-    @bills = Bill.page(params[:page]).per_page(20)
+    @bills = Bill.page(params[:page]).per(20)
     #@bills = Bill.all.select{|b| b.activity?}.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
@@ -30,11 +30,11 @@ class BillsController < ApplicationController
   # GET /bills/1.xml
   def show
     #modified by nate
-    @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).paginate(:page => params[:page], :per_page => 10)
+    @districts = PolcoGroup.districts.where(:vote_count.gt => 0).desc(:member_count).page(params[:page]).per(10)
     # this will fail if a user is not logged in
     @user = current_user
     # need to remove extra data
-    @PolcoGroups=@user.non_district_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
+    @PolcoGroups=@user.non_district_groups_for_bill(@bill).page(params[:page]).per(10)
     #@PolcoGroups=@user.all_groups_for_bill(@bill).paginate(:page => params[:page], :per_page => 10)
     @rolled = (@bill.member_votes.size > 0)
 
@@ -135,13 +135,13 @@ class BillsController < ApplicationController
         # .desc(:created_at)
         #@unvoted_bills = (Bill.house_bills.desc(:created_at).all.to_a - @voted_bills).paginate(:page => params[:page], :per_page => 10)
         @unvoted_bills = Bill.house_bills.
-            where(:_id.nin => voted_bill_ids).page(params[:page]).per_page(10)
+            where(:_id.nin => voted_bill_ids).page(params[:page]).per(10)
       else # it is a senate bill ballot
         #@filter_options = ["s", "sr", "sc", "sj"]
         @voted_bills = Bill.
             where(:bill_type.ne => "sr", :title => /^s/).for_ids voted_bill_ids
         @unvoted_bills = Bill.senate_bills.
-            where(:_id.nin => voted_bill_ids).page(params[:page]).per_page(10)
+            where(:_id.nin => voted_bill_ids).page(params[:page]).per(10)
         #@voted_bills = user_voted_bills.select { |b| b.bill_type != "sr" && b.title[0] = 's' }
         #@unvoted_bills = (Bill.senate_bills.desc(:created_at).all.to_a - @voted_bills).paginate(:page => params[:page], :per_page => 10)
       end
@@ -203,8 +203,8 @@ class BillsController < ApplicationController
   end
 
   def district_results
-    @districts = PolcoGroup.districts.desc(:member_count).paginate(:page => params[:page], :per_page => 10)
-    @bills = Bill.house_roll_called_bills.all.paginate(:page => params[:page], :per_page => 10)
+    @districts = PolcoGroup.districts.desc(:member_count).page(params[:page]).per(10)
+    @bills = Bill.house_roll_called_bills.all.page(params[:page]).per(10)
     #@comments = Bill.comments.sort_by{|c| c.}
 
     respond_to do |format|
@@ -231,11 +231,11 @@ class BillsController < ApplicationController
     if @user = current_user
       if params[:chamber] == "house"
         @chamber = "house"
-        @bills = @user.bills_voted_on(:house).paginate(:page => params[:page], :per_page => 10)
+        @bills = @user.bills_voted_on(:house).page(params[:page]).per(10)
       else
         @chamber = "senate"
         @pg_state = PolcoGroup.where(name: @user.us_state, type: :state).first
-        @bills = @user.bills_voted_on(:senate).paginate(:page => params[:page], :per_page => 10)
+        @bills = @user.bills_voted_on(:senate).page(params[:page]).per(10)
       end
     else
       flash[:notice] = 'You need to be logged in'

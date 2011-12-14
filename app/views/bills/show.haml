@@ -33,7 +33,7 @@
   %p{:align => "center"}
     = "District Tallies"
 
-  = will_paginate @districts
+  = paginate @districts
 
   %table.polco_table
     %tr
@@ -56,7 +56,7 @@
     = "Joined & Followed Groups"
     %p Drop-Down Box Search Box
 
-  = will_paginate @PolcoGroups
+  = paginate @PolcoGroups
 
   %table.polco_table
     %tr

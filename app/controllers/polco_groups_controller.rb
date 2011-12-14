@@ -5,11 +5,11 @@ class PolcoGroupsController < ApplicationController
   # GET /polco_groups
   # GET /polco_groups.xml
   def index
-    #@polco_groups = PolcoGroup.all.paginate(:page => params[:page], :per_page =>  20) # where(name: /#{params[:q]}/i)
+    #@polco_groups = PolcoGroup.all.page(params[:page]).per(20) # where(name: /#{params[:q]}/i)
     @groups = Hash.new
-    @groups[:states] = PolcoGroup.states.all.paginate(:page => params[:page], :per_page =>  20)
-    @groups[:districts] = PolcoGroup.districts.all.paginate(:page => params[:page], :per_page =>  20)
-    @groups[:customs] = PolcoGroup.customs.all.paginate(:page => params[:page], :per_page =>  20)
+    @groups[:states] = PolcoGroup.states.page(params[:page]).per(20)
+    @groups[:districts] = PolcoGroup.districts.page(params[:page]).per(20)
+    @groups[:customs] = PolcoGroup.customs.page(params[:page]).per(20)
 
     respond_to do |format|
       format.html # index.haml
@@ -153,14 +153,14 @@ class PolcoGroupsController < ApplicationController
   end
 
   def districts_and_reps
-    @legislators = Legislator.legislator_search(params[:legislator_search]).paginate(:page => params[:page], :per_page =>  10)
-    @bills = Bill.bill_search(params[:bill_search]).paginate(:page => params[:page], :per_page => 10)
+    @legislators = Legislator.legislator_search(params[:legislator_search]).page(params[:page]).per(10)
+    @bills = Bill.bill_search(params[:bill_search]).page(params[:page]).per(10)
   end
 
   def states_and_senators
-    @states = PolcoGroup.states.paginate(:page => params[:page], :per_page =>  10)
-    #Legislator.senators.paginate(:page => params[:page], :per_page =>  10)
-    @bills = Bill.senate_bills.paginate(:page => params[:page], :per_page => 10)
+    @states = PolcoGroup.states.page(params[:page]).per(10)
+    #Legislator.senators.page(params[:page]).per(10)
+    @bills = Bill.senate_bills.page(params[:page]).per(10)
   end
 
   private

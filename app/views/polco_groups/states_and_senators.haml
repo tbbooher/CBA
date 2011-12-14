@@ -21,7 +21,7 @@
       %td= link_to senators[:junior_senator].last_name, senators[:junior_senator]
 
 
-= will_paginate @states
+= paginate @states
 
 %p{:style => "text-align: center"}
   = "Roll Call"
@@ -49,4 +49,4 @@
       %td= bill_result[:abstains]
       %td= bill.passed? ? "Passed" : "Failed"
 
-= will_paginate @bills
+= paginate @bills

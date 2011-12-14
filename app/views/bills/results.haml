@@ -5,7 +5,7 @@
 %p.center
   = "Roll Call Popularity Search"
 
-= will_paginate @bills
+= paginate @bills
 - unless @bills.empty?
   %table.center{:align => "center"}
     %tr

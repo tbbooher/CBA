@@ -7,9 +7,9 @@ class LegislatorsController < ApplicationController
   def index
     #.order(sort_column + " " + sort_direction)
     # added by nate
-    @legislators = Legislator.legislator_search(params[:legislator_search]).paginate(:page => params[:page], :per_page =>  10)
+    @legislators = Legislator.legislator_search(params[:legislator_search]).page(params[:page]).per(10)
     # added by nate
-    @bills = Bill.bill_search(params[:bill_search]).paginate(:page => params[:page], :per_page => 10)
+    @bills = Bill.bill_search(params[:bill_search]).page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -30,10 +30,10 @@ class LegislatorsController < ApplicationController
 
     @title = "112th Congress: #{@polco_group.name} &mdash; #{@legislator.full_title}"
 
-    @bills = (Bill.all.to_a - Bill.introduced_house_bills).paginate(:page => params[:page], :per_page => 20)
+    @bills = (Bill.all.to_a - Bill.introduced_house_bills).page(params[:page]).per(20)
 
-    @members   = @polco_group.members.paginate(:page => params[:page], :per_page => 10)
-    @followers = @polco_group.followers.paginate(:page => params[:page], :per_page => 10)
+    @members   = @polco_group.members.page(params[:page]).per(10)
+    @followers = @polco_group.followers.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # show.haml

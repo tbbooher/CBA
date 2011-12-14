@@ -9,8 +9,7 @@ class UsersController < ApplicationController
     @user_count = User.count
     @users = User.all.reject { |u|
       !can? :read, u
-    }.paginate(:page => params[:page],
-               :per_page => CONSTANTS['paginate_users_per_page'])
+    }.page(params[:page]).per(CONSTANTS['paginate_users_per_page'])
 
     respond_to do |format|
       format.js

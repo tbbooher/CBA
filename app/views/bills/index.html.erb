@@ -1,7 +1,7 @@
 <% title "All Bills" %>
 <%# javascript 'endless_page' %>
 
-  <%= will_paginate @bills %>
+  <%= paginate @bills %>
 
 <% @bills.each do |bill| %>
     <h3><%= link_to bill.bill_title, bill %></h3>
@@ -16,7 +16,7 @@
     <hr>
 <% end %>
 
-  <%= will_paginate @bills %>
+  <%= paginate @bills %>
 
 <br>
 

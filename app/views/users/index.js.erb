@@ -1,5 +1,5 @@
 /* REVIEW: This file is needed for any endles-loading view. Is there a way to unify this, so we have it only once? */
-$(".pagination").html('<%= escape_javascript(will_paginate(@users)) %>');
+$(".pagination").html('<%= escape_javascript(paginate(@users)) %>');
 
 $('.load_more').before( '<div id="page<%= @users.current_page -%>" style="clear: both; display: none;">'+
                           '<p class="page_seperator"><%= @users.current_page -%>'+

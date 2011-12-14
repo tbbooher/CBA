@@ -3,7 +3,7 @@
     = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
 = javascript 'endless_page'
 
-.pagination_box= will_paginate @users
+.pagination_box= paginate @users
 
 %h2<
     =yield(:title)
@@ -17,4 +17,4 @@
 
     = render :partial => '/home/load_more', :locals => { :resources => @users, :path => registrations_path }
 
-.pagination_box= will_paginate @users
+.pagination_box= paginate @users

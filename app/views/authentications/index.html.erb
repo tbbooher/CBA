@@ -27,7 +27,9 @@
   <%= yield(:service_title)%>
 <% end %>
 
-<%= render :partial => '/authentications/authentications' %>
+<div class="well">
+  <%= render :partial => '/authentications/authentications' %>
+</div>
 
 <% unless user_signed_in? %>
   <p>

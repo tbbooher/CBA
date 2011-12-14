@@ -2,7 +2,7 @@
 
 %br/
 
-=# will_paginate @polco_groups
+=# paginate @polco_groups
 
 %p
   things like center should be done in css. i would make multiple columns on this page -- I think using tables is not the
@@ -16,7 +16,7 @@
   - @groups.each do |groups|
     %h2
       = groups.first.capitalize
-    = will_paginate groups.last
+    = paginate groups.last
     %table.center{:align => "center"}
       %tr
         %th
