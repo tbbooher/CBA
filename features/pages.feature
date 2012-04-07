@@ -91,17 +91,6 @@ Feature: Pages
   Scenario: Pagination should work on pages::index
     pending
 
-  Scenario: Pages should be provided as atom-feed
-    Given I am on the page path of "Page 1"
-    And I fill in "Name" with "Frank Zappa"
-    And I fill in "Email" with "some@address.at"
-    And I fill in "Comment" with "Lorem Commentum gscheit daherred"
-    And I click on "Post comment"
-    And I am on the feed page
-    Then I should see "Lorem Commentum gscheit daherred"
-    And I should see "Page 1"
-    And I should see "Frank Zappa"
-
   Scenario: Page title and body should be translated
     Given the following translated pages
       | title_en  | body_en      | title_de     | body_de    |
@@ -126,8 +115,8 @@ Feature: Pages
     And I fill in "page_body" with "This is a filled page body" within "#container_main form"
     And I uncheck "page_is_draft" within "#container_main form"
     And I click on "Create Page"
-    Then I should see "This is a filled Page Template" within ".default"
-    And I should see "This is a filled page body" within ".default"
+    Then I should see "This is a filled Page Template"
+    And I should see "This is a filled page body"
 
   Scenario: A derived page should save it's template
     Given I am on the new_article page

@@ -132,6 +132,7 @@ Cba::Application.routes.draw do
   match 'show_notification/:id' => 'users#show_notification', :as => 'show_notification'
   match 'notifications' => 'users#notifications', :as => 'notifications'
   match 'profile/:id'   => 'users#show', :as => 'profile'
+  match 'my_group_ids'  => 'users#my_group_ids'
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :users, :only => [:show,:destroy] do

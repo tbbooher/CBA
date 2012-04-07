@@ -1,7 +1,9 @@
 .bundle
+.pt
 .yardoc
 .rspec
 .rvmrc
+cba.sublime*
 .yardoc/**/*
 Gemfile.lock
 db/*.sqlite3

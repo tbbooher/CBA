@@ -142,7 +142,8 @@ class User
 
   # return user's role as symbol.
   def role
-    ROLES[roles_mask].to_sym
+    self.roles_mask = 0 if self.roles_mask < 0 || self.roles_mask >= ROLES.count
+    self.roles_mask ? ROLES[self.roles_mask].to_sym : guest
   end
 
   # Ask if the user has at least a specific role.
@@ -177,7 +178,7 @@ class User
     super
   end
 
-  # Remove an URL of the local avatar or the gravatar
+  # @return String - the URL of the local avatar or the gravatar
   def avatar_url(mode)
     if self.use_gravatar
       "http://gravatar.com/avatar/#{gravatar_id}.png?cache=#{self.updated_at.strftime('%Y%m%d%H%M%S')}"

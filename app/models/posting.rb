@@ -21,7 +21,9 @@ class Posting
 
   references_many       :comments, :inverse_of => :commentable, :as => 'commentable'
   validates_associated  :comments
-
+  
+  field                 :recipient_group_ids, type: Array, default: []
+  field                 :recipient_ids, type: Array, default: []
 
   # TODO: Move this definitions to a library-module
   # TODO: and replace this lines with just 'has_attchments'
@@ -30,8 +32,15 @@ class Posting
   accepts_nested_attributes_for :attachments,
                                 :allow_destroy => true
                                 
-
-
+  scope :publics,      -> { where(recipient_ids: []) }
+  scope :addressed_to, ->(user_id) { where.any_of( 
+                                              {:recipient_ids => nil}, 
+                                              {:recipient_ids => [] },
+                                              {:recipient_ids.in => [user_id] },
+                                              {:user_id => user_id} 
+                                          ) 
+                                    }
+                                   
 
   # Send notifications
   after_create  :send_notifications
@@ -43,19 +52,7 @@ class Posting
     title + " " + body + " " + comments.map(&:comment).join(" ")
   end
 
-  scope :rss_items, lambda { not_in( is_draft: [true,nil]) }
-
-
-  # Render the body
-  def render_body(view_context=nil)
-    @view_context ||= view_context
-    if @view_context
-      @view_context.concat render_for_html(self.body).html_safe
-      return ""
-    else
-      render_for_html(self.body).html_safe
-    end
-  end
+  scope :rss_items, -> { not_in( is_draft: [true,nil]) }
   
   def new_tag
   end
@@ -66,17 +63,40 @@ class Posting
       self.tags_array.uniq!
     end
   end
+  
+  
+  def has_recipient?(recipient)
+    self.recipient_ids.include? recipient.id
+  end
+  
+  def public?
+    self.recipient_ids.empty?
+  end
+  
+  def recipient_tokens
+  end
+  
+  def recipient_tokens=(new_tokens)
+    self.recipient_group_ids = new_tokens.split(",").map { |token|
+      self.user.user_groups.find(token).id 
+    }
+    self.recipient_ids = self.recipient_group_ids.map { |group_id|
+      group = self.user.user_groups.find(group_id).members
+    }.flatten.uniq.compact
+  end
 
+  def css_class
+    return 'expired'    if self.expire_at  && self.expire_at  <= Time.now
+    return 'prerelease' if self.publish_at && self.publish_at >  Time.now 
+    return 'online'
+  end
 
+  
 private ################################################## private ####
 
   # Render the intro (which is the first paragraph of the body)
-  def content_for_intro(interpret=true)
-    if interpret
-      render_for_html(body.paragraphs[0])
-    else
-      body.paragraphs[0]
-    end
+  def content_for_intro
+    body.paragraphs[0]
   end
 
   # Send a notification to admins when a new posting was created

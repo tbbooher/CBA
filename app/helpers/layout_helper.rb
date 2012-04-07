@@ -77,13 +77,19 @@ module LayoutHelper
       end
     end
   end
+
+  def current_tag_cache_key
+    key = "tag_cloud_" + (current_user ? current_user.id.to_s : 'public')
+  end
   
   # render a tag-cloud
   def tag_cloud
     ContentItem::normalized_tags_with_weight(Posting).map { |tag,weight|
       unless tag.blank?
-        content_tag :span, :class => "tag-weight-#{weight.to_s.gsub('.','-')}" do
-          link_to( "#{tag}", tags_path(tag))
+        if accessible_postings(tag,current_role).any?
+          content_tag :span, :class => "tag-weight-#{weight.to_s.gsub('.','-')}" do
+            link_to( "#{tag}", tags_path(tag))
+          end
         end
       end
     }.compact.join(" ").html_safe
@@ -101,6 +107,14 @@ module LayoutHelper
     link_to_function(icon_and_text(label_text,icon),function_call,options).html_safe
   end
 
+  def accessible_postings(tag,role)
+    _ids = Blog.for_role(role).only(:id).map{ |blog|
+      blog.postings_for_user_and_mode(current_user,draft_mode).only(:id).map(&:_id)
+    }.flatten
+    Posting.any_in(_id: _ids).tagged_with(tag)
+  end
+
+
 private
 
   def setup_button(icon,label_text,options)
@@ -108,9 +122,13 @@ private
     if options[:add_class]
       class_names += " " + options[:add_class]
       options.delete(:add_class)
-    end                
-    options.merge!( class:  class_names,
-                    style: 'padding: 5px; padding-top: 2px; padding-bottom: 3px; text-align: left;'   )
+    end
+    style = 'padding: 5px; padding-top: 2px; padding-bottom: 3px; text-align: left;'           
+    if options[:add_style]
+      style += " " + options[:add_style]
+      options.delete(:add_style)
+    end     
+    options.merge!( class:  class_names, style:  style)
     options.merge!( title: I18n.translate(icon.to_sym)) if label_text.blank?
   end
 
@@ -137,7 +155,7 @@ private
       'circle-arrow-w'
     when 'mark-read'
       'mail-open'
-    when 'mark-unread'
+    when 'mark-unread', 'mail', 'email'
       'mail-closed'
     when 'details', 'zoom'
       'zoomin'
@@ -161,10 +179,11 @@ private
       'help'
     when 'assets'
       'suitcase'
+    when 'contact', 'people', 'vcard', 'groups'
+      'contact'
     else
       shortcut
     end
   end
-
 
 end

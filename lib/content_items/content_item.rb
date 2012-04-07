@@ -11,7 +11,7 @@ module ContentItem
   # Render :txt as markdown with Redcarpet
   def markdown(txt)
     options = [
-               :hard_wrap, :filter_html, :filter_styles, :autolink,
+               :hard_wrap, :filter_styles, :autolink,
                :no_intraemphasis, :fenced_code, :gh_blockcode
               ]
     doc = Nokogiri::HTML(Redcarpet.new(txt, *options).to_html)
@@ -21,14 +21,18 @@ module ContentItem
     doc.xpath('//body').to_s.gsub(/<\/?body>/,"").html_safe
   end
   
-  # normalize tags 
+  def textilize(txt)
+    Textile::textilize(txt)
+  end
+  
+  # normalize tags
   def normalized_tags_with_weight(resource)
     max_weight = resource.tags_with_weight.map{|t,w| w}.max{ |a,b| a.round <=> b.round }
     resource.tags_with_weight.map do |tag,weight|
       [tag, (8/max_weight*weight).round]
     end
   end
-  
+
   # == ContentItem
   # Can be a 'Page', a 'Posting' or something else you want to be
   # * Commentable
@@ -54,14 +58,35 @@ module ContentItem
         validates_presence_of :title
         validates_uniqueness_of :title
 
+        # ContentItem should not be visible before publish_at
+        field :publish_at, type: Time
+
+        # ContentItem should not be visible by expire_at
+        field :expire_at, type: Time
+  
         # ContentItems marked as 'draft' should not be in the default-scope
         field :is_draft, :type => Boolean, :default => true
-        scope :drafts, lambda { unscoped.where(is_draft: true ) }
+        scope :drafts, -> { where(is_draft: true ) }
 
         if self.respond_to?(:is_template)
-          scope :published, lambda { unscoped.where(is_draft: false, is_template: false ) }
+          scope :published, -> { where(is_draft: false, is_template: false) }
         else
-          scope :published, lambda { unscoped.where(is_draft: false ) }
+          scope :published, -> { where(is_draft: false) }
+        end
+
+        scope :online, -> { any_of(
+                 {:publish_at=>nil,:expire_at=>nil},
+                 {:publish_at.lte=>Time.now(),:expire_at=>nil},
+                 {:publish_at.lte=>Time.now(),:expire_at.gt=>Time.now()},
+                 {:publish_at => nil, :expire_at.gt=>Time.now()}
+                )}
+
+        scope :expired,     -> { where(:expire_at.lte=>Time.now) }
+        scope :pre_release, -> { where(:publish_at.gt => Time.now()) }
+
+        def is_online?
+          (self.publish_at.nil? || self.publish_at <= Time.now()) &&
+          (self.expire_at.nil? || self.expire_at > Time.now())
         end
 
         # Will return a truncated version of the title if it exceeds the maximum
@@ -88,92 +113,61 @@ module ContentItem
           short_title_for_url.txt_to_url
         end
 
-        def render_intro(interpret=true)
-          content_for_intro(interpret)
+        def intro
+          content_for_intro
         end
 
-        def render_for_html(txt)
-          self.interpreter ||= :markdown
-          case self.interpreter.to_sym
-          when :markdown
-            markdown(txt).html_safe
-          when :textile
-            RedCloth.new(txt).to_html
-          when :simple_text
-            txt.each_line.map do |line|
-              '<p>' + line.strip + '</p>' unless line.strip.blank?
-            end.compact.join("\n")
+        def publish_at_date
+          publish_at.strftime("%Y-%m-%d") if publish_at
+        end
+
+        def publish_at_date=(new_date)
+          unless new_date.nil? || new_date.blank?
+            y,m,d = new_date.split(/\\-|\\.|:|\\//)
+            self.publish_at = Time.new(y.to_i,m.to_i,d.to_i)
           else
-            txt
-          end.gsub( /ATTACHMENT[\d+]/ ) { |attachment|
-            attachment_i = attachment.gsub( /\D/,'' ).to_i
-            render_attachment(attachment_i)
-          }.gsub( /COMPONENT[\d+]/ ) { |component|
-            component_i = component.gsub( /\D/,'' ).to_i
-            render_page_component(component_i)
-          }.gsub(/YOUTUBE(_PLAYLIST)?:([a-z|A-Z|0-9|\\-|_])+/) { |tag|
-            args = tag.split(':')
-            case args[0]
-            when 'YOUTUBE'
-              embed_youtube_video(args[1])
-            when 'YOUTUBE_PLAYLIST'
-              embed_youtube_playlist(args[1])
-            else
-              "ARGUMENT ERROR: " + args.inspect
-            end
-          }.gsub(/PLUSONE/, '<g:plusone size="small"></g:plusone>')
-          .gsub( /\\[LOCATION:([\\d\\., \\-]+)\\]/) {|location|
-            render_location_link(location.gsub('LOCATION','').gsub('[','').gsub(']','').gsub(':',''))
-          }
-          .gsub(/\\[PLACE:([a-z|A-Z|0-9|\\-| |,]+)\\]/) {|place|
-            render_place_link(place.gsub('PLACE','').gsub('[','').gsub(']','').gsub(':',''))
-          }.html_safe
-        end
-
-        private
-        def content_for_intro
-          raise "ABSTRACT_METHOD_CALLED - Overwrite content_for_intro"
-        end
-
-        def render_attachment(idx)
-          idx ||= 1
-          idx -= 1
-          if @context_view
-            attachment = self.attachments[idx]
-            if attachment
-              if attachment.file_content_type =~ /image/
-                @context_view.image_tag( attachment.file.url(:medium) )
-              else
-                @context_view.link_to attachment.file_file_name attachment.file.original
-              end
-            else
-              "ATTACHMENT "+idx.to_s+" NOT FOUND"
-            end
+            self.publish_at = nil
           end
         end
 
-        def render_component(idx)
-          "RENDER COMPONENT NOT IMPLEMENTED FOR #{self.class.to_s}"
-        end
-
-        def embed_youtube_playlist(youtube_tag)
-          "<iframe width='560' height='345' src='http://www.youtube.com/p/" +
-            youtube_tag +
-          "?version=3&amp;hl=en_US' frameborder='0' allowfullscreen=''></iframe>"
-        end
-
-        def embed_youtube_video(youtube_tag)
-          "<iframe width='420' height='345' src='http://www.youtube.com/embed/"+
-            youtube_tag +
-            "' frameborder='0' allowfullscreen=''></iframe>"
+        def publish_at_time
+          self.publish_at.strftime("%H.%M") if self.publish_at
         end
         
-        def render_location_link(location)
-          "<a href='#' class='open-location'>"+location+"</a>"
+        def publish_at_time=(_new_time)
+          unless self.publish_at.nil? || _new_time.nil? || _new_time.blank?
+            h, m = _new_time.split(/[\\:|\\.| ]/)
+            self.publish_at = self.publish_at.change(:hour => h.to_i, :min => m.to_i)
+          end
         end
 
-        def render_place_link(place)
-          "<a href='#' class='open-place'>"+place+"</a>"
+        def expire_at_date
+          expire_at.strftime("%Y-%m-%d") if expire_at
+        end
+
+        def expire_at_date=(new_date)
+          unless new_date.nil? || new_date.blank?
+            y,m,d = new_date.split(/\\-|\\.|:|\\//)
+            self.expire_at = Time.new(y.to_i,m.to_i,d.to_i)
+          else
+            self.expire_at = nil
+          end
+        end
+
+        def expire_at_time
+          self.expire_at.strftime("%H.%M") if self.expire_at
+        end
+        
+        def expire_at_time=(_new_time)
+          unless self.expire_at.nil? || _new_time.nil? || _new_time.blank?
+            h, m = _new_time.split(/[\\:|\\.| ]/)
+            self.expire_at = self.expire_at.change(:hour => h.to_i, :min => m.to_i)
+          end
+        end
+        
+        private
+        def content_for_intro
+          raise "ABSTRACT_METHOD_CALLED - Overwrite content_for_intro"
         end
       EOV
     end
