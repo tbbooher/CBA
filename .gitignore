@@ -27,7 +27,6 @@ config/mailserver_setting.rb
 config/omniauth_settings.rb
 config/google_analytics.head
 config/google_site_search.html
-config/deploy.rb
 config/twitter.*.html
 system/**/*
 system/*
