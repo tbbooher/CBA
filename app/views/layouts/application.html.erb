@@ -21,9 +21,9 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" -%>
     <%= javascript_include_tag "application" %>
-    <%= javascript_tag do %>
-      <%= "var google_api_key = '#{GOOGLE_PLACE_API_KEY}';" -%>
-    <% end %>
+    <%#= javascript_tag do %>
+      <%#= "var google_api_key = '#{ENV[GOOGLE_PLACE_API_KEY]}';" -%>
+    <%# end %>
     <%= yield :head %>
     <%= auto_discovery_link_tag(:atom, "/feed") %>
     <%= insert_google_analytics_script if  (Rails.env == 'production') %>
@@ -96,7 +96,7 @@
                src='http://www.pledgie.com/campaigns/15849.png?skin_name=chrome' border='0' /></a>
         <br />
         <% end %>
-           © <%= Time.now.year %> by <%= link_to APPLICATION_CONFIG['copyright'], APPLICATION_CONFIG['copyright_url'] %>
+           © <%= Time.now.year %> by <%= link_to ENV['APPLICATION_CONFIG_copyright'], ENV['APPLICATION_CONFIG_copyright_url'] %>
       </div>
       
     <% end %>
