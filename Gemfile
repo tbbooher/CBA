@@ -37,8 +37,8 @@ gem "googlecharts"
 gem 'simple_form'
 
 group :production do
-  gem 'unicorn'
-  gem 'newrelic_rpm'
+ gem 'thin'
+ # gem 'newrelic_rpm'
 end
 
 # connection gems
