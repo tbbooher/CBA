@@ -41,6 +41,8 @@ group :production do
  # gem 'newrelic_rpm'
 end
 
+gem 'newrelic_rpm'
+
 # connection gems
 gem 'json'
 gem 'geocoder'

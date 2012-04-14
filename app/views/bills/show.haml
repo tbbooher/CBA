@@ -24,7 +24,7 @@
 
 = render :partial => 'comments_subpage', :locals => {:bill => @bill}
 
-- if @bill.activity?
+- if @bill.activity? && @user
   %p
     How are other districts voting on
     %b
@@ -71,13 +71,14 @@
 - else
   %p No activity yet on this bill
 
-#vote_region
-  = determine_vote(@user)
-- if @user && @user.registered?
-  #member_vote
-    - if @bill.bill_type == "h"
-      = determine_rep_vote(@user.reps_vote_on(@bill), @user.district)
-    - else
-      = determine_senators_votes(@user.senators_vote_on(@bill))
-  #district_tally
-    In your district (#{@user.district}), #{format_votes_inline(@bill.get_votes_by_name_and_type(@user.district, :district))}
+- if @user
+  #vote_region
+    = determine_vote(@user)
+  - if @user && @user.registered?
+    #member_vote
+      - if @bill.bill_type == "h"
+        = determine_rep_vote(@user.reps_vote_on(@bill), @user.district)
+      - else
+        = determine_senators_votes(@user.senators_vote_on(@bill))
+    #district_tally
+      In your district (#{@user.district}), #{format_votes_inline(@bill.get_votes_by_name_and_type(@user.district, :district))}
