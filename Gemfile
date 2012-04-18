@@ -104,10 +104,6 @@ group :development, :test do
   gem 'json_pure'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem 'cucumber'
-  gem 'rspec', '2.6.0'
-  gem 'rspec-rails', '2.6.1'
   gem 'spork', '0.9.0.rc9'
   gem 'guard-rspec'
   gem 'guard-spork'
@@ -135,6 +131,13 @@ group :development, :test do
   gem 'yard'
   gem 'rails3-generators'
   gem "haml-rails"
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'rspec', '2.6.0'
+  gem 'rspec-rails', '2.6.1'
 end
 
 # !! THE GRAVEYARD !!
