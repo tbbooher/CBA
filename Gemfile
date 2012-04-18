@@ -74,6 +74,7 @@ gem "coffeebeans"
 # do "easy_install pygments" on your system
 gem 'redcarpet'
 gem 'albino'
+gem 'heroku'
 
 # Bundle gems for development
 group :development do
