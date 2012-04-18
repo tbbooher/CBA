@@ -44,7 +44,7 @@ module SiteMenusHelper # :nodoc:
 
   def current_root_menu_include_path?(path)
     return true if current_page?(path) && path[0] != '#'
-    search_item = SiteMenu.where(:target => path).first
+    search_item = SiteMenu.where(:menu_target => path).first
     current_root_menu_include?(search_item)
   end
 
