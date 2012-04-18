@@ -33,10 +33,10 @@ module SiteMenusHelper # :nodoc:
   def current_root_path_include?(menu)
     path_menus = []
     menu.traverse { |m|
-      path_menus << m if current_page?(m.target) && menu && menu.target && menu.target[0] != '#'
+      path_menus << m if current_page?(m.menu_target) && menu && menu.menu_target && menu.menu_target[0] != '#'
     }
     menu.ancestors.each do |anc|
-      path_menus << anc if current_page?(anc.target) && menu.target[0] != '#'
+      path_menus << anc if current_page?(anc.menu_target) && menu.menu_target[0] != '#'
     end
     path_menus.compact!
     path_menus.any?
