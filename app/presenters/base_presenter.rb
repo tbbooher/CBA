@@ -1,10 +1,14 @@
 class BasePresenter
-  attr_reader :object
+  
+  attr_reader   :object
+  attr_accessor :interpreter
+  
   def initialize(object, template)
     @object     = object
     @template   = template
-  end 
+  end
   
+    
 private
   def self.presents(name)
     define_method(name) do
@@ -29,4 +33,13 @@ private
     @template.send(*args,&block)
   end
   
+  # Concat to output-buffer or return as string
+  def concat_or_string(_concat,_txt)
+    if _concat
+      concat _txt
+      ""
+    else
+      _txt
+    end
+  end
 end

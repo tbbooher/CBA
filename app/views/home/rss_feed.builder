@@ -1,25 +1,26 @@
 atom_feed(:url => feed_path) do |feed|
-   feed.title(APPLICATION_CONFIG['rss_title'])
-   feed.updated(Time.now) #@feed_items.first ? @feed_items.first.updated_at : Time.now.utc )
+   feed.title(ENV['APPLICATION_CONFIG_rss_title'])
+   feed.updated(Time.now)
    for item in @feed_items
+     _content = ""
      feed.entry(item.object, :url => item.url) do |entry|
        entry.title(item.title)
        begin
-         content = ""
-         if item.object.respond_to?(:render_body)
-           with_format self, 'html' do
-             content = item.object.render_body(nil).gsub( /\[EDIT_COMPONENT_LINK:([^\]]*)\]/,"" )
+         interpret item.object do |presenter|
+           _content += presenter.title(false) if presenter.respond_to?(:title)
+           if presenter.respond_to?(:cover_picture) && item.object.cover_picture_exists?
+             _content += presenter.cover_picture('', :medium,false) 
            end
-         else
-           content = sanitize(simple_format(item.body))
-         end
-         if defined? item.object.cover_picture
-           content +=  image_tag(item.object.cover_picture.url(:medium))
+           if presenter.respond_to?(:body)
+             _content += presenter.body(false) 
+           else
+             _content += "NO BODY FUNCTION!"
+           end
          end
        rescue => e
-         content = e.inspect
+         _content += ("\n<br/>ERROR!<br/>").html_safe
        end
-       entry.content( content, :type => :html )
+       entry.content( _content, :type => :html )
        entry.updated item.updated_at
        entry.author(item.name||'-')
      end

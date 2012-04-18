@@ -504,6 +504,7 @@ Given /^the following translated components for page "([^"]*)"$/ do |page_title,
     c.translate!
     c.t(:de, :title, hash[:title_de])
     c.t(:de, :body, hash[:body_de])
+    c.save!
   end
   page.save!
 end
@@ -548,3 +549,9 @@ end
 Then /^page should have "([^"]*)"$/ do |arg1|
   assert page.has_selector?( arg1 ), "Did not find #{arg1}"
 end
+
+
+Then /^I should have_link "([^"]*)"$/ do |arg1|
+  assert page.all('a', text: arg1)
+end
+

@@ -1,18 +1,19 @@
 # -*- encoding : utf-8 -*-
 
 class HomeController < ApplicationController
-
   respond_to :html, :js
+
+  include LayoutHelper #TODO: Why we need this here? (otherwise accessible_postings will not be loaded)
 
   # Display the top pages on the home-page
   def index
-    # added by nate
-    @bills = Bill.bill_search(params[:bill_search])
-    @blog = Blog.where(:title => t(:news)).first
+    @blog = Blog.public_blogs.where(:title => t(:news) ).first
     if @blog
-      @postings = @blog.postings.excludes(is_draft: true).desc(:created_at).paginate(
+      @postings = @blog.postings_for_user_and_mode(current_user,draft_mode)
+      .desc(:created_at)
+      .paginate(
         :page => params[:page],
-        :per_page => CONSTANTS['paginate_postings_per_page'].to_i
+        :per_page => ENV['CONSTANTS_paginate_postings_per_page'].to_i
       )
     end
     # added by nate
@@ -33,12 +34,13 @@ class HomeController < ApplicationController
   # GET /feed
   def rss_feed
     @feed_items = []
-
-    Blog.all.each do |blog|
+    Blog.public_blogs.each do |blog|
       blog.postings.rss_items.desc(:updated_at).each do |posting|
-        @feed_items << FeedItem.new(posting.title, posting.body, posting.updated_at, posting_url(posting), posting)
-        posting.comments.each do |comment|
-          @feed_items << FeedItem.new( ("%s %% %s" % [posting.title,comment.name]), comment.comment, comment.updated_at, posting_url(posting),comment)
+        if posting.public?
+          @feed_items << FeedItem.new(posting.title, posting.body, posting.updated_at, posting_url(posting), posting)
+          posting.comments.each do |comment|
+            @feed_items << FeedItem.new( ("%s %% %s" % [posting.title,comment.name]), comment.comment, comment.updated_at, posting_url(posting),comment)
+          end
         end
       end
     end
@@ -71,7 +73,7 @@ class HomeController < ApplicationController
   
   # GET /tag/:tag
   def tags
-    @postings = Posting.tagged_with(params[:tag]).order([:created_at, :desc])
+    @postings ||= accessible_postings(params[:tag],current_role).order([:created_at, :desc])
   end
 
   def polco_info

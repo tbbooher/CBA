@@ -1,7 +1,9 @@
 .bundle
+.pt
 .yardoc
 .rspec
 .rvmrc
+cba.sublime*
 .yardoc/**/*
 Gemfile.lock
 db/*.sqlite3
@@ -21,13 +23,11 @@ coverage/*
 coverage/**/*
 test/unit/coverage/*
 test/unit/coverage/**/*
-config/mongoid.yml
 config/application.yml
 config/mailserver_setting.rb
 config/omniauth_settings.rb
 config/google_analytics.head
 config/google_site_search.html
-config/deploy.rb
 config/twitter.*.html
 system/**/*
 system/*
@@ -50,3 +50,5 @@ redcloth/*
 redcloth/**/*
 app/assets/images/photos/*
 spec/javascripts/generated/*
+config/omniauth_settings.yml
+config/mailserver_setting.yml

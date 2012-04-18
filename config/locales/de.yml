@@ -391,7 +391,7 @@ de:
   manage_templates: 'Layouts'
   commit: 'Speichern'
   submit: 'Senden'
-  html_template_label: "HTML-Template<br/>Keywords: TITLE, BODY, PLUSONE, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT[n], COMPONENT[n]"
+  html_template_label: "HTML-Template<br/><small>Keywords: TITLE, BODY, PLUSONE, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT:n, COMPONENT:n, YOUTUBE:id, YOUTUBE_PLAYLIST:id</small>"
   name_for_page_template: "Name<br/><small>Prefix 'Component:' für Seitenkomponenten</small>"
   page_component: "Komponente"
   page_template_successfully_updated: Layout erfolgreich gespeichert
@@ -478,3 +478,15 @@ de:
   your_groups: 'Deine Gruppen'
   mark_read: 'Als gelesen markieren'
   mark_unread: 'Als ungelesen markieren'
+  necessary_role: 'Notwendige Benutzergruppe'
+  document_not_found_or_authorized: 'Dokument wurde nicht gefunden oder ist geschützt'
+  limited_posting: ' (Nicht öffentlich)'
+  recipients: 'Empfänger'
+  leave_empty_to_make_the_posting_public: 'Leer lassen um das Posting öffentlich zu machen'
+  canceled: 'Abgebrochen'
+  by_name: 'Nach Name'
+  by_email: 'Nach E-mail'
+  by_created_at: 'Nach Erstelldatum'
+  no_images_in_simple_text_format: "Im :simple_text_format können Bilder leider nicht inline dargestellt werden"
+  destroy_component: 'Komponente entfernen'
+  nothing_found: 'Nichts gefunden'

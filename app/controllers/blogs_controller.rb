@@ -18,9 +18,11 @@ class BlogsController < ApplicationController
 
   # Show all postings for this blog
   def show
-    @blog = scoped_blogs.find(params[:id])
-    @postings = @blog.scoped_postings({:is_draft => draft_mode}).desc(:created_at)\
-      .paginate(:page => params[:page],:per_page => CONSTANTS['paginate_postings_per_page'].to_i)
+    @blog = scoped_find(params[:id])
+
+    _postings = @blog.postings_for_user_and_mode(current_user,draft_mode)
+
+    @postings = _postings.desc(:created_at).paginate(:page => params[:page],:per_page => CONSTANTS['paginate_postings_per_page'].to_i)
     respond_to do |format|
       format.js {
          @path = blog_path(@blog, :page => (params[:page] ? (params[:page].to_i+1) : 2) )
@@ -45,11 +47,11 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    @blog = scoped_blogs.find(params[:id])
+    @blog = scoped_find(params[:id])
   end
 
   def update
-    @blog = scoped_blogs.find(params[:id])
+    @blog = scoped_find(params[:id])
     respond_to do |format|
       if @blog.update_attributes(params[:blog])
         format.html {
@@ -66,7 +68,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/:id
   # DELETE /blogs/:id.xml
   def destroy
-    @blog = scoped_blogs.find(params[:id])
+    @blog = scoped_find(params[:id])
     @blog.destroy
     respond_to do |format|
       format.html { redirect_to(blogs_url, :notice => t(:blog_successfully_destroyed)) }
@@ -76,7 +78,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/:id/delete_cover_picture
   def delete_cover_picture
-    @blog = scoped_blogs.find(params[:id])
+    @blog = scoped_find(params[:id])
     @blog.cover_picture.destroy
     @blog.save
   end
@@ -88,12 +90,21 @@ class BlogsController < ApplicationController
     params[:blog][:page_tokens] ||= []
   end
 
+  # do a scoped find and raise an Error404 if document not found in scope
+  def scoped_find(id)
+    begin
+      scoped_blogs.find(id)
+    rescue
+      raise Error404
+    end
+  end
+
   # For update and destroy we want to include drafts, so change the default_scope
   def scoped_blogs
     if current_role?(:author)
-      Blog
+      Blog.for_role(current_role)
     else
-      Blog.published
+      Blog.published.for_role(current_role)
     end
   end
 

@@ -186,15 +186,15 @@ en:
   explain_roles_mask_for_invitations: Please select the role the invitee should have.
   optional_message_for_invitation: "(Optionally, you can write a message which will be displayed to the invitee within the invitation mail)"
   invitee_name: Name of the person you want to invite
-  invitee_email: Invitee's e-mail address
-  do_not_send_invitation: Cancel (don't send invitation)
+  invitee_email: "E-mail address of the person you want to invite"
+  do_not_send_invitation: "Cancel (don't send invitation)"
   new_page_component: 'Add new page component'
   select_template: 'Select a template (optionally)'
   no_template: '-- No layout template --'
   manage_templates: 'Templates'
   commit: 'Commit'
   submit: 'Submit'
-  html_template_label: "HTML-Template<br/><small>Keywords: TITLE, BODY, PLUSONE, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT[n], COMPONENT[n]</small>"
+  html_template_label: "HTML-Template<br/><small>Keywords: TITLE, BODY, PLUSONE, COVERPICTURE, ATTACHMENTS, COMMENTS, COMPONENTS, ATTACHMENT:n, COMPONENT:n, YOUTUBE:id, YOUTUBE_PLAYLIST:id</small>"
   name_for_page_template: "Name<br/><small>use prefix 'Component:' for page components</small>"
   page_component: "Component"
   page_template_successfully_updated: Template successfully updated
@@ -281,3 +281,15 @@ en:
   your_groups: 'Your groups'
   mark_read: 'Mark as read'
   mark_unread: 'Mark as unread'
+  necessary_role: 'Necessary user role'
+  document_not_found_or_authorized: 'Document not found or access restricted'
+  limited_posting: ' (Limited)'
+  recipients: 'Recipients'
+  leave_empty_to_make_the_posting_public: 'Leave empty to make this posting public'
+  canceled: 'Canceled'
+  by_name: 'by name'
+  by_email: 'by email'
+  by_created_at: 'by date created'
+  no_images_in_simple_text_format: "Sorry, in :simple_text_format no images can be displayed inline"
+  destroy_component: 'Destroy Component'
+  nothing_found: 'Nothing found'
