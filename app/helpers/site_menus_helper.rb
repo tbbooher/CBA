@@ -20,7 +20,7 @@ module SiteMenusHelper # :nodoc:
     begin
       if current_root(self)
         current_root(self).traverse(:depth_first) do |menu_item|
-          @current_root = menu_item if menu && menu_item && current_page?(menu_item.target) && menu.target[0] != '#'
+          @current_root = menu_item if menu && menu_item && current_page?(menu_item.menu_target) && menu.menu_target[0] != '#'
         end
       end
     rescue => e
@@ -60,7 +60,7 @@ module SiteMenusHelper # :nodoc:
 
   def build_submenu_box(menu,&block)
     menu = menu.first if menu.is_a?(Mongoid::Criteria)
-    if menu && menu.target && (menu.role_needed||0) <= current_role
+    if menu && menu.menu_target && (menu.role_needed||0) <= current_role
       yield( submenu_header(menu) ) +
       menu.children.map { |child|
         raw( build_submenu_box(child,&block) )
@@ -88,17 +88,17 @@ module SiteMenusHelper # :nodoc:
   def current_root(view_context)
     SiteMenu.roots.each do |root|
       if root.current_child?(view_context)
-        Rails.logger.info("******** CURRENT ROOT = #{root.target} ****** ")
+        Rails.logger.info("******** CURRENT ROOT = #{root.menu_target} ****** ")
         return root
       end
     end
   end
 
   def submenu_header(menu)
-    if current_page?(menu.target)
-      header = "<div class='hmenu_current'>" + link_to(menu.name,menu.target) + "</div>"
+    if current_page?(menu.menu_target)
+      header = "<div class='hmenu_current'>" + link_to(menu.name,menu.menu_target) + "</div>"
     else
-      header = link_to(menu.name,menu.target)
+      header = link_to(menu.name,menu.menu_target)
     end
     header += raw("<ul>") if menu.children.any?
     header
